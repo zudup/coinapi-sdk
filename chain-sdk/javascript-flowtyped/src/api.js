@@ -5545,47 +5545,47 @@ export type TransactionsETradeAggressiveSide = 'Buy' | 'Sell' | 'EstimatedBuy' |
  * The Bundle is used as a global store of derived ETH price in USD. Because there is no guaranteed common base token across pairs, a global reference of USD price is useful for deriving other USD values. The Bundle entity stores an updated weighted average of ETH<->Stablecoin pair prices. This provides a strong estimate for the USD price of ETH.
  * @export
  */
-export type UniswapV2BundleV2DTO = {
+export type UniswapV2BundleDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     block_number?: number;
     /**
      * Constant 1.
      * @type {string}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     id?: string;
     /**
      * Derived price of ETH in USD based on stablecoin pairs.
      * @type {string}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     eth_price?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     vid?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2BundleV2DTO
+     * @memberof UniswapV2BundleDTO
      */
     block_range?: string;
 }
@@ -5594,113 +5594,168 @@ export type UniswapV2BundleV2DTO = {
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  * @export
  */
-export type UniswapV2BurnV2DTO = {
+export type UniswapV2BurnDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     block_number?: number;
     /**
      * Transaction hash plus index in the transaction burn array
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     id?: string;
     /**
      * Reference to the transaction Burn was included in.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     transaction?: string;
     /**
      * Timestamp of Burn, used to sort recent liquidity removals.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     timestamp?: string;
     /**
      * Reference to pair.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     pair?: string;
     /**
      * Amount of liquidity tokens burned.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     liquidity?: string;
     /**
      * Address that initiated the liquidity removal.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     sender?: string;
     /**
      * Amount of token0 removed.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     amount_0?: string;
     /**
      * Amount of token1 removed.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     amount_1?: string;
     /**
      * Recipient of tokens.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     to?: string;
     /**
      * Index in the transaction event was emitted.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     log_index?: string;
     /**
      * Derived USD value of token0 amount plus token1 amount.
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     amount_usd?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     needs_complete?: boolean;
     /**
      * Address of fee recipient (if fee is on).
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     fee_to?: string;
     /**
      * Amount of tokens sent to fee recipient (if fee is on).
      * @type {string}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
      */
     fee_liquidity?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2BurnV2DTO
+     * @memberof UniswapV2BurnDTO
+     */
+    vid?: number;
+}
+
+/**
+ * This entity is used to store data about a user\'s liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.
+ * @export
+ */
+export type UniswapV2LiquidityPositionDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    block_number?: number;
+    /**
+     * User address and pair address concatenated with a dash.
+     * @type {string}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    id?: string;
+    /**
+     * Reference to user.
+     * @type {string}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    user?: string;
+    /**
+     * Reference to the pair liquidity is being provided on.
+     * @type {string}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    pair?: string;
+    /**
+     * Amount of LP tokens minted for this position.
+     * @type {string}
+     * @memberof UniswapV2LiquidityPositionDTO
+     */
+    liquidity_token_balance?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2LiquidityPositionDTO
      */
     vid?: number;
 }
@@ -5709,392 +5764,482 @@ export type UniswapV2BurnV2DTO = {
  * This entity is used to store data about a user\'s liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
  * @export
  */
-export type UniswapV2LiquidityPositionSnapshotV2DTO = {
+export type UniswapV2LiquidityPositionSnapshotDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     block_number?: number;
     /**
      * Identifier, format: <pair address>-<user address>
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     id?: string;
     /**
      * Reference to LP identifier.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     liquidity_position?: string;
     /**
      * Creation time.
      * @type {number}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     timestamp?: number;
     /**
      * Number of block in which LP snapshot was recorded.
      * @type {number}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     block?: number;
     /**
      * Reference to user.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     user?: string;
     /**
      * Reference to the pair liquidity is being provided on.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     pair?: string;
     /**
      * Snapshot of token0 price.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     token_0_price_usd?: string;
     /**
      * Snapshot of token0 price.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     token_1_price_usd?: string;
     /**
      * Snapshot of pair token0 reserves.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     reserve_0?: string;
     /**
      * Snapshot of pair token1 reserves.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     reserve_1?: string;
     /**
      * Snapshot of pair reserves in USD.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     reserve_usd?: string;
     /**
      * Snapshot of pool token supply.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     liquidity_token_total_supply?: string;
     /**
      * Snapshot of users pool token balance.
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     liquidity_token_balance?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     vid?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2LiquidityPositionSnapshotV2DTO
+     * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
     block_range?: string;
-}
-
-/**
- * This entity is used to store data about a user\'s liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.
- * @export
- */
-export type UniswapV2LiquidityPositionV2DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    block_number?: number;
-    /**
-     * User address and pair address concatenated with a dash.
-     * @type {string}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    id?: string;
-    /**
-     * Reference to user.
-     * @type {string}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    user?: string;
-    /**
-     * Reference to the pair liquidity is being provided on.
-     * @type {string}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    pair?: string;
-    /**
-     * Amount of LP tokens minted for this position.
-     * @type {string}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    liquidity_token_balance?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV2LiquidityPositionV2DTO
-     */
-    vid?: number;
 }
 
 /**
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
  * @export
  */
-export type UniswapV2MintV2DTO = {
+export type UniswapV2MintDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     block_number?: number;
     /**
      * Transaction hash plus index in the transaction mint array.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     id?: string;
     /**
      * Reference to the transaction Mint was included in.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     transaction?: string;
     /**
      * Timestamp of Mint, used to sort recent liquidity provisions.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     timestamp?: string;
     /**
      * Reference to pair.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     pair?: string;
     /**
      * Recipient of liquidity tokens.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     to?: string;
     /**
      * Amount of liquidity tokens minted.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     liquidity?: string;
     /**
      * Address that initiated the liquidity provision.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     sender?: string;
     /**
      * Amount of token0 provided.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     amount_0?: string;
     /**
      * Amount of token1 provided.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     amount_1?: string;
     /**
      * Index in the transaction event was emitted.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     log_index?: string;
     /**
      * Derived USD value of token0 amount plus token1 amount.
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     amount_usd?: string;
     /**
      * Address of fee recipient (if fee is on).
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     fee_to?: string;
     /**
      * Amount of liquidity sent to fee recipient (if fee is on).
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     fee_liquidity?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     vid?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2MintV2DTO
+     * @memberof UniswapV2MintDTO
      */
     block_range?: string;
+}
+
+/**
+ * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ * @export
+ */
+export type UniswapV2PairDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2PairDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2PairDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2PairDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2PairDTO
+     */
+    vid?: number;
+    /**
+     * Pair contract address.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    id?: string;
+    /**
+     * Reference to token0 as stored in pair contract.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    token_0?: string;
+    /**
+     * Reference to token1 as stored in pair contract.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    token_1?: string;
+    /**
+     * Reserve of token0.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    reserve_0?: string;
+    /**
+     * Reserve of token1.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    reserve_1?: string;
+    /**
+     * Total supply of liquidity token distributed to LPs.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    total_supply?: string;
+    /**
+     * Total liquidity in pair stored as an amount of ETH.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    reserve_eth?: string;
+    /**
+     * Total liquidity amount in pair stored as an amount of USD.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    reserve_usd?: string;
+    /**
+     * Total liquidity with only tracked amount.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    tracked_reserve_eth?: string;
+    /**
+     * Token0 per token1.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    token_0_price?: string;
+    /**
+     * Token1 per token0.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    token_1_price?: string;
+    /**
+     * Amount of token0 swapped on this pair.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Amount of token1 swapped on this pair.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    volume_usd?: string;
+    /**
+     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * 
+     * @type {NumericsBigInteger}
+     * @memberof UniswapV2PairDTO
+     */
+    tx_count?: NumericsBigInteger;
+    /**
+     * Timestamp contract was created.
+     * @type {Date}
+     * @memberof UniswapV2PairDTO
+     */
+    created_at_timestamp?: Date;
+    /**
+     * Total number of LPs.
+     * @type {string}
+     * @memberof UniswapV2PairDTO
+     */
+    liquidity_provider_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2PairDTO
+     */
+    evaluated_ask?: number;
 }
 
 /**
  * Tracks pair data across each day.
  * @export
  */
-export type UniswapV2PairDayDataV2DTO = {
+export type UniswapV2PairDayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     block_number?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     id?: string;
     /**
      * Unix timestamp for start of day.
      * @type {number}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     _date?: number;
     /**
      * Address for pair contract.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     pair_address?: string;
     /**
      * Reference to token0.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     token_0?: string;
     /**
      * Reference to token1.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     token_1?: string;
     /**
      * Reserve of token0 (updated during each transaction on pair).
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     reserve_0?: string;
     /**
      * Reserve of token1 (updated during each transaction on pair).
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     reserve_1?: string;
     /**
      * Total supply of liquidity token distributed to LPs.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     total_supply?: string;
     /**
      * Reserve of token0 plus token1 stored as a derived USD amount.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     reserve_usd?: string;
     /**
      * Total amount of token0 swapped throughout day.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     daily_volume_token_0?: string;
     /**
      * Total amount of token1 swapped throughout day.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     daily_volume_token_1?: string;
     /**
      * Total volume within pair throughout day.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     daily_volume_usd?: string;
     /**
      * Amount of transactions on pair throughout day.
      * @type {string}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     daily_txns?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2PairDayDataV2DTO
+     * @memberof UniswapV2PairDayDataDTO
      */
     vid?: number;
 }
@@ -6103,640 +6248,495 @@ export type UniswapV2PairDayDataV2DTO = {
  * Tracks pair data across each hour.
  * @export
  */
-export type UniswapV2PairHourDataV2DTO = {
+export type UniswapV2PairHourDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     block_number?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     id?: string;
     /**
      * Unix timestamp for start of hour.
      * @type {number}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     hour_start_unix?: number;
     /**
      * Address for pair contract.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     pair?: string;
     /**
      * Reserve of token0 (updated during each transaction on pair).
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     reserve_0?: string;
     /**
      * Reserve of token1 (updated during each transaction on pair).
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     reserve_1?: string;
     /**
      * Total supply of liquidity token distributed to LPs.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     total_supply?: string;
     /**
      * Reserve of token0 plus token1 stored as a derived USD amount.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     reserve_usd?: string;
     /**
      * Total amount of token0 swapped throughout hour.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     hourly_volume_token_0?: string;
     /**
      * Total amount of token1 swapped throughout hour.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     hourly_volume_token_1?: string;
     /**
      * Total volume within pair throughout hour.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     hourly_volume_usd?: string;
     /**
      * Amount of transactions on pair throughout hour.
      * @type {string}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     hourly_txns?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2PairHourDataV2DTO
+     * @memberof UniswapV2PairHourDataDTO
      */
     vid?: number;
-}
-
-/**
- * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- * @export
- */
-export type UniswapV2PairV2DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2PairV2DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2PairV2DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV2PairV2DTO
-     */
-    block_number?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV2PairV2DTO
-     */
-    vid?: number;
-    /**
-     * Pair contract address.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    id?: string;
-    /**
-     * Reference to token0 as stored in pair contract.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    token_0?: string;
-    /**
-     * Reference to token1 as stored in pair contract.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    token_1?: string;
-    /**
-     * Reserve of token0.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    reserve_0?: string;
-    /**
-     * Reserve of token1.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    reserve_1?: string;
-    /**
-     * Total supply of liquidity token distributed to LPs.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    total_supply?: string;
-    /**
-     * Total liquidity in pair stored as an amount of ETH.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    reserve_eth?: string;
-    /**
-     * Total liquidity amount in pair stored as an amount of USD.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    reserve_usd?: string;
-    /**
-     * Total liquidity with only tracked amount.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    tracked_reserve_eth?: string;
-    /**
-     * Token0 per token1.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    token_0_price?: string;
-    /**
-     * Token1 per token0.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    token_1_price?: string;
-    /**
-     * Amount of token0 swapped on this pair.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    volume_token_0?: string;
-    /**
-     * Amount of token1 swapped on this pair.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    volume_token_1?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    volume_usd?: string;
-    /**
-     * Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * 
-     * @type {NumericsBigInteger}
-     * @memberof UniswapV2PairV2DTO
-     */
-    tx_count?: NumericsBigInteger;
-    /**
-     * Timestamp contract was created.
-     * @type {Date}
-     * @memberof UniswapV2PairV2DTO
-     */
-    created_at_timestamp?: Date;
-    /**
-     * Total number of LPs.
-     * @type {string}
-     * @memberof UniswapV2PairV2DTO
-     */
-    liquidity_provider_count?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV2PairV2DTO
-     */
-    evaluated_ask?: number;
 }
 
 /**
  * Swap are created for each token swap within a pair.
  * @export
  */
-export type UniswapV2SwapV2DTO = {
+export type UniswapV2SwapDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     vid?: number;
     /**
      * Transaction hash plus index in Transaction swap array.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     id?: string;
     /**
      * Reference to transaction swap was included in.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     transaction?: string;
     /**
      * Timestamp of swap, used for sorted lookups.
      * @type {Date}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     timestamp?: Date;
     /**
      * Reference to pair.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     pair?: string;
     /**
      * Address that initiated the swap.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     sender?: string;
     /**
      * The EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     from?: string;
     /**
      * Amount of token0 sold.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     amount_0_in?: string;
     /**
      * Amount of token1 sold.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     amount_1_in?: string;
     /**
      * Amount of token0 received.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     amount_0_out?: string;
     /**
      * Amount of token1 received.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     amount_1_out?: string;
     /**
      * Recipient of output tokens.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     to?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     log_index?: NumericsBigInteger;
     /**
      * Derived amount of tokens sold in USD.
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     amount_usd?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     evaluated_price?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     evaluated_amount?: number;
     /**
      * 
      * @type {TransactionsETradeAggressiveSide}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     pool_id?: string;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2SwapV2DTO
+     * @memberof UniswapV2SwapDTO
      */
     transaction_id?: string;
-}
-
-/**
- * Token data aggregated across all pairs that include token.
- * @export
- */
-export type UniswapV2TokenDayDataV2DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    block_number?: number;
-    /**
-     * Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    id?: string;
-    /**
-     * Unix timestamp for start of day.
-     * @type {number}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    _date?: number;
-    /**
-     * Reference to token entity.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    token?: string;
-    /**
-     * Amount of token swapped across all pairs throughout day.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    daily_volume_token?: string;
-    /**
-     * Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    daily_volume_eth?: string;
-    /**
-     * Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    daily_volume_usd?: string;
-    /**
-     * Amount of transactions with this token across all pairs.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    daily_txns?: string;
-    /**
-     * Token amount of token deposited across all pairs.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    total_liquidity_token?: string;
-    /**
-     * Token amount of token deposited across all pairs stored as amount of ETH.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    total_liquidity_eth?: string;
-    /**
-     * Token amount of token deposited across all pairs stored as amount of USD.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    total_liquidity_usd?: string;
-    /**
-     * Price of token in derived USD.
-     * @type {string}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    price_usd?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV2TokenDayDataV2DTO
-     */
-    vid?: number;
 }
 
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
-export type UniswapV2TokenV2DTO = {
+export type UniswapV2TokenDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     vid?: number;
     /**
      * Token address.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     id?: string;
     /**
      * Token symbol.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     symbol?: string;
     /**
      * Token name.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     name?: string;
     /**
      * Token decimals.
      * @type {number}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     decimals?: number;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     total_supply?: NumericsBigInteger;
     /**
      * Amount of token traded all time across all pairs.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     trade_volume?: string;
     /**
      * Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     trade_volume_usd?: string;
     /**
      * Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     untracked_volume_usd?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     tx_count?: NumericsBigInteger;
     /**
      * Total amount of token provided as liquidity across all pairs.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     total_liquidity?: string;
     /**
      * ETH per token.
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     derived_eth?: string;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV2TokenV2DTO
+     * @memberof UniswapV2TokenDTO
      */
     token_symbol?: string;
+}
+
+/**
+ * Token data aggregated across all pairs that include token.
+ * @export
+ */
+export type UniswapV2TokenDayDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    block_number?: number;
+    /**
+     * Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of day.
+     * @type {number}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    _date?: number;
+    /**
+     * Reference to token entity.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    token?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    daily_volume_token?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    daily_volume_eth?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    daily_volume_usd?: string;
+    /**
+     * Amount of transactions with this token across all pairs.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    daily_txns?: string;
+    /**
+     * Token amount of token deposited across all pairs.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    total_liquidity_token?: string;
+    /**
+     * Token amount of token deposited across all pairs stored as amount of ETH.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    total_liquidity_eth?: string;
+    /**
+     * Token amount of token deposited across all pairs stored as amount of USD.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    total_liquidity_usd?: string;
+    /**
+     * Price of token in derived USD.
+     * @type {string}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    price_usd?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV2TokenDayDataDTO
+     */
+    vid?: number;
 }
 
 /**
  * Transaction entities are created for each Ethereum transaction that contains an interaction within Uniswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
  * @export
  */
-export type UniswapV2TransactionV2DTO = {
+export type UniswapV2TransactionDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     block_number?: number;
     /**
      * Ethereum transaction hash.
      * @type {string}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     id?: string;
     /**
      * Timestamp.
      * @type {string}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     timestamp?: string;
     /**
      * Array of Mint events within the transaction, 0 or greater.
      * @type {Array<string>}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     mints?: Array<string>;
     /**
      * Array of Burn events within transaction, 0 or greater.
      * @type {Array<string>}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     burns?: Array<string>;
     /**
      * Array of Swap events within transaction, 0 or greater.
      * @type {Array<string>}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     swaps?: Array<string>;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2TransactionV2DTO
+     * @memberof UniswapV2TransactionDTO
      */
     vid?: number;
 }
@@ -6745,89 +6745,89 @@ export type UniswapV2TransactionV2DTO = {
  * Tracks data across all pairs aggregated into a daily bucket.
  * @export
  */
-export type UniswapV2UniswapDayDataV2DTO = {
+export type UniswapV2UniswapDayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     block_number?: number;
     /**
      * Unix timestamp for start of day / 86400 giving a unique day index.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     id?: string;
     /**
      * Unix timestamp for start of day.
      * @type {number}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     _date?: number;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of ETH.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     daily_volume_eth?: string;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of USD.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     daily_volume_usd?: string;
     /**
      * Total volume across all pairs on this day, untracked.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     daily_volume_untracked?: string;
     /**
      * All time volume across all pairs in ETH up to and including this day.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     total_volume_eth?: string;
     /**
      * Total liquidity across all pairs in ETH up to and including this day.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     total_liquidity_eth?: string;
     /**
      * All time volume across all pairs in USD up to and including this day.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     total_volume_usd?: string;
     /**
      * Total liquidity across all pairs in USD up to and including this day.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     total_liquidity_usd?: string;
     /**
      * Number of transactions throughout this day.
      * @type {string}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     tx_count?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2UniswapDayDataV2DTO
+     * @memberof UniswapV2UniswapDayDataDTO
      */
     vid?: number;
 }
@@ -6836,77 +6836,77 @@ export type UniswapV2UniswapDayDataV2DTO = {
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  * @export
  */
-export type UniswapV2UniswapFactoryV2DTO = {
+export type UniswapV2UniswapFactoryDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     block_number?: number;
     /**
      * Factory address.
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     id?: string;
     /**
      * Amount of pairs created by the Uniswap factory.
      * @type {number}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     pair_count?: number;
     /**
      * All time USD volume across all pairs (USD is derived).
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     total_volume_usd?: string;
     /**
      * All time volume in ETH across all pairs (ETH is derived).
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     total_volume_eth?: string;
     /**
      * Untracked volume USD.
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     untracked_volume_usd?: string;
     /**
      * Total liquidity across all pairs stored as a derived USD amount.
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     total_liquidity_usd?: string;
     /**
      * Total liquidity across all pairs stored as a derived ETH amount.
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     total_liquidity_eth?: string;
     /**
      * All time amount of transactions across all pairs.
      * @type {string}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     tx_count?: string;
     /**
      * .
      * @type {number}
-     * @memberof UniswapV2UniswapFactoryV2DTO
+     * @memberof UniswapV2UniswapFactoryDTO
      */
     vid?: number;
 }
@@ -6915,41 +6915,41 @@ export type UniswapV2UniswapFactoryV2DTO = {
  * A user entity is created for any address that provides liquidity to a pool on Uniswap. This entity can be used to track open positions for users.
  * @export
  */
-export type UniswapV2UserV2DTO = {
+export type UniswapV2UserDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     block_number?: number;
     /**
      * User address.
      * @type {string}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     id?: string;
     /**
      * Total USD value swapped.
      * @type {string}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     usd_swapped?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV2UserV2DTO
+     * @memberof UniswapV2UserDTO
      */
     vid?: number;
 }
@@ -6958,41 +6958,41 @@ export type UniswapV2UserV2DTO = {
  * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  * @export
  */
-export type UniswapV3BundleV3DTO = {
+export type UniswapV3BundleDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     block_number?: number;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     id?: string;
     /**
      * Price of ETH in usd.
      * @type {string}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     eth_price_usd?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3BundleV3DTO
+     * @memberof UniswapV3BundleDTO
      */
     vid?: number;
 }
@@ -7001,119 +7001,119 @@ export type UniswapV3BundleV3DTO = {
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  * @export
  */
-export type UniswapV3BurnV3DTO = {
+export type UniswapV3BurnDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     block_number?: number;
     /**
      * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     id?: string;
     /**
      * Transaction burn was included in.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     transaction?: string;
     /**
      * Pool position is within.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     token_1?: string;
     /**
      * Timestamp.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     timestamp?: string;
     /**
      * Owner of position where liquidity was burned.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     owner?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     origin?: string;
     /**
      * Amount of liquidity burned.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     amount?: string;
     /**
      * Amount of token 0 burned.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     amount_0?: string;
     /**
      * Amount of token 1 burned.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     amount_1?: string;
     /**
      * Derived amount based on available prices of tokens.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     amount_usd?: string;
     /**
      * Lower tick of position.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     tick_lower?: string;
     /**
      * Upper tick of position.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     tick_upper?: string;
     /**
      * Position within the transactions.
      * @type {string}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     log_index?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3BurnV3DTO
+     * @memberof UniswapV3BurnDTO
      */
     vid?: number;
 }
@@ -7122,107 +7122,107 @@ export type UniswapV3BurnV3DTO = {
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  * @export
  */
-export type UniswapV3FactoryV3DTO = {
+export type UniswapV3FactoryDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     block_number?: number;
     /**
      * Factory address.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     id?: string;
     /**
      * Amount of pools created.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     pool_count?: string;
     /**
      * Amount of transactions all time.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     tx_count?: string;
     /**
      * Total volume all time in derived USD.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_volume_usd?: string;
     /**
      * Total volume all time in derived ETH.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_volume_eth?: string;
     /**
      * Total swap fees all time in USD.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_fees_usd?: string;
     /**
      * All volume even through less reliable USD values.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_fees_eth?: string;
     /**
      * All volume even through less reliable USD values.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     untracked_volume_usd?: string;
     /**
      * Total value locked derived in USD.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_value_locked_usd?: string;
     /**
      * Total value locked derived in ETH.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_value_locked_eth?: string;
     /**
      * Total value locked derived in USD untracked.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Total value locked derived in ETH untracked.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     total_value_locked_eth_untracked?: string;
     /**
      * Current owner of the factory.
      * @type {string}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     owner?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3FactoryV3DTO
+     * @memberof UniswapV3FactoryDTO
      */
     vid?: number;
 }
@@ -7231,427 +7231,125 @@ export type UniswapV3FactoryV3DTO = {
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  * @export
  */
-export type UniswapV3MintV3DTO = {
+export type UniswapV3MintDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     block_number?: number;
     /**
      * Transaction hash + \'#\' + index in mints Transaction array.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     id?: string;
     /**
      * Which txn the mint was included in.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     transaction?: string;
     /**
      * Time of transaction.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     timestamp?: string;
     /**
      * Pool address.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     token_1?: string;
     /**
      * Owner of position where liquidity minted to.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     owner?: string;
     /**
      * The address that minted the liquidity.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     sender?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     origin?: string;
     /**
      * Amount of liquidity minted.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     amount?: string;
     /**
      * Amount of token 0 minted.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     amount_0?: string;
     /**
      * Amount of token 1 minted.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     amount_1?: string;
     /**
      * Derived amount based on available prices of tokens.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     amount_usd?: string;
     /**
      * Lower tick of the position.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     tick_lower?: string;
     /**
      * Upper tick of the position.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     tick_upper?: string;
     /**
      * Order within the transaction.
      * @type {string}
-     * @memberof UniswapV3MintV3DTO
+     * @memberof UniswapV3MintDTO
      */
     log_index?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3MintV3DTO
-     */
-    vid?: number;
-}
-
-/**
- * Data accumulated and condensed into day stats for each pool.
- * @export
- */
-export type UniswapV3PoolDayDataV3DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    block_number?: number;
-    /**
-     * Identifier, format: <pool address>-<day id>.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    id?: string;
-    /**
-     * Timestamp rounded to current day by dividing by 86400
-     * @type {number}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    _date?: number;
-    /**
-     * Pointer to pool.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    pool?: string;
-    /**
-     * In range liquidity at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    liquidity?: string;
-    /**
-     * Current price tracker at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    sqrt_price?: string;
-    /**
-     * Price of token0 - derived from sqrtPrice.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    token_0_price?: string;
-    /**
-     * Price of token1 - derived from sqrtPrice.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    token_1_price?: string;
-    /**
-     * Current tick at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    tick?: string;
-    /**
-     * Tracker for global fee growth.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    fee_growth_global_0x128?: string;
-    /**
-     * Tracker for global fee growth.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    fee_growth_global_1x128?: string;
-    /**
-     * Total value locked derived in USD at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    tvl_usd?: string;
-    /**
-     * Volume in token0.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    volume_token_0?: string;
-    /**
-     * Volume in token1.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    volume_token_1?: string;
-    /**
-     * Volume in USD.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    volume_usd?: string;
-    /**
-     * Fees in USD.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    fees_usd?: string;
-    /**
-     * Number of transactions during period.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    tx_count?: string;
-    /**
-     * Opening price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    open?: string;
-    /**
-     * High price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    high?: string;
-    /**
-     * Low price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    low?: string;
-    /**
-     * Close price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    close?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV3PoolDayDataV3DTO
-     */
-    vid?: number;
-}
-
-/**
- * Hourly stats tracker for pool.
- * @export
- */
-export type UniswapV3PoolHourDataV3DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    block_number?: number;
-    /**
-     * Identifier, format: <pool address>-<day id>
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    id?: string;
-    /**
-     * Unix timestamp for start of hour.
-     * @type {number}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    period_start_unix?: number;
-    /**
-     * Pointer to pool.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    pool?: string;
-    /**
-     * In range liquidity at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    liquidity?: string;
-    /**
-     * Current price tracker at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    sqrt_price?: string;
-    /**
-     * Price of token0 - derived from sqrtPrice.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    token_0_price?: string;
-    /**
-     * Price of token1 - derived from sqrtPrice.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    token_1_price?: string;
-    /**
-     * Current tick at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    tick?: string;
-    /**
-     * Tracker for global fee growth.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    fee_growth_global_0x128?: string;
-    /**
-     * Tracker for global fee growth.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    fee_growth_global_1x128?: string;
-    /**
-     * Total value locked derived in USD at end of period.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    tvl_usd?: string;
-    /**
-     * Volume in token0.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    volume_token_0?: string;
-    /**
-     * Volume in token1.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    volume_token_1?: string;
-    /**
-     * Volume in USD.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    volume_usd?: string;
-    /**
-     * Fees in USD.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    fees_usd?: string;
-    /**
-     * Number of transactions during period.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    tx_count?: string;
-    /**
-     * Opening price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    open?: string;
-    /**
-     * High price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    high?: string;
-    /**
-     * Low price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    low?: string;
-    /**
-     * Close price of token0.
-     * @type {string}
-     * @memberof UniswapV3PoolHourDataV3DTO
-     */
-    close?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV3PoolHourDataV3DTO
+     * @memberof UniswapV3MintDTO
      */
     vid?: number;
 }
@@ -7660,324 +7358,505 @@ export type UniswapV3PoolHourDataV3DTO = {
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  * @export
  */
-export type UniswapV3PoolV3DTO = {
+export type UniswapV3PoolDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     vid?: number;
     /**
      * Pool address.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     id?: string;
     /**
      * Creation time.
      * @type {Date}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     created_at_timestamp?: Date;
     /**
      * Reference to token0 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pool contract.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     token_1?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     fee_tier?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     liquidity?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     sqrt_price?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     fee_growth_global_0x128?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     fee_growth_global_1x128?: NumericsBigInteger;
     /**
      * Token0 per token1.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     token_0_price?: string;
     /**
      * Token1 per token0.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     token_1_price?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     tick?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     observation_index?: NumericsBigInteger;
     /**
      * All time token0 swapped.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     volume_token_0?: string;
     /**
      * All time token1 swapped.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     volume_token_1?: string;
     /**
      * All time USD swapped.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     volume_usd?: string;
     /**
      * All time USD swapped, unfiltered for unreliable USD pools.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     fees_usd?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     tx_count?: NumericsBigInteger;
     /**
      * All time fees collected token0.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     collected_fees_token_0?: string;
     /**
      * All time fees collected token1.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     collected_fees_token_1?: string;
     /**
      * All time fees collected derived USD.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     collected_fees_usd?: string;
     /**
      * Total token 0 across all ticks.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     total_value_locked_token_0?: string;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     total_value_locked_token_1?: string;
     /**
      * Total token 1 across all ticks.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     total_value_locked_eth?: string;
     /**
      * Total value locked USD.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     total_value_locked_usd?: string;
     /**
      * Total value locked derived ETH.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Liquidity providers count, used to detect new exchanges.
      * @type {string}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     liquidity_provider_count?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3PoolV3DTO
+     * @memberof UniswapV3PoolDTO
      */
     evaluated_ask?: number;
 }
 
 /**
- * 
+ * Data accumulated and condensed into day stats for each pool.
  * @export
  */
-export type UniswapV3PositionSnapshotV3DTO = {
+export type UniswapV3PoolDayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     block_number?: number;
     /**
-     * NFT token identifier, format: <NFT token id>#<block number>
+     * Identifier, format: <pool address>-<day id>.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     id?: string;
     /**
-     * Owner of the NFT.
-     * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * Timestamp rounded to current day by dividing by 86400
+     * @type {number}
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    owner?: string;
+    _date?: number;
     /**
-     * Pool the position is within.
+     * Pointer to pool.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     pool?: string;
     /**
-     * Position of which the snap was taken of.
+     * In range liquidity at end of period.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
-     */
-    position?: string;
-    /**
-     * Timestamp of block in which the snap was created.
-     * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
-     */
-    timestamp?: string;
-    /**
-     * Total position liquidity.
-     * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
     liquidity?: string;
     /**
-     * Amount of token 0 ever deposited to position.
+     * Current price tracker at end of period.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    deposited_token_0?: string;
+    sqrt_price?: string;
     /**
-     * Amount of token 1 ever deposited to position.
+     * Price of token0 - derived from sqrtPrice.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    deposited_token_1?: string;
+    token_0_price?: string;
     /**
-     * Amount of token 0 ever withdrawn from position (without fees).
+     * Price of token1 - derived from sqrtPrice.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    withdrawn_token_0?: string;
+    token_1_price?: string;
     /**
-     * Amount of token 1 ever withdrawn from position (without fees).
+     * Current tick at end of period.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    withdrawn_token_1?: string;
+    tick?: string;
     /**
-     * All time collected fees in token0.
+     * Tracker for global fee growth.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    collected_fees_token_0?: string;
+    fee_growth_global_0x128?: string;
     /**
-     * All time collected fees in token1.
+     * Tracker for global fee growth.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    collected_fees_token_1?: string;
+    fee_growth_global_1x128?: string;
     /**
-     * Transaction in which the snapshot was initialized.
+     * Total value locked derived in USD at end of period.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    transaction?: string;
+    tvl_usd?: string;
     /**
-     * Variable needed for fee computation.
+     * Volume in token0.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    fee_growth_inside_0_last_x128?: string;
+    volume_token_0?: string;
     /**
-     * Variable needed for fee computation.
+     * Volume in token1.
      * @type {string}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
      */
-    fee_growth_inside_1_last_x128?: string;
+    volume_token_1?: string;
+    /**
+     * Volume in USD.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Fees in USD.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    fees_usd?: string;
+    /**
+     * Number of transactions during period.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    tx_count?: string;
+    /**
+     * Opening price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    open?: string;
+    /**
+     * High price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    high?: string;
+    /**
+     * Low price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    low?: string;
+    /**
+     * Close price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    close?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3PositionSnapshotV3DTO
+     * @memberof UniswapV3PoolDayDataDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Hourly stats tracker for pool.
+ * @export
+ */
+export type UniswapV3PoolHourDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <pool address>-<day id>
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of hour.
+     * @type {number}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    period_start_unix?: number;
+    /**
+     * Pointer to pool.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    pool?: string;
+    /**
+     * In range liquidity at end of period.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    liquidity?: string;
+    /**
+     * Current price tracker at end of period.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    sqrt_price?: string;
+    /**
+     * Price of token0 - derived from sqrtPrice.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    token_0_price?: string;
+    /**
+     * Price of token1 - derived from sqrtPrice.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    token_1_price?: string;
+    /**
+     * Current tick at end of period.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    tick?: string;
+    /**
+     * Tracker for global fee growth.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    fee_growth_global_0x128?: string;
+    /**
+     * Tracker for global fee growth.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    fee_growth_global_1x128?: string;
+    /**
+     * Total value locked derived in USD at end of period.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    tvl_usd?: string;
+    /**
+     * Volume in token0.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Volume in token1.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Volume in USD.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Fees in USD.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    fees_usd?: string;
+    /**
+     * Number of transactions during period.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    tx_count?: string;
+    /**
+     * Opening price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    open?: string;
+    /**
+     * High price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    high?: string;
+    /**
+     * Low price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    low?: string;
+    /**
+     * Close price of token0.
+     * @type {string}
+     * @memberof UniswapV3PoolHourDataDTO
+     */
+    close?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV3PoolHourDataDTO
      */
     vid?: number;
 }
@@ -7986,131 +7865,252 @@ export type UniswapV3PositionSnapshotV3DTO = {
  * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  * @export
  */
-export type UniswapV3PositionV3DTO = {
+export type UniswapV3PositionDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     block_number?: number;
     /**
      * NFT token identifier.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     id?: string;
     /**
      * Owner of the NFT.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     owner?: string;
     /**
      * Pool position is within.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pair contract.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pair contract.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     token_1?: string;
     /**
      * Lower tick of the position.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     tick_lower?: string;
     /**
      * Upper tick of the position.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     tick_upper?: string;
     /**
      * Total position liquidity.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     liquidity?: string;
     /**
      * Amount of token 0 ever deposited to position.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     deposited_token_0?: string;
     /**
      * Amount of token 1 ever deposited to position.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     deposited_token_1?: string;
     /**
      * Amount of token 0 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     withdrawn_token_0?: string;
     /**
      * Amount of token 1 ever withdrawn from position (without fees).
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     withdrawn_token_1?: string;
     /**
      * All time collected fees in token0.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     collected_fees_token_0?: string;
     /**
      * All time collected fees in token1.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     collected_fees_token_1?: string;
     /**
      * Transaction in which the position was initialized.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     transaction?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     fee_growth_inside_0_last_x128?: string;
     /**
      * Variable needed for fee computation.
      * @type {string}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
      */
     fee_growth_inside_1_last_x128?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3PositionV3DTO
+     * @memberof UniswapV3PositionDTO
+     */
+    vid?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type UniswapV3PositionSnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * NFT token identifier, format: <NFT token id>#<block number>
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    id?: string;
+    /**
+     * Owner of the NFT.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    owner?: string;
+    /**
+     * Pool the position is within.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    pool?: string;
+    /**
+     * Position of which the snap was taken of.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    position?: string;
+    /**
+     * Timestamp of block in which the snap was created.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * Total position liquidity.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    liquidity?: string;
+    /**
+     * Amount of token 0 ever deposited to position.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    deposited_token_0?: string;
+    /**
+     * Amount of token 1 ever deposited to position.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    deposited_token_1?: string;
+    /**
+     * Amount of token 0 ever withdrawn from position (without fees).
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    withdrawn_token_0?: string;
+    /**
+     * Amount of token 1 ever withdrawn from position (without fees).
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    withdrawn_token_1?: string;
+    /**
+     * All time collected fees in token0.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    collected_fees_token_0?: string;
+    /**
+     * All time collected fees in token1.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    collected_fees_token_1?: string;
+    /**
+     * Transaction in which the snapshot was initialized.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    transaction?: string;
+    /**
+     * Variable needed for fee computation.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    fee_growth_inside_0_last_x128?: string;
+    /**
+     * Variable needed for fee computation.
+     * @type {string}
+     * @memberof UniswapV3PositionSnapshotDTO
+     */
+    fee_growth_inside_1_last_x128?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV3PositionSnapshotDTO
      */
     vid?: number;
 }
@@ -8119,518 +8119,403 @@ export type UniswapV3PositionV3DTO = {
  * Swap are created for each token swap within a pair.
  * @export
  */
-export type UniswapV3SwapV3DTO = {
+export type UniswapV3SwapDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     vid?: number;
     /**
      * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     id?: string;
     /**
      * Pointer to transaction.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     transaction?: string;
     /**
      * Timestamp of transaction.
      * @type {Date}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     timestamp?: Date;
     /**
      * Pool swap occured within.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     pool?: string;
     /**
      * Reference to token0 as stored in pair contract.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     token_0?: string;
     /**
      * Reference to token1 as stored in pair contract.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     token_1?: string;
     /**
      * Sender of the swap.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     sender?: string;
     /**
      * Recipient of the swap.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     recipient?: string;
     /**
      * Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     origin?: string;
     /**
      * Delta of token0 swapped.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     amount_0?: string;
     /**
      * Delta of token1 swapped.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     amount_1?: string;
     /**
      * Derived amount of tokens sold in USD.
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     amount_usd?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     sqrt_price_x96?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     tick?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     log_index?: NumericsBigInteger;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     evaluated_price?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     evaluated_amount?: number;
     /**
      * 
      * @type {TransactionsETradeAggressiveSide}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     pool_id?: string;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3SwapV3DTO
+     * @memberof UniswapV3SwapDTO
      */
     transaction_id?: string;
-}
-
-/**
- * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
- * @export
- */
-export type UniswapV3TickDayDataV3DTO = {
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    entry_time?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    recv_time?: Date;
-    /**
-     * Number of block in which entity was recorded.
-     * @type {number}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    block_number?: number;
-    /**
-     * Identifier, format: <pool address>-<tick index>-<timestamp>.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    id?: string;
-    /**
-     * Timestamp rounded to current day by dividing by 86400.
-     * @type {number}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    _date?: number;
-    /**
-     * Pointer to pool.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    pool?: string;
-    /**
-     * Pointer to tick.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    tick?: string;
-    /**
-     * Total liquidity pool has as tick lower or upper at end of period.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    liquidity_gross?: string;
-    /**
-     * How much liquidity changes when tick crossed at end of period.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    liquidity_net?: string;
-    /**
-     * Hourly volume of token0 with this tick in range.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    volume_token_0?: string;
-    /**
-     * Hourly volume of token1 with this tick in range.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    volume_token_1?: string;
-    /**
-     * Hourly volume in derived USD with this tick in range.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    volume_usd?: string;
-    /**
-     * Fees in USD.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    fees_usd?: string;
-    /**
-     * Variable needed for fee computation.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    fee_growth_outside_0x128?: string;
-    /**
-     * Variable needed for fee computation.
-     * @type {string}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    fee_growth_outside_1x128?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UniswapV3TickDayDataV3DTO
-     */
-    vid?: number;
 }
 
 /**
  * Ticks are the boundaries between discrete areas in price space.
  * @export
  */
-export type UniswapV3TickV3DTO = {
+export type UniswapV3TickDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     vid?: number;
     /**
      * Identifier, format: <pool address>#<tick index>
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     id?: string;
     /**
      * Pool address.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     pool_address?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     tick_idx?: NumericsBigInteger;
     /**
      * Pool address.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     pool?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     liquidity_gross?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     liquidity_net?: NumericsBigInteger;
     /**
      * Calculated price of token0 of tick within this pool - constant.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     price_0?: string;
     /**
      * Calculated price of token1 of tick within this pool - constant.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     price_1?: string;
     /**
      * Lifetime volume of token0 with this tick in range.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     volume_token_0?: string;
     /**
      * Lifetime volume of token1 with this tick in range.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     volume_token_1?: string;
     /**
      * Lifetime volume in derived USD with this tick in range.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     volume_usd?: string;
     /**
      * Lifetime volume in untracked USD with this tick in range.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     fees_usd?: string;
     /**
      * All time collected fees in token0.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     collected_fees_token_0?: string;
     /**
      * All time collected fees in token1.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     collected_fees_token_1?: string;
     /**
      * All time collected fees in USD.
      * @type {string}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     collected_fees_usd?: string;
     /**
      * Created time.
      * @type {Date}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     created_at_timestamp?: Date;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     liquidity_provider_count?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     fee_growth_outside_0x128?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TickV3DTO
+     * @memberof UniswapV3TickDTO
      */
     fee_growth_outside_1x128?: NumericsBigInteger;
 }
 
 /**
- * Token data aggregated across all pairs that include token.
+ * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  * @export
  */
-export type UniswapV3TokenHourDataV3DTO = {
+export type UniswapV3TickDayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     block_number?: number;
     /**
-     * Token address concatendated with date.
+     * Identifier, format: <pool address>-<tick index>-<timestamp>.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     id?: string;
     /**
-     * Unix timestamp for start of hour.
+     * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
-    period_start_unix?: number;
+    _date?: number;
     /**
-     * Pointer to token.
+     * Pointer to pool.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
-    token?: string;
+    pool?: string;
     /**
-     * Volume in token units.
+     * Pointer to tick.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
-    volume?: string;
+    tick?: string;
     /**
-     * Volume in derived USD.
+     * Total liquidity pool has as tick lower or upper at end of period.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
+     */
+    liquidity_gross?: string;
+    /**
+     * How much liquidity changes when tick crossed at end of period.
+     * @type {string}
+     * @memberof UniswapV3TickDayDataDTO
+     */
+    liquidity_net?: string;
+    /**
+     * Hourly volume of token0 with this tick in range.
+     * @type {string}
+     * @memberof UniswapV3TickDayDataDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Hourly volume of token1 with this tick in range.
+     * @type {string}
+     * @memberof UniswapV3TickDayDataDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Hourly volume in derived USD with this tick in range.
+     * @type {string}
+     * @memberof UniswapV3TickDayDataDTO
      */
     volume_usd?: string;
     /**
-     * Volume in USD even on pools with less reliable USD values.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    untracked_volume_usd?: string;
-    /**
-     * Liquidity across all pools in token units.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    total_value_locked?: string;
-    /**
-     * Liquidity across all pools in derived USD.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    total_value_locked_usd?: string;
-    /**
-     * Price at end of period in USD.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    price_usd?: string;
-    /**
      * Fees in USD.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     fees_usd?: string;
     /**
-     * Opening price USD.
+     * Variable needed for fee computation.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
-    open?: string;
+    fee_growth_outside_0x128?: string;
     /**
-     * High price USD.
+     * Variable needed for fee computation.
      * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
-    high?: string;
-    /**
-     * Low price USD.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    low?: string;
-    /**
-     * Close price USD.
-     * @type {string}
-     * @memberof UniswapV3TokenHourDataV3DTO
-     */
-    close?: string;
+    fee_growth_outside_1x128?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3TokenHourDataV3DTO
+     * @memberof UniswapV3TickDayDataDTO
      */
     vid?: number;
 }
@@ -8639,133 +8524,248 @@ export type UniswapV3TokenHourDataV3DTO = {
  * Stores aggregated information for a specific token across all pairs that token is included in.
  * @export
  */
-export type UniswapV3TokenV3DTO = {
+export type UniswapV3TokenDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     vid?: number;
     /**
      * Token address.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     id?: string;
     /**
      * Token symbol.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     symbol?: string;
     /**
      * Token name.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     name?: string;
     /**
      * Token decimals.
      * @type {number}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     decimals?: number;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     total_supply?: NumericsBigInteger;
     /**
      * Volume in token units.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     volume?: string;
     /**
      * Volume in derived USD.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     volume_usd?: string;
     /**
      * Volume in USD even on pools with less reliable USD values.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     untracked_volume_usd?: string;
     /**
      * Fees in USD.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     fees_usd?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     tx_count?: NumericsBigInteger;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     pool_count?: NumericsBigInteger;
     /**
      * Liquidity across all pools in token units.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     total_value_locked?: string;
     /**
      * Liquidity across all pools in derived USD.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     total_value_locked_usd?: string;
     /**
      * TVL derived in USD untracked.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     total_value_locked_usd_untracked?: string;
     /**
      * Derived price in ETH.
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     derived_eth?: string;
     /**
      * Pools token is in that are white listed for USD pricing.
      * @type {Array<string>}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     whitelist_pools?: Array<string>;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3TokenV3DTO
+     * @memberof UniswapV3TokenDTO
      */
     token_symbol?: string;
+}
+
+/**
+ * Token data aggregated across all pairs that include token.
+ * @export
+ */
+export type UniswapV3TokenHourDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    block_number?: number;
+    /**
+     * Token address concatendated with date.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of hour.
+     * @type {number}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    period_start_unix?: number;
+    /**
+     * Pointer to token.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    token?: string;
+    /**
+     * Volume in token units.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    volume?: string;
+    /**
+     * Volume in derived USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Volume in USD even on pools with less reliable USD values.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * Liquidity across all pools in token units.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    total_value_locked?: string;
+    /**
+     * Liquidity across all pools in derived USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    total_value_locked_usd?: string;
+    /**
+     * Price at end of period in USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    price_usd?: string;
+    /**
+     * Fees in USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    fees_usd?: string;
+    /**
+     * Opening price USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    open?: string;
+    /**
+     * High price USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    high?: string;
+    /**
+     * Low price USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    low?: string;
+    /**
+     * Close price USD.
+     * @type {string}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    close?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UniswapV3TokenHourDataDTO
+     */
+    vid?: number;
 }
 
 /**
@@ -8887,53 +8887,53 @@ export type UniswapV3TokenV3DayDataDTO = {
  * 
  * @export
  */
-export type UniswapV3TransactionV3DTO = {
+export type UniswapV3TransactionDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     block_number?: number;
     /**
      * Transaction hash.
      * @type {string}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     id?: string;
     /**
      * Timestamp txn was confirmed.
      * @type {string}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     timestamp?: string;
     /**
      * Gas used during txn execution.
      * @type {string}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     gas_used?: string;
     /**
      * 
      * @type {string}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     gas_price?: string;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3TransactionV3DTO
+     * @memberof UniswapV3TransactionDTO
      */
     vid?: number;
 }
@@ -8942,77 +8942,77 @@ export type UniswapV3TransactionV3DTO = {
  * Data accumulated and condensed into day stats for all of Uniswap.
  * @export
  */
-export type UniswapV3UniswapDayDataV3DTO = {
+export type UniswapV3UniswapDayDataDTO = {
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     entry_time?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     recv_time?: Date;
     /**
      * Number of block in which entity was recorded.
      * @type {number}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     block_number?: number;
     /**
      * 
      * @type {number}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     vid?: number;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     id?: string;
     /**
      * Timestamp rounded to current day by dividing by 86400.
      * @type {number}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     _date?: number;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of ETH.
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     volume_eth?: string;
     /**
      * Total volume across all pairs on this day, stored as a derived amount of USD.
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     volume_usd?: string;
     /**
      * Total daily volume in Uniswap derived in terms of USD untracked.
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     volume_usd_untracked?: string;
     /**
      * Fees in USD
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     fees_usd?: string;
     /**
      * 
      * @type {NumericsBigInteger}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     tx_count?: NumericsBigInteger;
     /**
      * Tvl in terms of USD.
      * @type {string}
-     * @memberof UniswapV3UniswapDayDataV3DTO
+     * @memberof UniswapV3UniswapDayDataDTO
      */
     tvl_usd?: string;
 }
@@ -9259,6 +9259,116 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets orders.
+         * @summary Orders (current)
+         * @throws {RequiredError}
+         */
+        cowOrdersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cow/orders/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets settlements.
+         * @summary Settlements (current)
+         * @throws {RequiredError}
+         */
+        cowSettlementsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cow/settlements/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        cowTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cow/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        cowTradesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cow/trades/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        cowUsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cow/users/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -9272,6 +9382,16 @@ export type CowApiType = {
     cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, sellToken?: string, buyToken?: string, options?: RequestOptions): Promise<Array<CowTradeDTO>>,
 
     cowGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, options?: RequestOptions): Promise<Array<CowUserDTO>>,
+
+    cowOrdersCurrent(options?: RequestOptions): Promise<Array<CowOrderDTO>>,
+
+    cowSettlementsCurrent(options?: RequestOptions): Promise<Array<CowSettlementDTO>>,
+
+    cowTokensCurrent(options?: RequestOptions): Promise<Array<CowTokenDTO>>,
+
+    cowTradesCurrent(options?: RequestOptions): Promise<Array<CowTradeDTO>>,
+
+    cowUsersCurrent(options?: RequestOptions): Promise<Array<CowUserDTO>>,
 }
 
 /**
@@ -9356,6 +9476,81 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
                 }
             });
         },
+        /**
+         * Gets orders.
+         * @summary Orders (current)
+         * @throws {RequiredError}
+         */
+        cowOrdersCurrent(options?: RequestOptions = {}): Promise<Array<CowOrderDTO>> {
+            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowOrdersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets settlements.
+         * @summary Settlements (current)
+         * @throws {RequiredError}
+         */
+        cowSettlementsCurrent(options?: RequestOptions = {}): Promise<Array<CowSettlementDTO>> {
+            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowSettlementsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        cowTokensCurrent(options?: RequestOptions = {}): Promise<Array<CowTokenDTO>> {
+            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        cowTradesCurrent(options?: RequestOptions = {}): Promise<Array<CowTradeDTO>> {
+            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowTradesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        cowUsersCurrent(options?: RequestOptions = {}): Promise<Array<CowUserDTO>> {
+            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowUsersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
     }
 };
 
@@ -9366,6 +9561,428 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
  */
 export const CurveApiFetchParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        curveAccountsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/accounts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets addLiquidityEvents.
+         * @summary AddLiquidityEvents (current)
+         * @throws {RequiredError}
+         */
+        curveAddLiquidityEventsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/addLiquidityEvents/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets adminFeeChangeLogs.
+         * @summary AdminFeeChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveAdminFeeChangeLogsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/adminFeeChangeLogs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets amplificationCoeffChangeLogs.
+         * @summary AmplificationCoeffChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveAmplificationCoeffChangeLogsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/amplificationCoeffChangeLogs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets coins.
+         * @summary Coins (current)
+         * @throws {RequiredError}
+         */
+        curveCoinsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/coins/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets contractVersions.
+         * @summary ContractVersions (current)
+         * @throws {RequiredError}
+         */
+        curveContractVersionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/contractVersions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets contracts.
+         * @summary Contracts (current)
+         * @throws {RequiredError}
+         */
+        curveContractsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/contracts/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dailyVolumes.
+         * @summary DailyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveDailyVolumesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/dailyVolumes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets exchanges.
+         * @summary Exchanges (current)
+         * @throws {RequiredError}
+         */
+        curveExchangesCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/exchanges/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets feeChangeLogs.
+         * @summary FeeChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveFeeChangeLogsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/feeChangeLogs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeDeposits.
+         * @summary GaugeDeposits (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeDepositsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeDeposits/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeLiquiditys.
+         * @summary GaugeLiquiditys (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeLiquiditysCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeLiquiditys/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeTotalWeights.
+         * @summary GaugeTotalWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTotalWeightsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeTotalWeights/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeTypeWeights.
+         * @summary GaugeTypeWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTypeWeightsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeTypeWeights/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeTypes.
+         * @summary GaugeTypes (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTypesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeTypes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeWeightVotes.
+         * @summary GaugeWeightVotes (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWeightVotesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeWeightVotes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeWeights.
+         * @summary GaugeWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWeightsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeWeights/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gaugeWithdraws.
+         * @summary GaugeWithdraws (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWithdrawsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeWithdraws/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets gauges.
+         * @summary Gauges (current)
+         * @throws {RequiredError}
+         */
+        curveGaugesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gauges/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Gets accounts.
          * @summary Accounts (historical) 🔥
@@ -9413,12 +10030,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets addliquidityevents.
+         * Gets addLiquidityEvents.
          * @summary AddLiquidityEvents (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/addliquidityevents/historical`;
+            const localVarPath = `/dapps/curve/addLiquidityEvents/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9459,12 +10076,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets adminfeechangelogs.
+         * Gets adminFeeChangeLogs.
          * @summary AdminFeeChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/adminfeechangelogs/historical`;
+            const localVarPath = `/dapps/curve/adminFeeChangeLogs/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9505,12 +10122,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets amplificationcoeffchangelogs.
+         * Gets amplificationCoeffChangeLogs.
          * @summary AmplificationCoeffChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetAmplificationCoeffChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/amplificationcoeffchangelogs/historical`;
+            const localVarPath = `/dapps/curve/amplificationCoeffChangeLogs/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9597,12 +10214,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets contractversions.
+         * Gets contractVersions.
          * @summary ContractVersions (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetContractVersionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/contractversions/historical`;
+            const localVarPath = `/dapps/curve/contractVersions/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9685,12 +10302,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets dailyvolumes.
+         * Gets dailyVolumes.
          * @summary DailyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/dailyvolumes/historical`;
+            const localVarPath = `/dapps/curve/dailyVolumes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9777,12 +10394,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets feechangelogs.
+         * Gets feeChangeLogs.
          * @summary FeeChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/feechangelogs/historical`;
+            const localVarPath = `/dapps/curve/feeChangeLogs/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9823,12 +10440,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugedeposits.
+         * Gets gaugeDeposits.
          * @summary GaugeDeposits (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugedeposits/historical`;
+            const localVarPath = `/dapps/curve/gaugeDeposits/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9865,12 +10482,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugeliquiditys.
+         * Gets gaugeLiquiditys.
          * @summary GaugeLiquiditys (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeLiquiditysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugeliquiditys/historical`;
+            const localVarPath = `/dapps/curve/gaugeLiquiditys/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9911,12 +10528,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugetotalweights.
+         * Gets gaugeTotalWeights.
          * @summary GaugeTotalWeights (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeTotalWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugetotalweights/historical`;
+            const localVarPath = `/dapps/curve/gaugeTotalWeights/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9953,12 +10570,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugetypeweights.
+         * Gets gaugeTypeWeights.
          * @summary GaugeTypeWeights (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeTypeWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugetypeweights/historical`;
+            const localVarPath = `/dapps/curve/gaugeTypeWeights/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9995,12 +10612,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugetypes.
+         * Gets gaugeTypes.
          * @summary GaugeTypes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeTypesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, name?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugetypes/historical`;
+            const localVarPath = `/dapps/curve/gaugeTypes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10041,12 +10658,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugeweightvotes.
+         * Gets gaugeWeightVotes.
          * @summary GaugeWeightVotes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeWeightVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugeweightvotes/historical`;
+            const localVarPath = `/dapps/curve/gaugeWeightVotes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10087,12 +10704,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugeweights.
+         * Gets gaugeWeights.
          * @summary GaugeWeights (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugeweights/historical`;
+            const localVarPath = `/dapps/curve/gaugeWeights/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10129,12 +10746,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugewithdraws.
+         * Gets gaugeWithdraws.
          * @summary GaugeWithdraws (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetGaugeWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugewithdraws/historical`;
+            const localVarPath = `/dapps/curve/gaugeWithdraws/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10221,12 +10838,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets hourlyvolumes.
+         * Gets hourlyVolumes.
          * @summary HourlyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/hourlyvolumes/historical`;
+            const localVarPath = `/dapps/curve/hourlyVolumes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10267,12 +10884,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets lptokens.
+         * Gets lpTokens.
          * @summary LpTokens (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetLpTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, name?: string, symbol?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/lptokens/historical`;
+            const localVarPath = `/dapps/curve/lpTokens/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10371,12 +10988,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets proposalvotes.
+         * Gets proposalVotes.
          * @summary ProposalVotes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetProposalVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/proposalvotes/historical`;
+            const localVarPath = `/dapps/curve/proposalVotes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10455,12 +11072,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets removeliquidityevents.
+         * Gets removeLiquidityEvents.
          * @summary RemoveLiquidityEvents (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/removeliquidityevents/historical`;
+            const localVarPath = `/dapps/curve/removeLiquidityEvents/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10501,12 +11118,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets removeliquidityoneevents.
+         * Gets removeLiquidityOneEvents.
          * @summary RemoveLiquidityOneEvents (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityOneEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/removeliquidityoneevents/historical`;
+            const localVarPath = `/dapps/curve/removeLiquidityOneEvents/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10547,12 +11164,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets systemstates.
+         * Gets systemStates.
          * @summary SystemStates (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/systemstates/historical`;
+            const localVarPath = `/dapps/curve/systemStates/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10643,12 +11260,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets transferownershipevents.
+         * Gets transferOwnershipEvents.
          * @summary TransferOwnershipEvents (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/transferownershipevents/historical`;
+            const localVarPath = `/dapps/curve/transferOwnershipEvents/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10689,12 +11306,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets underlyingcoins.
+         * Gets underlyingCoins.
          * @summary UnderlyingCoins (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetUnderlyingCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/underlyingcoins/historical`;
+            const localVarPath = `/dapps/curve/underlyingCoins/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10735,12 +11352,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets votingapps.
+         * Gets votingApps.
          * @summary VotingApps (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/votingapps/historical`;
+            const localVarPath = `/dapps/curve/votingApps/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10781,12 +11398,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets weeklyvolumes.
+         * Gets weeklyVolumes.
          * @summary WeeklyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/weeklyvolumes/historical`;
+            const localVarPath = `/dapps/curve/weeklyVolumes/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10826,10 +11443,338 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets hourlyVolumes.
+         * @summary HourlyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveHourlyVolumesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/hourlyVolumes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets lpTokens.
+         * @summary LpTokens (current)
+         * @throws {RequiredError}
+         */
+        curveLpTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/lpTokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (current)
+         * @throws {RequiredError}
+         */
+        curvePoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/pools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets proposalVotes.
+         * @summary ProposalVotes (current)
+         * @throws {RequiredError}
+         */
+        curveProposalVotesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/proposalVotes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets proposals.
+         * @summary Proposals (current)
+         * @throws {RequiredError}
+         */
+        curveProposalsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/proposals/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets removeLiquidityEvents.
+         * @summary RemoveLiquidityEvents (current)
+         * @throws {RequiredError}
+         */
+        curveRemoveLiquidityEventsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/removeLiquidityEvents/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets removeLiquidityOneEvents.
+         * @summary RemoveLiquidityOneEvents (current)
+         * @throws {RequiredError}
+         */
+        curveRemoveLiquidityOneEventsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/removeLiquidityOneEvents/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets systemStates.
+         * @summary SystemStates (current)
+         * @throws {RequiredError}
+         */
+        curveSystemStatesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/systemStates/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        curveTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets transferOwnershipEvents.
+         * @summary TransferOwnershipEvents (current)
+         * @throws {RequiredError}
+         */
+        curveTransferOwnershipEventsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/transferOwnershipEvents/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets underlyingCoins.
+         * @summary UnderlyingCoins (current)
+         * @throws {RequiredError}
+         */
+        curveUnderlyingCoinsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/underlyingCoins/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets votingApps.
+         * @summary VotingApps (current)
+         * @throws {RequiredError}
+         */
+        curveVotingAppsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/votingApps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets weeklyVolumes.
+         * @summary WeeklyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveWeeklyVolumesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/weeklyVolumes/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
 export type CurveApiType = { 
+    curveAccountsCurrent(options?: RequestOptions): Promise<Array<CurveAccountDTO>>,
+
+    curveAddLiquidityEventsCurrent(options?: RequestOptions): Promise<Array<CurveAddLiquidityEventDTO>>,
+
+    curveAdminFeeChangeLogsCurrent(options?: RequestOptions): Promise<Array<CurveAdminFeeChangeLogDTO>>,
+
+    curveAmplificationCoeffChangeLogsCurrent(options?: RequestOptions): Promise<Array<CurveAmplificationCoeffChangeLogDTO>>,
+
+    curveCoinsCurrent(options?: RequestOptions): Promise<Array<CurveCoinDTO>>,
+
+    curveContractVersionsCurrent(options?: RequestOptions): Promise<Array<CurveContractVersionDTO>>,
+
+    curveContractsCurrent(options?: RequestOptions): Promise<Array<CurveContractDTO>>,
+
+    curveDailyVolumesCurrent(options?: RequestOptions): Promise<Array<CurveDailyVolumeDTO>>,
+
+    curveExchangesCurrent(pool?: string, options?: RequestOptions): Promise<Array<CurveExchangeDTO>>,
+
+    curveFeeChangeLogsCurrent(options?: RequestOptions): Promise<Array<CurveFeeChangeLogDTO>>,
+
+    curveGaugeDepositsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeDepositDTO>>,
+
+    curveGaugeLiquiditysCurrent(options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
+
+    curveGaugeTotalWeightsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeTotalWeightDTO>>,
+
+    curveGaugeTypeWeightsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeTypeWeightDTO>>,
+
+    curveGaugeTypesCurrent(options?: RequestOptions): Promise<Array<CurveGaugeTypeDTO>>,
+
+    curveGaugeWeightVotesCurrent(options?: RequestOptions): Promise<Array<CurveGaugeWeightVoteDTO>>,
+
+    curveGaugeWeightsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeWeightDTO>>,
+
+    curveGaugeWithdrawsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeWithdrawDTO>>,
+
+    curveGaugesCurrent(options?: RequestOptions): Promise<Array<CurveGaugeDTO>>,
+
     curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, options?: RequestOptions): Promise<Array<CurveAccountDTO>>,
 
     curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<CurveAddLiquidityEventDTO>>,
@@ -10893,6 +11838,32 @@ export type CurveApiType = {
     curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, options?: RequestOptions): Promise<Array<CurveVotingAppDTO>>,
 
     curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<CurveWeeklyVolumeDTO>>,
+
+    curveHourlyVolumesCurrent(options?: RequestOptions): Promise<Array<CurveHourlyVolumeDTO>>,
+
+    curveLpTokensCurrent(options?: RequestOptions): Promise<Array<CurveLpTokenDTO>>,
+
+    curvePoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<CurvePoolDTO>>,
+
+    curveProposalVotesCurrent(options?: RequestOptions): Promise<Array<CurveProposalVoteDTO>>,
+
+    curveProposalsCurrent(options?: RequestOptions): Promise<Array<CurveProposalDTO>>,
+
+    curveRemoveLiquidityEventsCurrent(options?: RequestOptions): Promise<Array<CurveRemoveLiquidityEventDTO>>,
+
+    curveRemoveLiquidityOneEventsCurrent(options?: RequestOptions): Promise<Array<CurveRemoveLiquidityOneEventDTO>>,
+
+    curveSystemStatesCurrent(options?: RequestOptions): Promise<Array<CurveSystemStateDTO>>,
+
+    curveTokensCurrent(options?: RequestOptions): Promise<Array<CurveTokenDTO>>,
+
+    curveTransferOwnershipEventsCurrent(options?: RequestOptions): Promise<Array<CurveTransferOwnershipEventDTO>>,
+
+    curveUnderlyingCoinsCurrent(options?: RequestOptions): Promise<Array<CurveUnderlyingCoinDTO>>,
+
+    curveVotingAppsCurrent(options?: RequestOptions): Promise<Array<CurveVotingAppDTO>>,
+
+    curveWeeklyVolumesCurrent(options?: RequestOptions): Promise<Array<CurveWeeklyVolumeDTO>>,
 }
 
 /**
@@ -10902,6 +11873,291 @@ export type CurveApiType = {
 export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): CurveApiType {
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
+        /**
+         * Gets accounts.
+         * @summary Accounts (current)
+         * @throws {RequiredError}
+         */
+        curveAccountsCurrent(options?: RequestOptions = {}): Promise<Array<CurveAccountDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveAccountsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets addLiquidityEvents.
+         * @summary AddLiquidityEvents (current)
+         * @throws {RequiredError}
+         */
+        curveAddLiquidityEventsCurrent(options?: RequestOptions = {}): Promise<Array<CurveAddLiquidityEventDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveAddLiquidityEventsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets adminFeeChangeLogs.
+         * @summary AdminFeeChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveAdminFeeChangeLogsCurrent(options?: RequestOptions = {}): Promise<Array<CurveAdminFeeChangeLogDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveAdminFeeChangeLogsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets amplificationCoeffChangeLogs.
+         * @summary AmplificationCoeffChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveAmplificationCoeffChangeLogsCurrent(options?: RequestOptions = {}): Promise<Array<CurveAmplificationCoeffChangeLogDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveAmplificationCoeffChangeLogsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets coins.
+         * @summary Coins (current)
+         * @throws {RequiredError}
+         */
+        curveCoinsCurrent(options?: RequestOptions = {}): Promise<Array<CurveCoinDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveCoinsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets contractVersions.
+         * @summary ContractVersions (current)
+         * @throws {RequiredError}
+         */
+        curveContractVersionsCurrent(options?: RequestOptions = {}): Promise<Array<CurveContractVersionDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveContractVersionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets contracts.
+         * @summary Contracts (current)
+         * @throws {RequiredError}
+         */
+        curveContractsCurrent(options?: RequestOptions = {}): Promise<Array<CurveContractDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveContractsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dailyVolumes.
+         * @summary DailyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveDailyVolumesCurrent(options?: RequestOptions = {}): Promise<Array<CurveDailyVolumeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveDailyVolumesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets exchanges.
+         * @summary Exchanges (current)
+         * @throws {RequiredError}
+         */
+        curveExchangesCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<CurveExchangeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveExchangesCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets feeChangeLogs.
+         * @summary FeeChangeLogs (current)
+         * @throws {RequiredError}
+         */
+        curveFeeChangeLogsCurrent(options?: RequestOptions = {}): Promise<Array<CurveFeeChangeLogDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveFeeChangeLogsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeDeposits.
+         * @summary GaugeDeposits (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeDepositsCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeDepositDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeDepositsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeLiquiditys.
+         * @summary GaugeLiquiditys (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeLiquiditysCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeLiquiditysCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeTotalWeights.
+         * @summary GaugeTotalWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTotalWeightsCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeTotalWeightDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeTotalWeightsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeTypeWeights.
+         * @summary GaugeTypeWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTypeWeightsCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeWeightDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeTypeWeightsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeTypes.
+         * @summary GaugeTypes (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeTypesCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeTypesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeWeightVotes.
+         * @summary GaugeWeightVotes (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWeightVotesCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightVoteDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeWeightVotesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeWeights.
+         * @summary GaugeWeights (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWeightsCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeWeightsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gaugeWithdraws.
+         * @summary GaugeWithdraws (current)
+         * @throws {RequiredError}
+         */
+        curveGaugeWithdrawsCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeWithdrawDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeWithdrawsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets gauges.
+         * @summary Gauges (current)
+         * @throws {RequiredError}
+         */
+        curveGaugesCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
         /**
          * Gets accounts.
          * @summary Accounts (historical) 🔥
@@ -10918,7 +12174,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets addliquidityevents.
+         * Gets addLiquidityEvents.
          * @summary AddLiquidityEvents (historical) 🔥
          * @throws {RequiredError}
          */
@@ -10933,7 +12189,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets adminfeechangelogs.
+         * Gets adminFeeChangeLogs.
          * @summary AdminFeeChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
@@ -10948,7 +12204,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets amplificationcoeffchangelogs.
+         * Gets amplificationCoeffChangeLogs.
          * @summary AmplificationCoeffChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
@@ -10978,7 +12234,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets contractversions.
+         * Gets contractVersions.
          * @summary ContractVersions (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11008,7 +12264,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets dailyvolumes.
+         * Gets dailyVolumes.
          * @summary DailyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11038,7 +12294,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets feechangelogs.
+         * Gets feeChangeLogs.
          * @summary FeeChangeLogs (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11053,7 +12309,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugedeposits.
+         * Gets gaugeDeposits.
          * @summary GaugeDeposits (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11068,7 +12324,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugeliquiditys.
+         * Gets gaugeLiquiditys.
          * @summary GaugeLiquiditys (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11083,7 +12339,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugetotalweights.
+         * Gets gaugeTotalWeights.
          * @summary GaugeTotalWeights (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11098,7 +12354,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugetypeweights.
+         * Gets gaugeTypeWeights.
          * @summary GaugeTypeWeights (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11113,7 +12369,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugetypes.
+         * Gets gaugeTypes.
          * @summary GaugeTypes (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11128,7 +12384,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugeweightvotes.
+         * Gets gaugeWeightVotes.
          * @summary GaugeWeightVotes (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11143,7 +12399,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugeweights.
+         * Gets gaugeWeights.
          * @summary GaugeWeights (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11158,7 +12414,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugewithdraws.
+         * Gets gaugeWithdraws.
          * @summary GaugeWithdraws (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11188,7 +12444,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets hourlyvolumes.
+         * Gets hourlyVolumes.
          * @summary HourlyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11203,7 +12459,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets lptokens.
+         * Gets lpTokens.
          * @summary LpTokens (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11233,7 +12489,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets proposalvotes.
+         * Gets proposalVotes.
          * @summary ProposalVotes (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11263,7 +12519,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets removeliquidityevents.
+         * Gets removeLiquidityEvents.
          * @summary RemoveLiquidityEvents (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11278,7 +12534,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets removeliquidityoneevents.
+         * Gets removeLiquidityOneEvents.
          * @summary RemoveLiquidityOneEvents (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11293,7 +12549,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets systemstates.
+         * Gets systemStates.
          * @summary SystemStates (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11323,7 +12579,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets transferownershipevents.
+         * Gets transferOwnershipEvents.
          * @summary TransferOwnershipEvents (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11338,7 +12594,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets underlyingcoins.
+         * Gets underlyingCoins.
          * @summary UnderlyingCoins (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11353,7 +12609,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets votingapps.
+         * Gets votingApps.
          * @summary VotingApps (historical) 🔥
          * @throws {RequiredError}
          */
@@ -11368,12 +12624,207 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets weeklyvolumes.
+         * Gets weeklyVolumes.
          * @summary WeeklyVolumes (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<CurveWeeklyVolumeDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets hourlyVolumes.
+         * @summary HourlyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveHourlyVolumesCurrent(options?: RequestOptions = {}): Promise<Array<CurveHourlyVolumeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveHourlyVolumesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets lpTokens.
+         * @summary LpTokens (current)
+         * @throws {RequiredError}
+         */
+        curveLpTokensCurrent(options?: RequestOptions = {}): Promise<Array<CurveLpTokenDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveLpTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (current)
+         * @throws {RequiredError}
+         */
+        curvePoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<CurvePoolDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curvePoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets proposalVotes.
+         * @summary ProposalVotes (current)
+         * @throws {RequiredError}
+         */
+        curveProposalVotesCurrent(options?: RequestOptions = {}): Promise<Array<CurveProposalVoteDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveProposalVotesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets proposals.
+         * @summary Proposals (current)
+         * @throws {RequiredError}
+         */
+        curveProposalsCurrent(options?: RequestOptions = {}): Promise<Array<CurveProposalDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveProposalsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets removeLiquidityEvents.
+         * @summary RemoveLiquidityEvents (current)
+         * @throws {RequiredError}
+         */
+        curveRemoveLiquidityEventsCurrent(options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityEventDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveRemoveLiquidityEventsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets removeLiquidityOneEvents.
+         * @summary RemoveLiquidityOneEvents (current)
+         * @throws {RequiredError}
+         */
+        curveRemoveLiquidityOneEventsCurrent(options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityOneEventDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveRemoveLiquidityOneEventsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets systemStates.
+         * @summary SystemStates (current)
+         * @throws {RequiredError}
+         */
+        curveSystemStatesCurrent(options?: RequestOptions = {}): Promise<Array<CurveSystemStateDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveSystemStatesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        curveTokensCurrent(options?: RequestOptions = {}): Promise<Array<CurveTokenDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transferOwnershipEvents.
+         * @summary TransferOwnershipEvents (current)
+         * @throws {RequiredError}
+         */
+        curveTransferOwnershipEventsCurrent(options?: RequestOptions = {}): Promise<Array<CurveTransferOwnershipEventDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveTransferOwnershipEventsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets underlyingCoins.
+         * @summary UnderlyingCoins (current)
+         * @throws {RequiredError}
+         */
+        curveUnderlyingCoinsCurrent(options?: RequestOptions = {}): Promise<Array<CurveUnderlyingCoinDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveUnderlyingCoinsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets votingApps.
+         * @summary VotingApps (current)
+         * @throws {RequiredError}
+         */
+        curveVotingAppsCurrent(options?: RequestOptions = {}): Promise<Array<CurveVotingAppDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveVotingAppsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets weeklyVolumes.
+         * @summary WeeklyVolumes (current)
+         * @throws {RequiredError}
+         */
+        curveWeeklyVolumesCurrent(options?: RequestOptions = {}): Promise<Array<CurveWeeklyVolumeDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveWeeklyVolumesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -11392,6 +12843,50 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
  */
 export const DexApiFetchParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Gets batchs.
+         * @summary Batchs (current)
+         * @throws {RequiredError}
+         */
+        dexBatchsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/batchs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        dexDepositsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/deposits/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Gets batchs.
          * @summary Batchs (historical) 🔥
@@ -11803,12 +13298,12 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets withdrawrequests.
+         * Gets withdrawRequests.
          * @summary WithdrawRequests (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetWithdrawRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/withdrawrequests/historical`;
+            const localVarPath = `/dapps/dex/withdrawRequests/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11894,10 +13389,212 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets orders.
+         * @summary Orders (current)
+         * @throws {RequiredError}
+         */
+        dexOrdersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/orders/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets prices.
+         * @summary Prices (current)
+         * @throws {RequiredError}
+         */
+        dexPricesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/prices/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets solutions.
+         * @summary Solutions (current)
+         * @throws {RequiredError}
+         */
+        dexSolutionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/solutions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets statss.
+         * @summary Statss (current)
+         * @throws {RequiredError}
+         */
+        dexStatssCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/statss/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        dexTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        dexTradesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/trades/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        dexUsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/users/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets withdrawRequests.
+         * @summary WithdrawRequests (current)
+         * @throws {RequiredError}
+         */
+        dexWithdrawRequestsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/withdrawRequests/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        dexWithdrawsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/withdraws/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
 export type DexApiType = { 
+    dexBatchsCurrent(options?: RequestOptions): Promise<Array<DexBatchDTO>>,
+
+    dexDepositsCurrent(options?: RequestOptions): Promise<Array<DexDepositDTO>>,
+
     dexGetBatchsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexBatchDTO>>,
 
     dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<DexDepositDTO>>,
@@ -11919,6 +13616,24 @@ export type DexApiType = {
     dexGetWithdrawRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<DexWithdrawRequestDTO>>,
 
     dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<DexWithdrawDTO>>,
+
+    dexOrdersCurrent(options?: RequestOptions): Promise<Array<DexOrderDTO>>,
+
+    dexPricesCurrent(options?: RequestOptions): Promise<Array<DexPriceDTO>>,
+
+    dexSolutionsCurrent(options?: RequestOptions): Promise<Array<DexSolutionDTO>>,
+
+    dexStatssCurrent(options?: RequestOptions): Promise<Array<DexStatsDTO>>,
+
+    dexTokensCurrent(options?: RequestOptions): Promise<Array<DexTokenDTO>>,
+
+    dexTradesCurrent(options?: RequestOptions): Promise<Array<DexTradeDTO>>,
+
+    dexUsersCurrent(options?: RequestOptions): Promise<Array<DexUserDTO>>,
+
+    dexWithdrawRequestsCurrent(options?: RequestOptions): Promise<Array<DexWithdrawRequestDTO>>,
+
+    dexWithdrawsCurrent(options?: RequestOptions): Promise<Array<DexWithdrawDTO>>,
 }
 
 /**
@@ -11928,6 +13643,36 @@ export type DexApiType = {
 export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): DexApiType {
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
+        /**
+         * Gets batchs.
+         * @summary Batchs (current)
+         * @throws {RequiredError}
+         */
+        dexBatchsCurrent(options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexBatchsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets deposits.
+         * @summary Deposits (current)
+         * @throws {RequiredError}
+         */
+        dexDepositsCurrent(options?: RequestOptions = {}): Promise<Array<DexDepositDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexDepositsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
         /**
          * Gets batchs.
          * @summary Batchs (historical) 🔥
@@ -12064,7 +13809,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets withdrawrequests.
+         * Gets withdrawRequests.
          * @summary WithdrawRequests (historical) 🔥
          * @throws {RequiredError}
          */
@@ -12085,6 +13830,141 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
          */
         dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions = {}): Promise<Array<DexWithdrawDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets orders.
+         * @summary Orders (current)
+         * @throws {RequiredError}
+         */
+        dexOrdersCurrent(options?: RequestOptions = {}): Promise<Array<DexOrderDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexOrdersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets prices.
+         * @summary Prices (current)
+         * @throws {RequiredError}
+         */
+        dexPricesCurrent(options?: RequestOptions = {}): Promise<Array<DexPriceDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexPricesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets solutions.
+         * @summary Solutions (current)
+         * @throws {RequiredError}
+         */
+        dexSolutionsCurrent(options?: RequestOptions = {}): Promise<Array<DexSolutionDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexSolutionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets statss.
+         * @summary Statss (current)
+         * @throws {RequiredError}
+         */
+        dexStatssCurrent(options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexStatssCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        dexTokensCurrent(options?: RequestOptions = {}): Promise<Array<DexTokenDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        dexTradesCurrent(options?: RequestOptions = {}): Promise<Array<DexTradeDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexTradesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        dexUsersCurrent(options?: RequestOptions = {}): Promise<Array<DexUserDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexUsersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets withdrawRequests.
+         * @summary WithdrawRequests (current)
+         * @throws {RequiredError}
+         */
+        dexWithdrawRequestsCurrent(options?: RequestOptions = {}): Promise<Array<DexWithdrawRequestDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexWithdrawRequestsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets withdraws.
+         * @summary Withdraws (current)
+         * @throws {RequiredError}
+         */
+        dexWithdrawsCurrent(options?: RequestOptions = {}): Promise<Array<DexWithdrawDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexWithdrawsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12132,6 +14012,94 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          */
         dexGetTradesCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/trades/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets bundles.
+         * @summary Bundles (current)
+         * @throws {RequiredError}
+         */
+        sushiswapBundlesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/bundles/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (current)
+         * @throws {RequiredError}
+         */
+        sushiswapBurnsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/burns/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dayDatas.
+         * @summary DayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/dayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets factorys.
+         * @summary Factorys (current)
+         * @throws {RequiredError}
+         */
+        sushiswapFactorysCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/factorys/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12236,12 +14204,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets daydatas.
+         * Gets dayDatas.
          * @summary DayDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/daydatas/historical`;
+            const localVarPath = `/dapps/sushiswap/dayDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12320,12 +14288,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets hourdatas.
+         * Gets hourDatas.
          * @summary HourDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/hourdatas/historical`;
+            const localVarPath = `/dapps/sushiswap/hourDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12362,12 +14330,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets liquiditypositionsnapshots.
+         * Gets liquidityPositionSnapshots.
          * @summary LiquidityPositionSnapshots (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/liquiditypositionsnapshots/historical`;
+            const localVarPath = `/dapps/sushiswap/liquidityPositionSnapshots/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12412,12 +14380,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets liquiditypositions.
+         * Gets liquidityPositions.
          * @summary LiquidityPositions (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/liquiditypositions/historical`;
+            const localVarPath = `/dapps/sushiswap/liquidityPositions/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12508,12 +14476,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairdaydatas.
+         * Gets pairDayDatas.
          * @summary PairDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairdaydatas/historical`;
+            const localVarPath = `/dapps/sushiswap/pairDayDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12562,12 +14530,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairhourdatas.
+         * Gets pairHourDatas.
          * @summary PairHourDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairhourdatas/historical`;
+            const localVarPath = `/dapps/sushiswap/pairHourDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12685,28 +14653,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetSwapsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/swaps/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets swaps.
          * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
@@ -12752,12 +14698,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokendaydatas.
+         * Gets tokenDayDatas.
          * @summary TokenDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokendaydatas/historical`;
+            const localVarPath = `/dapps/sushiswap/tokenDayDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12782,28 +14728,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             if (id !== undefined) {
                 localVarQueryParameter['id'] = ((id:any):string);
             }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokens.
-         * @summary Tokens (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokensCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokens/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -12949,6 +14873,278 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets hourDatas.
+         * @summary HourDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapHourDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/hourDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        sushiswapLiquidityPositionSnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/liquidityPositionSnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (current)
+         * @throws {RequiredError}
+         */
+        sushiswapLiquidityPositionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/liquidityPositions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        sushiswapMintsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/mints/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairHourDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairHourDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairs.
+         * @summary Pairs (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        sushiswapSwapsCurrent(pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pair !== undefined) {
+                localVarQueryParameter['pair'] = ((pair:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTokenDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokenDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokens/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTransactionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/transactions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        sushiswapUsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/users/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -12956,6 +15152,14 @@ export type SushiswapApiType = {
     curveGetExchangesCurrent(options?: RequestOptions): Promise<Array<CurveExchangeDTO>>,
 
     dexGetTradesCurrent(options?: RequestOptions): Promise<Array<DexTradeDTO>>,
+
+    sushiswapBundlesCurrent(options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
+
+    sushiswapBurnsCurrent(options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
+
+    sushiswapDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
+
+    sushiswapFactorysCurrent(options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
     sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
 
@@ -12981,19 +15185,39 @@ export type SushiswapApiType = {
 
     sushiswapGetPoolsCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
-    sushiswapGetSwapsCurrent(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
-
     sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
     sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
-
-    sushiswapGetTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
     sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
     sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapTransactionDTO>>,
 
     sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
+
+    sushiswapHourDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
+
+    sushiswapLiquidityPositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
+
+    sushiswapLiquidityPositionsCurrent(options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionDTO>>,
+
+    sushiswapMintsCurrent(options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
+
+    sushiswapPairDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
+
+    sushiswapPairHourDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
+
+    sushiswapPairsCurrent(id?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
+
+    sushiswapSwapsCurrent(pair?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
+
+    sushiswapTokenDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
+
+    sushiswapTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
+
+    sushiswapTransactionsCurrent(options?: RequestOptions): Promise<Array<SushiswapTransactionDTO>>,
+
+    sushiswapUsersCurrent(options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
 }
 
 /**
@@ -13035,6 +15259,66 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets bundles.
+         * @summary Bundles (current)
+         * @throws {RequiredError}
+         */
+        sushiswapBundlesCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapBundleDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapBundlesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (current)
+         * @throws {RequiredError}
+         */
+        sushiswapBurnsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapBurnDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapBurnsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dayDatas.
+         * @summary DayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets factorys.
+         * @summary Factorys (current)
+         * @throws {RequiredError}
+         */
+        sushiswapFactorysCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapFactorysCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets bundles.
          * @summary Bundles (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13064,7 +15348,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets daydatas.
+         * Gets dayDatas.
          * @summary DayDatas (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13094,7 +15378,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets hourdatas.
+         * Gets hourDatas.
          * @summary HourDatas (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13109,7 +15393,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets liquiditypositionsnapshots.
+         * Gets liquidityPositionSnapshots.
          * @summary LiquidityPositionSnapshots (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13124,7 +15408,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets liquiditypositions.
+         * Gets liquidityPositions.
          * @summary LiquidityPositions (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13154,7 +15438,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairdaydatas.
+         * Gets pairDayDatas.
          * @summary PairDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13169,7 +15453,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairhourdatas.
+         * Gets pairHourDatas.
          * @summary PairHourDatas (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13215,21 +15499,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapsCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets swaps.
          * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
@@ -13244,27 +15513,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokendaydatas.
+         * Gets tokenDayDatas.
          * @summary TokenDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tokens.
-         * @summary Tokens (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13318,6 +15572,186 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
                 }
             });
         },
+        /**
+         * Gets hourDatas.
+         * @summary HourDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapHourDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        sushiswapLiquidityPositionSnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapLiquidityPositionSnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (current)
+         * @throws {RequiredError}
+         */
+        sushiswapLiquidityPositionsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapLiquidityPositionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        sushiswapMintsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapMintDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapMintsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairHourDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairs.
+         * @summary Pairs (current)
+         * @throws {RequiredError}
+         */
+        sushiswapPairsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        sushiswapSwapsCurrent(pair?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapSwapsCurrent(pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTokenDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapTokenDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTokensCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (current)
+         * @throws {RequiredError}
+         */
+        sushiswapTransactionsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTransactionDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapTransactionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        sushiswapUsersCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapUserDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapUsersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
     }
 };
 
@@ -13329,12 +15763,56 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
 export const UniswapV2ApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets bundlev2s.
-         * @summary BundleV2s (historical) 🔥
+         * Gets bundles.
+         * @summary Bundles (current)
          * @throws {RequiredError}
          */
-        uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/bundlev2s/historical`;
+        uniswapV2BundlesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/bundles/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2BurnsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/burns/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets bundles.
+         * @summary Bundles (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/bundles/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13371,12 +15849,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets burnv2s.
-         * @summary BurnV2s (historical) 🔥
+         * Gets burns.
+         * @summary Burns (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/burnv2s/historical`;
+        uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/burns/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13417,12 +15895,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets liquiditypositionsnapshotv2s.
-         * @summary LiquidityPositionSnapshotV2s (historical) 🔥
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical`;
+        uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/liquidityPositionSnapshots/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13467,12 +15945,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets liquiditypositionv2s.
-         * @summary LiquidityPositionV2s (historical) 🔥
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/liquiditypositionv2s/historical`;
+        uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/liquidityPositions/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13517,12 +15995,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets mintv2s.
-         * @summary MintV2s (historical) 🔥
+         * Gets mints.
+         * @summary Mints (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/mintv2s/historical`;
+        uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/mints/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13563,12 +16041,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairdaydatav2s.
-         * @summary PairDayDataV2s (historical) 🔥
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairdaydatav2s/historical`;
+        uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairDayDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13613,12 +16091,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairhourdatav2s.
-         * @summary PairHourDataV2s (historical) 🔥
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairhourdatav2s/historical`;
+        uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairHourDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13659,12 +16137,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairv2s.
-         * @summary PairV2s (historical) 🔥
+         * Gets pairs.
+         * @summary Pairs (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairv2s/historical`;
+        uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairs/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13735,12 +16213,34 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets swapv2s.
-         * @summary SwapV2s (historical) 🔥
+         * Gets swaps.
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/swapv2s/historical`;
+        uniswapV2GetSwapsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/swaps/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13781,34 +16281,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets swaps.
-         * @summary Swaps (current) 🔥
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetSwapsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/swaps/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokendaydatav2s.
-         * @summary TokenDayDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokendaydatav2s/historical`;
+        uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokenDayDatas/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13832,56 +16310,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 
             if (id !== undefined) {
                 localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokenv2s.
-         * @summary TokenV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokenv2s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (symbol !== undefined) {
-                localVarQueryParameter['symbol'] = ((symbol:any):string);
-            }
-
-            if (name !== undefined) {
-                localVarQueryParameter['name'] = ((name:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13917,1498 +16345,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets transactionv2s.
-         * @summary TransactionV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/transactionv2s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets uniswapdaydatav2s.
-         * @summary UniswapDayDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapdaydatav2s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets uniswapfactoryv2s.
-         * @summary UniswapFactoryV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapfactoryv2s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets userv2s.
-         * @summary UserV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/userv2s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type UniswapV2ApiType = { 
-    uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2BundleV2DTO>>,
-
-    uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2BurnV2DTO>>,
-
-    uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>,
-
-    uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionV2DTO>>,
-
-    uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2MintV2DTO>>,
-
-    uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDayDataV2DTO>>,
-
-    uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataV2DTO>>,
-
-    uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairV2DTO>>,
-
-    uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairV2DTO>>,
-
-    uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
-
-    uniswapV2GetSwapsCurrent(options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
-
-    uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataV2DTO>>,
-
-    uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
-
-    uniswapV2GetTokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
-
-    uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TransactionV2DTO>>,
-
-    uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataV2DTO>>,
-
-    uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryV2DTO>>,
-
-    uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UserV2DTO>>,
-}
-
-/**
- * UniswapV2Api - factory function to inject configuration 
- * @export
- */
-export const UniswapV2Api = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): UniswapV2ApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * Gets bundlev2s.
-         * @summary BundleV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BundleV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets burnv2s.
-         * @summary BurnV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BurnV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets liquiditypositionsnapshotv2s.
-         * @summary LiquidityPositionSnapshotV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets liquiditypositionv2s.
-         * @summary LiquidityPositionV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets mintv2s.
-         * @summary MintV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2MintV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pairdaydatav2s.
-         * @summary PairDayDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pairhourdatav2s.
-         * @summary PairHourDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pairv2s.
-         * @summary PairV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPoolsCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets swapv2s.
-         * @summary SwapV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapsCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tokendaydatav2s.
-         * @summary TokenDayDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tokenv2s.
-         * @summary TokenV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets tokens.
-         * @summary Tokens (current) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV2GetTokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokensCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets transactionv2s.
-         * @summary TransactionV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets uniswapdaydatav2s.
-         * @summary UniswapDayDataV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets uniswapfactoryv2s.
-         * @summary UniswapFactoryV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets userv2s.
-         * @summary UserV2s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UserV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-
-/**
- * UniswapV3Api - fetch parameter creator
- * @export
- */
-export const UniswapV3ApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Gets bundlev3s.
-         * @summary BundleV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/bundlev3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets bundles.
-         * @summary Bundles (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBundlesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/bundles/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets burnv3s.
-         * @summary BurnV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/burnv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            if (token0 !== undefined) {
-                localVarQueryParameter['token_0'] = ((token0:any):string);
-            }
-
-            if (token1 !== undefined) {
-                localVarQueryParameter['token_1'] = ((token1:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets burns.
-         * @summary Burns (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBurnsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/burns/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets uniswapv3 day data.
-         * @summary DayData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetDayDataCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/dayData/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets factory.
-         * @summary Factory (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetFactoryCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/factory/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets factoryv3s.
-         * @summary FactoryV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/factoryv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets mintv3s.
-         * @summary MintV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/mintv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            if (token0 !== undefined) {
-                localVarQueryParameter['token_0'] = ((token0:any):string);
-            }
-
-            if (token1 !== undefined) {
-                localVarQueryParameter['token_1'] = ((token1:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets mints.
-         * @summary Mints (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetMintsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/mints/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets pooldaydatav3s.
-         * @summary PoolDayDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/pooldaydatav3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets poolhourdatav3s.
-         * @summary PoolHourDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolhourdatav3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets poolv3s.
-         * @summary PoolV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (token0 !== undefined) {
-                localVarQueryParameter['token_0'] = ((token0:any):string);
-            }
-
-            if (token1 !== undefined) {
-                localVarQueryParameter['token_1'] = ((token1:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/pools/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets pools day data.
-         * @summary PoolsDayData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolsDayData/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets pools hour data.
-         * @summary PoolsHourData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolsHourData/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets positionsnapshotv3s.
-         * @summary PositionSnapshotV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positionsnapshotv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets positionv3s.
-         * @summary PositionV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positionv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            if (token0 !== undefined) {
-                localVarQueryParameter['token_0'] = ((token0:any):string);
-            }
-
-            if (token1 !== undefined) {
-                localVarQueryParameter['token_1'] = ((token1:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets positions.
-         * @summary Positions (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positions/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets positions snapshots.
-         * @summary PositionsSnapshots (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positionSnapshots/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets swapv3s.
-         * @summary SwapV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/swapv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            if (token0 !== undefined) {
-                localVarQueryParameter['token_0'] = ((token0:any):string);
-            }
-
-            if (token1 !== undefined) {
-                localVarQueryParameter['token_1'] = ((token1:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetSwapsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/swaps/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tickdaydatav3s.
-         * @summary TickDayDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tickdaydatav3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tickv3s.
-         * @summary TickV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tickv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            if (pool !== undefined) {
-                localVarQueryParameter['pool'] = ((pool:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ticks.
-         * @summary Ticks (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTicksCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/ticks/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ticks day data.
-         * @summary TicksDayData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/ticksDayData/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokenhourdatav3s.
-         * @summary TokenHourDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenhourdatav3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokenv3daydatas.
-         * @summary TokenV3DayDatas (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenv3daydatas/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokenv3s.
-         * @summary TokenV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenv3s/historical`;
+        uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokens/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15453,20 +16395,2115 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
+         * Gets transactions.
+         * @summary Transactions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/transactions/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapDayDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets uniswapFactorys.
+         * @summary UniswapFactorys (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapFactorys/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/users/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2LiquidityPositionSnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/liquidityPositionSnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2LiquidityPositionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/liquidityPositions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2MintsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/mints/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairHourDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairHourDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pairs.
+         * @summary Pairs (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairs/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TokenDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokenDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TransactionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/transactions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UniswapDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets uniswapFactorys.
+         * @summary UniswapFactorys (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UniswapFactorysCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapFactorys/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/users/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type UniswapV2ApiType = { 
+    uniswapV2BundlesCurrent(options?: RequestOptions): Promise<Array<UniswapV2BundleDTO>>,
+
+    uniswapV2BurnsCurrent(options?: RequestOptions): Promise<Array<UniswapV2BurnDTO>>,
+
+    uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2BundleDTO>>,
+
+    uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2BurnDTO>>,
+
+    uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionSnapshotDTO>>,
+
+    uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionDTO>>,
+
+    uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2MintDTO>>,
+
+    uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
+
+    uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
+
+    uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
+
+    uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
+
+    uniswapV2GetSwapsCurrent(options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
+
+    uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
+
+    uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
+
+    uniswapV2GetTokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
+
+    uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
+
+    uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TransactionDTO>>,
+
+    uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
+
+    uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
+
+    uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UserDTO>>,
+
+    uniswapV2LiquidityPositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionSnapshotDTO>>,
+
+    uniswapV2LiquidityPositionsCurrent(options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionDTO>>,
+
+    uniswapV2MintsCurrent(options?: RequestOptions): Promise<Array<UniswapV2MintDTO>>,
+
+    uniswapV2PairDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
+
+    uniswapV2PairHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
+
+    uniswapV2PairsCurrent(id?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
+
+    uniswapV2TokenDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
+
+    uniswapV2TransactionsCurrent(options?: RequestOptions): Promise<Array<UniswapV2TransactionDTO>>,
+
+    uniswapV2UniswapDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
+
+    uniswapV2UniswapFactorysCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
+
+    uniswapV2UsersCurrent(options?: RequestOptions): Promise<Array<UniswapV2UserDTO>>,
+}
+
+/**
+ * UniswapV2Api - factory function to inject configuration 
+ * @export
+ */
+export const UniswapV2Api = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): UniswapV2ApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * Gets bundles.
+         * @summary Bundles (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2BundlesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2BundleDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2BundlesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2BurnsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2BurnDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2BurnsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets bundles.
+         * @summary Bundles (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BundleDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BurnDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionSnapshotDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2MintDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairs.
+         * @summary Pairs (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (current) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPoolsCurrent(filterPoolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2SwapDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets tokens.
          * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetTokensCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
+        uniswapV2GetTokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets uniswapFactorys.
+         * @summary UniswapFactorys (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UserDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositionSnapshots.
+         * @summary LiquidityPositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2LiquidityPositionSnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionSnapshotDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2LiquidityPositionSnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets liquidityPositions.
+         * @summary LiquidityPositions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2LiquidityPositionsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2LiquidityPositionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2MintsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2MintDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2MintsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairDayDatas.
+         * @summary PairDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairHourDatas.
+         * @summary PairHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairHourDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pairs.
+         * @summary Pairs (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2PairsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenDayDatas.
+         * @summary TokenDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TokenDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TokenDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TransactionsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TransactionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UniswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets uniswapFactorys.
+         * @summary UniswapFactorys (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UniswapFactorysCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapFactorysCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2UsersCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UserDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UsersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
+ * UniswapV3Api - fetch parameter creator
+ * @export
+ */
+export const UniswapV3ApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Gets bundles.
+         * @summary Bundles (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3BundlesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/bundles/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3BurnsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/burns/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets factorys.
+         * @summary Factorys (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3FactorysCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/factorys/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets bundles.
+         * @summary Bundles (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/bundles/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets burns.
+         * @summary Burns (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/burns/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            if (token0 !== undefined) {
+                localVarQueryParameter['token_0'] = ((token0:any):string);
+            }
+
+            if (token1 !== undefined) {
+                localVarQueryParameter['token_1'] = ((token1:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets factorys.
+         * @summary Factorys (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/factorys/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/mints/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            if (token0 !== undefined) {
+                localVarQueryParameter['token_0'] = ((token0:any):string);
+            }
+
+            if (token1 !== undefined) {
+                localVarQueryParameter['token_1'] = ((token1:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets poolDayDatas.
+         * @summary PoolDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolDayDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets poolHourDatas.
+         * @summary PoolHourDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolHourDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/pools/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (token0 !== undefined) {
+                localVarQueryParameter['token_0'] = ((token0:any):string);
+            }
+
+            if (token1 !== undefined) {
+                localVarQueryParameter['token_1'] = ((token1:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/positionSnapshots/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets positions.
+         * @summary Positions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/positions/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            if (token0 !== undefined) {
+                localVarQueryParameter['token_0'] = ((token0:any):string);
+            }
+
+            if (token1 !== undefined) {
+                localVarQueryParameter['token_1'] = ((token1:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/swaps/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            if (token0 !== undefined) {
+                localVarQueryParameter['token_0'] = ((token0:any):string);
+            }
+
+            if (token1 !== undefined) {
+                localVarQueryParameter['token_1'] = ((token1:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tickDayDatas.
+         * @summary TickDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tickDayDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets ticks.
+         * @summary Ticks (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/ticks/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenHourDatas.
+         * @summary TokenHourDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenHourDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenV3DayDatas.
+         * @summary TokenV3DayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokens/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            if (symbol !== undefined) {
+                localVarQueryParameter['symbol'] = ((symbol:any):string);
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = ((name:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/transactions/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/uniswapDayDatas/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3MintsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/mints/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets poolDayDatas.
+         * @summary PoolDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets poolHourDatas.
+         * @summary PoolHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolHourDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolHourDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolsCurrent(id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/pools/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PositionSnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/positionSnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets positions.
+         * @summary Positions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PositionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/positions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3SwapsCurrent(pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pool !== undefined) {
+                localVarQueryParameter['pool'] = ((pool:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tickDayDatas.
+         * @summary TickDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TickDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tickDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets ticks.
+         * @summary Ticks (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TicksCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/ticks/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenHourDatas.
+         * @summary TokenHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TokenHourDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenHourDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokenV3DayDatas.
+         * @summary TokenV3DayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TokenV3DayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TokensCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswapv3/tokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
 
-            if (filterTokenId !== undefined) {
-                localVarQueryParameter['filter_token_id'] = ((filterTokenId:any):string);
-            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TransactionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/transactions/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15479,130 +18516,16 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokens day data.
-         * @summary TokensDayData (current)
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokensDayData/current`;
+        uniswapV3UniswapDayDatasCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/uniswapDayDatas/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
-
-            if (filterTokenId !== undefined) {
-                localVarQueryParameter['filter_token_id'] = ((filterTokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokens hour data.
-         * @summary TokensHourData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokensHourData/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterTokenId !== undefined) {
-                localVarQueryParameter['filter_token_id'] = ((filterTokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets transactionv3s.
-         * @summary TransactionV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/transactionv3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets uniswapdaydatav3s.
-         * @summary UniswapDayDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/uniswapdaydatav3s/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = ((id:any):string);
-            }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -15618,71 +18541,73 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type UniswapV3ApiType = { 
-    uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
+    uniswapV3BundlesCurrent(options?: RequestOptions): Promise<Array<UniswapV3BundleDTO>>,
 
-    uniswapV3GetBundlesCurrent(options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
+    uniswapV3BurnsCurrent(options?: RequestOptions): Promise<Array<UniswapV3BurnDTO>>,
 
-    uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnV3DTO>>,
+    uniswapV3FactorysCurrent(options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
 
-    uniswapV3GetBurnsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnV3DTO>>,
+    uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3BundleDTO>>,
 
-    uniswapV3GetDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataV3DTO>>,
+    uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnDTO>>,
 
-    uniswapV3GetFactoryCurrent(options?: RequestOptions): Promise<Array<UniswapV3FactoryV3DTO>>,
+    uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
 
-    uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryV3DTO>>,
+    uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3MintDTO>>,
 
-    uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
+    uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
 
-    uniswapV3GetMintsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
+    uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
 
-    uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataV3DTO>>,
+    uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDTO>>,
 
-    uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataV3DTO>>,
+    uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotDTO>>,
 
-    uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolV3DTO>>,
+    uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionDTO>>,
 
-    uniswapV3GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolV3DTO>>,
+    uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapDTO>>,
 
-    uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataV3DTO>>,
+    uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
 
-    uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataV3DTO>>,
+    uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDTO>>,
 
-    uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotV3DTO>>,
-
-    uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
-
-    uniswapV3GetPositionsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
-
-    uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotV3DTO>>,
-
-    uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
-
-    uniswapV3GetSwapsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
-
-    uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataV3DTO>>,
-
-    uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
-
-    uniswapV3GetTicksCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
-
-    uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataV3DTO>>,
-
-    uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataV3DTO>>,
+    uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
 
     uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
 
-    uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DTO>>,
+    uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenDTO>>,
 
-    uniswapV3GetTokensCurrent(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DTO>>,
+    uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TransactionDTO>>,
 
-    uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
+    uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
 
-    uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataV3DTO>>,
+    uniswapV3MintsCurrent(options?: RequestOptions): Promise<Array<UniswapV3MintDTO>>,
 
-    uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TransactionV3DTO>>,
+    uniswapV3PoolDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
 
-    uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataV3DTO>>,
+    uniswapV3PoolHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
+
+    uniswapV3PoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDTO>>,
+
+    uniswapV3PositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotDTO>>,
+
+    uniswapV3PositionsCurrent(options?: RequestOptions): Promise<Array<UniswapV3PositionDTO>>,
+
+    uniswapV3SwapsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapDTO>>,
+
+    uniswapV3TickDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
+
+    uniswapV3TicksCurrent(options?: RequestOptions): Promise<Array<UniswapV3TickDTO>>,
+
+    uniswapV3TokenHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
+
+    uniswapV3TokenV3DayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
+
+    uniswapV3TokensCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenDTO>>,
+
+    uniswapV3TransactionsCurrent(options?: RequestOptions): Promise<Array<UniswapV3TransactionDTO>>,
+
+    uniswapV3UniswapDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
 }
 
 /**
@@ -15693,42 +18618,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets bundlev3s.
-         * @summary BundleV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetBundlesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBundlesCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets burnv3s.
-         * @summary BurnV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
+        uniswapV3BundlesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3BundleDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3BundlesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15742,8 +18637,8 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          * @summary Burns (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetBurnsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBurnsCurrent(filterPoolId, options);
+        uniswapV3BurnsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3BurnDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3BurnsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15753,12 +18648,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapv3 day data.
-         * @summary DayData (current)
+         * Gets factorys.
+         * @summary Factorys (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetDayDataCurrent(options);
+        uniswapV3FactorysCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3FactorysCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15768,12 +18663,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factory.
-         * @summary Factory (current)
+         * Gets bundles.
+         * @summary Bundles (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetFactoryCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactoryCurrent(options);
+        uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BundleDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15783,12 +18678,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factoryv3s.
-         * @summary FactoryV3s (historical) 🔥
+         * Gets burns.
+         * @summary Burns (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15798,12 +18693,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets mintv3s.
-         * @summary MintV3s (historical) 🔥
+         * Gets factorys.
+         * @summary Factorys (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
+        uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15814,11 +18709,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets mints.
-         * @summary Mints (current)
+         * @summary Mints (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetMintsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetMintsCurrent(filterPoolId, options);
+        uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15828,12 +18723,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pooldaydatav3s.
-         * @summary PoolDayDataV3s (historical) 🔥
+         * Gets poolDayDatas.
+         * @summary PoolDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+        uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15843,27 +18738,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets poolhourdatav3s.
-         * @summary PoolHourDataV3s (historical) 🔥
+         * Gets poolHourDatas.
+         * @summary PoolHourDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets poolv3s.
-         * @summary PoolV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
+        uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15874,11 +18754,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary Pools (current) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolsCurrent(filterPoolId, options);
+        uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15888,57 +18768,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pools day data.
-         * @summary PoolsDayData (current)
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolsDayDataCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pools hour data.
-         * @summary PoolsHourData (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolsHourDataCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets positionsnapshotv3s.
-         * @summary PositionSnapshotV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets positionv3s.
-         * @summary PositionV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
+        uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15949,41 +18784,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets positions.
-         * @summary Positions (current)
+         * @summary Positions (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetPositionsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionsCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets positions snapshots.
-         * @summary PositionsSnapshots (current)
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionsSnapshotsCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets swapv3s.
-         * @summary SwapV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
+        uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15994,11 +18799,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary Swaps (current) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetSwapsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetSwapsCurrent(filterPoolId, options);
+        uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16008,27 +18813,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tickdaydatav3s.
-         * @summary TickDayDataV3s (historical) 🔥
+         * Gets tickDayDatas.
+         * @summary TickDayDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tickv3s.
-         * @summary TickV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+        uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16039,11 +18829,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets ticks.
-         * @summary Ticks (current)
+         * @summary Ticks (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetTicksCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTicksCurrent(filterPoolId, options);
+        uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16053,12 +18843,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets ticks day data.
-         * @summary TicksDayData (current)
+         * Gets tokenHourDatas.
+         * @summary TokenHourDatas (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTicksDayDataCurrent(filterPoolId, options);
+        uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16068,22 +18858,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenhourdatav3s.
-         * @summary TokenHourDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tokenv3daydatas.
+         * Gets tokenV3DayDatas.
          * @summary TokenV3DayDatas (historical) 🔥
          * @throws {RequiredError}
          */
@@ -16098,12 +18873,207 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenv3s.
-         * @summary TokenV3s (historical) 🔥
+         * Gets tokens.
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
-        uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name, options);
+        uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transactions.
+         * @summary Transactions (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (historical) 🔥
+         * @throws {RequiredError}
+         */
+        uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets mints.
+         * @summary Mints (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3MintsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3MintDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3MintsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets poolDayDatas.
+         * @summary PoolDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets poolHourDatas.
+         * @summary PoolHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolHourDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pools.
+         * @summary Pools (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PoolsCurrent(id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolsCurrent(id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets positionSnapshots.
+         * @summary PositionSnapshots (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PositionSnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PositionSnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets positions.
+         * @summary Positions (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3PositionsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PositionDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PositionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3SwapsCurrent(pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3SwapsCurrent(pool, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tickDayDatas.
+         * @summary TickDayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TickDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TickDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets ticks.
+         * @summary Ticks (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TicksCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TickDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TicksCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenHourDatas.
+         * @summary TokenHourDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TokenHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenHourDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokenV3DayDatas.
+         * @summary TokenV3DayDatas (current)
+         * @throws {RequiredError}
+         */
+        uniswapV3TokenV3DayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenV3DayDatasCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16114,11 +19084,11 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary Tokens (current) 🔥
+         * @summary Tokens (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokensCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokensCurrent(filterTokenId, options);
+        uniswapV3TokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16128,12 +19098,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokens day data.
-         * @summary TokensDayData (current)
+         * Gets transactions.
+         * @summary Transactions (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokensDayDataCurrent(filterTokenId, options);
+        uniswapV3TransactionsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TransactionsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16143,42 +19113,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokens hour data.
-         * @summary TokensHourData (current)
+         * Gets uniswapDayDatas.
+         * @summary UniswapDayDatas (current)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokensHourDataCurrent(filterTokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets transactionv3s.
-         * @summary TransactionV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets uniswapdaydatav3s.
-         * @summary UniswapDayDataV3s (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3UniswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3UniswapDayDatasCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

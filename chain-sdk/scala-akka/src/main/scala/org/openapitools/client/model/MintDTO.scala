@@ -19,32 +19,38 @@ case class MintDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <transaction hash>-<index in the transaction mint array>. */
+  /* Transaction hash + '#' + index in mints Transaction array. */
   id: Option[String] = None,
-  /* Reference to the transaction Mint was included in. */
+  /* Which txn the mint was included in. */
   transaction: Option[String] = None,
-  /* Timestamp of Mint, used to sort recent liquidity provisions. */
+  /* Time of transaction. */
   timestamp: Option[String] = None,
-  /* Reference to pair. */
-  pair: Option[String] = None,
-  /* Recipient of liquidity tokens. */
-  to: Option[String] = None,
-  /* Amount of liquidity tokens minted. */
-  liquidity: Option[String] = None,
-  /* Address that initiated the liquidity provision. */
+  /* Pool address. */
+  pool: Option[String] = None,
+  /* Reference to token0 as stored in pool contract. */
+  token0: Option[String] = None,
+  /* Reference to token1 as stored in pool contract. */
+  token1: Option[String] = None,
+  /* Owner of position where liquidity minted to. */
+  owner: Option[String] = None,
+  /* The address that minted the liquidity. */
   sender: Option[String] = None,
-  /* Amount of token0 provided. */
+  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. */
+  origin: Option[String] = None,
+  /* Amount of liquidity minted. */
+  amount: Option[String] = None,
+  /* Amount of token 0 minted. */
   amount0: Option[String] = None,
-  /* Amount of token1 provided. */
+  /* Amount of token 1 minted. */
   amount1: Option[String] = None,
-  /* Index in the transaction event was emitted. */
-  logIndex: Option[String] = None,
-  /* Derived USD value of token0 amount plus token1 amount. */
+  /* Derived amount based on available prices of tokens. */
   amountUsd: Option[String] = None,
-  /* Address of fee recipient (if fee is on). */
-  feeTo: Option[String] = None,
-  /* Amount of liquidity sent to fee recipient (if fee is on). */
-  feeLiquidity: Option[String] = None,
+  /* Lower tick of the position. */
+  tickLower: Option[String] = None,
+  /* Upper tick of the position. */
+  tickUpper: Option[String] = None,
+  /* Order within the transaction. */
+  logIndex: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

@@ -4,33 +4,100 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswap_v2_get_bundle_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_bundle_v2s_historical) | **Get** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**uniswap_v2_get_burn_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_burn_v2s_historical) | **Get** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**uniswap_v2_get_liquidity_position_snapshot_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_position_snapshot_v2s_historical) | **Get** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**uniswap_v2_get_liquidity_position_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_position_v2s_historical) | **Get** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**uniswap_v2_get_mint_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_mint_v2s_historical) | **Get** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**uniswap_v2_get_pair_day_data_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_day_data_v2s_historical) | **Get** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**uniswap_v2_get_pair_hour_data_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_hour_data_v2s_historical) | **Get** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**uniswap_v2_get_pair_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_v2s_historical) | **Get** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**uniswap_v2_bundles_current**](UNISWAPV2_API.md#uniswap_v2_bundles_current) | **Get** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**uniswap_v2_burns_current**](UNISWAPV2_API.md#uniswap_v2_burns_current) | **Get** /dapps/uniswapv2/burns/current | Burns (current)
+[**uniswap_v2_get_bundles_historical**](UNISWAPV2_API.md#uniswap_v2_get_bundles_historical) | **Get** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**uniswap_v2_get_burns_historical**](UNISWAPV2_API.md#uniswap_v2_get_burns_historical) | **Get** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**uniswap_v2_get_liquidity_position_snapshots_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_position_snapshots_historical) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**uniswap_v2_get_liquidity_positions_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_positions_historical) | **Get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**uniswap_v2_get_mints_historical**](UNISWAPV2_API.md#uniswap_v2_get_mints_historical) | **Get** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**uniswap_v2_get_pair_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_day_datas_historical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**uniswap_v2_get_pair_hour_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_hour_datas_historical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**uniswap_v2_get_pairs_historical**](UNISWAPV2_API.md#uniswap_v2_get_pairs_historical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**uniswap_v2_get_pools_current**](UNISWAPV2_API.md#uniswap_v2_get_pools_current) | **Get** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswap_v2_get_swap_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_swap_v2s_historical) | **Get** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**uniswap_v2_get_swaps_current**](UNISWAPV2_API.md#uniswap_v2_get_swaps_current) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**uniswap_v2_get_token_day_data_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_token_day_data_v2s_historical) | **Get** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**uniswap_v2_get_token_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_token_v2s_historical) | **Get** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**uniswap_v2_get_swaps_historical**](UNISWAPV2_API.md#uniswap_v2_get_swaps_historical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**uniswap_v2_get_token_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_token_day_datas_historical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**uniswap_v2_get_tokens_current**](UNISWAPV2_API.md#uniswap_v2_get_tokens_current) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**uniswap_v2_get_transaction_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_transaction_v2s_historical) | **Get** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**uniswap_v2_get_uniswap_day_data_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_day_data_v2s_historical) | **Get** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**uniswap_v2_get_uniswap_factory_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_factory_v2s_historical) | **Get** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**uniswap_v2_get_user_v2s_historical**](UNISWAPV2_API.md#uniswap_v2_get_user_v2s_historical) | **Get** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**uniswap_v2_get_tokens_historical**](UNISWAPV2_API.md#uniswap_v2_get_tokens_historical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**uniswap_v2_get_transactions_historical**](UNISWAPV2_API.md#uniswap_v2_get_transactions_historical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**uniswap_v2_get_uniswap_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_day_datas_historical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswap_v2_get_uniswap_factorys_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_factorys_historical) | **Get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**uniswap_v2_get_users_historical**](UNISWAPV2_API.md#uniswap_v2_get_users_historical) | **Get** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswap_v2_liquidity_position_snapshots_current**](UNISWAPV2_API.md#uniswap_v2_liquidity_position_snapshots_current) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**uniswap_v2_liquidity_positions_current**](UNISWAPV2_API.md#uniswap_v2_liquidity_positions_current) | **Get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**uniswap_v2_mints_current**](UNISWAPV2_API.md#uniswap_v2_mints_current) | **Get** /dapps/uniswapv2/mints/current | Mints (current)
+[**uniswap_v2_pair_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_pair_day_datas_current) | **Get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**uniswap_v2_pair_hour_datas_current**](UNISWAPV2_API.md#uniswap_v2_pair_hour_datas_current) | **Get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswap_v2_pairs_current**](UNISWAPV2_API.md#uniswap_v2_pairs_current) | **Get** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswap_v2_token_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_token_day_datas_current) | **Get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_transactions_current**](UNISWAPV2_API.md#uniswap_v2_transactions_current) | **Get** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**uniswap_v2_uniswap_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_day_datas_current) | **Get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswap_v2_uniswap_factorys_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_factorys_current) | **Get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswap_v2_users_current**](UNISWAPV2_API.md#uniswap_v2_users_current) | **Get** /dapps/uniswapv2/users/current | Users (current)
 
 
-# **uniswap_v2_get_bundle_v2s_historical**
-> uniswap_v2_get_bundle_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_BUNDLE_V2_DTO]
+# **uniswap_v2_bundles_current**
+> uniswap_v2_bundles_current : detachable LIST [UNISWAP_V2_BUNDLE_DTO]
 
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_BUNDLE_DTO]**](UniswapV2.BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_burns_current**
+> uniswap_v2_burns_current : detachable LIST [UNISWAP_V2_BURN_DTO]
+
+
+Burns (current)
+
+Gets burns.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_BURN_DTO]**](UniswapV2.BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_get_bundles_historical**
+> uniswap_v2_get_bundles_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_BUNDLE_DTO]
+
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 
 ### Parameters
@@ -45,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_BUNDLE_V2_DTO]**](UniswapV2.BundleV2DTO.md)
+[**LIST [UNISWAP_V2_BUNDLE_DTO]**](UniswapV2.BundleDTO.md)
 
 ### Authorization
 
@@ -58,13 +125,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_burn_v2s_historical**
-> uniswap_v2_get_burn_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_BURN_V2_DTO]
+# **uniswap_v2_get_burns_historical**
+> uniswap_v2_get_burns_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_BURN_DTO]
 
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 
 ### Parameters
@@ -80,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_BURN_V2_DTO]**](UniswapV2.BurnV2DTO.md)
+[**LIST [UNISWAP_V2_BURN_DTO]**](UniswapV2.BurnDTO.md)
 
 ### Authorization
 
@@ -93,13 +160,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_liquidity_position_snapshot_v2s_historical**
-> uniswap_v2_get_liquidity_position_snapshot_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_V2_DTO]
+# **uniswap_v2_get_liquidity_position_snapshots_historical**
+> uniswap_v2_get_liquidity_position_snapshots_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]
 
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 
 ### Parameters
@@ -116,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_V2_DTO]**](UniswapV2.LiquidityPositionSnapshotV2DTO.md)
+[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]**](UniswapV2.LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -129,13 +196,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_liquidity_position_v2s_historical**
-> uniswap_v2_get_liquidity_position_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_V2_DTO]
+# **uniswap_v2_get_liquidity_positions_historical**
+> uniswap_v2_get_liquidity_positions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]
 
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 
 ### Parameters
@@ -152,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_V2_DTO]**](UniswapV2.LiquidityPositionV2DTO.md)
+[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]**](UniswapV2.LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -165,13 +232,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_mint_v2s_historical**
-> uniswap_v2_get_mint_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_MINT_V2_DTO]
+# **uniswap_v2_get_mints_historical**
+> uniswap_v2_get_mints_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_MINT_DTO]
 
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 
 ### Parameters
@@ -187,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_MINT_V2_DTO]**](UniswapV2.MintV2DTO.md)
+[**LIST [UNISWAP_V2_MINT_DTO]**](UniswapV2.MintDTO.md)
 
 ### Authorization
 
@@ -200,13 +267,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_day_data_v2s_historical**
-> uniswap_v2_get_pair_day_data_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_V2_DTO]
+# **uniswap_v2_get_pair_day_datas_historical**
+> uniswap_v2_get_pair_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
 
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 
 ### Parameters
@@ -223,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_PAIR_DAY_DATA_V2_DTO]**](UniswapV2.PairDayDataV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]**](UniswapV2.PairDayDataDTO.md)
 
 ### Authorization
 
@@ -236,13 +303,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_hour_data_v2s_historical**
-> uniswap_v2_get_pair_hour_data_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_V2_DTO]
+# **uniswap_v2_get_pair_hour_datas_historical**
+> uniswap_v2_get_pair_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
 
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 
 ### Parameters
@@ -258,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_PAIR_HOUR_DATA_V2_DTO]**](UniswapV2.PairHourDataV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]**](UniswapV2.PairHourDataDTO.md)
 
 ### Authorization
 
@@ -271,13 +338,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_v2s_historical**
-> uniswap_v2_get_pair_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
+# **uniswap_v2_get_pairs_historical**
+> uniswap_v2_get_pairs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DTO]
 
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 
 ### Parameters
@@ -294,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_PAIR_V2_DTO]**](UniswapV2.PairV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_DTO]**](UniswapV2.PairDTO.md)
 
 ### Authorization
 
@@ -308,7 +375,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uniswap_v2_get_pools_current**
-> uniswap_v2_get_pools_current (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
+> uniswap_v2_get_pools_current (filter_pool_id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DTO]
 
 
 Pools (current) 🔥
@@ -324,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_PAIR_V2_DTO]**](UniswapV2.PairV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_DTO]**](UniswapV2.PairDTO.md)
 
 ### Authorization
 
@@ -337,13 +404,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_swap_v2s_historical**
-> uniswap_v2_get_swap_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
+# **uniswap_v2_get_swaps_current**
+> uniswap_v2_get_swaps_current : detachable LIST [UNISWAP_V2_SWAP_DTO]
 
 
-SwapV2s (historical) 🔥
+Swaps (current) 🔥
 
-Gets swapv2s.
+Gets swaps.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_SWAP_DTO]**](UniswapV2.SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_get_swaps_historical**
+> uniswap_v2_get_swaps_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_SWAP_DTO]
+
+
+Swaps (historical) 🔥
+
+Gets swaps.
 
 
 ### Parameters
@@ -359,7 +453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_SWAP_V2_DTO]**](UniswapV2.SwapV2DTO.md)
+[**LIST [UNISWAP_V2_SWAP_DTO]**](UniswapV2.SwapDTO.md)
 
 ### Authorization
 
@@ -372,40 +466,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_swaps_current**
-> uniswap_v2_get_swaps_current : detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
+# **uniswap_v2_get_token_day_datas_historical**
+> uniswap_v2_get_token_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
 
 
-Swaps (current) 🔥
+TokenDayDatas (historical) 🔥
 
-Gets swaps.
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**LIST [UNISWAP_V2_SWAP_V2_DTO]**](UniswapV2.SwapV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswap_v2_get_token_day_data_v2s_historical**
-> uniswap_v2_get_token_day_data_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_V2_DTO]
-
-
-TokenDayDataV2s (historical) 🔥
-
-Gets tokendaydatav2s.
+Gets tokenDayDatas.
 
 
 ### Parameters
@@ -420,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_TOKEN_DAY_DATA_V2_DTO]**](UniswapV2.TokenDayDataV2DTO.md)
+[**LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]**](UniswapV2.TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -433,13 +500,40 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_token_v2s_historical**
-> uniswap_v2_get_token_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; symbol:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
+# **uniswap_v2_get_tokens_current**
+> uniswap_v2_get_tokens_current : detachable LIST [UNISWAP_V2_TOKEN_DTO]
 
 
-TokenV2s (historical) 🔥
+Tokens (current) 🔥
 
-Gets tokenv2s.
+Gets tokens.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_TOKEN_DTO]**](UniswapV2.TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_get_tokens_historical**
+> uniswap_v2_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; symbol:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_DTO]
+
+
+Tokens (historical) 🔥
+
+Gets tokens.
 
 
 ### Parameters
@@ -456,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_TOKEN_V2_DTO]**](UniswapV2.TokenV2DTO.md)
+[**LIST [UNISWAP_V2_TOKEN_DTO]**](UniswapV2.TokenDTO.md)
 
 ### Authorization
 
@@ -469,40 +563,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_tokens_current**
-> uniswap_v2_get_tokens_current : detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
+# **uniswap_v2_get_transactions_historical**
+> uniswap_v2_get_transactions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TRANSACTION_DTO]
 
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**LIST [UNISWAP_V2_TOKEN_V2_DTO]**](UniswapV2.TokenV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswap_v2_get_transaction_v2s_historical**
-> uniswap_v2_get_transaction_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TRANSACTION_V2_DTO]
-
-
-TransactionV2s (historical) 🔥
-
-Gets transactionv2s.
+Gets transactions.
 
 
 ### Parameters
@@ -517,7 +584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_TRANSACTION_V2_DTO]**](UniswapV2.TransactionV2DTO.md)
+[**LIST [UNISWAP_V2_TRANSACTION_DTO]**](UniswapV2.TransactionDTO.md)
 
 ### Authorization
 
@@ -530,13 +597,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_day_data_v2s_historical**
-> uniswap_v2_get_uniswap_day_data_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_V2_DTO]
+# **uniswap_v2_get_uniswap_day_datas_historical**
+> uniswap_v2_get_uniswap_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
 
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 
 ### Parameters
@@ -551,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_UNISWAP_DAY_DATA_V2_DTO]**](UniswapV2.UniswapDayDataV2DTO.md)
+[**LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]**](UniswapV2.UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -564,13 +631,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_factory_v2s_historical**
-> uniswap_v2_get_uniswap_factory_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_V2_DTO]
+# **uniswap_v2_get_uniswap_factorys_historical**
+> uniswap_v2_get_uniswap_factorys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
 
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 
 ### Parameters
@@ -585,7 +652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_UNISWAP_FACTORY_V2_DTO]**](UniswapV2.UniswapFactoryV2DTO.md)
+[**LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]**](UniswapV2.UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -598,13 +665,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_user_v2s_historical**
-> uniswap_v2_get_user_v2s_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_USER_V2_DTO]
+# **uniswap_v2_get_users_historical**
+> uniswap_v2_get_users_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_USER_DTO]
 
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 
 ### Parameters
@@ -619,7 +686,307 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_USER_V2_DTO]**](UniswapV2.UserV2DTO.md)
+[**LIST [UNISWAP_V2_USER_DTO]**](UniswapV2.UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_liquidity_position_snapshots_current**
+> uniswap_v2_liquidity_position_snapshots_current : detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]
+
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]**](UniswapV2.LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_liquidity_positions_current**
+> uniswap_v2_liquidity_positions_current : detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]
+
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]**](UniswapV2.LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_mints_current**
+> uniswap_v2_mints_current : detachable LIST [UNISWAP_V2_MINT_DTO]
+
+
+Mints (current)
+
+Gets mints.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_MINT_DTO]**](UniswapV2.MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_pair_day_datas_current**
+> uniswap_v2_pair_day_datas_current : detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
+
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]**](UniswapV2.PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_pair_hour_datas_current**
+> uniswap_v2_pair_hour_datas_current : detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
+
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]**](UniswapV2.PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_pairs_current**
+> uniswap_v2_pairs_current (id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DTO]
+
+
+Pairs (current)
+
+Gets pairs.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **STRING_32**| Pair contract address. | [optional] [default to null]
+
+### Return type
+
+[**LIST [UNISWAP_V2_PAIR_DTO]**](UniswapV2.PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_token_day_datas_current**
+> uniswap_v2_token_day_datas_current : detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
+
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]**](UniswapV2.TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_transactions_current**
+> uniswap_v2_transactions_current : detachable LIST [UNISWAP_V2_TRANSACTION_DTO]
+
+
+Transactions (current)
+
+Gets transactions.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_TRANSACTION_DTO]**](UniswapV2.TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_uniswap_day_datas_current**
+> uniswap_v2_uniswap_day_datas_current : detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
+
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]**](UniswapV2.UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_uniswap_factorys_current**
+> uniswap_v2_uniswap_factorys_current : detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
+
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]**](UniswapV2.UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_users_current**
+> uniswap_v2_users_current : detachable LIST [UNISWAP_V2_USER_DTO]
+
+
+Users (current)
+
+Gets users.
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LIST [UNISWAP_V2_USER_DTO]**](UniswapV2.UserDTO.md)
 
 ### Authorization
 

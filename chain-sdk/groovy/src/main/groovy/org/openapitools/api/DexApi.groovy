@@ -18,6 +18,46 @@ class DexApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
+    def dexBatchsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/batchs/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexBatchDTO.class )
+
+    }
+
+    def dexDepositsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/deposits/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexDepositDTO.class )
+
+    }
+
     def dexGetBatchsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/batchs/historical"
 
@@ -358,7 +398,7 @@ class DexApi {
     }
 
     def dexGetWithdrawRequestsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/withdrawrequests/historical"
+        String resourcePath = "/dapps/dex/withdrawRequests/historical"
 
         // params
         def queryParams = [:]
@@ -423,6 +463,186 @@ class DexApi {
         if (user != null) {
             queryParams.put("user", user)
         }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexWithdrawDTO.class )
+
+    }
+
+    def dexOrdersCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/orders/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexOrderDTO.class )
+
+    }
+
+    def dexPricesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/prices/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexPriceDTO.class )
+
+    }
+
+    def dexSolutionsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/solutions/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexSolutionDTO.class )
+
+    }
+
+    def dexStatssCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/statss/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexStatsDTO.class )
+
+    }
+
+    def dexTokensCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/tokens/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexTokenDTO.class )
+
+    }
+
+    def dexTradesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/trades/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexTradeDTO.class )
+
+    }
+
+    def dexUsersCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/users/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexUserDTO.class )
+
+    }
+
+    def dexWithdrawRequestsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/withdrawRequests/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexWithdrawRequestDTO.class )
+
+    }
+
+    def dexWithdrawsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/withdraws/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
 
 
 

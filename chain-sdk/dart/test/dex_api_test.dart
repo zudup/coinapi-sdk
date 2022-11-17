@@ -17,6 +17,24 @@ void main() {
   // final instance = DexApi();
 
   group('tests for DexApi', () {
+    // Batchs (current)
+    //
+    // Gets batchs.
+    //
+    //Future<List<DexBatchDTO>> dexBatchsCurrent() async
+    test('test dexBatchsCurrent', () async {
+      // TODO
+    });
+
+    // Deposits (current)
+    //
+    // Gets deposits.
+    //
+    //Future<List<DexDepositDTO>> dexDepositsCurrent() async
+    test('test dexDepositsCurrent', () async {
+      // TODO
+    });
+
     // Batchs (historical) 🔥
     //
     // Gets batchs.
@@ -100,7 +118,7 @@ void main() {
 
     // WithdrawRequests (historical) 🔥
     //
-    // Gets withdrawrequests.
+    // Gets withdrawRequests.
     //
     //Future<List<DexWithdrawRequestDTO>> dexGetWithdrawRequestsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String user }) async
     test('test dexGetWithdrawRequestsHistorical', () async {
@@ -113,6 +131,87 @@ void main() {
     //
     //Future<List<DexWithdrawDTO>> dexGetWithdrawsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String user }) async
     test('test dexGetWithdrawsHistorical', () async {
+      // TODO
+    });
+
+    // Orders (current)
+    //
+    // Gets orders.
+    //
+    //Future<List<DexOrderDTO>> dexOrdersCurrent() async
+    test('test dexOrdersCurrent', () async {
+      // TODO
+    });
+
+    // Prices (current)
+    //
+    // Gets prices.
+    //
+    //Future<List<DexPriceDTO>> dexPricesCurrent() async
+    test('test dexPricesCurrent', () async {
+      // TODO
+    });
+
+    // Solutions (current)
+    //
+    // Gets solutions.
+    //
+    //Future<List<DexSolutionDTO>> dexSolutionsCurrent() async
+    test('test dexSolutionsCurrent', () async {
+      // TODO
+    });
+
+    // Statss (current)
+    //
+    // Gets statss.
+    //
+    //Future<List<DexStatsDTO>> dexStatssCurrent() async
+    test('test dexStatssCurrent', () async {
+      // TODO
+    });
+
+    // Tokens (current)
+    //
+    // Gets tokens.
+    //
+    //Future<List<DexTokenDTO>> dexTokensCurrent() async
+    test('test dexTokensCurrent', () async {
+      // TODO
+    });
+
+    // Trades (current)
+    //
+    // Gets trades.
+    //
+    //Future<List<DexTradeDTO>> dexTradesCurrent() async
+    test('test dexTradesCurrent', () async {
+      // TODO
+    });
+
+    // Users (current)
+    //
+    // Gets users.
+    //
+    //Future<List<DexUserDTO>> dexUsersCurrent() async
+    test('test dexUsersCurrent', () async {
+      // TODO
+    });
+
+    // WithdrawRequests (current)
+    //
+    // Gets withdrawRequests.
+    //
+    //Future<List<DexWithdrawRequestDTO>> dexWithdrawRequestsCurrent() async
+    test('test dexWithdrawRequestsCurrent', () async {
+      // TODO
+    });
+
+    // Withdraws (current)
+    //
+    // Gets withdraws.
+    //
+    //Future<List<DexWithdrawDTO>> dexWithdrawsCurrent() async
+    test('test dexWithdrawsCurrent', () async {
       // TODO
     });
 

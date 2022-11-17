@@ -26,6 +26,369 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAccountDTO></returns>
+        List<CurveAccountDTO> CurveAccountsCurrent ();
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAccountDTO></returns>
+        ApiResponse<List<CurveAccountDTO>> CurveAccountsCurrentWithHttpInfo ();
+        /// <summary>
+        /// AddLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets addLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAddLiquidityEventDTO></returns>
+        List<CurveAddLiquidityEventDTO> CurveAddLiquidityEventsCurrent ();
+
+        /// <summary>
+        /// AddLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets addLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAddLiquidityEventDTO></returns>
+        ApiResponse<List<CurveAddLiquidityEventDTO>> CurveAddLiquidityEventsCurrentWithHttpInfo ();
+        /// <summary>
+        /// AdminFeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets adminFeeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAdminFeeChangeLogDTO></returns>
+        List<CurveAdminFeeChangeLogDTO> CurveAdminFeeChangeLogsCurrent ();
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets adminFeeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAdminFeeChangeLogDTO></returns>
+        ApiResponse<List<CurveAdminFeeChangeLogDTO>> CurveAdminFeeChangeLogsCurrentWithHttpInfo ();
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets amplificationCoeffChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAmplificationCoeffChangeLogDTO></returns>
+        List<CurveAmplificationCoeffChangeLogDTO> CurveAmplificationCoeffChangeLogsCurrent ();
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets amplificationCoeffChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAmplificationCoeffChangeLogDTO></returns>
+        ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> CurveAmplificationCoeffChangeLogsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Coins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets coins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveCoinDTO></returns>
+        List<CurveCoinDTO> CurveCoinsCurrent ();
+
+        /// <summary>
+        /// Coins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets coins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveCoinDTO></returns>
+        ApiResponse<List<CurveCoinDTO>> CurveCoinsCurrentWithHttpInfo ();
+        /// <summary>
+        /// ContractVersions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contractVersions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveContractVersionDTO></returns>
+        List<CurveContractVersionDTO> CurveContractVersionsCurrent ();
+
+        /// <summary>
+        /// ContractVersions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contractVersions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveContractVersionDTO></returns>
+        ApiResponse<List<CurveContractVersionDTO>> CurveContractVersionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Contracts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contracts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveContractDTO></returns>
+        List<CurveContractDTO> CurveContractsCurrent ();
+
+        /// <summary>
+        /// Contracts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contracts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveContractDTO></returns>
+        ApiResponse<List<CurveContractDTO>> CurveContractsCurrentWithHttpInfo ();
+        /// <summary>
+        /// DailyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dailyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveDailyVolumeDTO></returns>
+        List<CurveDailyVolumeDTO> CurveDailyVolumesCurrent ();
+
+        /// <summary>
+        /// DailyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dailyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveDailyVolumeDTO></returns>
+        ApiResponse<List<CurveDailyVolumeDTO>> CurveDailyVolumesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Exchanges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets exchanges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <returns>List<CurveExchangeDTO></returns>
+        List<CurveExchangeDTO> CurveExchangesCurrent (string pool = default(string));
+
+        /// <summary>
+        /// Exchanges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets exchanges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <returns>ApiResponse of List<CurveExchangeDTO></returns>
+        ApiResponse<List<CurveExchangeDTO>> CurveExchangesCurrentWithHttpInfo (string pool = default(string));
+        /// <summary>
+        /// FeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets feeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveFeeChangeLogDTO></returns>
+        List<CurveFeeChangeLogDTO> CurveFeeChangeLogsCurrent ();
+
+        /// <summary>
+        /// FeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets feeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveFeeChangeLogDTO></returns>
+        ApiResponse<List<CurveFeeChangeLogDTO>> CurveFeeChangeLogsCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeDeposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeDeposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeDepositDTO></returns>
+        List<CurveGaugeDepositDTO> CurveGaugeDepositsCurrent ();
+
+        /// <summary>
+        /// GaugeDeposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeDeposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeDepositDTO></returns>
+        ApiResponse<List<CurveGaugeDepositDTO>> CurveGaugeDepositsCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeLiquiditys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeLiquiditys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeLiquidityDTO></returns>
+        List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditysCurrent ();
+
+        /// <summary>
+        /// GaugeLiquiditys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeLiquiditys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeLiquidityDTO></returns>
+        ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeTotalWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTotalWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTotalWeightDTO></returns>
+        List<CurveGaugeTotalWeightDTO> CurveGaugeTotalWeightsCurrent ();
+
+        /// <summary>
+        /// GaugeTotalWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTotalWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTotalWeightDTO></returns>
+        ApiResponse<List<CurveGaugeTotalWeightDTO>> CurveGaugeTotalWeightsCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeTypeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTypeWeightDTO></returns>
+        List<CurveGaugeTypeWeightDTO> CurveGaugeTypeWeightsCurrent ();
+
+        /// <summary>
+        /// GaugeTypeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTypeWeightDTO></returns>
+        ApiResponse<List<CurveGaugeTypeWeightDTO>> CurveGaugeTypeWeightsCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeTypes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTypeDTO></returns>
+        List<CurveGaugeTypeDTO> CurveGaugeTypesCurrent ();
+
+        /// <summary>
+        /// GaugeTypes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTypeDTO></returns>
+        ApiResponse<List<CurveGaugeTypeDTO>> CurveGaugeTypesCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeWeightVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeightVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWeightVoteDTO></returns>
+        List<CurveGaugeWeightVoteDTO> CurveGaugeWeightVotesCurrent ();
+
+        /// <summary>
+        /// GaugeWeightVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeightVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWeightVoteDTO></returns>
+        ApiResponse<List<CurveGaugeWeightVoteDTO>> CurveGaugeWeightVotesCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWeightDTO></returns>
+        List<CurveGaugeWeightDTO> CurveGaugeWeightsCurrent ();
+
+        /// <summary>
+        /// GaugeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWeightDTO></returns>
+        ApiResponse<List<CurveGaugeWeightDTO>> CurveGaugeWeightsCurrentWithHttpInfo ();
+        /// <summary>
+        /// GaugeWithdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWithdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWithdrawDTO></returns>
+        List<CurveGaugeWithdrawDTO> CurveGaugeWithdrawsCurrent ();
+
+        /// <summary>
+        /// GaugeWithdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWithdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWithdrawDTO></returns>
+        ApiResponse<List<CurveGaugeWithdrawDTO>> CurveGaugeWithdrawsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Gauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeDTO></returns>
+        List<CurveGaugeDTO> CurveGaugesCurrent ();
+
+        /// <summary>
+        /// Gauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeDTO></returns>
+        ApiResponse<List<CurveGaugeDTO>> CurveGaugesCurrentWithHttpInfo ();
+        /// <summary>
         /// Accounts (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -60,7 +423,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AddLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets addliquidityevents.
+        /// Gets addLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -76,7 +439,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AddLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets addliquidityevents.
+        /// Gets addLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -91,7 +454,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AdminFeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets adminfeechangelogs.
+        /// Gets adminFeeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -107,7 +470,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AdminFeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets adminfeechangelogs.
+        /// Gets adminFeeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -122,7 +485,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AmplificationCoeffChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets amplificationcoeffchangelogs.
+        /// Gets amplificationCoeffChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -138,7 +501,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AmplificationCoeffChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets amplificationcoeffchangelogs.
+        /// Gets amplificationCoeffChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -184,7 +547,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ContractVersions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets contractversions.
+        /// Gets contractVersions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -200,7 +563,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ContractVersions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets contractversions.
+        /// Gets contractVersions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -244,7 +607,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DailyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets dailyvolumes.
+        /// Gets dailyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -260,7 +623,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DailyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets dailyvolumes.
+        /// Gets dailyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -306,7 +669,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// FeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets feechangelogs.
+        /// Gets feeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -322,7 +685,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// FeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets feechangelogs.
+        /// Gets feeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -337,7 +700,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeDeposits (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugedeposits.
+        /// Gets gaugeDeposits.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -352,7 +715,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeDeposits (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugedeposits.
+        /// Gets gaugeDeposits.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -366,7 +729,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeLiquiditys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeliquiditys.
+        /// Gets gaugeLiquiditys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -382,7 +745,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeLiquiditys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeliquiditys.
+        /// Gets gaugeLiquiditys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -397,7 +760,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTotalWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetotalweights.
+        /// Gets gaugeTotalWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -412,7 +775,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTotalWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetotalweights.
+        /// Gets gaugeTotalWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -426,7 +789,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypeweights.
+        /// Gets gaugeTypeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -441,7 +804,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypeweights.
+        /// Gets gaugeTypeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -455,7 +818,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypes.
+        /// Gets gaugeTypes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -471,7 +834,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypes.
+        /// Gets gaugeTypes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -486,7 +849,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeightVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweightvotes.
+        /// Gets gaugeWeightVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -502,7 +865,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeightVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweightvotes.
+        /// Gets gaugeWeightVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -517,7 +880,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweights.
+        /// Gets gaugeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -532,7 +895,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweights.
+        /// Gets gaugeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -546,7 +909,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWithdraws (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugewithdraws.
+        /// Gets gaugeWithdraws.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -561,7 +924,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWithdraws (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugewithdraws.
+        /// Gets gaugeWithdraws.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -608,7 +971,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourlyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourlyvolumes.
+        /// Gets hourlyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -624,7 +987,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourlyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourlyvolumes.
+        /// Gets hourlyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -639,7 +1002,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LpTokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets lptokens.
+        /// Gets lpTokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -658,7 +1021,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LpTokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets lptokens.
+        /// Gets lpTokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -707,7 +1070,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ProposalVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets proposalvotes.
+        /// Gets proposalVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -722,7 +1085,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ProposalVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets proposalvotes.
+        /// Gets proposalVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -765,7 +1128,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityevents.
+        /// Gets removeLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -781,7 +1144,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityevents.
+        /// Gets removeLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -796,7 +1159,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityOneEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityoneevents.
+        /// Gets removeLiquidityOneEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -812,7 +1175,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityOneEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityoneevents.
+        /// Gets removeLiquidityOneEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -827,7 +1190,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// SystemStates (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets systemstates.
+        /// Gets systemStates.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -842,7 +1205,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// SystemStates (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets systemstates.
+        /// Gets systemStates.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -891,7 +1254,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TransferOwnershipEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transferownershipevents.
+        /// Gets transferOwnershipEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -907,7 +1270,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TransferOwnershipEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transferownershipevents.
+        /// Gets transferOwnershipEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -922,7 +1285,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// UnderlyingCoins (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets underlyingcoins.
+        /// Gets underlyingCoins.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -938,7 +1301,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// UnderlyingCoins (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets underlyingcoins.
+        /// Gets underlyingCoins.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -953,7 +1316,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// VotingApps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets votingapps.
+        /// Gets votingApps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -969,7 +1332,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// VotingApps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets votingapps.
+        /// Gets votingApps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -984,7 +1347,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WeeklyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets weeklyvolumes.
+        /// Gets weeklyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1000,7 +1363,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WeeklyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets weeklyvolumes.
+        /// Gets weeklyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1011,8 +1374,658 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<CurveWeeklyVolumeDTO></returns>
         ApiResponse<List<CurveWeeklyVolumeDTO>> CurveGetWeeklyVolumesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        /// <summary>
+        /// HourlyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourlyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveHourlyVolumeDTO></returns>
+        List<CurveHourlyVolumeDTO> CurveHourlyVolumesCurrent ();
+
+        /// <summary>
+        /// HourlyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourlyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveHourlyVolumeDTO></returns>
+        ApiResponse<List<CurveHourlyVolumeDTO>> CurveHourlyVolumesCurrentWithHttpInfo ();
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveLpTokenDTO></returns>
+        List<CurveLpTokenDTO> CurveLpTokensCurrent ();
+
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveLpTokenDTO></returns>
+        ApiResponse<List<CurveLpTokenDTO>> CurveLpTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// Pools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <returns>List<CurvePoolDTO></returns>
+        List<CurvePoolDTO> CurvePoolsCurrent (string id = default(string));
+
+        /// <summary>
+        /// Pools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <returns>ApiResponse of List<CurvePoolDTO></returns>
+        ApiResponse<List<CurvePoolDTO>> CurvePoolsCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// ProposalVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposalVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveProposalVoteDTO></returns>
+        List<CurveProposalVoteDTO> CurveProposalVotesCurrent ();
+
+        /// <summary>
+        /// ProposalVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposalVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveProposalVoteDTO></returns>
+        ApiResponse<List<CurveProposalVoteDTO>> CurveProposalVotesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Proposals (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposals.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveProposalDTO></returns>
+        List<CurveProposalDTO> CurveProposalsCurrent ();
+
+        /// <summary>
+        /// Proposals (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposals.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveProposalDTO></returns>
+        ApiResponse<List<CurveProposalDTO>> CurveProposalsCurrentWithHttpInfo ();
+        /// <summary>
+        /// RemoveLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveRemoveLiquidityEventDTO></returns>
+        List<CurveRemoveLiquidityEventDTO> CurveRemoveLiquidityEventsCurrent ();
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveRemoveLiquidityEventDTO></returns>
+        ApiResponse<List<CurveRemoveLiquidityEventDTO>> CurveRemoveLiquidityEventsCurrentWithHttpInfo ();
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityOneEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveRemoveLiquidityOneEventDTO></returns>
+        List<CurveRemoveLiquidityOneEventDTO> CurveRemoveLiquidityOneEventsCurrent ();
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityOneEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveRemoveLiquidityOneEventDTO></returns>
+        ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> CurveRemoveLiquidityOneEventsCurrentWithHttpInfo ();
+        /// <summary>
+        /// SystemStates (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets systemStates.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveSystemStateDTO></returns>
+        List<CurveSystemStateDTO> CurveSystemStatesCurrent ();
+
+        /// <summary>
+        /// SystemStates (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets systemStates.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveSystemStateDTO></returns>
+        ApiResponse<List<CurveSystemStateDTO>> CurveSystemStatesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveTokenDTO></returns>
+        List<CurveTokenDTO> CurveTokensCurrent ();
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveTokenDTO></returns>
+        ApiResponse<List<CurveTokenDTO>> CurveTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// TransferOwnershipEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transferOwnershipEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveTransferOwnershipEventDTO></returns>
+        List<CurveTransferOwnershipEventDTO> CurveTransferOwnershipEventsCurrent ();
+
+        /// <summary>
+        /// TransferOwnershipEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transferOwnershipEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveTransferOwnershipEventDTO></returns>
+        ApiResponse<List<CurveTransferOwnershipEventDTO>> CurveTransferOwnershipEventsCurrentWithHttpInfo ();
+        /// <summary>
+        /// UnderlyingCoins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets underlyingCoins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveUnderlyingCoinDTO></returns>
+        List<CurveUnderlyingCoinDTO> CurveUnderlyingCoinsCurrent ();
+
+        /// <summary>
+        /// UnderlyingCoins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets underlyingCoins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveUnderlyingCoinDTO></returns>
+        ApiResponse<List<CurveUnderlyingCoinDTO>> CurveUnderlyingCoinsCurrentWithHttpInfo ();
+        /// <summary>
+        /// VotingApps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets votingApps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveVotingAppDTO></returns>
+        List<CurveVotingAppDTO> CurveVotingAppsCurrent ();
+
+        /// <summary>
+        /// VotingApps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets votingApps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveVotingAppDTO></returns>
+        ApiResponse<List<CurveVotingAppDTO>> CurveVotingAppsCurrentWithHttpInfo ();
+        /// <summary>
+        /// WeeklyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets weeklyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveWeeklyVolumeDTO></returns>
+        List<CurveWeeklyVolumeDTO> CurveWeeklyVolumesCurrent ();
+
+        /// <summary>
+        /// WeeklyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets weeklyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveWeeklyVolumeDTO></returns>
+        ApiResponse<List<CurveWeeklyVolumeDTO>> CurveWeeklyVolumesCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAccountDTO></returns>
+        System.Threading.Tasks.Task<List<CurveAccountDTO>> CurveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Accounts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets accounts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAccountDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveAccountDTO>>> CurveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// AddLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets addLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAddLiquidityEventDTO></returns>
+        System.Threading.Tasks.Task<List<CurveAddLiquidityEventDTO>> CurveAddLiquidityEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// AddLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets addLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAddLiquidityEventDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveAddLiquidityEventDTO>>> CurveAddLiquidityEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// AdminFeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets adminFeeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAdminFeeChangeLogDTO></returns>
+        System.Threading.Tasks.Task<List<CurveAdminFeeChangeLogDTO>> CurveAdminFeeChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets adminFeeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAdminFeeChangeLogDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveAdminFeeChangeLogDTO>>> CurveAdminFeeChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets amplificationCoeffChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAmplificationCoeffChangeLogDTO></returns>
+        System.Threading.Tasks.Task<List<CurveAmplificationCoeffChangeLogDTO>> CurveAmplificationCoeffChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets amplificationCoeffChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAmplificationCoeffChangeLogDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>> CurveAmplificationCoeffChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Coins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets coins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveCoinDTO></returns>
+        System.Threading.Tasks.Task<List<CurveCoinDTO>> CurveCoinsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Coins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets coins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveCoinDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveCoinDTO>>> CurveCoinsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// ContractVersions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contractVersions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveContractVersionDTO></returns>
+        System.Threading.Tasks.Task<List<CurveContractVersionDTO>> CurveContractVersionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// ContractVersions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contractVersions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveContractVersionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveContractVersionDTO>>> CurveContractVersionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Contracts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contracts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveContractDTO></returns>
+        System.Threading.Tasks.Task<List<CurveContractDTO>> CurveContractsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Contracts (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets contracts.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveContractDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveContractDTO>>> CurveContractsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// DailyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dailyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveDailyVolumeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveDailyVolumeDTO>> CurveDailyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// DailyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dailyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveDailyVolumeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveDailyVolumeDTO>>> CurveDailyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Exchanges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets exchanges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveExchangeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveExchangeDTO>> CurveExchangesCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Exchanges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets exchanges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveExchangeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveExchangeDTO>>> CurveExchangesCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// FeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets feeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveFeeChangeLogDTO></returns>
+        System.Threading.Tasks.Task<List<CurveFeeChangeLogDTO>> CurveFeeChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// FeeChangeLogs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets feeChangeLogs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveFeeChangeLogDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveFeeChangeLogDTO>>> CurveFeeChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeDeposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeDeposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeDepositDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeDepositDTO>> CurveGaugeDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeDeposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeDeposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeDepositDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGaugeDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeLiquiditys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeLiquiditys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeLiquidityDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeLiquiditys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeLiquiditys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeTotalWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTotalWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTotalWeightDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeTotalWeightDTO>> CurveGaugeTotalWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeTotalWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTotalWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTotalWeightDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTotalWeightDTO>>> CurveGaugeTotalWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeTypeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTypeWeightDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeTypeWeightDTO>> CurveGaugeTypeWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeTypeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeWeightDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeWeightDTO>>> CurveGaugeTypeWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeTypes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTypeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeTypeDTO>> CurveGaugeTypesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeTypes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeTypes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeDTO>>> CurveGaugeTypesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeWeightVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeightVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWeightVoteDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeWeightVoteDTO>> CurveGaugeWeightVotesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeWeightVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeightVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightVoteDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightVoteDTO>>> CurveGaugeWeightVotesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWeightDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeWeightDTO>> CurveGaugeWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeWeights (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWeights.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightDTO>>> CurveGaugeWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// GaugeWithdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWithdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWithdrawDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeWithdrawDTO>> CurveGaugeWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// GaugeWithdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gaugeWithdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWithdrawDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWithdrawDTO>>> CurveGaugeWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Gauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveGaugeDTO>> CurveGaugesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gauges (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets gauges.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDTO>>> CurveGaugesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Accounts (historical) 🔥
         /// </summary>
@@ -1050,7 +2063,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AddLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets addliquidityevents.
+        /// Gets addLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1067,7 +2080,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AddLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets addliquidityevents.
+        /// Gets addLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1083,7 +2096,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AdminFeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets adminfeechangelogs.
+        /// Gets adminFeeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1100,7 +2113,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AdminFeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets adminfeechangelogs.
+        /// Gets adminFeeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1116,7 +2129,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AmplificationCoeffChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets amplificationcoeffchangelogs.
+        /// Gets amplificationCoeffChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1133,7 +2146,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// AmplificationCoeffChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets amplificationcoeffchangelogs.
+        /// Gets amplificationCoeffChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1182,7 +2195,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ContractVersions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets contractversions.
+        /// Gets contractVersions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1199,7 +2212,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ContractVersions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets contractversions.
+        /// Gets contractVersions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1246,7 +2259,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DailyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets dailyvolumes.
+        /// Gets dailyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1263,7 +2276,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DailyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets dailyvolumes.
+        /// Gets dailyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1312,7 +2325,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// FeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets feechangelogs.
+        /// Gets feeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1329,7 +2342,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// FeeChangeLogs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets feechangelogs.
+        /// Gets feeChangeLogs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1345,7 +2358,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeDeposits (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugedeposits.
+        /// Gets gaugeDeposits.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1361,7 +2374,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeDeposits (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugedeposits.
+        /// Gets gaugeDeposits.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1376,7 +2389,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeLiquiditys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeliquiditys.
+        /// Gets gaugeLiquiditys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1393,7 +2406,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeLiquiditys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeliquiditys.
+        /// Gets gaugeLiquiditys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1409,7 +2422,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTotalWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetotalweights.
+        /// Gets gaugeTotalWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1425,7 +2438,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTotalWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetotalweights.
+        /// Gets gaugeTotalWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1440,7 +2453,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypeweights.
+        /// Gets gaugeTypeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1456,7 +2469,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypeweights.
+        /// Gets gaugeTypeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1471,7 +2484,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypes.
+        /// Gets gaugeTypes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1488,7 +2501,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeTypes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugetypes.
+        /// Gets gaugeTypes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1504,7 +2517,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeightVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweightvotes.
+        /// Gets gaugeWeightVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1521,7 +2534,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeightVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweightvotes.
+        /// Gets gaugeWeightVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1537,7 +2550,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweights.
+        /// Gets gaugeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1553,7 +2566,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWeights (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugeweights.
+        /// Gets gaugeWeights.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1568,7 +2581,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWithdraws (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugewithdraws.
+        /// Gets gaugeWithdraws.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1584,7 +2597,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// GaugeWithdraws (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets gaugewithdraws.
+        /// Gets gaugeWithdraws.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1634,7 +2647,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourlyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourlyvolumes.
+        /// Gets hourlyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1651,7 +2664,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourlyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourlyvolumes.
+        /// Gets hourlyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1667,7 +2680,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LpTokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets lptokens.
+        /// Gets lpTokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1687,7 +2700,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LpTokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets lptokens.
+        /// Gets lpTokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1739,7 +2752,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ProposalVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets proposalvotes.
+        /// Gets proposalVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1755,7 +2768,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// ProposalVotes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets proposalvotes.
+        /// Gets proposalVotes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1801,7 +2814,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityevents.
+        /// Gets removeLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1818,7 +2831,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityevents.
+        /// Gets removeLiquidityEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1834,7 +2847,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityOneEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityoneevents.
+        /// Gets removeLiquidityOneEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1851,7 +2864,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// RemoveLiquidityOneEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets removeliquidityoneevents.
+        /// Gets removeLiquidityOneEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1867,7 +2880,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// SystemStates (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets systemstates.
+        /// Gets systemStates.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1883,7 +2896,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// SystemStates (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets systemstates.
+        /// Gets systemStates.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1935,7 +2948,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TransferOwnershipEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transferownershipevents.
+        /// Gets transferOwnershipEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1952,7 +2965,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TransferOwnershipEvents (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transferownershipevents.
+        /// Gets transferOwnershipEvents.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1968,7 +2981,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// UnderlyingCoins (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets underlyingcoins.
+        /// Gets underlyingCoins.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1985,7 +2998,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// UnderlyingCoins (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets underlyingcoins.
+        /// Gets underlyingCoins.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2001,7 +3014,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// VotingApps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets votingapps.
+        /// Gets votingApps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2018,7 +3031,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// VotingApps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets votingapps.
+        /// Gets votingApps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2034,7 +3047,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WeeklyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets weeklyvolumes.
+        /// Gets weeklyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2051,7 +3064,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WeeklyVolumes (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets weeklyvolumes.
+        /// Gets weeklyVolumes.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2063,6 +3076,281 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;CurveWeeklyVolumeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveWeeklyVolumeDTO>>> CurveGetWeeklyVolumesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// HourlyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourlyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveHourlyVolumeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveHourlyVolumeDTO>> CurveHourlyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// HourlyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourlyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveHourlyVolumeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveHourlyVolumeDTO>>> CurveHourlyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveLpTokenDTO></returns>
+        System.Threading.Tasks.Task<List<CurveLpTokenDTO>> CurveLpTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LpTokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets lpTokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveLpTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveLpTokenDTO>>> CurveLpTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Pools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurvePoolDTO></returns>
+        System.Threading.Tasks.Task<List<CurvePoolDTO>> CurvePoolsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Pools (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pools.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurvePoolDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurvePoolDTO>>> CurvePoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// ProposalVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposalVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveProposalVoteDTO></returns>
+        System.Threading.Tasks.Task<List<CurveProposalVoteDTO>> CurveProposalVotesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// ProposalVotes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposalVotes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveProposalVoteDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveProposalVoteDTO>>> CurveProposalVotesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Proposals (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposals.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveProposalDTO></returns>
+        System.Threading.Tasks.Task<List<CurveProposalDTO>> CurveProposalsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Proposals (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets proposals.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveProposalDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveProposalDTO>>> CurveProposalsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// RemoveLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveRemoveLiquidityEventDTO></returns>
+        System.Threading.Tasks.Task<List<CurveRemoveLiquidityEventDTO>> CurveRemoveLiquidityEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityEventDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityEventDTO>>> CurveRemoveLiquidityEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityOneEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveRemoveLiquidityOneEventDTO></returns>
+        System.Threading.Tasks.Task<List<CurveRemoveLiquidityOneEventDTO>> CurveRemoveLiquidityOneEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets removeLiquidityOneEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityOneEventDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>> CurveRemoveLiquidityOneEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// SystemStates (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets systemStates.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveSystemStateDTO></returns>
+        System.Threading.Tasks.Task<List<CurveSystemStateDTO>> CurveSystemStatesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// SystemStates (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets systemStates.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveSystemStateDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveSystemStateDTO>>> CurveSystemStatesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveTokenDTO></returns>
+        System.Threading.Tasks.Task<List<CurveTokenDTO>> CurveTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveTokenDTO>>> CurveTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TransferOwnershipEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transferOwnershipEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveTransferOwnershipEventDTO></returns>
+        System.Threading.Tasks.Task<List<CurveTransferOwnershipEventDTO>> CurveTransferOwnershipEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TransferOwnershipEvents (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transferOwnershipEvents.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveTransferOwnershipEventDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveTransferOwnershipEventDTO>>> CurveTransferOwnershipEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UnderlyingCoins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets underlyingCoins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveUnderlyingCoinDTO></returns>
+        System.Threading.Tasks.Task<List<CurveUnderlyingCoinDTO>> CurveUnderlyingCoinsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UnderlyingCoins (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets underlyingCoins.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveUnderlyingCoinDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveUnderlyingCoinDTO>>> CurveUnderlyingCoinsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// VotingApps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets votingApps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveVotingAppDTO></returns>
+        System.Threading.Tasks.Task<List<CurveVotingAppDTO>> CurveVotingAppsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// VotingApps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets votingApps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveVotingAppDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveVotingAppDTO>>> CurveVotingAppsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// WeeklyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets weeklyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveWeeklyVolumeDTO></returns>
+        System.Threading.Tasks.Task<List<CurveWeeklyVolumeDTO>> CurveWeeklyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// WeeklyVolumes (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets weeklyVolumes.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveWeeklyVolumeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CurveWeeklyVolumeDTO>>> CurveWeeklyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2172,6 +3460,2425 @@ namespace CoinAPI.EMS.REST.V1.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAccountDTO></returns>
+        public List<CurveAccountDTO> CurveAccountsCurrent ()
+        {
+             ApiResponse<List<CurveAccountDTO>> localVarResponse = CurveAccountsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAccountDTO></returns>
+        public ApiResponse<List<CurveAccountDTO>> CurveAccountsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/accounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAccountDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveAccountDTO>> CurveAccountsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveAccountDTO>> localVarResponse = await CurveAccountsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Accounts (current) Gets accounts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAccountDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveAccountDTO>>> CurveAccountsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/accounts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAccountsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAccountDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAccountDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAccountDTO>)));
+        }
+
+        /// <summary>
+        /// AddLiquidityEvents (current) Gets addLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAddLiquidityEventDTO></returns>
+        public List<CurveAddLiquidityEventDTO> CurveAddLiquidityEventsCurrent ()
+        {
+             ApiResponse<List<CurveAddLiquidityEventDTO>> localVarResponse = CurveAddLiquidityEventsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// AddLiquidityEvents (current) Gets addLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAddLiquidityEventDTO></returns>
+        public ApiResponse<List<CurveAddLiquidityEventDTO>> CurveAddLiquidityEventsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/addLiquidityEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAddLiquidityEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAddLiquidityEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAddLiquidityEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAddLiquidityEventDTO>)));
+        }
+
+        /// <summary>
+        /// AddLiquidityEvents (current) Gets addLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAddLiquidityEventDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveAddLiquidityEventDTO>> CurveAddLiquidityEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveAddLiquidityEventDTO>> localVarResponse = await CurveAddLiquidityEventsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// AddLiquidityEvents (current) Gets addLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAddLiquidityEventDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveAddLiquidityEventDTO>>> CurveAddLiquidityEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/addLiquidityEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAddLiquidityEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAddLiquidityEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAddLiquidityEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAddLiquidityEventDTO>)));
+        }
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current) Gets adminFeeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAdminFeeChangeLogDTO></returns>
+        public List<CurveAdminFeeChangeLogDTO> CurveAdminFeeChangeLogsCurrent ()
+        {
+             ApiResponse<List<CurveAdminFeeChangeLogDTO>> localVarResponse = CurveAdminFeeChangeLogsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current) Gets adminFeeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAdminFeeChangeLogDTO></returns>
+        public ApiResponse<List<CurveAdminFeeChangeLogDTO>> CurveAdminFeeChangeLogsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/adminFeeChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAdminFeeChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAdminFeeChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAdminFeeChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAdminFeeChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current) Gets adminFeeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAdminFeeChangeLogDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveAdminFeeChangeLogDTO>> CurveAdminFeeChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveAdminFeeChangeLogDTO>> localVarResponse = await CurveAdminFeeChangeLogsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// AdminFeeChangeLogs (current) Gets adminFeeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAdminFeeChangeLogDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveAdminFeeChangeLogDTO>>> CurveAdminFeeChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/adminFeeChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAdminFeeChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAdminFeeChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAdminFeeChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAdminFeeChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current) Gets amplificationCoeffChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveAmplificationCoeffChangeLogDTO></returns>
+        public List<CurveAmplificationCoeffChangeLogDTO> CurveAmplificationCoeffChangeLogsCurrent ()
+        {
+             ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> localVarResponse = CurveAmplificationCoeffChangeLogsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current) Gets amplificationCoeffChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveAmplificationCoeffChangeLogDTO></returns>
+        public ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> CurveAmplificationCoeffChangeLogsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAmplificationCoeffChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAmplificationCoeffChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAmplificationCoeffChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current) Gets amplificationCoeffChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveAmplificationCoeffChangeLogDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveAmplificationCoeffChangeLogDTO>> CurveAmplificationCoeffChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> localVarResponse = await CurveAmplificationCoeffChangeLogsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// AmplificationCoeffChangeLogs (current) Gets amplificationCoeffChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveAmplificationCoeffChangeLogDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>> CurveAmplificationCoeffChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveAmplificationCoeffChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveAmplificationCoeffChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveAmplificationCoeffChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// Coins (current) Gets coins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveCoinDTO></returns>
+        public List<CurveCoinDTO> CurveCoinsCurrent ()
+        {
+             ApiResponse<List<CurveCoinDTO>> localVarResponse = CurveCoinsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Coins (current) Gets coins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveCoinDTO></returns>
+        public ApiResponse<List<CurveCoinDTO>> CurveCoinsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/coins/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveCoinsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveCoinDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveCoinDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveCoinDTO>)));
+        }
+
+        /// <summary>
+        /// Coins (current) Gets coins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveCoinDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveCoinDTO>> CurveCoinsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveCoinDTO>> localVarResponse = await CurveCoinsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Coins (current) Gets coins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveCoinDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveCoinDTO>>> CurveCoinsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/coins/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveCoinsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveCoinDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveCoinDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveCoinDTO>)));
+        }
+
+        /// <summary>
+        /// ContractVersions (current) Gets contractVersions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveContractVersionDTO></returns>
+        public List<CurveContractVersionDTO> CurveContractVersionsCurrent ()
+        {
+             ApiResponse<List<CurveContractVersionDTO>> localVarResponse = CurveContractVersionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ContractVersions (current) Gets contractVersions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveContractVersionDTO></returns>
+        public ApiResponse<List<CurveContractVersionDTO>> CurveContractVersionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/contractVersions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveContractVersionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveContractVersionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveContractVersionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveContractVersionDTO>)));
+        }
+
+        /// <summary>
+        /// ContractVersions (current) Gets contractVersions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveContractVersionDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveContractVersionDTO>> CurveContractVersionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveContractVersionDTO>> localVarResponse = await CurveContractVersionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ContractVersions (current) Gets contractVersions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveContractVersionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveContractVersionDTO>>> CurveContractVersionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/contractVersions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveContractVersionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveContractVersionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveContractVersionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveContractVersionDTO>)));
+        }
+
+        /// <summary>
+        /// Contracts (current) Gets contracts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveContractDTO></returns>
+        public List<CurveContractDTO> CurveContractsCurrent ()
+        {
+             ApiResponse<List<CurveContractDTO>> localVarResponse = CurveContractsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Contracts (current) Gets contracts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveContractDTO></returns>
+        public ApiResponse<List<CurveContractDTO>> CurveContractsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/contracts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveContractsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveContractDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveContractDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveContractDTO>)));
+        }
+
+        /// <summary>
+        /// Contracts (current) Gets contracts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveContractDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveContractDTO>> CurveContractsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveContractDTO>> localVarResponse = await CurveContractsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Contracts (current) Gets contracts.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveContractDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveContractDTO>>> CurveContractsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/contracts/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveContractsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveContractDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveContractDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveContractDTO>)));
+        }
+
+        /// <summary>
+        /// DailyVolumes (current) Gets dailyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveDailyVolumeDTO></returns>
+        public List<CurveDailyVolumeDTO> CurveDailyVolumesCurrent ()
+        {
+             ApiResponse<List<CurveDailyVolumeDTO>> localVarResponse = CurveDailyVolumesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DailyVolumes (current) Gets dailyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveDailyVolumeDTO></returns>
+        public ApiResponse<List<CurveDailyVolumeDTO>> CurveDailyVolumesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/dailyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveDailyVolumesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveDailyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveDailyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveDailyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// DailyVolumes (current) Gets dailyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveDailyVolumeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveDailyVolumeDTO>> CurveDailyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveDailyVolumeDTO>> localVarResponse = await CurveDailyVolumesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// DailyVolumes (current) Gets dailyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveDailyVolumeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveDailyVolumeDTO>>> CurveDailyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/dailyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveDailyVolumesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveDailyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveDailyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveDailyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// Exchanges (current) Gets exchanges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <returns>List<CurveExchangeDTO></returns>
+        public List<CurveExchangeDTO> CurveExchangesCurrent (string pool = default(string))
+        {
+             ApiResponse<List<CurveExchangeDTO>> localVarResponse = CurveExchangesCurrentWithHttpInfo(pool);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exchanges (current) Gets exchanges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <returns>ApiResponse of List<CurveExchangeDTO></returns>
+        public ApiResponse<List<CurveExchangeDTO>> CurveExchangesCurrentWithHttpInfo (string pool = default(string))
+        {
+
+            var localVarPath = "/dapps/curve/exchanges/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveExchangesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveExchangeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveExchangeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveExchangeDTO>)));
+        }
+
+        /// <summary>
+        /// Exchanges (current) Gets exchanges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveExchangeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveExchangeDTO>> CurveExchangesCurrentAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveExchangeDTO>> localVarResponse = await CurveExchangesCurrentWithHttpInfoAsync(pool, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exchanges (current) Gets exchanges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pool"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveExchangeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveExchangeDTO>>> CurveExchangesCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/exchanges/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pool != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pool", pool)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveExchangesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveExchangeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveExchangeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveExchangeDTO>)));
+        }
+
+        /// <summary>
+        /// FeeChangeLogs (current) Gets feeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveFeeChangeLogDTO></returns>
+        public List<CurveFeeChangeLogDTO> CurveFeeChangeLogsCurrent ()
+        {
+             ApiResponse<List<CurveFeeChangeLogDTO>> localVarResponse = CurveFeeChangeLogsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// FeeChangeLogs (current) Gets feeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveFeeChangeLogDTO></returns>
+        public ApiResponse<List<CurveFeeChangeLogDTO>> CurveFeeChangeLogsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/feeChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveFeeChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveFeeChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveFeeChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveFeeChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// FeeChangeLogs (current) Gets feeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveFeeChangeLogDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveFeeChangeLogDTO>> CurveFeeChangeLogsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveFeeChangeLogDTO>> localVarResponse = await CurveFeeChangeLogsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// FeeChangeLogs (current) Gets feeChangeLogs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveFeeChangeLogDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveFeeChangeLogDTO>>> CurveFeeChangeLogsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/feeChangeLogs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveFeeChangeLogsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveFeeChangeLogDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveFeeChangeLogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveFeeChangeLogDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeDeposits (current) Gets gaugeDeposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeDepositDTO></returns>
+        public List<CurveGaugeDepositDTO> CurveGaugeDepositsCurrent ()
+        {
+             ApiResponse<List<CurveGaugeDepositDTO>> localVarResponse = CurveGaugeDepositsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeDeposits (current) Gets gaugeDeposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeDepositDTO></returns>
+        public ApiResponse<List<CurveGaugeDepositDTO>> CurveGaugeDepositsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeDeposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeDepositDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeDeposits (current) Gets gaugeDeposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeDepositDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeDepositDTO>> CurveGaugeDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeDepositDTO>> localVarResponse = await CurveGaugeDepositsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeDeposits (current) Gets gaugeDeposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeDepositDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGaugeDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeDeposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeDepositDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeLiquidityDTO></returns>
+        public List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditysCurrent ()
+        {
+             ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = CurveGaugeLiquiditysCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeLiquidityDTO></returns>
+        public ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeLiquiditys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeLiquiditysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeLiquidityDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeLiquidityDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeLiquidityDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeLiquidityDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = await CurveGaugeLiquiditysCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeLiquiditys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeLiquiditysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeLiquidityDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeLiquidityDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeLiquidityDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTotalWeights (current) Gets gaugeTotalWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTotalWeightDTO></returns>
+        public List<CurveGaugeTotalWeightDTO> CurveGaugeTotalWeightsCurrent ()
+        {
+             ApiResponse<List<CurveGaugeTotalWeightDTO>> localVarResponse = CurveGaugeTotalWeightsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeTotalWeights (current) Gets gaugeTotalWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTotalWeightDTO></returns>
+        public ApiResponse<List<CurveGaugeTotalWeightDTO>> CurveGaugeTotalWeightsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTotalWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTotalWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTotalWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTotalWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTotalWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTotalWeights (current) Gets gaugeTotalWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTotalWeightDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeTotalWeightDTO>> CurveGaugeTotalWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeTotalWeightDTO>> localVarResponse = await CurveGaugeTotalWeightsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeTotalWeights (current) Gets gaugeTotalWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTotalWeightDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTotalWeightDTO>>> CurveGaugeTotalWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTotalWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTotalWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTotalWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTotalWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTotalWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTypeWeights (current) Gets gaugeTypeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTypeWeightDTO></returns>
+        public List<CurveGaugeTypeWeightDTO> CurveGaugeTypeWeightsCurrent ()
+        {
+             ApiResponse<List<CurveGaugeTypeWeightDTO>> localVarResponse = CurveGaugeTypeWeightsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeTypeWeights (current) Gets gaugeTypeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTypeWeightDTO></returns>
+        public ApiResponse<List<CurveGaugeTypeWeightDTO>> CurveGaugeTypeWeightsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTypeWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTypeWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTypeWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTypeWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTypeWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTypeWeights (current) Gets gaugeTypeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTypeWeightDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeTypeWeightDTO>> CurveGaugeTypeWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeTypeWeightDTO>> localVarResponse = await CurveGaugeTypeWeightsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeTypeWeights (current) Gets gaugeTypeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeWeightDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeWeightDTO>>> CurveGaugeTypeWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTypeWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTypeWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTypeWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTypeWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTypeWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTypes (current) Gets gaugeTypes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeTypeDTO></returns>
+        public List<CurveGaugeTypeDTO> CurveGaugeTypesCurrent ()
+        {
+             ApiResponse<List<CurveGaugeTypeDTO>> localVarResponse = CurveGaugeTypesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeTypes (current) Gets gaugeTypes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeTypeDTO></returns>
+        public ApiResponse<List<CurveGaugeTypeDTO>> CurveGaugeTypesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTypes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTypesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTypeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTypeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTypeDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeTypes (current) Gets gaugeTypes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeTypeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeTypeDTO>> CurveGaugeTypesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeTypeDTO>> localVarResponse = await CurveGaugeTypesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeTypes (current) Gets gaugeTypes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeDTO>>> CurveGaugeTypesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeTypes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeTypesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeTypeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeTypeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeTypeDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWeightVotes (current) Gets gaugeWeightVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWeightVoteDTO></returns>
+        public List<CurveGaugeWeightVoteDTO> CurveGaugeWeightVotesCurrent ()
+        {
+             ApiResponse<List<CurveGaugeWeightVoteDTO>> localVarResponse = CurveGaugeWeightVotesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeWeightVotes (current) Gets gaugeWeightVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWeightVoteDTO></returns>
+        public ApiResponse<List<CurveGaugeWeightVoteDTO>> CurveGaugeWeightVotesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWeightVotes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWeightVotesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWeightVoteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWeightVoteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWeightVoteDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWeightVotes (current) Gets gaugeWeightVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWeightVoteDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeWeightVoteDTO>> CurveGaugeWeightVotesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeWeightVoteDTO>> localVarResponse = await CurveGaugeWeightVotesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeWeightVotes (current) Gets gaugeWeightVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightVoteDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightVoteDTO>>> CurveGaugeWeightVotesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWeightVotes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWeightVotesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWeightVoteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWeightVoteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWeightVoteDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWeights (current) Gets gaugeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWeightDTO></returns>
+        public List<CurveGaugeWeightDTO> CurveGaugeWeightsCurrent ()
+        {
+             ApiResponse<List<CurveGaugeWeightDTO>> localVarResponse = CurveGaugeWeightsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeWeights (current) Gets gaugeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWeightDTO></returns>
+        public ApiResponse<List<CurveGaugeWeightDTO>> CurveGaugeWeightsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWeights (current) Gets gaugeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWeightDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeWeightDTO>> CurveGaugeWeightsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeWeightDTO>> localVarResponse = await CurveGaugeWeightsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeWeights (current) Gets gaugeWeights.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightDTO>>> CurveGaugeWeightsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWeights/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWeightsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWeightDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWeightDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWeightDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWithdraws (current) Gets gaugeWithdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeWithdrawDTO></returns>
+        public List<CurveGaugeWithdrawDTO> CurveGaugeWithdrawsCurrent ()
+        {
+             ApiResponse<List<CurveGaugeWithdrawDTO>> localVarResponse = CurveGaugeWithdrawsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GaugeWithdraws (current) Gets gaugeWithdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeWithdrawDTO></returns>
+        public ApiResponse<List<CurveGaugeWithdrawDTO>> CurveGaugeWithdrawsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWithdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// GaugeWithdraws (current) Gets gaugeWithdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeWithdrawDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeWithdrawDTO>> CurveGaugeWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeWithdrawDTO>> localVarResponse = await CurveGaugeWithdrawsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// GaugeWithdraws (current) Gets gaugeWithdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeWithdrawDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWithdrawDTO>>> CurveGaugeWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gaugeWithdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugeWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// Gauges (current) Gets gauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveGaugeDTO></returns>
+        public List<CurveGaugeDTO> CurveGaugesCurrent ()
+        {
+             ApiResponse<List<CurveGaugeDTO>> localVarResponse = CurveGaugesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gauges (current) Gets gauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveGaugeDTO></returns>
+        public ApiResponse<List<CurveGaugeDTO>> CurveGaugesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/gauges/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeDTO>)));
+        }
+
+        /// <summary>
+        /// Gauges (current) Gets gauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveGaugeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveGaugeDTO>> CurveGaugesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveGaugeDTO>> localVarResponse = await CurveGaugesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gauges (current) Gets gauges.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveGaugeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDTO>>> CurveGaugesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/gauges/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveGaugesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveGaugeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveGaugeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveGaugeDTO>)));
         }
 
         /// <summary>
@@ -2338,7 +6045,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AddLiquidityEvents (historical) 🔥 Gets addliquidityevents.
+        /// AddLiquidityEvents (historical) 🔥 Gets addLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2355,7 +6062,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AddLiquidityEvents (historical) 🔥 Gets addliquidityevents.
+        /// AddLiquidityEvents (historical) 🔥 Gets addLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2368,7 +6075,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveAddLiquidityEventDTO>> CurveGetAddLiquidityEventsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/addliquidityevents/historical";
+            var localVarPath = "/dapps/curve/addLiquidityEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2418,7 +6125,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AddLiquidityEvents (historical) 🔥 Gets addliquidityevents.
+        /// AddLiquidityEvents (historical) 🔥 Gets addLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2437,7 +6144,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AddLiquidityEvents (historical) 🔥 Gets addliquidityevents.
+        /// AddLiquidityEvents (historical) 🔥 Gets addLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2451,7 +6158,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveAddLiquidityEventDTO>>> CurveGetAddLiquidityEventsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/addliquidityevents/historical";
+            var localVarPath = "/dapps/curve/addLiquidityEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2501,7 +6208,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AdminFeeChangeLogs (historical) 🔥 Gets adminfeechangelogs.
+        /// AdminFeeChangeLogs (historical) 🔥 Gets adminFeeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2518,7 +6225,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AdminFeeChangeLogs (historical) 🔥 Gets adminfeechangelogs.
+        /// AdminFeeChangeLogs (historical) 🔥 Gets adminFeeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2531,7 +6238,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveAdminFeeChangeLogDTO>> CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/adminfeechangelogs/historical";
+            var localVarPath = "/dapps/curve/adminFeeChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2581,7 +6288,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AdminFeeChangeLogs (historical) 🔥 Gets adminfeechangelogs.
+        /// AdminFeeChangeLogs (historical) 🔥 Gets adminFeeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2600,7 +6307,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AdminFeeChangeLogs (historical) 🔥 Gets adminfeechangelogs.
+        /// AdminFeeChangeLogs (historical) 🔥 Gets adminFeeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2614,7 +6321,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveAdminFeeChangeLogDTO>>> CurveGetAdminFeeChangeLogsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/adminfeechangelogs/historical";
+            var localVarPath = "/dapps/curve/adminFeeChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2664,7 +6371,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationcoeffchangelogs.
+        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationCoeffChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2681,7 +6388,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationcoeffchangelogs.
+        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationCoeffChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2694,7 +6401,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/amplificationcoeffchangelogs/historical";
+            var localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2744,7 +6451,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationcoeffchangelogs.
+        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationCoeffChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2763,7 +6470,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationcoeffchangelogs.
+        /// AmplificationCoeffChangeLogs (historical) 🔥 Gets amplificationCoeffChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2777,7 +6484,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>> CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/amplificationcoeffchangelogs/historical";
+            var localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2990,7 +6697,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ContractVersions (historical) 🔥 Gets contractversions.
+        /// ContractVersions (historical) 🔥 Gets contractVersions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3007,7 +6714,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ContractVersions (historical) 🔥 Gets contractversions.
+        /// ContractVersions (historical) 🔥 Gets contractVersions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3020,7 +6727,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveContractVersionDTO>> CurveGetContractVersionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string))
         {
 
-            var localVarPath = "/dapps/curve/contractversions/historical";
+            var localVarPath = "/dapps/curve/contractVersions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3070,7 +6777,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ContractVersions (historical) 🔥 Gets contractversions.
+        /// ContractVersions (historical) 🔥 Gets contractVersions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3089,7 +6796,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ContractVersions (historical) 🔥 Gets contractversions.
+        /// ContractVersions (historical) 🔥 Gets contractVersions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3103,7 +6810,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveContractVersionDTO>>> CurveGetContractVersionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/contractversions/historical";
+            var localVarPath = "/dapps/curve/contractVersions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3310,7 +7017,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DailyVolumes (historical) 🔥 Gets dailyvolumes.
+        /// DailyVolumes (historical) 🔥 Gets dailyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3327,7 +7034,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DailyVolumes (historical) 🔥 Gets dailyvolumes.
+        /// DailyVolumes (historical) 🔥 Gets dailyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3340,7 +7047,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveDailyVolumeDTO>> CurveGetDailyVolumesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/dailyvolumes/historical";
+            var localVarPath = "/dapps/curve/dailyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3390,7 +7097,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DailyVolumes (historical) 🔥 Gets dailyvolumes.
+        /// DailyVolumes (historical) 🔥 Gets dailyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3409,7 +7116,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DailyVolumes (historical) 🔥 Gets dailyvolumes.
+        /// DailyVolumes (historical) 🔥 Gets dailyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3423,7 +7130,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveDailyVolumeDTO>>> CurveGetDailyVolumesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/dailyvolumes/historical";
+            var localVarPath = "/dapps/curve/dailyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3636,7 +7343,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// FeeChangeLogs (historical) 🔥 Gets feechangelogs.
+        /// FeeChangeLogs (historical) 🔥 Gets feeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3653,7 +7360,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// FeeChangeLogs (historical) 🔥 Gets feechangelogs.
+        /// FeeChangeLogs (historical) 🔥 Gets feeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3666,7 +7373,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveFeeChangeLogDTO>> CurveGetFeeChangeLogsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/feechangelogs/historical";
+            var localVarPath = "/dapps/curve/feeChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3716,7 +7423,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// FeeChangeLogs (historical) 🔥 Gets feechangelogs.
+        /// FeeChangeLogs (historical) 🔥 Gets feeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3735,7 +7442,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// FeeChangeLogs (historical) 🔥 Gets feechangelogs.
+        /// FeeChangeLogs (historical) 🔥 Gets feeChangeLogs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3749,7 +7456,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveFeeChangeLogDTO>>> CurveGetFeeChangeLogsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/feechangelogs/historical";
+            var localVarPath = "/dapps/curve/feeChangeLogs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3799,7 +7506,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeDeposits (historical) 🔥 Gets gaugedeposits.
+        /// GaugeDeposits (historical) 🔥 Gets gaugeDeposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3815,7 +7522,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeDeposits (historical) 🔥 Gets gaugedeposits.
+        /// GaugeDeposits (historical) 🔥 Gets gaugeDeposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3827,7 +7534,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeDepositDTO>> CurveGetGaugeDepositsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugedeposits/historical";
+            var localVarPath = "/dapps/curve/gaugeDeposits/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3876,7 +7583,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeDeposits (historical) 🔥 Gets gaugedeposits.
+        /// GaugeDeposits (historical) 🔥 Gets gaugeDeposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3894,7 +7601,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeDeposits (historical) 🔥 Gets gaugedeposits.
+        /// GaugeDeposits (historical) 🔥 Gets gaugeDeposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3907,7 +7614,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGetGaugeDepositsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugedeposits/historical";
+            var localVarPath = "/dapps/curve/gaugeDeposits/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3956,7 +7663,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) 🔥 Gets gaugeliquiditys.
+        /// GaugeLiquiditys (historical) 🔥 Gets gaugeLiquiditys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3973,7 +7680,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) 🔥 Gets gaugeliquiditys.
+        /// GaugeLiquiditys (historical) 🔥 Gets gaugeLiquiditys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3986,7 +7693,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditysHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugeliquiditys/historical";
+            var localVarPath = "/dapps/curve/gaugeLiquiditys/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4036,7 +7743,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) 🔥 Gets gaugeliquiditys.
+        /// GaugeLiquiditys (historical) 🔥 Gets gaugeLiquiditys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4055,7 +7762,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) 🔥 Gets gaugeliquiditys.
+        /// GaugeLiquiditys (historical) 🔥 Gets gaugeLiquiditys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4069,7 +7776,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugeLiquiditysHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugeliquiditys/historical";
+            var localVarPath = "/dapps/curve/gaugeLiquiditys/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4119,7 +7826,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTotalWeights (historical) 🔥 Gets gaugetotalweights.
+        /// GaugeTotalWeights (historical) 🔥 Gets gaugeTotalWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4135,7 +7842,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTotalWeights (historical) 🔥 Gets gaugetotalweights.
+        /// GaugeTotalWeights (historical) 🔥 Gets gaugeTotalWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4147,7 +7854,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeTotalWeightDTO>> CurveGetGaugeTotalWeightsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugetotalweights/historical";
+            var localVarPath = "/dapps/curve/gaugeTotalWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4196,7 +7903,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTotalWeights (historical) 🔥 Gets gaugetotalweights.
+        /// GaugeTotalWeights (historical) 🔥 Gets gaugeTotalWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4214,7 +7921,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTotalWeights (historical) 🔥 Gets gaugetotalweights.
+        /// GaugeTotalWeights (historical) 🔥 Gets gaugeTotalWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4227,7 +7934,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTotalWeightDTO>>> CurveGetGaugeTotalWeightsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugetotalweights/historical";
+            var localVarPath = "/dapps/curve/gaugeTotalWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4276,7 +7983,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypeWeights (historical) 🔥 Gets gaugetypeweights.
+        /// GaugeTypeWeights (historical) 🔥 Gets gaugeTypeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4292,7 +7999,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypeWeights (historical) 🔥 Gets gaugetypeweights.
+        /// GaugeTypeWeights (historical) 🔥 Gets gaugeTypeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4304,7 +8011,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeTypeWeightDTO>> CurveGetGaugeTypeWeightsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugetypeweights/historical";
+            var localVarPath = "/dapps/curve/gaugeTypeWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4353,7 +8060,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypeWeights (historical) 🔥 Gets gaugetypeweights.
+        /// GaugeTypeWeights (historical) 🔥 Gets gaugeTypeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4371,7 +8078,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypeWeights (historical) 🔥 Gets gaugetypeweights.
+        /// GaugeTypeWeights (historical) 🔥 Gets gaugeTypeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4384,7 +8091,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeWeightDTO>>> CurveGetGaugeTypeWeightsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugetypeweights/historical";
+            var localVarPath = "/dapps/curve/gaugeTypeWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4433,7 +8140,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypes (historical) 🔥 Gets gaugetypes.
+        /// GaugeTypes (historical) 🔥 Gets gaugeTypes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4450,7 +8157,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypes (historical) 🔥 Gets gaugetypes.
+        /// GaugeTypes (historical) 🔥 Gets gaugeTypes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4463,7 +8170,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeTypeDTO>> CurveGetGaugeTypesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugetypes/historical";
+            var localVarPath = "/dapps/curve/gaugeTypes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4513,7 +8220,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypes (historical) 🔥 Gets gaugetypes.
+        /// GaugeTypes (historical) 🔥 Gets gaugeTypes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4532,7 +8239,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeTypes (historical) 🔥 Gets gaugetypes.
+        /// GaugeTypes (historical) 🔥 Gets gaugeTypes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4546,7 +8253,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeDTO>>> CurveGetGaugeTypesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugetypes/historical";
+            var localVarPath = "/dapps/curve/gaugeTypes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4596,7 +8303,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeightVotes (historical) 🔥 Gets gaugeweightvotes.
+        /// GaugeWeightVotes (historical) 🔥 Gets gaugeWeightVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4613,7 +8320,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeightVotes (historical) 🔥 Gets gaugeweightvotes.
+        /// GaugeWeightVotes (historical) 🔥 Gets gaugeWeightVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4626,7 +8333,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeWeightVoteDTO>> CurveGetGaugeWeightVotesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugeweightvotes/historical";
+            var localVarPath = "/dapps/curve/gaugeWeightVotes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4676,7 +8383,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeightVotes (historical) 🔥 Gets gaugeweightvotes.
+        /// GaugeWeightVotes (historical) 🔥 Gets gaugeWeightVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4695,7 +8402,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeightVotes (historical) 🔥 Gets gaugeweightvotes.
+        /// GaugeWeightVotes (historical) 🔥 Gets gaugeWeightVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4709,7 +8416,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightVoteDTO>>> CurveGetGaugeWeightVotesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugeweightvotes/historical";
+            var localVarPath = "/dapps/curve/gaugeWeightVotes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4759,7 +8466,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeights (historical) 🔥 Gets gaugeweights.
+        /// GaugeWeights (historical) 🔥 Gets gaugeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4775,7 +8482,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeights (historical) 🔥 Gets gaugeweights.
+        /// GaugeWeights (historical) 🔥 Gets gaugeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4787,7 +8494,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeWeightDTO>> CurveGetGaugeWeightsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugeweights/historical";
+            var localVarPath = "/dapps/curve/gaugeWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4836,7 +8543,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeights (historical) 🔥 Gets gaugeweights.
+        /// GaugeWeights (historical) 🔥 Gets gaugeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4854,7 +8561,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWeights (historical) 🔥 Gets gaugeweights.
+        /// GaugeWeights (historical) 🔥 Gets gaugeWeights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4867,7 +8574,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightDTO>>> CurveGetGaugeWeightsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugeweights/historical";
+            var localVarPath = "/dapps/curve/gaugeWeights/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4916,7 +8623,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWithdraws (historical) 🔥 Gets gaugewithdraws.
+        /// GaugeWithdraws (historical) 🔥 Gets gaugeWithdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4932,7 +8639,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWithdraws (historical) 🔥 Gets gaugewithdraws.
+        /// GaugeWithdraws (historical) 🔥 Gets gaugeWithdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4944,7 +8651,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveGaugeWithdrawDTO>> CurveGetGaugeWithdrawsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/gaugewithdraws/historical";
+            var localVarPath = "/dapps/curve/gaugeWithdraws/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4993,7 +8700,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWithdraws (historical) 🔥 Gets gaugewithdraws.
+        /// GaugeWithdraws (historical) 🔥 Gets gaugeWithdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5011,7 +8718,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeWithdraws (historical) 🔥 Gets gaugewithdraws.
+        /// GaugeWithdraws (historical) 🔥 Gets gaugeWithdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5024,7 +8731,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWithdrawDTO>>> CurveGetGaugeWithdrawsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/gaugewithdraws/historical";
+            var localVarPath = "/dapps/curve/gaugeWithdraws/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5242,7 +8949,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourlyVolumes (historical) 🔥 Gets hourlyvolumes.
+        /// HourlyVolumes (historical) 🔥 Gets hourlyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5259,7 +8966,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourlyVolumes (historical) 🔥 Gets hourlyvolumes.
+        /// HourlyVolumes (historical) 🔥 Gets hourlyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5272,7 +8979,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveHourlyVolumeDTO>> CurveGetHourlyVolumesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/hourlyvolumes/historical";
+            var localVarPath = "/dapps/curve/hourlyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5322,7 +9029,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourlyVolumes (historical) 🔥 Gets hourlyvolumes.
+        /// HourlyVolumes (historical) 🔥 Gets hourlyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5341,7 +9048,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourlyVolumes (historical) 🔥 Gets hourlyvolumes.
+        /// HourlyVolumes (historical) 🔥 Gets hourlyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5355,7 +9062,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveHourlyVolumeDTO>>> CurveGetHourlyVolumesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/hourlyvolumes/historical";
+            var localVarPath = "/dapps/curve/hourlyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5405,7 +9112,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LpTokens (historical) 🔥 Gets lptokens.
+        /// LpTokens (historical) 🔥 Gets lpTokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5425,7 +9132,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LpTokens (historical) 🔥 Gets lptokens.
+        /// LpTokens (historical) 🔥 Gets lpTokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5441,7 +9148,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveLpTokenDTO>> CurveGetLpTokensHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string), string name = default(string), string symbol = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/lptokens/historical";
+            var localVarPath = "/dapps/curve/lpTokens/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5494,7 +9201,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LpTokens (historical) 🔥 Gets lptokens.
+        /// LpTokens (historical) 🔥 Gets lpTokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5516,7 +9223,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LpTokens (historical) 🔥 Gets lptokens.
+        /// LpTokens (historical) 🔥 Gets lpTokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5533,7 +9240,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveLpTokenDTO>>> CurveGetLpTokensHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string), string name = default(string), string symbol = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/lptokens/historical";
+            var localVarPath = "/dapps/curve/lpTokens/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5749,7 +9456,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ProposalVotes (historical) 🔥 Gets proposalvotes.
+        /// ProposalVotes (historical) 🔥 Gets proposalVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5765,7 +9472,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ProposalVotes (historical) 🔥 Gets proposalvotes.
+        /// ProposalVotes (historical) 🔥 Gets proposalVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5777,7 +9484,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveProposalVoteDTO>> CurveGetProposalVotesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/proposalvotes/historical";
+            var localVarPath = "/dapps/curve/proposalVotes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5826,7 +9533,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ProposalVotes (historical) 🔥 Gets proposalvotes.
+        /// ProposalVotes (historical) 🔥 Gets proposalVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5844,7 +9551,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// ProposalVotes (historical) 🔥 Gets proposalvotes.
+        /// ProposalVotes (historical) 🔥 Gets proposalVotes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5857,7 +9564,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveProposalVoteDTO>>> CurveGetProposalVotesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/proposalvotes/historical";
+            var localVarPath = "/dapps/curve/proposalVotes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6063,7 +9770,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityEvents (historical) 🔥 Gets removeliquidityevents.
+        /// RemoveLiquidityEvents (historical) 🔥 Gets removeLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6080,7 +9787,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityEvents (historical) 🔥 Gets removeliquidityevents.
+        /// RemoveLiquidityEvents (historical) 🔥 Gets removeLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6093,7 +9800,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveRemoveLiquidityEventDTO>> CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/removeliquidityevents/historical";
+            var localVarPath = "/dapps/curve/removeLiquidityEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6143,7 +9850,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityEvents (historical) 🔥 Gets removeliquidityevents.
+        /// RemoveLiquidityEvents (historical) 🔥 Gets removeLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6162,7 +9869,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityEvents (historical) 🔥 Gets removeliquidityevents.
+        /// RemoveLiquidityEvents (historical) 🔥 Gets removeLiquidityEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6176,7 +9883,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityEventDTO>>> CurveGetRemoveLiquidityEventsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/removeliquidityevents/historical";
+            var localVarPath = "/dapps/curve/removeLiquidityEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6226,7 +9933,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeliquidityoneevents.
+        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeLiquidityOneEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6243,7 +9950,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeliquidityoneevents.
+        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeLiquidityOneEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6256,7 +9963,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/removeliquidityoneevents/historical";
+            var localVarPath = "/dapps/curve/removeLiquidityOneEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6306,7 +10013,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeliquidityoneevents.
+        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeLiquidityOneEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6325,7 +10032,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeliquidityoneevents.
+        /// RemoveLiquidityOneEvents (historical) 🔥 Gets removeLiquidityOneEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6339,7 +10046,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>> CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/removeliquidityoneevents/historical";
+            var localVarPath = "/dapps/curve/removeLiquidityOneEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6389,7 +10096,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// SystemStates (historical) 🔥 Gets systemstates.
+        /// SystemStates (historical) 🔥 Gets systemStates.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6405,7 +10112,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// SystemStates (historical) 🔥 Gets systemstates.
+        /// SystemStates (historical) 🔥 Gets systemStates.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6417,7 +10124,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveSystemStateDTO>> CurveGetSystemStatesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/curve/systemstates/historical";
+            var localVarPath = "/dapps/curve/systemStates/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6466,7 +10173,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// SystemStates (historical) 🔥 Gets systemstates.
+        /// SystemStates (historical) 🔥 Gets systemStates.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6484,7 +10191,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// SystemStates (historical) 🔥 Gets systemstates.
+        /// SystemStates (historical) 🔥 Gets systemStates.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6497,7 +10204,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveSystemStateDTO>>> CurveGetSystemStatesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/systemstates/historical";
+            var localVarPath = "/dapps/curve/systemStates/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6721,7 +10428,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TransferOwnershipEvents (historical) 🔥 Gets transferownershipevents.
+        /// TransferOwnershipEvents (historical) 🔥 Gets transferOwnershipEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6738,7 +10445,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TransferOwnershipEvents (historical) 🔥 Gets transferownershipevents.
+        /// TransferOwnershipEvents (historical) 🔥 Gets transferOwnershipEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6751,7 +10458,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveTransferOwnershipEventDTO>> CurveGetTransferOwnershipEventsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/transferownershipevents/historical";
+            var localVarPath = "/dapps/curve/transferOwnershipEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6801,7 +10508,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TransferOwnershipEvents (historical) 🔥 Gets transferownershipevents.
+        /// TransferOwnershipEvents (historical) 🔥 Gets transferOwnershipEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6820,7 +10527,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TransferOwnershipEvents (historical) 🔥 Gets transferownershipevents.
+        /// TransferOwnershipEvents (historical) 🔥 Gets transferOwnershipEvents.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -6834,7 +10541,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveTransferOwnershipEventDTO>>> CurveGetTransferOwnershipEventsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/transferownershipevents/historical";
+            var localVarPath = "/dapps/curve/transferOwnershipEvents/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6884,7 +10591,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UnderlyingCoins (historical) 🔥 Gets underlyingcoins.
+        /// UnderlyingCoins (historical) 🔥 Gets underlyingCoins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6901,7 +10608,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UnderlyingCoins (historical) 🔥 Gets underlyingcoins.
+        /// UnderlyingCoins (historical) 🔥 Gets underlyingCoins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6914,7 +10621,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveUnderlyingCoinDTO>> CurveGetUnderlyingCoinsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/underlyingcoins/historical";
+            var localVarPath = "/dapps/curve/underlyingCoins/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6964,7 +10671,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UnderlyingCoins (historical) 🔥 Gets underlyingcoins.
+        /// UnderlyingCoins (historical) 🔥 Gets underlyingCoins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6983,7 +10690,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UnderlyingCoins (historical) 🔥 Gets underlyingcoins.
+        /// UnderlyingCoins (historical) 🔥 Gets underlyingCoins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6997,7 +10704,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveUnderlyingCoinDTO>>> CurveGetUnderlyingCoinsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/underlyingcoins/historical";
+            var localVarPath = "/dapps/curve/underlyingCoins/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -7047,7 +10754,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// VotingApps (historical) 🔥 Gets votingapps.
+        /// VotingApps (historical) 🔥 Gets votingApps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7064,7 +10771,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// VotingApps (historical) 🔥 Gets votingapps.
+        /// VotingApps (historical) 🔥 Gets votingApps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7077,7 +10784,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveVotingAppDTO>> CurveGetVotingAppsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string))
         {
 
-            var localVarPath = "/dapps/curve/votingapps/historical";
+            var localVarPath = "/dapps/curve/votingApps/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -7127,7 +10834,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// VotingApps (historical) 🔥 Gets votingapps.
+        /// VotingApps (historical) 🔥 Gets votingApps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7146,7 +10853,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// VotingApps (historical) 🔥 Gets votingapps.
+        /// VotingApps (historical) 🔥 Gets votingApps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7160,7 +10867,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveVotingAppDTO>>> CurveGetVotingAppsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/votingapps/historical";
+            var localVarPath = "/dapps/curve/votingApps/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -7210,7 +10917,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WeeklyVolumes (historical) 🔥 Gets weeklyvolumes.
+        /// WeeklyVolumes (historical) 🔥 Gets weeklyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7227,7 +10934,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WeeklyVolumes (historical) 🔥 Gets weeklyvolumes.
+        /// WeeklyVolumes (historical) 🔥 Gets weeklyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7240,7 +10947,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<CurveWeeklyVolumeDTO>> CurveGetWeeklyVolumesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/curve/weeklyvolumes/historical";
+            var localVarPath = "/dapps/curve/weeklyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -7290,7 +10997,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WeeklyVolumes (historical) 🔥 Gets weeklyvolumes.
+        /// WeeklyVolumes (historical) 🔥 Gets weeklyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7309,7 +11016,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WeeklyVolumes (historical) 🔥 Gets weeklyvolumes.
+        /// WeeklyVolumes (historical) 🔥 Gets weeklyVolumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -7323,7 +11030,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<CurveWeeklyVolumeDTO>>> CurveGetWeeklyVolumesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/curve/weeklyvolumes/historical";
+            var localVarPath = "/dapps/curve/weeklyVolumes/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -7364,6 +11071,1663 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("CurveGetWeeklyVolumesHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveWeeklyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveWeeklyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveWeeklyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// HourlyVolumes (current) Gets hourlyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveHourlyVolumeDTO></returns>
+        public List<CurveHourlyVolumeDTO> CurveHourlyVolumesCurrent ()
+        {
+             ApiResponse<List<CurveHourlyVolumeDTO>> localVarResponse = CurveHourlyVolumesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// HourlyVolumes (current) Gets hourlyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveHourlyVolumeDTO></returns>
+        public ApiResponse<List<CurveHourlyVolumeDTO>> CurveHourlyVolumesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/hourlyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveHourlyVolumesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveHourlyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveHourlyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveHourlyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// HourlyVolumes (current) Gets hourlyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveHourlyVolumeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveHourlyVolumeDTO>> CurveHourlyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveHourlyVolumeDTO>> localVarResponse = await CurveHourlyVolumesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// HourlyVolumes (current) Gets hourlyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveHourlyVolumeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveHourlyVolumeDTO>>> CurveHourlyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/hourlyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveHourlyVolumesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveHourlyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveHourlyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveHourlyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveLpTokenDTO></returns>
+        public List<CurveLpTokenDTO> CurveLpTokensCurrent ()
+        {
+             ApiResponse<List<CurveLpTokenDTO>> localVarResponse = CurveLpTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveLpTokenDTO></returns>
+        public ApiResponse<List<CurveLpTokenDTO>> CurveLpTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/lpTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveLpTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveLpTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveLpTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveLpTokenDTO>)));
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveLpTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveLpTokenDTO>> CurveLpTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveLpTokenDTO>> localVarResponse = await CurveLpTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LpTokens (current) Gets lpTokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveLpTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveLpTokenDTO>>> CurveLpTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/lpTokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveLpTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveLpTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveLpTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveLpTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Pools (current) Gets pools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <returns>List<CurvePoolDTO></returns>
+        public List<CurvePoolDTO> CurvePoolsCurrent (string id = default(string))
+        {
+             ApiResponse<List<CurvePoolDTO>> localVarResponse = CurvePoolsCurrentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Pools (current) Gets pools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <returns>ApiResponse of List<CurvePoolDTO></returns>
+        public ApiResponse<List<CurvePoolDTO>> CurvePoolsCurrentWithHttpInfo (string id = default(string))
+        {
+
+            var localVarPath = "/dapps/curve/pools/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurvePoolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurvePoolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurvePoolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurvePoolDTO>)));
+        }
+
+        /// <summary>
+        /// Pools (current) Gets pools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurvePoolDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurvePoolDTO>> CurvePoolsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurvePoolDTO>> localVarResponse = await CurvePoolsCurrentWithHttpInfoAsync(id, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Pools (current) Gets pools.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pool address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurvePoolDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurvePoolDTO>>> CurvePoolsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/pools/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurvePoolsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurvePoolDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurvePoolDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurvePoolDTO>)));
+        }
+
+        /// <summary>
+        /// ProposalVotes (current) Gets proposalVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveProposalVoteDTO></returns>
+        public List<CurveProposalVoteDTO> CurveProposalVotesCurrent ()
+        {
+             ApiResponse<List<CurveProposalVoteDTO>> localVarResponse = CurveProposalVotesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// ProposalVotes (current) Gets proposalVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveProposalVoteDTO></returns>
+        public ApiResponse<List<CurveProposalVoteDTO>> CurveProposalVotesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/proposalVotes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveProposalVotesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveProposalVoteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveProposalVoteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveProposalVoteDTO>)));
+        }
+
+        /// <summary>
+        /// ProposalVotes (current) Gets proposalVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveProposalVoteDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveProposalVoteDTO>> CurveProposalVotesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveProposalVoteDTO>> localVarResponse = await CurveProposalVotesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// ProposalVotes (current) Gets proposalVotes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveProposalVoteDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveProposalVoteDTO>>> CurveProposalVotesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/proposalVotes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveProposalVotesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveProposalVoteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveProposalVoteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveProposalVoteDTO>)));
+        }
+
+        /// <summary>
+        /// Proposals (current) Gets proposals.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveProposalDTO></returns>
+        public List<CurveProposalDTO> CurveProposalsCurrent ()
+        {
+             ApiResponse<List<CurveProposalDTO>> localVarResponse = CurveProposalsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Proposals (current) Gets proposals.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveProposalDTO></returns>
+        public ApiResponse<List<CurveProposalDTO>> CurveProposalsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/proposals/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveProposalsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveProposalDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveProposalDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveProposalDTO>)));
+        }
+
+        /// <summary>
+        /// Proposals (current) Gets proposals.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveProposalDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveProposalDTO>> CurveProposalsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveProposalDTO>> localVarResponse = await CurveProposalsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Proposals (current) Gets proposals.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveProposalDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveProposalDTO>>> CurveProposalsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/proposals/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveProposalsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveProposalDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveProposalDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveProposalDTO>)));
+        }
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current) Gets removeLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveRemoveLiquidityEventDTO></returns>
+        public List<CurveRemoveLiquidityEventDTO> CurveRemoveLiquidityEventsCurrent ()
+        {
+             ApiResponse<List<CurveRemoveLiquidityEventDTO>> localVarResponse = CurveRemoveLiquidityEventsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current) Gets removeLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveRemoveLiquidityEventDTO></returns>
+        public ApiResponse<List<CurveRemoveLiquidityEventDTO>> CurveRemoveLiquidityEventsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/removeLiquidityEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveRemoveLiquidityEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveRemoveLiquidityEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveRemoveLiquidityEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveRemoveLiquidityEventDTO>)));
+        }
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current) Gets removeLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveRemoveLiquidityEventDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveRemoveLiquidityEventDTO>> CurveRemoveLiquidityEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveRemoveLiquidityEventDTO>> localVarResponse = await CurveRemoveLiquidityEventsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// RemoveLiquidityEvents (current) Gets removeLiquidityEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityEventDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityEventDTO>>> CurveRemoveLiquidityEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/removeLiquidityEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveRemoveLiquidityEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveRemoveLiquidityEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveRemoveLiquidityEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveRemoveLiquidityEventDTO>)));
+        }
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current) Gets removeLiquidityOneEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveRemoveLiquidityOneEventDTO></returns>
+        public List<CurveRemoveLiquidityOneEventDTO> CurveRemoveLiquidityOneEventsCurrent ()
+        {
+             ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> localVarResponse = CurveRemoveLiquidityOneEventsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current) Gets removeLiquidityOneEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveRemoveLiquidityOneEventDTO></returns>
+        public ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> CurveRemoveLiquidityOneEventsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/removeLiquidityOneEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveRemoveLiquidityOneEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveRemoveLiquidityOneEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveRemoveLiquidityOneEventDTO>)));
+        }
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current) Gets removeLiquidityOneEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveRemoveLiquidityOneEventDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveRemoveLiquidityOneEventDTO>> CurveRemoveLiquidityOneEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> localVarResponse = await CurveRemoveLiquidityOneEventsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// RemoveLiquidityOneEvents (current) Gets removeLiquidityOneEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityOneEventDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>> CurveRemoveLiquidityOneEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/removeLiquidityOneEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveRemoveLiquidityOneEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveRemoveLiquidityOneEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveRemoveLiquidityOneEventDTO>)));
+        }
+
+        /// <summary>
+        /// SystemStates (current) Gets systemStates.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveSystemStateDTO></returns>
+        public List<CurveSystemStateDTO> CurveSystemStatesCurrent ()
+        {
+             ApiResponse<List<CurveSystemStateDTO>> localVarResponse = CurveSystemStatesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// SystemStates (current) Gets systemStates.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveSystemStateDTO></returns>
+        public ApiResponse<List<CurveSystemStateDTO>> CurveSystemStatesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/systemStates/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveSystemStatesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveSystemStateDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveSystemStateDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveSystemStateDTO>)));
+        }
+
+        /// <summary>
+        /// SystemStates (current) Gets systemStates.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveSystemStateDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveSystemStateDTO>> CurveSystemStatesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveSystemStateDTO>> localVarResponse = await CurveSystemStatesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// SystemStates (current) Gets systemStates.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveSystemStateDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveSystemStateDTO>>> CurveSystemStatesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/systemStates/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveSystemStatesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveSystemStateDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveSystemStateDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveSystemStateDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveTokenDTO></returns>
+        public List<CurveTokenDTO> CurveTokensCurrent ()
+        {
+             ApiResponse<List<CurveTokenDTO>> localVarResponse = CurveTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveTokenDTO></returns>
+        public ApiResponse<List<CurveTokenDTO>> CurveTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveTokenDTO>> CurveTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveTokenDTO>> localVarResponse = await CurveTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveTokenDTO>>> CurveTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveTokenDTO>)));
+        }
+
+        /// <summary>
+        /// TransferOwnershipEvents (current) Gets transferOwnershipEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveTransferOwnershipEventDTO></returns>
+        public List<CurveTransferOwnershipEventDTO> CurveTransferOwnershipEventsCurrent ()
+        {
+             ApiResponse<List<CurveTransferOwnershipEventDTO>> localVarResponse = CurveTransferOwnershipEventsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TransferOwnershipEvents (current) Gets transferOwnershipEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveTransferOwnershipEventDTO></returns>
+        public ApiResponse<List<CurveTransferOwnershipEventDTO>> CurveTransferOwnershipEventsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/transferOwnershipEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveTransferOwnershipEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveTransferOwnershipEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveTransferOwnershipEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveTransferOwnershipEventDTO>)));
+        }
+
+        /// <summary>
+        /// TransferOwnershipEvents (current) Gets transferOwnershipEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveTransferOwnershipEventDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveTransferOwnershipEventDTO>> CurveTransferOwnershipEventsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveTransferOwnershipEventDTO>> localVarResponse = await CurveTransferOwnershipEventsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TransferOwnershipEvents (current) Gets transferOwnershipEvents.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveTransferOwnershipEventDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveTransferOwnershipEventDTO>>> CurveTransferOwnershipEventsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/transferOwnershipEvents/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveTransferOwnershipEventsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveTransferOwnershipEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveTransferOwnershipEventDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveTransferOwnershipEventDTO>)));
+        }
+
+        /// <summary>
+        /// UnderlyingCoins (current) Gets underlyingCoins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveUnderlyingCoinDTO></returns>
+        public List<CurveUnderlyingCoinDTO> CurveUnderlyingCoinsCurrent ()
+        {
+             ApiResponse<List<CurveUnderlyingCoinDTO>> localVarResponse = CurveUnderlyingCoinsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UnderlyingCoins (current) Gets underlyingCoins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveUnderlyingCoinDTO></returns>
+        public ApiResponse<List<CurveUnderlyingCoinDTO>> CurveUnderlyingCoinsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/underlyingCoins/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveUnderlyingCoinsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveUnderlyingCoinDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveUnderlyingCoinDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveUnderlyingCoinDTO>)));
+        }
+
+        /// <summary>
+        /// UnderlyingCoins (current) Gets underlyingCoins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveUnderlyingCoinDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveUnderlyingCoinDTO>> CurveUnderlyingCoinsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveUnderlyingCoinDTO>> localVarResponse = await CurveUnderlyingCoinsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UnderlyingCoins (current) Gets underlyingCoins.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveUnderlyingCoinDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveUnderlyingCoinDTO>>> CurveUnderlyingCoinsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/underlyingCoins/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveUnderlyingCoinsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveUnderlyingCoinDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveUnderlyingCoinDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveUnderlyingCoinDTO>)));
+        }
+
+        /// <summary>
+        /// VotingApps (current) Gets votingApps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveVotingAppDTO></returns>
+        public List<CurveVotingAppDTO> CurveVotingAppsCurrent ()
+        {
+             ApiResponse<List<CurveVotingAppDTO>> localVarResponse = CurveVotingAppsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// VotingApps (current) Gets votingApps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveVotingAppDTO></returns>
+        public ApiResponse<List<CurveVotingAppDTO>> CurveVotingAppsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/votingApps/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveVotingAppsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveVotingAppDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveVotingAppDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveVotingAppDTO>)));
+        }
+
+        /// <summary>
+        /// VotingApps (current) Gets votingApps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveVotingAppDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveVotingAppDTO>> CurveVotingAppsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveVotingAppDTO>> localVarResponse = await CurveVotingAppsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// VotingApps (current) Gets votingApps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveVotingAppDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveVotingAppDTO>>> CurveVotingAppsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/votingApps/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveVotingAppsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveVotingAppDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveVotingAppDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveVotingAppDTO>)));
+        }
+
+        /// <summary>
+        /// WeeklyVolumes (current) Gets weeklyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CurveWeeklyVolumeDTO></returns>
+        public List<CurveWeeklyVolumeDTO> CurveWeeklyVolumesCurrent ()
+        {
+             ApiResponse<List<CurveWeeklyVolumeDTO>> localVarResponse = CurveWeeklyVolumesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// WeeklyVolumes (current) Gets weeklyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CurveWeeklyVolumeDTO></returns>
+        public ApiResponse<List<CurveWeeklyVolumeDTO>> CurveWeeklyVolumesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/curve/weeklyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveWeeklyVolumesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CurveWeeklyVolumeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CurveWeeklyVolumeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CurveWeeklyVolumeDTO>)));
+        }
+
+        /// <summary>
+        /// WeeklyVolumes (current) Gets weeklyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CurveWeeklyVolumeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CurveWeeklyVolumeDTO>> CurveWeeklyVolumesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CurveWeeklyVolumeDTO>> localVarResponse = await CurveWeeklyVolumesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// WeeklyVolumes (current) Gets weeklyVolumes.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CurveWeeklyVolumeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CurveWeeklyVolumeDTO>>> CurveWeeklyVolumesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/curve/weeklyVolumes/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CurveWeeklyVolumesCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

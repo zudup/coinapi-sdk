@@ -691,3 +691,378 @@ function Invoke-CowGetUsersHistorical {
     }
 }
 
+<#
+.SYNOPSIS
+
+Orders (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CowOrderDTO[]
+#>
+function Invoke-CowOrdersCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CowOrdersCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/orders/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CowOrderDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Settlements (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CowSettlementDTO[]
+#>
+function Invoke-CowSettlementsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CowSettlementsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/settlements/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CowSettlementDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Tokens (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CowTokenDTO[]
+#>
+function Invoke-CowTokensCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CowTokensCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/tokens/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CowTokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Trades (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CowTradeDTO[]
+#>
+function Invoke-CowTradesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CowTradesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/trades/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CowTradeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Users (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CowUserDTO[]
+#>
+function Invoke-CowUsersCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CowUsersCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/users/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CowUserDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+

@@ -49,6 +49,948 @@ sub new {
 
 
 #
+# curve_accounts__current
+#
+# Accounts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_accounts__current' } = {
+        summary => 'Accounts (current)',
+        params => $params,
+        returns => 'ARRAY[CurveAccountDTO]',
+        };
+}
+# @return ARRAY[CurveAccountDTO]
+#
+sub curve_accounts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/accounts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAccountDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_add_liquidity_events__current
+#
+# AddLiquidityEvents (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_add_liquidity_events__current' } = {
+        summary => 'AddLiquidityEvents (current)',
+        params => $params,
+        returns => 'ARRAY[CurveAddLiquidityEventDTO]',
+        };
+}
+# @return ARRAY[CurveAddLiquidityEventDTO]
+#
+sub curve_add_liquidity_events__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/addLiquidityEvents/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAddLiquidityEventDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_admin_fee_change_logs__current
+#
+# AdminFeeChangeLogs (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_admin_fee_change_logs__current' } = {
+        summary => 'AdminFeeChangeLogs (current)',
+        params => $params,
+        returns => 'ARRAY[CurveAdminFeeChangeLogDTO]',
+        };
+}
+# @return ARRAY[CurveAdminFeeChangeLogDTO]
+#
+sub curve_admin_fee_change_logs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/adminFeeChangeLogs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAdminFeeChangeLogDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_amplification_coeff_change_logs__current
+#
+# AmplificationCoeffChangeLogs (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_amplification_coeff_change_logs__current' } = {
+        summary => 'AmplificationCoeffChangeLogs (current)',
+        params => $params,
+        returns => 'ARRAY[CurveAmplificationCoeffChangeLogDTO]',
+        };
+}
+# @return ARRAY[CurveAmplificationCoeffChangeLogDTO]
+#
+sub curve_amplification_coeff_change_logs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/amplificationCoeffChangeLogs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAmplificationCoeffChangeLogDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_coins__current
+#
+# Coins (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_coins__current' } = {
+        summary => 'Coins (current)',
+        params => $params,
+        returns => 'ARRAY[CurveCoinDTO]',
+        };
+}
+# @return ARRAY[CurveCoinDTO]
+#
+sub curve_coins__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/coins/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveCoinDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_contract_versions__current
+#
+# ContractVersions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_contract_versions__current' } = {
+        summary => 'ContractVersions (current)',
+        params => $params,
+        returns => 'ARRAY[CurveContractVersionDTO]',
+        };
+}
+# @return ARRAY[CurveContractVersionDTO]
+#
+sub curve_contract_versions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/contractVersions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveContractVersionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_contracts__current
+#
+# Contracts (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_contracts__current' } = {
+        summary => 'Contracts (current)',
+        params => $params,
+        returns => 'ARRAY[CurveContractDTO]',
+        };
+}
+# @return ARRAY[CurveContractDTO]
+#
+sub curve_contracts__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/contracts/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveContractDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_daily_volumes__current
+#
+# DailyVolumes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_daily_volumes__current' } = {
+        summary => 'DailyVolumes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveDailyVolumeDTO]',
+        };
+}
+# @return ARRAY[CurveDailyVolumeDTO]
+#
+sub curve_daily_volumes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/dailyVolumes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveDailyVolumeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_exchanges__current
+#
+# Exchanges (current)
+#
+# @param string $pool  (optional)
+{
+    my $params = {
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'curve_exchanges__current' } = {
+        summary => 'Exchanges (current)',
+        params => $params,
+        returns => 'ARRAY[CurveExchangeDTO]',
+        };
+}
+# @return ARRAY[CurveExchangeDTO]
+#
+sub curve_exchanges__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/exchanges/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveExchangeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_fee_change_logs__current
+#
+# FeeChangeLogs (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_fee_change_logs__current' } = {
+        summary => 'FeeChangeLogs (current)',
+        params => $params,
+        returns => 'ARRAY[CurveFeeChangeLogDTO]',
+        };
+}
+# @return ARRAY[CurveFeeChangeLogDTO]
+#
+sub curve_fee_change_logs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/feeChangeLogs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveFeeChangeLogDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_deposits__current
+#
+# GaugeDeposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_deposits__current' } = {
+        summary => 'GaugeDeposits (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeDepositDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeDepositDTO]
+#
+sub curve_gauge_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeDeposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_liquiditys__current
+#
+# GaugeLiquiditys (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_liquiditys__current' } = {
+        summary => 'GaugeLiquiditys (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeLiquidityDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeLiquidityDTO]
+#
+sub curve_gauge_liquiditys__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeLiquiditys/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeLiquidityDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_total_weights__current
+#
+# GaugeTotalWeights (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_total_weights__current' } = {
+        summary => 'GaugeTotalWeights (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeTotalWeightDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeTotalWeightDTO]
+#
+sub curve_gauge_total_weights__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeTotalWeights/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTotalWeightDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_type_weights__current
+#
+# GaugeTypeWeights (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_type_weights__current' } = {
+        summary => 'GaugeTypeWeights (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeTypeWeightDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeTypeWeightDTO]
+#
+sub curve_gauge_type_weights__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeTypeWeights/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTypeWeightDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_types__current
+#
+# GaugeTypes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_types__current' } = {
+        summary => 'GaugeTypes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeTypeDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeTypeDTO]
+#
+sub curve_gauge_types__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeTypes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTypeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_weight_votes__current
+#
+# GaugeWeightVotes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_weight_votes__current' } = {
+        summary => 'GaugeWeightVotes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeWeightVoteDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeWeightVoteDTO]
+#
+sub curve_gauge_weight_votes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeWeightVotes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWeightVoteDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_weights__current
+#
+# GaugeWeights (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_weights__current' } = {
+        summary => 'GaugeWeights (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeWeightDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeWeightDTO]
+#
+sub curve_gauge_weights__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeWeights/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWeightDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauge_withdraws__current
+#
+# GaugeWithdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauge_withdraws__current' } = {
+        summary => 'GaugeWithdraws (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeWithdrawDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeWithdrawDTO]
+#
+sub curve_gauge_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gaugeWithdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWithdrawDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_gauges__current
+#
+# Gauges (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_gauges__current' } = {
+        summary => 'Gauges (current)',
+        params => $params,
+        returns => 'ARRAY[CurveGaugeDTO]',
+        };
+}
+# @return ARRAY[CurveGaugeDTO]
+#
+sub curve_gauges__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/gauges/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeDTO]', $response);
+    return $_response_object;
+}
+
+#
 # curve_get_accounts__historical
 #
 # Accounts (historical) 🔥
@@ -219,7 +1161,7 @@ sub curve_get_add_liquidity_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/addliquidityevents/historical';
+    my $_resource_path = '/dapps/curve/addLiquidityEvents/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -334,7 +1276,7 @@ sub curve_get_admin_fee_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/adminfeechangelogs/historical';
+    my $_resource_path = '/dapps/curve/adminFeeChangeLogs/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -449,7 +1391,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/amplificationcoeffchangelogs/historical';
+    my $_resource_path = '/dapps/curve/amplificationCoeffChangeLogs/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -679,7 +1621,7 @@ sub curve_get_contract_versions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/contractversions/historical';
+    my $_resource_path = '/dapps/curve/contractVersions/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -898,7 +1840,7 @@ sub curve_get_daily_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/dailyvolumes/historical';
+    my $_resource_path = '/dapps/curve/dailyVolumes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1128,7 +2070,7 @@ sub curve_get_fee_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/feechangelogs/historical';
+    my $_resource_path = '/dapps/curve/feeChangeLogs/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1237,7 +2179,7 @@ sub curve_get_gauge_deposits__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugedeposits/historical';
+    my $_resource_path = '/dapps/curve/gaugeDeposits/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1347,7 +2289,7 @@ sub curve_get_gauge_liquiditys__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugeliquiditys/historical';
+    my $_resource_path = '/dapps/curve/gaugeLiquiditys/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1456,7 +2398,7 @@ sub curve_get_gauge_total_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugetotalweights/historical';
+    my $_resource_path = '/dapps/curve/gaugeTotalWeights/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1560,7 +2502,7 @@ sub curve_get_gauge_type_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugetypeweights/historical';
+    my $_resource_path = '/dapps/curve/gaugeTypeWeights/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1670,7 +2612,7 @@ sub curve_get_gauge_types__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugetypes/historical';
+    my $_resource_path = '/dapps/curve/gaugeTypes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1785,7 +2727,7 @@ sub curve_get_gauge_weight_votes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugeweightvotes/historical';
+    my $_resource_path = '/dapps/curve/gaugeWeightVotes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1894,7 +2836,7 @@ sub curve_get_gauge_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugeweights/historical';
+    my $_resource_path = '/dapps/curve/gaugeWeights/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1998,7 +2940,7 @@ sub curve_get_gauge_withdraws__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugewithdraws/historical';
+    my $_resource_path = '/dapps/curve/gaugeWithdraws/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2234,7 +3176,7 @@ sub curve_get_hourly_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/hourlyvolumes/historical';
+    my $_resource_path = '/dapps/curve/hourlyVolumes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2367,7 +3309,7 @@ sub curve_get_lp_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/lptokens/historical';
+    my $_resource_path = '/dapps/curve/lpTokens/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2606,7 +3548,7 @@ sub curve_get_proposal_votes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/proposalvotes/historical';
+    my $_resource_path = '/dapps/curve/proposalVotes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2820,7 +3762,7 @@ sub curve_get_remove_liquidity_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/removeliquidityevents/historical';
+    my $_resource_path = '/dapps/curve/removeLiquidityEvents/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2935,7 +3877,7 @@ sub curve_get_remove_liquidity_one_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/removeliquidityoneevents/historical';
+    my $_resource_path = '/dapps/curve/removeLiquidityOneEvents/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3044,7 +3986,7 @@ sub curve_get_system_states__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/systemstates/historical';
+    my $_resource_path = '/dapps/curve/systemStates/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3291,7 +4233,7 @@ sub curve_get_transfer_ownership_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/transferownershipevents/historical';
+    my $_resource_path = '/dapps/curve/transferOwnershipEvents/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3406,7 +4348,7 @@ sub curve_get_underlying_coins__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/underlyingcoins/historical';
+    my $_resource_path = '/dapps/curve/underlyingCoins/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3521,7 +4463,7 @@ sub curve_get_voting_apps__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/votingapps/historical';
+    my $_resource_path = '/dapps/curve/votingApps/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3636,7 +4578,7 @@ sub curve_get_weekly_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/weeklyvolumes/historical';
+    my $_resource_path = '/dapps/curve/weeklyVolumes/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3679,6 +4621,654 @@ sub curve_get_weekly_volumes__historical {
     if ( exists $args{'pool'}) {
         $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
     }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveWeeklyVolumeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_hourly_volumes__current
+#
+# HourlyVolumes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_hourly_volumes__current' } = {
+        summary => 'HourlyVolumes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveHourlyVolumeDTO]',
+        };
+}
+# @return ARRAY[CurveHourlyVolumeDTO]
+#
+sub curve_hourly_volumes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/hourlyVolumes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveHourlyVolumeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_lp_tokens__current
+#
+# LpTokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_lp_tokens__current' } = {
+        summary => 'LpTokens (current)',
+        params => $params,
+        returns => 'ARRAY[CurveLpTokenDTO]',
+        };
+}
+# @return ARRAY[CurveLpTokenDTO]
+#
+sub curve_lp_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/lpTokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveLpTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_pools__current
+#
+# Pools (current)
+#
+# @param string $id Pool address. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Pool address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'curve_pools__current' } = {
+        summary => 'Pools (current)',
+        params => $params,
+        returns => 'ARRAY[CurvePoolDTO]',
+        };
+}
+# @return ARRAY[CurvePoolDTO]
+#
+sub curve_pools__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/pools/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurvePoolDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_proposal_votes__current
+#
+# ProposalVotes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_proposal_votes__current' } = {
+        summary => 'ProposalVotes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveProposalVoteDTO]',
+        };
+}
+# @return ARRAY[CurveProposalVoteDTO]
+#
+sub curve_proposal_votes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/proposalVotes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveProposalVoteDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_proposals__current
+#
+# Proposals (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_proposals__current' } = {
+        summary => 'Proposals (current)',
+        params => $params,
+        returns => 'ARRAY[CurveProposalDTO]',
+        };
+}
+# @return ARRAY[CurveProposalDTO]
+#
+sub curve_proposals__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/proposals/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveProposalDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_remove_liquidity_events__current
+#
+# RemoveLiquidityEvents (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_remove_liquidity_events__current' } = {
+        summary => 'RemoveLiquidityEvents (current)',
+        params => $params,
+        returns => 'ARRAY[CurveRemoveLiquidityEventDTO]',
+        };
+}
+# @return ARRAY[CurveRemoveLiquidityEventDTO]
+#
+sub curve_remove_liquidity_events__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/removeLiquidityEvents/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveRemoveLiquidityEventDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_remove_liquidity_one_events__current
+#
+# RemoveLiquidityOneEvents (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_remove_liquidity_one_events__current' } = {
+        summary => 'RemoveLiquidityOneEvents (current)',
+        params => $params,
+        returns => 'ARRAY[CurveRemoveLiquidityOneEventDTO]',
+        };
+}
+# @return ARRAY[CurveRemoveLiquidityOneEventDTO]
+#
+sub curve_remove_liquidity_one_events__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/removeLiquidityOneEvents/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveRemoveLiquidityOneEventDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_system_states__current
+#
+# SystemStates (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_system_states__current' } = {
+        summary => 'SystemStates (current)',
+        params => $params,
+        returns => 'ARRAY[CurveSystemStateDTO]',
+        };
+}
+# @return ARRAY[CurveSystemStateDTO]
+#
+sub curve_system_states__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/systemStates/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveSystemStateDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_tokens__current
+#
+# Tokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_tokens__current' } = {
+        summary => 'Tokens (current)',
+        params => $params,
+        returns => 'ARRAY[CurveTokenDTO]',
+        };
+}
+# @return ARRAY[CurveTokenDTO]
+#
+sub curve_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_transfer_ownership_events__current
+#
+# TransferOwnershipEvents (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_transfer_ownership_events__current' } = {
+        summary => 'TransferOwnershipEvents (current)',
+        params => $params,
+        returns => 'ARRAY[CurveTransferOwnershipEventDTO]',
+        };
+}
+# @return ARRAY[CurveTransferOwnershipEventDTO]
+#
+sub curve_transfer_ownership_events__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/transferOwnershipEvents/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveTransferOwnershipEventDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_underlying_coins__current
+#
+# UnderlyingCoins (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_underlying_coins__current' } = {
+        summary => 'UnderlyingCoins (current)',
+        params => $params,
+        returns => 'ARRAY[CurveUnderlyingCoinDTO]',
+        };
+}
+# @return ARRAY[CurveUnderlyingCoinDTO]
+#
+sub curve_underlying_coins__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/underlyingCoins/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveUnderlyingCoinDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_voting_apps__current
+#
+# VotingApps (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_voting_apps__current' } = {
+        summary => 'VotingApps (current)',
+        params => $params,
+        returns => 'ARRAY[CurveVotingAppDTO]',
+        };
+}
+# @return ARRAY[CurveVotingAppDTO]
+#
+sub curve_voting_apps__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/votingApps/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveVotingAppDTO]', $response);
+    return $_response_object;
+}
+
+#
+# curve_weekly_volumes__current
+#
+# WeeklyVolumes (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_weekly_volumes__current' } = {
+        summary => 'WeeklyVolumes (current)',
+        params => $params,
+        returns => 'ARRAY[CurveWeeklyVolumeDTO]',
+        };
+}
+# @return ARRAY[CurveWeeklyVolumeDTO]
+#
+sub curve_weekly_volumes__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/curve/weeklyVolumes/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
     my $_body_data;
     # authentication setting, if any

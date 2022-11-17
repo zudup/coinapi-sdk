@@ -55,6 +55,22 @@ public:
     virtual ~DexApi();
 
     /// <summary>
+    /// Batchs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets batchs.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_Batchs__current(
+    ) const;
+    /// <summary>
+    /// Deposits (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets deposits.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_DepositDTO>>> dex_Deposits__current(
+    ) const;
+    /// <summary>
     /// Batchs (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -236,7 +252,7 @@ public:
     /// WithdrawRequests (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets withdrawrequests.
+    /// Gets withdrawRequests.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -271,6 +287,78 @@ public:
         boost::optional<utility::datetime> endDate,
         boost::optional<utility::string_t> id,
         boost::optional<utility::string_t> user
+    ) const;
+    /// <summary>
+    /// Orders (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets orders.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_OrderDTO>>> dex_Orders__current(
+    ) const;
+    /// <summary>
+    /// Prices (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets prices.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_PriceDTO>>> dex_Prices__current(
+    ) const;
+    /// <summary>
+    /// Solutions (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets solutions.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_SolutionDTO>>> dex_Solutions__current(
+    ) const;
+    /// <summary>
+    /// Statss (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets statss.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_Statss__current(
+    ) const;
+    /// <summary>
+    /// Tokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_TokenDTO>>> dex_Tokens__current(
+    ) const;
+    /// <summary>
+    /// Trades (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets trades.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_Trades__current(
+    ) const;
+    /// <summary>
+    /// Users (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets users.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_UserDTO>>> dex_Users__current(
+    ) const;
+    /// <summary>
+    /// WithdrawRequests (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets withdrawRequests.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_WithdrawRequestDTO>>> dex_WithdrawRequests__current(
+    ) const;
+    /// <summary>
+    /// Withdraws (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets withdraws.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Dex_WithdrawDTO>>> dex_Withdraws__current(
     ) const;
 
 protected:

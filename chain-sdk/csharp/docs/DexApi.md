@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**DexBatchsCurrent**](DexApi.md#dexbatchscurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**DexDepositsCurrent**](DexApi.md#dexdepositscurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**DexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
 [**DexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
 [**DexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
@@ -13,9 +15,162 @@ Method | HTTP request | Description
 [**DexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
 [**DexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
 [**DexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**DexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawrequests/historical | WithdrawRequests (historical) 🔥
+[**DexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
 [**DexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**DexOrdersCurrent**](DexApi.md#dexorderscurrent) | **GET** /dapps/dex/orders/current | Orders (current)
+[**DexPricesCurrent**](DexApi.md#dexpricescurrent) | **GET** /dapps/dex/prices/current | Prices (current)
+[**DexSolutionsCurrent**](DexApi.md#dexsolutionscurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
+[**DexStatssCurrent**](DexApi.md#dexstatsscurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**DexTokensCurrent**](DexApi.md#dextokenscurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
+[**DexTradesCurrent**](DexApi.md#dextradescurrent) | **GET** /dapps/dex/trades/current | Trades (current)
+[**DexUsersCurrent**](DexApi.md#dexuserscurrent) | **GET** /dapps/dex/users/current | Users (current)
+[**DexWithdrawRequestsCurrent**](DexApi.md#dexwithdrawrequestscurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
+[**DexWithdrawsCurrent**](DexApi.md#dexwithdrawscurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
+
+
+## DexBatchsCurrent
+
+> List&lt;DexBatchDTO&gt; DexBatchsCurrent ()
+
+Batchs (current)
+
+Gets batchs.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexBatchsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Batchs (current)
+                List<DexBatchDTO> result = apiInstance.DexBatchsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexBatchsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexDepositsCurrent
+
+> List&lt;DexDepositDTO&gt; DexDepositsCurrent ()
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexDepositsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Deposits (current)
+                List<DexDepositDTO> result = apiInstance.DexDepositsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexDepositsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## DexGetBatchsHistorical
@@ -796,7 +951,7 @@ No authorization required
 
 WithdrawRequests (historical) 🔥
 
-Gets withdrawrequests.
+Gets withdrawRequests.
 
 ### Example
 
@@ -936,6 +1091,654 @@ Name | Type | Description  | Notes
  **endDate** | **DateTime?**|  | [optional] 
  **id** | **string**|  | [optional] 
  **user** | **string**|  | [optional] 
+
+### Return type
+
+[**List&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexOrdersCurrent
+
+> List&lt;DexOrderDTO&gt; DexOrdersCurrent ()
+
+Orders (current)
+
+Gets orders.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexOrdersCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Orders (current)
+                List<DexOrderDTO> result = apiInstance.DexOrdersCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexOrdersCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexPricesCurrent
+
+> List&lt;DexPriceDTO&gt; DexPricesCurrent ()
+
+Prices (current)
+
+Gets prices.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexPricesCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Prices (current)
+                List<DexPriceDTO> result = apiInstance.DexPricesCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexPricesCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexSolutionsCurrent
+
+> List&lt;DexSolutionDTO&gt; DexSolutionsCurrent ()
+
+Solutions (current)
+
+Gets solutions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexSolutionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Solutions (current)
+                List<DexSolutionDTO> result = apiInstance.DexSolutionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexSolutionsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexStatssCurrent
+
+> List&lt;DexStatsDTO&gt; DexStatssCurrent ()
+
+Statss (current)
+
+Gets statss.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexStatssCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Statss (current)
+                List<DexStatsDTO> result = apiInstance.DexStatssCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexStatssCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexTokensCurrent
+
+> List&lt;DexTokenDTO&gt; DexTokensCurrent ()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexTokensCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Tokens (current)
+                List<DexTokenDTO> result = apiInstance.DexTokensCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexTokensCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexTradesCurrent
+
+> List&lt;DexTradeDTO&gt; DexTradesCurrent ()
+
+Trades (current)
+
+Gets trades.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexTradesCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Trades (current)
+                List<DexTradeDTO> result = apiInstance.DexTradesCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexTradesCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexUsersCurrent
+
+> List&lt;DexUserDTO&gt; DexUsersCurrent ()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexUsersCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Users (current)
+                List<DexUserDTO> result = apiInstance.DexUsersCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexUsersCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexUserDTO&gt;**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexWithdrawRequestsCurrent
+
+> List&lt;DexWithdrawRequestDTO&gt; DexWithdrawRequestsCurrent ()
+
+WithdrawRequests (current)
+
+Gets withdrawRequests.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexWithdrawRequestsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // WithdrawRequests (current)
+                List<DexWithdrawRequestDTO> result = apiInstance.DexWithdrawRequestsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexWithdrawRequestsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexWithdrawsCurrent
+
+> List&lt;DexWithdrawDTO&gt; DexWithdrawsCurrent ()
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexWithdrawsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(Configuration.Default);
+
+            try
+            {
+                // Withdraws (current)
+                List<DexWithdrawDTO> result = apiInstance.DexWithdrawsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DexApi.DexWithdrawsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

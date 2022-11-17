@@ -32,6 +32,28 @@ describe 'DexApi' do
     end
   end
 
+  # unit tests for dex_batchs__current
+  # Batchs (current)
+  # Gets batchs.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexBatchDTO>]
+  describe 'dex_batchs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_deposits__current
+  # Deposits (current)
+  # Gets deposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexDepositDTO>]
+  describe 'dex_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for dex_get_batchs__historical
   # Batchs (historical) 🔥
   # Gets batchs.
@@ -186,7 +208,7 @@ describe 'DexApi' do
 
   # unit tests for dex_get_withdraw_requests__historical
   # WithdrawRequests (historical) 🔥
-  # Gets withdrawrequests.
+  # Gets withdrawRequests.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -213,6 +235,105 @@ describe 'DexApi' do
   # @option opts [String] :user 
   # @return [Array<DexWithdrawDTO>]
   describe 'dex_get_withdraws__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_orders__current
+  # Orders (current)
+  # Gets orders.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexOrderDTO>]
+  describe 'dex_orders__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_prices__current
+  # Prices (current)
+  # Gets prices.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexPriceDTO>]
+  describe 'dex_prices__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_solutions__current
+  # Solutions (current)
+  # Gets solutions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexSolutionDTO>]
+  describe 'dex_solutions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_statss__current
+  # Statss (current)
+  # Gets statss.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexStatsDTO>]
+  describe 'dex_statss__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_tokens__current
+  # Tokens (current)
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexTokenDTO>]
+  describe 'dex_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_trades__current
+  # Trades (current)
+  # Gets trades.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexTradeDTO>]
+  describe 'dex_trades__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_users__current
+  # Users (current)
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexUserDTO>]
+  describe 'dex_users__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_withdraw_requests__current
+  # WithdrawRequests (current)
+  # Gets withdrawRequests.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexWithdrawRequestDTO>]
+  describe 'dex_withdraw_requests__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_withdraws__current
+  # Withdraws (current)
+  # Gets withdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexWithdrawDTO>]
+  describe 'dex_withdraws__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

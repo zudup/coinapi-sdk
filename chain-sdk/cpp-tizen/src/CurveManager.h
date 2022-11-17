@@ -55,6 +55,483 @@ public:
 	CurveManager();
 	virtual ~CurveManager();
 
+/*! \brief Accounts (current). *Synchronous*
+ *
+ * Gets accounts.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAccounts (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Accounts (current). *Asynchronous*
+ *
+ * Gets accounts.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAccounts (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief AddLiquidityEvents (current). *Synchronous*
+ *
+ * Gets addLiquidityEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAddLiquidityEvents (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief AddLiquidityEvents (current). *Asynchronous*
+ *
+ * Gets addLiquidityEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAddLiquidityEvents (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief AdminFeeChangeLogs (current). *Synchronous*
+ *
+ * Gets adminFeeChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAdminFeeChangeLogs (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief AdminFeeChangeLogs (current). *Asynchronous*
+ *
+ * Gets adminFeeChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAdminFeeChangeLogs (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief AmplificationCoeffChangeLogs (current). *Synchronous*
+ *
+ * Gets amplificationCoeffChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAmplificationCoeffChangeLogs (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief AmplificationCoeffChangeLogs (current). *Asynchronous*
+ *
+ * Gets amplificationCoeffChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveAmplificationCoeffChangeLogs (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Coins (current). *Synchronous*
+ *
+ * Gets coins.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveCoins (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Coins (current). *Asynchronous*
+ *
+ * Gets coins.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveCoins (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief ContractVersions (current). *Synchronous*
+ *
+ * Gets contractVersions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveContractVersions (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief ContractVersions (current). *Asynchronous*
+ *
+ * Gets contractVersions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveContractVersions (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Contracts (current). *Synchronous*
+ *
+ * Gets contracts.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveContracts (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Contracts (current). *Asynchronous*
+ *
+ * Gets contracts.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveContracts (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief DailyVolumes (current). *Synchronous*
+ *
+ * Gets dailyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveDailyVolumes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief DailyVolumes (current). *Asynchronous*
+ *
+ * Gets dailyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveDailyVolumes (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Exchanges (current). *Synchronous*
+ *
+ * Gets exchanges.
+ * \param pool 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveExchanges (current)Sync(char * accessToken,
+	std::string pool, 
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Exchanges (current). *Asynchronous*
+ *
+ * Gets exchanges.
+ * \param pool 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveExchanges (current)Async(char * accessToken,
+	std::string pool, 
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief FeeChangeLogs (current). *Synchronous*
+ *
+ * Gets feeChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveFeeChangeLogs (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief FeeChangeLogs (current). *Asynchronous*
+ *
+ * Gets feeChangeLogs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveFeeChangeLogs (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeDeposits (current). *Synchronous*
+ *
+ * Gets gaugeDeposits.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeDeposits (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeDeposits (current). *Asynchronous*
+ *
+ * Gets gaugeDeposits.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeDeposits (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeLiquiditys (current). *Synchronous*
+ *
+ * Gets gaugeLiquiditys.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeLiquiditys (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeLiquiditys (current). *Asynchronous*
+ *
+ * Gets gaugeLiquiditys.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeLiquiditys (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeTotalWeights (current). *Synchronous*
+ *
+ * Gets gaugeTotalWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTotalWeights (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeTotalWeights (current). *Asynchronous*
+ *
+ * Gets gaugeTotalWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTotalWeights (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeTypeWeights (current). *Synchronous*
+ *
+ * Gets gaugeTypeWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTypeWeights (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeTypeWeights (current). *Asynchronous*
+ *
+ * Gets gaugeTypeWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTypeWeights (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeTypes (current). *Synchronous*
+ *
+ * Gets gaugeTypes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTypes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeTypes (current). *Asynchronous*
+ *
+ * Gets gaugeTypes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeTypes (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeWeightVotes (current). *Synchronous*
+ *
+ * Gets gaugeWeightVotes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWeightVotes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeWeightVotes (current). *Asynchronous*
+ *
+ * Gets gaugeWeightVotes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWeightVotes (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeWeights (current). *Synchronous*
+ *
+ * Gets gaugeWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWeights (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeWeights (current). *Asynchronous*
+ *
+ * Gets gaugeWeights.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWeights (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GaugeWithdraws (current). *Synchronous*
+ *
+ * Gets gaugeWithdraws.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWithdraws (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GaugeWithdraws (current). *Asynchronous*
+ *
+ * Gets gaugeWithdraws.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGaugeWithdraws (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Gauges (current). *Synchronous*
+ *
+ * Gets gauges.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGauges (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Gauges (current). *Asynchronous*
+ *
+ * Gets gauges.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGauges (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Accounts (historical) 🔥. *Synchronous*
  *
  * Gets accounts.
@@ -94,7 +571,7 @@ bool curveGetAccounts (historical)Async(char * accessToken,
 
 /*! \brief AddLiquidityEvents (historical) 🔥. *Synchronous*
  *
- * Gets addliquidityevents.
+ * Gets addLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -112,7 +589,7 @@ bool curveGetAddLiquidityEvents (historical)Sync(char * accessToken,
 
 /*! \brief AddLiquidityEvents (historical) 🔥. *Asynchronous*
  *
- * Gets addliquidityevents.
+ * Gets addLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -131,7 +608,7 @@ bool curveGetAddLiquidityEvents (historical)Async(char * accessToken,
 
 /*! \brief AdminFeeChangeLogs (historical) 🔥. *Synchronous*
  *
- * Gets adminfeechangelogs.
+ * Gets adminFeeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -149,7 +626,7 @@ bool curveGetAdminFeeChangeLogs (historical)Sync(char * accessToken,
 
 /*! \brief AdminFeeChangeLogs (historical) 🔥. *Asynchronous*
  *
- * Gets adminfeechangelogs.
+ * Gets adminFeeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -168,7 +645,7 @@ bool curveGetAdminFeeChangeLogs (historical)Async(char * accessToken,
 
 /*! \brief AmplificationCoeffChangeLogs (historical) 🔥. *Synchronous*
  *
- * Gets amplificationcoeffchangelogs.
+ * Gets amplificationCoeffChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -186,7 +663,7 @@ bool curveGetAmplificationCoeffChangeLogs (historical)Sync(char * accessToken,
 
 /*! \brief AmplificationCoeffChangeLogs (historical) 🔥. *Asynchronous*
  *
- * Gets amplificationcoeffchangelogs.
+ * Gets amplificationCoeffChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -242,7 +719,7 @@ bool curveGetCoins (historical)Async(char * accessToken,
 
 /*! \brief ContractVersions (historical) 🔥. *Synchronous*
  *
- * Gets contractversions.
+ * Gets contractVersions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -260,7 +737,7 @@ bool curveGetContractVersions (historical)Sync(char * accessToken,
 
 /*! \brief ContractVersions (historical) 🔥. *Asynchronous*
  *
- * Gets contractversions.
+ * Gets contractVersions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -314,7 +791,7 @@ bool curveGetContracts (historical)Async(char * accessToken,
 
 /*! \brief DailyVolumes (historical) 🔥. *Synchronous*
  *
- * Gets dailyvolumes.
+ * Gets dailyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -332,7 +809,7 @@ bool curveGetDailyVolumes (historical)Sync(char * accessToken,
 
 /*! \brief DailyVolumes (historical) 🔥. *Asynchronous*
  *
- * Gets dailyvolumes.
+ * Gets dailyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -388,7 +865,7 @@ bool curveGetExchanges (historical)Async(char * accessToken,
 
 /*! \brief FeeChangeLogs (historical) 🔥. *Synchronous*
  *
- * Gets feechangelogs.
+ * Gets feeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -406,7 +883,7 @@ bool curveGetFeeChangeLogs (historical)Sync(char * accessToken,
 
 /*! \brief FeeChangeLogs (historical) 🔥. *Asynchronous*
  *
- * Gets feechangelogs.
+ * Gets feeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -425,7 +902,7 @@ bool curveGetFeeChangeLogs (historical)Async(char * accessToken,
 
 /*! \brief GaugeDeposits (historical) 🔥. *Synchronous*
  *
- * Gets gaugedeposits.
+ * Gets gaugeDeposits.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -442,7 +919,7 @@ bool curveGetGaugeDeposits (historical)Sync(char * accessToken,
 
 /*! \brief GaugeDeposits (historical) 🔥. *Asynchronous*
  *
- * Gets gaugedeposits.
+ * Gets gaugeDeposits.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -460,7 +937,7 @@ bool curveGetGaugeDeposits (historical)Async(char * accessToken,
 
 /*! \brief GaugeLiquiditys (historical) 🔥. *Synchronous*
  *
- * Gets gaugeliquiditys.
+ * Gets gaugeLiquiditys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -478,7 +955,7 @@ bool curveGetGaugeLiquiditys (historical)Sync(char * accessToken,
 
 /*! \brief GaugeLiquiditys (historical) 🔥. *Asynchronous*
  *
- * Gets gaugeliquiditys.
+ * Gets gaugeLiquiditys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -497,7 +974,7 @@ bool curveGetGaugeLiquiditys (historical)Async(char * accessToken,
 
 /*! \brief GaugeTotalWeights (historical) 🔥. *Synchronous*
  *
- * Gets gaugetotalweights.
+ * Gets gaugeTotalWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -514,7 +991,7 @@ bool curveGetGaugeTotalWeights (historical)Sync(char * accessToken,
 
 /*! \brief GaugeTotalWeights (historical) 🔥. *Asynchronous*
  *
- * Gets gaugetotalweights.
+ * Gets gaugeTotalWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -532,7 +1009,7 @@ bool curveGetGaugeTotalWeights (historical)Async(char * accessToken,
 
 /*! \brief GaugeTypeWeights (historical) 🔥. *Synchronous*
  *
- * Gets gaugetypeweights.
+ * Gets gaugeTypeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -549,7 +1026,7 @@ bool curveGetGaugeTypeWeights (historical)Sync(char * accessToken,
 
 /*! \brief GaugeTypeWeights (historical) 🔥. *Asynchronous*
  *
- * Gets gaugetypeweights.
+ * Gets gaugeTypeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -567,7 +1044,7 @@ bool curveGetGaugeTypeWeights (historical)Async(char * accessToken,
 
 /*! \brief GaugeTypes (historical) 🔥. *Synchronous*
  *
- * Gets gaugetypes.
+ * Gets gaugeTypes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -585,7 +1062,7 @@ bool curveGetGaugeTypes (historical)Sync(char * accessToken,
 
 /*! \brief GaugeTypes (historical) 🔥. *Asynchronous*
  *
- * Gets gaugetypes.
+ * Gets gaugeTypes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -604,7 +1081,7 @@ bool curveGetGaugeTypes (historical)Async(char * accessToken,
 
 /*! \brief GaugeWeightVotes (historical) 🔥. *Synchronous*
  *
- * Gets gaugeweightvotes.
+ * Gets gaugeWeightVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -622,7 +1099,7 @@ bool curveGetGaugeWeightVotes (historical)Sync(char * accessToken,
 
 /*! \brief GaugeWeightVotes (historical) 🔥. *Asynchronous*
  *
- * Gets gaugeweightvotes.
+ * Gets gaugeWeightVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -641,7 +1118,7 @@ bool curveGetGaugeWeightVotes (historical)Async(char * accessToken,
 
 /*! \brief GaugeWeights (historical) 🔥. *Synchronous*
  *
- * Gets gaugeweights.
+ * Gets gaugeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -658,7 +1135,7 @@ bool curveGetGaugeWeights (historical)Sync(char * accessToken,
 
 /*! \brief GaugeWeights (historical) 🔥. *Asynchronous*
  *
- * Gets gaugeweights.
+ * Gets gaugeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -676,7 +1153,7 @@ bool curveGetGaugeWeights (historical)Async(char * accessToken,
 
 /*! \brief GaugeWithdraws (historical) 🔥. *Synchronous*
  *
- * Gets gaugewithdraws.
+ * Gets gaugeWithdraws.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -693,7 +1170,7 @@ bool curveGetGaugeWithdraws (historical)Sync(char * accessToken,
 
 /*! \brief GaugeWithdraws (historical) 🔥. *Asynchronous*
  *
- * Gets gaugewithdraws.
+ * Gets gaugeWithdraws.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -750,7 +1227,7 @@ bool curveGetGauges (historical)Async(char * accessToken,
 
 /*! \brief HourlyVolumes (historical) 🔥. *Synchronous*
  *
- * Gets hourlyvolumes.
+ * Gets hourlyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -768,7 +1245,7 @@ bool curveGetHourlyVolumes (historical)Sync(char * accessToken,
 
 /*! \brief HourlyVolumes (historical) 🔥. *Asynchronous*
  *
- * Gets hourlyvolumes.
+ * Gets hourlyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -787,7 +1264,7 @@ bool curveGetHourlyVolumes (historical)Async(char * accessToken,
 
 /*! \brief LpTokens (historical) 🔥. *Synchronous*
  *
- * Gets lptokens.
+ * Gets lpTokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -808,7 +1285,7 @@ bool curveGetLpTokens (historical)Sync(char * accessToken,
 
 /*! \brief LpTokens (historical) 🔥. *Asynchronous*
  *
- * Gets lptokens.
+ * Gets lpTokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -867,7 +1344,7 @@ bool curveGetPools (historical)Async(char * accessToken,
 
 /*! \brief ProposalVotes (historical) 🔥. *Synchronous*
  *
- * Gets proposalvotes.
+ * Gets proposalVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -884,7 +1361,7 @@ bool curveGetProposalVotes (historical)Sync(char * accessToken,
 
 /*! \brief ProposalVotes (historical) 🔥. *Asynchronous*
  *
- * Gets proposalvotes.
+ * Gets proposalVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -937,7 +1414,7 @@ bool curveGetProposals (historical)Async(char * accessToken,
 
 /*! \brief RemoveLiquidityEvents (historical) 🔥. *Synchronous*
  *
- * Gets removeliquidityevents.
+ * Gets removeLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -955,7 +1432,7 @@ bool curveGetRemoveLiquidityEvents (historical)Sync(char * accessToken,
 
 /*! \brief RemoveLiquidityEvents (historical) 🔥. *Asynchronous*
  *
- * Gets removeliquidityevents.
+ * Gets removeLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -974,7 +1451,7 @@ bool curveGetRemoveLiquidityEvents (historical)Async(char * accessToken,
 
 /*! \brief RemoveLiquidityOneEvents (historical) 🔥. *Synchronous*
  *
- * Gets removeliquidityoneevents.
+ * Gets removeLiquidityOneEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -992,7 +1469,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Sync(char * accessToken,
 
 /*! \brief RemoveLiquidityOneEvents (historical) 🔥. *Asynchronous*
  *
- * Gets removeliquidityoneevents.
+ * Gets removeLiquidityOneEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1011,7 +1488,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Async(char * accessToken,
 
 /*! \brief SystemStates (historical) 🔥. *Synchronous*
  *
- * Gets systemstates.
+ * Gets systemStates.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1028,7 +1505,7 @@ bool curveGetSystemStates (historical)Sync(char * accessToken,
 
 /*! \brief SystemStates (historical) 🔥. *Asynchronous*
  *
- * Gets systemstates.
+ * Gets systemStates.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1087,7 +1564,7 @@ bool curveGetTokens (historical)Async(char * accessToken,
 
 /*! \brief TransferOwnershipEvents (historical) 🔥. *Synchronous*
  *
- * Gets transferownershipevents.
+ * Gets transferOwnershipEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1105,7 +1582,7 @@ bool curveGetTransferOwnershipEvents (historical)Sync(char * accessToken,
 
 /*! \brief TransferOwnershipEvents (historical) 🔥. *Asynchronous*
  *
- * Gets transferownershipevents.
+ * Gets transferOwnershipEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1124,7 +1601,7 @@ bool curveGetTransferOwnershipEvents (historical)Async(char * accessToken,
 
 /*! \brief UnderlyingCoins (historical) 🔥. *Synchronous*
  *
- * Gets underlyingcoins.
+ * Gets underlyingCoins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1142,7 +1619,7 @@ bool curveGetUnderlyingCoins (historical)Sync(char * accessToken,
 
 /*! \brief UnderlyingCoins (historical) 🔥. *Asynchronous*
  *
- * Gets underlyingcoins.
+ * Gets underlyingCoins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1161,7 +1638,7 @@ bool curveGetUnderlyingCoins (historical)Async(char * accessToken,
 
 /*! \brief VotingApps (historical) 🔥. *Synchronous*
  *
- * Gets votingapps.
+ * Gets votingApps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1179,7 +1656,7 @@ bool curveGetVotingApps (historical)Sync(char * accessToken,
 
 /*! \brief VotingApps (historical) 🔥. *Asynchronous*
  *
- * Gets votingapps.
+ * Gets votingApps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1198,7 +1675,7 @@ bool curveGetVotingApps (historical)Async(char * accessToken,
 
 /*! \brief WeeklyVolumes (historical) 🔥. *Synchronous*
  *
- * Gets weeklyvolumes.
+ * Gets weeklyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1216,7 +1693,7 @@ bool curveGetWeeklyVolumes (historical)Sync(char * accessToken,
 
 /*! \brief WeeklyVolumes (historical) 🔥. *Asynchronous*
  *
- * Gets weeklyvolumes.
+ * Gets weeklyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1229,6 +1706,333 @@ bool curveGetWeeklyVolumes (historical)Sync(char * accessToken,
  */
 bool curveGetWeeklyVolumes (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pool, 
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief HourlyVolumes (current). *Synchronous*
+ *
+ * Gets hourlyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveHourlyVolumes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief HourlyVolumes (current). *Asynchronous*
+ *
+ * Gets hourlyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveHourlyVolumes (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief LpTokens (current). *Synchronous*
+ *
+ * Gets lpTokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveLpTokens (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief LpTokens (current). *Asynchronous*
+ *
+ * Gets lpTokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveLpTokens (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Pools (current). *Synchronous*
+ *
+ * Gets pools.
+ * \param id Pool address.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curvePools (current)Sync(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Pools (current). *Asynchronous*
+ *
+ * Gets pools.
+ * \param id Pool address.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curvePools (current)Async(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief ProposalVotes (current). *Synchronous*
+ *
+ * Gets proposalVotes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveProposalVotes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief ProposalVotes (current). *Asynchronous*
+ *
+ * Gets proposalVotes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveProposalVotes (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Proposals (current). *Synchronous*
+ *
+ * Gets proposals.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveProposals (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Proposals (current). *Asynchronous*
+ *
+ * Gets proposals.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveProposals (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief RemoveLiquidityEvents (current). *Synchronous*
+ *
+ * Gets removeLiquidityEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveRemoveLiquidityEvents (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief RemoveLiquidityEvents (current). *Asynchronous*
+ *
+ * Gets removeLiquidityEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveRemoveLiquidityEvents (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief RemoveLiquidityOneEvents (current). *Synchronous*
+ *
+ * Gets removeLiquidityOneEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveRemoveLiquidityOneEvents (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief RemoveLiquidityOneEvents (current). *Asynchronous*
+ *
+ * Gets removeLiquidityOneEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveRemoveLiquidityOneEvents (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief SystemStates (current). *Synchronous*
+ *
+ * Gets systemStates.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveSystemStates (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief SystemStates (current). *Asynchronous*
+ *
+ * Gets systemStates.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveSystemStates (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Tokens (current). *Synchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveTokens (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Tokens (current). *Asynchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveTokens (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief TransferOwnershipEvents (current). *Synchronous*
+ *
+ * Gets transferOwnershipEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveTransferOwnershipEvents (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief TransferOwnershipEvents (current). *Asynchronous*
+ *
+ * Gets transferOwnershipEvents.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveTransferOwnershipEvents (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief UnderlyingCoins (current). *Synchronous*
+ *
+ * Gets underlyingCoins.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveUnderlyingCoins (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief UnderlyingCoins (current). *Asynchronous*
+ *
+ * Gets underlyingCoins.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveUnderlyingCoins (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief VotingApps (current). *Synchronous*
+ *
+ * Gets votingApps.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveVotingApps (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief VotingApps (current). *Asynchronous*
+ *
+ * Gets votingApps.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveVotingApps (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief WeeklyVolumes (current). *Synchronous*
+ *
+ * Gets weeklyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveWeeklyVolumes (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief WeeklyVolumes (current). *Asynchronous*
+ *
+ * Gets weeklyVolumes.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveWeeklyVolumes (current)Async(char * accessToken,
+	
 	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
 	, void* userData);
 

@@ -6,25 +6,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curveGetExchangesCurrent**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dexGetTradesCurrent**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 <a name="curveGetExchangesCurrent"></a>
@@ -103,6 +117,178 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**kotlin.collections.List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapBundlesCurrent"></a>
+# **sushiswapBundlesCurrent**
+> kotlin.collections.List&lt;SushiswapBundleDTO&gt; sushiswapBundlesCurrent()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapBundleDTO> = apiInstance.sushiswapBundlesCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapBundlesCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapBundlesCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapBurnsCurrent"></a>
+# **sushiswapBurnsCurrent**
+> kotlin.collections.List&lt;SushiswapBurnDTO&gt; sushiswapBurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapBurnDTO> = apiInstance.sushiswapBurnsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapBurnsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapBurnsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapDayDatasCurrent"></a>
+# **sushiswapDayDatasCurrent**
+> kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapDayDatasCurrent()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapDayDataDTO> = apiInstance.sushiswapDayDatasCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapDayDatasCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapDayDatasCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapFactorysCurrent"></a>
+# **sushiswapFactorysCurrent**
+> kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapFactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapFactoryDTO> = apiInstance.sushiswapFactorysCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapFactorysCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapFactorysCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -231,7 +417,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 ```kotlin
@@ -341,7 +527,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 ```kotlin
@@ -396,7 +582,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```kotlin
@@ -455,7 +641,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 ```kotlin
@@ -571,7 +757,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 ```kotlin
@@ -632,7 +818,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 ```kotlin
@@ -787,49 +973,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetSwapsCurrent"></a>
-# **sushiswapGetSwapsCurrent**
-> kotlin.collections.List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = SushiswapApi()
-try {
-    val result : kotlin.collections.List<SushiswapSwapDTO> = apiInstance.sushiswapGetSwapsCurrent()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetSwapsCurrent")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetSwapsCurrent")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**kotlin.collections.List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="sushiswapGetSwapsHistorical"></a>
 # **sushiswapGetSwapsHistorical**
 > kotlin.collections.List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
@@ -893,7 +1036,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 ```kotlin
@@ -932,49 +1075,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="sushiswapGetTokensCurrent"></a>
-# **sushiswapGetTokensCurrent**
-> kotlin.collections.List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = SushiswapApi()
-try {
-    val result : kotlin.collections.List<SushiswapTokenDTO> = apiInstance.sushiswapGetTokensCurrent()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetTokensCurrent")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetTokensCurrent")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**kotlin.collections.List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1140,6 +1240,530 @@ Name | Type | Description  | Notes
  **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
  **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
  **id** | **kotlin.String**| User address. | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapHourDatasCurrent"></a>
+# **sushiswapHourDatasCurrent**
+> kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapHourDatasCurrent()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapHourDataDTO> = apiInstance.sushiswapHourDatasCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapHourDatasCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapHourDatasCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapLiquidityPositionSnapshotsCurrent"></a>
+# **sushiswapLiquidityPositionSnapshotsCurrent**
+> kotlin.collections.List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapLiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO> = apiInstance.sushiswapLiquidityPositionSnapshotsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapLiquidityPositionSnapshotsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapLiquidityPositionSnapshotsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapLiquidityPositionsCurrent"></a>
+# **sushiswapLiquidityPositionsCurrent**
+> kotlin.collections.List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapLiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapLiquidityPositionDTO> = apiInstance.sushiswapLiquidityPositionsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapLiquidityPositionsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapLiquidityPositionsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapMintsCurrent"></a>
+# **sushiswapMintsCurrent**
+> kotlin.collections.List&lt;SushiswapMintDTO&gt; sushiswapMintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapMintDTO> = apiInstance.sushiswapMintsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapMintsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapMintsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapPairDayDatasCurrent"></a>
+# **sushiswapPairDayDatasCurrent**
+> kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapPairDayDataDTO> = apiInstance.sushiswapPairDayDatasCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapPairDayDatasCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapPairDayDatasCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapPairHourDatasCurrent"></a>
+# **sushiswapPairHourDatasCurrent**
+> kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapPairHourDataDTO> = apiInstance.sushiswapPairHourDatasCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapPairHourDatasCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapPairHourDatasCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapPairsCurrent"></a>
+# **sushiswapPairsCurrent**
+> kotlin.collections.List&lt;SushiswapPairDTO&gt; sushiswapPairsCurrent(id)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+val id : kotlin.String = id_example // kotlin.String | Pair contract address.
+try {
+    val result : kotlin.collections.List<SushiswapPairDTO> = apiInstance.sushiswapPairsCurrent(id)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapPairsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapPairsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **kotlin.String**| Pair contract address. | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapSwapsCurrent"></a>
+# **sushiswapSwapsCurrent**
+> kotlin.collections.List&lt;SushiswapSwapDTO&gt; sushiswapSwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+val pair : kotlin.String = pair_example // kotlin.String | Reference to pair.
+try {
+    val result : kotlin.collections.List<SushiswapSwapDTO> = apiInstance.sushiswapSwapsCurrent(pair)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapSwapsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapSwapsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **kotlin.String**| Reference to pair. | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapTokenDayDatasCurrent"></a>
+# **sushiswapTokenDayDatasCurrent**
+> kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapTokenDayDataDTO> = apiInstance.sushiswapTokenDayDatasCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapTokensCurrent"></a>
+# **sushiswapTokensCurrent**
+> kotlin.collections.List&lt;SushiswapTokenDTO&gt; sushiswapTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapTokenDTO> = apiInstance.sushiswapTokensCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapTokensCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapTokensCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapTransactionsCurrent"></a>
+# **sushiswapTransactionsCurrent**
+> kotlin.collections.List&lt;SushiswapTransactionDTO&gt; sushiswapTransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapTransactionDTO> = apiInstance.sushiswapTransactionsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapTransactionsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapTransactionsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sushiswapUsersCurrent"></a>
+# **sushiswapUsersCurrent**
+> kotlin.collections.List&lt;SushiswapUserDTO&gt; sushiswapUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = SushiswapApi()
+try {
+    val result : kotlin.collections.List<SushiswapUserDTO> = apiInstance.sushiswapUsersCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling SushiswapApi#sushiswapUsersCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling SushiswapApi#sushiswapUsersCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

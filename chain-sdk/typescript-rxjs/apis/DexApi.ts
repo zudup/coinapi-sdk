@@ -134,6 +134,32 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets batchs.
+     * Batchs (current)
+     */
+    dexBatchsCurrent(): Observable<Array<DexBatchDTO>>
+    dexBatchsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexBatchDTO>>>
+    dexBatchsCurrent(opts?: OperationOpts): Observable<Array<DexBatchDTO> | AjaxResponse<Array<DexBatchDTO>>> {
+        return this.request<Array<DexBatchDTO>>({
+            url: '/dapps/dex/batchs/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets deposits.
+     * Deposits (current)
+     */
+    dexDepositsCurrent(): Observable<Array<DexDepositDTO>>
+    dexDepositsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexDepositDTO>>>
+    dexDepositsCurrent(opts?: OperationOpts): Observable<Array<DexDepositDTO> | AjaxResponse<Array<DexDepositDTO>>> {
+        return this.request<Array<DexDepositDTO>>({
+            url: '/dapps/dex/deposits/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets batchs.
      * Batchs (historical) 🔥
      */
     dexGetBatchsHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetBatchsHistoricalRequest): Observable<Array<DexBatchDTO>>
@@ -348,7 +374,7 @@ export class DexApi extends BaseAPI {
     };
 
     /**
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * WithdrawRequests (historical) 🔥
      */
     dexGetWithdrawRequestsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetWithdrawRequestsHistoricalRequest): Observable<Array<DexWithdrawRequestDTO>>
@@ -365,7 +391,7 @@ export class DexApi extends BaseAPI {
         if (user != null) { query['user'] = user; }
 
         return this.request<Array<DexWithdrawRequestDTO>>({
-            url: '/dapps/dex/withdrawrequests/historical',
+            url: '/dapps/dex/withdrawRequests/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -392,6 +418,123 @@ export class DexApi extends BaseAPI {
             url: '/dapps/dex/withdraws/historical',
             method: 'GET',
             query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets orders.
+     * Orders (current)
+     */
+    dexOrdersCurrent(): Observable<Array<DexOrderDTO>>
+    dexOrdersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexOrderDTO>>>
+    dexOrdersCurrent(opts?: OperationOpts): Observable<Array<DexOrderDTO> | AjaxResponse<Array<DexOrderDTO>>> {
+        return this.request<Array<DexOrderDTO>>({
+            url: '/dapps/dex/orders/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets prices.
+     * Prices (current)
+     */
+    dexPricesCurrent(): Observable<Array<DexPriceDTO>>
+    dexPricesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexPriceDTO>>>
+    dexPricesCurrent(opts?: OperationOpts): Observable<Array<DexPriceDTO> | AjaxResponse<Array<DexPriceDTO>>> {
+        return this.request<Array<DexPriceDTO>>({
+            url: '/dapps/dex/prices/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets solutions.
+     * Solutions (current)
+     */
+    dexSolutionsCurrent(): Observable<Array<DexSolutionDTO>>
+    dexSolutionsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexSolutionDTO>>>
+    dexSolutionsCurrent(opts?: OperationOpts): Observable<Array<DexSolutionDTO> | AjaxResponse<Array<DexSolutionDTO>>> {
+        return this.request<Array<DexSolutionDTO>>({
+            url: '/dapps/dex/solutions/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets statss.
+     * Statss (current)
+     */
+    dexStatssCurrent(): Observable<Array<DexStatsDTO>>
+    dexStatssCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexStatsDTO>>>
+    dexStatssCurrent(opts?: OperationOpts): Observable<Array<DexStatsDTO> | AjaxResponse<Array<DexStatsDTO>>> {
+        return this.request<Array<DexStatsDTO>>({
+            url: '/dapps/dex/statss/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokens.
+     * Tokens (current)
+     */
+    dexTokensCurrent(): Observable<Array<DexTokenDTO>>
+    dexTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexTokenDTO>>>
+    dexTokensCurrent(opts?: OperationOpts): Observable<Array<DexTokenDTO> | AjaxResponse<Array<DexTokenDTO>>> {
+        return this.request<Array<DexTokenDTO>>({
+            url: '/dapps/dex/tokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets trades.
+     * Trades (current)
+     */
+    dexTradesCurrent(): Observable<Array<DexTradeDTO>>
+    dexTradesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexTradeDTO>>>
+    dexTradesCurrent(opts?: OperationOpts): Observable<Array<DexTradeDTO> | AjaxResponse<Array<DexTradeDTO>>> {
+        return this.request<Array<DexTradeDTO>>({
+            url: '/dapps/dex/trades/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets users.
+     * Users (current)
+     */
+    dexUsersCurrent(): Observable<Array<DexUserDTO>>
+    dexUsersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexUserDTO>>>
+    dexUsersCurrent(opts?: OperationOpts): Observable<Array<DexUserDTO> | AjaxResponse<Array<DexUserDTO>>> {
+        return this.request<Array<DexUserDTO>>({
+            url: '/dapps/dex/users/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdrawRequests.
+     * WithdrawRequests (current)
+     */
+    dexWithdrawRequestsCurrent(): Observable<Array<DexWithdrawRequestDTO>>
+    dexWithdrawRequestsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawRequestDTO>>>
+    dexWithdrawRequestsCurrent(opts?: OperationOpts): Observable<Array<DexWithdrawRequestDTO> | AjaxResponse<Array<DexWithdrawRequestDTO>>> {
+        return this.request<Array<DexWithdrawRequestDTO>>({
+            url: '/dapps/dex/withdrawRequests/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets withdraws.
+     * Withdraws (current)
+     */
+    dexWithdrawsCurrent(): Observable<Array<DexWithdrawDTO>>
+    dexWithdrawsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawDTO>>>
+    dexWithdrawsCurrent(opts?: OperationOpts): Observable<Array<DexWithdrawDTO> | AjaxResponse<Array<DexWithdrawDTO>>> {
+        return this.request<Array<DexWithdrawDTO>>({
+            url: '/dapps/dex/withdraws/current',
+            method: 'GET',
         }, opts?.responseOpts);
     };
 

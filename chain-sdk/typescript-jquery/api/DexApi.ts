@@ -48,6 +48,122 @@ export class DexApi {
 
     /**
      * Gets batchs.
+     * @summary Batchs (current)
+     */
+    public dexBatchsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexBatchDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/batchs/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexBatchDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexBatchDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets deposits.
+     * @summary Deposits (current)
+     */
+    public dexDepositsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexDepositDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/deposits/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexDepositDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexDepositDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets batchs.
      * @summary Batchs (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -781,7 +897,7 @@ export class DexApi {
     }
 
     /**
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @summary WithdrawRequests (historical) 🔥
      * @param startBlock 
      * @param endBlock 
@@ -794,7 +910,7 @@ export class DexApi {
     { response: JQueryXHR; body: Array<models.DexWithdrawRequestDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/dex/withdrawrequests/historical';
+        let localVarPath = this.basePath + '/dapps/dex/withdrawRequests/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -898,6 +1014,528 @@ export class DexApi {
         if (user !== null && user !== undefined) {
             queryParameters['user'] = <string><any>user;
         }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexWithdrawDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexWithdrawDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets orders.
+     * @summary Orders (current)
+     */
+    public dexOrdersCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexOrderDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/orders/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexOrderDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexOrderDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets prices.
+     * @summary Prices (current)
+     */
+    public dexPricesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexPriceDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/prices/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexPriceDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexPriceDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets solutions.
+     * @summary Solutions (current)
+     */
+    public dexSolutionsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexSolutionDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/solutions/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexSolutionDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexSolutionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets statss.
+     * @summary Statss (current)
+     */
+    public dexStatssCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexStatsDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/statss/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexStatsDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexStatsDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets tokens.
+     * @summary Tokens (current)
+     */
+    public dexTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexTokenDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/tokens/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexTokenDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets trades.
+     * @summary Trades (current)
+     */
+    public dexTradesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexTradeDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/trades/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexTradeDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexTradeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets users.
+     * @summary Users (current)
+     */
+    public dexUsersCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexUserDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/users/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexUserDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexUserDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets withdrawRequests.
+     * @summary WithdrawRequests (current)
+     */
+    public dexWithdrawRequestsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexWithdrawRequestDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/withdrawRequests/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.DexWithdrawRequestDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.DexWithdrawRequestDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets withdraws.
+     * @summary Withdraws (current)
+     */
+    public dexWithdrawsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.DexWithdrawDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/dex/withdraws/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header

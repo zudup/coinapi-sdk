@@ -351,49 +351,49 @@ public class OASUniswapV2LiquidityPositionSnapsho implements OAS.MappedPropertie
     }
 
     public static OASUniswapV2LiquidityPositionSnapsho getExample() {
-        OASUniswapV2LiquidityPositionSnapsho uniswapV2LiquidityPositionSnapshotV2DTO = new OASUniswapV2LiquidityPositionSnapsho();
-          uniswapV2LiquidityPositionSnapshotV2DTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          uniswapV2LiquidityPositionSnapshotV2DTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
-          uniswapV2LiquidityPositionSnapshotV2DTO.blockNumber = 123456789L;
-          uniswapV2LiquidityPositionSnapshotV2DTO.id = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.liquidityPosition = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.timestamp = 0;
-          uniswapV2LiquidityPositionSnapshotV2DTO.block = 0;
-          uniswapV2LiquidityPositionSnapshotV2DTO.user = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.pair = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.token0PriceUsd = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.token1PriceUsd = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.reserve0 = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.reserve1 = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.reserveUsd = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.liquidityTokenTotalSupply = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.liquidityTokenBalance = '';
-          uniswapV2LiquidityPositionSnapshotV2DTO.vid = 123456789L;
-          uniswapV2LiquidityPositionSnapshotV2DTO.blockRange = '';
-        return uniswapV2LiquidityPositionSnapshotV2DTO;
+        OASUniswapV2LiquidityPositionSnapsho uniswapV2LiquidityPositionSnapshotDTO = new OASUniswapV2LiquidityPositionSnapsho();
+          uniswapV2LiquidityPositionSnapshotDTO.entryTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
+          uniswapV2LiquidityPositionSnapshotDTO.recvTime = Datetime.newInstanceGmt(2000, 1, 23, 4, 56, 7);
+          uniswapV2LiquidityPositionSnapshotDTO.blockNumber = 123456789L;
+          uniswapV2LiquidityPositionSnapshotDTO.id = '';
+          uniswapV2LiquidityPositionSnapshotDTO.liquidityPosition = '';
+          uniswapV2LiquidityPositionSnapshotDTO.timestamp = 0;
+          uniswapV2LiquidityPositionSnapshotDTO.block = 0;
+          uniswapV2LiquidityPositionSnapshotDTO.user = '';
+          uniswapV2LiquidityPositionSnapshotDTO.pair = '';
+          uniswapV2LiquidityPositionSnapshotDTO.token0PriceUsd = '';
+          uniswapV2LiquidityPositionSnapshotDTO.token1PriceUsd = '';
+          uniswapV2LiquidityPositionSnapshotDTO.reserve0 = '';
+          uniswapV2LiquidityPositionSnapshotDTO.reserve1 = '';
+          uniswapV2LiquidityPositionSnapshotDTO.reserveUsd = '';
+          uniswapV2LiquidityPositionSnapshotDTO.liquidityTokenTotalSupply = '';
+          uniswapV2LiquidityPositionSnapshotDTO.liquidityTokenBalance = '';
+          uniswapV2LiquidityPositionSnapshotDTO.vid = 123456789L;
+          uniswapV2LiquidityPositionSnapshotDTO.blockRange = '';
+        return uniswapV2LiquidityPositionSnapshotDTO;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUniswapV2LiquidityPositionSnapsho) {           
-            OASUniswapV2LiquidityPositionSnapsho uniswapV2LiquidityPositionSnapshotV2DTO = (OASUniswapV2LiquidityPositionSnapsho) obj;
-            return this.entryTime == uniswapV2LiquidityPositionSnapshotV2DTO.entryTime
-                && this.recvTime == uniswapV2LiquidityPositionSnapshotV2DTO.recvTime
-                && this.blockNumber == uniswapV2LiquidityPositionSnapshotV2DTO.blockNumber
-                && this.id == uniswapV2LiquidityPositionSnapshotV2DTO.id
-                && this.liquidityPosition == uniswapV2LiquidityPositionSnapshotV2DTO.liquidityPosition
-                && this.timestamp == uniswapV2LiquidityPositionSnapshotV2DTO.timestamp
-                && this.block == uniswapV2LiquidityPositionSnapshotV2DTO.block
-                && this.user == uniswapV2LiquidityPositionSnapshotV2DTO.user
-                && this.pair == uniswapV2LiquidityPositionSnapshotV2DTO.pair
-                && this.token0PriceUsd == uniswapV2LiquidityPositionSnapshotV2DTO.token0PriceUsd
-                && this.token1PriceUsd == uniswapV2LiquidityPositionSnapshotV2DTO.token1PriceUsd
-                && this.reserve0 == uniswapV2LiquidityPositionSnapshotV2DTO.reserve0
-                && this.reserve1 == uniswapV2LiquidityPositionSnapshotV2DTO.reserve1
-                && this.reserveUsd == uniswapV2LiquidityPositionSnapshotV2DTO.reserveUsd
-                && this.liquidityTokenTotalSupply == uniswapV2LiquidityPositionSnapshotV2DTO.liquidityTokenTotalSupply
-                && this.liquidityTokenBalance == uniswapV2LiquidityPositionSnapshotV2DTO.liquidityTokenBalance
-                && this.vid == uniswapV2LiquidityPositionSnapshotV2DTO.vid
-                && this.blockRange == uniswapV2LiquidityPositionSnapshotV2DTO.blockRange;
+            OASUniswapV2LiquidityPositionSnapsho uniswapV2LiquidityPositionSnapshotDTO = (OASUniswapV2LiquidityPositionSnapsho) obj;
+            return this.entryTime == uniswapV2LiquidityPositionSnapshotDTO.entryTime
+                && this.recvTime == uniswapV2LiquidityPositionSnapshotDTO.recvTime
+                && this.blockNumber == uniswapV2LiquidityPositionSnapshotDTO.blockNumber
+                && this.id == uniswapV2LiquidityPositionSnapshotDTO.id
+                && this.liquidityPosition == uniswapV2LiquidityPositionSnapshotDTO.liquidityPosition
+                && this.timestamp == uniswapV2LiquidityPositionSnapshotDTO.timestamp
+                && this.block == uniswapV2LiquidityPositionSnapshotDTO.block
+                && this.user == uniswapV2LiquidityPositionSnapshotDTO.user
+                && this.pair == uniswapV2LiquidityPositionSnapshotDTO.pair
+                && this.token0PriceUsd == uniswapV2LiquidityPositionSnapshotDTO.token0PriceUsd
+                && this.token1PriceUsd == uniswapV2LiquidityPositionSnapshotDTO.token1PriceUsd
+                && this.reserve0 == uniswapV2LiquidityPositionSnapshotDTO.reserve0
+                && this.reserve1 == uniswapV2LiquidityPositionSnapshotDTO.reserve1
+                && this.reserveUsd == uniswapV2LiquidityPositionSnapshotDTO.reserveUsd
+                && this.liquidityTokenTotalSupply == uniswapV2LiquidityPositionSnapshotDTO.liquidityTokenTotalSupply
+                && this.liquidityTokenBalance == uniswapV2LiquidityPositionSnapshotDTO.liquidityTokenBalance
+                && this.vid == uniswapV2LiquidityPositionSnapshotDTO.vid
+                && this.blockRange == uniswapV2LiquidityPositionSnapshotDTO.blockRange;
         }
         return false;
     }

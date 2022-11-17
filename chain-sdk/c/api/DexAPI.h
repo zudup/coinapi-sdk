@@ -18,6 +18,22 @@
 #include "../model/dex_withdraw_request_dto.h"
 
 
+// Batchs (current)
+//
+// Gets batchs.
+//
+list_t*
+DexAPI_dexBatchsCurrent(apiClient_t *apiClient);
+
+
+// Deposits (current)
+//
+// Gets deposits.
+//
+list_t*
+DexAPI_dexDepositsCurrent(apiClient_t *apiClient);
+
+
 // Batchs (historical) 🔥
 //
 // Gets batchs.
@@ -92,7 +108,7 @@ DexAPI_dexGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endB
 
 // WithdrawRequests (historical) 🔥
 //
-// Gets withdrawrequests.
+// Gets withdrawRequests.
 //
 list_t*
 DexAPI_dexGetWithdrawRequestsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
@@ -104,5 +120,77 @@ DexAPI_dexGetWithdrawRequestsHistorical(apiClient_t *apiClient, long startBlock 
 //
 list_t*
 DexAPI_dexGetWithdrawsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
+
+
+// Orders (current)
+//
+// Gets orders.
+//
+list_t*
+DexAPI_dexOrdersCurrent(apiClient_t *apiClient);
+
+
+// Prices (current)
+//
+// Gets prices.
+//
+list_t*
+DexAPI_dexPricesCurrent(apiClient_t *apiClient);
+
+
+// Solutions (current)
+//
+// Gets solutions.
+//
+list_t*
+DexAPI_dexSolutionsCurrent(apiClient_t *apiClient);
+
+
+// Statss (current)
+//
+// Gets statss.
+//
+list_t*
+DexAPI_dexStatssCurrent(apiClient_t *apiClient);
+
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+DexAPI_dexTokensCurrent(apiClient_t *apiClient);
+
+
+// Trades (current)
+//
+// Gets trades.
+//
+list_t*
+DexAPI_dexTradesCurrent(apiClient_t *apiClient);
+
+
+// Users (current)
+//
+// Gets users.
+//
+list_t*
+DexAPI_dexUsersCurrent(apiClient_t *apiClient);
+
+
+// WithdrawRequests (current)
+//
+// Gets withdrawRequests.
+//
+list_t*
+DexAPI_dexWithdrawRequestsCurrent(apiClient_t *apiClient);
+
+
+// Withdraws (current)
+//
+// Gets withdraws.
+//
+list_t*
+DexAPI_dexWithdrawsCurrent(apiClient_t *apiClient);
 
 

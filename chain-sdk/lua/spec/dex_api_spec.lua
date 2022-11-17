@@ -15,6 +15,20 @@ Please update as you see appropriate
 ]]
 describe("dex_api", function()
   local openapiclient_dex_api = require "openapiclient.api.dex_api"
+  -- unit tests for dex_batchs__current
+  describe("dex_batchs__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_deposits__current
+  describe("dex_deposits__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for dex_get_batchs__historical
   describe("dex_get_batchs__historical test", function()
     it("should work", function()
@@ -87,6 +101,69 @@ describe("dex_api", function()
 
   -- unit tests for dex_get_withdraws__historical
   describe("dex_get_withdraws__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_orders__current
+  describe("dex_orders__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_prices__current
+  describe("dex_prices__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_solutions__current
+  describe("dex_solutions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_statss__current
+  describe("dex_statss__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_tokens__current
+  describe("dex_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_trades__current
+  describe("dex_trades__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_users__current
+  describe("dex_users__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_withdraw_requests__current
+  describe("dex_withdraw_requests__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_withdraws__current
+  describe("dex_withdraws__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

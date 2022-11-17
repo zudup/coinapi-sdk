@@ -4,52 +4,149 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapV3GetBundleV3sHistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
-[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-[**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapV3GetBurnV3sHistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
-[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-[**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
-[**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapV3GetMintV3sHistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
-[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
-[**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
-[**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolV3sHistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
-[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
-[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-[**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
-[**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionV3sHistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
-[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-[**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapV3GetSwapV3sHistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
-[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-[**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
-[**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickV3sHistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
-[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-[**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3sHistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
-[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
-[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-[**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
-[**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
+[**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
+[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
+[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
+[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
+[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
+[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
+[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
+[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
+[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
+[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
+[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
+[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
+[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
+[**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
+[**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
+[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
+[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
+[**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
+[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
 
 
 
-## uniswapV3GetBundleV3sHistorical
+## uniswapV3BundlesCurrent
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
 
 ### Example
 
 ```bash
- uniswapV3GetBundleV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV3BundlesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3BundleDTO]**](UniswapV3BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3BurnsCurrent
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```bash
+ uniswapV3BurnsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3BurnDTO]**](UniswapV3BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3FactorysCurrent
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```bash
+ uniswapV3FactorysCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3FactoryDTO]**](UniswapV3FactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3GetBundlesHistorical
+
+Bundles (historical) 🔥
+
+Gets bundles.
+
+### Example
+
+```bash
+ uniswapV3GetBundlesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -65,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
+[**array[UniswapV3BundleDTO]**](UniswapV3BundleDTO.md)
 
 ### Authorization
 
@@ -79,48 +176,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetBundlesCurrent
+## uniswapV3GetBurnsHistorical
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-
-```bash
- uniswapV3GetBundlesCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetBurnV3sHistorical
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 
 ```bash
- uniswapV3GetBurnV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
+ uniswapV3GetBurnsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -139,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
+[**array[UniswapV3BurnDTO]**](UniswapV3BurnDTO.md)
 
 ### Authorization
 
@@ -153,115 +218,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetBurnsCurrent
+## uniswapV3GetFactorysHistorical
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-
-```bash
- uniswapV3GetBurnsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetDayDataCurrent
-
-DayData (current)
-
-Gets uniswapv3 day data.
+Gets factorys.
 
 ### Example
 
 ```bash
- uniswapV3GetDayDataCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetFactoryCurrent
-
-Factory (current)
-
-Gets factory.
-
-### Example
-
-```bash
- uniswapV3GetFactoryCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetFactoryV3sHistorical
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
-
-### Example
-
-```bash
- uniswapV3GetFactoryV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV3GetFactorysHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -277,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
+[**array[UniswapV3FactoryDTO]**](UniswapV3FactoryDTO.md)
 
 ### Authorization
 
@@ -291,16 +257,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetMintV3sHistorical
+## uniswapV3GetMintsHistorical
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 
 ```bash
- uniswapV3GetMintV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
+ uniswapV3GetMintsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -319,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
+[**array[UniswapV3MintDTO]**](UniswapV3MintDTO.md)
 
 ### Authorization
 
@@ -333,51 +299,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetMintsCurrent
+## uniswapV3GetPoolDayDatasHistorical
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-
-```bash
- uniswapV3GetMintsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetPoolDayDataV3sHistorical
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetPoolDayDataV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
+ uniswapV3GetPoolDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
 ```
 
 ### Parameters
@@ -394,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
+[**array[UniswapV3PoolDayDataDTO]**](UniswapV3PoolDayDataDTO.md)
 
 ### Authorization
 
@@ -408,16 +339,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetPoolHourDataV3sHistorical
+## uniswapV3GetPoolHourDatasHistorical
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetPoolHourDataV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
+ uniswapV3GetPoolHourDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
 ```
 
 ### Parameters
@@ -434,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
+[**array[UniswapV3PoolHourDataDTO]**](UniswapV3PoolHourDataDTO.md)
 
 ### Authorization
 
@@ -448,16 +379,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetPoolV3sHistorical
+## uniswapV3GetPoolsHistorical
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 
 ```bash
- uniswapV3GetPoolV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
+ uniswapV3GetPoolsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -475,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
+[**array[UniswapV3PoolDTO]**](UniswapV3PoolDTO.md)
 
 ### Authorization
 
@@ -489,121 +420,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetPoolsCurrent
+## uniswapV3GetPositionSnapshotsHistorical
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-
-```bash
- uniswapV3GetPoolsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetPoolsDayDataCurrent
-
-PoolsDayData (current)
-
-Gets pools day data.
+Gets positionSnapshots.
 
 ### Example
 
 ```bash
- uniswapV3GetPoolsDayDataCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetPoolsHourDataCurrent
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-
-```bash
- uniswapV3GetPoolsHourDataCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetPositionSnapshotV3sHistorical
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
-
-### Example
-
-```bash
- uniswapV3GetPositionSnapshotV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
+ uniswapV3GetPositionSnapshotsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
 ```
 
 ### Parameters
@@ -620,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
+[**array[UniswapV3PositionSnapshotDTO]**](UniswapV3PositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -634,16 +460,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetPositionV3sHistorical
+## uniswapV3GetPositionsHistorical
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 
 ```bash
- uniswapV3GetPositionV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
+ uniswapV3GetPositionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -662,7 +488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
+[**array[UniswapV3PositionDTO]**](UniswapV3PositionDTO.md)
 
 ### Authorization
 
@@ -676,86 +502,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetPositionsCurrent
+## uniswapV3GetSwapsHistorical
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-
-```bash
- uniswapV3GetPositionsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetPositionsSnapshotsCurrent
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
+Gets swaps.
 
 ### Example
 
 ```bash
- uniswapV3GetPositionsSnapshotsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetSwapV3sHistorical
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
-
-### Example
-
-```bash
- uniswapV3GetSwapV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
+ uniswapV3GetSwapsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -774,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
+[**array[UniswapV3SwapDTO]**](UniswapV3SwapDTO.md)
 
 ### Authorization
 
@@ -788,51 +544,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetSwapsCurrent
+## uniswapV3GetTickDayDatasHistorical
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-
-```bash
- uniswapV3GetSwapsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetTickDayDataV3sHistorical
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetTickDayDataV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
+ uniswapV3GetTickDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
 ```
 
 ### Parameters
@@ -849,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
+[**array[UniswapV3TickDayDataDTO]**](UniswapV3TickDayDataDTO.md)
 
 ### Authorization
 
@@ -863,56 +584,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTickV3sHistorical
+## uniswapV3GetTicksHistorical
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-
-```bash
- uniswapV3GetTickV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **pool** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetTicksCurrent
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
 ### Example
 
 ```bash
- uniswapV3GetTicksCurrent  filter_pool_id=value
+ uniswapV3GetTicksHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pool=value
 ```
 
 ### Parameters
@@ -920,11 +601,16 @@ Gets ticks.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **id** | **string** |  | [optional] [default to null]
+ **pool** | **string** |  | [optional] [default to null]
 
 ### Return type
 
-[**array[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
+[**array[UniswapV3TickDTO]**](UniswapV3TickDTO.md)
 
 ### Authorization
 
@@ -938,51 +624,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTicksDayDataCurrent
+## uniswapV3GetTokenHourDatasHistorical
 
-TicksDayData (current)
+TokenHourDatas (historical) 🔥
 
-Gets ticks day data.
-
-### Example
-
-```bash
- uniswapV3GetTicksDayDataCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV3GetTokenHourDataV3sHistorical
-
-TokenHourDataV3s (historical) 🔥
-
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetTokenHourDataV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV3GetTokenHourDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -998,7 +649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
+[**array[UniswapV3TokenHourDataDTO]**](UniswapV3TokenHourDataDTO.md)
 
 ### Authorization
 
@@ -1016,7 +667,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 
@@ -1051,16 +702,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTokenV3sHistorical
+## uniswapV3GetTokensHistorical
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 
 ```bash
- uniswapV3GetTokenV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  symbol=value  name=value
+ uniswapV3GetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  symbol=value  name=value
 ```
 
 ### Parameters
@@ -1078,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
+[**array[UniswapV3TokenDTO]**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1092,16 +743,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTokensCurrent
+## uniswapV3GetTransactionsHistorical
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
+Gets transactions.
 
 ### Example
 
 ```bash
- uniswapV3GetTokensCurrent  filter_token_id=value
+ uniswapV3GetTransactionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -1109,11 +760,15 @@ Gets tokens.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterTokenId** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Transaction hash. | [optional] [default to null]
 
 ### Return type
 
-[**array[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
+[**array[UniswapV3TransactionDTO]**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -1127,16 +782,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTokensDayDataCurrent
+## uniswapV3GetUniswapDayDatasHistorical
 
-TokensDayData (current)
+UniswapDayDatas (historical) 🔥
 
-Gets tokens day data.
+Gets uniswapDayDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetTokensDayDataCurrent  filter_token_id=value
+ uniswapV3GetUniswapDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -1144,7 +799,369 @@ Gets tokens day data.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterTokenId** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Timestamp rounded to current day by dividing by 86400. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV3UniswapDayDataDTO]**](UniswapV3UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3MintsCurrent
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```bash
+ uniswapV3MintsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3MintDTO]**](UniswapV3MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3PoolDayDatasCurrent
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+
+```bash
+ uniswapV3PoolDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3PoolDayDataDTO]**](UniswapV3PoolDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3PoolHourDatasCurrent
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+
+```bash
+ uniswapV3PoolHourDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3PoolHourDataDTO]**](UniswapV3PoolHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3PoolsCurrent
+
+Pools (current)
+
+Gets pools.
+
+### Example
+
+```bash
+ uniswapV3PoolsCurrent  id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Pool address. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV3PoolDTO]**](UniswapV3PoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3PositionSnapshotsCurrent
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+
+```bash
+ uniswapV3PositionSnapshotsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3PositionSnapshotDTO]**](UniswapV3PositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3PositionsCurrent
+
+Positions (current)
+
+Gets positions.
+
+### Example
+
+```bash
+ uniswapV3PositionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3PositionDTO]**](UniswapV3PositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3SwapsCurrent
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```bash
+ uniswapV3SwapsCurrent  pool=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** | Pool swap occured within. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV3SwapDTO]**](UniswapV3SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3TickDayDatasCurrent
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+
+```bash
+ uniswapV3TickDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3TickDayDataDTO]**](UniswapV3TickDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3TicksCurrent
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+
+```bash
+ uniswapV3TicksCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3TickDTO]**](UniswapV3TickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3TokenHourDatasCurrent
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+
+```bash
+ uniswapV3TokenHourDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV3TokenHourDataDTO]**](UniswapV3TokenHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV3TokenV3DayDatasCurrent
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+
+```bash
+ uniswapV3TokenV3DayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1162,28 +1179,25 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTokensHourDataCurrent
+## uniswapV3TokensCurrent
 
-TokensHourData (current)
+Tokens (current)
 
-Gets tokens hour data.
+Gets tokens.
 
 ### Example
 
 ```bash
- uniswapV3GetTokensHourDataCurrent  filter_token_id=value
+ uniswapV3TokensCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **string** |  | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
+[**array[UniswapV3TokenDTO]**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1197,32 +1211,25 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetTransactionV3sHistorical
+## uniswapV3TransactionsCurrent
 
-TransactionV3s (historical) 🔥
+Transactions (current)
 
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 
 ```bash
- uniswapV3GetTransactionV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV3TransactionsCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
- **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
- **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
- **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
- **id** | **string** | Transaction hash. | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV3TransactionV3DTO]**](UniswapV3TransactionV3DTO.md)
+[**array[UniswapV3TransactionDTO]**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -1236,32 +1243,25 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV3GetUniswapDayDataV3sHistorical
+## uniswapV3UniswapDayDatasCurrent
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (current)
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 
 ```bash
- uniswapV3GetUniswapDayDataV3sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV3UniswapDayDatasCurrent
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
- **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
- **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
- **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
- **id** | **string** | Timestamp rounded to current day by dividing by 86400. | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
+[**array[UniswapV3UniswapDayDataDTO]**](UniswapV3UniswapDayDataDTO.md)
 
 ### Authorization
 

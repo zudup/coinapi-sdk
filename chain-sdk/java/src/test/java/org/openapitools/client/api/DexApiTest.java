@@ -43,6 +43,32 @@ public class DexApiTest {
     private final DexApi api = new DexApi();
 
     /**
+     * Batchs (current)
+     *
+     * Gets batchs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexBatchsCurrentTest() throws ApiException {
+        List<DexBatchDTO> response = api.dexBatchsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Deposits (current)
+     *
+     * Gets deposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexDepositsCurrentTest() throws ApiException {
+        List<DexDepositDTO> response = api.dexDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Batchs (historical) 🔥
      *
      * Gets batchs.
@@ -215,7 +241,7 @@ public class DexApiTest {
     /**
      * WithdrawRequests (historical) 🔥
      *
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      *
      * @throws ApiException if the Api call fails
      */
@@ -247,6 +273,123 @@ public class DexApiTest {
         String id = null;
         String user = null;
         List<DexWithdrawDTO> response = api.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user);
+        // TODO: test validations
+    }
+
+    /**
+     * Orders (current)
+     *
+     * Gets orders.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexOrdersCurrentTest() throws ApiException {
+        List<DexOrderDTO> response = api.dexOrdersCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Prices (current)
+     *
+     * Gets prices.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexPricesCurrentTest() throws ApiException {
+        List<DexPriceDTO> response = api.dexPricesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Solutions (current)
+     *
+     * Gets solutions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexSolutionsCurrentTest() throws ApiException {
+        List<DexSolutionDTO> response = api.dexSolutionsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Statss (current)
+     *
+     * Gets statss.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexStatssCurrentTest() throws ApiException {
+        List<DexStatsDTO> response = api.dexStatssCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
+     *
+     * Gets tokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexTokensCurrentTest() throws ApiException {
+        List<DexTokenDTO> response = api.dexTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Trades (current)
+     *
+     * Gets trades.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexTradesCurrentTest() throws ApiException {
+        List<DexTradeDTO> response = api.dexTradesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Users (current)
+     *
+     * Gets users.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexUsersCurrentTest() throws ApiException {
+        List<DexUserDTO> response = api.dexUsersCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * WithdrawRequests (current)
+     *
+     * Gets withdrawRequests.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexWithdrawRequestsCurrentTest() throws ApiException {
+        List<DexWithdrawRequestDTO> response = api.dexWithdrawRequestsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Withdraws (current)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexWithdrawsCurrentTest() throws ApiException {
+        List<DexWithdrawDTO> response = api.dexWithdrawsCurrent();
         // TODO: test validations
     }
 

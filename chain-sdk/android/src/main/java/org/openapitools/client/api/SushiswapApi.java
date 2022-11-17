@@ -306,6 +306,470 @@ public class SushiswapApi {
     }
   }
   /**
+  * Bundles (current)
+  * Gets bundles.
+   * @return List<SushiswapBundleDTO>
+  */
+  public List<SushiswapBundleDTO> sushiswapBundlesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/bundles/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapBundleDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapBundleDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Bundles (current)
+   * Gets bundles.
+
+  */
+  public void sushiswapBundlesCurrent (final Response.Listener<List<SushiswapBundleDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/bundles/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapBundleDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapBundleDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Burns (current)
+  * Gets burns.
+   * @return List<SushiswapBurnDTO>
+  */
+  public List<SushiswapBurnDTO> sushiswapBurnsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/burns/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapBurnDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapBurnDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Burns (current)
+   * Gets burns.
+
+  */
+  public void sushiswapBurnsCurrent (final Response.Listener<List<SushiswapBurnDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/burns/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapBurnDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapBurnDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * DayDatas (current)
+  * Gets dayDatas.
+   * @return List<SushiswapDayDataDTO>
+  */
+  public List<SushiswapDayDataDTO> sushiswapDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/dayDatas/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapDayDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapDayDataDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * DayDatas (current)
+   * Gets dayDatas.
+
+  */
+  public void sushiswapDayDatasCurrent (final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/dayDatas/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapDayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapDayDataDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Factorys (current)
+  * Gets factorys.
+   * @return List<SushiswapFactoryDTO>
+  */
+  public List<SushiswapFactoryDTO> sushiswapFactorysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/factorys/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapFactoryDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapFactoryDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Factorys (current)
+   * Gets factorys.
+
+  */
+  public void sushiswapFactorysCurrent (final Response.Listener<List<SushiswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/factorys/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapFactoryDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapFactoryDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Bundles (historical) 🔥
   * Gets bundles.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -572,7 +1036,7 @@ public class SushiswapApi {
   }
   /**
   * DayDatas (historical) 🔥
-  * Gets daydatas.
+  * Gets dayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -584,7 +1048,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/daydatas/historical";
+    String path = "/dapps/sushiswap/dayDatas/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -638,7 +1102,7 @@ public class SushiswapApi {
 
       /**
    * DayDatas (historical) 🔥
-   * Gets daydatas.
+   * Gets dayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Unix timestamp for start of day / 86400 giving a unique day index.
   */
   public void sushiswapGetDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -646,7 +1110,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/daydatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/dayDatas/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -834,7 +1298,7 @@ public class SushiswapApi {
   }
   /**
   * HourDatas (historical) 🔥
-  * Gets hourdatas.
+  * Gets hourDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -846,7 +1310,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourdatas/historical";
+    String path = "/dapps/sushiswap/hourDatas/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -900,7 +1364,7 @@ public class SushiswapApi {
 
       /**
    * HourDatas (historical) 🔥
-   * Gets hourdatas.
+   * Gets hourDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Start of hour timestamp.
   */
   public void sushiswapGetHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -908,7 +1372,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourdatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/hourDatas/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -965,7 +1429,7 @@ public class SushiswapApi {
   }
   /**
   * LiquidityPositionSnapshots (historical) 🔥
-  * Gets liquiditypositionsnapshots.
+  * Gets liquidityPositionSnapshots.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -979,7 +1443,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/liquiditypositionsnapshots/historical";
+    String path = "/dapps/sushiswap/liquidityPositionSnapshots/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1035,7 +1499,7 @@ public class SushiswapApi {
 
       /**
    * LiquidityPositionSnapshots (historical) 🔥
-   * Gets liquiditypositionsnapshots.
+   * Gets liquidityPositionSnapshots.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user    * @param pair 
   */
   public void sushiswapGetLiquidityPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, final Response.Listener<List<SushiswapLiquidityPositionSnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1043,7 +1507,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/liquiditypositionsnapshots/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/liquidityPositionSnapshots/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1102,7 +1566,7 @@ public class SushiswapApi {
   }
   /**
   * LiquidityPositions (historical) 🔥
-  * Gets liquiditypositions.
+  * Gets liquidityPositions.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1116,7 +1580,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/liquiditypositions/historical";
+    String path = "/dapps/sushiswap/liquidityPositions/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1172,7 +1636,7 @@ public class SushiswapApi {
 
       /**
    * LiquidityPositions (historical) 🔥
-   * Gets liquiditypositions.
+   * Gets liquidityPositions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user    * @param pair 
   */
   public void sushiswapGetLiquidityPositionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, final Response.Listener<List<SushiswapLiquidityPositionDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1180,7 +1644,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/liquiditypositions/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/liquidityPositions/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1373,7 +1837,7 @@ public class SushiswapApi {
   }
   /**
   * PairDayDatas (historical) 🔥
-  * Gets pairdaydatas.
+  * Gets pairDayDatas.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1388,7 +1852,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairdaydatas/historical";
+    String path = "/dapps/sushiswap/pairDayDatas/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1445,7 +1909,7 @@ public class SushiswapApi {
 
       /**
    * PairDayDatas (historical) 🔥
-   * Gets pairdaydatas.
+   * Gets pairDayDatas.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair    * @param token0    * @param token1 
   */
   public void sushiswapGetPairDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1453,7 +1917,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairdaydatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairDayDatas/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1513,7 +1977,7 @@ public class SushiswapApi {
   }
   /**
   * PairHourDatas (historical) 🔥
-  * Gets pairhourdatas.
+  * Gets pairHourDatas.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1526,7 +1990,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairhourdatas/historical";
+    String path = "/dapps/sushiswap/pairHourDatas/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1581,7 +2045,7 @@ public class SushiswapApi {
 
       /**
    * PairHourDatas (historical) 🔥
-   * Gets pairhourdatas.
+   * Gets pairHourDatas.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair 
   */
   public void sushiswapGetPairHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1589,7 +2053,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairhourdatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairHourDatas/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1902,122 +2366,6 @@ public class SushiswapApi {
     }
   }
   /**
-  * Swaps (current) 🔥
-  * Gets swaps.
-   * @return List<SushiswapSwapDTO>
-  */
-  public List<SushiswapSwapDTO> sushiswapGetSwapsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-
-    // create path and map variables
-    String path = "/dapps/sushiswap/swaps/current";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapSwapDTO.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Swaps (current) 🔥
-   * Gets swaps.
-
-  */
-  public void sushiswapGetSwapsCurrent (final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-
-    // create path and map variables
-    String path = "/dapps/sushiswap/swaps/current".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapSwapDTO.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
   * Swaps (historical) 🔥
   * Gets swaps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2153,7 +2501,7 @@ public class SushiswapApi {
   }
   /**
   * TokenDayDatas (historical) 🔥
-  * Gets tokendaydatas.
+  * Gets tokenDayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2165,7 +2513,7 @@ public class SushiswapApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokendaydatas/historical";
+    String path = "/dapps/sushiswap/tokenDayDatas/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2219,7 +2567,7 @@ public class SushiswapApi {
 
       /**
    * TokenDayDatas (historical) 🔥
-   * Gets tokendaydatas.
+   * Gets tokenDayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, day start timestamp in unix / 86400.
   */
   public void sushiswapGetTokenDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2227,7 +2575,7 @@ public class SushiswapApi {
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokendaydatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/tokenDayDatas/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2268,122 +2616,6 @@ public class SushiswapApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((List<SushiswapTokenDayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDayDataDTO.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Tokens (current) 🔥
-  * Gets tokens.
-   * @return List<SushiswapTokenDTO>
-  */
-  public List<SushiswapTokenDTO> sushiswapGetTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = null;
-
-    // create path and map variables
-    String path = "/dapps/sushiswap/tokens/current";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    String[] contentTypes = {
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDTO.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Tokens (current) 🔥
-   * Gets tokens.
-
-  */
-  public void sushiswapGetTokensCurrent (final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = null;
-
-
-    // create path and map variables
-    String path = "/dapps/sushiswap/tokens/current".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-
-    String[] contentTypes = {
-      
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDTO.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -2756,6 +2988,1404 @@ public class SushiswapApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapUserDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapUserDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * HourDatas (current)
+  * Gets hourDatas.
+   * @return List<SushiswapHourDataDTO>
+  */
+  public List<SushiswapHourDataDTO> sushiswapHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/hourDatas/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapHourDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapHourDataDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * HourDatas (current)
+   * Gets hourDatas.
+
+  */
+  public void sushiswapHourDatasCurrent (final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/hourDatas/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapHourDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapHourDataDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * LiquidityPositionSnapshots (current)
+  * Gets liquidityPositionSnapshots.
+   * @return List<SushiswapLiquidityPositionSnapshotDTO>
+  */
+  public List<SushiswapLiquidityPositionSnapshotDTO> sushiswapLiquidityPositionSnapshotsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/liquidityPositionSnapshots/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapLiquidityPositionSnapshotDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapLiquidityPositionSnapshotDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * LiquidityPositionSnapshots (current)
+   * Gets liquidityPositionSnapshots.
+
+  */
+  public void sushiswapLiquidityPositionSnapshotsCurrent (final Response.Listener<List<SushiswapLiquidityPositionSnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/liquidityPositionSnapshots/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapLiquidityPositionSnapshotDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapLiquidityPositionSnapshotDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * LiquidityPositions (current)
+  * Gets liquidityPositions.
+   * @return List<SushiswapLiquidityPositionDTO>
+  */
+  public List<SushiswapLiquidityPositionDTO> sushiswapLiquidityPositionsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/liquidityPositions/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapLiquidityPositionDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapLiquidityPositionDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * LiquidityPositions (current)
+   * Gets liquidityPositions.
+
+  */
+  public void sushiswapLiquidityPositionsCurrent (final Response.Listener<List<SushiswapLiquidityPositionDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/liquidityPositions/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapLiquidityPositionDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapLiquidityPositionDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Mints (current)
+  * Gets mints.
+   * @return List<SushiswapMintDTO>
+  */
+  public List<SushiswapMintDTO> sushiswapMintsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/mints/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapMintDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapMintDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Mints (current)
+   * Gets mints.
+
+  */
+  public void sushiswapMintsCurrent (final Response.Listener<List<SushiswapMintDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/mints/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapMintDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapMintDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * PairDayDatas (current)
+  * Gets pairDayDatas.
+   * @return List<SushiswapPairDayDataDTO>
+  */
+  public List<SushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairDayDatas/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapPairDayDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapPairDayDataDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * PairDayDatas (current)
+   * Gets pairDayDatas.
+
+  */
+  public void sushiswapPairDayDatasCurrent (final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairDayDatas/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapPairDayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapPairDayDataDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * PairHourDatas (current)
+  * Gets pairHourDatas.
+   * @return List<SushiswapPairHourDataDTO>
+  */
+  public List<SushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairHourDatas/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapPairHourDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapPairHourDataDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * PairHourDatas (current)
+   * Gets pairHourDatas.
+
+  */
+  public void sushiswapPairHourDatasCurrent (final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairHourDatas/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapPairHourDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapPairHourDataDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Pairs (current)
+  * Gets pairs.
+   * @param id Pair contract address.
+   * @return List<SushiswapPairDTO>
+  */
+  public List<SushiswapPairDTO> sushiswapPairsCurrent (String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairs/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapPairDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Pairs (current)
+   * Gets pairs.
+   * @param id Pair contract address.
+  */
+  public void sushiswapPairsCurrent (String id, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/pairs/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapPairDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapPairDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Swaps (current)
+  * Gets swaps.
+   * @param pair Reference to pair.
+   * @return List<SushiswapSwapDTO>
+  */
+  public List<SushiswapSwapDTO> sushiswapSwapsCurrent (String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/swaps/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pair", pair));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapSwapDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Swaps (current)
+   * Gets swaps.
+   * @param pair Reference to pair.
+  */
+  public void sushiswapSwapsCurrent (String pair, final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/swaps/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pair", pair));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapSwapDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapSwapDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * TokenDayDatas (current)
+  * Gets tokenDayDatas.
+   * @return List<SushiswapTokenDayDataDTO>
+  */
+  public List<SushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/tokenDayDatas/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapTokenDayDataDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDayDataDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * TokenDayDatas (current)
+   * Gets tokenDayDatas.
+
+  */
+  public void sushiswapTokenDayDatasCurrent (final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/tokenDayDatas/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapTokenDayDataDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDayDataDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Tokens (current)
+  * Gets tokens.
+   * @return List<SushiswapTokenDTO>
+  */
+  public List<SushiswapTokenDTO> sushiswapTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/tokens/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTokenDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Tokens (current)
+   * Gets tokens.
+
+  */
+  public void sushiswapTokensCurrent (final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/tokens/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTokenDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Transactions (current)
+  * Gets transactions.
+   * @return List<SushiswapTransactionDTO>
+  */
+  public List<SushiswapTransactionDTO> sushiswapTransactionsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/transactions/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapTransactionDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapTransactionDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Transactions (current)
+   * Gets transactions.
+
+  */
+  public void sushiswapTransactionsCurrent (final Response.Listener<List<SushiswapTransactionDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/transactions/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<SushiswapTransactionDTO>) ApiInvoker.deserialize(localVarResponse,  "array", SushiswapTransactionDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Users (current)
+  * Gets users.
+   * @return List<SushiswapUserDTO>
+  */
+  public List<SushiswapUserDTO> sushiswapUsersCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/users/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<SushiswapUserDTO>) ApiInvoker.deserialize(localVarResponse, "array", SushiswapUserDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Users (current)
+   * Gets users.
+
+  */
+  public void sushiswapUsersCurrent (final Response.Listener<List<SushiswapUserDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/users/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
 
 
     String[] contentTypes = {

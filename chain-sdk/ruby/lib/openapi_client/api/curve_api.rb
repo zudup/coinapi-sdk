@@ -19,6 +19,1092 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveAccountDTO>]
+    def curve_accounts__current(opts = {})
+      data, _status_code, _headers = curve_accounts__current_with_http_info(opts)
+      data
+    end
+
+    # Accounts (current)
+    # Gets accounts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveAccountDTO>, Integer, Hash)>] Array<CurveAccountDTO> data, response status code and response headers
+    def curve_accounts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_accounts__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/accounts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveAccountDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_accounts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_accounts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # AddLiquidityEvents (current)
+    # Gets addLiquidityEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveAddLiquidityEventDTO>]
+    def curve_add_liquidity_events__current(opts = {})
+      data, _status_code, _headers = curve_add_liquidity_events__current_with_http_info(opts)
+      data
+    end
+
+    # AddLiquidityEvents (current)
+    # Gets addLiquidityEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveAddLiquidityEventDTO>, Integer, Hash)>] Array<CurveAddLiquidityEventDTO> data, response status code and response headers
+    def curve_add_liquidity_events__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_add_liquidity_events__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/addLiquidityEvents/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveAddLiquidityEventDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_add_liquidity_events__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_add_liquidity_events__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # AdminFeeChangeLogs (current)
+    # Gets adminFeeChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveAdminFeeChangeLogDTO>]
+    def curve_admin_fee_change_logs__current(opts = {})
+      data, _status_code, _headers = curve_admin_fee_change_logs__current_with_http_info(opts)
+      data
+    end
+
+    # AdminFeeChangeLogs (current)
+    # Gets adminFeeChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveAdminFeeChangeLogDTO>, Integer, Hash)>] Array<CurveAdminFeeChangeLogDTO> data, response status code and response headers
+    def curve_admin_fee_change_logs__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_admin_fee_change_logs__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/adminFeeChangeLogs/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveAdminFeeChangeLogDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_admin_fee_change_logs__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_admin_fee_change_logs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # AmplificationCoeffChangeLogs (current)
+    # Gets amplificationCoeffChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveAmplificationCoeffChangeLogDTO>]
+    def curve_amplification_coeff_change_logs__current(opts = {})
+      data, _status_code, _headers = curve_amplification_coeff_change_logs__current_with_http_info(opts)
+      data
+    end
+
+    # AmplificationCoeffChangeLogs (current)
+    # Gets amplificationCoeffChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveAmplificationCoeffChangeLogDTO>, Integer, Hash)>] Array<CurveAmplificationCoeffChangeLogDTO> data, response status code and response headers
+    def curve_amplification_coeff_change_logs__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_amplification_coeff_change_logs__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/amplificationCoeffChangeLogs/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveAmplificationCoeffChangeLogDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_amplification_coeff_change_logs__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_amplification_coeff_change_logs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Coins (current)
+    # Gets coins.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveCoinDTO>]
+    def curve_coins__current(opts = {})
+      data, _status_code, _headers = curve_coins__current_with_http_info(opts)
+      data
+    end
+
+    # Coins (current)
+    # Gets coins.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveCoinDTO>, Integer, Hash)>] Array<CurveCoinDTO> data, response status code and response headers
+    def curve_coins__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_coins__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/coins/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveCoinDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_coins__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_coins__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # ContractVersions (current)
+    # Gets contractVersions.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveContractVersionDTO>]
+    def curve_contract_versions__current(opts = {})
+      data, _status_code, _headers = curve_contract_versions__current_with_http_info(opts)
+      data
+    end
+
+    # ContractVersions (current)
+    # Gets contractVersions.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveContractVersionDTO>, Integer, Hash)>] Array<CurveContractVersionDTO> data, response status code and response headers
+    def curve_contract_versions__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_contract_versions__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/contractVersions/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveContractVersionDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_contract_versions__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_contract_versions__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Contracts (current)
+    # Gets contracts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveContractDTO>]
+    def curve_contracts__current(opts = {})
+      data, _status_code, _headers = curve_contracts__current_with_http_info(opts)
+      data
+    end
+
+    # Contracts (current)
+    # Gets contracts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveContractDTO>, Integer, Hash)>] Array<CurveContractDTO> data, response status code and response headers
+    def curve_contracts__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_contracts__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/contracts/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveContractDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_contracts__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_contracts__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # DailyVolumes (current)
+    # Gets dailyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveDailyVolumeDTO>]
+    def curve_daily_volumes__current(opts = {})
+      data, _status_code, _headers = curve_daily_volumes__current_with_http_info(opts)
+      data
+    end
+
+    # DailyVolumes (current)
+    # Gets dailyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveDailyVolumeDTO>, Integer, Hash)>] Array<CurveDailyVolumeDTO> data, response status code and response headers
+    def curve_daily_volumes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_daily_volumes__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/dailyVolumes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveDailyVolumeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_daily_volumes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_daily_volumes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Exchanges (current)
+    # Gets exchanges.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool 
+    # @return [Array<CurveExchangeDTO>]
+    def curve_exchanges__current(opts = {})
+      data, _status_code, _headers = curve_exchanges__current_with_http_info(opts)
+      data
+    end
+
+    # Exchanges (current)
+    # Gets exchanges.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pool 
+    # @return [Array<(Array<CurveExchangeDTO>, Integer, Hash)>] Array<CurveExchangeDTO> data, response status code and response headers
+    def curve_exchanges__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_exchanges__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/exchanges/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pool'] = opts[:'pool'] if !opts[:'pool'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveExchangeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_exchanges__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_exchanges__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # FeeChangeLogs (current)
+    # Gets feeChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveFeeChangeLogDTO>]
+    def curve_fee_change_logs__current(opts = {})
+      data, _status_code, _headers = curve_fee_change_logs__current_with_http_info(opts)
+      data
+    end
+
+    # FeeChangeLogs (current)
+    # Gets feeChangeLogs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveFeeChangeLogDTO>, Integer, Hash)>] Array<CurveFeeChangeLogDTO> data, response status code and response headers
+    def curve_fee_change_logs__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_fee_change_logs__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/feeChangeLogs/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveFeeChangeLogDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_fee_change_logs__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_fee_change_logs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeDeposits (current)
+    # Gets gaugeDeposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeDepositDTO>]
+    def curve_gauge_deposits__current(opts = {})
+      data, _status_code, _headers = curve_gauge_deposits__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeDeposits (current)
+    # Gets gaugeDeposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeDepositDTO>, Integer, Hash)>] Array<CurveGaugeDepositDTO> data, response status code and response headers
+    def curve_gauge_deposits__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_deposits__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeDeposits/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_deposits__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_deposits__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeLiquiditys (current)
+    # Gets gaugeLiquiditys.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeLiquidityDTO>]
+    def curve_gauge_liquiditys__current(opts = {})
+      data, _status_code, _headers = curve_gauge_liquiditys__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeLiquiditys (current)
+    # Gets gaugeLiquiditys.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeLiquidityDTO>, Integer, Hash)>] Array<CurveGaugeLiquidityDTO> data, response status code and response headers
+    def curve_gauge_liquiditys__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_liquiditys__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeLiquiditys/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeLiquidityDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_liquiditys__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_liquiditys__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeTotalWeights (current)
+    # Gets gaugeTotalWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeTotalWeightDTO>]
+    def curve_gauge_total_weights__current(opts = {})
+      data, _status_code, _headers = curve_gauge_total_weights__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeTotalWeights (current)
+    # Gets gaugeTotalWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeTotalWeightDTO>, Integer, Hash)>] Array<CurveGaugeTotalWeightDTO> data, response status code and response headers
+    def curve_gauge_total_weights__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_total_weights__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeTotalWeights/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeTotalWeightDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_total_weights__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_total_weights__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeTypeWeights (current)
+    # Gets gaugeTypeWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeTypeWeightDTO>]
+    def curve_gauge_type_weights__current(opts = {})
+      data, _status_code, _headers = curve_gauge_type_weights__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeTypeWeights (current)
+    # Gets gaugeTypeWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeTypeWeightDTO>, Integer, Hash)>] Array<CurveGaugeTypeWeightDTO> data, response status code and response headers
+    def curve_gauge_type_weights__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_type_weights__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeTypeWeights/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeTypeWeightDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_type_weights__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_type_weights__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeTypes (current)
+    # Gets gaugeTypes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeTypeDTO>]
+    def curve_gauge_types__current(opts = {})
+      data, _status_code, _headers = curve_gauge_types__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeTypes (current)
+    # Gets gaugeTypes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeTypeDTO>, Integer, Hash)>] Array<CurveGaugeTypeDTO> data, response status code and response headers
+    def curve_gauge_types__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_types__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeTypes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeTypeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_types__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_types__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeWeightVotes (current)
+    # Gets gaugeWeightVotes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeWeightVoteDTO>]
+    def curve_gauge_weight_votes__current(opts = {})
+      data, _status_code, _headers = curve_gauge_weight_votes__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeWeightVotes (current)
+    # Gets gaugeWeightVotes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeWeightVoteDTO>, Integer, Hash)>] Array<CurveGaugeWeightVoteDTO> data, response status code and response headers
+    def curve_gauge_weight_votes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_weight_votes__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeWeightVotes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeWeightVoteDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_weight_votes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_weight_votes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeWeights (current)
+    # Gets gaugeWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeWeightDTO>]
+    def curve_gauge_weights__current(opts = {})
+      data, _status_code, _headers = curve_gauge_weights__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeWeights (current)
+    # Gets gaugeWeights.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeWeightDTO>, Integer, Hash)>] Array<CurveGaugeWeightDTO> data, response status code and response headers
+    def curve_gauge_weights__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_weights__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeWeights/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeWeightDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_weights__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_weights__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GaugeWithdraws (current)
+    # Gets gaugeWithdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeWithdrawDTO>]
+    def curve_gauge_withdraws__current(opts = {})
+      data, _status_code, _headers = curve_gauge_withdraws__current_with_http_info(opts)
+      data
+    end
+
+    # GaugeWithdraws (current)
+    # Gets gaugeWithdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeWithdrawDTO>, Integer, Hash)>] Array<CurveGaugeWithdrawDTO> data, response status code and response headers
+    def curve_gauge_withdraws__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_withdraws__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gaugeWithdraws/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeWithdrawDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauge_withdraws__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_withdraws__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gauges (current)
+    # Gets gauges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveGaugeDTO>]
+    def curve_gauges__current(opts = {})
+      data, _status_code, _headers = curve_gauges__current_with_http_info(opts)
+      data
+    end
+
+    # Gauges (current)
+    # Gets gauges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveGaugeDTO>, Integer, Hash)>] Array<CurveGaugeDTO> data, response status code and response headers
+    def curve_gauges__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauges__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/gauges/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveGaugeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_gauges__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauges__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Accounts (historical) 🔥
     # Gets accounts.
     # @param [Hash] opts the optional parameters
@@ -95,7 +1181,7 @@ module OpenapiClient
     end
 
     # AddLiquidityEvents (historical) 🔥
-    # Gets addliquidityevents.
+    # Gets addLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -110,7 +1196,7 @@ module OpenapiClient
     end
 
     # AddLiquidityEvents (historical) 🔥
-    # Gets addliquidityevents.
+    # Gets addLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -124,7 +1210,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_add_liquidity_events__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/addliquidityevents/historical'
+      local_var_path = '/dapps/curve/addLiquidityEvents/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -170,7 +1256,7 @@ module OpenapiClient
     end
 
     # AdminFeeChangeLogs (historical) 🔥
-    # Gets adminfeechangelogs.
+    # Gets adminFeeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -185,7 +1271,7 @@ module OpenapiClient
     end
 
     # AdminFeeChangeLogs (historical) 🔥
-    # Gets adminfeechangelogs.
+    # Gets adminFeeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -199,7 +1285,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_admin_fee_change_logs__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/adminfeechangelogs/historical'
+      local_var_path = '/dapps/curve/adminFeeChangeLogs/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -245,7 +1331,7 @@ module OpenapiClient
     end
 
     # AmplificationCoeffChangeLogs (historical) 🔥
-    # Gets amplificationcoeffchangelogs.
+    # Gets amplificationCoeffChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -260,7 +1346,7 @@ module OpenapiClient
     end
 
     # AmplificationCoeffChangeLogs (historical) 🔥
-    # Gets amplificationcoeffchangelogs.
+    # Gets amplificationCoeffChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -274,7 +1360,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_amplification_coeff_change_logs__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/amplificationcoeffchangelogs/historical'
+      local_var_path = '/dapps/curve/amplificationCoeffChangeLogs/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -395,7 +1481,7 @@ module OpenapiClient
     end
 
     # ContractVersions (historical) 🔥
-    # Gets contractversions.
+    # Gets contractVersions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -410,7 +1496,7 @@ module OpenapiClient
     end
 
     # ContractVersions (historical) 🔥
-    # Gets contractversions.
+    # Gets contractVersions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -424,7 +1510,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_contract_versions__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/contractversions/historical'
+      local_var_path = '/dapps/curve/contractVersions/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -542,7 +1628,7 @@ module OpenapiClient
     end
 
     # DailyVolumes (historical) 🔥
-    # Gets dailyvolumes.
+    # Gets dailyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -557,7 +1643,7 @@ module OpenapiClient
     end
 
     # DailyVolumes (historical) 🔥
-    # Gets dailyvolumes.
+    # Gets dailyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -571,7 +1657,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_daily_volumes__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/dailyvolumes/historical'
+      local_var_path = '/dapps/curve/dailyVolumes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -692,7 +1778,7 @@ module OpenapiClient
     end
 
     # FeeChangeLogs (historical) 🔥
-    # Gets feechangelogs.
+    # Gets feeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -707,7 +1793,7 @@ module OpenapiClient
     end
 
     # FeeChangeLogs (historical) 🔥
-    # Gets feechangelogs.
+    # Gets feeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -721,7 +1807,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_fee_change_logs__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/feechangelogs/historical'
+      local_var_path = '/dapps/curve/feeChangeLogs/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -767,7 +1853,7 @@ module OpenapiClient
     end
 
     # GaugeDeposits (historical) 🔥
-    # Gets gaugedeposits.
+    # Gets gaugeDeposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -781,7 +1867,7 @@ module OpenapiClient
     end
 
     # GaugeDeposits (historical) 🔥
-    # Gets gaugedeposits.
+    # Gets gaugeDeposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -794,7 +1880,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_deposits__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugedeposits/historical'
+      local_var_path = '/dapps/curve/gaugeDeposits/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -839,7 +1925,7 @@ module OpenapiClient
     end
 
     # GaugeLiquiditys (historical) 🔥
-    # Gets gaugeliquiditys.
+    # Gets gaugeLiquiditys.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -854,7 +1940,7 @@ module OpenapiClient
     end
 
     # GaugeLiquiditys (historical) 🔥
-    # Gets gaugeliquiditys.
+    # Gets gaugeLiquiditys.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -868,7 +1954,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_liquiditys__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugeliquiditys/historical'
+      local_var_path = '/dapps/curve/gaugeLiquiditys/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -914,7 +2000,7 @@ module OpenapiClient
     end
 
     # GaugeTotalWeights (historical) 🔥
-    # Gets gaugetotalweights.
+    # Gets gaugeTotalWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -928,7 +2014,7 @@ module OpenapiClient
     end
 
     # GaugeTotalWeights (historical) 🔥
-    # Gets gaugetotalweights.
+    # Gets gaugeTotalWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -941,7 +2027,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_total_weights__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugetotalweights/historical'
+      local_var_path = '/dapps/curve/gaugeTotalWeights/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -986,7 +2072,7 @@ module OpenapiClient
     end
 
     # GaugeTypeWeights (historical) 🔥
-    # Gets gaugetypeweights.
+    # Gets gaugeTypeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1000,7 +2086,7 @@ module OpenapiClient
     end
 
     # GaugeTypeWeights (historical) 🔥
-    # Gets gaugetypeweights.
+    # Gets gaugeTypeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1013,7 +2099,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_type_weights__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugetypeweights/historical'
+      local_var_path = '/dapps/curve/gaugeTypeWeights/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1058,7 +2144,7 @@ module OpenapiClient
     end
 
     # GaugeTypes (historical) 🔥
-    # Gets gaugetypes.
+    # Gets gaugeTypes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1073,7 +2159,7 @@ module OpenapiClient
     end
 
     # GaugeTypes (historical) 🔥
-    # Gets gaugetypes.
+    # Gets gaugeTypes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1087,7 +2173,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_types__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugetypes/historical'
+      local_var_path = '/dapps/curve/gaugeTypes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1133,7 +2219,7 @@ module OpenapiClient
     end
 
     # GaugeWeightVotes (historical) 🔥
-    # Gets gaugeweightvotes.
+    # Gets gaugeWeightVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1148,7 +2234,7 @@ module OpenapiClient
     end
 
     # GaugeWeightVotes (historical) 🔥
-    # Gets gaugeweightvotes.
+    # Gets gaugeWeightVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1162,7 +2248,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_weight_votes__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugeweightvotes/historical'
+      local_var_path = '/dapps/curve/gaugeWeightVotes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1208,7 +2294,7 @@ module OpenapiClient
     end
 
     # GaugeWeights (historical) 🔥
-    # Gets gaugeweights.
+    # Gets gaugeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1222,7 +2308,7 @@ module OpenapiClient
     end
 
     # GaugeWeights (historical) 🔥
-    # Gets gaugeweights.
+    # Gets gaugeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1235,7 +2321,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_weights__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugeweights/historical'
+      local_var_path = '/dapps/curve/gaugeWeights/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1280,7 +2366,7 @@ module OpenapiClient
     end
 
     # GaugeWithdraws (historical) 🔥
-    # Gets gaugewithdraws.
+    # Gets gaugeWithdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1294,7 +2380,7 @@ module OpenapiClient
     end
 
     # GaugeWithdraws (historical) 🔥
-    # Gets gaugewithdraws.
+    # Gets gaugeWithdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1307,7 +2393,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_withdraws__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugewithdraws/historical'
+      local_var_path = '/dapps/curve/gaugeWithdraws/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1430,7 +2516,7 @@ module OpenapiClient
     end
 
     # HourlyVolumes (historical) 🔥
-    # Gets hourlyvolumes.
+    # Gets hourlyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1445,7 +2531,7 @@ module OpenapiClient
     end
 
     # HourlyVolumes (historical) 🔥
-    # Gets hourlyvolumes.
+    # Gets hourlyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1459,7 +2545,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_hourly_volumes__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/hourlyvolumes/historical'
+      local_var_path = '/dapps/curve/hourlyVolumes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1505,7 +2591,7 @@ module OpenapiClient
     end
 
     # LpTokens (historical) 🔥
-    # Gets lptokens.
+    # Gets lpTokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1523,7 +2609,7 @@ module OpenapiClient
     end
 
     # LpTokens (historical) 🔥
-    # Gets lptokens.
+    # Gets lpTokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1540,7 +2626,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_lp_tokens__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/lptokens/historical'
+      local_var_path = '/dapps/curve/lpTokens/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1664,7 +2750,7 @@ module OpenapiClient
     end
 
     # ProposalVotes (historical) 🔥
-    # Gets proposalvotes.
+    # Gets proposalVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1678,7 +2764,7 @@ module OpenapiClient
     end
 
     # ProposalVotes (historical) 🔥
-    # Gets proposalvotes.
+    # Gets proposalVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1691,7 +2777,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_proposal_votes__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/proposalvotes/historical'
+      local_var_path = '/dapps/curve/proposalVotes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1808,7 +2894,7 @@ module OpenapiClient
     end
 
     # RemoveLiquidityEvents (historical) 🔥
-    # Gets removeliquidityevents.
+    # Gets removeLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1823,7 +2909,7 @@ module OpenapiClient
     end
 
     # RemoveLiquidityEvents (historical) 🔥
-    # Gets removeliquidityevents.
+    # Gets removeLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1837,7 +2923,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_remove_liquidity_events__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/removeliquidityevents/historical'
+      local_var_path = '/dapps/curve/removeLiquidityEvents/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1883,7 +2969,7 @@ module OpenapiClient
     end
 
     # RemoveLiquidityOneEvents (historical) 🔥
-    # Gets removeliquidityoneevents.
+    # Gets removeLiquidityOneEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1898,7 +2984,7 @@ module OpenapiClient
     end
 
     # RemoveLiquidityOneEvents (historical) 🔥
-    # Gets removeliquidityoneevents.
+    # Gets removeLiquidityOneEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1912,7 +2998,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_remove_liquidity_one_events__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/removeliquidityoneevents/historical'
+      local_var_path = '/dapps/curve/removeLiquidityOneEvents/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1958,7 +3044,7 @@ module OpenapiClient
     end
 
     # SystemStates (historical) 🔥
-    # Gets systemstates.
+    # Gets systemStates.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1972,7 +3058,7 @@ module OpenapiClient
     end
 
     # SystemStates (historical) 🔥
-    # Gets systemstates.
+    # Gets systemStates.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1985,7 +3071,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_system_states__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/systemstates/historical'
+      local_var_path = '/dapps/curve/systemStates/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -2111,7 +3197,7 @@ module OpenapiClient
     end
 
     # TransferOwnershipEvents (historical) 🔥
-    # Gets transferownershipevents.
+    # Gets transferOwnershipEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2126,7 +3212,7 @@ module OpenapiClient
     end
 
     # TransferOwnershipEvents (historical) 🔥
-    # Gets transferownershipevents.
+    # Gets transferOwnershipEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2140,7 +3226,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_transfer_ownership_events__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/transferownershipevents/historical'
+      local_var_path = '/dapps/curve/transferOwnershipEvents/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -2186,7 +3272,7 @@ module OpenapiClient
     end
 
     # UnderlyingCoins (historical) 🔥
-    # Gets underlyingcoins.
+    # Gets underlyingCoins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -2201,7 +3287,7 @@ module OpenapiClient
     end
 
     # UnderlyingCoins (historical) 🔥
-    # Gets underlyingcoins.
+    # Gets underlyingCoins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -2215,7 +3301,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_underlying_coins__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/underlyingcoins/historical'
+      local_var_path = '/dapps/curve/underlyingCoins/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -2261,7 +3347,7 @@ module OpenapiClient
     end
 
     # VotingApps (historical) 🔥
-    # Gets votingapps.
+    # Gets votingApps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2276,7 +3362,7 @@ module OpenapiClient
     end
 
     # VotingApps (historical) 🔥
-    # Gets votingapps.
+    # Gets votingApps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2290,7 +3376,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_voting_apps__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/votingapps/historical'
+      local_var_path = '/dapps/curve/votingApps/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -2336,7 +3422,7 @@ module OpenapiClient
     end
 
     # WeeklyVolumes (historical) 🔥
-    # Gets weeklyvolumes.
+    # Gets weeklyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2351,7 +3437,7 @@ module OpenapiClient
     end
 
     # WeeklyVolumes (historical) 🔥
-    # Gets weeklyvolumes.
+    # Gets weeklyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2365,7 +3451,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_weekly_volumes__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/weeklyvolumes/historical'
+      local_var_path = '/dapps/curve/weeklyVolumes/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -2406,6 +3492,750 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CurveApi#curve_get_weekly_volumes__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # HourlyVolumes (current)
+    # Gets hourlyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveHourlyVolumeDTO>]
+    def curve_hourly_volumes__current(opts = {})
+      data, _status_code, _headers = curve_hourly_volumes__current_with_http_info(opts)
+      data
+    end
+
+    # HourlyVolumes (current)
+    # Gets hourlyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveHourlyVolumeDTO>, Integer, Hash)>] Array<CurveHourlyVolumeDTO> data, response status code and response headers
+    def curve_hourly_volumes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_hourly_volumes__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/hourlyVolumes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveHourlyVolumeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_hourly_volumes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_hourly_volumes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LpTokens (current)
+    # Gets lpTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveLpTokenDTO>]
+    def curve_lp_tokens__current(opts = {})
+      data, _status_code, _headers = curve_lp_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # LpTokens (current)
+    # Gets lpTokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveLpTokenDTO>, Integer, Hash)>] Array<CurveLpTokenDTO> data, response status code and response headers
+    def curve_lp_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_lp_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/lpTokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveLpTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_lp_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_lp_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Pools (current)
+    # Gets pools.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Pool address.
+    # @return [Array<CurvePoolDTO>]
+    def curve_pools__current(opts = {})
+      data, _status_code, _headers = curve_pools__current_with_http_info(opts)
+      data
+    end
+
+    # Pools (current)
+    # Gets pools.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :id Pool address.
+    # @return [Array<(Array<CurvePoolDTO>, Integer, Hash)>] Array<CurvePoolDTO> data, response status code and response headers
+    def curve_pools__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_pools__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/pools/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurvePoolDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_pools__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # ProposalVotes (current)
+    # Gets proposalVotes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveProposalVoteDTO>]
+    def curve_proposal_votes__current(opts = {})
+      data, _status_code, _headers = curve_proposal_votes__current_with_http_info(opts)
+      data
+    end
+
+    # ProposalVotes (current)
+    # Gets proposalVotes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveProposalVoteDTO>, Integer, Hash)>] Array<CurveProposalVoteDTO> data, response status code and response headers
+    def curve_proposal_votes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_proposal_votes__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/proposalVotes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveProposalVoteDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_proposal_votes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_proposal_votes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Proposals (current)
+    # Gets proposals.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveProposalDTO>]
+    def curve_proposals__current(opts = {})
+      data, _status_code, _headers = curve_proposals__current_with_http_info(opts)
+      data
+    end
+
+    # Proposals (current)
+    # Gets proposals.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveProposalDTO>, Integer, Hash)>] Array<CurveProposalDTO> data, response status code and response headers
+    def curve_proposals__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_proposals__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/proposals/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveProposalDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_proposals__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_proposals__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RemoveLiquidityEvents (current)
+    # Gets removeLiquidityEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveRemoveLiquidityEventDTO>]
+    def curve_remove_liquidity_events__current(opts = {})
+      data, _status_code, _headers = curve_remove_liquidity_events__current_with_http_info(opts)
+      data
+    end
+
+    # RemoveLiquidityEvents (current)
+    # Gets removeLiquidityEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveRemoveLiquidityEventDTO>, Integer, Hash)>] Array<CurveRemoveLiquidityEventDTO> data, response status code and response headers
+    def curve_remove_liquidity_events__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_remove_liquidity_events__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/removeLiquidityEvents/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveRemoveLiquidityEventDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_remove_liquidity_events__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_remove_liquidity_events__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # RemoveLiquidityOneEvents (current)
+    # Gets removeLiquidityOneEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveRemoveLiquidityOneEventDTO>]
+    def curve_remove_liquidity_one_events__current(opts = {})
+      data, _status_code, _headers = curve_remove_liquidity_one_events__current_with_http_info(opts)
+      data
+    end
+
+    # RemoveLiquidityOneEvents (current)
+    # Gets removeLiquidityOneEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveRemoveLiquidityOneEventDTO>, Integer, Hash)>] Array<CurveRemoveLiquidityOneEventDTO> data, response status code and response headers
+    def curve_remove_liquidity_one_events__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_remove_liquidity_one_events__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/removeLiquidityOneEvents/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveRemoveLiquidityOneEventDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_remove_liquidity_one_events__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_remove_liquidity_one_events__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # SystemStates (current)
+    # Gets systemStates.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveSystemStateDTO>]
+    def curve_system_states__current(opts = {})
+      data, _status_code, _headers = curve_system_states__current_with_http_info(opts)
+      data
+    end
+
+    # SystemStates (current)
+    # Gets systemStates.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveSystemStateDTO>, Integer, Hash)>] Array<CurveSystemStateDTO> data, response status code and response headers
+    def curve_system_states__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_system_states__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/systemStates/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveSystemStateDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_system_states__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_system_states__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveTokenDTO>]
+    def curve_tokens__current(opts = {})
+      data, _status_code, _headers = curve_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveTokenDTO>, Integer, Hash)>] Array<CurveTokenDTO> data, response status code and response headers
+    def curve_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/tokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TransferOwnershipEvents (current)
+    # Gets transferOwnershipEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveTransferOwnershipEventDTO>]
+    def curve_transfer_ownership_events__current(opts = {})
+      data, _status_code, _headers = curve_transfer_ownership_events__current_with_http_info(opts)
+      data
+    end
+
+    # TransferOwnershipEvents (current)
+    # Gets transferOwnershipEvents.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveTransferOwnershipEventDTO>, Integer, Hash)>] Array<CurveTransferOwnershipEventDTO> data, response status code and response headers
+    def curve_transfer_ownership_events__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_transfer_ownership_events__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/transferOwnershipEvents/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveTransferOwnershipEventDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_transfer_ownership_events__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_transfer_ownership_events__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UnderlyingCoins (current)
+    # Gets underlyingCoins.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveUnderlyingCoinDTO>]
+    def curve_underlying_coins__current(opts = {})
+      data, _status_code, _headers = curve_underlying_coins__current_with_http_info(opts)
+      data
+    end
+
+    # UnderlyingCoins (current)
+    # Gets underlyingCoins.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveUnderlyingCoinDTO>, Integer, Hash)>] Array<CurveUnderlyingCoinDTO> data, response status code and response headers
+    def curve_underlying_coins__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_underlying_coins__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/underlyingCoins/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveUnderlyingCoinDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_underlying_coins__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_underlying_coins__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # VotingApps (current)
+    # Gets votingApps.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveVotingAppDTO>]
+    def curve_voting_apps__current(opts = {})
+      data, _status_code, _headers = curve_voting_apps__current_with_http_info(opts)
+      data
+    end
+
+    # VotingApps (current)
+    # Gets votingApps.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveVotingAppDTO>, Integer, Hash)>] Array<CurveVotingAppDTO> data, response status code and response headers
+    def curve_voting_apps__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_voting_apps__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/votingApps/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveVotingAppDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_voting_apps__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_voting_apps__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # WeeklyVolumes (current)
+    # Gets weeklyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveWeeklyVolumeDTO>]
+    def curve_weekly_volumes__current(opts = {})
+      data, _status_code, _headers = curve_weekly_volumes__current_with_http_info(opts)
+      data
+    end
+
+    # WeeklyVolumes (current)
+    # Gets weeklyVolumes.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveWeeklyVolumeDTO>, Integer, Hash)>] Array<CurveWeeklyVolumeDTO> data, response status code and response headers
+    def curve_weekly_volumes__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_weekly_volumes__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/curve/weeklyVolumes/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveWeeklyVolumeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"CurveApi.curve_weekly_volumes__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CurveApi#curve_weekly_volumes__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

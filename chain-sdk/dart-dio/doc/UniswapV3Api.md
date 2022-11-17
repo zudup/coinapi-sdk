@@ -9,47 +9,165 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapv3getbundlev3shistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
-[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-[**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapv3getburnv3shistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
-[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-[**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapv3getfactoryv3shistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
-[**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapv3getmintv3shistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
-[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatav3shistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
-[**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatav3shistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
-[**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapv3getpoolv3shistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
-[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
-[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-[**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapv3getpositionsnapshotv3shistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
-[**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapv3getpositionv3shistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
-[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-[**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapv3getswapv3shistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
-[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-[**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatav3shistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
-[**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapv3gettickv3shistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
-[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-[**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatav3shistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatashistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapv3gettokenv3shistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
-[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
-[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-[**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapv3gettransactionv3shistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
-[**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatav3shistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
+[**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapv3bundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapv3burnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapv3factoryscurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
+[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
+[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapv3getfactoryshistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
+[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
+[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatashistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
+[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatashistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
+[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapv3getpositionsnapshotshistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
+[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
+[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatashistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
+[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
+[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatashistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatashistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
+[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatashistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapv3mintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapv3pooldaydatascurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
+[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapv3poolhourdatascurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapv3poolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
+[**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapv3positionsnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
+[**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapv3positionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapv3swapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
+[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapv3tickdaydatascurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapv3tickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapv3tokenhourdatascurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
+[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapv3tokenv3daydatascurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapv3tokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
+[**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapv3transactionscurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
+[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapv3uniswapdaydatascurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
 
 
-# **uniswapV3GetBundleV3sHistorical**
-> BuiltList<UniswapV3BundleV3DTO> uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV3BundlesCurrent**
+> BuiltList<UniswapV3BundleDTO> uniswapV3BundlesCurrent()
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3BundlesCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3BundlesCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3BurnsCurrent**
+> BuiltList<UniswapV3BurnDTO> uniswapV3BurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3BurnsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3BurnsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3FactorysCurrent**
+> BuiltList<UniswapV3FactoryDTO> uniswapV3FactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3FactorysCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3FactorysCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3GetBundlesHistorical**
+> BuiltList<UniswapV3BundleDTO> uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 ```dart
@@ -63,10 +181,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date o
 final String id = id_example; // String | 
 
 try {
-    final response = api.uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final response = api.uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetBundleV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetBundlesHistorical: $e\n');
 }
 ```
 
@@ -82,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
+[**BuiltList&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
 
 ### Authorization
 
@@ -95,51 +213,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetBundlesCurrent**
-> BuiltList<UniswapV3BundleV3DTO> uniswapV3GetBundlesCurrent()
+# **uniswapV3GetBurnsHistorical**
+> BuiltList<UniswapV3BurnDTO> uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-
-try {
-    final response = api.uniswapV3GetBundlesCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetBundlesCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetBurnV3sHistorical**
-> BuiltList<UniswapV3BurnV3DTO> uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 ```dart
@@ -156,10 +235,10 @@ final String token0 = token0_example; // String | Reference to token0 as stored 
 final String token1 = token1_example; // String | Reference to token1 as stored in pool contract.
 
 try {
-    final response = api.uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    final response = api.uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetBurnV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetBurnsHistorical: $e\n');
 }
 ```
 
@@ -178,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
+[**BuiltList&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
 
 ### Authorization
 
@@ -191,133 +270,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetBurnsCurrent**
-> BuiltList<UniswapV3BurnV3DTO> uniswapV3GetBurnsCurrent(filterPoolId)
+# **uniswapV3GetFactorysHistorical**
+> BuiltList<UniswapV3FactoryDTO> uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetBurnsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetBurnsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetDayDataCurrent**
-> BuiltList<UniswapV3UniswapDayDataV3DTO> uniswapV3GetDayDataCurrent()
-
-DayData (current)
-
-Gets uniswapv3 day data.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-
-try {
-    final response = api.uniswapV3GetDayDataCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetDayDataCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetFactoryCurrent**
-> BuiltList<UniswapV3FactoryV3DTO> uniswapV3GetFactoryCurrent()
-
-Factory (current)
-
-Gets factory.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-
-try {
-    final response = api.uniswapV3GetFactoryCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetFactoryCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetFactoryV3sHistorical**
-> BuiltList<UniswapV3FactoryV3DTO> uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id)
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
+Gets factorys.
 
 ### Example
 ```dart
@@ -331,10 +289,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date o
 final String id = id_example; // String | Factory address.
 
 try {
-    final response = api.uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final response = api.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetFactoryV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetFactorysHistorical: $e\n');
 }
 ```
 
@@ -350,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
+[**BuiltList&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
 
 ### Authorization
 
@@ -363,12 +321,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetMintV3sHistorical**
-> BuiltList<UniswapV3MintV3DTO> uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+# **uniswapV3GetMintsHistorical**
+> BuiltList<UniswapV3MintDTO> uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 ```dart
@@ -385,10 +343,10 @@ final String token0 = token0_example; // String | Reference to token0 as stored 
 final String token1 = token1_example; // String | Reference to token1 as stored in pool contract.
 
 try {
-    final response = api.uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    final response = api.uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetMintV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetMintsHistorical: $e\n');
 }
 ```
 
@@ -407,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
+[**BuiltList&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
 
 ### Authorization
 
@@ -420,55 +378,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetMintsCurrent**
-> BuiltList<UniswapV3MintV3DTO> uniswapV3GetMintsCurrent(filterPoolId)
+# **uniswapV3GetPoolDayDatasHistorical**
+> BuiltList<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetMintsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetMintsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetPoolDayDataV3sHistorical**
-> BuiltList<UniswapV3PoolDayDataV3DTO> uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 ```dart
@@ -483,10 +398,10 @@ final String id = id_example; // String |
 final String pool = pool_example; // String | 
 
 try {
-    final response = api.uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    final response = api.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolDayDataV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetPoolDayDatasHistorical: $e\n');
 }
 ```
 
@@ -503,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
 
 ### Authorization
 
@@ -516,12 +431,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetPoolHourDataV3sHistorical**
-> BuiltList<UniswapV3PoolHourDataV3DTO> uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+# **uniswapV3GetPoolHourDatasHistorical**
+> BuiltList<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 ```dart
@@ -536,10 +451,10 @@ final String id = id_example; // String |
 final String pool = pool_example; // String | 
 
 try {
-    final response = api.uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    final response = api.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolHourDataV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetPoolHourDatasHistorical: $e\n');
 }
 ```
 
@@ -556,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
 
 ### Authorization
 
@@ -569,12 +484,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetPoolV3sHistorical**
-> BuiltList<UniswapV3PoolV3DTO> uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+# **uniswapV3GetPoolsHistorical**
+> BuiltList<UniswapV3PoolDTO> uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 ```dart
@@ -590,10 +505,10 @@ final String token0 = token0_example; // String | Reference to token0 as stored 
 final String token1 = token1_example; // String | Reference to token1 as stored in pool contract.
 
 try {
-    final response = api.uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    final response = api.uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetPoolsHistorical: $e\n');
 }
 ```
 
@@ -611,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
+[**BuiltList&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
 
 ### Authorization
 
@@ -624,141 +539,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetPoolsCurrent**
-> BuiltList<UniswapV3PoolV3DTO> uniswapV3GetPoolsCurrent(filterPoolId)
+# **uniswapV3GetPositionSnapshotsHistorical**
+> BuiltList<UniswapV3PositionSnapshotDTO> uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetPoolsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetPoolsDayDataCurrent**
-> BuiltList<UniswapV3PoolDayDataV3DTO> uniswapV3GetPoolsDayDataCurrent(filterPoolId)
-
-PoolsDayData (current)
-
-Gets pools day data.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetPoolsDayDataCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolsDayDataCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetPoolsHourDataCurrent**
-> BuiltList<UniswapV3PoolHourDataV3DTO> uniswapV3GetPoolsHourDataCurrent(filterPoolId)
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetPoolsHourDataCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPoolsHourDataCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetPositionSnapshotV3sHistorical**
-> BuiltList<UniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
+Gets positionSnapshots.
 
 ### Example
 ```dart
@@ -773,10 +559,10 @@ final String id = id_example; // String |
 final String pool = pool_example; // String | 
 
 try {
-    final response = api.uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    final response = api.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPositionSnapshotV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetPositionSnapshotsHistorical: $e\n');
 }
 ```
 
@@ -793,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
+[**BuiltList&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -806,12 +592,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetPositionV3sHistorical**
-> BuiltList<UniswapV3PositionV3DTO> uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+# **uniswapV3GetPositionsHistorical**
+> BuiltList<UniswapV3PositionDTO> uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 ```dart
@@ -828,10 +614,10 @@ final String token0 = token0_example; // String | Reference to token0 as stored 
 final String token1 = token1_example; // String | Reference to token1 as stored in pair contract.
 
 try {
-    final response = api.uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    final response = api.uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPositionV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetPositionsHistorical: $e\n');
 }
 ```
 
@@ -850,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
+[**BuiltList&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
 
 ### Authorization
 
@@ -863,98 +649,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetPositionsCurrent**
-> BuiltList<UniswapV3PositionV3DTO> uniswapV3GetPositionsCurrent(filterPoolId)
+# **uniswapV3GetSwapsHistorical**
+> BuiltList<UniswapV3SwapDTO> uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetPositionsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPositionsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetPositionsSnapshotsCurrent**
-> BuiltList<UniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionsSnapshotsCurrent(filterPoolId)
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetPositionsSnapshotsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetPositionsSnapshotsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetSwapV3sHistorical**
-> BuiltList<UniswapV3SwapV3DTO> uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
+Gets swaps.
 
 ### Example
 ```dart
@@ -971,10 +671,10 @@ final String token0 = token0_example; // String | Reference to token0 as stored 
 final String token1 = token1_example; // String | Reference to token1 as stored in pair contract.
 
 try {
-    final response = api.uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    final response = api.uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetSwapV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetSwapsHistorical: $e\n');
 }
 ```
 
@@ -993,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
+[**BuiltList&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
 
 ### Authorization
 
@@ -1006,55 +706,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetSwapsCurrent**
-> BuiltList<UniswapV3SwapV3DTO> uniswapV3GetSwapsCurrent(filterPoolId)
+# **uniswapV3GetTickDayDatasHistorical**
+> BuiltList<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetSwapsCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetSwapsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetTickDayDataV3sHistorical**
-> BuiltList<UniswapV3TickDayDataV3DTO> uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 ```dart
@@ -1069,10 +726,10 @@ final String id = id_example; // String |
 final String pool = pool_example; // String | 
 
 try {
-    final response = api.uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    final response = api.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTickDayDataV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetTickDayDatasHistorical: $e\n');
 }
 ```
 
@@ -1089,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
 
 ### Authorization
 
@@ -1102,63 +759,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTickV3sHistorical**
-> BuiltList<UniswapV3TickV3DTO> uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+# **uniswapV3GetTicksHistorical**
+> BuiltList<UniswapV3TickDTO> uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String id = id_example; // String | 
-final String pool = pool_example; // String | 
-
-try {
-    final response = api.uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTickV3sHistorical: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetTicksCurrent**
-> BuiltList<UniswapV3TickV3DTO> uniswapV3GetTicksCurrent(filterPoolId)
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
@@ -1167,13 +771,18 @@ Gets ticks.
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String id = id_example; // String | 
+final String pool = pool_example; // String | 
 
 try {
-    final response = api.uniswapV3GetTicksCurrent(filterPoolId);
+    final response = api.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTicksCurrent: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetTicksHistorical: $e\n');
 }
 ```
 
@@ -1181,11 +790,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **id** | **String**|  | [optional] 
+ **pool** | **String**|  | [optional] 
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
+[**BuiltList&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
 
 ### Authorization
 
@@ -1198,55 +812,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTicksDayDataCurrent**
-> BuiltList<UniswapV3TickDayDataV3DTO> uniswapV3GetTicksDayDataCurrent(filterPoolId)
+# **uniswapV3GetTokenHourDatasHistorical**
+> BuiltList<UniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TicksDayData (current)
+TokenHourDatas (historical) 🔥
 
-Gets ticks day data.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV3Api();
-final String filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final response = api.uniswapV3GetTicksDayDataCurrent(filterPoolId);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTicksDayDataCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV3GetTokenHourDataV3sHistorical**
-> BuiltList<UniswapV3TokenHourDataV3DTO> uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
-
-TokenHourDataV3s (historical) 🔥
-
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 ```dart
@@ -1260,10 +831,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date o
 final String id = id_example; // String | Token address concatendated with date.
 
 try {
-    final response = api.uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final response = api.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTokenHourDataV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetTokenHourDatasHistorical: $e\n');
 }
 ```
 
@@ -1279,7 +850,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+[**BuiltList&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
 
 ### Authorization
 
@@ -1297,7 +868,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 ```dart
@@ -1343,12 +914,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTokenV3sHistorical**
-> BuiltList<UniswapV3TokenV3DTO> uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
+# **uniswapV3GetTokensHistorical**
+> BuiltList<UniswapV3TokenDTO> uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 ```dart
@@ -1364,10 +935,10 @@ final String symbol = symbol_example; // String | Token symbol.
 final String name = name_example; // String | Token name.
 
 try {
-    final response = api.uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+    final response = api.uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTokenV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetTokensHistorical: $e\n');
 }
 ```
 
@@ -1385,7 +956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
+[**BuiltList&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1398,25 +969,29 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTokensCurrent**
-> BuiltList<UniswapV3TokenV3DTO> uniswapV3GetTokensCurrent(filterTokenId)
+# **uniswapV3GetTransactionsHistorical**
+> BuiltList<UniswapV3TransactionDTO> uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
+Gets transactions.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final String filterTokenId = filterTokenId_example; // String | 
+final int startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final int endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final String id = id_example; // String | Transaction hash.
 
 try {
-    final response = api.uniswapV3GetTokensCurrent(filterTokenId);
+    final response = api.uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTokensCurrent: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetTransactionsHistorical: $e\n');
 }
 ```
 
@@ -1424,11 +999,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Transaction hash. | [optional] 
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
+[**BuiltList&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -1441,25 +1020,29 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTokensDayDataCurrent**
-> BuiltList<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokensDayDataCurrent(filterTokenId)
+# **uniswapV3GetUniswapDayDatasHistorical**
+> BuiltList<UniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokensDayData (current)
+UniswapDayDatas (historical) 🔥
 
-Gets tokens day data.
+Gets uniswapDayDatas.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final String filterTokenId = filterTokenId_example; // String | 
+final int startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final int endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final String id = id_example; // String | Timestamp rounded to current day by dividing by 86400.
 
 try {
-    final response = api.uniswapV3GetTokensDayDataCurrent(filterTokenId);
+    final response = api.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTokensDayDataCurrent: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3GetUniswapDayDatasHistorical: $e\n');
 }
 ```
 
@@ -1467,7 +1050,448 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Timestamp rounded to current day by dividing by 86400. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3MintsCurrent**
+> BuiltList<UniswapV3MintDTO> uniswapV3MintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3MintsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3MintsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3PoolDayDatasCurrent**
+> BuiltList<UniswapV3PoolDayDataDTO> uniswapV3PoolDayDatasCurrent()
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3PoolDayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3PoolDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3PoolHourDatasCurrent**
+> BuiltList<UniswapV3PoolHourDataDTO> uniswapV3PoolHourDatasCurrent()
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3PoolHourDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3PoolHourDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3PoolsCurrent**
+> BuiltList<UniswapV3PoolDTO> uniswapV3PoolsCurrent(id)
+
+Pools (current)
+
+Gets pools.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+final String id = id_example; // String | Pool address.
+
+try {
+    final response = api.uniswapV3PoolsCurrent(id);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3PoolsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pool address. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3PositionSnapshotsCurrent**
+> BuiltList<UniswapV3PositionSnapshotDTO> uniswapV3PositionSnapshotsCurrent()
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3PositionSnapshotsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3PositionSnapshotsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3PositionsCurrent**
+> BuiltList<UniswapV3PositionDTO> uniswapV3PositionsCurrent()
+
+Positions (current)
+
+Gets positions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3PositionsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3PositionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3SwapsCurrent**
+> BuiltList<UniswapV3SwapDTO> uniswapV3SwapsCurrent(pool)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+final String pool = pool_example; // String | Pool swap occured within.
+
+try {
+    final response = api.uniswapV3SwapsCurrent(pool);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3SwapsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool swap occured within. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3TickDayDatasCurrent**
+> BuiltList<UniswapV3TickDayDataDTO> uniswapV3TickDayDatasCurrent()
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3TickDayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3TickDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3TicksCurrent**
+> BuiltList<UniswapV3TickDTO> uniswapV3TicksCurrent()
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3TicksCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3TicksCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3TokenHourDatasCurrent**
+> BuiltList<UniswapV3TokenHourDataDTO> uniswapV3TokenHourDatasCurrent()
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3TokenHourDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3TokenHourDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV3TokenV3DayDatasCurrent**
+> BuiltList<UniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDatasCurrent()
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV3Api();
+
+try {
+    final response = api.uniswapV3TokenV3DayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV3Api->uniswapV3TokenV3DayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1484,37 +1508,33 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTokensHourDataCurrent**
-> BuiltList<UniswapV3TokenHourDataV3DTO> uniswapV3GetTokensHourDataCurrent(filterTokenId)
+# **uniswapV3TokensCurrent**
+> BuiltList<UniswapV3TokenDTO> uniswapV3TokensCurrent()
 
-TokensHourData (current)
+Tokens (current)
 
-Gets tokens hour data.
+Gets tokens.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final String filterTokenId = filterTokenId_example; // String | 
 
 try {
-    final response = api.uniswapV3GetTokensHourDataCurrent(filterTokenId);
+    final response = api.uniswapV3TokensCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTokensHourDataCurrent: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3TokensCurrent: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+[**BuiltList&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1527,45 +1547,33 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetTransactionV3sHistorical**
-> BuiltList<UniswapV3TransactionV3DTO> uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV3TransactionsCurrent**
+> BuiltList<UniswapV3TransactionDTO> uniswapV3TransactionsCurrent()
 
-TransactionV3s (historical) 🔥
+Transactions (current)
 
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final int startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-final int endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final String id = id_example; // String | Transaction hash.
 
 try {
-    final response = api.uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final response = api.uniswapV3TransactionsCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetTransactionV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3TransactionsCurrent: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime**| The end date of timeframe. | [optional] 
- **id** | **String**| Transaction hash. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3TransactionV3DTO&gt;**](UniswapV3TransactionV3DTO.md)
+[**BuiltList&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -1578,45 +1586,33 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV3GetUniswapDayDataV3sHistorical**
-> BuiltList<UniswapV3UniswapDayDataV3DTO> uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV3UniswapDayDatasCurrent**
+> BuiltList<UniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDatasCurrent()
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (current)
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUniswapV3Api();
-final int startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-final int endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final String id = id_example; // String | Timestamp rounded to current day by dividing by 86400.
 
 try {
-    final response = api.uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final response = api.uniswapV3UniswapDayDatasCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV3Api->uniswapV3GetUniswapDayDataV3sHistorical: $e\n');
+    print('Exception when calling UniswapV3Api->uniswapV3UniswapDayDatasCurrent: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime**| The end date of timeframe. | [optional] 
- **id** | **String**| Timestamp rounded to current day by dividing by 86400. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
+[**BuiltList&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
 
 ### Authorization
 

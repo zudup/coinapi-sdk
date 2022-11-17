@@ -9,6 +9,156 @@
 <#
 .SYNOPSIS
 
+Batchs (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexBatchDTO[]
+#>
+function Invoke-DexBatchsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexBatchsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/batchs/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexBatchDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Deposits (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexDepositDTO[]
+#>
+function Invoke-DexDepositsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexDepositsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/deposits/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexDepositDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 Batchs (historical) 🔥
 
 .DESCRIPTION
@@ -1300,7 +1450,7 @@ function Invoke-DexGetWithdrawRequestsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/dex/withdrawrequests/historical'
+        $LocalVarUri = '/dapps/dex/withdrawRequests/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1460,6 +1610,681 @@ function Invoke-DexGetWithdrawsHistorical {
         if ($User) {
             $LocalVarQueryParameters['user'] = $User
         }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexWithdrawDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Orders (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexOrderDTO[]
+#>
+function Invoke-DexOrdersCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexOrdersCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/orders/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexOrderDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Prices (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexPriceDTO[]
+#>
+function Invoke-DexPricesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexPricesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/prices/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexPriceDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Solutions (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexSolutionDTO[]
+#>
+function Invoke-DexSolutionsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexSolutionsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/solutions/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexSolutionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Statss (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexStatsDTO[]
+#>
+function Invoke-DexStatssCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexStatssCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/statss/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexStatsDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Tokens (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexTokenDTO[]
+#>
+function Invoke-DexTokensCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexTokensCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/tokens/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexTokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Trades (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexTradeDTO[]
+#>
+function Invoke-DexTradesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexTradesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/trades/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexTradeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Users (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexUserDTO[]
+#>
+function Invoke-DexUsersCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexUsersCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/users/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexUserDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+WithdrawRequests (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexWithdrawRequestDTO[]
+#>
+function Invoke-DexWithdrawRequestsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexWithdrawRequestsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/withdrawRequests/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexWithdrawRequestDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Withdraws (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexWithdrawDTO[]
+#>
+function Invoke-DexWithdrawsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexWithdrawsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/dex/withdraws/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

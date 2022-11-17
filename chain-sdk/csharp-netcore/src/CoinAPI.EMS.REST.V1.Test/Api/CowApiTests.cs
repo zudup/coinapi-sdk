@@ -140,5 +140,60 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //var response = instance.CowGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, address);
             //Assert.IsType<List<CowUserDTO>>(response);
         }
+
+        /// <summary>
+        /// Test CowOrdersCurrent
+        /// </summary>
+        [Fact]
+        public void CowOrdersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowOrdersCurrent();
+            //Assert.IsType<List<CowOrderDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CowSettlementsCurrent
+        /// </summary>
+        [Fact]
+        public void CowSettlementsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowSettlementsCurrent();
+            //Assert.IsType<List<CowSettlementDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CowTokensCurrent
+        /// </summary>
+        [Fact]
+        public void CowTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowTokensCurrent();
+            //Assert.IsType<List<CowTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CowTradesCurrent
+        /// </summary>
+        [Fact]
+        public void CowTradesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowTradesCurrent();
+            //Assert.IsType<List<CowTradeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CowUsersCurrent
+        /// </summary>
+        [Fact]
+        public void CowUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowUsersCurrent();
+            //Assert.IsType<List<CowUserDTO>>(response);
+        }
     }
 }

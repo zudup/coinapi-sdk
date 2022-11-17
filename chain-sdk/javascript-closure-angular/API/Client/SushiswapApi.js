@@ -123,6 +123,130 @@ API.Client.SushiswapApi.prototype.dexGetTradesCurrent = function(opt_extraHttpRe
 }
 
 /**
+ * Bundles (current)
+ * Gets bundles.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BundleDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapBundlesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/bundles/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Burns (current)
+ * Gets burns.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BurnDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapBurnsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/burns/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * DayDatas (current)
+ * Gets dayDatas.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.DayDataDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapDayDatasCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/dayDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Factorys (current)
+ * Gets factorys.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.FactoryDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapFactorysCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/factorys/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * Bundles (historical) 🔥
  * Gets bundles.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -241,7 +365,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBurnsHistorical = function(opt_sta
 
 /**
  * DayDatas (historical) 🔥
- * Gets daydatas.
+ * Gets dayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -252,7 +376,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBurnsHistorical = function(opt_sta
  */
 API.Client.SushiswapApi.prototype.sushiswapGetDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/daydatas/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/dayDatas/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -353,7 +477,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactorysHistorical = function(opt_
 
 /**
  * HourDatas (historical) 🔥
- * Gets hourdatas.
+ * Gets hourDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -364,7 +488,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactorysHistorical = function(opt_
  */
 API.Client.SushiswapApi.prototype.sushiswapGetHourDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/hourdatas/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/hourDatas/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -409,7 +533,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDatasHistorical = function(opt
 
 /**
  * LiquidityPositionSnapshots (historical) 🔥
- * Gets liquiditypositionsnapshots.
+ * Gets liquidityPositionSnapshots.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -422,7 +546,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDatasHistorical = function(opt
  */
 API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_pair, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/liquiditypositionsnapshots/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositionSnapshots/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -475,7 +599,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotsHistoric
 
 /**
  * LiquidityPositions (historical) 🔥
- * Gets liquiditypositions.
+ * Gets liquidityPositions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -488,7 +612,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotsHistoric
  */
 API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_pair, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/liquiditypositions/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositions/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -602,7 +726,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
 
 /**
  * PairDayDatas (historical) 🔥
- * Gets pairdaydatas.
+ * Gets pairDayDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -616,7 +740,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
  */
 API.Client.SushiswapApi.prototype.sushiswapGetPairDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pair, opt_token0, opt_token1, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/pairdaydatas/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/pairDayDatas/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -673,7 +797,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairDayDatasHistorical = function(
 
 /**
  * PairHourDatas (historical) 🔥
- * Gets pairhourdatas.
+ * Gets pairHourDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -685,7 +809,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairDayDatasHistorical = function(
  */
 API.Client.SushiswapApi.prototype.sushiswapGetPairHourDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pair, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/pairhourdatas/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/pairHourDatas/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -835,37 +959,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsCurrent = function(opt_extraH
 }
 
 /**
- * Swaps (current) 🔥
- * Gets swaps.
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/swaps/current';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
  * Swaps (historical) 🔥
  * Gets swaps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -928,7 +1021,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 
 /**
  * TokenDayDatas (historical) 🔥
- * Gets tokendaydatas.
+ * Gets tokenDayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -939,7 +1032,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
  */
 API.Client.SushiswapApi.prototype.sushiswapGetTokenDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/tokendaydatas/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/tokenDayDatas/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -966,37 +1059,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokenDayDatasHistorical = function
     queryParameters['id'] = opt_id;
   }
 
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * Tokens (current) 🔥
- * Gets tokens.
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetTokensCurrent = function(opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/tokens/current';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -1175,6 +1237,388 @@ API.Client.SushiswapApi.prototype.sushiswapGetUsersHistorical = function(opt_sta
     queryParameters['id'] = opt_id;
   }
 
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * HourDatas (current)
+ * Gets hourDatas.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.HourDataDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapHourDatasCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/hourDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPositionSnapshots (current)
+ * Gets liquidityPositionSnapshots.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionSnapshotDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapLiquidityPositionSnapshotsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositionSnapshots/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LiquidityPositions (current)
+ * Gets liquidityPositions.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapLiquidityPositionsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositions/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Mints (current)
+ * Gets mints.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.MintDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapMintsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/mints/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * PairDayDatas (current)
+ * Gets pairDayDatas.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDayDataDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapPairDayDatasCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/pairDayDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * PairHourDatas (current)
+ * Gets pairHourDatas.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairHourDataDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapPairHourDatasCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/pairHourDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Pairs (current)
+ * Gets pairs.
+ * @param {!string=} opt_id Pair contract address.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapPairsCurrent = function(opt_id, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/pairs/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Swaps (current)
+ * Gets swaps.
+ * @param {!string=} opt_pair Reference to pair.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapSwapsCurrent = function(opt_pair, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/swaps/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_pair !== undefined) {
+    queryParameters['pair'] = opt_pair;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * TokenDayDatas (current)
+ * Gets tokenDayDatas.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDayDataDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapTokenDayDatasCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/tokenDayDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Tokens (current)
+ * Gets tokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Transactions (current)
+ * Gets transactions.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TransactionDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapTransactionsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/transactions/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Users (current)
+ * Gets users.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.UserDTO>>}
+ */
+API.Client.SushiswapApi.prototype.sushiswapUsersCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/users/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

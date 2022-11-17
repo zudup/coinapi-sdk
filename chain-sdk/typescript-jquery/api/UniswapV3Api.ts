@@ -47,89 +47,11 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets bundlev3s.
-     * @summary BundleV3s (historical) 🔥
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id 
-     */
-    public uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/bundlev3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3BundleV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets bundles.
      * @summary Bundles (current)
      */
-    public uniswapV3GetBundlesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
+    public uniswapV3BundlesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3BundleDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/bundles/current';
@@ -170,101 +92,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BundleDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3BundleV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets burnv3s.
-     * @summary BurnV3s (historical) 🔥
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Transaction hash + \&#39;#\&#39; + index in mints Transaction array.
-     * @param pool Pool position is within.
-     * @param token0 Reference to token0 as stored in pool contract.
-     * @param token1 Reference to token1 as stored in pool contract.
-     */
-    public uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/burnv3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
-        if (token0 !== null && token0 !== undefined) {
-            queryParameters['token_0'] = <string><any>token0;
-        }
-        if (token1 !== null && token1 !== undefined) {
-            queryParameters['token_1'] = <string><any>token1;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3BurnV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BundleDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -275,19 +107,15 @@ export class UniswapV3Api {
     /**
      * Gets burns.
      * @summary Burns (current)
-     * @param filterPoolId 
      */
-    public uniswapV3GetBurnsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
+    public uniswapV3BurnsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3BurnDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/dapps/uniswapv3/burns/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -322,11 +150,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3BurnV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BurnDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3BurnV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BurnDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -335,14 +163,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets uniswapv3 day data.
-     * @summary DayData (current)
+     * Gets factorys.
+     * @summary Factorys (current)
      */
-    public uniswapV3GetDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
+    public uniswapV3FactorysCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/dayData/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/factorys/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -380,11 +208,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3UniswapDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3FactoryDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -393,77 +221,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets factory.
-     * @summary Factory (current)
-     */
-    public uniswapV3GetFactoryCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/factory/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3FactoryV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets factoryv3s.
-     * @summary FactoryV3s (historical) 🔥
+     * Gets bundles.
+     * @summary Bundles (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Factory address.
+     * @param id 
      */
-    public uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
+    public uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3BundleDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/factoryv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/bundles/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -516,11 +286,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BundleDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3FactoryV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BundleDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -529,22 +299,22 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets mintv3s.
-     * @summary MintV3s (historical) 🔥
+     * Gets burns.
+     * @summary Burns (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Transaction hash + \&#39;#\&#39; + index in mints Transaction array.
-     * @param pool Pool address.
+     * @param pool Pool position is within.
      * @param token0 Reference to token0 as stored in pool contract.
      * @param token1 Reference to token1 as stored in pool contract.
      */
-    public uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
+    public uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3BurnDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/mintv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/burns/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -606,11 +376,89 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3BurnDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3MintV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3BurnDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets factorys.
+     * @summary Factorys (historical) 🔥
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Factory address.
+     */
+    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/factorys/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3FactoryDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -620,246 +468,21 @@ export class UniswapV3Api {
 
     /**
      * Gets mints.
-     * @summary Mints (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetMintsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/mints/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3MintV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3MintV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets pooldaydatav3s.
-     * @summary PoolDayDataV3s (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
-     */
-    public uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/pooldaydatav3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets poolhourdatav3s.
-     * @summary PoolHourDataV3s (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
-     */
-    public uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolhourdatav3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets poolv3s.
-     * @summary PoolV3s (historical) 🔥
+     * @summary Mints (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Pool address.
+     * @param id Transaction hash + \&#39;#\&#39; + index in mints Transaction array.
+     * @param pool Pool address.
      * @param token0 Reference to token0 as stored in pool contract.
      * @param token1 Reference to token1 as stored in pool contract.
      */
-    public uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
+    public uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3MintDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/mints/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -877,6 +500,9 @@ export class UniswapV3Api {
         }
         if (id !== null && id !== undefined) {
             queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
         }
         if (token0 !== null && token0 !== undefined) {
             queryParameters['token_0'] = <string><any>token0;
@@ -918,11 +544,175 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3MintDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3MintDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets poolDayDatas.
+     * @summary PoolDayDatas (historical) 🔥
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param id 
+     * @param pool 
+     */
+    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PoolDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets poolHourDatas.
+     * @summary PoolHourDatas (historical) 🔥
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param id 
+     * @param pool 
+     */
+    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PoolHourDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -932,289 +722,20 @@ export class UniswapV3Api {
 
     /**
      * Gets pools.
-     * @summary Pools (current) 🔥
-     * @param filterPoolId 
-     */
-    public uniswapV3GetPoolsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/pools/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets pools day data.
-     * @summary PoolsDayData (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolsDayData/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets pools hour data.
-     * @summary PoolsHourData (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolsHourData/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PoolHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets positionsnapshotv3s.
-     * @summary PositionSnapshotV3s (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
-     */
-    public uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/positionsnapshotv3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PositionSnapshotV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets positionv3s.
-     * @summary PositionV3s (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id NFT token identifier.
-     * @param pool Pool position is within.
-     * @param token0 Reference to token0 as stored in pair contract.
-     * @param token1 Reference to token1 as stored in pair contract.
+     * @param id Pool address.
+     * @param token0 Reference to token0 as stored in pool contract.
+     * @param token1 Reference to token1 as stored in pool contract.
      */
-    public uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
+    public uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/positionv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/pools/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1232,9 +753,6 @@ export class UniswapV3Api {
         }
         if (id !== null && id !== undefined) {
             queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
         }
         if (token0 !== null && token0 !== undefined) {
             queryParameters['token_0'] = <string><any>token0;
@@ -1276,11 +794,93 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PositionV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PoolDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets positionSnapshots.
+     * @summary PositionSnapshots (historical) 🔥
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param id 
+     * @param pool 
+     */
+    public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/positionSnapshots/historical';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PositionSnapshotDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1290,145 +890,21 @@ export class UniswapV3Api {
 
     /**
      * Gets positions.
-     * @summary Positions (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetPositionsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/positions/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PositionV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PositionV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets positions snapshots.
-     * @summary PositionsSnapshots (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/positionSnapshots/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3PositionSnapshotV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets swapv3s.
-     * @summary SwapV3s (historical) 🔥
+     * @summary Positions (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
-     * @param pool Pool swap occured within.
+     * @param id NFT token identifier.
+     * @param pool Pool position is within.
      * @param token0 Reference to token0 as stored in pair contract.
      * @param token1 Reference to token1 as stored in pair contract.
      */
-    public uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
+    public uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/swapv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/positions/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1490,11 +966,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3SwapV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3PositionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1504,19 +980,47 @@ export class UniswapV3Api {
 
     /**
      * Gets swaps.
-     * @summary Swaps (current) 🔥
-     * @param filterPoolId 
+     * @summary Swaps (historical) 🔥
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+     * @param pool Pool swap occured within.
+     * @param token0 Reference to token0 as stored in pair contract.
+     * @param token1 Reference to token1 as stored in pair contract.
      */
-    public uniswapV3GetSwapsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
+    public uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3SwapDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/swaps/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/swaps/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+        if (token0 !== null && token0 !== undefined) {
+            queryParameters['token_0'] = <string><any>token0;
+        }
+        if (token1 !== null && token1 !== undefined) {
+            queryParameters['token_1'] = <string><any>token1;
         }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
@@ -1552,11 +1056,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3SwapV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3SwapDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3SwapV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3SwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1565,8 +1069,8 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tickdaydatav3s.
-     * @summary TickDayDataV3s (historical) 🔥
+     * Gets tickDayDatas.
+     * @summary TickDayDatas (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1574,11 +1078,11 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
+    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tickdaydatav3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1634,93 +1138,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TickDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets tickv3s.
-     * @summary TickV3s (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
-     */
-    public uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tickv3s/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
-        if (pool !== null && pool !== undefined) {
-            queryParameters['pool'] = <string><any>pool;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TickV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TickDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1730,19 +1152,39 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks.
-     * @summary Ticks (current)
-     * @param filterPoolId 
+     * @summary Ticks (historical) 🔥
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param id 
+     * @param pool 
      */
-    public uniswapV3GetTicksCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
+    public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TickDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/ticks/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/ticks/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
         }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
@@ -1778,11 +1220,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TickV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TickDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TickV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TickDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1791,81 +1233,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets ticks day data.
-     * @summary TicksDayData (current)
-     * @param filterPoolId 
-     */
-    public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/ticksDayData/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (filterPoolId !== null && filterPoolId !== undefined) {
-            queryParameters['filter_pool_id'] = <string><any>filterPoolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataV3DTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TickDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets tokenhourdatav3s.
-     * @summary TokenHourDataV3s (historical) 🔥
+     * Gets tokenHourDatas.
+     * @summary TokenHourDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address concatendated with date.
      */
-    public uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
+    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenhourdatav3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1918,11 +1298,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TokenHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenHourDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1931,7 +1311,7 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenv3daydatas.
+     * Gets tokenV3DayDatas.
      * @summary TokenV3DayDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1943,7 +1323,7 @@ export class UniswapV3Api {
     { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenv3daydatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2009,8 +1389,8 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenv3s.
-     * @summary TokenV3s (historical) 🔥
+     * Gets tokens.
+     * @summary Tokens (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2019,11 +1399,11 @@ export class UniswapV3Api {
      * @param symbol Token symbol.
      * @param name Token name.
      */
-    public uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
+    public uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokens/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2082,11 +1462,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TokenV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2095,20 +1475,36 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokens.
-     * @summary Tokens (current) 🔥
-     * @param filterTokenId 
+     * Gets transactions.
+     * @summary Transactions (historical) 🔥
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Transaction hash.
      */
-    public uniswapV3GetTokensCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
+    public uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TransactionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokens/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/transactions/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterTokenId !== null && filterTokenId !== undefined) {
-            queryParameters['filter_token_id'] = <string><any>filterTokenId;
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
+        }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
         }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
@@ -2144,11 +1540,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TransactionDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TokenV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TransactionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2157,21 +1553,683 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokens day data.
-     * @summary TokensDayData (current)
-     * @param filterTokenId 
+     * Gets uniswapDayDatas.
+     * @summary UniswapDayDatas (historical) 🔥
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Timestamp rounded to current day by dividing by 86400.
      */
-    public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
+    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokensDayData/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterTokenId !== null && filterTokenId !== undefined) {
-            queryParameters['filter_token_id'] = <string><any>filterTokenId;
+        if (startBlock !== null && startBlock !== undefined) {
+            queryParameters['startBlock'] = <string><any>startBlock;
         }
+        if (endBlock !== null && endBlock !== undefined) {
+            queryParameters['endBlock'] = <string><any>endBlock;
+        }
+        if (startDate !== null && startDate !== undefined) {
+            queryParameters['startDate'] = startDate.toISOString();
+        }
+        if (endDate !== null && endDate !== undefined) {
+            queryParameters['endDate'] = endDate.toISOString();
+        }
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3UniswapDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets mints.
+     * @summary Mints (current)
+     */
+    public uniswapV3MintsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3MintDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/mints/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3MintDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3MintDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets poolDayDatas.
+     * @summary PoolDayDatas (current)
+     */
+    public uniswapV3PoolDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PoolDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets poolHourDatas.
+     * @summary PoolHourDatas (current)
+     */
+    public uniswapV3PoolHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PoolHourDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets pools.
+     * @summary Pools (current)
+     * @param id Pool address.
+     */
+    public uniswapV3PoolsCurrent(id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PoolDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/pools/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (id !== null && id !== undefined) {
+            queryParameters['id'] = <string><any>id;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PoolDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PoolDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets positionSnapshots.
+     * @summary PositionSnapshots (current)
+     */
+    public uniswapV3PositionSnapshotsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/positionSnapshots/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PositionSnapshotDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets positions.
+     * @summary Positions (current)
+     */
+    public uniswapV3PositionsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3PositionDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/positions/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3PositionDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3PositionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets swaps.
+     * @summary Swaps (current)
+     * @param pool Pool swap occured within.
+     */
+    public uniswapV3SwapsCurrent(pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3SwapDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/swaps/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        if (pool !== null && pool !== undefined) {
+            queryParameters['pool'] = <string><any>pool;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3SwapDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3SwapDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets tickDayDatas.
+     * @summary TickDayDatas (current)
+     */
+    public uniswapV3TickDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3TickDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets ticks.
+     * @summary Ticks (current)
+     */
+    public uniswapV3TicksCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TickDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/ticks/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3TickDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3TickDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets tokenHourDatas.
+     * @summary TokenHourDatas (current)
+     */
+    public uniswapV3TokenHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.UniswapV3TokenHourDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets tokenV3DayDatas.
+     * @summary TokenV3DayDatas (current)
+     */
+    public uniswapV3TokenV3DayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -2219,21 +2277,17 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokens hour data.
-     * @summary TokensHourData (current)
-     * @param filterTokenId 
+     * Gets tokens.
+     * @summary Tokens (current)
      */
-    public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
+    public uniswapV3TokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokensHourData/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokens/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (filterTokenId !== null && filterTokenId !== undefined) {
-            queryParameters['filter_token_id'] = <string><any>filterTokenId;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -2268,11 +2322,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TokenDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TokenHourDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2281,37 +2335,17 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets transactionv3s.
-     * @summary TransactionV3s (historical) 🔥
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Transaction hash.
+     * Gets transactions.
+     * @summary Transactions (current)
      */
-    public uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3TransactionV3DTO>;  },
+    public uniswapV3TransactionsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3TransactionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/transactionv3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/transactions/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -2346,11 +2380,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3TransactionV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3TransactionDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3TransactionV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3TransactionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2359,37 +2393,17 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets uniswapdaydatav3s.
-     * @summary UniswapDayDataV3s (historical) 🔥
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Timestamp rounded to current day by dividing by 86400.
+     * Gets uniswapDayDatas.
+     * @summary UniswapDayDatas (current)
      */
-    public uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
+    public uniswapV3UniswapDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapdaydatav3s/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (id !== null && id !== undefined) {
-            queryParameters['id'] = <string><any>id;
-        }
 
         localVarPath = localVarPath + "?" + $.param(queryParameters);
         // to determine the Content-Type header
@@ -2424,11 +2438,11 @@ export class UniswapV3Api {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
+            { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: Array<models.UniswapV3UniswapDayDataV3DTO>, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: Array<models.UniswapV3UniswapDayDataDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

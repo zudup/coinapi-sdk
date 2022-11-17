@@ -32,25 +32,47 @@ describe 'UniswapV2Api' do
     end
   end
 
-  # unit tests for uniswap_v2_get_bundle_v2s__historical
-  # BundleV2s (historical) 🔥
-  # Gets bundlev2s.
+  # unit tests for uniswap_v2_bundles__current
+  # Bundles (current)
+  # Gets bundles.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2BundleDTO>]
+  describe 'uniswap_v2_bundles__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_burns__current
+  # Burns (current)
+  # Gets burns.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2BurnDTO>]
+  describe 'uniswap_v2_burns__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_get_bundles__historical
+  # Bundles (historical) 🔥
+  # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Constant 1.
-  # @return [Array<UniswapV2BundleV2DTO>]
-  describe 'uniswap_v2_get_bundle_v2s__historical test' do
+  # @return [Array<UniswapV2BundleDTO>]
+  describe 'uniswap_v2_get_bundles__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_burn_v2s__historical
-  # BurnV2s (historical) 🔥
-  # Gets burnv2s.
+  # unit tests for uniswap_v2_get_burns__historical
+  # Burns (historical) 🔥
+  # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -58,16 +80,16 @@ describe 'UniswapV2Api' do
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Transaction hash plus index in the transaction burn array
   # @option opts [String] :pair Reference to pair.
-  # @return [Array<UniswapV2BurnV2DTO>]
-  describe 'uniswap_v2_get_burn_v2s__historical test' do
+  # @return [Array<UniswapV2BurnDTO>]
+  describe 'uniswap_v2_get_burns__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_liquidity_position_snapshot_v2s__historical
-  # LiquidityPositionSnapshotV2s (historical) 🔥
-  # Gets liquiditypositionsnapshotv2s.
+  # unit tests for uniswap_v2_get_liquidity_position_snapshots__historical
+  # LiquidityPositionSnapshots (historical) 🔥
+  # Gets liquidityPositionSnapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -76,16 +98,16 @@ describe 'UniswapV2Api' do
   # @option opts [String] :id 
   # @option opts [String] :user 
   # @option opts [String] :pair 
-  # @return [Array<UniswapV2LiquidityPositionSnapshotV2DTO>]
-  describe 'uniswap_v2_get_liquidity_position_snapshot_v2s__historical test' do
+  # @return [Array<UniswapV2LiquidityPositionSnapshotDTO>]
+  describe 'uniswap_v2_get_liquidity_position_snapshots__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_liquidity_position_v2s__historical
-  # LiquidityPositionV2s (historical) 🔥
-  # Gets liquiditypositionv2s.
+  # unit tests for uniswap_v2_get_liquidity_positions__historical
+  # LiquidityPositions (historical) 🔥
+  # Gets liquidityPositions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -94,16 +116,16 @@ describe 'UniswapV2Api' do
   # @option opts [String] :id User address and pair address concatenated with a dash.
   # @option opts [String] :user Reference to user.
   # @option opts [String] :pair Reference to the pair liquidity is being provided on.
-  # @return [Array<UniswapV2LiquidityPositionV2DTO>]
-  describe 'uniswap_v2_get_liquidity_position_v2s__historical test' do
+  # @return [Array<UniswapV2LiquidityPositionDTO>]
+  describe 'uniswap_v2_get_liquidity_positions__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_mint_v2s__historical
-  # MintV2s (historical) 🔥
-  # Gets mintv2s.
+  # unit tests for uniswap_v2_get_mints__historical
+  # Mints (historical) 🔥
+  # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -111,16 +133,16 @@ describe 'UniswapV2Api' do
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Transaction hash plus index in the transaction mint array.
   # @option opts [String] :pair Reference to pair.
-  # @return [Array<UniswapV2MintV2DTO>]
-  describe 'uniswap_v2_get_mint_v2s__historical test' do
+  # @return [Array<UniswapV2MintDTO>]
+  describe 'uniswap_v2_get_mints__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_pair_day_data_v2s__historical
-  # PairDayDataV2s (historical) 🔥
-  # Gets pairdaydatav2s.
+  # unit tests for uniswap_v2_get_pair_day_datas__historical
+  # PairDayDatas (historical) 🔥
+  # Gets pairDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -129,16 +151,16 @@ describe 'UniswapV2Api' do
   # @option opts [String] :id 
   # @option opts [String] :token_0 Reference to token0.
   # @option opts [String] :token_1 Reference to token1.
-  # @return [Array<UniswapV2PairDayDataV2DTO>]
-  describe 'uniswap_v2_get_pair_day_data_v2s__historical test' do
+  # @return [Array<UniswapV2PairDayDataDTO>]
+  describe 'uniswap_v2_get_pair_day_datas__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_pair_hour_data_v2s__historical
-  # PairHourDataV2s (historical) 🔥
-  # Gets pairhourdatav2s.
+  # unit tests for uniswap_v2_get_pair_hour_datas__historical
+  # PairHourDatas (historical) 🔥
+  # Gets pairHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -146,16 +168,16 @@ describe 'UniswapV2Api' do
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id 
   # @option opts [String] :pair Address for pair contract.
-  # @return [Array<UniswapV2PairHourDataV2DTO>]
-  describe 'uniswap_v2_get_pair_hour_data_v2s__historical test' do
+  # @return [Array<UniswapV2PairHourDataDTO>]
+  describe 'uniswap_v2_get_pair_hour_datas__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_pair_v2s__historical
-  # PairV2s (historical) 🔥
-  # Gets pairv2s.
+  # unit tests for uniswap_v2_get_pairs__historical
+  # Pairs (historical) 🔥
+  # Gets pairs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -164,8 +186,8 @@ describe 'UniswapV2Api' do
   # @option opts [String] :id Pair contract address.
   # @option opts [String] :token_0 Reference to token0 as stored in pair contract.
   # @option opts [String] :token_1 Reference to token1 as stored in pair contract.
-  # @return [Array<UniswapV2PairV2DTO>]
-  describe 'uniswap_v2_get_pair_v2s__historical test' do
+  # @return [Array<UniswapV2PairDTO>]
+  describe 'uniswap_v2_get_pairs__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -176,25 +198,8 @@ describe 'UniswapV2Api' do
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
-  # @return [Array<UniswapV2PairV2DTO>]
+  # @return [Array<UniswapV2PairDTO>]
   describe 'uniswap_v2_get_pools__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_swap_v2s__historical
-  # SwapV2s (historical) 🔥
-  # Gets swapv2s.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  # @option opts [Time] :end_date The end date of timeframe.
-  # @option opts [String] :id Transaction hash plus index in Transaction swap array.
-  # @option opts [String] :pair Reference to pair.
-  # @return [Array<UniswapV2SwapV2DTO>]
-  describe 'uniswap_v2_get_swap_v2s__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -204,42 +209,41 @@ describe 'UniswapV2Api' do
   # Swaps (current) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
-  # @return [Array<UniswapV2SwapV2DTO>]
+  # @return [Array<UniswapV2SwapDTO>]
   describe 'uniswap_v2_get_swaps__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_token_day_data_v2s__historical
-  # TokenDayDataV2s (historical) 🔥
-  # Gets tokendaydatav2s.
+  # unit tests for uniswap_v2_get_swaps__historical
+  # Swaps (historical) 🔥
+  # Gets swaps.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Transaction hash plus index in Transaction swap array.
+  # @option opts [String] :pair Reference to pair.
+  # @return [Array<UniswapV2SwapDTO>]
+  describe 'uniswap_v2_get_swaps__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_get_token_day_datas__historical
+  # TokenDayDatas (historical) 🔥
+  # Gets tokenDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
-  # @return [Array<UniswapV2TokenDayDataV2DTO>]
-  describe 'uniswap_v2_get_token_day_data_v2s__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_token_v2s__historical
-  # TokenV2s (historical) 🔥
-  # Gets tokenv2s.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  # @option opts [Time] :end_date The end date of timeframe.
-  # @option opts [String] :id Token address.
-  # @option opts [String] :symbol Token symbol.
-  # @option opts [String] :name Token name.
-  # @return [Array<UniswapV2TokenV2DTO>]
-  describe 'uniswap_v2_get_token_v2s__historical test' do
+  # @return [Array<UniswapV2TokenDayDataDTO>]
+  describe 'uniswap_v2_get_token_day_datas__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -249,72 +253,212 @@ describe 'UniswapV2Api' do
   # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
-  # @return [Array<UniswapV2TokenV2DTO>]
+  # @return [Array<UniswapV2TokenDTO>]
   describe 'uniswap_v2_get_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_transaction_v2s__historical
-  # TransactionV2s (historical) 🔥
-  # Gets transactionv2s.
+  # unit tests for uniswap_v2_get_tokens__historical
+  # Tokens (historical) 🔥
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Token address.
+  # @option opts [String] :symbol Token symbol.
+  # @option opts [String] :name Token name.
+  # @return [Array<UniswapV2TokenDTO>]
+  describe 'uniswap_v2_get_tokens__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_get_transactions__historical
+  # Transactions (historical) 🔥
+  # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Ethereum transaction hash.
-  # @return [Array<UniswapV2TransactionV2DTO>]
-  describe 'uniswap_v2_get_transaction_v2s__historical test' do
+  # @return [Array<UniswapV2TransactionDTO>]
+  describe 'uniswap_v2_get_transactions__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_uniswap_day_data_v2s__historical
-  # UniswapDayDataV2s (historical) 🔥
-  # Gets uniswapdaydatav2s.
+  # unit tests for uniswap_v2_get_uniswap_day_datas__historical
+  # UniswapDayDatas (historical) 🔥
+  # Gets uniswapDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
-  # @return [Array<UniswapV2UniswapDayDataV2DTO>]
-  describe 'uniswap_v2_get_uniswap_day_data_v2s__historical test' do
+  # @return [Array<UniswapV2UniswapDayDataDTO>]
+  describe 'uniswap_v2_get_uniswap_day_datas__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_uniswap_factory_v2s__historical
-  # UniswapFactoryV2s (historical) 🔥
-  # Gets uniswapfactoryv2s.
+  # unit tests for uniswap_v2_get_uniswap_factorys__historical
+  # UniswapFactorys (historical) 🔥
+  # Gets uniswapFactorys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Factory address.
-  # @return [Array<UniswapV2UniswapFactoryV2DTO>]
-  describe 'uniswap_v2_get_uniswap_factory_v2s__historical test' do
+  # @return [Array<UniswapV2UniswapFactoryDTO>]
+  describe 'uniswap_v2_get_uniswap_factorys__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for uniswap_v2_get_user_v2s__historical
-  # UserV2s (historical) 🔥
-  # Gets userv2s.
+  # unit tests for uniswap_v2_get_users__historical
+  # Users (historical) 🔥
+  # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id User address.
-  # @return [Array<UniswapV2UserV2DTO>]
-  describe 'uniswap_v2_get_user_v2s__historical test' do
+  # @return [Array<UniswapV2UserDTO>]
+  describe 'uniswap_v2_get_users__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_liquidity_position_snapshots__current
+  # LiquidityPositionSnapshots (current)
+  # Gets liquidityPositionSnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2LiquidityPositionSnapshotDTO>]
+  describe 'uniswap_v2_liquidity_position_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_liquidity_positions__current
+  # LiquidityPositions (current)
+  # Gets liquidityPositions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2LiquidityPositionDTO>]
+  describe 'uniswap_v2_liquidity_positions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_mints__current
+  # Mints (current)
+  # Gets mints.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2MintDTO>]
+  describe 'uniswap_v2_mints__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_pair_day_datas__current
+  # PairDayDatas (current)
+  # Gets pairDayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2PairDayDataDTO>]
+  describe 'uniswap_v2_pair_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_pair_hour_datas__current
+  # PairHourDatas (current)
+  # Gets pairHourDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2PairHourDataDTO>]
+  describe 'uniswap_v2_pair_hour_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_pairs__current
+  # Pairs (current)
+  # Gets pairs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Pair contract address.
+  # @return [Array<UniswapV2PairDTO>]
+  describe 'uniswap_v2_pairs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_token_day_datas__current
+  # TokenDayDatas (current)
+  # Gets tokenDayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2TokenDayDataDTO>]
+  describe 'uniswap_v2_token_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_transactions__current
+  # Transactions (current)
+  # Gets transactions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2TransactionDTO>]
+  describe 'uniswap_v2_transactions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_uniswap_day_datas__current
+  # UniswapDayDatas (current)
+  # Gets uniswapDayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2UniswapDayDataDTO>]
+  describe 'uniswap_v2_uniswap_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_uniswap_factorys__current
+  # UniswapFactorys (current)
+  # Gets uniswapFactorys.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2UniswapFactoryDTO>]
+  describe 'uniswap_v2_uniswap_factorys__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_users__current
+  # Users (current)
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2UserDTO>]
+  describe 'uniswap_v2_users__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

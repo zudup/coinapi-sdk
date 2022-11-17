@@ -9,6 +9,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**dexBatchsCurrent**](DexApi.md#dexbatchscurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexDepositsCurrent**](DexApi.md#dexdepositscurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**dexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
 [**dexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
 [**dexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
@@ -18,9 +20,96 @@ Method | HTTP request | Description
 [**dexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
 [**dexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
 [**dexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawrequests/historical | WithdrawRequests (historical) 🔥
+[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
 [**dexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dexOrdersCurrent**](DexApi.md#dexorderscurrent) | **GET** /dapps/dex/orders/current | Orders (current)
+[**dexPricesCurrent**](DexApi.md#dexpricescurrent) | **GET** /dapps/dex/prices/current | Prices (current)
+[**dexSolutionsCurrent**](DexApi.md#dexsolutionscurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
+[**dexStatssCurrent**](DexApi.md#dexstatsscurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexTokensCurrent**](DexApi.md#dextokenscurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
+[**dexTradesCurrent**](DexApi.md#dextradescurrent) | **GET** /dapps/dex/trades/current | Trades (current)
+[**dexUsersCurrent**](DexApi.md#dexuserscurrent) | **GET** /dapps/dex/users/current | Users (current)
+[**dexWithdrawRequestsCurrent**](DexApi.md#dexwithdrawrequestscurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
+[**dexWithdrawsCurrent**](DexApi.md#dexwithdrawscurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
+
+# **dexBatchsCurrent**
+> List<DexBatchDTO> dexBatchsCurrent()
+
+Batchs (current)
+
+Gets batchs.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexBatchsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexBatchsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexBatchDTO>**](DexBatchDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexDepositsCurrent**
+> List<DexDepositDTO> dexDepositsCurrent()
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexDepositsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexDepositsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexDepositDTO>**](DexDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dexGetBatchsHistorical**
 > List<DexBatchDTO> dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
@@ -502,7 +591,7 @@ No authorization required
 
 WithdrawRequests (historical) 🔥
 
-Gets withdrawrequests.
+Gets withdrawRequests.
 
 ### Example
 ```dart
@@ -587,6 +676,357 @@ Name | Type | Description  | Notes
  **endDate** | **DateTime**|  | [optional] 
  **id** | **String**|  | [optional] 
  **user** | **String**|  | [optional] 
+
+### Return type
+
+[**List<DexWithdrawDTO>**](DexWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexOrdersCurrent**
+> List<DexOrderDTO> dexOrdersCurrent()
+
+Orders (current)
+
+Gets orders.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexOrdersCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexOrdersCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexOrderDTO>**](DexOrderDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexPricesCurrent**
+> List<DexPriceDTO> dexPricesCurrent()
+
+Prices (current)
+
+Gets prices.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexPricesCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexPricesCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexPriceDTO>**](DexPriceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexSolutionsCurrent**
+> List<DexSolutionDTO> dexSolutionsCurrent()
+
+Solutions (current)
+
+Gets solutions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexSolutionsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexSolutionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexSolutionDTO>**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexStatssCurrent**
+> List<DexStatsDTO> dexStatssCurrent()
+
+Statss (current)
+
+Gets statss.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexStatssCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexStatssCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexStatsDTO>**](DexStatsDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexTokensCurrent**
+> List<DexTokenDTO> dexTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexTokensCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexTokensCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexTokenDTO>**](DexTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexTradesCurrent**
+> List<DexTradeDTO> dexTradesCurrent()
+
+Trades (current)
+
+Gets trades.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexTradesCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexTradesCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexTradeDTO>**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexUsersCurrent**
+> List<DexUserDTO> dexUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexUsersCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexUsersCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexUserDTO>**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexWithdrawRequestsCurrent**
+> List<DexWithdrawRequestDTO> dexWithdrawRequestsCurrent()
+
+WithdrawRequests (current)
+
+Gets withdrawRequests.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexWithdrawRequestsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexWithdrawRequestsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<DexWithdrawRequestDTO>**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexWithdrawsCurrent**
+> List<DexWithdrawDTO> dexWithdrawsCurrent()
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+
+try {
+    final result = api_instance.dexWithdrawsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexWithdrawsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -6,25 +6,39 @@ All URIs are relative to *https://onchain.coinapi.io*
 |------------- | ------------- | -------------|
 | [**curveGetExchangesCurrent**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥 |
 | [**dexGetTradesCurrent**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥 |
+| [**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current) |
+| [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current) |
+| [**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current) |
+| [**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current) |
 | [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥 |
 | [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥 |
-| [**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥 |
+| [**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥 |
 | [**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥 |
-| [**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥 |
-| [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥 |
-| [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥 |
+| [**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥 |
+| [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥 |
+| [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥 |
 | [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥 |
-| [**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥 |
-| [**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥 |
+| [**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
+| [**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
 | [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥 |
 | [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥 |
-| [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥 |
 | [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
-| [**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥 |
-| [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥 |
+| [**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
 | [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
 | [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥 |
 | [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥 |
+| [**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current) |
+| [**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current) |
+| [**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current) |
+| [**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current) |
+| [**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current) |
+| [**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current) |
+| [**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current) |
+| [**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) |
+| [**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current) |
+| [**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) |
+| [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current) |
+| [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current) |
 
 
 <a name="curveGetExchangesCurrent"></a>
@@ -128,6 +142,238 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapBundlesCurrent"></a>
+# **sushiswapBundlesCurrent**
+> List&lt;SushiswapBundleDTO&gt; sushiswapBundlesCurrent()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapBundleDTO> result = apiInstance.sushiswapBundlesCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapBundlesCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapBurnsCurrent"></a>
+# **sushiswapBurnsCurrent**
+> List&lt;SushiswapBurnDTO&gt; sushiswapBurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapBurnDTO> result = apiInstance.sushiswapBurnsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapBurnsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapDayDatasCurrent"></a>
+# **sushiswapDayDatasCurrent**
+> List&lt;SushiswapDayDataDTO&gt; sushiswapDayDatasCurrent()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapDayDataDTO> result = apiInstance.sushiswapDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapFactorysCurrent"></a>
+# **sushiswapFactorysCurrent**
+> List&lt;SushiswapFactoryDTO&gt; sushiswapFactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapFactoryDTO> result = apiInstance.sushiswapFactorysCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapFactorysCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -291,7 +537,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 ```java
@@ -431,7 +677,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 ```java
@@ -501,7 +747,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```java
@@ -575,7 +821,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 ```java
@@ -721,7 +967,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 ```java
@@ -797,7 +1043,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 ```java
@@ -997,64 +1243,6 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetSwapsCurrent"></a>
-# **sushiswapGetSwapsCurrent**
-> List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SushiswapApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    try {
-      List<SushiswapSwapDTO> result = apiInstance.sushiswapGetSwapsCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
 <a name="sushiswapGetSwapsHistorical"></a>
 # **sushiswapGetSwapsHistorical**
 > List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
@@ -1133,7 +1321,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 ```java
@@ -1182,64 +1370,6 @@ public class Example {
 ### Return type
 
 [**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="sushiswapGetTokensCurrent"></a>
-# **sushiswapGetTokensCurrent**
-> List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.SushiswapApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    try {
-      List<SushiswapTokenDTO> result = apiInstance.sushiswapGetTokensCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1450,6 +1580,710 @@ public class Example {
 | **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
 | **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
 | **id** | **String**| User address. | [optional] |
+
+### Return type
+
+[**List&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapHourDatasCurrent"></a>
+# **sushiswapHourDatasCurrent**
+> List&lt;SushiswapHourDataDTO&gt; sushiswapHourDatasCurrent()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapHourDataDTO> result = apiInstance.sushiswapHourDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapHourDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapLiquidityPositionSnapshotsCurrent"></a>
+# **sushiswapLiquidityPositionSnapshotsCurrent**
+> List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapLiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.sushiswapLiquidityPositionSnapshotsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapLiquidityPositionSnapshotsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapLiquidityPositionsCurrent"></a>
+# **sushiswapLiquidityPositionsCurrent**
+> List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapLiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapLiquidityPositionDTO> result = apiInstance.sushiswapLiquidityPositionsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapLiquidityPositionsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapMintsCurrent"></a>
+# **sushiswapMintsCurrent**
+> List&lt;SushiswapMintDTO&gt; sushiswapMintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapMintDTO> result = apiInstance.sushiswapMintsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapMintsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapPairDayDatasCurrent"></a>
+# **sushiswapPairDayDatasCurrent**
+> List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapPairDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapPairHourDatasCurrent"></a>
+# **sushiswapPairHourDatasCurrent**
+> List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapPairHourDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapPairsCurrent"></a>
+# **sushiswapPairsCurrent**
+> List&lt;SushiswapPairDTO&gt; sushiswapPairsCurrent(id)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    String id = "id_example"; // String | Pair contract address.
+    try {
+      List<SushiswapPairDTO> result = apiInstance.sushiswapPairsCurrent(id);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapPairsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Pair contract address. | [optional] |
+
+### Return type
+
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapSwapsCurrent"></a>
+# **sushiswapSwapsCurrent**
+> List&lt;SushiswapSwapDTO&gt; sushiswapSwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    String pair = "pair_example"; // String | Reference to pair.
+    try {
+      List<SushiswapSwapDTO> result = apiInstance.sushiswapSwapsCurrent(pair);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapSwapsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pair** | **String**| Reference to pair. | [optional] |
+
+### Return type
+
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapTokenDayDatasCurrent"></a>
+# **sushiswapTokenDayDatasCurrent**
+> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapTokenDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapTokensCurrent"></a>
+# **sushiswapTokensCurrent**
+> List&lt;SushiswapTokenDTO&gt; sushiswapTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapTokenDTO> result = apiInstance.sushiswapTokensCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapTokensCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapTransactionsCurrent"></a>
+# **sushiswapTransactionsCurrent**
+> List&lt;SushiswapTransactionDTO&gt; sushiswapTransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapTransactionDTO> result = apiInstance.sushiswapTransactionsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapTransactionsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="sushiswapUsersCurrent"></a>
+# **sushiswapUsersCurrent**
+> List&lt;SushiswapUserDTO&gt; sushiswapUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SushiswapApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    SushiswapApi apiInstance = new SushiswapApi(defaultClient);
+    try {
+      List<SushiswapUserDTO> result = apiInstance.sushiswapUsersCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SushiswapApi#sushiswapUsersCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

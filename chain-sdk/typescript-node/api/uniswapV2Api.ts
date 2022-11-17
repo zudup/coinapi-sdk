@@ -15,21 +15,21 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { UniswapV2BundleV2DTO } from '../model/uniswapV2BundleV2DTO';
-import { UniswapV2BurnV2DTO } from '../model/uniswapV2BurnV2DTO';
-import { UniswapV2LiquidityPositionSnapshotV2DTO } from '../model/uniswapV2LiquidityPositionSnapshotV2DTO';
-import { UniswapV2LiquidityPositionV2DTO } from '../model/uniswapV2LiquidityPositionV2DTO';
-import { UniswapV2MintV2DTO } from '../model/uniswapV2MintV2DTO';
-import { UniswapV2PairDayDataV2DTO } from '../model/uniswapV2PairDayDataV2DTO';
-import { UniswapV2PairHourDataV2DTO } from '../model/uniswapV2PairHourDataV2DTO';
-import { UniswapV2PairV2DTO } from '../model/uniswapV2PairV2DTO';
-import { UniswapV2SwapV2DTO } from '../model/uniswapV2SwapV2DTO';
-import { UniswapV2TokenDayDataV2DTO } from '../model/uniswapV2TokenDayDataV2DTO';
-import { UniswapV2TokenV2DTO } from '../model/uniswapV2TokenV2DTO';
-import { UniswapV2TransactionV2DTO } from '../model/uniswapV2TransactionV2DTO';
-import { UniswapV2UniswapDayDataV2DTO } from '../model/uniswapV2UniswapDayDataV2DTO';
-import { UniswapV2UniswapFactoryV2DTO } from '../model/uniswapV2UniswapFactoryV2DTO';
-import { UniswapV2UserV2DTO } from '../model/uniswapV2UserV2DTO';
+import { UniswapV2BundleDTO } from '../model/uniswapV2BundleDTO';
+import { UniswapV2BurnDTO } from '../model/uniswapV2BurnDTO';
+import { UniswapV2LiquidityPositionDTO } from '../model/uniswapV2LiquidityPositionDTO';
+import { UniswapV2LiquidityPositionSnapshotDTO } from '../model/uniswapV2LiquidityPositionSnapshotDTO';
+import { UniswapV2MintDTO } from '../model/uniswapV2MintDTO';
+import { UniswapV2PairDTO } from '../model/uniswapV2PairDTO';
+import { UniswapV2PairDayDataDTO } from '../model/uniswapV2PairDayDataDTO';
+import { UniswapV2PairHourDataDTO } from '../model/uniswapV2PairHourDataDTO';
+import { UniswapV2SwapDTO } from '../model/uniswapV2SwapDTO';
+import { UniswapV2TokenDTO } from '../model/uniswapV2TokenDTO';
+import { UniswapV2TokenDayDataDTO } from '../model/uniswapV2TokenDayDataDTO';
+import { UniswapV2TransactionDTO } from '../model/uniswapV2TransactionDTO';
+import { UniswapV2UniswapDayDataDTO } from '../model/uniswapV2UniswapDayDataDTO';
+import { UniswapV2UniswapFactoryDTO } from '../model/uniswapV2UniswapFactoryDTO';
+import { UniswapV2UserDTO } from '../model/uniswapV2UserDTO';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 
@@ -101,16 +101,140 @@ export class UniswapV2Api {
     }
 
     /**
-     * Gets bundlev2s.
-     * @summary BundleV2s (historical) 🔥
+     * Gets bundles.
+     * @summary Bundles (current)
+     */
+    public async uniswapV2BundlesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/bundles/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BundleDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets burns.
+     * @summary Burns (current)
+     */
+    public async uniswapV2BurnsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/burns/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BurnDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets bundles.
+     * @summary Bundles (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Constant 1.
      */
-    public async uniswapV2GetBundleV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/bundlev2s/historical';
+    public async uniswapV2GetBundlesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/bundles/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -171,13 +295,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BundleDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BundleV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BundleDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -188,8 +312,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets burnv2s.
-     * @summary BurnV2s (historical) 🔥
+     * Gets burns.
+     * @summary Burns (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -197,8 +321,8 @@ export class UniswapV2Api {
      * @param id Transaction hash plus index in the transaction burn array
      * @param pair Reference to pair.
      */
-    public async uniswapV2GetBurnV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/burnv2s/historical';
+    public async uniswapV2GetBurnsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/burns/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -263,13 +387,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2BurnDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BurnV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2BurnDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -280,8 +404,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets liquiditypositionsnapshotv2s.
-     * @summary LiquidityPositionSnapshotV2s (historical) 🔥
+     * Gets liquidityPositionSnapshots.
+     * @summary LiquidityPositionSnapshots (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -290,8 +414,8 @@ export class UniswapV2Api {
      * @param user 
      * @param pair 
      */
-    public async uniswapV2GetLiquidityPositionSnapshotV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical';
+    public async uniswapV2GetLiquidityPositionSnapshotsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositionSnapshots/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -360,13 +484,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionSnapshotV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionSnapshotDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -377,8 +501,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets liquiditypositionv2s.
-     * @summary LiquidityPositionV2s (historical) 🔥
+     * Gets liquidityPositions.
+     * @summary LiquidityPositions (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -387,8 +511,8 @@ export class UniswapV2Api {
      * @param user Reference to user.
      * @param pair Reference to the pair liquidity is being provided on.
      */
-    public async uniswapV2GetLiquidityPositionV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/liquiditypositionv2s/historical';
+    public async uniswapV2GetLiquidityPositionsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositions/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -457,13 +581,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -474,8 +598,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets mintv2s.
-     * @summary MintV2s (historical) 🔥
+     * Gets mints.
+     * @summary Mints (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -483,8 +607,8 @@ export class UniswapV2Api {
      * @param id Transaction hash plus index in the transaction mint array.
      * @param pair Reference to pair.
      */
-    public async uniswapV2GetMintV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/mintv2s/historical';
+    public async uniswapV2GetMintsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/mints/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -549,13 +673,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2MintV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2MintDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -566,8 +690,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairdaydatav2s.
-     * @summary PairDayDataV2s (historical) 🔥
+     * Gets pairDayDatas.
+     * @summary PairDayDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -576,8 +700,8 @@ export class UniswapV2Api {
      * @param token0 Reference to token0.
      * @param token1 Reference to token1.
      */
-    public async uniswapV2GetPairDayDataV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairdaydatav2s/historical';
+    public async uniswapV2GetPairDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayDatas/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -646,13 +770,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDayDataV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDayDataDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -663,8 +787,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairhourdatav2s.
-     * @summary PairHourDataV2s (historical) 🔥
+     * Gets pairHourDatas.
+     * @summary PairHourDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -672,8 +796,8 @@ export class UniswapV2Api {
      * @param id 
      * @param pair Address for pair contract.
      */
-    public async uniswapV2GetPairHourDataV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairhourdatav2s/historical';
+    public async uniswapV2GetPairHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourDatas/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -738,13 +862,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairHourDataV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairHourDataDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -755,8 +879,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairv2s.
-     * @summary PairV2s (historical) 🔥
+     * Gets pairs.
+     * @summary Pairs (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -765,8 +889,8 @@ export class UniswapV2Api {
      * @param token0 Reference to token0 as stored in pair contract.
      * @param token1 Reference to token1 as stored in pair contract.
      */
-    public async uniswapV2GetPairV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairv2s/historical';
+    public async uniswapV2GetPairsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairs/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -835,13 +959,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -856,7 +980,7 @@ export class UniswapV2Api {
      * @summary Pools (current) 🔥
      * @param filterPoolId 
      */
-    public async uniswapV2GetPoolsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }> {
+    public async uniswapV2GetPoolsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/pools/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -902,13 +1026,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -919,8 +1043,70 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets swapv2s.
-     * @summary SwapV2s (historical) 🔥
+     * Gets swaps.
+     * @summary Swaps (current) 🔥
+     */
+    public async uniswapV2GetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/swaps/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2SwapDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets swaps.
+     * @summary Swaps (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -928,8 +1114,8 @@ export class UniswapV2Api {
      * @param id Transaction hash plus index in Transaction swap array.
      * @param pair Reference to pair.
      */
-    public async uniswapV2GetSwapV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/swapv2s/historical';
+    public async uniswapV2GetSwapsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/swaps/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -994,13 +1180,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2SwapV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2SwapDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1011,78 +1197,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets swaps.
-     * @summary Swaps (current) 🔥
-     */
-    public async uniswapV2GetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/swaps/current';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2SwapV2DTO>");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * Gets tokendaydatav2s.
-     * @summary TokenDayDataV2s (historical) 🔥
+     * Gets tokenDayDatas.
+     * @summary TokenDayDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
      */
-    public async uniswapV2GetTokenDayDataV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/tokendaydatav2s/historical';
+    public async uniswapV2GetTokenDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayDatas/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1143,13 +1267,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenDayDataV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenDayDataDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1160,8 +1284,70 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets tokenv2s.
-     * @summary TokenV2s (historical) 🔥
+     * Gets tokens.
+     * @summary Tokens (current) 🔥
+     */
+    public async uniswapV2GetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokens/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets tokens.
+     * @summary Tokens (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1170,8 +1356,8 @@ export class UniswapV2Api {
      * @param symbol Token symbol.
      * @param name Token name.
      */
-    public async uniswapV2GetTokenV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenv2s/historical';
+    public async uniswapV2GetTokensHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokens/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1240,13 +1426,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1257,78 +1443,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets tokens.
-     * @summary Tokens (current) 🔥
-     */
-    public async uniswapV2GetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/tokens/current';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenV2DTO>");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * Gets transactionv2s.
-     * @summary TransactionV2s (historical) 🔥
+     * Gets transactions.
+     * @summary Transactions (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Ethereum transaction hash.
      */
-    public async uniswapV2GetTransactionV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/transactionv2s/historical';
+    public async uniswapV2GetTransactionsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/transactions/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1389,13 +1513,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TransactionV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TransactionDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1406,16 +1530,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapdaydatav2s.
-     * @summary UniswapDayDataV2s (historical) 🔥
+     * Gets uniswapDayDatas.
+     * @summary UniswapDayDatas (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Unix timestamp for start of day / 86400 giving a unique day index.
      */
-    public async uniswapV2GetUniswapDayDataV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapdaydatav2s/historical';
+    public async uniswapV2GetUniswapDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayDatas/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1476,13 +1600,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapDayDataV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapDayDataDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1493,16 +1617,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapfactoryv2s.
-     * @summary UniswapFactoryV2s (historical) 🔥
+     * Gets uniswapFactorys.
+     * @summary UniswapFactorys (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public async uniswapV2GetUniswapFactoryV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapfactoryv2s/historical';
+    public async uniswapV2GetUniswapFactorysHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactorys/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1563,13 +1687,13 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapFactoryV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapFactoryDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1580,16 +1704,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets userv2s.
-     * @summary UserV2s (historical) 🔥
+     * Gets users.
+     * @summary Users (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id User address.
      */
-    public async uniswapV2GetUserV2sHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserV2DTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/userv2s/historical';
+    public async uniswapV2GetUsersHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/users/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1650,13 +1774,700 @@ export class UniswapV2Api {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserV2DTO>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserDTO>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UserV2DTO>");
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UserDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets liquidityPositionSnapshots.
+     * @summary LiquidityPositionSnapshots (current)
+     */
+    public async uniswapV2LiquidityPositionSnapshotsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositionSnapshots/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionSnapshotDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets liquidityPositions.
+     * @summary LiquidityPositions (current)
+     */
+    public async uniswapV2LiquidityPositionsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositions/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2LiquidityPositionDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets mints.
+     * @summary Mints (current)
+     */
+    public async uniswapV2MintsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/mints/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2MintDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2MintDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets pairDayDatas.
+     * @summary PairDayDatas (current)
+     */
+    public async uniswapV2PairDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayDatas/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDayDataDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets pairHourDatas.
+     * @summary PairHourDatas (current)
+     */
+    public async uniswapV2PairHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourDatas/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairHourDataDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets pairs.
+     * @summary Pairs (current)
+     * @param id Pair contract address.
+     */
+    public async uniswapV2PairsCurrent (id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairs/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (id !== undefined) {
+            localVarQueryParameters['id'] = ObjectSerializer.serialize(id, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2PairDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets tokenDayDatas.
+     * @summary TokenDayDatas (current)
+     */
+    public async uniswapV2TokenDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayDatas/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TokenDayDataDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets transactions.
+     * @summary Transactions (current)
+     */
+    public async uniswapV2TransactionsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/transactions/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TransactionDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2TransactionDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets uniswapDayDatas.
+     * @summary UniswapDayDatas (current)
+     */
+    public async uniswapV2UniswapDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayDatas/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapDayDataDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets uniswapFactorys.
+     * @summary UniswapFactorys (current)
+     */
+    public async uniswapV2UniswapFactorysCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactorys/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UniswapFactoryDTO>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Gets users.
+     * @summary Users (current)
+     */
+    public async uniswapV2UsersCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/users/current';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UserDTO>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<UniswapV2UserDTO>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

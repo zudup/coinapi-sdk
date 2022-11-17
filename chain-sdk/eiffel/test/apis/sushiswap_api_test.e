@@ -39,6 +39,58 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_bundles_current
+            -- Bundles (current)
+            --
+            -- Gets bundles.
+        local
+            l_response: LIST [SUSHISWAP_BUNDLE_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_bundles_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_burns_current
+            -- Burns (current)
+            --
+            -- Gets burns.
+        local
+            l_response: LIST [SUSHISWAP_BURN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_burns_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_day_datas_current
+            -- DayDatas (current)
+            --
+            -- Gets dayDatas.
+        local
+            l_response: LIST [SUSHISWAP_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_factorys_current
+            -- Factorys (current)
+            --
+            -- Gets factorys.
+        local
+            l_response: LIST [SUSHISWAP_FACTORY_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_factorys_current
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_bundles_historical
             -- Bundles (historical) 🔥
             --
@@ -79,7 +131,7 @@ feature -- Test routines
     test_sushiswap_get_day_datas_historical
             -- DayDatas (historical) 🔥
             --
-            -- Gets daydatas.
+            -- Gets dayDatas.
         local
             l_response: LIST [SUSHISWAP_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -115,7 +167,7 @@ feature -- Test routines
     test_sushiswap_get_hour_datas_historical
             -- HourDatas (historical) 🔥
             --
-            -- Gets hourdatas.
+            -- Gets hourDatas.
         local
             l_response: LIST [SUSHISWAP_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
@@ -133,7 +185,7 @@ feature -- Test routines
     test_sushiswap_get_liquidity_position_snapshots_historical
             -- LiquidityPositionSnapshots (historical) 🔥
             --
-            -- Gets liquiditypositionsnapshots.
+            -- Gets liquidityPositionSnapshots.
         local
             l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
             l_start_block: INTEGER_64
@@ -153,7 +205,7 @@ feature -- Test routines
     test_sushiswap_get_liquidity_positions_historical
             -- LiquidityPositions (historical) 🔥
             --
-            -- Gets liquiditypositions.
+            -- Gets liquidityPositions.
         local
             l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
             l_start_block: INTEGER_64
@@ -192,7 +244,7 @@ feature -- Test routines
     test_sushiswap_get_pair_day_datas_historical
             -- PairDayDatas (historical) 🔥
             --
-            -- Gets pairdaydatas.
+            -- Gets pairDayDatas.
         local
             l_response: LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -213,7 +265,7 @@ feature -- Test routines
     test_sushiswap_get_pair_hour_datas_historical
             -- PairHourDatas (historical) 🔥
             --
-            -- Gets pairhourdatas.
+            -- Gets pairHourDatas.
         local
             l_response: LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
@@ -263,19 +315,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_swaps_current
-            -- Swaps (current) 🔥
-            --
-            -- Gets swaps.
-        local
-            l_response: LIST [SUSHISWAP_SWAP_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.sushiswap_get_swaps_current
-            assert ("not_implemented", False)
-        end
-
     test_sushiswap_get_swaps_historical
             -- Swaps (historical) 🔥
             --
@@ -298,7 +337,7 @@ feature -- Test routines
     test_sushiswap_get_token_day_datas_historical
             -- TokenDayDatas (historical) 🔥
             --
-            -- Gets tokendaydatas.
+            -- Gets tokenDayDatas.
         local
             l_response: LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -310,19 +349,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_token_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
-            assert ("not_implemented", False)
-        end
-
-    test_sushiswap_get_tokens_current
-            -- Tokens (current) 🔥
-            --
-            -- Gets tokens.
-        local
-            l_response: LIST [SUSHISWAP_TOKEN_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.sushiswap_get_tokens_current
             assert ("not_implemented", False)
         end
 
@@ -379,6 +405,164 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_users_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_hour_datas_current
+            -- HourDatas (current)
+            --
+            -- Gets hourDatas.
+        local
+            l_response: LIST [SUSHISWAP_HOUR_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_hour_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_liquidity_position_snapshots_current
+            -- LiquidityPositionSnapshots (current)
+            --
+            -- Gets liquidityPositionSnapshots.
+        local
+            l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_liquidity_position_snapshots_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_liquidity_positions_current
+            -- LiquidityPositions (current)
+            --
+            -- Gets liquidityPositions.
+        local
+            l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_liquidity_positions_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_mints_current
+            -- Mints (current)
+            --
+            -- Gets mints.
+        local
+            l_response: LIST [SUSHISWAP_MINT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_mints_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_pair_day_datas_current
+            -- PairDayDatas (current)
+            --
+            -- Gets pairDayDatas.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_pair_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_pair_hour_datas_current
+            -- PairHourDatas (current)
+            --
+            -- Gets pairHourDatas.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_pair_hour_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_pairs_current
+            -- Pairs (current)
+            --
+            -- Gets pairs.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_pairs_current(l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_swaps_current
+            -- Swaps (current)
+            --
+            -- Gets swaps.
+        local
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
+            l_pair: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_swaps_current(l_pair)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_token_day_datas_current
+            -- TokenDayDatas (current)
+            --
+            -- Gets tokenDayDatas.
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_token_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_tokens_current
+            -- Tokens (current)
+            --
+            -- Gets tokens.
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_tokens_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_transactions_current
+            -- Transactions (current)
+            --
+            -- Gets transactions.
+        local
+            l_response: LIST [SUSHISWAP_TRANSACTION_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_transactions_current
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_users_current
+            -- Users (current)
+            --
+            -- Gets users.
+        local
+            l_response: LIST [SUSHISWAP_USER_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_users_current
             assert ("not_implemented", False)
         end
 

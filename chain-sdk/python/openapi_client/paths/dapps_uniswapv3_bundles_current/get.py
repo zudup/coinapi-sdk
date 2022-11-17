@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.uniswap_v3_bundle_v3_dto import UniswapV3BundleV3DTO
+from openapi_client.model.uniswap_v3_bundle_dto import UniswapV3BundleDTO
 
 from . import path
 
@@ -39,12 +39,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3BundleV3DTO']:
-            return UniswapV3BundleV3DTO
+        def items() -> typing.Type['UniswapV3BundleDTO']:
+            return UniswapV3BundleDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3BundleV3DTO'], typing.List['UniswapV3BundleV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3BundleDTO'], typing.List['UniswapV3BundleDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -53,7 +53,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3BundleV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3BundleDTO':
         return super().__getitem__(i)
 
 
@@ -65,12 +65,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3BundleV3DTO']:
-            return UniswapV3BundleV3DTO
+        def items() -> typing.Type['UniswapV3BundleDTO']:
+            return UniswapV3BundleDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3BundleV3DTO'], typing.List['UniswapV3BundleV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3BundleDTO'], typing.List['UniswapV3BundleDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -79,7 +79,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3BundleV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3BundleDTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +91,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3BundleV3DTO']:
-            return UniswapV3BundleV3DTO
+        def items() -> typing.Type['UniswapV3BundleDTO']:
+            return UniswapV3BundleDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3BundleV3DTO'], typing.List['UniswapV3BundleV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3BundleDTO'], typing.List['UniswapV3BundleDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -105,7 +105,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3BundleV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3BundleDTO':
         return super().__getitem__(i)
 
 
@@ -143,7 +143,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _uniswap_v3_get_bundles__current_oapg(
+    def _uniswap_v3_bundles__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -154,7 +154,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _uniswap_v3_get_bundles__current_oapg(
+    def _uniswap_v3_bundles__current_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -163,7 +163,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _uniswap_v3_get_bundles__current_oapg(
+    def _uniswap_v3_bundles__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -174,7 +174,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _uniswap_v3_get_bundles__current_oapg(
+    def _uniswap_v3_bundles__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -218,11 +218,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class UniswapV3GetBundlesCurrent(BaseApi):
+class UniswapV3BundlesCurrent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def uniswap_v3_get_bundles__current(
+    def uniswap_v3_bundles__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -233,7 +233,7 @@ class UniswapV3GetBundlesCurrent(BaseApi):
     ]: ...
 
     @typing.overload
-    def uniswap_v3_get_bundles__current(
+    def uniswap_v3_bundles__current(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -242,7 +242,7 @@ class UniswapV3GetBundlesCurrent(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def uniswap_v3_get_bundles__current(
+    def uniswap_v3_bundles__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -253,14 +253,14 @@ class UniswapV3GetBundlesCurrent(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def uniswap_v3_get_bundles__current(
+    def uniswap_v3_bundles__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._uniswap_v3_get_bundles__current_oapg(
+        return self._uniswap_v3_bundles__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -310,7 +310,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._uniswap_v3_get_bundles__current_oapg(
+        return self._uniswap_v3_bundles__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

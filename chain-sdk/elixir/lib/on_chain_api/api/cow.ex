@@ -235,4 +235,149 @@ defmodule OnChainAPI.Api.Cow do
       {200, [%OnChainAPI.Model.CowUserDto{}]}
     ])
   end
+
+  @doc """
+  Orders (current)
+  Gets orders.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CowOrderDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec cow_orders__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowOrderDto.t)} | {:error, Tesla.Env.t}
+  def cow_orders__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/cow/orders/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CowOrderDto{}]}
+    ])
+  end
+
+  @doc """
+  Settlements (current)
+  Gets settlements.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CowSettlementDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec cow_settlements__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowSettlementDto.t)} | {:error, Tesla.Env.t}
+  def cow_settlements__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/cow/settlements/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CowSettlementDto{}]}
+    ])
+  end
+
+  @doc """
+  Tokens (current)
+  Gets tokens.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CowTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec cow_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTokenDto.t)} | {:error, Tesla.Env.t}
+  def cow_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/cow/tokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CowTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  Trades (current)
+  Gets trades.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CowTradeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec cow_trades__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTradeDto.t)} | {:error, Tesla.Env.t}
+  def cow_trades__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/cow/trades/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CowTradeDto{}]}
+    ])
+  end
+
+  @doc """
+  Users (current)
+  Gets users.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CowUserDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec cow_users__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowUserDto.t)} | {:error, Tesla.Env.t}
+  def cow_users__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/cow/users/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CowUserDto{}]}
+    ])
+  end
 end

@@ -4,35 +4,154 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**uniswapV2GetBundleV2sHistorical()**](UniswapV2Api.md#uniswapV2GetBundleV2sHistorical) | **GET** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥 |
-| [**uniswapV2GetBurnV2sHistorical()**](UniswapV2Api.md#uniswapV2GetBurnV2sHistorical) | **GET** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥 |
-| [**uniswapV2GetLiquidityPositionSnapshotV2sHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥 |
-| [**uniswapV2GetLiquidityPositionV2sHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥 |
-| [**uniswapV2GetMintV2sHistorical()**](UniswapV2Api.md#uniswapV2GetMintV2sHistorical) | **GET** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥 |
-| [**uniswapV2GetPairDayDataV2sHistorical()**](UniswapV2Api.md#uniswapV2GetPairDayDataV2sHistorical) | **GET** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥 |
-| [**uniswapV2GetPairHourDataV2sHistorical()**](UniswapV2Api.md#uniswapV2GetPairHourDataV2sHistorical) | **GET** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥 |
-| [**uniswapV2GetPairV2sHistorical()**](UniswapV2Api.md#uniswapV2GetPairV2sHistorical) | **GET** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥 |
+| [**uniswapV2BundlesCurrent()**](UniswapV2Api.md#uniswapV2BundlesCurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current) |
+| [**uniswapV2BurnsCurrent()**](UniswapV2Api.md#uniswapV2BurnsCurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current) |
+| [**uniswapV2GetBundlesHistorical()**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥 |
+| [**uniswapV2GetBurnsHistorical()**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥 |
+| [**uniswapV2GetLiquidityPositionSnapshotsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥 |
+| [**uniswapV2GetLiquidityPositionsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥 |
+| [**uniswapV2GetMintsHistorical()**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥 |
+| [**uniswapV2GetPairDayDatasHistorical()**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
+| [**uniswapV2GetPairHourDatasHistorical()**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
+| [**uniswapV2GetPairsHistorical()**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥 |
 | [**uniswapV2GetPoolsCurrent()**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥 |
-| [**uniswapV2GetSwapV2sHistorical()**](UniswapV2Api.md#uniswapV2GetSwapV2sHistorical) | **GET** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥 |
 | [**uniswapV2GetSwapsCurrent()**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥 |
-| [**uniswapV2GetTokenDayDataV2sHistorical()**](UniswapV2Api.md#uniswapV2GetTokenDayDataV2sHistorical) | **GET** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥 |
-| [**uniswapV2GetTokenV2sHistorical()**](UniswapV2Api.md#uniswapV2GetTokenV2sHistorical) | **GET** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥 |
+| [**uniswapV2GetSwapsHistorical()**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥 |
+| [**uniswapV2GetTokenDayDatasHistorical()**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
 | [**uniswapV2GetTokensCurrent()**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥 |
-| [**uniswapV2GetTransactionV2sHistorical()**](UniswapV2Api.md#uniswapV2GetTransactionV2sHistorical) | **GET** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥 |
-| [**uniswapV2GetUniswapDayDataV2sHistorical()**](UniswapV2Api.md#uniswapV2GetUniswapDayDataV2sHistorical) | **GET** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥 |
-| [**uniswapV2GetUniswapFactoryV2sHistorical()**](UniswapV2Api.md#uniswapV2GetUniswapFactoryV2sHistorical) | **GET** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥 |
-| [**uniswapV2GetUserV2sHistorical()**](UniswapV2Api.md#uniswapV2GetUserV2sHistorical) | **GET** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥 |
+| [**uniswapV2GetTokensHistorical()**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥 |
+| [**uniswapV2GetTransactionsHistorical()**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥 |
+| [**uniswapV2GetUniswapDayDatasHistorical()**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥 |
+| [**uniswapV2GetUniswapFactorysHistorical()**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥 |
+| [**uniswapV2GetUsersHistorical()**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥 |
+| [**uniswapV2LiquidityPositionSnapshotsCurrent()**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current) |
+| [**uniswapV2LiquidityPositionsCurrent()**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current) |
+| [**uniswapV2MintsCurrent()**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current) |
+| [**uniswapV2PairDayDatasCurrent()**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current) |
+| [**uniswapV2PairHourDatasCurrent()**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current) |
+| [**uniswapV2PairsCurrent()**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current) |
+| [**uniswapV2TokenDayDatasCurrent()**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current) |
+| [**uniswapV2TransactionsCurrent()**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current) |
+| [**uniswapV2UniswapDayDatasCurrent()**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current) |
+| [**uniswapV2UniswapFactorysCurrent()**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current) |
+| [**uniswapV2UsersCurrent()**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current) |
 
 
-## `uniswapV2GetBundleV2sHistorical()`
+## `uniswapV2BundlesCurrent()`
 
 ```php
-uniswapV2GetBundleV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2BundleV2DTO[]
+uniswapV2BundlesCurrent(): \OpenAPI\Client\Model\UniswapV2BundleDTO[]
 ```
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2BundlesCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2BundlesCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2BundleDTO[]**](../Model/UniswapV2BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2BurnsCurrent()`
+
+```php
+uniswapV2BurnsCurrent(): \OpenAPI\Client\Model\UniswapV2BurnDTO[]
+```
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2BurnsCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2BurnsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2BurnDTO[]**](../Model/UniswapV2BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2GetBundlesHistorical()`
+
+```php
+uniswapV2GetBundlesHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2BundleDTO[]
+```
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 
@@ -54,10 +173,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Constant 1.
 
 try {
-    $result = $apiInstance->uniswapV2GetBundleV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetBundlesHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetBundleV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetBundlesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -73,7 +192,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]**](../Model/UniswapV2BundleV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2BundleDTO[]**](../Model/UniswapV2BundleDTO.md)
 
 ### Authorization
 
@@ -88,15 +207,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetBurnV2sHistorical()`
+## `uniswapV2GetBurnsHistorical()`
 
 ```php
-uniswapV2GetBurnV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2BurnV2DTO[]
+uniswapV2GetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2BurnDTO[]
 ```
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 
@@ -119,10 +238,10 @@ $id = 'id_example'; // string | Transaction hash plus index in the transaction b
 $pair = 'pair_example'; // string | Reference to pair.
 
 try {
-    $result = $apiInstance->uniswapV2GetBurnV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
+    $result = $apiInstance->uniswapV2GetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetBurnV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetBurnsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -139,7 +258,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]**](../Model/UniswapV2BurnV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2BurnDTO[]**](../Model/UniswapV2BurnDTO.md)
 
 ### Authorization
 
@@ -154,15 +273,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetLiquidityPositionSnapshotV2sHistorical()`
+## `uniswapV2GetLiquidityPositionSnapshotsHistorical()`
 
 ```php
-uniswapV2GetLiquidityPositionSnapshotV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair): \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]
+uniswapV2GetLiquidityPositionSnapshotsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair): \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotDTO[]
 ```
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -186,10 +305,10 @@ $user = 'user_example'; // string
 $pair = 'pair_example'; // string
 
 try {
-    $result = $apiInstance->uniswapV2GetLiquidityPositionSnapshotV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
+    $result = $apiInstance->uniswapV2GetLiquidityPositionSnapshotsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionSnapshotV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionSnapshotsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -207,7 +326,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]**](../Model/UniswapV2LiquidityPositionSnapshotV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotDTO[]**](../Model/UniswapV2LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -222,15 +341,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetLiquidityPositionV2sHistorical()`
+## `uniswapV2GetLiquidityPositionsHistorical()`
 
 ```php
-uniswapV2GetLiquidityPositionV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair): \OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]
+uniswapV2GetLiquidityPositionsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair): \OpenAPI\Client\Model\UniswapV2LiquidityPositionDTO[]
 ```
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 
@@ -254,10 +373,10 @@ $user = 'user_example'; // string | Reference to user.
 $pair = 'pair_example'; // string | Reference to the pair liquidity is being provided on.
 
 try {
-    $result = $apiInstance->uniswapV2GetLiquidityPositionV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
+    $result = $apiInstance->uniswapV2GetLiquidityPositionsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -275,7 +394,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]**](../Model/UniswapV2LiquidityPositionV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionDTO[]**](../Model/UniswapV2LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -290,15 +409,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetMintV2sHistorical()`
+## `uniswapV2GetMintsHistorical()`
 
 ```php
-uniswapV2GetMintV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2MintV2DTO[]
+uniswapV2GetMintsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2MintDTO[]
 ```
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 
@@ -321,10 +440,10 @@ $id = 'id_example'; // string | Transaction hash plus index in the transaction m
 $pair = 'pair_example'; // string | Reference to pair.
 
 try {
-    $result = $apiInstance->uniswapV2GetMintV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
+    $result = $apiInstance->uniswapV2GetMintsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetMintV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetMintsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -341,7 +460,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2MintV2DTO[]**](../Model/UniswapV2MintV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2MintDTO[]**](../Model/UniswapV2MintDTO.md)
 
 ### Authorization
 
@@ -356,15 +475,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetPairDayDataV2sHistorical()`
+## `uniswapV2GetPairDayDatasHistorical()`
 
 ```php
-uniswapV2GetPairDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1): \OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]
+uniswapV2GetPairDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1): \OpenAPI\Client\Model\UniswapV2PairDayDataDTO[]
 ```
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 
@@ -388,10 +507,10 @@ $token_0 = 'token_0_example'; // string | Reference to token0.
 $token_1 = 'token_1_example'; // string | Reference to token1.
 
 try {
-    $result = $apiInstance->uniswapV2GetPairDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1);
+    $result = $apiInstance->uniswapV2GetPairDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairDayDataV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -409,7 +528,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]**](../Model/UniswapV2PairDayDataV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2PairDayDataDTO[]**](../Model/UniswapV2PairDayDataDTO.md)
 
 ### Authorization
 
@@ -424,15 +543,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetPairHourDataV2sHistorical()`
+## `uniswapV2GetPairHourDatasHistorical()`
 
 ```php
-uniswapV2GetPairHourDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]
+uniswapV2GetPairHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2PairHourDataDTO[]
 ```
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 
@@ -455,10 +574,10 @@ $id = 'id_example'; // string |
 $pair = 'pair_example'; // string | Address for pair contract.
 
 try {
-    $result = $apiInstance->uniswapV2GetPairHourDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
+    $result = $apiInstance->uniswapV2GetPairHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairHourDataV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairHourDatasHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -475,7 +594,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]**](../Model/UniswapV2PairHourDataV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2PairHourDataDTO[]**](../Model/UniswapV2PairHourDataDTO.md)
 
 ### Authorization
 
@@ -490,15 +609,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetPairV2sHistorical()`
+## `uniswapV2GetPairsHistorical()`
 
 ```php
-uniswapV2GetPairV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1): \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
+uniswapV2GetPairsHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1): \OpenAPI\Client\Model\UniswapV2PairDTO[]
 ```
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 
@@ -522,10 +641,10 @@ $token_0 = 'token_0_example'; // string | Reference to token0 as stored in pair 
 $token_1 = 'token_1_example'; // string | Reference to token1 as stored in pair contract.
 
 try {
-    $result = $apiInstance->uniswapV2GetPairV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1);
+    $result = $apiInstance->uniswapV2GetPairsHistorical($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetPairsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -543,7 +662,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2PairV2DTO[]**](../Model/UniswapV2PairV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2PairDTO[]**](../Model/UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -561,7 +680,7 @@ No authorization required
 ## `uniswapV2GetPoolsCurrent()`
 
 ```php
-uniswapV2GetPoolsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
+uniswapV2GetPoolsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV2PairDTO[]
 ```
 
 Pools (current) 🔥
@@ -599,73 +718,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2PairV2DTO[]**](../Model/UniswapV2PairV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `uniswapV2GetSwapV2sHistorical()`
-
-```php
-uniswapV2GetSwapV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
-```
-
-SwapV2s (historical) 🔥
-
-Gets swapv2s.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
-$id = 'id_example'; // string | Transaction hash plus index in Transaction swap array.
-$pair = 'pair_example'; // string | Reference to pair.
-
-try {
-    $result = $apiInstance->uniswapV2GetSwapV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetSwapV2sHistorical: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
-| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
-| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
-| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
-| **id** | **string**| Transaction hash plus index in Transaction swap array. | [optional] |
-| **pair** | **string**| Reference to pair. | [optional] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]**](../Model/UniswapV2SwapV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2PairDTO[]**](../Model/UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -683,7 +736,7 @@ No authorization required
 ## `uniswapV2GetSwapsCurrent()`
 
 ```php
-uniswapV2GetSwapsCurrent(): \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
+uniswapV2GetSwapsCurrent(): \OpenAPI\Client\Model\UniswapV2SwapDTO[]
 ```
 
 Swaps (current) 🔥
@@ -718,7 +771,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]**](../Model/UniswapV2SwapV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2SwapDTO[]**](../Model/UniswapV2SwapDTO.md)
 
 ### Authorization
 
@@ -733,15 +786,81 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetTokenDayDataV2sHistorical()`
+## `uniswapV2GetSwapsHistorical()`
 
 ```php
-uniswapV2GetTokenDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]
+uniswapV2GetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair): \OpenAPI\Client\Model\UniswapV2SwapDTO[]
 ```
 
-TokenDayDataV2s (historical) 🔥
+Swaps (historical) 🔥
 
-Gets tokendaydatav2s.
+Gets swaps.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Transaction hash plus index in Transaction swap array.
+$pair = 'pair_example'; // string | Reference to pair.
+
+try {
+    $result = $apiInstance->uniswapV2GetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetSwapsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Transaction hash plus index in Transaction swap array. | [optional] |
+| **pair** | **string**| Reference to pair. | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2SwapDTO[]**](../Model/UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2GetTokenDayDatasHistorical()`
+
+```php
+uniswapV2GetTokenDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2TokenDayDataDTO[]
+```
+
+TokenDayDatas (historical) 🔥
+
+Gets tokenDayDatas.
 
 ### Example
 
@@ -763,10 +882,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 
 try {
-    $result = $apiInstance->uniswapV2GetTokenDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetTokenDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetTokenDayDataV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetTokenDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -782,75 +901,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]**](../Model/UniswapV2TokenDayDataV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `uniswapV2GetTokenV2sHistorical()`
-
-```php
-uniswapV2GetTokenV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name): \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
-```
-
-TokenV2s (historical) 🔥
-
-Gets tokenv2s.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
-$id = 'id_example'; // string | Token address.
-$symbol = 'symbol_example'; // string | Token symbol.
-$name = 'name_example'; // string | Token name.
-
-try {
-    $result = $apiInstance->uniswapV2GetTokenV2sHistorical($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetTokenV2sHistorical: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
-| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
-| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
-| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
-| **id** | **string**| Token address. | [optional] |
-| **symbol** | **string**| Token symbol. | [optional] |
-| **name** | **string**| Token name. | [optional] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]**](../Model/UniswapV2TokenV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2TokenDayDataDTO[]**](../Model/UniswapV2TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -868,7 +919,7 @@ No authorization required
 ## `uniswapV2GetTokensCurrent()`
 
 ```php
-uniswapV2GetTokensCurrent(): \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
+uniswapV2GetTokensCurrent(): \OpenAPI\Client\Model\UniswapV2TokenDTO[]
 ```
 
 Tokens (current) 🔥
@@ -903,7 +954,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]**](../Model/UniswapV2TokenV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2TokenDTO[]**](../Model/UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -918,15 +969,83 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetTransactionV2sHistorical()`
+## `uniswapV2GetTokensHistorical()`
 
 ```php
-uniswapV2GetTransactionV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]
+uniswapV2GetTokensHistorical($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name): \OpenAPI\Client\Model\UniswapV2TokenDTO[]
 ```
 
-TransactionV2s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets transactionv2s.
+Gets tokens.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Token address.
+$symbol = 'symbol_example'; // string | Token symbol.
+$name = 'name_example'; // string | Token name.
+
+try {
+    $result = $apiInstance->uniswapV2GetTokensHistorical($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetTokensHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Token address. | [optional] |
+| **symbol** | **string**| Token symbol. | [optional] |
+| **name** | **string**| Token name. | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2TokenDTO[]**](../Model/UniswapV2TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2GetTransactionsHistorical()`
+
+```php
+uniswapV2GetTransactionsHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2TransactionDTO[]
+```
+
+Transactions (historical) 🔥
+
+Gets transactions.
 
 ### Example
 
@@ -948,10 +1067,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Ethereum transaction hash.
 
 try {
-    $result = $apiInstance->uniswapV2GetTransactionV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetTransactionsHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetTransactionV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetTransactionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -967,7 +1086,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]**](../Model/UniswapV2TransactionV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2TransactionDTO[]**](../Model/UniswapV2TransactionDTO.md)
 
 ### Authorization
 
@@ -982,15 +1101,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetUniswapDayDataV2sHistorical()`
+## `uniswapV2GetUniswapDayDatasHistorical()`
 
 ```php
-uniswapV2GetUniswapDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]
+uniswapV2GetUniswapDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UniswapDayDataDTO[]
 ```
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 ### Example
 
@@ -1012,10 +1131,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Unix timestamp for start of day / 86400 giving a unique day index.
 
 try {
-    $result = $apiInstance->uniswapV2GetUniswapDayDataV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetUniswapDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDataV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1031,7 +1150,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]**](../Model/UniswapV2UniswapDayDataV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2UniswapDayDataDTO[]**](../Model/UniswapV2UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -1046,15 +1165,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetUniswapFactoryV2sHistorical()`
+## `uniswapV2GetUniswapFactorysHistorical()`
 
 ```php
-uniswapV2GetUniswapFactoryV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]
+uniswapV2GetUniswapFactorysHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UniswapFactoryDTO[]
 ```
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 ### Example
 
@@ -1076,10 +1195,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Factory address.
 
 try {
-    $result = $apiInstance->uniswapV2GetUniswapFactoryV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetUniswapFactorysHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetUniswapFactoryV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetUniswapFactorysHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1095,7 +1214,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]**](../Model/UniswapV2UniswapFactoryV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2UniswapFactoryDTO[]**](../Model/UniswapV2UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -1110,15 +1229,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV2GetUserV2sHistorical()`
+## `uniswapV2GetUsersHistorical()`
 
 ```php
-uniswapV2GetUserV2sHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UserV2DTO[]
+uniswapV2GetUsersHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV2UserDTO[]
 ```
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 ### Example
 
@@ -1140,10 +1259,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | User address.
 
 try {
-    $result = $apiInstance->uniswapV2GetUserV2sHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV2GetUsersHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV2Api->uniswapV2GetUserV2sHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV2Api->uniswapV2GetUsersHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1159,7 +1278,593 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UniswapV2UserV2DTO[]**](../Model/UniswapV2UserV2DTO.md)
+[**\OpenAPI\Client\Model\UniswapV2UserDTO[]**](../Model/UniswapV2UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2LiquidityPositionSnapshotsCurrent()`
+
+```php
+uniswapV2LiquidityPositionSnapshotsCurrent(): \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotDTO[]
+```
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2LiquidityPositionSnapshotsCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2LiquidityPositionSnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotDTO[]**](../Model/UniswapV2LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2LiquidityPositionsCurrent()`
+
+```php
+uniswapV2LiquidityPositionsCurrent(): \OpenAPI\Client\Model\UniswapV2LiquidityPositionDTO[]
+```
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2LiquidityPositionsCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2LiquidityPositionsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2LiquidityPositionDTO[]**](../Model/UniswapV2LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2MintsCurrent()`
+
+```php
+uniswapV2MintsCurrent(): \OpenAPI\Client\Model\UniswapV2MintDTO[]
+```
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2MintsCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2MintsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2MintDTO[]**](../Model/UniswapV2MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2PairDayDatasCurrent()`
+
+```php
+uniswapV2PairDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV2PairDayDataDTO[]
+```
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2PairDayDatasCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2PairDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2PairDayDataDTO[]**](../Model/UniswapV2PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2PairHourDatasCurrent()`
+
+```php
+uniswapV2PairHourDatasCurrent(): \OpenAPI\Client\Model\UniswapV2PairHourDataDTO[]
+```
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2PairHourDatasCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2PairHourDatasCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2PairHourDataDTO[]**](../Model/UniswapV2PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2PairsCurrent()`
+
+```php
+uniswapV2PairsCurrent($id): \OpenAPI\Client\Model\UniswapV2PairDTO[]
+```
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = 'id_example'; // string | Pair contract address.
+
+try {
+    $result = $apiInstance->uniswapV2PairsCurrent($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2PairsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Pair contract address. | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2PairDTO[]**](../Model/UniswapV2PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2TokenDayDatasCurrent()`
+
+```php
+uniswapV2TokenDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV2TokenDayDataDTO[]
+```
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2TokenDayDatasCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2TokenDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2TokenDayDataDTO[]**](../Model/UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2TransactionsCurrent()`
+
+```php
+uniswapV2TransactionsCurrent(): \OpenAPI\Client\Model\UniswapV2TransactionDTO[]
+```
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2TransactionsCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2TransactionsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2TransactionDTO[]**](../Model/UniswapV2TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2UniswapDayDatasCurrent()`
+
+```php
+uniswapV2UniswapDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV2UniswapDayDataDTO[]
+```
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2UniswapDayDatasCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2UniswapDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2UniswapDayDataDTO[]**](../Model/UniswapV2UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2UniswapFactorysCurrent()`
+
+```php
+uniswapV2UniswapFactorysCurrent(): \OpenAPI\Client\Model\UniswapV2UniswapFactoryDTO[]
+```
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2UniswapFactorysCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2UniswapFactorysCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2UniswapFactoryDTO[]**](../Model/UniswapV2UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV2UsersCurrent()`
+
+```php
+uniswapV2UsersCurrent(): \OpenAPI\Client\Model\UniswapV2UserDTO[]
+```
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->uniswapV2UsersCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV2Api->uniswapV2UsersCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV2UserDTO[]**](../Model/UniswapV2UserDTO.md)
 
 ### Authorization
 

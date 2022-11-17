@@ -222,6 +222,402 @@ func (a *SushiswapApiService) DexGetTradesCurrentExecute(r ApiDexGetTradesCurren
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiSushiswapBundlesCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapBundlesCurrentRequest) Execute() ([]SushiswapBundleDTO, *http.Response, error) {
+	return r.ApiService.SushiswapBundlesCurrentExecute(r)
+}
+
+/*
+SushiswapBundlesCurrent Bundles (current)
+
+Gets bundles.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapBundlesCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapBundlesCurrent(ctx context.Context) ApiSushiswapBundlesCurrentRequest {
+	return ApiSushiswapBundlesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapBundleDTO
+func (a *SushiswapApiService) SushiswapBundlesCurrentExecute(r ApiSushiswapBundlesCurrentRequest) ([]SushiswapBundleDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapBundleDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapBundlesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/bundles/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapBurnsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapBurnsCurrentRequest) Execute() ([]SushiswapBurnDTO, *http.Response, error) {
+	return r.ApiService.SushiswapBurnsCurrentExecute(r)
+}
+
+/*
+SushiswapBurnsCurrent Burns (current)
+
+Gets burns.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapBurnsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapBurnsCurrent(ctx context.Context) ApiSushiswapBurnsCurrentRequest {
+	return ApiSushiswapBurnsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapBurnDTO
+func (a *SushiswapApiService) SushiswapBurnsCurrentExecute(r ApiSushiswapBurnsCurrentRequest) ([]SushiswapBurnDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapBurnDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapBurnsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/burns/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapDayDatasCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapDayDatasCurrentRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapDayDatasCurrentExecute(r)
+}
+
+/*
+SushiswapDayDatasCurrent DayDatas (current)
+
+Gets dayDatas.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapDayDatasCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapDayDatasCurrent(ctx context.Context) ApiSushiswapDayDatasCurrentRequest {
+	return ApiSushiswapDayDatasCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapDayDataDTO
+func (a *SushiswapApiService) SushiswapDayDatasCurrentExecute(r ApiSushiswapDayDatasCurrentRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapDayDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapDayDatasCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/dayDatas/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapFactorysCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapFactorysCurrentRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
+	return r.ApiService.SushiswapFactorysCurrentExecute(r)
+}
+
+/*
+SushiswapFactorysCurrent Factorys (current)
+
+Gets factorys.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapFactorysCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapFactorysCurrent(ctx context.Context) ApiSushiswapFactorysCurrentRequest {
+	return ApiSushiswapFactorysCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapFactoryDTO
+func (a *SushiswapApiService) SushiswapFactorysCurrentExecute(r ApiSushiswapFactorysCurrentRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapFactoryDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapFactorysCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/factorys/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiSushiswapGetBundlesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
@@ -571,7 +967,7 @@ func (r ApiSushiswapGetDayDatasHistoricalRequest) Execute() ([]SushiswapDayDataD
 /*
 SushiswapGetDayDatasHistorical DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetDayDatasHistoricalRequest
@@ -598,7 +994,7 @@ func (a *SushiswapApiService) SushiswapGetDayDatasHistoricalExecute(r ApiSushisw
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/daydatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/dayDatas/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -869,7 +1265,7 @@ func (r ApiSushiswapGetHourDatasHistoricalRequest) Execute() ([]SushiswapHourDat
 /*
 SushiswapGetHourDatasHistorical HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetHourDatasHistoricalRequest
@@ -896,7 +1292,7 @@ func (a *SushiswapApiService) SushiswapGetHourDatasHistoricalExecute(r ApiSushis
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/hourdatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/hourDatas/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1025,7 +1421,7 @@ func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) Execute() ([
 /*
 SushiswapGetLiquidityPositionSnapshotsHistorical LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest
@@ -1052,7 +1448,7 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotsHistoricalEx
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/liquiditypositionsnapshots/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPositionSnapshots/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1187,7 +1583,7 @@ func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) Execute() ([]Sushisw
 /*
 SushiswapGetLiquidityPositionsHistorical LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetLiquidityPositionsHistoricalRequest
@@ -1214,7 +1610,7 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionsHistoricalExecute(r 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/liquiditypositions/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPositions/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1508,7 +1904,7 @@ func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Execute() ([]SushiswapPair
 /*
 SushiswapGetPairDayDatasHistorical PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPairDayDatasHistoricalRequest
@@ -1535,7 +1931,7 @@ func (a *SushiswapApiService) SushiswapGetPairDayDatasHistoricalExecute(r ApiSus
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairdaydatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairDayDatas/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1667,7 +2063,7 @@ func (r ApiSushiswapGetPairHourDatasHistoricalRequest) Execute() ([]SushiswapPai
 /*
 SushiswapGetPairHourDatasHistorical PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetPairHourDatasHistoricalRequest
@@ -1694,7 +2090,7 @@ func (a *SushiswapApiService) SushiswapGetPairHourDatasHistoricalExecute(r ApiSu
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairhourdatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairHourDatas/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2042,105 +2438,6 @@ func (a *SushiswapApiService) SushiswapGetPoolsCurrentExecute(r ApiSushiswapGetP
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetSwapsCurrentRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-}
-
-func (r ApiSushiswapGetSwapsCurrentRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetSwapsCurrentExecute(r)
-}
-
-/*
-SushiswapGetSwapsCurrent Swaps (current) 🔥
-
-Gets swaps.
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetSwapsCurrentRequest
-*/
-func (a *SushiswapApiService) SushiswapGetSwapsCurrent(ctx context.Context) ApiSushiswapGetSwapsCurrentRequest {
-	return ApiSushiswapGetSwapsCurrentRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return []SushiswapSwapDTO
-func (a *SushiswapApiService) SushiswapGetSwapsCurrentExecute(r ApiSushiswapGetSwapsCurrentRequest) ([]SushiswapSwapDTO, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []SushiswapSwapDTO
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetSwapsCurrent")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/swaps/current"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiSushiswapGetSwapsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
@@ -2347,7 +2644,7 @@ func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) Execute() ([]SushiswapTok
 /*
 SushiswapGetTokenDayDatasHistorical TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSushiswapGetTokenDayDatasHistoricalRequest
@@ -2374,7 +2671,7 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistoricalExecute(r ApiSu
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/tokendaydatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayDatas/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2395,105 +2692,6 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistoricalExecute(r ApiSu
 	if r.id != nil {
 		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
 	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiSushiswapGetTokensCurrentRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-}
-
-func (r ApiSushiswapGetTokensCurrentRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetTokensCurrentExecute(r)
-}
-
-/*
-SushiswapGetTokensCurrent Tokens (current) 🔥
-
-Gets tokens.
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetTokensCurrentRequest
-*/
-func (a *SushiswapApiService) SushiswapGetTokensCurrent(ctx context.Context) ApiSushiswapGetTokensCurrentRequest {
-	return ApiSushiswapGetTokensCurrentRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return []SushiswapTokenDTO
-func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGetTokensCurrentRequest) ([]SushiswapTokenDTO, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []SushiswapTokenDTO
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokensCurrent")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/tokens/current"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -2961,6 +3159,1214 @@ func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapG
 	if r.id != nil {
 		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
 	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapHourDatasCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapHourDatasCurrentRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapHourDatasCurrentExecute(r)
+}
+
+/*
+SushiswapHourDatasCurrent HourDatas (current)
+
+Gets hourDatas.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapHourDatasCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapHourDatasCurrent(ctx context.Context) ApiSushiswapHourDatasCurrentRequest {
+	return ApiSushiswapHourDatasCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapHourDataDTO
+func (a *SushiswapApiService) SushiswapHourDatasCurrentExecute(r ApiSushiswapHourDatasCurrentRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapHourDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapHourDatasCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/hourDatas/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapLiquidityPositionSnapshotsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapLiquidityPositionSnapshotsCurrentRequest) Execute() ([]SushiswapLiquidityPositionSnapshotDTO, *http.Response, error) {
+	return r.ApiService.SushiswapLiquidityPositionSnapshotsCurrentExecute(r)
+}
+
+/*
+SushiswapLiquidityPositionSnapshotsCurrent LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapLiquidityPositionSnapshotsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapLiquidityPositionSnapshotsCurrent(ctx context.Context) ApiSushiswapLiquidityPositionSnapshotsCurrentRequest {
+	return ApiSushiswapLiquidityPositionSnapshotsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapLiquidityPositionSnapshotDTO
+func (a *SushiswapApiService) SushiswapLiquidityPositionSnapshotsCurrentExecute(r ApiSushiswapLiquidityPositionSnapshotsCurrentRequest) ([]SushiswapLiquidityPositionSnapshotDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapLiquidityPositionSnapshotDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapLiquidityPositionSnapshotsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPositionSnapshots/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapLiquidityPositionsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapLiquidityPositionsCurrentRequest) Execute() ([]SushiswapLiquidityPositionDTO, *http.Response, error) {
+	return r.ApiService.SushiswapLiquidityPositionsCurrentExecute(r)
+}
+
+/*
+SushiswapLiquidityPositionsCurrent LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapLiquidityPositionsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapLiquidityPositionsCurrent(ctx context.Context) ApiSushiswapLiquidityPositionsCurrentRequest {
+	return ApiSushiswapLiquidityPositionsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapLiquidityPositionDTO
+func (a *SushiswapApiService) SushiswapLiquidityPositionsCurrentExecute(r ApiSushiswapLiquidityPositionsCurrentRequest) ([]SushiswapLiquidityPositionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapLiquidityPositionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapLiquidityPositionsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPositions/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapMintsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapMintsCurrentRequest) Execute() ([]SushiswapMintDTO, *http.Response, error) {
+	return r.ApiService.SushiswapMintsCurrentExecute(r)
+}
+
+/*
+SushiswapMintsCurrent Mints (current)
+
+Gets mints.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapMintsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapMintsCurrent(ctx context.Context) ApiSushiswapMintsCurrentRequest {
+	return ApiSushiswapMintsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapMintDTO
+func (a *SushiswapApiService) SushiswapMintsCurrentExecute(r ApiSushiswapMintsCurrentRequest) ([]SushiswapMintDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapMintDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapMintsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/mints/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapPairDayDatasCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapPairDayDatasCurrentRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapPairDayDatasCurrentExecute(r)
+}
+
+/*
+SushiswapPairDayDatasCurrent PairDayDatas (current)
+
+Gets pairDayDatas.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapPairDayDatasCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapPairDayDatasCurrent(ctx context.Context) ApiSushiswapPairDayDatasCurrentRequest {
+	return ApiSushiswapPairDayDatasCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapPairDayDataDTO
+func (a *SushiswapApiService) SushiswapPairDayDatasCurrentExecute(r ApiSushiswapPairDayDatasCurrentRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapPairDayDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairDayDatasCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/pairDayDatas/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapPairHourDatasCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapPairHourDatasCurrentRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapPairHourDatasCurrentExecute(r)
+}
+
+/*
+SushiswapPairHourDatasCurrent PairHourDatas (current)
+
+Gets pairHourDatas.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapPairHourDatasCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapPairHourDatasCurrent(ctx context.Context) ApiSushiswapPairHourDatasCurrentRequest {
+	return ApiSushiswapPairHourDatasCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapPairHourDataDTO
+func (a *SushiswapApiService) SushiswapPairHourDatasCurrentExecute(r ApiSushiswapPairHourDatasCurrentRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapPairHourDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairHourDatasCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/pairHourDatas/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapPairsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	id *string
+}
+
+// Pair contract address.
+func (r ApiSushiswapPairsCurrentRequest) Id(id string) ApiSushiswapPairsCurrentRequest {
+	r.id = &id
+	return r
+}
+
+func (r ApiSushiswapPairsCurrentRequest) Execute() ([]SushiswapPairDTO, *http.Response, error) {
+	return r.ApiService.SushiswapPairsCurrentExecute(r)
+}
+
+/*
+SushiswapPairsCurrent Pairs (current)
+
+Gets pairs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapPairsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapPairsCurrent(ctx context.Context) ApiSushiswapPairsCurrentRequest {
+	return ApiSushiswapPairsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapPairDTO
+func (a *SushiswapApiService) SushiswapPairsCurrentExecute(r ApiSushiswapPairsCurrentRequest) ([]SushiswapPairDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapPairDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/pairs/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.id != nil {
+		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapSwapsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	pair *string
+}
+
+// Reference to pair.
+func (r ApiSushiswapSwapsCurrentRequest) Pair(pair string) ApiSushiswapSwapsCurrentRequest {
+	r.pair = &pair
+	return r
+}
+
+func (r ApiSushiswapSwapsCurrentRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
+	return r.ApiService.SushiswapSwapsCurrentExecute(r)
+}
+
+/*
+SushiswapSwapsCurrent Swaps (current)
+
+Gets swaps.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapSwapsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapSwapsCurrent(ctx context.Context) ApiSushiswapSwapsCurrentRequest {
+	return ApiSushiswapSwapsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapSwapDTO
+func (a *SushiswapApiService) SushiswapSwapsCurrentExecute(r ApiSushiswapSwapsCurrentRequest) ([]SushiswapSwapDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapSwapDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapSwapsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/swaps/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.pair != nil {
+		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapTokenDayDatasCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapTokenDayDatasCurrentRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapTokenDayDatasCurrentExecute(r)
+}
+
+/*
+SushiswapTokenDayDatasCurrent TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapTokenDayDatasCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapTokenDayDatasCurrent(ctx context.Context) ApiSushiswapTokenDayDatasCurrentRequest {
+	return ApiSushiswapTokenDayDatasCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapTokenDayDataDTO
+func (a *SushiswapApiService) SushiswapTokenDayDatasCurrentExecute(r ApiSushiswapTokenDayDatasCurrentRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapTokenDayDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapTokenDayDatasCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayDatas/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapTokensCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapTokensCurrentRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
+	return r.ApiService.SushiswapTokensCurrentExecute(r)
+}
+
+/*
+SushiswapTokensCurrent Tokens (current)
+
+Gets tokens.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapTokensCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapTokensCurrent(ctx context.Context) ApiSushiswapTokensCurrentRequest {
+	return ApiSushiswapTokensCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapTokenDTO
+func (a *SushiswapApiService) SushiswapTokensCurrentExecute(r ApiSushiswapTokensCurrentRequest) ([]SushiswapTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapTokensCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/tokens/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapTransactionsCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapTransactionsCurrentRequest) Execute() ([]SushiswapTransactionDTO, *http.Response, error) {
+	return r.ApiService.SushiswapTransactionsCurrentExecute(r)
+}
+
+/*
+SushiswapTransactionsCurrent Transactions (current)
+
+Gets transactions.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapTransactionsCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapTransactionsCurrent(ctx context.Context) ApiSushiswapTransactionsCurrentRequest {
+	return ApiSushiswapTransactionsCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapTransactionDTO
+func (a *SushiswapApiService) SushiswapTransactionsCurrentExecute(r ApiSushiswapTransactionsCurrentRequest) ([]SushiswapTransactionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapTransactionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapTransactionsCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/transactions/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapUsersCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiSushiswapUsersCurrentRequest) Execute() ([]SushiswapUserDTO, *http.Response, error) {
+	return r.ApiService.SushiswapUsersCurrentExecute(r)
+}
+
+/*
+SushiswapUsersCurrent Users (current)
+
+Gets users.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapUsersCurrentRequest
+*/
+func (a *SushiswapApiService) SushiswapUsersCurrent(ctx context.Context) ApiSushiswapUsersCurrentRequest {
+	return ApiSushiswapUsersCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapUserDTO
+func (a *SushiswapApiService) SushiswapUsersCurrentExecute(r ApiSushiswapUsersCurrentRequest) ([]SushiswapUserDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapUserDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapUsersCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/users/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

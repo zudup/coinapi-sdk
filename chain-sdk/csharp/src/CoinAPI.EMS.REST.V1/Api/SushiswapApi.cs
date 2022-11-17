@@ -64,6 +64,82 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<DexTradeDTO></returns>
         ApiResponse<List<DexTradeDTO>> DexGetTradesCurrentWithHttpInfo ();
         /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapBundleDTO></returns>
+        List<SushiswapBundleDTO> SushiswapBundlesCurrent ();
+
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapBundleDTO></returns>
+        ApiResponse<List<SushiswapBundleDTO>> SushiswapBundlesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapBurnDTO></returns>
+        List<SushiswapBurnDTO> SushiswapBurnsCurrent ();
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapBurnDTO></returns>
+        ApiResponse<List<SushiswapBurnDTO>> SushiswapBurnsCurrentWithHttpInfo ();
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapDayDataDTO></returns>
+        List<SushiswapDayDataDTO> SushiswapDayDatasCurrent ();
+
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapDayDataDTO></returns>
+        ApiResponse<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapFactoryDTO></returns>
+        List<SushiswapFactoryDTO> SushiswapFactorysCurrent ();
+
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapFactoryDTO></returns>
+        ApiResponse<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentWithHttpInfo ();
+        /// <summary>
         /// Bundles (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -127,7 +203,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -142,7 +218,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -185,7 +261,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -200,7 +276,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -214,7 +290,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -231,7 +307,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -247,7 +323,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -264,7 +340,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -311,7 +387,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -329,7 +405,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -346,7 +422,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -362,7 +438,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -428,25 +504,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<SushiswapPairDTO></returns>
         ApiResponse<List<SushiswapPairDTO>> SushiswapGetPoolsCurrentWithHttpInfo ();
         /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SushiswapSwapDTO></returns>
-        List<SushiswapSwapDTO> SushiswapGetSwapsCurrent ();
-
-        /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SushiswapSwapDTO></returns>
-        ApiResponse<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentWithHttpInfo ();
-        /// <summary>
         /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -481,7 +538,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -496,7 +553,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -506,25 +563,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Identifier, day start timestamp in unix / 86400. (optional)</param>
         /// <returns>ApiResponse of List<SushiswapTokenDayDataDTO></returns>
         ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapGetTokenDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SushiswapTokenDTO></returns>
-        List<SushiswapTokenDTO> SushiswapGetTokensCurrent ();
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SushiswapTokenDTO></returns>
-        ApiResponse<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentWithHttpInfo ();
         /// <summary>
         /// Tokens (historical) 🔥
         /// </summary>
@@ -616,6 +654,238 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">User address. (optional)</param>
         /// <returns>ApiResponse of List<SushiswapUserDTO></returns>
         ApiResponse<List<SushiswapUserDTO>> SushiswapGetUsersHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapHourDataDTO></returns>
+        List<SushiswapHourDataDTO> SushiswapHourDatasCurrent ();
+
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapHourDataDTO></returns>
+        ApiResponse<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        List<SushiswapLiquidityPositionSnapshotDTO> SushiswapLiquidityPositionSnapshotsCurrent ();
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapLiquidityPositionDTO></returns>
+        List<SushiswapLiquidityPositionDTO> SushiswapLiquidityPositionsCurrent ();
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapLiquidityPositionDTO></returns>
+        ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapMintDTO></returns>
+        List<SushiswapMintDTO> SushiswapMintsCurrent ();
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapMintDTO></returns>
+        ApiResponse<List<SushiswapMintDTO>> SushiswapMintsCurrentWithHttpInfo ();
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapPairDayDataDTO></returns>
+        List<SushiswapPairDayDataDTO> SushiswapPairDayDatasCurrent ();
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapPairDayDataDTO></returns>
+        ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapPairHourDataDTO></returns>
+        List<SushiswapPairHourDataDTO> SushiswapPairHourDatasCurrent ();
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapPairHourDataDTO></returns>
+        ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>List<SushiswapPairDTO></returns>
+        List<SushiswapPairDTO> SushiswapPairsCurrent (string id = default(string));
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>ApiResponse of List<SushiswapPairDTO></returns>
+        ApiResponse<List<SushiswapPairDTO>> SushiswapPairsCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>List<SushiswapSwapDTO></returns>
+        List<SushiswapSwapDTO> SushiswapSwapsCurrent (string pair = default(string));
+
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>ApiResponse of List<SushiswapSwapDTO></returns>
+        ApiResponse<List<SushiswapSwapDTO>> SushiswapSwapsCurrentWithHttpInfo (string pair = default(string));
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTokenDayDataDTO></returns>
+        List<SushiswapTokenDayDataDTO> SushiswapTokenDayDatasCurrent ();
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTokenDayDataDTO></returns>
+        ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTokenDTO></returns>
+        List<SushiswapTokenDTO> SushiswapTokensCurrent ();
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTokenDTO></returns>
+        ApiResponse<List<SushiswapTokenDTO>> SushiswapTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTransactionDTO></returns>
+        List<SushiswapTransactionDTO> SushiswapTransactionsCurrent ();
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTransactionDTO></returns>
+        ApiResponse<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapUserDTO></returns>
+        List<SushiswapUserDTO> SushiswapUsersCurrent ();
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapUserDTO></returns>
+        ApiResponse<List<SushiswapUserDTO>> SushiswapUsersCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -660,6 +930,90 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexTradeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexTradeDTO>>> DexGetTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapBundleDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapBundleDTO>> SushiswapBundlesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBundleDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapBundleDTO>>> SushiswapBundlesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapBurnDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapBurnDTO>> SushiswapBurnsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapBurnDTO>>> SushiswapBurnsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapDayDataDTO>>> SushiswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapFactoryDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapFactoryDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapFactoryDTO>>> SushiswapFactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Bundles (historical) 🔥
         /// </summary>
@@ -728,7 +1082,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -744,7 +1098,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -790,7 +1144,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -806,7 +1160,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -821,7 +1175,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -839,7 +1193,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -856,7 +1210,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -874,7 +1228,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -924,7 +1278,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -943,7 +1297,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -961,7 +1315,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -978,7 +1332,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1049,27 +1403,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapGetPoolsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SushiswapSwapDTO></returns>
-        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapGetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
         /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -1106,7 +1439,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1122,7 +1455,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1133,27 +1466,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapGetTokenDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SushiswapTokenDTO></returns>
-        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapGetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (historical) 🔥
         /// </summary>
@@ -1251,6 +1563,262 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapUserDTO>>> SushiswapGetUsersHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapHourDataDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapHourDataDTO>>> SushiswapHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapLiquidityPositionDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionDTO>>> SushiswapLiquidityPositionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapMintDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapMintDTO>> SushiswapMintsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapMintDTO>>> SushiswapMintsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDayDataDTO>>> SushiswapPairDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairHourDataDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairHourDataDTO>>> SushiswapPairHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapPairsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapPairsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapSwapDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapSwapsCurrentAsync (string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapSwapsCurrentWithHttpInfoAsync (string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTokenDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapTokenDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTokenDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTransactionDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTransactionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTransactionDTO>>> SushiswapTransactionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapUserDTO></returns>
+        System.Threading.Tasks.Task<List<SushiswapUserDTO>> SushiswapUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapUserDTO>>> SushiswapUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1617,6 +2185,514 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapBundleDTO></returns>
+        public List<SushiswapBundleDTO> SushiswapBundlesCurrent ()
+        {
+             ApiResponse<List<SushiswapBundleDTO>> localVarResponse = SushiswapBundlesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapBundleDTO></returns>
+        public ApiResponse<List<SushiswapBundleDTO>> SushiswapBundlesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/bundles/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapBundlesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapBundleDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapBundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapBundleDTO>)));
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapBundleDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapBundleDTO>> SushiswapBundlesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapBundleDTO>> localVarResponse = await SushiswapBundlesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBundleDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapBundleDTO>>> SushiswapBundlesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/bundles/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapBundlesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapBundleDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapBundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapBundleDTO>)));
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapBurnDTO></returns>
+        public List<SushiswapBurnDTO> SushiswapBurnsCurrent ()
+        {
+             ApiResponse<List<SushiswapBurnDTO>> localVarResponse = SushiswapBurnsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapBurnDTO></returns>
+        public ApiResponse<List<SushiswapBurnDTO>> SushiswapBurnsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/burns/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapBurnsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapBurnDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapBurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapBurnDTO>)));
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapBurnDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapBurnDTO>> SushiswapBurnsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapBurnDTO>> localVarResponse = await SushiswapBurnsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapBurnDTO>>> SushiswapBurnsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/burns/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapBurnsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapBurnDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapBurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapBurnDTO>)));
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapDayDataDTO></returns>
+        public List<SushiswapDayDataDTO> SushiswapDayDatasCurrent ()
+        {
+             ApiResponse<List<SushiswapDayDataDTO>> localVarResponse = SushiswapDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapDayDataDTO></returns>
+        public ApiResponse<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/dayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapDayDataDTO>> localVarResponse = await SushiswapDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapDayDataDTO>>> SushiswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/dayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapFactoryDTO></returns>
+        public List<SushiswapFactoryDTO> SushiswapFactorysCurrent ()
+        {
+             ApiResponse<List<SushiswapFactoryDTO>> localVarResponse = SushiswapFactorysCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapFactoryDTO></returns>
+        public ApiResponse<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/factorys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapFactorysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapFactoryDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapFactoryDTO>)));
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapFactoryDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapFactoryDTO>> localVarResponse = await SushiswapFactorysCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapFactoryDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapFactoryDTO>>> SushiswapFactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/factorys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapFactorysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapFactoryDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapFactoryDTO>)));
+        }
+
+        /// <summary>
         /// Bundles (historical) 🔥 Gets bundles.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1937,7 +3013,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1953,7 +3029,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1965,7 +3041,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapDayDataDTO>> SushiswapGetDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/daydatas/historical";
+            var localVarPath = "/dapps/sushiswap/dayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2014,7 +3090,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2032,7 +3108,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2045,7 +3121,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapDayDataDTO>>> SushiswapGetDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/daydatas/historical";
+            var localVarPath = "/dapps/sushiswap/dayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2251,7 +3327,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2267,7 +3343,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2279,7 +3355,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapHourDataDTO>> SushiswapGetHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/hourdatas/historical";
+            var localVarPath = "/dapps/sushiswap/hourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2328,7 +3404,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2346,7 +3422,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2359,7 +3435,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapHourDataDTO>>> SushiswapGetHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/hourdatas/historical";
+            var localVarPath = "/dapps/sushiswap/hourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2408,7 +3484,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2426,7 +3502,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2440,7 +3516,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/liquiditypositionsnapshots/historical";
+            var localVarPath = "/dapps/sushiswap/liquidityPositionSnapshots/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2491,7 +3567,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2511,7 +3587,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2526,7 +3602,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>> SushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/liquiditypositionsnapshots/historical";
+            var localVarPath = "/dapps/sushiswap/liquidityPositionSnapshots/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2577,7 +3653,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2595,7 +3671,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2609,7 +3685,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapGetLiquidityPositionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/liquiditypositions/historical";
+            var localVarPath = "/dapps/sushiswap/liquidityPositions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2660,7 +3736,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2680,7 +3756,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2695,7 +3771,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionDTO>>> SushiswapGetLiquidityPositionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/liquiditypositions/historical";
+            var localVarPath = "/dapps/sushiswap/liquidityPositions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2909,7 +3985,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2928,7 +4004,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2943,7 +4019,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapGetPairDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/pairdaydatas/historical";
+            var localVarPath = "/dapps/sushiswap/pairDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2995,7 +4071,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3016,7 +4092,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3032,7 +4108,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDayDataDTO>>> SushiswapGetPairDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/pairdaydatas/historical";
+            var localVarPath = "/dapps/sushiswap/pairDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3084,7 +4160,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3101,7 +4177,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3114,7 +4190,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapGetPairHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/pairhourdatas/historical";
+            var localVarPath = "/dapps/sushiswap/pairHourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3164,7 +4240,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3183,7 +4259,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3197,7 +4273,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairHourDataDTO>>> SushiswapGetPairHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/pairhourdatas/historical";
+            var localVarPath = "/dapps/sushiswap/pairHourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3549,133 +4625,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SushiswapSwapDTO></returns>
-        public List<SushiswapSwapDTO> SushiswapGetSwapsCurrent ()
-        {
-             ApiResponse<List<SushiswapSwapDTO>> localVarResponse = SushiswapGetSwapsCurrentWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SushiswapSwapDTO></returns>
-        public ApiResponse<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentWithHttpInfo ()
-        {
-
-            var localVarPath = "/dapps/sushiswap/swaps/current";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SushiswapGetSwapsCurrent", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<SushiswapSwapDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SushiswapSwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapSwapDTO>)));
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SushiswapSwapDTO></returns>
-        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await SushiswapGetSwapsCurrentWithHttpInfoAsync(cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapGetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            var localVarPath = "/dapps/sushiswap/swaps/current";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SushiswapGetSwapsCurrent", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<SushiswapSwapDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SushiswapSwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapSwapDTO>)));
-        }
-
-        /// <summary>
         /// Swaps (historical) 🔥 Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3839,7 +4788,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3855,7 +4804,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3867,7 +4816,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapGetTokenDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/sushiswap/tokendaydatas/historical";
+            var localVarPath = "/dapps/sushiswap/tokenDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3916,7 +4865,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3934,7 +4883,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3947,7 +4896,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapGetTokenDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/sushiswap/tokendaydatas/historical";
+            var localVarPath = "/dapps/sushiswap/tokenDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3993,133 +4942,6 @@ namespace CoinAPI.EMS.REST.V1.Api
             return new ApiResponse<List<SushiswapTokenDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SushiswapTokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDayDataDTO>)));
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<SushiswapTokenDTO></returns>
-        public List<SushiswapTokenDTO> SushiswapGetTokensCurrent ()
-        {
-             ApiResponse<List<SushiswapTokenDTO>> localVarResponse = SushiswapGetTokensCurrentWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<SushiswapTokenDTO></returns>
-        public ApiResponse<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentWithHttpInfo ()
-        {
-
-            var localVarPath = "/dapps/sushiswap/tokens/current";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SushiswapGetTokensCurrent", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<SushiswapTokenDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SushiswapTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDTO>)));
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<SushiswapTokenDTO></returns>
-        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await SushiswapGetTokensCurrentWithHttpInfoAsync(cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapGetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            var localVarPath = "/dapps/sushiswap/tokens/current";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SushiswapGetTokensCurrent", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<SushiswapTokenDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<SushiswapTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDTO>)));
         }
 
         /// <summary>
@@ -4597,6 +5419,1542 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("SushiswapGetUsersHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapUserDTO>)));
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapHourDataDTO></returns>
+        public List<SushiswapHourDataDTO> SushiswapHourDatasCurrent ()
+        {
+             ApiResponse<List<SushiswapHourDataDTO>> localVarResponse = SushiswapHourDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapHourDataDTO></returns>
+        public ApiResponse<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/hourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapHourDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapHourDataDTO>> localVarResponse = await SushiswapHourDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapHourDataDTO>>> SushiswapHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/hourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        public List<SushiswapLiquidityPositionSnapshotDTO> SushiswapLiquidityPositionSnapshotsCurrent ()
+        {
+             ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> localVarResponse = SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        public ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/liquidityPositionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapLiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapLiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapLiquidityPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapLiquidityPositionSnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> localVarResponse = await SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/liquidityPositionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapLiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapLiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapLiquidityPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapLiquidityPositionDTO></returns>
+        public List<SushiswapLiquidityPositionDTO> SushiswapLiquidityPositionsCurrent ()
+        {
+             ApiResponse<List<SushiswapLiquidityPositionDTO>> localVarResponse = SushiswapLiquidityPositionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapLiquidityPositionDTO></returns>
+        public ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/liquidityPositions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapLiquidityPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapLiquidityPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapLiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapLiquidityPositionDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapLiquidityPositionDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapLiquidityPositionDTO>> localVarResponse = await SushiswapLiquidityPositionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionDTO>>> SushiswapLiquidityPositionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/liquidityPositions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapLiquidityPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapLiquidityPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapLiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapLiquidityPositionDTO>)));
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapMintDTO></returns>
+        public List<SushiswapMintDTO> SushiswapMintsCurrent ()
+        {
+             ApiResponse<List<SushiswapMintDTO>> localVarResponse = SushiswapMintsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapMintDTO></returns>
+        public ApiResponse<List<SushiswapMintDTO>> SushiswapMintsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/mints/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapMintsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapMintDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapMintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapMintDTO>)));
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapMintDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapMintDTO>> SushiswapMintsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapMintDTO>> localVarResponse = await SushiswapMintsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapMintDTO>>> SushiswapMintsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/mints/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapMintsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapMintDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapMintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapMintDTO>)));
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapPairDayDataDTO></returns>
+        public List<SushiswapPairDayDataDTO> SushiswapPairDayDatasCurrent ()
+        {
+             ApiResponse<List<SushiswapPairDayDataDTO>> localVarResponse = SushiswapPairDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapPairDayDataDTO></returns>
+        public ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapPairDayDataDTO>> localVarResponse = await SushiswapPairDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDayDataDTO>>> SushiswapPairDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapPairHourDataDTO></returns>
+        public List<SushiswapPairHourDataDTO> SushiswapPairHourDatasCurrent ()
+        {
+             ApiResponse<List<SushiswapPairHourDataDTO>> localVarResponse = SushiswapPairHourDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapPairHourDataDTO></returns>
+        public ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairHourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairHourDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapPairHourDataDTO>> localVarResponse = await SushiswapPairHourDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairHourDataDTO>>> SushiswapPairHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairHourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>List<SushiswapPairDTO></returns>
+        public List<SushiswapPairDTO> SushiswapPairsCurrent (string id = default(string))
+        {
+             ApiResponse<List<SushiswapPairDTO>> localVarResponse = SushiswapPairsCurrentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>ApiResponse of List<SushiswapPairDTO></returns>
+        public ApiResponse<List<SushiswapPairDTO>> SushiswapPairsCurrentWithHttpInfo (string id = default(string))
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairDTO>)));
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapPairDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapPairsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapPairDTO>> localVarResponse = await SushiswapPairsCurrentWithHttpInfoAsync(id, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapPairsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/pairs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapPairsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapPairDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapPairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapPairDTO>)));
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>List<SushiswapSwapDTO></returns>
+        public List<SushiswapSwapDTO> SushiswapSwapsCurrent (string pair = default(string))
+        {
+             ApiResponse<List<SushiswapSwapDTO>> localVarResponse = SushiswapSwapsCurrentWithHttpInfo(pair);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>ApiResponse of List<SushiswapSwapDTO></returns>
+        public ApiResponse<List<SushiswapSwapDTO>> SushiswapSwapsCurrentWithHttpInfo (string pair = default(string))
+        {
+
+            var localVarPath = "/dapps/sushiswap/swaps/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapSwapsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapSwapDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapSwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapSwapDTO>)));
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapSwapDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapSwapsCurrentAsync (string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await SushiswapSwapsCurrentWithHttpInfoAsync(pair, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapSwapsCurrentWithHttpInfoAsync (string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/swaps/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapSwapsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapSwapDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapSwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapSwapDTO>)));
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTokenDayDataDTO></returns>
+        public List<SushiswapTokenDayDataDTO> SushiswapTokenDayDatasCurrent ()
+        {
+             ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResponse = SushiswapTokenDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTokenDayDataDTO></returns>
+        public ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/tokenDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTokenDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTokenDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTokenDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResponse = await SushiswapTokenDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapTokenDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/tokenDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTokenDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTokenDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTokenDTO></returns>
+        public List<SushiswapTokenDTO> SushiswapTokensCurrent ()
+        {
+             ApiResponse<List<SushiswapTokenDTO>> localVarResponse = SushiswapTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTokenDTO></returns>
+        public ApiResponse<List<SushiswapTokenDTO>> SushiswapTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await SushiswapTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapTransactionDTO></returns>
+        public List<SushiswapTransactionDTO> SushiswapTransactionsCurrent ()
+        {
+             ApiResponse<List<SushiswapTransactionDTO>> localVarResponse = SushiswapTransactionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapTransactionDTO></returns>
+        public ApiResponse<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/transactions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTransactionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTransactionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTransactionDTO>)));
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapTransactionDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapTransactionDTO>> localVarResponse = await SushiswapTransactionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTransactionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapTransactionDTO>>> SushiswapTransactionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/transactions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapTransactionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapTransactionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapTransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapTransactionDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<SushiswapUserDTO></returns>
+        public List<SushiswapUserDTO> SushiswapUsersCurrent ()
+        {
+             ApiResponse<List<SushiswapUserDTO>> localVarResponse = SushiswapUsersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<SushiswapUserDTO></returns>
+        public ApiResponse<List<SushiswapUserDTO>> SushiswapUsersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/sushiswap/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapUsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<SushiswapUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<SushiswapUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SushiswapUserDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<SushiswapUserDTO></returns>
+        public async System.Threading.Tasks.Task<List<SushiswapUserDTO>> SushiswapUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<SushiswapUserDTO>> localVarResponse = await SushiswapUsersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SushiswapUserDTO>>> SushiswapUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/sushiswap/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SushiswapUsersCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

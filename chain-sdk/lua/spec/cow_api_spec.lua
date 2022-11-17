@@ -50,4 +50,39 @@ describe("cow_api", function()
     end)
   end)
 
+  -- unit tests for cow_orders__current
+  describe("cow_orders__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for cow_settlements__current
+  describe("cow_settlements__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for cow_tokens__current
+  describe("cow_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for cow_trades__current
+  describe("cow_trades__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for cow_users__current
+  describe("cow_users__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
 end)

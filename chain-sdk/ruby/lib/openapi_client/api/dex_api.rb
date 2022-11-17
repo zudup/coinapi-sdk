@@ -19,6 +19,120 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Batchs (current)
+    # Gets batchs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexBatchDTO>]
+    def dex_batchs__current(opts = {})
+      data, _status_code, _headers = dex_batchs__current_with_http_info(opts)
+      data
+    end
+
+    # Batchs (current)
+    # Gets batchs.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexBatchDTO>, Integer, Hash)>] Array<DexBatchDTO> data, response status code and response headers
+    def dex_batchs__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_batchs__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/batchs/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexBatchDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_batchs__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_batchs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexDepositDTO>]
+    def dex_deposits__current(opts = {})
+      data, _status_code, _headers = dex_deposits__current_with_http_info(opts)
+      data
+    end
+
+    # Deposits (current)
+    # Gets deposits.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexDepositDTO>, Integer, Hash)>] Array<DexDepositDTO> data, response status code and response headers
+    def dex_deposits__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_deposits__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/deposits/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_deposits__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_deposits__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Batchs (historical) 🔥
     # Gets batchs.
     # @param [Hash] opts the optional parameters
@@ -692,7 +806,7 @@ module OpenapiClient
     end
 
     # WithdrawRequests (historical) 🔥
-    # Gets withdrawrequests.
+    # Gets withdrawRequests.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -707,7 +821,7 @@ module OpenapiClient
     end
 
     # WithdrawRequests (historical) 🔥
-    # Gets withdrawrequests.
+    # Gets withdrawRequests.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -721,7 +835,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraw_requests__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/withdrawrequests/historical'
+      local_var_path = '/dapps/dex/withdrawRequests/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -837,6 +951,519 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DexApi#dex_get_withdraws__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Orders (current)
+    # Gets orders.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexOrderDTO>]
+    def dex_orders__current(opts = {})
+      data, _status_code, _headers = dex_orders__current_with_http_info(opts)
+      data
+    end
+
+    # Orders (current)
+    # Gets orders.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexOrderDTO>, Integer, Hash)>] Array<DexOrderDTO> data, response status code and response headers
+    def dex_orders__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_orders__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/orders/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexOrderDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_orders__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_orders__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Prices (current)
+    # Gets prices.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexPriceDTO>]
+    def dex_prices__current(opts = {})
+      data, _status_code, _headers = dex_prices__current_with_http_info(opts)
+      data
+    end
+
+    # Prices (current)
+    # Gets prices.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexPriceDTO>, Integer, Hash)>] Array<DexPriceDTO> data, response status code and response headers
+    def dex_prices__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_prices__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/prices/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexPriceDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_prices__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_prices__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Solutions (current)
+    # Gets solutions.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexSolutionDTO>]
+    def dex_solutions__current(opts = {})
+      data, _status_code, _headers = dex_solutions__current_with_http_info(opts)
+      data
+    end
+
+    # Solutions (current)
+    # Gets solutions.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexSolutionDTO>, Integer, Hash)>] Array<DexSolutionDTO> data, response status code and response headers
+    def dex_solutions__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_solutions__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/solutions/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexSolutionDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_solutions__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_solutions__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Statss (current)
+    # Gets statss.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexStatsDTO>]
+    def dex_statss__current(opts = {})
+      data, _status_code, _headers = dex_statss__current_with_http_info(opts)
+      data
+    end
+
+    # Statss (current)
+    # Gets statss.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexStatsDTO>, Integer, Hash)>] Array<DexStatsDTO> data, response status code and response headers
+    def dex_statss__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_statss__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/statss/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexStatsDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_statss__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_statss__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexTokenDTO>]
+    def dex_tokens__current(opts = {})
+      data, _status_code, _headers = dex_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexTokenDTO>, Integer, Hash)>] Array<DexTokenDTO> data, response status code and response headers
+    def dex_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/tokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexTokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Trades (current)
+    # Gets trades.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexTradeDTO>]
+    def dex_trades__current(opts = {})
+      data, _status_code, _headers = dex_trades__current_with_http_info(opts)
+      data
+    end
+
+    # Trades (current)
+    # Gets trades.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexTradeDTO>, Integer, Hash)>] Array<DexTradeDTO> data, response status code and response headers
+    def dex_trades__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_trades__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/trades/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexTradeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_trades__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_trades__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Users (current)
+    # Gets users.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexUserDTO>]
+    def dex_users__current(opts = {})
+      data, _status_code, _headers = dex_users__current_with_http_info(opts)
+      data
+    end
+
+    # Users (current)
+    # Gets users.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexUserDTO>, Integer, Hash)>] Array<DexUserDTO> data, response status code and response headers
+    def dex_users__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_users__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/users/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexUserDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_users__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_users__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # WithdrawRequests (current)
+    # Gets withdrawRequests.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexWithdrawRequestDTO>]
+    def dex_withdraw_requests__current(opts = {})
+      data, _status_code, _headers = dex_withdraw_requests__current_with_http_info(opts)
+      data
+    end
+
+    # WithdrawRequests (current)
+    # Gets withdrawRequests.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexWithdrawRequestDTO>, Integer, Hash)>] Array<DexWithdrawRequestDTO> data, response status code and response headers
+    def dex_withdraw_requests__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_withdraw_requests__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/withdrawRequests/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexWithdrawRequestDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_withdraw_requests__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_withdraw_requests__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexWithdrawDTO>]
+    def dex_withdraws__current(opts = {})
+      data, _status_code, _headers = dex_withdraws__current_with_http_info(opts)
+      data
+    end
+
+    # Withdraws (current)
+    # Gets withdraws.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexWithdrawDTO>, Integer, Hash)>] Array<DexWithdrawDTO> data, response status code and response headers
+    def dex_withdraws__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_withdraws__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/withdraws/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexWithdrawDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_withdraws__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_withdraws__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -52,3 +52,43 @@ list_t*
 CowAPI_cowGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * address );
 
 
+// Orders (current)
+//
+// Gets orders.
+//
+list_t*
+CowAPI_cowOrdersCurrent(apiClient_t *apiClient);
+
+
+// Settlements (current)
+//
+// Gets settlements.
+//
+list_t*
+CowAPI_cowSettlementsCurrent(apiClient_t *apiClient);
+
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+CowAPI_cowTokensCurrent(apiClient_t *apiClient);
+
+
+// Trades (current)
+//
+// Gets trades.
+//
+list_t*
+CowAPI_cowTradesCurrent(apiClient_t *apiClient);
+
+
+// Users (current)
+//
+// Gets users.
+//
+list_t*
+CowAPI_cowUsersCurrent(apiClient_t *apiClient);
+
+

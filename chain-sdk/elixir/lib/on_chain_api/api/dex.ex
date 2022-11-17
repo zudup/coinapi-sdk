@@ -10,6 +10,64 @@ defmodule OnChainAPI.Api.Dex do
   import OnChainAPI.RequestBuilder
 
   @doc """
+  Batchs (current)
+  Gets batchs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexBatchDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_batchs__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
+  def dex_batchs__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/batchs/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexBatchDto{}]}
+    ])
+  end
+
+  @doc """
+  Deposits (current)
+  Gets deposits.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_deposits__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexDepositDto.t)} | {:error, Tesla.Env.t}
+  def dex_deposits__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/deposits/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexDepositDto{}]}
+    ])
+  end
+
+  @doc """
   Batchs (historical) 🔥
   Gets batchs.
 
@@ -414,7 +472,7 @@ defmodule OnChainAPI.Api.Dex do
 
   @doc """
   WithdrawRequests (historical) 🔥
-  Gets withdrawrequests.
+  Gets withdrawRequests.
 
   ### Parameters
 
@@ -446,7 +504,7 @@ defmodule OnChainAPI.Api.Dex do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/dex/withdrawrequests/historical")
+      |> url("/dapps/dex/withdrawRequests/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -493,6 +551,267 @@ defmodule OnChainAPI.Api.Dex do
       |> method(:get)
       |> url("/dapps/dex/withdraws/historical")
       |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexWithdrawDto{}]}
+    ])
+  end
+
+  @doc """
+  Orders (current)
+  Gets orders.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexOrderDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_orders__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexOrderDto.t)} | {:error, Tesla.Env.t}
+  def dex_orders__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/orders/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexOrderDto{}]}
+    ])
+  end
+
+  @doc """
+  Prices (current)
+  Gets prices.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexPriceDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_prices__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexPriceDto.t)} | {:error, Tesla.Env.t}
+  def dex_prices__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/prices/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexPriceDto{}]}
+    ])
+  end
+
+  @doc """
+  Solutions (current)
+  Gets solutions.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexSolutionDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_solutions__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexSolutionDto.t)} | {:error, Tesla.Env.t}
+  def dex_solutions__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/solutions/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexSolutionDto{}]}
+    ])
+  end
+
+  @doc """
+  Statss (current)
+  Gets statss.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexStatsDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_statss__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
+  def dex_statss__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/statss/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexStatsDto{}]}
+    ])
+  end
+
+  @doc """
+  Tokens (current)
+  Gets tokens.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTokenDto.t)} | {:error, Tesla.Env.t}
+  def dex_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/tokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  Trades (current)
+  Gets trades.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexTradeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_trades__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTradeDto.t)} | {:error, Tesla.Env.t}
+  def dex_trades__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/trades/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexTradeDto{}]}
+    ])
+  end
+
+  @doc """
+  Users (current)
+  Gets users.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexUserDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_users__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexUserDto.t)} | {:error, Tesla.Env.t}
+  def dex_users__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/users/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexUserDto{}]}
+    ])
+  end
+
+  @doc """
+  WithdrawRequests (current)
+  Gets withdrawRequests.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexWithdrawRequestDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_withdraw_requests__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexWithdrawRequestDto.t)} | {:error, Tesla.Env.t}
+  def dex_withdraw_requests__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/withdrawRequests/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexWithdrawRequestDto{}]}
+    ])
+  end
+
+  @doc """
+  Withdraws (current)
+  Gets withdraws.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_withdraws__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def dex_withdraws__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/withdraws/current")
       |> Enum.into([])
 
     connection

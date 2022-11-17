@@ -24,6 +24,72 @@ inherit
 feature -- API Access
 
 
+	dex_batchs_current : detachable LIST [DEX_BATCH_DTO]
+			-- Batchs (current)
+			-- Gets batchs.
+			-- 
+			-- 
+			-- Result LIST [DEX_BATCH_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/batchs/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_BATCH_DTO] } l_response.data ({ LIST [DEX_BATCH_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_deposits_current : detachable LIST [DEX_DEPOSIT_DTO]
+			-- Deposits (current)
+			-- Gets deposits.
+			-- 
+			-- 
+			-- Result LIST [DEX_DEPOSIT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/deposits/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_DEPOSIT_DTO] } l_response.data ({ LIST [DEX_DEPOSIT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
 	dex_get_batchs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [DEX_BATCH_DTO]
 			-- Batchs (historical) 🔥
 			-- Gets batchs.
@@ -482,7 +548,7 @@ feature -- API Access
 
 	dex_get_withdraw_requests_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; user: STRING_32): detachable LIST [DEX_WITHDRAW_REQUEST_DTO]
 			-- WithdrawRequests (historical) 🔥
-			-- Gets withdrawrequests.
+			-- Gets withdrawRequests.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -507,7 +573,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/withdrawrequests/historical"
+			l_path := "/dapps/dex/withdrawRequests/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -565,6 +631,303 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "id", id));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "user", user));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_WITHDRAW_DTO] } l_response.data ({ LIST [DEX_WITHDRAW_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_orders_current : detachable LIST [DEX_ORDER_DTO]
+			-- Orders (current)
+			-- Gets orders.
+			-- 
+			-- 
+			-- Result LIST [DEX_ORDER_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/orders/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_ORDER_DTO] } l_response.data ({ LIST [DEX_ORDER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_prices_current : detachable LIST [DEX_PRICE_DTO]
+			-- Prices (current)
+			-- Gets prices.
+			-- 
+			-- 
+			-- Result LIST [DEX_PRICE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/prices/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_PRICE_DTO] } l_response.data ({ LIST [DEX_PRICE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_solutions_current : detachable LIST [DEX_SOLUTION_DTO]
+			-- Solutions (current)
+			-- Gets solutions.
+			-- 
+			-- 
+			-- Result LIST [DEX_SOLUTION_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/solutions/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_SOLUTION_DTO] } l_response.data ({ LIST [DEX_SOLUTION_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_statss_current : detachable LIST [DEX_STATS_DTO]
+			-- Statss (current)
+			-- Gets statss.
+			-- 
+			-- 
+			-- Result LIST [DEX_STATS_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/statss/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_STATS_DTO] } l_response.data ({ LIST [DEX_STATS_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_tokens_current : detachable LIST [DEX_TOKEN_DTO]
+			-- Tokens (current)
+			-- Gets tokens.
+			-- 
+			-- 
+			-- Result LIST [DEX_TOKEN_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/tokens/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_TOKEN_DTO] } l_response.data ({ LIST [DEX_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_trades_current : detachable LIST [DEX_TRADE_DTO]
+			-- Trades (current)
+			-- Gets trades.
+			-- 
+			-- 
+			-- Result LIST [DEX_TRADE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/trades/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_TRADE_DTO] } l_response.data ({ LIST [DEX_TRADE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_users_current : detachable LIST [DEX_USER_DTO]
+			-- Users (current)
+			-- Gets users.
+			-- 
+			-- 
+			-- Result LIST [DEX_USER_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/users/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_USER_DTO] } l_response.data ({ LIST [DEX_USER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_withdraw_requests_current : detachable LIST [DEX_WITHDRAW_REQUEST_DTO]
+			-- WithdrawRequests (current)
+			-- Gets withdrawRequests.
+			-- 
+			-- 
+			-- Result LIST [DEX_WITHDRAW_REQUEST_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/withdrawRequests/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_WITHDRAW_REQUEST_DTO] } l_response.data ({ LIST [DEX_WITHDRAW_REQUEST_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_withdraws_current : detachable LIST [DEX_WITHDRAW_DTO]
+			-- Withdraws (current)
+			-- Gets withdraws.
+			-- 
+			-- 
+			-- Result LIST [DEX_WITHDRAW_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/withdraws/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

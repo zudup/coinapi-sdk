@@ -30,6 +30,121 @@ my $api = WWW::OpenAPIClient::CurveApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 
 #
+# curve_accounts__current test
+#
+# uncomment below and update the test
+#my $curve_accounts__current_result = $api->curve_accounts__current();
+
+#
+# curve_add_liquidity_events__current test
+#
+# uncomment below and update the test
+#my $curve_add_liquidity_events__current_result = $api->curve_add_liquidity_events__current();
+
+#
+# curve_admin_fee_change_logs__current test
+#
+# uncomment below and update the test
+#my $curve_admin_fee_change_logs__current_result = $api->curve_admin_fee_change_logs__current();
+
+#
+# curve_amplification_coeff_change_logs__current test
+#
+# uncomment below and update the test
+#my $curve_amplification_coeff_change_logs__current_result = $api->curve_amplification_coeff_change_logs__current();
+
+#
+# curve_coins__current test
+#
+# uncomment below and update the test
+#my $curve_coins__current_result = $api->curve_coins__current();
+
+#
+# curve_contract_versions__current test
+#
+# uncomment below and update the test
+#my $curve_contract_versions__current_result = $api->curve_contract_versions__current();
+
+#
+# curve_contracts__current test
+#
+# uncomment below and update the test
+#my $curve_contracts__current_result = $api->curve_contracts__current();
+
+#
+# curve_daily_volumes__current test
+#
+# uncomment below and update the test
+#my $curve_daily_volumes__current_result = $api->curve_daily_volumes__current();
+
+#
+# curve_exchanges__current test
+#
+# uncomment below and update the test
+#my $curve_exchanges__current_pool = undef; # replace NULL with a proper value
+#my $curve_exchanges__current_result = $api->curve_exchanges__current(pool => $curve_exchanges__current_pool);
+
+#
+# curve_fee_change_logs__current test
+#
+# uncomment below and update the test
+#my $curve_fee_change_logs__current_result = $api->curve_fee_change_logs__current();
+
+#
+# curve_gauge_deposits__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_deposits__current_result = $api->curve_gauge_deposits__current();
+
+#
+# curve_gauge_liquiditys__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_liquiditys__current_result = $api->curve_gauge_liquiditys__current();
+
+#
+# curve_gauge_total_weights__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_total_weights__current_result = $api->curve_gauge_total_weights__current();
+
+#
+# curve_gauge_type_weights__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_type_weights__current_result = $api->curve_gauge_type_weights__current();
+
+#
+# curve_gauge_types__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_types__current_result = $api->curve_gauge_types__current();
+
+#
+# curve_gauge_weight_votes__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_weight_votes__current_result = $api->curve_gauge_weight_votes__current();
+
+#
+# curve_gauge_weights__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_weights__current_result = $api->curve_gauge_weights__current();
+
+#
+# curve_gauge_withdraws__current test
+#
+# uncomment below and update the test
+#my $curve_gauge_withdraws__current_result = $api->curve_gauge_withdraws__current();
+
+#
+# curve_gauges__current test
+#
+# uncomment below and update the test
+#my $curve_gauges__current_result = $api->curve_gauges__current();
+
+#
 # curve_get_accounts__historical test
 #
 # uncomment below and update the test
@@ -409,4 +524,83 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_weekly_volumes__historical_id = undef; # replace NULL with a proper value
 #my $curve_get_weekly_volumes__historical_pool = undef; # replace NULL with a proper value
 #my $curve_get_weekly_volumes__historical_result = $api->curve_get_weekly_volumes__historical(start_block => $curve_get_weekly_volumes__historical_start_block, end_block => $curve_get_weekly_volumes__historical_end_block, start_date => $curve_get_weekly_volumes__historical_start_date, end_date => $curve_get_weekly_volumes__historical_end_date, id => $curve_get_weekly_volumes__historical_id, pool => $curve_get_weekly_volumes__historical_pool);
+
+#
+# curve_hourly_volumes__current test
+#
+# uncomment below and update the test
+#my $curve_hourly_volumes__current_result = $api->curve_hourly_volumes__current();
+
+#
+# curve_lp_tokens__current test
+#
+# uncomment below and update the test
+#my $curve_lp_tokens__current_result = $api->curve_lp_tokens__current();
+
+#
+# curve_pools__current test
+#
+# uncomment below and update the test
+#my $curve_pools__current_id = undef; # replace NULL with a proper value
+#my $curve_pools__current_result = $api->curve_pools__current(id => $curve_pools__current_id);
+
+#
+# curve_proposal_votes__current test
+#
+# uncomment below and update the test
+#my $curve_proposal_votes__current_result = $api->curve_proposal_votes__current();
+
+#
+# curve_proposals__current test
+#
+# uncomment below and update the test
+#my $curve_proposals__current_result = $api->curve_proposals__current();
+
+#
+# curve_remove_liquidity_events__current test
+#
+# uncomment below and update the test
+#my $curve_remove_liquidity_events__current_result = $api->curve_remove_liquidity_events__current();
+
+#
+# curve_remove_liquidity_one_events__current test
+#
+# uncomment below and update the test
+#my $curve_remove_liquidity_one_events__current_result = $api->curve_remove_liquidity_one_events__current();
+
+#
+# curve_system_states__current test
+#
+# uncomment below and update the test
+#my $curve_system_states__current_result = $api->curve_system_states__current();
+
+#
+# curve_tokens__current test
+#
+# uncomment below and update the test
+#my $curve_tokens__current_result = $api->curve_tokens__current();
+
+#
+# curve_transfer_ownership_events__current test
+#
+# uncomment below and update the test
+#my $curve_transfer_ownership_events__current_result = $api->curve_transfer_ownership_events__current();
+
+#
+# curve_underlying_coins__current test
+#
+# uncomment below and update the test
+#my $curve_underlying_coins__current_result = $api->curve_underlying_coins__current();
+
+#
+# curve_voting_apps__current test
+#
+# uncomment below and update the test
+#my $curve_voting_apps__current_result = $api->curve_voting_apps__current();
+
+#
+# curve_weekly_volumes__current test
+#
+# uncomment below and update the test
+#my $curve_weekly_volumes__current_result = $api->curve_weekly_volumes__current();
 

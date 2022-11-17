@@ -19,12 +19,12 @@ case class PairDayDataDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pair id>-<day start timestamp>. */
+  /*  */
   id: Option[String] = None,
   /* Unix timestamp for start of day. */
   date: Option[Int] = None,
-  /* Reference to pair. */
-  pair: Option[String] = None,
+  /* Address for pair contract. */
+  pairAddress: Option[String] = None,
   /* Reference to token0. */
   token0: Option[String] = None,
   /* Reference to token1. */
@@ -38,13 +38,13 @@ case class PairDayDataDTO (
   /* Reserve of token0 plus token1 stored as a derived USD amount. */
   reserveUsd: Option[String] = None,
   /* Total amount of token0 swapped throughout day. */
-  volumeToken0: Option[String] = None,
+  dailyVolumeToken0: Option[String] = None,
   /* Total amount of token1 swapped throughout day. */
-  volumeToken1: Option[String] = None,
+  dailyVolumeToken1: Option[String] = None,
   /* Total volume within pair throughout day. */
-  volumeUsd: Option[String] = None,
+  dailyVolumeUsd: Option[String] = None,
   /* Amount of transactions on pair throughout day. */
-  txCount: Option[String] = None,
+  dailyTxns: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

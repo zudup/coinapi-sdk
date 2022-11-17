@@ -78,6 +78,38 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_GetTrades__current(
     ) const;
     /// <summary>
+    /// Bundles (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets bundles.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_BundleDTO>>> sushiswap_Bundles__current(
+    ) const;
+    /// <summary>
+    /// Burns (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets burns.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_BurnDTO>>> sushiswap_Burns__current(
+    ) const;
+    /// <summary>
+    /// DayDatas (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets dayDatas.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_DayDatas__current(
+    ) const;
+    /// <summary>
+    /// Factorys (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets factorys.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_Factorys__current(
+    ) const;
+    /// <summary>
     /// Bundles (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -119,7 +151,7 @@ public:
     /// DayDatas (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets daydatas.
+    /// Gets dayDatas.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -155,7 +187,7 @@ public:
     /// HourDatas (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets hourdatas.
+    /// Gets hourDatas.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -173,7 +205,7 @@ public:
     /// LiquidityPositionSnapshots (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets liquiditypositionsnapshots.
+    /// Gets liquidityPositionSnapshots.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -195,7 +227,7 @@ public:
     /// LiquidityPositions (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets liquiditypositions.
+    /// Gets liquidityPositions.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -237,7 +269,7 @@ public:
     /// PairDayDatas (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets pairdaydatas.
+    /// Gets pairDayDatas.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -261,7 +293,7 @@ public:
     /// PairHourDatas (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets pairhourdatas.
+    /// Gets pairHourDatas.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -310,14 +342,6 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
-    /// Swaps (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets swaps.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_GetSwaps__current(
-    ) const;
-    /// <summary>
     /// Swaps (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -341,7 +365,7 @@ public:
     /// TokenDayDatas (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets tokendaydatas.
+    /// Gets tokenDayDatas.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -354,14 +378,6 @@ public:
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate,
         boost::optional<utility::string_t> id
-    ) const;
-    /// <summary>
-    /// Tokens (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets tokens.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_GetTokens__current(
     ) const;
     /// <summary>
     /// Tokens (historical) 🔥
@@ -420,6 +436,106 @@ public:
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate,
         boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// HourDatas (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets hourDatas.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_HourDatas__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPositionSnapshots (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPositionSnapshots.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_LiquidityPositionSnapshotDTO>>> sushiswap_LiquidityPositionSnapshots__current(
+    ) const;
+    /// <summary>
+    /// LiquidityPositions (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets liquidityPositions.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_LiquidityPositionDTO>>> sushiswap_LiquidityPositions__current(
+    ) const;
+    /// <summary>
+    /// Mints (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets mints.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_MintDTO>>> sushiswap_Mints__current(
+    ) const;
+    /// <summary>
+    /// PairDayDatas (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets pairDayDatas.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_PairDayDatas__current(
+    ) const;
+    /// <summary>
+    /// PairHourDatas (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets pairHourDatas.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_PairHourDatas__current(
+    ) const;
+    /// <summary>
+    /// Pairs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets pairs.
+    /// </remarks>
+    /// <param name="id">Pair contract address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_Pairs__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// Swaps (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets swaps.
+    /// </remarks>
+    /// <param name="pair">Reference to pair. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_Swaps__current(
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// TokenDayDatas (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokenDayDatas.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_TokenDayDatas__current(
+    ) const;
+    /// <summary>
+    /// Tokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_Tokens__current(
+    ) const;
+    /// <summary>
+    /// Transactions (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets transactions.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TransactionDTO>>> sushiswap_Transactions__current(
+    ) const;
+    /// <summary>
+    /// Users (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets users.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_UserDTO>>> sushiswap_Users__current(
     ) const;
 
 protected:

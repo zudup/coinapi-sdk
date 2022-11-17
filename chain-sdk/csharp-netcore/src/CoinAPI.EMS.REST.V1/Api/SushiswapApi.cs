@@ -70,6 +70,90 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;DexTradeDTO&gt;</returns>
         ApiResponse<List<DexTradeDTO>> DexGetTradesCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapBundleDTO&gt;</returns>
+        List<SushiswapBundleDTO> SushiswapBundlesCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapBundleDTO&gt;</returns>
+        ApiResponse<List<SushiswapBundleDTO>> SushiswapBundlesCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapBurnDTO&gt;</returns>
+        List<SushiswapBurnDTO> SushiswapBurnsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapBurnDTO&gt;</returns>
+        ApiResponse<List<SushiswapBurnDTO>> SushiswapBurnsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapDayDataDTO&gt;</returns>
+        List<SushiswapDayDataDTO> SushiswapDayDatasCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapDayDataDTO&gt;</returns>
+        ApiResponse<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapFactoryDTO&gt;</returns>
+        List<SushiswapFactoryDTO> SushiswapFactorysCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapFactoryDTO&gt;</returns>
+        ApiResponse<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
         /// Bundles (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -137,7 +221,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -153,7 +237,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -199,7 +283,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -215,7 +299,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -230,7 +314,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -248,7 +332,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -265,7 +349,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -283,7 +367,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -333,7 +417,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -352,7 +436,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -370,7 +454,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -387,7 +471,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -458,27 +542,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
         ApiResponse<List<SushiswapPairDTO>> SushiswapGetPoolsCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
-        List<SushiswapSwapDTO> SushiswapGetSwapsCurrent(int operationIndex = 0);
-
-        /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
-        ApiResponse<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentWithHttpInfo(int operationIndex = 0);
-        /// <summary>
         /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -515,7 +578,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -531,7 +594,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -542,27 +605,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapTokenDayDataDTO&gt;</returns>
         ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapGetTokenDayDatasHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0);
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
-        List<SushiswapTokenDTO> SushiswapGetTokensCurrent(int operationIndex = 0);
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
-        ApiResponse<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Tokens (historical) 🔥
         /// </summary>
@@ -660,6 +702,262 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapUserDTO&gt;</returns>
         ApiResponse<List<SushiswapUserDTO>> SushiswapGetUsersHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0);
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapHourDataDTO&gt;</returns>
+        List<SushiswapHourDataDTO> SushiswapHourDatasCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapHourDataDTO&gt;</returns>
+        ApiResponse<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        List<SushiswapLiquidityPositionSnapshotDTO> SushiswapLiquidityPositionSnapshotsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        List<SushiswapLiquidityPositionDTO> SushiswapLiquidityPositionsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapMintDTO&gt;</returns>
+        List<SushiswapMintDTO> SushiswapMintsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapMintDTO&gt;</returns>
+        ApiResponse<List<SushiswapMintDTO>> SushiswapMintsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        List<SushiswapPairDayDataDTO> SushiswapPairDayDatasCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        List<SushiswapPairHourDataDTO> SushiswapPairHourDatasCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        List<SushiswapPairDTO> SushiswapPairsCurrent(string id = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        ApiResponse<List<SushiswapPairDTO>> SushiswapPairsCurrentWithHttpInfo(string id = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        List<SushiswapSwapDTO> SushiswapSwapsCurrent(string pair = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        ApiResponse<List<SushiswapSwapDTO>> SushiswapSwapsCurrentWithHttpInfo(string pair = default(string), int operationIndex = 0);
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        List<SushiswapTokenDayDataDTO> SushiswapTokenDayDatasCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        List<SushiswapTokenDTO> SushiswapTokensCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        ApiResponse<List<SushiswapTokenDTO>> SushiswapTokensCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTransactionDTO&gt;</returns>
+        List<SushiswapTransactionDTO> SushiswapTransactionsCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTransactionDTO&gt;</returns>
+        ApiResponse<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapUserDTO&gt;</returns>
+        List<SushiswapUserDTO> SushiswapUsersCurrent(int operationIndex = 0);
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapUserDTO&gt;</returns>
+        ApiResponse<List<SushiswapUserDTO>> SushiswapUsersCurrentWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -715,6 +1013,98 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;DexTradeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexTradeDTO>>> DexGetTradesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapBundleDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapBundleDTO>> SushiswapBundlesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bundles (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBundleDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapBundleDTO>>> SushiswapBundlesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapBurnDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapBurnDTO>> SushiswapBurnsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapBurnDTO>>> SushiswapBurnsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapDayDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// DayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets dayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapDayDataDTO>>> SushiswapDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapFactoryDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Factorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets factorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapFactoryDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapFactoryDTO>>> SushiswapFactorysCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Bundles (historical) 🔥
         /// </summary>
@@ -787,7 +1177,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -804,7 +1194,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// DayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets daydatas.
+        /// Gets dayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -853,7 +1243,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -870,7 +1260,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// HourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets hourdatas.
+        /// Gets hourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -886,7 +1276,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -905,7 +1295,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshots.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -923,7 +1313,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -942,7 +1332,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositions.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -995,7 +1385,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1015,7 +1405,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatas.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1034,7 +1424,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1052,7 +1442,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatas.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1128,29 +1518,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapGetPoolsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Swaps (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swaps.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapGetSwapsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
         /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -1189,7 +1556,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1206,7 +1573,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatas.
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1218,29 +1585,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapGetTokenDayDatasHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapGetTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Tokens (historical) 🔥
         /// </summary>
@@ -1344,6 +1688,286 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SushiswapUserDTO>>> SushiswapGetUsersHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapHourDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// HourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets hourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapHourDataDTO>>> SushiswapHourDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapLiquidityPositionDTO>>> SushiswapLiquidityPositionsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapMintDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapMintDTO>> SushiswapMintsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapMintDTO>>> SushiswapMintsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDayDataDTO>>> SushiswapPairDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairHourDataDTO>>> SushiswapPairHourDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapPairsCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapPairDTO>>> SushiswapPairsCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapSwapsCurrentAsync(string pair = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Swaps (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapSwapDTO>>> SushiswapSwapsCurrentWithHttpInfoAsync(string pair = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapTokenDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTokenDTO>>> SushiswapTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTransactionDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTransactionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapTransactionDTO>>> SushiswapTransactionsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapUserDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<SushiswapUserDTO>> SushiswapUsersCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SushiswapUserDTO>>> SushiswapUsersCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1715,6 +2339,526 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DexGetTradesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapBundleDTO&gt;</returns>
+        public List<SushiswapBundleDTO> SushiswapBundlesCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBundleDTO>> localVarResponse = SushiswapBundlesCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapBundleDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBundleDTO>> SushiswapBundlesCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapBundlesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapBundleDTO>>("/dapps/sushiswap/bundles/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapBundlesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapBundleDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapBundleDTO>> SushiswapBundlesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBundleDTO>> localVarResponse = await SushiswapBundlesCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBundleDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBundleDTO>>> SushiswapBundlesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapBundlesCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapBundleDTO>>("/dapps/sushiswap/bundles/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapBundlesCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapBurnDTO&gt;</returns>
+        public List<SushiswapBurnDTO> SushiswapBurnsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBurnDTO>> localVarResponse = SushiswapBurnsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapBurnDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBurnDTO>> SushiswapBurnsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapBurnsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapBurnDTO>>("/dapps/sushiswap/burns/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapBurnsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapBurnDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapBurnDTO>> SushiswapBurnsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBurnDTO>> localVarResponse = await SushiswapBurnsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBurnDTO>>> SushiswapBurnsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapBurnsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapBurnDTO>>("/dapps/sushiswap/burns/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapBurnsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapDayDataDTO&gt;</returns>
+        public List<SushiswapDayDataDTO> SushiswapDayDatasCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapDayDataDTO>> localVarResponse = SushiswapDayDatasCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapDayDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapDayDataDTO>>("/dapps/sushiswap/dayDatas/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapDayDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapDayDataDTO>> SushiswapDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapDayDataDTO>> localVarResponse = await SushiswapDayDatasCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// DayDatas (current) Gets dayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapDayDataDTO>>> SushiswapDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapDayDataDTO>>("/dapps/sushiswap/dayDatas/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapFactoryDTO&gt;</returns>
+        public List<SushiswapFactoryDTO> SushiswapFactorysCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapFactoryDTO>> localVarResponse = SushiswapFactorysCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapFactoryDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapFactorysCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapFactoryDTO>>("/dapps/sushiswap/factorys/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapFactorysCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapFactoryDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapFactoryDTO>> SushiswapFactorysCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapFactoryDTO>> localVarResponse = await SushiswapFactorysCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Factorys (current) Gets factorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapFactoryDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapFactoryDTO>>> SushiswapFactorysCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapFactorysCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapFactoryDTO>>("/dapps/sushiswap/factorys/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapFactorysCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2117,7 +3261,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2134,7 +3278,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2196,7 +3340,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapDayDataDTO>>("/dapps/sushiswap/daydatas/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapDayDataDTO>>("/dapps/sushiswap/dayDatas/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetDayDatasHistorical", localVarResponse);
@@ -2210,7 +3354,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2228,7 +3372,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// DayDatas (historical) 🔥 Gets daydatas.
+        /// DayDatas (historical) 🔥 Gets dayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2292,7 +3436,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapDayDataDTO>>("/dapps/sushiswap/daydatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapDayDataDTO>>("/dapps/sushiswap/dayDatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2497,7 +3641,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2514,7 +3658,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2576,7 +3720,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourdatas/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourDatas/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetHourDatasHistorical", localVarResponse);
@@ -2590,7 +3734,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2608,7 +3752,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// HourDatas (historical) 🔥 Gets hourdatas.
+        /// HourDatas (historical) 🔥 Gets hourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2672,7 +3816,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourdatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourDatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2687,7 +3831,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2706,7 +3850,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2778,7 +3922,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquiditypositionsnapshots/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquidityPositionSnapshots/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetLiquidityPositionSnapshotsHistorical", localVarResponse);
@@ -2792,7 +3936,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2812,7 +3956,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquiditypositionsnapshots.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2886,7 +4030,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquiditypositionsnapshots/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquidityPositionSnapshots/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2901,7 +4045,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2920,7 +4064,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2992,7 +4136,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquiditypositions/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquidityPositions/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetLiquidityPositionsHistorical", localVarResponse);
@@ -3006,7 +4150,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3026,7 +4170,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// LiquidityPositions (historical) 🔥 Gets liquiditypositions.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3100,7 +4244,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquiditypositions/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquidityPositions/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3317,7 +4461,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3337,7 +4481,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3414,7 +4558,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairdaydatas/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairDayDatas/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetPairDayDatasHistorical", localVarResponse);
@@ -3428,7 +4572,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3449,7 +4593,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairDayDatas (historical) 🔥 Gets pairdaydatas.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3528,7 +4672,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairdaydatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairDayDatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3543,7 +4687,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3561,7 +4705,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3628,7 +4772,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairhourdatas/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairHourDatas/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetPairHourDatasHistorical", localVarResponse);
@@ -3642,7 +4786,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3661,7 +4805,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PairHourDatas (historical) 🔥 Gets pairhourdatas.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3730,7 +4874,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairhourdatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairHourDatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4101,136 +5245,6 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
-        public List<SushiswapSwapDTO> SushiswapGetSwapsCurrent(int operationIndex = 0)
-        {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = SushiswapGetSwapsCurrentWithHttpInfo();
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentWithHttpInfo(int operationIndex = 0)
-        {
-            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-
-            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "SushiswapApi.SushiswapGetSwapsCurrent";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("SushiswapGetSwapsCurrent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapGetSwapsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await SushiswapGetSwapsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Swaps (current) 🔥 Gets swaps.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>>> SushiswapGetSwapsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-
-            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-
-            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "SushiswapApi.SushiswapGetSwapsCurrent";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("SushiswapGetSwapsCurrent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// Swaps (historical) 🔥 Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4433,7 +5447,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4450,7 +5464,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4512,7 +5526,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokendaydatas/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokenDayDatas/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetTokenDayDatasHistorical", localVarResponse);
@@ -4526,7 +5540,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4544,7 +5558,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenDayDatas (historical) 🔥 Gets tokendaydatas.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4608,141 +5622,11 @@ namespace CoinAPI.EMS.REST.V1.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokendaydatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokenDayDatas/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetTokenDayDatasHistorical", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
-        public List<SushiswapTokenDTO> SushiswapGetTokensCurrent(int operationIndex = 0)
-        {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = SushiswapGetTokensCurrentWithHttpInfo();
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentWithHttpInfo(int operationIndex = 0)
-        {
-            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-
-            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "SushiswapApi.SushiswapGetTokensCurrent";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("SushiswapGetTokensCurrent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapGetTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await SushiswapGetTokensCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Tokens (current) 🔥 Gets tokens.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>>> SushiswapGetTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-
-            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-
-            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "SushiswapApi.SushiswapGetTokensCurrent";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("SushiswapGetTokensCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5337,6 +6221,1590 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SushiswapGetUsersHistorical", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapHourDataDTO&gt;</returns>
+        public List<SushiswapHourDataDTO> SushiswapHourDatasCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapHourDataDTO>> localVarResponse = SushiswapHourDatasCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapHourDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapHourDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourDatas/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapHourDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapHourDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapHourDataDTO>> SushiswapHourDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapHourDataDTO>> localVarResponse = await SushiswapHourDatasCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// HourDatas (current) Gets hourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapHourDataDTO>>> SushiswapHourDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapHourDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapHourDataDTO>>("/dapps/sushiswap/hourDatas/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapHourDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        public List<SushiswapLiquidityPositionSnapshotDTO> SushiswapLiquidityPositionSnapshotsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> localVarResponse = SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapLiquidityPositionSnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquidityPositionSnapshots/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapLiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapLiquidityPositionSnapshotsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> localVarResponse = await SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>>> SushiswapLiquidityPositionSnapshotsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapLiquidityPositionSnapshotsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionSnapshotDTO>>("/dapps/sushiswap/liquidityPositionSnapshots/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapLiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        public List<SushiswapLiquidityPositionDTO> SushiswapLiquidityPositionsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionDTO>> localVarResponse = SushiswapLiquidityPositionsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapLiquidityPositionsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquidityPositions/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapLiquidityPositionsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapLiquidityPositionDTO>> SushiswapLiquidityPositionsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionDTO>> localVarResponse = await SushiswapLiquidityPositionsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionDTO>>> SushiswapLiquidityPositionsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapLiquidityPositionsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapLiquidityPositionDTO>>("/dapps/sushiswap/liquidityPositions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapLiquidityPositionsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapMintDTO&gt;</returns>
+        public List<SushiswapMintDTO> SushiswapMintsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapMintDTO>> localVarResponse = SushiswapMintsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapMintDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapMintDTO>> SushiswapMintsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapMintsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapMintDTO>>("/dapps/sushiswap/mints/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapMintsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapMintDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapMintDTO>> SushiswapMintsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapMintDTO>> localVarResponse = await SushiswapMintsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapMintDTO>>> SushiswapMintsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapMintsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapMintDTO>>("/dapps/sushiswap/mints/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapMintsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        public List<SushiswapPairDayDataDTO> SushiswapPairDayDatasCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDayDataDTO>> localVarResponse = SushiswapPairDayDatasCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairDayDatas/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairDayDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDayDataDTO>> SushiswapPairDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDayDataDTO>> localVarResponse = await SushiswapPairDayDatasCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDayDataDTO>>> SushiswapPairDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDayDataDTO>>("/dapps/sushiswap/pairDayDatas/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        public List<SushiswapPairHourDataDTO> SushiswapPairHourDatasCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairHourDataDTO>> localVarResponse = SushiswapPairHourDatasCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairHourDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairHourDatas/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairHourDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairHourDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairHourDataDTO>> SushiswapPairHourDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairHourDataDTO>> localVarResponse = await SushiswapPairHourDatasCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairHourDataDTO>>> SushiswapPairHourDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairHourDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairHourDataDTO>>("/dapps/sushiswap/pairHourDatas/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairHourDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
+        public List<SushiswapPairDTO> SushiswapPairsCurrent(string id = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = SushiswapPairsCurrentWithHttpInfo(id);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> SushiswapPairsCurrentWithHttpInfo(string id = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapPairDTO>>("/dapps/sushiswap/pairs/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapPairDTO>> SushiswapPairsCurrentAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> localVarResponse = await SushiswapPairsCurrentWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>>> SushiswapPairsCurrentWithHttpInfoAsync(string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapPairsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapPairDTO>>("/dapps/sushiswap/pairs/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapPairsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapSwapDTO&gt;</returns>
+        public List<SushiswapSwapDTO> SushiswapSwapsCurrent(string pair = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = SushiswapSwapsCurrentWithHttpInfo(pair);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapSwapDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> SushiswapSwapsCurrentWithHttpInfo(string pair = default(string), int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (pair != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "pair", pair));
+            }
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapSwapsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapSwapsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapSwapDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapSwapDTO>> SushiswapSwapsCurrentAsync(string pair = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>> localVarResponse = await SushiswapSwapsCurrentWithHttpInfoAsync(pair, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Swaps (current) Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapSwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapSwapDTO>>> SushiswapSwapsCurrentWithHttpInfoAsync(string pair = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (pair != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "pair", pair));
+            }
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapSwapsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapSwapDTO>>("/dapps/sushiswap/swaps/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapSwapsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        public List<SushiswapTokenDayDataDTO> SushiswapTokenDayDatasCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResponse = SushiswapTokenDayDatasCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTokenDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokenDayDatas/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTokenDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTokenDayDataDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDayDataDTO>> SushiswapTokenDayDatasCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResponse = await SushiswapTokenDayDatasCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDayDataDTO>>> SushiswapTokenDayDatasCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTokenDayDatasCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDayDataDTO>>("/dapps/sushiswap/tokenDayDatas/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTokenDayDatasCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTokenDTO&gt;</returns>
+        public List<SushiswapTokenDTO> SushiswapTokensCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = SushiswapTokensCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTokenDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> SushiswapTokensCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTokenDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTokenDTO>> SushiswapTokensCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>> localVarResponse = await SushiswapTokensCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTokenDTO>>> SushiswapTokensCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTokensCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTokenDTO>>("/dapps/sushiswap/tokens/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTokensCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapTransactionDTO&gt;</returns>
+        public List<SushiswapTransactionDTO> SushiswapTransactionsCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTransactionDTO>> localVarResponse = SushiswapTransactionsCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapTransactionDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTransactionsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapTransactionDTO>>("/dapps/sushiswap/transactions/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTransactionsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapTransactionDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapTransactionDTO>> SushiswapTransactionsCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTransactionDTO>> localVarResponse = await SushiswapTransactionsCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapTransactionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapTransactionDTO>>> SushiswapTransactionsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapTransactionsCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapTransactionDTO>>("/dapps/sushiswap/transactions/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapTransactionsCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>List&lt;SushiswapUserDTO&gt;</returns>
+        public List<SushiswapUserDTO> SushiswapUsersCurrent(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapUserDTO>> localVarResponse = SushiswapUsersCurrentWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of List&lt;SushiswapUserDTO&gt;</returns>
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapUserDTO>> SushiswapUsersCurrentWithHttpInfo(int operationIndex = 0)
+        {
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapUsersCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<SushiswapUserDTO>>("/dapps/sushiswap/users/current", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapUsersCurrent", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;SushiswapUserDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SushiswapUserDTO>> SushiswapUsersCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapUserDTO>> localVarResponse = await SushiswapUsersCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;SushiswapUserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapUserDTO>>> SushiswapUsersCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CoinAPI.EMS.REST.V1.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "SushiswapApi.SushiswapUsersCurrent";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SushiswapUserDTO>>("/dapps/sushiswap/users/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SushiswapUsersCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

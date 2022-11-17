@@ -21,6 +21,8 @@ case class UserDTO (
   blockNumber: Option[Long] = None,
   /* User address. */
   id: Option[String] = None,
+  /* Total USD value swapped. */
+  usdSwapped: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

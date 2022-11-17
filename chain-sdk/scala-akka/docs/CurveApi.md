@@ -4,71 +4,1565 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**curveAccountsCurrent**](CurveApi.md#curveAccountsCurrent) | **GET** /dapps/curve/accounts/current | Accounts (current)
+[**curveAccountsCurrentWithHttpInfo**](CurveApi.md#curveAccountsCurrentWithHttpInfo) | **GET** /dapps/curve/accounts/current | Accounts (current)
+[**curveAddLiquidityEventsCurrent**](CurveApi.md#curveAddLiquidityEventsCurrent) | **GET** /dapps/curve/addLiquidityEvents/current | AddLiquidityEvents (current)
+[**curveAddLiquidityEventsCurrentWithHttpInfo**](CurveApi.md#curveAddLiquidityEventsCurrentWithHttpInfo) | **GET** /dapps/curve/addLiquidityEvents/current | AddLiquidityEvents (current)
+[**curveAdminFeeChangeLogsCurrent**](CurveApi.md#curveAdminFeeChangeLogsCurrent) | **GET** /dapps/curve/adminFeeChangeLogs/current | AdminFeeChangeLogs (current)
+[**curveAdminFeeChangeLogsCurrentWithHttpInfo**](CurveApi.md#curveAdminFeeChangeLogsCurrentWithHttpInfo) | **GET** /dapps/curve/adminFeeChangeLogs/current | AdminFeeChangeLogs (current)
+[**curveAmplificationCoeffChangeLogsCurrent**](CurveApi.md#curveAmplificationCoeffChangeLogsCurrent) | **GET** /dapps/curve/amplificationCoeffChangeLogs/current | AmplificationCoeffChangeLogs (current)
+[**curveAmplificationCoeffChangeLogsCurrentWithHttpInfo**](CurveApi.md#curveAmplificationCoeffChangeLogsCurrentWithHttpInfo) | **GET** /dapps/curve/amplificationCoeffChangeLogs/current | AmplificationCoeffChangeLogs (current)
+[**curveCoinsCurrent**](CurveApi.md#curveCoinsCurrent) | **GET** /dapps/curve/coins/current | Coins (current)
+[**curveCoinsCurrentWithHttpInfo**](CurveApi.md#curveCoinsCurrentWithHttpInfo) | **GET** /dapps/curve/coins/current | Coins (current)
+[**curveContractVersionsCurrent**](CurveApi.md#curveContractVersionsCurrent) | **GET** /dapps/curve/contractVersions/current | ContractVersions (current)
+[**curveContractVersionsCurrentWithHttpInfo**](CurveApi.md#curveContractVersionsCurrentWithHttpInfo) | **GET** /dapps/curve/contractVersions/current | ContractVersions (current)
+[**curveContractsCurrent**](CurveApi.md#curveContractsCurrent) | **GET** /dapps/curve/contracts/current | Contracts (current)
+[**curveContractsCurrentWithHttpInfo**](CurveApi.md#curveContractsCurrentWithHttpInfo) | **GET** /dapps/curve/contracts/current | Contracts (current)
+[**curveDailyVolumesCurrent**](CurveApi.md#curveDailyVolumesCurrent) | **GET** /dapps/curve/dailyVolumes/current | DailyVolumes (current)
+[**curveDailyVolumesCurrentWithHttpInfo**](CurveApi.md#curveDailyVolumesCurrentWithHttpInfo) | **GET** /dapps/curve/dailyVolumes/current | DailyVolumes (current)
+[**curveExchangesCurrent**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
+[**curveExchangesCurrentWithHttpInfo**](CurveApi.md#curveExchangesCurrentWithHttpInfo) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
+[**curveFeeChangeLogsCurrent**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
+[**curveFeeChangeLogsCurrentWithHttpInfo**](CurveApi.md#curveFeeChangeLogsCurrentWithHttpInfo) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
+[**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
+[**curveGaugeDepositsCurrentWithHttpInfo**](CurveApi.md#curveGaugeDepositsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
+[**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeLiquiditysCurrentWithHttpInfo**](CurveApi.md#curveGaugeLiquiditysCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
+[**curveGaugeTotalWeightsCurrentWithHttpInfo**](CurveApi.md#curveGaugeTotalWeightsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
+[**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
+[**curveGaugeTypeWeightsCurrentWithHttpInfo**](CurveApi.md#curveGaugeTypeWeightsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
+[**curveGaugeTypesCurrent**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
+[**curveGaugeTypesCurrentWithHttpInfo**](CurveApi.md#curveGaugeTypesCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
+[**curveGaugeWeightVotesCurrent**](CurveApi.md#curveGaugeWeightVotesCurrent) | **GET** /dapps/curve/gaugeWeightVotes/current | GaugeWeightVotes (current)
+[**curveGaugeWeightVotesCurrentWithHttpInfo**](CurveApi.md#curveGaugeWeightVotesCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeWeightVotes/current | GaugeWeightVotes (current)
+[**curveGaugeWeightsCurrent**](CurveApi.md#curveGaugeWeightsCurrent) | **GET** /dapps/curve/gaugeWeights/current | GaugeWeights (current)
+[**curveGaugeWeightsCurrentWithHttpInfo**](CurveApi.md#curveGaugeWeightsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeWeights/current | GaugeWeights (current)
+[**curveGaugeWithdrawsCurrent**](CurveApi.md#curveGaugeWithdrawsCurrent) | **GET** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current)
+[**curveGaugeWithdrawsCurrentWithHttpInfo**](CurveApi.md#curveGaugeWithdrawsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current)
+[**curveGaugesCurrent**](CurveApi.md#curveGaugesCurrent) | **GET** /dapps/curve/gauges/current | Gauges (current)
+[**curveGaugesCurrentWithHttpInfo**](CurveApi.md#curveGaugesCurrentWithHttpInfo) | **GET** /dapps/curve/gauges/current | Gauges (current)
 [**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) 🔥
 [**curveGetAccountsHistoricalWithHttpInfo**](CurveApi.md#curveGetAccountsHistoricalWithHttpInfo) | **GET** /dapps/curve/accounts/historical | Accounts (historical) 🔥
-[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addliquidityevents/historical | AddLiquidityEvents (historical) 🔥
-[**curveGetAddLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetAddLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/addliquidityevents/historical | AddLiquidityEvents (historical) 🔥
-[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminfeechangelogs/historical | AdminFeeChangeLogs (historical) 🔥
-[**curveGetAdminFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAdminFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/adminfeechangelogs/historical | AdminFeeChangeLogs (historical) 🔥
-[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationcoeffchangelogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
-[**curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/amplificationcoeffchangelogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥
+[**curveGetAddLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetAddLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥
+[**curveGetAdminFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAdminFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
+[**curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
 [**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) 🔥
 [**curveGetCoinsHistoricalWithHttpInfo**](CurveApi.md#curveGetCoinsHistoricalWithHttpInfo) | **GET** /dapps/curve/coins/historical | Coins (historical) 🔥
-[**curveGetContractVersionsHistorical**](CurveApi.md#curveGetContractVersionsHistorical) | **GET** /dapps/curve/contractversions/historical | ContractVersions (historical) 🔥
-[**curveGetContractVersionsHistoricalWithHttpInfo**](CurveApi.md#curveGetContractVersionsHistoricalWithHttpInfo) | **GET** /dapps/curve/contractversions/historical | ContractVersions (historical) 🔥
+[**curveGetContractVersionsHistorical**](CurveApi.md#curveGetContractVersionsHistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥
+[**curveGetContractVersionsHistoricalWithHttpInfo**](CurveApi.md#curveGetContractVersionsHistoricalWithHttpInfo) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥
 [**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) 🔥
 [**curveGetContractsHistoricalWithHttpInfo**](CurveApi.md#curveGetContractsHistoricalWithHttpInfo) | **GET** /dapps/curve/contracts/historical | Contracts (historical) 🔥
-[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyvolumes/historical | DailyVolumes (historical) 🔥
-[**curveGetDailyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetDailyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/dailyvolumes/historical | DailyVolumes (historical) 🔥
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥
+[**curveGetDailyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetDailyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥
 [**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
 [**curveGetExchangesHistoricalWithHttpInfo**](CurveApi.md#curveGetExchangesHistoricalWithHttpInfo) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
-[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feechangelogs/historical | FeeChangeLogs (historical) 🔥
-[**curveGetFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/feechangelogs/historical | FeeChangeLogs (historical) 🔥
-[**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugedeposits/historical | GaugeDeposits (historical) 🔥
-[**curveGetGaugeDepositsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeDepositsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugedeposits/historical | GaugeDeposits (historical) 🔥
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeliquiditys/historical | GaugeLiquiditys (historical) 🔥
-[**curveGetGaugeLiquiditysHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeLiquiditysHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeliquiditys/historical | GaugeLiquiditys (historical) 🔥
-[**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugetotalweights/historical | GaugeTotalWeights (historical) 🔥
-[**curveGetGaugeTotalWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTotalWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugetotalweights/historical | GaugeTotalWeights (historical) 🔥
-[**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugetypeweights/historical | GaugeTypeWeights (historical) 🔥
-[**curveGetGaugeTypeWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTypeWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugetypeweights/historical | GaugeTypeWeights (historical) 🔥
-[**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugetypes/historical | GaugeTypes (historical) 🔥
-[**curveGetGaugeTypesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTypesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugetypes/historical | GaugeTypes (historical) 🔥
-[**curveGetGaugeWeightVotesHistorical**](CurveApi.md#curveGetGaugeWeightVotesHistorical) | **GET** /dapps/curve/gaugeweightvotes/historical | GaugeWeightVotes (historical) 🔥
-[**curveGetGaugeWeightVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWeightVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeweightvotes/historical | GaugeWeightVotes (historical) 🔥
-[**curveGetGaugeWeightsHistorical**](CurveApi.md#curveGetGaugeWeightsHistorical) | **GET** /dapps/curve/gaugeweights/historical | GaugeWeights (historical) 🔥
-[**curveGetGaugeWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeweights/historical | GaugeWeights (historical) 🔥
-[**curveGetGaugeWithdrawsHistorical**](CurveApi.md#curveGetGaugeWithdrawsHistorical) | **GET** /dapps/curve/gaugewithdraws/historical | GaugeWithdraws (historical) 🔥
-[**curveGetGaugeWithdrawsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWithdrawsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugewithdraws/historical | GaugeWithdraws (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥
+[**curveGetFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥
+[**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥
+[**curveGetGaugeDepositsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeDepositsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥
+[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥
+[**curveGetGaugeLiquiditysHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeLiquiditysHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥
+[**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥
+[**curveGetGaugeTotalWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTotalWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥
+[**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥
+[**curveGetGaugeTypeWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTypeWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥
+[**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥
+[**curveGetGaugeTypesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTypesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥
+[**curveGetGaugeWeightVotesHistorical**](CurveApi.md#curveGetGaugeWeightVotesHistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥
+[**curveGetGaugeWeightVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWeightVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥
+[**curveGetGaugeWeightsHistorical**](CurveApi.md#curveGetGaugeWeightsHistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥
+[**curveGetGaugeWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥
+[**curveGetGaugeWithdrawsHistorical**](CurveApi.md#curveGetGaugeWithdrawsHistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥
+[**curveGetGaugeWithdrawsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeWithdrawsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥
 [**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) 🔥
 [**curveGetGaugesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesHistoricalWithHttpInfo) | **GET** /dapps/curve/gauges/historical | Gauges (historical) 🔥
-[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyvolumes/historical | HourlyVolumes (historical) 🔥
-[**curveGetHourlyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetHourlyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/hourlyvolumes/historical | HourlyVolumes (historical) 🔥
-[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lptokens/historical | LpTokens (historical) 🔥
-[**curveGetLpTokensHistoricalWithHttpInfo**](CurveApi.md#curveGetLpTokensHistoricalWithHttpInfo) | **GET** /dapps/curve/lptokens/historical | LpTokens (historical) 🔥
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥
+[**curveGetHourlyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetHourlyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥
+[**curveGetLpTokensHistoricalWithHttpInfo**](CurveApi.md#curveGetLpTokensHistoricalWithHttpInfo) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥
 [**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
 [**curveGetPoolsHistoricalWithHttpInfo**](CurveApi.md#curveGetPoolsHistoricalWithHttpInfo) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
-[**curveGetProposalVotesHistorical**](CurveApi.md#curveGetProposalVotesHistorical) | **GET** /dapps/curve/proposalvotes/historical | ProposalVotes (historical) 🔥
-[**curveGetProposalVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetProposalVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/proposalvotes/historical | ProposalVotes (historical) 🔥
+[**curveGetProposalVotesHistorical**](CurveApi.md#curveGetProposalVotesHistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥
+[**curveGetProposalVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetProposalVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥
 [**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) 🔥
 [**curveGetProposalsHistoricalWithHttpInfo**](CurveApi.md#curveGetProposalsHistoricalWithHttpInfo) | **GET** /dapps/curve/proposals/historical | Proposals (historical) 🔥
-[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeliquidityevents/historical | RemoveLiquidityEvents (historical) 🔥
-[**curveGetRemoveLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeliquidityevents/historical | RemoveLiquidityEvents (historical) 🔥
-[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeliquidityoneevents/historical | RemoveLiquidityOneEvents (historical) 🔥
-[**curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeliquidityoneevents/historical | RemoveLiquidityOneEvents (historical) 🔥
-[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemstates/historical | SystemStates (historical) 🔥
-[**curveGetSystemStatesHistoricalWithHttpInfo**](CurveApi.md#curveGetSystemStatesHistoricalWithHttpInfo) | **GET** /dapps/curve/systemstates/historical | SystemStates (historical) 🔥
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥
+[**curveGetRemoveLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥
+[**curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥
+[**curveGetSystemStatesHistoricalWithHttpInfo**](CurveApi.md#curveGetSystemStatesHistoricalWithHttpInfo) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥
 [**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
 [**curveGetTokensHistoricalWithHttpInfo**](CurveApi.md#curveGetTokensHistoricalWithHttpInfo) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
-[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferownershipevents/historical | TransferOwnershipEvents (historical) 🔥
-[**curveGetTransferOwnershipEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetTransferOwnershipEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/transferownershipevents/historical | TransferOwnershipEvents (historical) 🔥
-[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingcoins/historical | UnderlyingCoins (historical) 🔥
-[**curveGetUnderlyingCoinsHistoricalWithHttpInfo**](CurveApi.md#curveGetUnderlyingCoinsHistoricalWithHttpInfo) | **GET** /dapps/curve/underlyingcoins/historical | UnderlyingCoins (historical) 🔥
-[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingapps/historical | VotingApps (historical) 🔥
-[**curveGetVotingAppsHistoricalWithHttpInfo**](CurveApi.md#curveGetVotingAppsHistoricalWithHttpInfo) | **GET** /dapps/curve/votingapps/historical | VotingApps (historical) 🔥
-[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyvolumes/historical | WeeklyVolumes (historical) 🔥
-[**curveGetWeeklyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetWeeklyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/weeklyvolumes/historical | WeeklyVolumes (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥
+[**curveGetTransferOwnershipEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetTransferOwnershipEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥
+[**curveGetUnderlyingCoinsHistoricalWithHttpInfo**](CurveApi.md#curveGetUnderlyingCoinsHistoricalWithHttpInfo) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥
+[**curveGetVotingAppsHistoricalWithHttpInfo**](CurveApi.md#curveGetVotingAppsHistoricalWithHttpInfo) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥
+[**curveGetWeeklyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetWeeklyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥
+[**curveHourlyVolumesCurrent**](CurveApi.md#curveHourlyVolumesCurrent) | **GET** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current)
+[**curveHourlyVolumesCurrentWithHttpInfo**](CurveApi.md#curveHourlyVolumesCurrentWithHttpInfo) | **GET** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current)
+[**curveLpTokensCurrent**](CurveApi.md#curveLpTokensCurrent) | **GET** /dapps/curve/lpTokens/current | LpTokens (current)
+[**curveLpTokensCurrentWithHttpInfo**](CurveApi.md#curveLpTokensCurrentWithHttpInfo) | **GET** /dapps/curve/lpTokens/current | LpTokens (current)
+[**curvePoolsCurrent**](CurveApi.md#curvePoolsCurrent) | **GET** /dapps/curve/pools/current | Pools (current)
+[**curvePoolsCurrentWithHttpInfo**](CurveApi.md#curvePoolsCurrentWithHttpInfo) | **GET** /dapps/curve/pools/current | Pools (current)
+[**curveProposalVotesCurrent**](CurveApi.md#curveProposalVotesCurrent) | **GET** /dapps/curve/proposalVotes/current | ProposalVotes (current)
+[**curveProposalVotesCurrentWithHttpInfo**](CurveApi.md#curveProposalVotesCurrentWithHttpInfo) | **GET** /dapps/curve/proposalVotes/current | ProposalVotes (current)
+[**curveProposalsCurrent**](CurveApi.md#curveProposalsCurrent) | **GET** /dapps/curve/proposals/current | Proposals (current)
+[**curveProposalsCurrentWithHttpInfo**](CurveApi.md#curveProposalsCurrentWithHttpInfo) | **GET** /dapps/curve/proposals/current | Proposals (current)
+[**curveRemoveLiquidityEventsCurrent**](CurveApi.md#curveRemoveLiquidityEventsCurrent) | **GET** /dapps/curve/removeLiquidityEvents/current | RemoveLiquidityEvents (current)
+[**curveRemoveLiquidityEventsCurrentWithHttpInfo**](CurveApi.md#curveRemoveLiquidityEventsCurrentWithHttpInfo) | **GET** /dapps/curve/removeLiquidityEvents/current | RemoveLiquidityEvents (current)
+[**curveRemoveLiquidityOneEventsCurrent**](CurveApi.md#curveRemoveLiquidityOneEventsCurrent) | **GET** /dapps/curve/removeLiquidityOneEvents/current | RemoveLiquidityOneEvents (current)
+[**curveRemoveLiquidityOneEventsCurrentWithHttpInfo**](CurveApi.md#curveRemoveLiquidityOneEventsCurrentWithHttpInfo) | **GET** /dapps/curve/removeLiquidityOneEvents/current | RemoveLiquidityOneEvents (current)
+[**curveSystemStatesCurrent**](CurveApi.md#curveSystemStatesCurrent) | **GET** /dapps/curve/systemStates/current | SystemStates (current)
+[**curveSystemStatesCurrentWithHttpInfo**](CurveApi.md#curveSystemStatesCurrentWithHttpInfo) | **GET** /dapps/curve/systemStates/current | SystemStates (current)
+[**curveTokensCurrent**](CurveApi.md#curveTokensCurrent) | **GET** /dapps/curve/tokens/current | Tokens (current)
+[**curveTokensCurrentWithHttpInfo**](CurveApi.md#curveTokensCurrentWithHttpInfo) | **GET** /dapps/curve/tokens/current | Tokens (current)
+[**curveTransferOwnershipEventsCurrent**](CurveApi.md#curveTransferOwnershipEventsCurrent) | **GET** /dapps/curve/transferOwnershipEvents/current | TransferOwnershipEvents (current)
+[**curveTransferOwnershipEventsCurrentWithHttpInfo**](CurveApi.md#curveTransferOwnershipEventsCurrentWithHttpInfo) | **GET** /dapps/curve/transferOwnershipEvents/current | TransferOwnershipEvents (current)
+[**curveUnderlyingCoinsCurrent**](CurveApi.md#curveUnderlyingCoinsCurrent) | **GET** /dapps/curve/underlyingCoins/current | UnderlyingCoins (current)
+[**curveUnderlyingCoinsCurrentWithHttpInfo**](CurveApi.md#curveUnderlyingCoinsCurrentWithHttpInfo) | **GET** /dapps/curve/underlyingCoins/current | UnderlyingCoins (current)
+[**curveVotingAppsCurrent**](CurveApi.md#curveVotingAppsCurrent) | **GET** /dapps/curve/votingApps/current | VotingApps (current)
+[**curveVotingAppsCurrentWithHttpInfo**](CurveApi.md#curveVotingAppsCurrentWithHttpInfo) | **GET** /dapps/curve/votingApps/current | VotingApps (current)
+[**curveWeeklyVolumesCurrent**](CurveApi.md#curveWeeklyVolumesCurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
+[**curveWeeklyVolumesCurrentWithHttpInfo**](CurveApi.md#curveWeeklyVolumesCurrentWithHttpInfo) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
 
+
+
+## curveAccountsCurrent
+
+> curveAccountsCurrent(): ApiRequest[Seq[AccountDTO]]
+
+Accounts (current)
+
+Gets accounts.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveAccountsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveAccountsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveAccountsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[AccountDTO]**](AccountDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveAddLiquidityEventsCurrent
+
+> curveAddLiquidityEventsCurrent(): ApiRequest[Seq[AddLiquidityEventDTO]]
+
+AddLiquidityEvents (current)
+
+Gets addLiquidityEvents.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveAddLiquidityEventsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveAddLiquidityEventsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveAddLiquidityEventsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[AddLiquidityEventDTO]**](AddLiquidityEventDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveAdminFeeChangeLogsCurrent
+
+> curveAdminFeeChangeLogsCurrent(): ApiRequest[Seq[AdminFeeChangeLogDTO]]
+
+AdminFeeChangeLogs (current)
+
+Gets adminFeeChangeLogs.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveAdminFeeChangeLogsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveAdminFeeChangeLogsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveAdminFeeChangeLogsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[AdminFeeChangeLogDTO]**](AdminFeeChangeLogDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveAmplificationCoeffChangeLogsCurrent
+
+> curveAmplificationCoeffChangeLogsCurrent(): ApiRequest[Seq[AmplificationCoeffChangeLogDTO]]
+
+AmplificationCoeffChangeLogs (current)
+
+Gets amplificationCoeffChangeLogs.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveAmplificationCoeffChangeLogsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveAmplificationCoeffChangeLogsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveAmplificationCoeffChangeLogsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[AmplificationCoeffChangeLogDTO]**](AmplificationCoeffChangeLogDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveCoinsCurrent
+
+> curveCoinsCurrent(): ApiRequest[Seq[CoinDTO]]
+
+Coins (current)
+
+Gets coins.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveCoinsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveCoinsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveCoinsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[CoinDTO]**](CoinDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveContractVersionsCurrent
+
+> curveContractVersionsCurrent(): ApiRequest[Seq[ContractVersionDTO]]
+
+ContractVersions (current)
+
+Gets contractVersions.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveContractVersionsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveContractVersionsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveContractVersionsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[ContractVersionDTO]**](ContractVersionDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveContractsCurrent
+
+> curveContractsCurrent(): ApiRequest[Seq[ContractDTO]]
+
+Contracts (current)
+
+Gets contracts.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveContractsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveContractsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveContractsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[ContractDTO]**](ContractDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveDailyVolumesCurrent
+
+> curveDailyVolumesCurrent(): ApiRequest[Seq[DailyVolumeDTO]]
+
+DailyVolumes (current)
+
+Gets dailyVolumes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveDailyVolumesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveDailyVolumesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveDailyVolumesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[DailyVolumeDTO]**](DailyVolumeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveExchangesCurrent
+
+> curveExchangesCurrent(curveExchangesCurrentRequest): ApiRequest[Seq[ExchangeDTO]]
+
+Exchanges (current)
+
+Gets exchanges.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val pool: String = pool_example // String | 
+    
+    val request = apiInstance.curveExchangesCurrent(pool)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveExchangesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveExchangesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[ExchangeDTO]**](ExchangeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveFeeChangeLogsCurrent
+
+> curveFeeChangeLogsCurrent(): ApiRequest[Seq[FeeChangeLogDTO]]
+
+FeeChangeLogs (current)
+
+Gets feeChangeLogs.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveFeeChangeLogsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveFeeChangeLogsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveFeeChangeLogsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[FeeChangeLogDTO]**](FeeChangeLogDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeDepositsCurrent
+
+> curveGaugeDepositsCurrent(): ApiRequest[Seq[GaugeDepositDTO]]
+
+GaugeDeposits (current)
+
+Gets gaugeDeposits.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeDepositsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeDepositsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeDepositsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeDepositDTO]**](GaugeDepositDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeLiquiditysCurrent
+
+> curveGaugeLiquiditysCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]]
+
+GaugeLiquiditys (current)
+
+Gets gaugeLiquiditys.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeLiquiditysCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditysCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditysCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeLiquidityDTO]**](GaugeLiquidityDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeTotalWeightsCurrent
+
+> curveGaugeTotalWeightsCurrent(): ApiRequest[Seq[GaugeTotalWeightDTO]]
+
+GaugeTotalWeights (current)
+
+Gets gaugeTotalWeights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeTotalWeightsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeTotalWeightsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeTotalWeightsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTotalWeightDTO]**](GaugeTotalWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeTypeWeightsCurrent
+
+> curveGaugeTypeWeightsCurrent(): ApiRequest[Seq[GaugeTypeWeightDTO]]
+
+GaugeTypeWeights (current)
+
+Gets gaugeTypeWeights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeTypeWeightsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeTypeWeightsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeTypeWeightsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTypeWeightDTO]**](GaugeTypeWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeTypesCurrent
+
+> curveGaugeTypesCurrent(): ApiRequest[Seq[GaugeTypeDTO]]
+
+GaugeTypes (current)
+
+Gets gaugeTypes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeTypesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeTypesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeTypesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTypeDTO]**](GaugeTypeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeWeightVotesCurrent
+
+> curveGaugeWeightVotesCurrent(): ApiRequest[Seq[GaugeWeightVoteDTO]]
+
+GaugeWeightVotes (current)
+
+Gets gaugeWeightVotes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeWeightVotesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeWeightVotesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeWeightVotesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWeightVoteDTO]**](GaugeWeightVoteDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeWeightsCurrent
+
+> curveGaugeWeightsCurrent(): ApiRequest[Seq[GaugeWeightDTO]]
+
+GaugeWeights (current)
+
+Gets gaugeWeights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeWeightsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeWeightsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeWeightsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWeightDTO]**](GaugeWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugeWithdrawsCurrent
+
+> curveGaugeWithdrawsCurrent(): ApiRequest[Seq[GaugeWithdrawDTO]]
+
+GaugeWithdraws (current)
+
+Gets gaugeWithdraws.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugeWithdrawsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugeWithdrawsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugeWithdrawsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWithdrawDTO]**](GaugeWithdrawDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGaugesCurrent
+
+> curveGaugesCurrent(): ApiRequest[Seq[GaugeDTO]]
+
+Gauges (current)
+
+Gets gauges.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveGaugesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGaugesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGaugesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[GaugeDTO]**](GaugeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
 
 
 ## curveGetAccountsHistorical
@@ -173,7 +1667,7 @@ No authorization required
 
 AddLiquidityEvents (historical) 🔥
 
-Gets addliquidityevents.
+Gets addLiquidityEvents.
 
 ### Example
 
@@ -269,7 +1763,7 @@ No authorization required
 
 AdminFeeChangeLogs (historical) 🔥
 
-Gets adminfeechangelogs.
+Gets adminFeeChangeLogs.
 
 ### Example
 
@@ -365,7 +1859,7 @@ No authorization required
 
 AmplificationCoeffChangeLogs (historical) 🔥
 
-Gets amplificationcoeffchangelogs.
+Gets amplificationCoeffChangeLogs.
 
 ### Example
 
@@ -557,7 +2051,7 @@ No authorization required
 
 ContractVersions (historical) 🔥
 
-Gets contractversions.
+Gets contractVersions.
 
 ### Example
 
@@ -746,7 +2240,7 @@ No authorization required
 
 DailyVolumes (historical) 🔥
 
-Gets dailyvolumes.
+Gets dailyVolumes.
 
 ### Example
 
@@ -938,7 +2432,7 @@ No authorization required
 
 FeeChangeLogs (historical) 🔥
 
-Gets feechangelogs.
+Gets feeChangeLogs.
 
 ### Example
 
@@ -1034,7 +2528,7 @@ No authorization required
 
 GaugeDeposits (historical) 🔥
 
-Gets gaugedeposits.
+Gets gaugeDeposits.
 
 ### Example
 
@@ -1127,7 +2621,7 @@ No authorization required
 
 GaugeLiquiditys (historical) 🔥
 
-Gets gaugeliquiditys.
+Gets gaugeLiquiditys.
 
 ### Example
 
@@ -1223,7 +2717,7 @@ No authorization required
 
 GaugeTotalWeights (historical) 🔥
 
-Gets gaugetotalweights.
+Gets gaugeTotalWeights.
 
 ### Example
 
@@ -1316,7 +2810,7 @@ No authorization required
 
 GaugeTypeWeights (historical) 🔥
 
-Gets gaugetypeweights.
+Gets gaugeTypeWeights.
 
 ### Example
 
@@ -1409,7 +2903,7 @@ No authorization required
 
 GaugeTypes (historical) 🔥
 
-Gets gaugetypes.
+Gets gaugeTypes.
 
 ### Example
 
@@ -1505,7 +2999,7 @@ No authorization required
 
 GaugeWeightVotes (historical) 🔥
 
-Gets gaugeweightvotes.
+Gets gaugeWeightVotes.
 
 ### Example
 
@@ -1601,7 +3095,7 @@ No authorization required
 
 GaugeWeights (historical) 🔥
 
-Gets gaugeweights.
+Gets gaugeWeights.
 
 ### Example
 
@@ -1694,7 +3188,7 @@ No authorization required
 
 GaugeWithdraws (historical) 🔥
 
-Gets gaugewithdraws.
+Gets gaugeWithdraws.
 
 ### Example
 
@@ -1886,7 +3380,7 @@ No authorization required
 
 HourlyVolumes (historical) 🔥
 
-Gets hourlyvolumes.
+Gets hourlyVolumes.
 
 ### Example
 
@@ -1982,7 +3476,7 @@ No authorization required
 
 LpTokens (historical) 🔥
 
-Gets lptokens.
+Gets lpTokens.
 
 ### Example
 
@@ -2183,7 +3677,7 @@ No authorization required
 
 ProposalVotes (historical) 🔥
 
-Gets proposalvotes.
+Gets proposalVotes.
 
 ### Example
 
@@ -2369,7 +3863,7 @@ No authorization required
 
 RemoveLiquidityEvents (historical) 🔥
 
-Gets removeliquidityevents.
+Gets removeLiquidityEvents.
 
 ### Example
 
@@ -2465,7 +3959,7 @@ No authorization required
 
 RemoveLiquidityOneEvents (historical) 🔥
 
-Gets removeliquidityoneevents.
+Gets removeLiquidityOneEvents.
 
 ### Example
 
@@ -2561,7 +4055,7 @@ No authorization required
 
 SystemStates (historical) 🔥
 
-Gets systemstates.
+Gets systemStates.
 
 ### Example
 
@@ -2756,7 +4250,7 @@ No authorization required
 
 TransferOwnershipEvents (historical) 🔥
 
-Gets transferownershipevents.
+Gets transferOwnershipEvents.
 
 ### Example
 
@@ -2852,7 +4346,7 @@ No authorization required
 
 UnderlyingCoins (historical) 🔥
 
-Gets underlyingcoins.
+Gets underlyingCoins.
 
 ### Example
 
@@ -2948,7 +4442,7 @@ No authorization required
 
 VotingApps (historical) 🔥
 
-Gets votingapps.
+Gets votingApps.
 
 ### Example
 
@@ -3044,7 +4538,7 @@ No authorization required
 
 WeeklyVolumes (historical) 🔥
 
-Gets weeklyvolumes.
+Gets weeklyVolumes.
 
 ### Example
 
@@ -3113,6 +4607,986 @@ Name | Type | Description  | Notes
  **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
  **id** | **String**|  | [optional]
  **pool** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[WeeklyVolumeDTO]**](WeeklyVolumeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveHourlyVolumesCurrent
+
+> curveHourlyVolumesCurrent(): ApiRequest[Seq[HourlyVolumeDTO]]
+
+HourlyVolumes (current)
+
+Gets hourlyVolumes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveHourlyVolumesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveHourlyVolumesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveHourlyVolumesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[HourlyVolumeDTO]**](HourlyVolumeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveLpTokensCurrent
+
+> curveLpTokensCurrent(): ApiRequest[Seq[LpTokenDTO]]
+
+LpTokens (current)
+
+Gets lpTokens.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveLpTokensCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveLpTokensCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveLpTokensCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[LpTokenDTO]**](LpTokenDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curvePoolsCurrent
+
+> curvePoolsCurrent(curvePoolsCurrentRequest): ApiRequest[Seq[PoolDTO]]
+
+Pools (current)
+
+Gets pools.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val id: String = id_example // String | Pool address.
+    
+    val request = apiInstance.curvePoolsCurrent(id)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curvePoolsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curvePoolsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pool address. | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[PoolDTO]**](PoolDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveProposalVotesCurrent
+
+> curveProposalVotesCurrent(): ApiRequest[Seq[ProposalVoteDTO]]
+
+ProposalVotes (current)
+
+Gets proposalVotes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveProposalVotesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveProposalVotesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveProposalVotesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[ProposalVoteDTO]**](ProposalVoteDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveProposalsCurrent
+
+> curveProposalsCurrent(): ApiRequest[Seq[ProposalDTO]]
+
+Proposals (current)
+
+Gets proposals.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveProposalsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveProposalsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveProposalsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[ProposalDTO]**](ProposalDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveRemoveLiquidityEventsCurrent
+
+> curveRemoveLiquidityEventsCurrent(): ApiRequest[Seq[RemoveLiquidityEventDTO]]
+
+RemoveLiquidityEvents (current)
+
+Gets removeLiquidityEvents.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveRemoveLiquidityEventsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveRemoveLiquidityEventsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveRemoveLiquidityEventsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[RemoveLiquidityEventDTO]**](RemoveLiquidityEventDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveRemoveLiquidityOneEventsCurrent
+
+> curveRemoveLiquidityOneEventsCurrent(): ApiRequest[Seq[RemoveLiquidityOneEventDTO]]
+
+RemoveLiquidityOneEvents (current)
+
+Gets removeLiquidityOneEvents.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveRemoveLiquidityOneEventsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveRemoveLiquidityOneEventsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveRemoveLiquidityOneEventsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[RemoveLiquidityOneEventDTO]**](RemoveLiquidityOneEventDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveSystemStatesCurrent
+
+> curveSystemStatesCurrent(): ApiRequest[Seq[SystemStateDTO]]
+
+SystemStates (current)
+
+Gets systemStates.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveSystemStatesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveSystemStatesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveSystemStatesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[SystemStateDTO]**](SystemStateDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveTokensCurrent
+
+> curveTokensCurrent(): ApiRequest[Seq[TokenDTO]]
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveTokensCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveTokensCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveTokensCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveTransferOwnershipEventsCurrent
+
+> curveTransferOwnershipEventsCurrent(): ApiRequest[Seq[TransferOwnershipEventDTO]]
+
+TransferOwnershipEvents (current)
+
+Gets transferOwnershipEvents.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveTransferOwnershipEventsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveTransferOwnershipEventsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveTransferOwnershipEventsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TransferOwnershipEventDTO]**](TransferOwnershipEventDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveUnderlyingCoinsCurrent
+
+> curveUnderlyingCoinsCurrent(): ApiRequest[Seq[UnderlyingCoinDTO]]
+
+UnderlyingCoins (current)
+
+Gets underlyingCoins.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveUnderlyingCoinsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveUnderlyingCoinsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveUnderlyingCoinsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[UnderlyingCoinDTO]**](UnderlyingCoinDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveVotingAppsCurrent
+
+> curveVotingAppsCurrent(): ApiRequest[Seq[VotingAppDTO]]
+
+VotingApps (current)
+
+Gets votingApps.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveVotingAppsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveVotingAppsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveVotingAppsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[VotingAppDTO]**](VotingAppDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveWeeklyVolumesCurrent
+
+> curveWeeklyVolumesCurrent(): ApiRequest[Seq[WeeklyVolumeDTO]]
+
+WeeklyVolumes (current)
+
+Gets weeklyVolumes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")    
+    val request = apiInstance.curveWeeklyVolumesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveWeeklyVolumesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveWeeklyVolumesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

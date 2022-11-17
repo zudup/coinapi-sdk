@@ -6,25 +6,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curveGetExchangesCurrent**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dexGetTradesCurrent**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 
@@ -79,6 +93,134 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**array[DexTradeDTO]**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapBundlesCurrent
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+
+```bash
+ sushiswapBundlesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapBurnsCurrent
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```bash
+ sushiswapBurnsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapBurnDTO]**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapDayDatasCurrent
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+
+```bash
+ sushiswapDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapDayDataDTO]**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapFactorysCurrent
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```bash
+ sushiswapFactorysCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapFactoryDTO]**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -175,7 +317,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 
@@ -253,7 +395,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 
@@ -292,7 +434,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -333,7 +475,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 
@@ -414,7 +556,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 
@@ -456,7 +598,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 
@@ -566,38 +708,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## sushiswapGetSwapsCurrent
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```bash
- sushiswapGetSwapsCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## sushiswapGetSwapsHistorical
 
 Swaps (historical) 🔥
@@ -642,7 +752,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 
@@ -664,38 +774,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## sushiswapGetTokensCurrent
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```bash
- sushiswapGetTokensCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -811,6 +889,396 @@ Name | Type | Description  | Notes
  **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
  **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
  **id** | **string** | User address. | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapUserDTO]**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapHourDatasCurrent
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+
+```bash
+ sushiswapHourDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapHourDataDTO]**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapLiquidityPositionSnapshotsCurrent
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```bash
+ sushiswapLiquidityPositionSnapshotsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapLiquidityPositionSnapshotDTO]**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapLiquidityPositionsCurrent
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```bash
+ sushiswapLiquidityPositionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapLiquidityPositionDTO]**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapMintsCurrent
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```bash
+ sushiswapMintsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapMintDTO]**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapPairDayDatasCurrent
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```bash
+ sushiswapPairDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapPairDayDataDTO]**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapPairHourDatasCurrent
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```bash
+ sushiswapPairHourDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapPairHourDataDTO]**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapPairsCurrent
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```bash
+ sushiswapPairsCurrent  id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Pair contract address. | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapSwapsCurrent
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```bash
+ sushiswapSwapsCurrent  pair=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
+
+### Return type
+
+[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapTokenDayDatasCurrent
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```bash
+ sushiswapTokenDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapTokensCurrent
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```bash
+ sushiswapTokensCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapTransactionsCurrent
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```bash
+ sushiswapTransactionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## sushiswapUsersCurrent
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```bash
+ sushiswapUsersCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

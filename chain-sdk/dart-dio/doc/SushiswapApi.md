@@ -11,25 +11,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curveGetExchangesCurrent**](SushiswapApi.md#curvegetexchangescurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dexGetTradesCurrent**](SushiswapApi.md#dexgettradescurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapbundlescurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapdaydatascurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapfactoryscurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapgetfactoryshistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswaphourdatascurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapliquiditypositionsnapshotscurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapliquiditypositionscurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapmintscurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswappairdaydatascurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswappairhourdatascurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairsCurrent**](SushiswapApi.md#sushiswappairscurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswaptokendaydatascurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokensCurrent**](SushiswapApi.md#sushiswaptokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswaptransactionscurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapuserscurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 # **curveGetExchangesCurrent**
@@ -98,6 +112,162 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BuiltList&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapBundlesCurrent**
+> BuiltList<SushiswapBundleDTO> sushiswapBundlesCurrent()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapBundlesCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapBundlesCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapBurnsCurrent**
+> BuiltList<SushiswapBurnDTO> sushiswapBurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapBurnsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapBurnsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapDayDatasCurrent**
+> BuiltList<SushiswapDayDataDTO> sushiswapDayDatasCurrent()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapDayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapFactorysCurrent**
+> BuiltList<SushiswapFactoryDTO> sushiswapFactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapFactorysCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapFactorysCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -219,7 +389,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 ```dart
@@ -321,7 +491,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 ```dart
@@ -372,7 +542,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```dart
@@ -427,7 +597,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 ```dart
@@ -535,7 +705,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 ```dart
@@ -592,7 +762,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 ```dart
@@ -736,45 +906,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswapGetSwapsCurrent**
-> BuiltList<SushiswapSwapDTO> sushiswapGetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-
-try {
-    final response = api.sushiswapGetSwapsCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->sushiswapGetSwapsCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswapGetSwapsHistorical**
 > BuiltList<SushiswapSwapDTO> sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -833,7 +964,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 ```dart
@@ -867,45 +998,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BuiltList&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswapGetTokensCurrent**
-> BuiltList<SushiswapTokenDTO> sushiswapGetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-
-try {
-    final response = api.sushiswapGetTokensCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->sushiswapGetTokensCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1059,6 +1151,482 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **endDate** | **DateTime**| The end date of timeframe. | [optional] 
  **id** | **String**| User address. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapHourDatasCurrent**
+> BuiltList<SushiswapHourDataDTO> sushiswapHourDatasCurrent()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapHourDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapHourDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapLiquidityPositionSnapshotsCurrent**
+> BuiltList<SushiswapLiquidityPositionSnapshotDTO> sushiswapLiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapLiquidityPositionSnapshotsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapLiquidityPositionSnapshotsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapLiquidityPositionsCurrent**
+> BuiltList<SushiswapLiquidityPositionDTO> sushiswapLiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapLiquidityPositionsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapLiquidityPositionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapMintsCurrent**
+> BuiltList<SushiswapMintDTO> sushiswapMintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapMintsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapMintsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapPairDayDatasCurrent**
+> BuiltList<SushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapPairDayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapPairDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapPairHourDatasCurrent**
+> BuiltList<SushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapPairHourDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapPairHourDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapPairsCurrent**
+> BuiltList<SushiswapPairDTO> sushiswapPairsCurrent(id)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final String id = id_example; // String | Pair contract address.
+
+try {
+    final response = api.sushiswapPairsCurrent(id);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapPairsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pair contract address. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapSwapsCurrent**
+> BuiltList<SushiswapSwapDTO> sushiswapSwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final String pair = pair_example; // String | Reference to pair.
+
+try {
+    final response = api.sushiswapSwapsCurrent(pair);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapSwapsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapTokenDayDatasCurrent**
+> BuiltList<SushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapTokenDayDatasCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapTokenDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapTokensCurrent**
+> BuiltList<SushiswapTokenDTO> sushiswapTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapTokensCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapTokensCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapTransactionsCurrent**
+> BuiltList<SushiswapTransactionDTO> sushiswapTransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapTransactionsCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapTransactionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapUsersCurrent**
+> BuiltList<SushiswapUserDTO> sushiswapUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+
+try {
+    final response = api.sushiswapUsersCurrent();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapUsersCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

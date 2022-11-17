@@ -19,26 +19,26 @@ case class TokenDayDataDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, day start timestamp in unix / 86400. */
+  /* Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. */
   id: Option[String] = None,
   /* Unix timestamp for start of day. */
   date: Option[Int] = None,
   /* Reference to token entity. */
   token: Option[String] = None,
   /* Amount of token swapped across all pairs throughout day. */
-  volume: Option[String] = None,
+  dailyVolumeToken: Option[String] = None,
   /* Amount of token swapped across all pairs throughout day stored as a derived amount of ETH. */
-  volumeEth: Option[String] = None,
+  dailyVolumeEth: Option[String] = None,
   /* Amount of token swapped across all pairs throughout day stored as a derived amount of USD. */
-  volumeUsd: Option[String] = None,
+  dailyVolumeUsd: Option[String] = None,
   /* Amount of transactions with this token across all pairs. */
-  txCount: Option[String] = None,
+  dailyTxns: Option[String] = None,
   /* Token amount of token deposited across all pairs. */
-  liquidity: Option[String] = None,
+  totalLiquidityToken: Option[String] = None,
   /* Token amount of token deposited across all pairs stored as amount of ETH. */
-  liquidityEth: Option[String] = None,
+  totalLiquidityEth: Option[String] = None,
   /* Token amount of token deposited across all pairs stored as amount of USD. */
-  liquidityUsd: Option[String] = None,
+  totalLiquidityUsd: Option[String] = None,
   /* Price of token in derived USD. */
   priceUsd: Option[String] = None,
   /*  */

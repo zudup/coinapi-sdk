@@ -182,6 +182,101 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="address">User&#39;s address. (optional)</param>
         /// <returns>ApiResponse of List<CowUserDTO></returns>
         ApiResponse<List<CowUserDTO>> CowGetUsersHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string));
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowOrderDTO></returns>
+        List<CowOrderDTO> CowOrdersCurrent ();
+
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowOrderDTO></returns>
+        ApiResponse<List<CowOrderDTO>> CowOrdersCurrentWithHttpInfo ();
+        /// <summary>
+        /// Settlements (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets settlements.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowSettlementDTO></returns>
+        List<CowSettlementDTO> CowSettlementsCurrent ();
+
+        /// <summary>
+        /// Settlements (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets settlements.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowSettlementDTO></returns>
+        ApiResponse<List<CowSettlementDTO>> CowSettlementsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowTokenDTO></returns>
+        List<CowTokenDTO> CowTokensCurrent ();
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowTokenDTO></returns>
+        ApiResponse<List<CowTokenDTO>> CowTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowTradeDTO></returns>
+        List<CowTradeDTO> CowTradesCurrent ();
+
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowTradeDTO></returns>
+        ApiResponse<List<CowTradeDTO>> CowTradesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowUserDTO></returns>
+        List<CowUserDTO> CowUsersCurrent ();
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowUserDTO></returns>
+        ApiResponse<List<CowUserDTO>> CowUsersCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -351,6 +446,111 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;CowUserDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CowUserDTO>>> CowGetUsersHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string address = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowOrderDTO></returns>
+        System.Threading.Tasks.Task<List<CowOrderDTO>> CowOrdersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowOrderDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CowOrderDTO>>> CowOrdersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Settlements (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets settlements.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowSettlementDTO></returns>
+        System.Threading.Tasks.Task<List<CowSettlementDTO>> CowSettlementsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Settlements (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets settlements.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowSettlementDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CowSettlementDTO>>> CowSettlementsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowTokenDTO></returns>
+        System.Threading.Tasks.Task<List<CowTokenDTO>> CowTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CowTokenDTO>>> CowTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowTradeDTO></returns>
+        System.Threading.Tasks.Task<List<CowTradeDTO>> CowTradesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowTradeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CowTradeDTO>>> CowTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowUserDTO></returns>
+        System.Threading.Tasks.Task<List<CowUserDTO>> CowUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowUserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CowUserDTO>>> CowUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1275,6 +1475,641 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("CowGetUsersHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowUserDTO>)));
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowOrderDTO></returns>
+        public List<CowOrderDTO> CowOrdersCurrent ()
+        {
+             ApiResponse<List<CowOrderDTO>> localVarResponse = CowOrdersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowOrderDTO></returns>
+        public ApiResponse<List<CowOrderDTO>> CowOrdersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/cow/orders/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowOrdersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowOrderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowOrderDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowOrderDTO>)));
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowOrderDTO></returns>
+        public async System.Threading.Tasks.Task<List<CowOrderDTO>> CowOrdersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CowOrderDTO>> localVarResponse = await CowOrdersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowOrderDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CowOrderDTO>>> CowOrdersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/cow/orders/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowOrdersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowOrderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowOrderDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowOrderDTO>)));
+        }
+
+        /// <summary>
+        /// Settlements (current) Gets settlements.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowSettlementDTO></returns>
+        public List<CowSettlementDTO> CowSettlementsCurrent ()
+        {
+             ApiResponse<List<CowSettlementDTO>> localVarResponse = CowSettlementsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Settlements (current) Gets settlements.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowSettlementDTO></returns>
+        public ApiResponse<List<CowSettlementDTO>> CowSettlementsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/cow/settlements/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowSettlementsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowSettlementDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowSettlementDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowSettlementDTO>)));
+        }
+
+        /// <summary>
+        /// Settlements (current) Gets settlements.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowSettlementDTO></returns>
+        public async System.Threading.Tasks.Task<List<CowSettlementDTO>> CowSettlementsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CowSettlementDTO>> localVarResponse = await CowSettlementsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Settlements (current) Gets settlements.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowSettlementDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CowSettlementDTO>>> CowSettlementsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/cow/settlements/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowSettlementsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowSettlementDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowSettlementDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowSettlementDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowTokenDTO></returns>
+        public List<CowTokenDTO> CowTokensCurrent ()
+        {
+             ApiResponse<List<CowTokenDTO>> localVarResponse = CowTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowTokenDTO></returns>
+        public ApiResponse<List<CowTokenDTO>> CowTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/cow/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<CowTokenDTO>> CowTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CowTokenDTO>> localVarResponse = await CowTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CowTokenDTO>>> CowTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/cow/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowTradeDTO></returns>
+        public List<CowTradeDTO> CowTradesCurrent ()
+        {
+             ApiResponse<List<CowTradeDTO>> localVarResponse = CowTradesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowTradeDTO></returns>
+        public ApiResponse<List<CowTradeDTO>> CowTradesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/cow/trades/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowTradesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowTradeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowTradeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowTradeDTO>)));
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowTradeDTO></returns>
+        public async System.Threading.Tasks.Task<List<CowTradeDTO>> CowTradesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CowTradeDTO>> localVarResponse = await CowTradesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowTradeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CowTradeDTO>>> CowTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/cow/trades/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowTradesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowTradeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowTradeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowTradeDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<CowUserDTO></returns>
+        public List<CowUserDTO> CowUsersCurrent ()
+        {
+             ApiResponse<List<CowUserDTO>> localVarResponse = CowUsersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<CowUserDTO></returns>
+        public ApiResponse<List<CowUserDTO>> CowUsersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/cow/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowUsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CowUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<CowUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CowUserDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<CowUserDTO></returns>
+        public async System.Threading.Tasks.Task<List<CowUserDTO>> CowUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<CowUserDTO>> localVarResponse = await CowUsersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;CowUserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CowUserDTO>>> CowUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/cow/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CowUsersCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

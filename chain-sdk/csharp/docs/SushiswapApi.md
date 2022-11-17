@@ -6,25 +6,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CurveGetExchangesCurrent**](SushiswapApi.md#curvegetexchangescurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**DexGetTradesCurrent**](SushiswapApi.md#dexgettradescurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**SushiswapBundlesCurrent**](SushiswapApi.md#sushiswapbundlescurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**SushiswapBurnsCurrent**](SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**SushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapdaydatascurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**SushiswapFactorysCurrent**](SushiswapApi.md#sushiswapfactoryscurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**SushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapgetfactoryshistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**SushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**SushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**SushiswapHourDatasCurrent**](SushiswapApi.md#sushiswaphourdatascurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapliquiditypositionsnapshotscurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapliquiditypositionscurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**SushiswapMintsCurrent**](SushiswapApi.md#sushiswapmintscurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**SushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswappairdaydatascurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**SushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswappairhourdatascurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**SushiswapPairsCurrent**](SushiswapApi.md#sushiswappairscurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**SushiswapSwapsCurrent**](SushiswapApi.md#sushiswapswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**SushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswaptokendaydatascurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**SushiswapTokensCurrent**](SushiswapApi.md#sushiswaptokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**SushiswapTransactionsCurrent**](SushiswapApi.md#sushiswaptransactionscurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**SushiswapUsersCurrent**](SushiswapApi.md#sushiswapuserscurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 
@@ -150,6 +164,294 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapBundlesCurrent
+
+> List&lt;SushiswapBundleDTO&gt; SushiswapBundlesCurrent ()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapBundlesCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Bundles (current)
+                List<SushiswapBundleDTO> result = apiInstance.SushiswapBundlesCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapBundlesCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapBurnsCurrent
+
+> List&lt;SushiswapBurnDTO&gt; SushiswapBurnsCurrent ()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapBurnsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Burns (current)
+                List<SushiswapBurnDTO> result = apiInstance.SushiswapBurnsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapBurnsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapDayDatasCurrent
+
+> List&lt;SushiswapDayDataDTO&gt; SushiswapDayDatasCurrent ()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // DayDatas (current)
+                List<SushiswapDayDataDTO> result = apiInstance.SushiswapDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapFactorysCurrent
+
+> List&lt;SushiswapFactoryDTO&gt; SushiswapFactorysCurrent ()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapFactorysCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Factorys (current)
+                List<SushiswapFactoryDTO> result = apiInstance.SushiswapFactorysCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapFactorysCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -348,7 +650,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 
@@ -516,7 +818,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 
@@ -600,7 +902,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -688,7 +990,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 
@@ -862,7 +1164,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 
@@ -952,7 +1254,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 
@@ -1194,78 +1496,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetSwapsCurrent
-
-> List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsCurrent ()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class SushiswapGetSwapsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-
-            try
-            {
-                // Swaps (current) 🔥
-                List<SushiswapSwapDTO> result = apiInstance.SushiswapGetSwapsCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetSwapsCurrent: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## SushiswapGetSwapsHistorical
 
 > List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
@@ -1358,7 +1588,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 
@@ -1414,78 +1644,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SushiswapGetTokensCurrent
-
-> List&lt;SushiswapTokenDTO&gt; SushiswapGetTokensCurrent ()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class SushiswapGetTokensCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-
-            try
-            {
-                // Tokens (current) 🔥
-                List<SushiswapTokenDTO> result = apiInstance.SushiswapGetTokensCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetTokensCurrent: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1738,6 +1896,878 @@ Name | Type | Description  | Notes
  **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
  **id** | **string**| User address. | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapHourDatasCurrent
+
+> List&lt;SushiswapHourDataDTO&gt; SushiswapHourDatasCurrent ()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapHourDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // HourDatas (current)
+                List<SushiswapHourDataDTO> result = apiInstance.SushiswapHourDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapHourDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapLiquidityPositionSnapshotsCurrent
+
+> List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; SushiswapLiquidityPositionSnapshotsCurrent ()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapLiquidityPositionSnapshotsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // LiquidityPositionSnapshots (current)
+                List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.SushiswapLiquidityPositionSnapshotsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapLiquidityPositionSnapshotsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapLiquidityPositionsCurrent
+
+> List&lt;SushiswapLiquidityPositionDTO&gt; SushiswapLiquidityPositionsCurrent ()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapLiquidityPositionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // LiquidityPositions (current)
+                List<SushiswapLiquidityPositionDTO> result = apiInstance.SushiswapLiquidityPositionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapLiquidityPositionsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapMintsCurrent
+
+> List&lt;SushiswapMintDTO&gt; SushiswapMintsCurrent ()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapMintsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Mints (current)
+                List<SushiswapMintDTO> result = apiInstance.SushiswapMintsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapMintsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapPairDayDatasCurrent
+
+> List&lt;SushiswapPairDayDataDTO&gt; SushiswapPairDayDatasCurrent ()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapPairDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // PairDayDatas (current)
+                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapPairDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapPairDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapPairHourDatasCurrent
+
+> List&lt;SushiswapPairHourDataDTO&gt; SushiswapPairHourDatasCurrent ()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapPairHourDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // PairHourDatas (current)
+                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapPairHourDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapPairHourDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapPairsCurrent
+
+> List&lt;SushiswapPairDTO&gt; SushiswapPairsCurrent (string id = null)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapPairsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var id = "id_example";  // string | Pair contract address. (optional) 
+
+            try
+            {
+                // Pairs (current)
+                List<SushiswapPairDTO> result = apiInstance.SushiswapPairsCurrent(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapPairsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Pair contract address. | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapSwapsCurrent
+
+> List&lt;SushiswapSwapDTO&gt; SushiswapSwapsCurrent (string pair = null)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapSwapsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
+
+            try
+            {
+                // Swaps (current)
+                List<SushiswapSwapDTO> result = apiInstance.SushiswapSwapsCurrent(pair);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapSwapsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string**| Reference to pair. | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapTokenDayDatasCurrent
+
+> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapTokenDayDatasCurrent ()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapTokenDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // TokenDayDatas (current)
+                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapTokenDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapTokenDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapTokensCurrent
+
+> List&lt;SushiswapTokenDTO&gt; SushiswapTokensCurrent ()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapTokensCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Tokens (current)
+                List<SushiswapTokenDTO> result = apiInstance.SushiswapTokensCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapTokensCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapTransactionsCurrent
+
+> List&lt;SushiswapTransactionDTO&gt; SushiswapTransactionsCurrent ()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapTransactionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Transactions (current)
+                List<SushiswapTransactionDTO> result = apiInstance.SushiswapTransactionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapTransactionsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapUsersCurrent
+
+> List&lt;SushiswapUserDTO&gt; SushiswapUsersCurrent ()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapUsersCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+
+            try
+            {
+                // Users (current)
+                List<SushiswapUserDTO> result = apiInstance.SushiswapUsersCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapUsersCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -162,6 +162,306 @@ end:
 
 }
 
+// Bundles (current)
+//
+// Gets bundles.
+//
+list_t*
+SushiswapAPI_sushiswapBundlesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/bundles/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/bundles/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Burns (current)
+//
+// Gets burns.
+//
+list_t*
+SushiswapAPI_sushiswapBurnsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/burns/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/burns/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// DayDatas (current)
+//
+// Gets dayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapDayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/dayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Factorys (current)
+//
+// Gets factorys.
+//
+list_t*
+SushiswapAPI_sushiswapFactorysCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/factorys/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factorys/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Bundles (historical) 🔥
 //
 // Gets bundles.
@@ -546,7 +846,7 @@ end:
 
 // DayDatas (historical) 🔥
 //
-// Gets daydatas.
+// Gets dayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -559,9 +859,9 @@ SushiswapAPI_sushiswapGetDayDatasHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/daydatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/dayDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/daydatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayDatas/historical");
 
 
 
@@ -904,7 +1204,7 @@ end:
 
 // HourDatas (historical) 🔥
 //
-// Gets hourdatas.
+// Gets hourDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -917,9 +1217,9 @@ SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startB
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/hourdatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/hourDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourdatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourDatas/historical");
 
 
 
@@ -1083,7 +1383,7 @@ end:
 
 // LiquidityPositionSnapshots (historical) 🔥
 //
-// Gets liquiditypositionsnapshots.
+// Gets liquidityPositionSnapshots.
 //
 list_t*
 SushiswapAPI_sushiswapGetLiquidityPositionSnapshotsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user , char * pair )
@@ -1096,9 +1396,9 @@ SushiswapAPI_sushiswapGetLiquidityPositionSnapshotsHistorical(apiClient_t *apiCl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/liquiditypositionsnapshots/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPositionSnapshots/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquiditypositionsnapshots/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPositionSnapshots/historical");
 
 
 
@@ -1310,7 +1610,7 @@ end:
 
 // LiquidityPositions (historical) 🔥
 //
-// Gets liquiditypositions.
+// Gets liquidityPositions.
 //
 list_t*
 SushiswapAPI_sushiswapGetLiquidityPositionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user , char * pair )
@@ -1323,9 +1623,9 @@ SushiswapAPI_sushiswapGetLiquidityPositionsHistorical(apiClient_t *apiClient, lo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/liquiditypositions/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPositions/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquiditypositions/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPositions/historical");
 
 
 
@@ -1740,7 +2040,7 @@ end:
 
 // PairDayDatas (historical) 🔥
 //
-// Gets pairdaydatas.
+// Gets pairDayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair , char * token_0 , char * token_1 )
@@ -1753,9 +2053,9 @@ SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long sta
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairdaydatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairDayDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairdaydatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayDatas/historical");
 
 
 
@@ -1991,7 +2291,7 @@ end:
 
 // PairHourDatas (historical) 🔥
 //
-// Gets pairhourdatas.
+// Gets pairHourDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair )
@@ -2004,9 +2304,9 @@ SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairhourdatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairHourDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairhourdatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourDatas/historical");
 
 
 
@@ -2518,81 +2818,6 @@ end:
 
 }
 
-// Swaps (current) 🔥
-//
-// Gets swaps.
-//
-list_t*
-SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/swaps/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/swaps/current");
-
-
-
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( SushiswapAPIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Swaps (historical) 🔥
 //
 // Gets swaps.
@@ -2798,7 +3023,7 @@ end:
 
 // TokenDayDatas (historical) 🔥
 //
-// Gets tokendaydatas.
+// Gets tokenDayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -2811,9 +3036,9 @@ SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/tokendaydatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokendaydatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayDatas/historical");
 
 
 
@@ -2968,81 +3193,6 @@ SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long st
         keyValuePair_free(keyPairQuery_id);
         keyPairQuery_id = NULL;
     }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// Tokens (current) 🔥
-//
-// Gets tokens.
-//
-list_t*
-SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/tokens/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokens/current");
-
-
-
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( SushiswapAPIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
     return elementToReturn;
 end:
     free(localVarPath);
@@ -3628,6 +3778,954 @@ SushiswapAPI_sushiswapGetUsersHistorical(apiClient_t *apiClient, long startBlock
         keyValuePair_free(keyPairQuery_id);
         keyPairQuery_id = NULL;
     }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// HourDatas (current)
+//
+// Gets hourDatas.
+//
+list_t*
+SushiswapAPI_sushiswapHourDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/hourDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// LiquidityPositionSnapshots (current)
+//
+// Gets liquidityPositionSnapshots.
+//
+list_t*
+SushiswapAPI_sushiswapLiquidityPositionSnapshotsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPositionSnapshots/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPositionSnapshots/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// LiquidityPositions (current)
+//
+// Gets liquidityPositions.
+//
+list_t*
+SushiswapAPI_sushiswapLiquidityPositionsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/liquidityPositions/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/liquidityPositions/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Mints (current)
+//
+// Gets mints.
+//
+list_t*
+SushiswapAPI_sushiswapMintsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/mints/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/mints/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PairDayDatas (current)
+//
+// Gets pairDayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapPairDayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/pairDayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PairHourDatas (current)
+//
+// Gets pairHourDatas.
+//
+list_t*
+SushiswapAPI_sushiswapPairHourDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/pairHourDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Pairs (current)
+//
+// Gets pairs.
+//
+list_t*
+SushiswapAPI_sushiswapPairsCurrent(apiClient_t *apiClient, char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/pairs/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairs/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t*
+SushiswapAPI_sushiswapSwapsCurrent(apiClient_t *apiClient, char * pair )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/swaps/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/swaps/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_pair = NULL;
+    char * valueQuery_pair = NULL;
+    keyValuePair_t *keyPairQuery_pair = 0;
+    if (pair)
+    {
+        keyQuery_pair = strdup("pair");
+        valueQuery_pair = strdup((pair));
+        keyPairQuery_pair = keyValuePair_create(keyQuery_pair, valueQuery_pair);
+        list_addElement(localVarQueryParameters,keyPairQuery_pair);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_pair){
+        free(keyQuery_pair);
+        keyQuery_pair = NULL;
+    }
+    if(valueQuery_pair){
+        free(valueQuery_pair);
+        valueQuery_pair = NULL;
+    }
+    if(keyPairQuery_pair){
+        keyValuePair_free(keyPairQuery_pair);
+        keyPairQuery_pair = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenDayDatas (current)
+//
+// Gets tokenDayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapTokenDayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+SushiswapAPI_sushiswapTokensCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/tokens/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokens/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Transactions (current)
+//
+// Gets transactions.
+//
+list_t*
+SushiswapAPI_sushiswapTransactionsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/transactions/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/transactions/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Users (current)
+//
+// Gets users.
+//
+list_t*
+SushiswapAPI_sushiswapUsersCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/sushiswap/users/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/users/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *SushiswapAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(SushiswapAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, SushiswapAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( SushiswapAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
     return elementToReturn;
 end:
     free(localVarPath);

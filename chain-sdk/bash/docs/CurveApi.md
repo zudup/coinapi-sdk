@@ -4,39 +4,682 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**curveAccountsCurrent**](CurveApi.md#curveAccountsCurrent) | **GET** /dapps/curve/accounts/current | Accounts (current)
+[**curveAddLiquidityEventsCurrent**](CurveApi.md#curveAddLiquidityEventsCurrent) | **GET** /dapps/curve/addLiquidityEvents/current | AddLiquidityEvents (current)
+[**curveAdminFeeChangeLogsCurrent**](CurveApi.md#curveAdminFeeChangeLogsCurrent) | **GET** /dapps/curve/adminFeeChangeLogs/current | AdminFeeChangeLogs (current)
+[**curveAmplificationCoeffChangeLogsCurrent**](CurveApi.md#curveAmplificationCoeffChangeLogsCurrent) | **GET** /dapps/curve/amplificationCoeffChangeLogs/current | AmplificationCoeffChangeLogs (current)
+[**curveCoinsCurrent**](CurveApi.md#curveCoinsCurrent) | **GET** /dapps/curve/coins/current | Coins (current)
+[**curveContractVersionsCurrent**](CurveApi.md#curveContractVersionsCurrent) | **GET** /dapps/curve/contractVersions/current | ContractVersions (current)
+[**curveContractsCurrent**](CurveApi.md#curveContractsCurrent) | **GET** /dapps/curve/contracts/current | Contracts (current)
+[**curveDailyVolumesCurrent**](CurveApi.md#curveDailyVolumesCurrent) | **GET** /dapps/curve/dailyVolumes/current | DailyVolumes (current)
+[**curveExchangesCurrent**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
+[**curveFeeChangeLogsCurrent**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
+[**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
+[**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
+[**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
+[**curveGaugeTypesCurrent**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
+[**curveGaugeWeightVotesCurrent**](CurveApi.md#curveGaugeWeightVotesCurrent) | **GET** /dapps/curve/gaugeWeightVotes/current | GaugeWeightVotes (current)
+[**curveGaugeWeightsCurrent**](CurveApi.md#curveGaugeWeightsCurrent) | **GET** /dapps/curve/gaugeWeights/current | GaugeWeights (current)
+[**curveGaugeWithdrawsCurrent**](CurveApi.md#curveGaugeWithdrawsCurrent) | **GET** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current)
+[**curveGaugesCurrent**](CurveApi.md#curveGaugesCurrent) | **GET** /dapps/curve/gauges/current | Gauges (current)
 [**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) 🔥
-[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addliquidityevents/historical | AddLiquidityEvents (historical) 🔥
-[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminfeechangelogs/historical | AdminFeeChangeLogs (historical) 🔥
-[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationcoeffchangelogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
 [**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) 🔥
-[**curveGetContractVersionsHistorical**](CurveApi.md#curveGetContractVersionsHistorical) | **GET** /dapps/curve/contractversions/historical | ContractVersions (historical) 🔥
+[**curveGetContractVersionsHistorical**](CurveApi.md#curveGetContractVersionsHistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥
 [**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) 🔥
-[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyvolumes/historical | DailyVolumes (historical) 🔥
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥
 [**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
-[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feechangelogs/historical | FeeChangeLogs (historical) 🔥
-[**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugedeposits/historical | GaugeDeposits (historical) 🔥
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeliquiditys/historical | GaugeLiquiditys (historical) 🔥
-[**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugetotalweights/historical | GaugeTotalWeights (historical) 🔥
-[**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugetypeweights/historical | GaugeTypeWeights (historical) 🔥
-[**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugetypes/historical | GaugeTypes (historical) 🔥
-[**curveGetGaugeWeightVotesHistorical**](CurveApi.md#curveGetGaugeWeightVotesHistorical) | **GET** /dapps/curve/gaugeweightvotes/historical | GaugeWeightVotes (historical) 🔥
-[**curveGetGaugeWeightsHistorical**](CurveApi.md#curveGetGaugeWeightsHistorical) | **GET** /dapps/curve/gaugeweights/historical | GaugeWeights (historical) 🔥
-[**curveGetGaugeWithdrawsHistorical**](CurveApi.md#curveGetGaugeWithdrawsHistorical) | **GET** /dapps/curve/gaugewithdraws/historical | GaugeWithdraws (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥
+[**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥
+[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥
+[**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥
+[**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥
+[**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥
+[**curveGetGaugeWeightVotesHistorical**](CurveApi.md#curveGetGaugeWeightVotesHistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥
+[**curveGetGaugeWeightsHistorical**](CurveApi.md#curveGetGaugeWeightsHistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥
+[**curveGetGaugeWithdrawsHistorical**](CurveApi.md#curveGetGaugeWithdrawsHistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥
 [**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) 🔥
-[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyvolumes/historical | HourlyVolumes (historical) 🔥
-[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lptokens/historical | LpTokens (historical) 🔥
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥
 [**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
-[**curveGetProposalVotesHistorical**](CurveApi.md#curveGetProposalVotesHistorical) | **GET** /dapps/curve/proposalvotes/historical | ProposalVotes (historical) 🔥
+[**curveGetProposalVotesHistorical**](CurveApi.md#curveGetProposalVotesHistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥
 [**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) 🔥
-[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeliquidityevents/historical | RemoveLiquidityEvents (historical) 🔥
-[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeliquidityoneevents/historical | RemoveLiquidityOneEvents (historical) 🔥
-[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemstates/historical | SystemStates (historical) 🔥
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥
 [**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
-[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferownershipevents/historical | TransferOwnershipEvents (historical) 🔥
-[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingcoins/historical | UnderlyingCoins (historical) 🔥
-[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingapps/historical | VotingApps (historical) 🔥
-[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyvolumes/historical | WeeklyVolumes (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥
+[**curveHourlyVolumesCurrent**](CurveApi.md#curveHourlyVolumesCurrent) | **GET** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current)
+[**curveLpTokensCurrent**](CurveApi.md#curveLpTokensCurrent) | **GET** /dapps/curve/lpTokens/current | LpTokens (current)
+[**curvePoolsCurrent**](CurveApi.md#curvePoolsCurrent) | **GET** /dapps/curve/pools/current | Pools (current)
+[**curveProposalVotesCurrent**](CurveApi.md#curveProposalVotesCurrent) | **GET** /dapps/curve/proposalVotes/current | ProposalVotes (current)
+[**curveProposalsCurrent**](CurveApi.md#curveProposalsCurrent) | **GET** /dapps/curve/proposals/current | Proposals (current)
+[**curveRemoveLiquidityEventsCurrent**](CurveApi.md#curveRemoveLiquidityEventsCurrent) | **GET** /dapps/curve/removeLiquidityEvents/current | RemoveLiquidityEvents (current)
+[**curveRemoveLiquidityOneEventsCurrent**](CurveApi.md#curveRemoveLiquidityOneEventsCurrent) | **GET** /dapps/curve/removeLiquidityOneEvents/current | RemoveLiquidityOneEvents (current)
+[**curveSystemStatesCurrent**](CurveApi.md#curveSystemStatesCurrent) | **GET** /dapps/curve/systemStates/current | SystemStates (current)
+[**curveTokensCurrent**](CurveApi.md#curveTokensCurrent) | **GET** /dapps/curve/tokens/current | Tokens (current)
+[**curveTransferOwnershipEventsCurrent**](CurveApi.md#curveTransferOwnershipEventsCurrent) | **GET** /dapps/curve/transferOwnershipEvents/current | TransferOwnershipEvents (current)
+[**curveUnderlyingCoinsCurrent**](CurveApi.md#curveUnderlyingCoinsCurrent) | **GET** /dapps/curve/underlyingCoins/current | UnderlyingCoins (current)
+[**curveVotingAppsCurrent**](CurveApi.md#curveVotingAppsCurrent) | **GET** /dapps/curve/votingApps/current | VotingApps (current)
+[**curveWeeklyVolumesCurrent**](CurveApi.md#curveWeeklyVolumesCurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
 
+
+
+## curveAccountsCurrent
+
+Accounts (current)
+
+Gets accounts.
+
+### Example
+
+```bash
+ curveAccountsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveAccountDTO]**](CurveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveAddLiquidityEventsCurrent
+
+AddLiquidityEvents (current)
+
+Gets addLiquidityEvents.
+
+### Example
+
+```bash
+ curveAddLiquidityEventsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveAddLiquidityEventDTO]**](CurveAddLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveAdminFeeChangeLogsCurrent
+
+AdminFeeChangeLogs (current)
+
+Gets adminFeeChangeLogs.
+
+### Example
+
+```bash
+ curveAdminFeeChangeLogsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveAdminFeeChangeLogDTO]**](CurveAdminFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveAmplificationCoeffChangeLogsCurrent
+
+AmplificationCoeffChangeLogs (current)
+
+Gets amplificationCoeffChangeLogs.
+
+### Example
+
+```bash
+ curveAmplificationCoeffChangeLogsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveAmplificationCoeffChangeLogDTO]**](CurveAmplificationCoeffChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveCoinsCurrent
+
+Coins (current)
+
+Gets coins.
+
+### Example
+
+```bash
+ curveCoinsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveCoinDTO]**](CurveCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveContractVersionsCurrent
+
+ContractVersions (current)
+
+Gets contractVersions.
+
+### Example
+
+```bash
+ curveContractVersionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveContractVersionDTO]**](CurveContractVersionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveContractsCurrent
+
+Contracts (current)
+
+Gets contracts.
+
+### Example
+
+```bash
+ curveContractsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveContractDTO]**](CurveContractDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveDailyVolumesCurrent
+
+DailyVolumes (current)
+
+Gets dailyVolumes.
+
+### Example
+
+```bash
+ curveDailyVolumesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveDailyVolumeDTO]**](CurveDailyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveExchangesCurrent
+
+Exchanges (current)
+
+Gets exchanges.
+
+### Example
+
+```bash
+ curveExchangesCurrent  pool=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveExchangeDTO]**](CurveExchangeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveFeeChangeLogsCurrent
+
+FeeChangeLogs (current)
+
+Gets feeChangeLogs.
+
+### Example
+
+```bash
+ curveFeeChangeLogsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveFeeChangeLogDTO]**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeDepositsCurrent
+
+GaugeDeposits (current)
+
+Gets gaugeDeposits.
+
+### Example
+
+```bash
+ curveGaugeDepositsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeDepositDTO]**](CurveGaugeDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeLiquiditysCurrent
+
+GaugeLiquiditys (current)
+
+Gets gaugeLiquiditys.
+
+### Example
+
+```bash
+ curveGaugeLiquiditysCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeLiquidityDTO]**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeTotalWeightsCurrent
+
+GaugeTotalWeights (current)
+
+Gets gaugeTotalWeights.
+
+### Example
+
+```bash
+ curveGaugeTotalWeightsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeTotalWeightDTO]**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeTypeWeightsCurrent
+
+GaugeTypeWeights (current)
+
+Gets gaugeTypeWeights.
+
+### Example
+
+```bash
+ curveGaugeTypeWeightsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeTypeWeightDTO]**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeTypesCurrent
+
+GaugeTypes (current)
+
+Gets gaugeTypes.
+
+### Example
+
+```bash
+ curveGaugeTypesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeTypeDTO]**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeWeightVotesCurrent
+
+GaugeWeightVotes (current)
+
+Gets gaugeWeightVotes.
+
+### Example
+
+```bash
+ curveGaugeWeightVotesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeWeightVoteDTO]**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeWeightsCurrent
+
+GaugeWeights (current)
+
+Gets gaugeWeights.
+
+### Example
+
+```bash
+ curveGaugeWeightsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeWeightDTO]**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugeWithdrawsCurrent
+
+GaugeWithdraws (current)
+
+Gets gaugeWithdraws.
+
+### Example
+
+```bash
+ curveGaugeWithdrawsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeWithdrawDTO]**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGaugesCurrent
+
+Gauges (current)
+
+Gets gauges.
+
+### Example
+
+```bash
+ curveGaugesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveGaugeDTO]**](CurveGaugeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## curveGetAccountsHistorical
@@ -83,7 +726,7 @@ No authorization required
 
 AddLiquidityEvents (historical) 🔥
 
-Gets addliquidityevents.
+Gets addLiquidityEvents.
 
 ### Example
 
@@ -123,7 +766,7 @@ No authorization required
 
 AdminFeeChangeLogs (historical) 🔥
 
-Gets adminfeechangelogs.
+Gets adminFeeChangeLogs.
 
 ### Example
 
@@ -163,7 +806,7 @@ No authorization required
 
 AmplificationCoeffChangeLogs (historical) 🔥
 
-Gets amplificationcoeffchangelogs.
+Gets amplificationCoeffChangeLogs.
 
 ### Example
 
@@ -243,7 +886,7 @@ No authorization required
 
 ContractVersions (historical) 🔥
 
-Gets contractversions.
+Gets contractVersions.
 
 ### Example
 
@@ -322,7 +965,7 @@ No authorization required
 
 DailyVolumes (historical) 🔥
 
-Gets dailyvolumes.
+Gets dailyVolumes.
 
 ### Example
 
@@ -402,7 +1045,7 @@ No authorization required
 
 FeeChangeLogs (historical) 🔥
 
-Gets feechangelogs.
+Gets feeChangeLogs.
 
 ### Example
 
@@ -442,7 +1085,7 @@ No authorization required
 
 GaugeDeposits (historical) 🔥
 
-Gets gaugedeposits.
+Gets gaugeDeposits.
 
 ### Example
 
@@ -481,7 +1124,7 @@ No authorization required
 
 GaugeLiquiditys (historical) 🔥
 
-Gets gaugeliquiditys.
+Gets gaugeLiquiditys.
 
 ### Example
 
@@ -521,7 +1164,7 @@ No authorization required
 
 GaugeTotalWeights (historical) 🔥
 
-Gets gaugetotalweights.
+Gets gaugeTotalWeights.
 
 ### Example
 
@@ -560,7 +1203,7 @@ No authorization required
 
 GaugeTypeWeights (historical) 🔥
 
-Gets gaugetypeweights.
+Gets gaugeTypeWeights.
 
 ### Example
 
@@ -599,7 +1242,7 @@ No authorization required
 
 GaugeTypes (historical) 🔥
 
-Gets gaugetypes.
+Gets gaugeTypes.
 
 ### Example
 
@@ -639,7 +1282,7 @@ No authorization required
 
 GaugeWeightVotes (historical) 🔥
 
-Gets gaugeweightvotes.
+Gets gaugeWeightVotes.
 
 ### Example
 
@@ -679,7 +1322,7 @@ No authorization required
 
 GaugeWeights (historical) 🔥
 
-Gets gaugeweights.
+Gets gaugeWeights.
 
 ### Example
 
@@ -718,7 +1361,7 @@ No authorization required
 
 GaugeWithdraws (historical) 🔥
 
-Gets gaugewithdraws.
+Gets gaugeWithdraws.
 
 ### Example
 
@@ -798,7 +1441,7 @@ No authorization required
 
 HourlyVolumes (historical) 🔥
 
-Gets hourlyvolumes.
+Gets hourlyVolumes.
 
 ### Example
 
@@ -838,7 +1481,7 @@ No authorization required
 
 LpTokens (historical) 🔥
 
-Gets lptokens.
+Gets lpTokens.
 
 ### Example
 
@@ -921,7 +1564,7 @@ No authorization required
 
 ProposalVotes (historical) 🔥
 
-Gets proposalvotes.
+Gets proposalVotes.
 
 ### Example
 
@@ -999,7 +1642,7 @@ No authorization required
 
 RemoveLiquidityEvents (historical) 🔥
 
-Gets removeliquidityevents.
+Gets removeLiquidityEvents.
 
 ### Example
 
@@ -1039,7 +1682,7 @@ No authorization required
 
 RemoveLiquidityOneEvents (historical) 🔥
 
-Gets removeliquidityoneevents.
+Gets removeLiquidityOneEvents.
 
 ### Example
 
@@ -1079,7 +1722,7 @@ No authorization required
 
 SystemStates (historical) 🔥
 
-Gets systemstates.
+Gets systemStates.
 
 ### Example
 
@@ -1160,7 +1803,7 @@ No authorization required
 
 TransferOwnershipEvents (historical) 🔥
 
-Gets transferownershipevents.
+Gets transferOwnershipEvents.
 
 ### Example
 
@@ -1200,7 +1843,7 @@ No authorization required
 
 UnderlyingCoins (historical) 🔥
 
-Gets underlyingcoins.
+Gets underlyingCoins.
 
 ### Example
 
@@ -1240,7 +1883,7 @@ No authorization required
 
 VotingApps (historical) 🔥
 
-Gets votingapps.
+Gets votingApps.
 
 ### Example
 
@@ -1280,7 +1923,7 @@ No authorization required
 
 WeeklyVolumes (historical) 🔥
 
-Gets weeklyvolumes.
+Gets weeklyVolumes.
 
 ### Example
 
@@ -1299,6 +1942,425 @@ Name | Type | Description  | Notes
  **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
  **id** | **string** |  | [optional] [default to null]
  **pool** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveWeeklyVolumeDTO]**](CurveWeeklyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveHourlyVolumesCurrent
+
+HourlyVolumes (current)
+
+Gets hourlyVolumes.
+
+### Example
+
+```bash
+ curveHourlyVolumesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveHourlyVolumeDTO]**](CurveHourlyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveLpTokensCurrent
+
+LpTokens (current)
+
+Gets lpTokens.
+
+### Example
+
+```bash
+ curveLpTokensCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveLpTokenDTO]**](CurveLpTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curvePoolsCurrent
+
+Pools (current)
+
+Gets pools.
+
+### Example
+
+```bash
+ curvePoolsCurrent  id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Pool address. | [optional] [default to null]
+
+### Return type
+
+[**array[CurvePoolDTO]**](CurvePoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveProposalVotesCurrent
+
+ProposalVotes (current)
+
+Gets proposalVotes.
+
+### Example
+
+```bash
+ curveProposalVotesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveProposalVoteDTO]**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveProposalsCurrent
+
+Proposals (current)
+
+Gets proposals.
+
+### Example
+
+```bash
+ curveProposalsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveProposalDTO]**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveRemoveLiquidityEventsCurrent
+
+RemoveLiquidityEvents (current)
+
+Gets removeLiquidityEvents.
+
+### Example
+
+```bash
+ curveRemoveLiquidityEventsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveRemoveLiquidityEventDTO]**](CurveRemoveLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveRemoveLiquidityOneEventsCurrent
+
+RemoveLiquidityOneEvents (current)
+
+Gets removeLiquidityOneEvents.
+
+### Example
+
+```bash
+ curveRemoveLiquidityOneEventsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveRemoveLiquidityOneEventDTO]**](CurveRemoveLiquidityOneEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveSystemStatesCurrent
+
+SystemStates (current)
+
+Gets systemStates.
+
+### Example
+
+```bash
+ curveSystemStatesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveSystemStateDTO]**](CurveSystemStateDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveTokensCurrent
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```bash
+ curveTokensCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveTokenDTO]**](CurveTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveTransferOwnershipEventsCurrent
+
+TransferOwnershipEvents (current)
+
+Gets transferOwnershipEvents.
+
+### Example
+
+```bash
+ curveTransferOwnershipEventsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveTransferOwnershipEventDTO]**](CurveTransferOwnershipEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveUnderlyingCoinsCurrent
+
+UnderlyingCoins (current)
+
+Gets underlyingCoins.
+
+### Example
+
+```bash
+ curveUnderlyingCoinsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveUnderlyingCoinDTO]**](CurveUnderlyingCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveVotingAppsCurrent
+
+VotingApps (current)
+
+Gets votingApps.
+
+### Example
+
+```bash
+ curveVotingAppsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[CurveVotingAppDTO]**](CurveVotingAppDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveWeeklyVolumesCurrent
+
+WeeklyVolumes (current)
+
+Gets weeklyVolumes.
+
+### Example
+
+```bash
+ curveWeeklyVolumesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

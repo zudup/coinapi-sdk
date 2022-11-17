@@ -54,6 +54,50 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_bundles__current
+  # Bundles (current)
+  # Gets bundles.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapBundleDTO>]
+  describe 'sushiswap_bundles__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_burns__current
+  # Burns (current)
+  # Gets burns.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapBurnDTO>]
+  describe 'sushiswap_burns__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_day_datas__current
+  # DayDatas (current)
+  # Gets dayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapDayDataDTO>]
+  describe 'sushiswap_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_factorys__current
+  # Factorys (current)
+  # Gets factorys.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapFactoryDTO>]
+  describe 'sushiswap_factorys__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_bundles__historical
   # Bundles (historical) 🔥
   # Gets bundles.
@@ -89,7 +133,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_day_datas__historical
   # DayDatas (historical) 🔥
-  # Gets daydatas.
+  # Gets dayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -121,7 +165,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_hour_datas__historical
   # HourDatas (historical) 🔥
-  # Gets hourdatas.
+  # Gets hourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -137,7 +181,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_liquidity_position_snapshots__historical
   # LiquidityPositionSnapshots (historical) 🔥
-  # Gets liquiditypositionsnapshots.
+  # Gets liquidityPositionSnapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -155,7 +199,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_liquidity_positions__historical
   # LiquidityPositions (historical) 🔥
-  # Gets liquiditypositions.
+  # Gets liquidityPositions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -190,7 +234,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_pair_day_datas__historical
   # PairDayDatas (historical) 🔥
-  # Gets pairdaydatas.
+  # Gets pairDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -209,7 +253,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_pair_hour_datas__historical
   # PairHourDatas (historical) 🔥
-  # Gets pairhourdatas.
+  # Gets pairHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -254,17 +298,6 @@ describe 'SushiswapApi' do
     end
   end
 
-  # unit tests for sushiswap_get_swaps__current
-  # Swaps (current) 🔥
-  # Gets swaps.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<SushiswapSwapDTO>]
-  describe 'sushiswap_get_swaps__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for sushiswap_get_swaps__historical
   # Swaps (historical) 🔥
   # Gets swaps.
@@ -284,7 +317,7 @@ describe 'SushiswapApi' do
 
   # unit tests for sushiswap_get_token_day_datas__historical
   # TokenDayDatas (historical) 🔥
-  # Gets tokendaydatas.
+  # Gets tokenDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -293,17 +326,6 @@ describe 'SushiswapApi' do
   # @option opts [String] :id Identifier, day start timestamp in unix / 86400.
   # @return [Array<SushiswapTokenDayDataDTO>]
   describe 'sushiswap_get_token_day_datas__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for sushiswap_get_tokens__current
-  # Tokens (current) 🔥
-  # Gets tokens.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<SushiswapTokenDTO>]
-  describe 'sushiswap_get_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -354,6 +376,140 @@ describe 'SushiswapApi' do
   # @option opts [String] :id User address.
   # @return [Array<SushiswapUserDTO>]
   describe 'sushiswap_get_users__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_hour_datas__current
+  # HourDatas (current)
+  # Gets hourDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapHourDataDTO>]
+  describe 'sushiswap_hour_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_liquidity_position_snapshots__current
+  # LiquidityPositionSnapshots (current)
+  # Gets liquidityPositionSnapshots.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapLiquidityPositionSnapshotDTO>]
+  describe 'sushiswap_liquidity_position_snapshots__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_liquidity_positions__current
+  # LiquidityPositions (current)
+  # Gets liquidityPositions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapLiquidityPositionDTO>]
+  describe 'sushiswap_liquidity_positions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_mints__current
+  # Mints (current)
+  # Gets mints.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapMintDTO>]
+  describe 'sushiswap_mints__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_pair_day_datas__current
+  # PairDayDatas (current)
+  # Gets pairDayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapPairDayDataDTO>]
+  describe 'sushiswap_pair_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_pair_hour_datas__current
+  # PairHourDatas (current)
+  # Gets pairHourDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapPairHourDataDTO>]
+  describe 'sushiswap_pair_hour_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_pairs__current
+  # Pairs (current)
+  # Gets pairs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Pair contract address.
+  # @return [Array<SushiswapPairDTO>]
+  describe 'sushiswap_pairs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_swaps__current
+  # Swaps (current)
+  # Gets swaps.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pair Reference to pair.
+  # @return [Array<SushiswapSwapDTO>]
+  describe 'sushiswap_swaps__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_token_day_datas__current
+  # TokenDayDatas (current)
+  # Gets tokenDayDatas.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapTokenDayDataDTO>]
+  describe 'sushiswap_token_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_tokens__current
+  # Tokens (current)
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapTokenDTO>]
+  describe 'sushiswap_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_transactions__current
+  # Transactions (current)
+  # Gets transactions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapTransactionDTO>]
+  describe 'sushiswap_transactions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_users__current
+  # Users (current)
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<SushiswapUserDTO>]
+  describe 'sushiswap_users__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

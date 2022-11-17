@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**Invoke-DexBatchsCurrent**](DexApi.md#Invoke-DexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**Invoke-DexDepositsCurrent**](DexApi.md#Invoke-DexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**Invoke-DexGetBatchsHistorical**](DexApi.md#Invoke-DexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
 [**Invoke-DexGetDepositsHistorical**](DexApi.md#Invoke-DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
 [**Invoke-DexGetOrdersHistorical**](DexApi.md#Invoke-DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
@@ -13,9 +15,94 @@ Method | HTTP request | Description
 [**Invoke-DexGetTokensHistorical**](DexApi.md#Invoke-DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
 [**Invoke-DexGetTradesHistorical**](DexApi.md#Invoke-DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
 [**Invoke-DexGetUsersHistorical**](DexApi.md#Invoke-DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**Invoke-DexGetWithdrawRequestsHistorical**](DexApi.md#Invoke-DexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawrequests/historical | WithdrawRequests (historical) 🔥
+[**Invoke-DexGetWithdrawRequestsHistorical**](DexApi.md#Invoke-DexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
 [**Invoke-DexGetWithdrawsHistorical**](DexApi.md#Invoke-DexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**Invoke-DexOrdersCurrent**](DexApi.md#Invoke-DexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
+[**Invoke-DexPricesCurrent**](DexApi.md#Invoke-DexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
+[**Invoke-DexSolutionsCurrent**](DexApi.md#Invoke-DexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
+[**Invoke-DexStatssCurrent**](DexApi.md#Invoke-DexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**Invoke-DexTokensCurrent**](DexApi.md#Invoke-DexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
+[**Invoke-DexTradesCurrent**](DexApi.md#Invoke-DexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
+[**Invoke-DexUsersCurrent**](DexApi.md#Invoke-DexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
+[**Invoke-DexWithdrawRequestsCurrent**](DexApi.md#Invoke-DexWithdrawRequestsCurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
+[**Invoke-DexWithdrawsCurrent**](DexApi.md#Invoke-DexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
+
+<a name="Invoke-DexBatchsCurrent"></a>
+# **Invoke-DexBatchsCurrent**
+> DexBatchDTO[] Invoke-DexBatchsCurrent<br>
+
+Batchs (current)
+
+Gets batchs.
+
+### Example
+```powershell
+
+# Batchs (current)
+try {
+    $Result = Invoke-DexBatchsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexBatchsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexBatchDTO[]**](DexBatchDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexDepositsCurrent"></a>
+# **Invoke-DexDepositsCurrent**
+> DexDepositDTO[] Invoke-DexDepositsCurrent<br>
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+```powershell
+
+# Deposits (current)
+try {
+    $Result = Invoke-DexDepositsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexDepositsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexDepositDTO[]**](DexDepositDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Invoke-DexGetBatchsHistorical"></a>
 # **Invoke-DexGetBatchsHistorical**
@@ -548,7 +635,7 @@ No authorization required
 
 WithdrawRequests (historical) 🔥
 
-Gets withdrawrequests.
+Gets withdrawRequests.
 
 ### Example
 ```powershell
@@ -636,6 +723,348 @@ Name | Type | Description  | Notes
  **EndDate** | **System.DateTime**|  | [optional] 
  **Id** | **String**|  | [optional] 
  **User** | **String**|  | [optional] 
+
+### Return type
+
+[**DexWithdrawDTO[]**](DexWithdrawDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexOrdersCurrent"></a>
+# **Invoke-DexOrdersCurrent**
+> DexOrderDTO[] Invoke-DexOrdersCurrent<br>
+
+Orders (current)
+
+Gets orders.
+
+### Example
+```powershell
+
+# Orders (current)
+try {
+    $Result = Invoke-DexOrdersCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexOrdersCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexOrderDTO[]**](DexOrderDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexPricesCurrent"></a>
+# **Invoke-DexPricesCurrent**
+> DexPriceDTO[] Invoke-DexPricesCurrent<br>
+
+Prices (current)
+
+Gets prices.
+
+### Example
+```powershell
+
+# Prices (current)
+try {
+    $Result = Invoke-DexPricesCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexPricesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexPriceDTO[]**](DexPriceDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexSolutionsCurrent"></a>
+# **Invoke-DexSolutionsCurrent**
+> DexSolutionDTO[] Invoke-DexSolutionsCurrent<br>
+
+Solutions (current)
+
+Gets solutions.
+
+### Example
+```powershell
+
+# Solutions (current)
+try {
+    $Result = Invoke-DexSolutionsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexSolutionsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexSolutionDTO[]**](DexSolutionDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexStatssCurrent"></a>
+# **Invoke-DexStatssCurrent**
+> DexStatsDTO[] Invoke-DexStatssCurrent<br>
+
+Statss (current)
+
+Gets statss.
+
+### Example
+```powershell
+
+# Statss (current)
+try {
+    $Result = Invoke-DexStatssCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexStatssCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexStatsDTO[]**](DexStatsDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexTokensCurrent"></a>
+# **Invoke-DexTokensCurrent**
+> DexTokenDTO[] Invoke-DexTokensCurrent<br>
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```powershell
+
+# Tokens (current)
+try {
+    $Result = Invoke-DexTokensCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexTokenDTO[]**](DexTokenDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexTradesCurrent"></a>
+# **Invoke-DexTradesCurrent**
+> DexTradeDTO[] Invoke-DexTradesCurrent<br>
+
+Trades (current)
+
+Gets trades.
+
+### Example
+```powershell
+
+# Trades (current)
+try {
+    $Result = Invoke-DexTradesCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexTradesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexTradeDTO[]**](DexTradeDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexUsersCurrent"></a>
+# **Invoke-DexUsersCurrent**
+> DexUserDTO[] Invoke-DexUsersCurrent<br>
+
+Users (current)
+
+Gets users.
+
+### Example
+```powershell
+
+# Users (current)
+try {
+    $Result = Invoke-DexUsersCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexUsersCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexUserDTO[]**](DexUserDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexWithdrawRequestsCurrent"></a>
+# **Invoke-DexWithdrawRequestsCurrent**
+> DexWithdrawRequestDTO[] Invoke-DexWithdrawRequestsCurrent<br>
+
+WithdrawRequests (current)
+
+Gets withdrawRequests.
+
+### Example
+```powershell
+
+# WithdrawRequests (current)
+try {
+    $Result = Invoke-DexWithdrawRequestsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexWithdrawRequestsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DexWithdrawRequestDTO[]**](DexWithdrawRequestDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-DexWithdrawsCurrent"></a>
+# **Invoke-DexWithdrawsCurrent**
+> DexWithdrawDTO[] Invoke-DexWithdrawsCurrent<br>
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+```powershell
+
+# Withdraws (current)
+try {
+    $Result = Invoke-DexWithdrawsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-DexWithdrawsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

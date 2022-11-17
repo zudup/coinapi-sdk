@@ -32,6 +32,216 @@ describe 'CurveApi' do
     end
   end
 
+  # unit tests for curve_accounts__current
+  # Accounts (current)
+  # Gets accounts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveAccountDTO>]
+  describe 'curve_accounts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_add_liquidity_events__current
+  # AddLiquidityEvents (current)
+  # Gets addLiquidityEvents.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveAddLiquidityEventDTO>]
+  describe 'curve_add_liquidity_events__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_admin_fee_change_logs__current
+  # AdminFeeChangeLogs (current)
+  # Gets adminFeeChangeLogs.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveAdminFeeChangeLogDTO>]
+  describe 'curve_admin_fee_change_logs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_amplification_coeff_change_logs__current
+  # AmplificationCoeffChangeLogs (current)
+  # Gets amplificationCoeffChangeLogs.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveAmplificationCoeffChangeLogDTO>]
+  describe 'curve_amplification_coeff_change_logs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_coins__current
+  # Coins (current)
+  # Gets coins.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveCoinDTO>]
+  describe 'curve_coins__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_contract_versions__current
+  # ContractVersions (current)
+  # Gets contractVersions.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveContractVersionDTO>]
+  describe 'curve_contract_versions__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_contracts__current
+  # Contracts (current)
+  # Gets contracts.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveContractDTO>]
+  describe 'curve_contracts__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_daily_volumes__current
+  # DailyVolumes (current)
+  # Gets dailyVolumes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveDailyVolumeDTO>]
+  describe 'curve_daily_volumes__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_exchanges__current
+  # Exchanges (current)
+  # Gets exchanges.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pool 
+  # @return [Array<CurveExchangeDTO>]
+  describe 'curve_exchanges__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_fee_change_logs__current
+  # FeeChangeLogs (current)
+  # Gets feeChangeLogs.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveFeeChangeLogDTO>]
+  describe 'curve_fee_change_logs__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_deposits__current
+  # GaugeDeposits (current)
+  # Gets gaugeDeposits.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeDepositDTO>]
+  describe 'curve_gauge_deposits__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_liquiditys__current
+  # GaugeLiquiditys (current)
+  # Gets gaugeLiquiditys.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeLiquidityDTO>]
+  describe 'curve_gauge_liquiditys__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_total_weights__current
+  # GaugeTotalWeights (current)
+  # Gets gaugeTotalWeights.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeTotalWeightDTO>]
+  describe 'curve_gauge_total_weights__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_type_weights__current
+  # GaugeTypeWeights (current)
+  # Gets gaugeTypeWeights.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeTypeWeightDTO>]
+  describe 'curve_gauge_type_weights__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_types__current
+  # GaugeTypes (current)
+  # Gets gaugeTypes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeTypeDTO>]
+  describe 'curve_gauge_types__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_weight_votes__current
+  # GaugeWeightVotes (current)
+  # Gets gaugeWeightVotes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeWeightVoteDTO>]
+  describe 'curve_gauge_weight_votes__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_weights__current
+  # GaugeWeights (current)
+  # Gets gaugeWeights.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeWeightDTO>]
+  describe 'curve_gauge_weights__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauge_withdraws__current
+  # GaugeWithdraws (current)
+  # Gets gaugeWithdraws.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeWithdrawDTO>]
+  describe 'curve_gauge_withdraws__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_gauges__current
+  # Gauges (current)
+  # Gets gauges.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveGaugeDTO>]
+  describe 'curve_gauges__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for curve_get_accounts__historical
   # Accounts (historical) 🔥
   # Gets accounts.
@@ -51,7 +261,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_add_liquidity_events__historical
   # AddLiquidityEvents (historical) 🔥
-  # Gets addliquidityevents.
+  # Gets addLiquidityEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -68,7 +278,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_admin_fee_change_logs__historical
   # AdminFeeChangeLogs (historical) 🔥
-  # Gets adminfeechangelogs.
+  # Gets adminFeeChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -85,7 +295,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_amplification_coeff_change_logs__historical
   # AmplificationCoeffChangeLogs (historical) 🔥
-  # Gets amplificationcoeffchangelogs.
+  # Gets amplificationCoeffChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -119,7 +329,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_contract_versions__historical
   # ContractVersions (historical) 🔥
-  # Gets contractversions.
+  # Gets contractVersions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -152,7 +362,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_daily_volumes__historical
   # DailyVolumes (historical) 🔥
-  # Gets dailyvolumes.
+  # Gets dailyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -186,7 +396,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_fee_change_logs__historical
   # FeeChangeLogs (historical) 🔥
-  # Gets feechangelogs.
+  # Gets feeChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -203,7 +413,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_deposits__historical
   # GaugeDeposits (historical) 🔥
-  # Gets gaugedeposits.
+  # Gets gaugeDeposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -219,7 +429,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_liquiditys__historical
   # GaugeLiquiditys (historical) 🔥
-  # Gets gaugeliquiditys.
+  # Gets gaugeLiquiditys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -236,7 +446,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_total_weights__historical
   # GaugeTotalWeights (historical) 🔥
-  # Gets gaugetotalweights.
+  # Gets gaugeTotalWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -252,7 +462,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_type_weights__historical
   # GaugeTypeWeights (historical) 🔥
-  # Gets gaugetypeweights.
+  # Gets gaugeTypeWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -268,7 +478,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_types__historical
   # GaugeTypes (historical) 🔥
-  # Gets gaugetypes.
+  # Gets gaugeTypes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -285,7 +495,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_weight_votes__historical
   # GaugeWeightVotes (historical) 🔥
-  # Gets gaugeweightvotes.
+  # Gets gaugeWeightVotes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -302,7 +512,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_weights__historical
   # GaugeWeights (historical) 🔥
-  # Gets gaugeweights.
+  # Gets gaugeWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -318,7 +528,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_gauge_withdraws__historical
   # GaugeWithdraws (historical) 🔥
-  # Gets gaugewithdraws.
+  # Gets gaugeWithdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -352,7 +562,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_hourly_volumes__historical
   # HourlyVolumes (historical) 🔥
-  # Gets hourlyvolumes.
+  # Gets hourlyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -369,7 +579,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_lp_tokens__historical
   # LpTokens (historical) 🔥
-  # Gets lptokens.
+  # Gets lpTokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -406,7 +616,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_proposal_votes__historical
   # ProposalVotes (historical) 🔥
-  # Gets proposalvotes.
+  # Gets proposalVotes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -438,7 +648,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_remove_liquidity_events__historical
   # RemoveLiquidityEvents (historical) 🔥
-  # Gets removeliquidityevents.
+  # Gets removeLiquidityEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -455,7 +665,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_remove_liquidity_one_events__historical
   # RemoveLiquidityOneEvents (historical) 🔥
-  # Gets removeliquidityoneevents.
+  # Gets removeLiquidityOneEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -472,7 +682,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_system_states__historical
   # SystemStates (historical) 🔥
-  # Gets systemstates.
+  # Gets systemStates.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -507,7 +717,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_transfer_ownership_events__historical
   # TransferOwnershipEvents (historical) 🔥
-  # Gets transferownershipevents.
+  # Gets transferOwnershipEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -524,7 +734,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_underlying_coins__historical
   # UnderlyingCoins (historical) 🔥
-  # Gets underlyingcoins.
+  # Gets underlyingCoins.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
@@ -541,7 +751,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_voting_apps__historical
   # VotingApps (historical) 🔥
-  # Gets votingapps.
+  # Gets votingApps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -558,7 +768,7 @@ describe 'CurveApi' do
 
   # unit tests for curve_get_weekly_volumes__historical
   # WeeklyVolumes (historical) 🔥
-  # Gets weeklyvolumes.
+  # Gets weeklyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -568,6 +778,150 @@ describe 'CurveApi' do
   # @option opts [String] :pool 
   # @return [Array<CurveWeeklyVolumeDTO>]
   describe 'curve_get_weekly_volumes__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_hourly_volumes__current
+  # HourlyVolumes (current)
+  # Gets hourlyVolumes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveHourlyVolumeDTO>]
+  describe 'curve_hourly_volumes__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_lp_tokens__current
+  # LpTokens (current)
+  # Gets lpTokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveLpTokenDTO>]
+  describe 'curve_lp_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_pools__current
+  # Pools (current)
+  # Gets pools.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :id Pool address.
+  # @return [Array<CurvePoolDTO>]
+  describe 'curve_pools__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_proposal_votes__current
+  # ProposalVotes (current)
+  # Gets proposalVotes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveProposalVoteDTO>]
+  describe 'curve_proposal_votes__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_proposals__current
+  # Proposals (current)
+  # Gets proposals.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveProposalDTO>]
+  describe 'curve_proposals__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_remove_liquidity_events__current
+  # RemoveLiquidityEvents (current)
+  # Gets removeLiquidityEvents.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveRemoveLiquidityEventDTO>]
+  describe 'curve_remove_liquidity_events__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_remove_liquidity_one_events__current
+  # RemoveLiquidityOneEvents (current)
+  # Gets removeLiquidityOneEvents.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveRemoveLiquidityOneEventDTO>]
+  describe 'curve_remove_liquidity_one_events__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_system_states__current
+  # SystemStates (current)
+  # Gets systemStates.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveSystemStateDTO>]
+  describe 'curve_system_states__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_tokens__current
+  # Tokens (current)
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveTokenDTO>]
+  describe 'curve_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_transfer_ownership_events__current
+  # TransferOwnershipEvents (current)
+  # Gets transferOwnershipEvents.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveTransferOwnershipEventDTO>]
+  describe 'curve_transfer_ownership_events__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_underlying_coins__current
+  # UnderlyingCoins (current)
+  # Gets underlyingCoins.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveUnderlyingCoinDTO>]
+  describe 'curve_underlying_coins__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_voting_apps__current
+  # VotingApps (current)
+  # Gets votingApps.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveVotingAppDTO>]
+  describe 'curve_voting_apps__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for curve_weekly_volumes__current
+  # WeeklyVolumes (current)
+  # Gets weeklyVolumes.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveWeeklyVolumeDTO>]
+  describe 'curve_weekly_volumes__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

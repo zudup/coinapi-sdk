@@ -45,6 +45,80 @@ export default class DexApi {
 
 
     /**
+     * Callback function to receive the result of the dexBatchsCurrent operation.
+     * @callback module:api/DexApi~dexBatchsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexBatchDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Batchs (current)
+     * Gets batchs.
+     * @param {module:api/DexApi~dexBatchsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexBatchDTO>}
+     */
+    dexBatchsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexBatchDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/batchs/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexDepositsCurrent operation.
+     * @callback module:api/DexApi~dexDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @param {module:api/DexApi~dexDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexDepositDTO>}
+     */
+    dexDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexDepositDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/deposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetBatchsHistorical operation.
      * @callback module:api/DexApi~dexGetBatchsHistoricalCallback
      * @param {String} error Error message, if any.
@@ -511,7 +585,7 @@ export default class DexApi {
 
     /**
      * WithdrawRequests (historical) 🔥
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -546,7 +620,7 @@ export default class DexApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [DexWithdrawRequestDTO];
       return this.apiClient.callApi(
-        '/dapps/dex/withdrawrequests/historical', 'GET',
+        '/dapps/dex/withdrawRequests/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -598,6 +672,339 @@ export default class DexApi {
       let returnType = [DexWithdrawDTO];
       return this.apiClient.callApi(
         '/dapps/dex/withdraws/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexOrdersCurrent operation.
+     * @callback module:api/DexApi~dexOrdersCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexOrderDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @param {module:api/DexApi~dexOrdersCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexOrderDTO>}
+     */
+    dexOrdersCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexOrderDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/orders/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexPricesCurrent operation.
+     * @callback module:api/DexApi~dexPricesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexPriceDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Prices (current)
+     * Gets prices.
+     * @param {module:api/DexApi~dexPricesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexPriceDTO>}
+     */
+    dexPricesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexPriceDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/prices/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexSolutionsCurrent operation.
+     * @callback module:api/DexApi~dexSolutionsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexSolutionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Solutions (current)
+     * Gets solutions.
+     * @param {module:api/DexApi~dexSolutionsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexSolutionDTO>}
+     */
+    dexSolutionsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexSolutionDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/solutions/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexStatssCurrent operation.
+     * @callback module:api/DexApi~dexStatssCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexStatsDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Statss (current)
+     * Gets statss.
+     * @param {module:api/DexApi~dexStatssCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexStatsDTO>}
+     */
+    dexStatssCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexStatsDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/statss/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexTokensCurrent operation.
+     * @callback module:api/DexApi~dexTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param {module:api/DexApi~dexTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexTokenDTO>}
+     */
+    dexTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexTokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexTradesCurrent operation.
+     * @callback module:api/DexApi~dexTradesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexTradeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @param {module:api/DexApi~dexTradesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexTradeDTO>}
+     */
+    dexTradesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexTradeDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/trades/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexUsersCurrent operation.
+     * @callback module:api/DexApi~dexUsersCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexUserDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @param {module:api/DexApi~dexUsersCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexUserDTO>}
+     */
+    dexUsersCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexUserDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/users/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexWithdrawRequestsCurrent operation.
+     * @callback module:api/DexApi~dexWithdrawRequestsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexWithdrawRequestDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * WithdrawRequests (current)
+     * Gets withdrawRequests.
+     * @param {module:api/DexApi~dexWithdrawRequestsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexWithdrawRequestDTO>}
+     */
+    dexWithdrawRequestsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexWithdrawRequestDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/withdrawRequests/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexWithdrawsCurrent operation.
+     * @callback module:api/DexApi~dexWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @param {module:api/DexApi~dexWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexWithdrawDTO>}
+     */
+    dexWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexWithdrawDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/withdraws/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

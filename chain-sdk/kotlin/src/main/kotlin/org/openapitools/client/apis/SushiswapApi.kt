@@ -197,6 +197,274 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
+     * Bundles (current)
+     * Gets bundles.
+     * @return kotlin.collections.List<SushiswapBundleDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapBundlesCurrent() : kotlin.collections.List<SushiswapBundleDTO> {
+        val localVarResponse = sushiswapBundlesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapBundleDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Bundles (current)
+     * Gets bundles.
+     * @return ApiResponse<kotlin.collections.List<SushiswapBundleDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapBundlesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapBundleDTO>?> {
+        val localVariableConfig = sushiswapBundlesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapBundleDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapBundlesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapBundlesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/bundles/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Burns (current)
+     * Gets burns.
+     * @return kotlin.collections.List<SushiswapBurnDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapBurnsCurrent() : kotlin.collections.List<SushiswapBurnDTO> {
+        val localVarResponse = sushiswapBurnsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapBurnDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Burns (current)
+     * Gets burns.
+     * @return ApiResponse<kotlin.collections.List<SushiswapBurnDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapBurnsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapBurnDTO>?> {
+        val localVariableConfig = sushiswapBurnsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapBurnDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapBurnsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapBurnsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/burns/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * DayDatas (current)
+     * Gets dayDatas.
+     * @return kotlin.collections.List<SushiswapDayDataDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapDayDatasCurrent() : kotlin.collections.List<SushiswapDayDataDTO> {
+        val localVarResponse = sushiswapDayDatasCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapDayDataDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * DayDatas (current)
+     * Gets dayDatas.
+     * @return ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?> {
+        val localVariableConfig = sushiswapDayDatasCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapDayDataDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapDayDatasCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/dayDatas/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Factorys (current)
+     * Gets factorys.
+     * @return kotlin.collections.List<SushiswapFactoryDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapFactorysCurrent() : kotlin.collections.List<SushiswapFactoryDTO> {
+        val localVarResponse = sushiswapFactorysCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapFactoryDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Factorys (current)
+     * Gets factorys.
+     * @return ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapFactorysCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?> {
+        val localVariableConfig = sushiswapFactorysCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapFactoryDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapFactorysCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapFactorysCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/factorys/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Bundles (historical) 🔥
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -402,7 +670,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * DayDatas (historical) 🔥
-     * Gets daydatas.
+     * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -437,7 +705,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * DayDatas (historical) 🔥
-     * Gets daydatas.
+     * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -492,7 +760,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/daydatas/historical",
+            path = "/dapps/sushiswap/dayDatas/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -600,7 +868,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * HourDatas (historical) 🔥
-     * Gets hourdatas.
+     * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -635,7 +903,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * HourDatas (historical) 🔥
-     * Gets hourdatas.
+     * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -690,7 +958,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/hourdatas/historical",
+            path = "/dapps/sushiswap/hourDatas/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -699,7 +967,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * LiquidityPositionSnapshots (historical) 🔥
-     * Gets liquiditypositionsnapshots.
+     * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -736,7 +1004,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * LiquidityPositionSnapshots (historical) 🔥
-     * Gets liquiditypositionsnapshots.
+     * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -801,7 +1069,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/liquiditypositionsnapshots/historical",
+            path = "/dapps/sushiswap/liquidityPositionSnapshots/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -810,7 +1078,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * LiquidityPositions (historical) 🔥
-     * Gets liquiditypositions.
+     * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -847,7 +1115,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * LiquidityPositions (historical) 🔥
-     * Gets liquiditypositions.
+     * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -912,7 +1180,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/liquiditypositions/historical",
+            path = "/dapps/sushiswap/liquidityPositions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1026,7 +1294,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * PairDayDatas (historical) 🔥
-     * Gets pairdaydatas.
+     * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1064,7 +1332,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * PairDayDatas (historical) 🔥
-     * Gets pairdaydatas.
+     * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1134,7 +1402,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairdaydatas/historical",
+            path = "/dapps/sushiswap/pairDayDatas/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1143,7 +1411,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * PairHourDatas (historical) 🔥
-     * Gets pairhourdatas.
+     * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1179,7 +1447,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * PairHourDatas (historical) 🔥
-     * Gets pairhourdatas.
+     * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1239,7 +1507,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairhourdatas/historical",
+            path = "/dapps/sushiswap/pairHourDatas/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1431,73 +1699,6 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @return kotlin.collections.List<SushiswapSwapDTO>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetSwapsCurrent() : kotlin.collections.List<SushiswapSwapDTO> {
-        val localVarResponse = sushiswapGetSwapsCurrentWithHttpInfo()
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapSwapDTO>
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetSwapsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?> {
-        val localVariableConfig = sushiswapGetSwapsCurrentRequestConfig()
-
-        return request<Unit, kotlin.collections.List<SushiswapSwapDTO>>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation sushiswapGetSwapsCurrent
-     *
-     * @return RequestConfig
-     */
-    fun sushiswapGetSwapsCurrentRequestConfig() : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/dapps/sushiswap/swaps/current",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -1604,7 +1805,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * TokenDayDatas (historical) 🔥
-     * Gets tokendaydatas.
+     * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1639,7 +1840,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
     /**
      * TokenDayDatas (historical) 🔥
-     * Gets tokendaydatas.
+     * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1694,74 +1895,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/tokendaydatas/historical",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @return kotlin.collections.List<SushiswapTokenDTO>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetTokensCurrent() : kotlin.collections.List<SushiswapTokenDTO> {
-        val localVarResponse = sushiswapGetTokensCurrentWithHttpInfo()
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDTO>
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?> {
-        val localVariableConfig = sushiswapGetTokensCurrentRequestConfig()
-
-        return request<Unit, kotlin.collections.List<SushiswapTokenDTO>>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation sushiswapGetTokensCurrent
-     *
-     * @return RequestConfig
-     */
-    fun sushiswapGetTokensCurrentRequestConfig() : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/dapps/sushiswap/tokens/current",
+            path = "/dapps/sushiswap/tokenDayDatas/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2071,6 +2205,826 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/dapps/sushiswap/users/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * HourDatas (current)
+     * Gets hourDatas.
+     * @return kotlin.collections.List<SushiswapHourDataDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapHourDatasCurrent() : kotlin.collections.List<SushiswapHourDataDTO> {
+        val localVarResponse = sushiswapHourDatasCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapHourDataDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * HourDatas (current)
+     * Gets hourDatas.
+     * @return ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapHourDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?> {
+        val localVariableConfig = sushiswapHourDatasCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapHourDataDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapHourDatasCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapHourDatasCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/hourDatas/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPositionSnapshots (current)
+     * Gets liquidityPositionSnapshots.
+     * @return kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapLiquidityPositionSnapshotsCurrent() : kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO> {
+        val localVarResponse = sushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPositionSnapshots (current)
+     * Gets liquidityPositionSnapshots.
+     * @return ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>?> {
+        val localVariableConfig = sushiswapLiquidityPositionSnapshotsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapLiquidityPositionSnapshotsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapLiquidityPositionSnapshotsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/liquidityPositionSnapshots/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LiquidityPositions (current)
+     * Gets liquidityPositions.
+     * @return kotlin.collections.List<SushiswapLiquidityPositionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapLiquidityPositionsCurrent() : kotlin.collections.List<SushiswapLiquidityPositionDTO> {
+        val localVarResponse = sushiswapLiquidityPositionsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapLiquidityPositionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LiquidityPositions (current)
+     * Gets liquidityPositions.
+     * @return ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapLiquidityPositionsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionDTO>?> {
+        val localVariableConfig = sushiswapLiquidityPositionsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapLiquidityPositionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapLiquidityPositionsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapLiquidityPositionsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/liquidityPositions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @return kotlin.collections.List<SushiswapMintDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapMintsCurrent() : kotlin.collections.List<SushiswapMintDTO> {
+        val localVarResponse = sushiswapMintsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapMintDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @return ApiResponse<kotlin.collections.List<SushiswapMintDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapMintsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapMintDTO>?> {
+        val localVariableConfig = sushiswapMintsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapMintDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapMintsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapMintsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/mints/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * PairDayDatas (current)
+     * Gets pairDayDatas.
+     * @return kotlin.collections.List<SushiswapPairDayDataDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapPairDayDatasCurrent() : kotlin.collections.List<SushiswapPairDayDataDTO> {
+        val localVarResponse = sushiswapPairDayDatasCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDayDataDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PairDayDatas (current)
+     * Gets pairDayDatas.
+     * @return ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapPairDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?> {
+        val localVariableConfig = sushiswapPairDayDatasCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapPairDayDataDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapPairDayDatasCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapPairDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/pairDayDatas/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * PairHourDatas (current)
+     * Gets pairHourDatas.
+     * @return kotlin.collections.List<SushiswapPairHourDataDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapPairHourDatasCurrent() : kotlin.collections.List<SushiswapPairHourDataDTO> {
+        val localVarResponse = sushiswapPairHourDatasCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairHourDataDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PairHourDatas (current)
+     * Gets pairHourDatas.
+     * @return ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapPairHourDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?> {
+        val localVariableConfig = sushiswapPairHourDatasCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapPairHourDataDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapPairHourDatasCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapPairHourDatasCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/pairHourDatas/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Pairs (current)
+     * Gets pairs.
+     * @param id Pair contract address. (optional)
+     * @return kotlin.collections.List<SushiswapPairDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapPairsCurrent(id: kotlin.String? = null) : kotlin.collections.List<SushiswapPairDTO> {
+        val localVarResponse = sushiswapPairsCurrentWithHttpInfo(id = id)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Pairs (current)
+     * Gets pairs.
+     * @param id Pair contract address. (optional)
+     * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapPairsCurrentWithHttpInfo(id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairDTO>?> {
+        val localVariableConfig = sushiswapPairsCurrentRequestConfig(id = id)
+
+        return request<Unit, kotlin.collections.List<SushiswapPairDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapPairsCurrent
+     *
+     * @param id Pair contract address. (optional)
+     * @return RequestConfig
+     */
+    fun sushiswapPairsCurrentRequestConfig(id: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (id != null) {
+                    put("id", listOf(id.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/pairs/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @return kotlin.collections.List<SushiswapSwapDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapSwapsCurrent(pair: kotlin.String? = null) : kotlin.collections.List<SushiswapSwapDTO> {
+        val localVarResponse = sushiswapSwapsCurrentWithHttpInfo(pair = pair)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapSwapDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapSwapsCurrentWithHttpInfo(pair: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?> {
+        val localVariableConfig = sushiswapSwapsCurrentRequestConfig(pair = pair)
+
+        return request<Unit, kotlin.collections.List<SushiswapSwapDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapSwapsCurrent
+     *
+     * @param pair Reference to pair. (optional)
+     * @return RequestConfig
+     */
+    fun sushiswapSwapsCurrentRequestConfig(pair: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pair != null) {
+                    put("pair", listOf(pair.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/swaps/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TokenDayDatas (current)
+     * Gets tokenDayDatas.
+     * @return kotlin.collections.List<SushiswapTokenDayDataDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapTokenDayDatasCurrent() : kotlin.collections.List<SushiswapTokenDayDataDTO> {
+        val localVarResponse = sushiswapTokenDayDatasCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDayDataDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TokenDayDatas (current)
+     * Gets tokenDayDatas.
+     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapTokenDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?> {
+        val localVariableConfig = sushiswapTokenDayDatasCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapTokenDayDataDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapTokenDayDatasCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapTokenDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/tokenDayDatas/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return kotlin.collections.List<SushiswapTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapTokensCurrent() : kotlin.collections.List<SushiswapTokenDTO> {
+        val localVarResponse = sushiswapTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?> {
+        val localVariableConfig = sushiswapTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Transactions (current)
+     * Gets transactions.
+     * @return kotlin.collections.List<SushiswapTransactionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapTransactionsCurrent() : kotlin.collections.List<SushiswapTransactionDTO> {
+        val localVarResponse = sushiswapTransactionsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTransactionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Transactions (current)
+     * Gets transactions.
+     * @return ApiResponse<kotlin.collections.List<SushiswapTransactionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapTransactionsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTransactionDTO>?> {
+        val localVariableConfig = sushiswapTransactionsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapTransactionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapTransactionsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapTransactionsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/transactions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return kotlin.collections.List<SushiswapUserDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun sushiswapUsersCurrent() : kotlin.collections.List<SushiswapUserDTO> {
+        val localVarResponse = sushiswapUsersCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapUserDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return ApiResponse<kotlin.collections.List<SushiswapUserDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun sushiswapUsersCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapUserDTO>?> {
+        val localVariableConfig = sushiswapUsersCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<SushiswapUserDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation sushiswapUsersCurrent
+     *
+     * @return RequestConfig
+     */
+    fun sushiswapUsersCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/sushiswap/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

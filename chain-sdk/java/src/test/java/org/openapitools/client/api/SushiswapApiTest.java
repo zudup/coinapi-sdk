@@ -76,6 +76,58 @@ public class SushiswapApiTest {
     }
 
     /**
+     * Bundles (current)
+     *
+     * Gets bundles.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapBundlesCurrentTest() throws ApiException {
+        List<SushiswapBundleDTO> response = api.sushiswapBundlesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Burns (current)
+     *
+     * Gets burns.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapBurnsCurrentTest() throws ApiException {
+        List<SushiswapBurnDTO> response = api.sushiswapBurnsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DayDatas (current)
+     *
+     * Gets dayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapDayDatasCurrentTest() throws ApiException {
+        List<SushiswapDayDataDTO> response = api.sushiswapDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Factorys (current)
+     *
+     * Gets factorys.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapFactorysCurrentTest() throws ApiException {
+        List<SushiswapFactoryDTO> response = api.sushiswapFactorysCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Bundles (historical) 🔥
      *
      * Gets bundles.
@@ -115,7 +167,7 @@ public class SushiswapApiTest {
     /**
      * DayDatas (historical) 🔥
      *
-     * Gets daydatas.
+     * Gets dayDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -151,7 +203,7 @@ public class SushiswapApiTest {
     /**
      * HourDatas (historical) 🔥
      *
-     * Gets hourdatas.
+     * Gets hourDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -169,7 +221,7 @@ public class SushiswapApiTest {
     /**
      * LiquidityPositionSnapshots (historical) 🔥
      *
-     * Gets liquiditypositionsnapshots.
+     * Gets liquidityPositionSnapshots.
      *
      * @throws ApiException if the Api call fails
      */
@@ -189,7 +241,7 @@ public class SushiswapApiTest {
     /**
      * LiquidityPositions (historical) 🔥
      *
-     * Gets liquiditypositions.
+     * Gets liquidityPositions.
      *
      * @throws ApiException if the Api call fails
      */
@@ -228,7 +280,7 @@ public class SushiswapApiTest {
     /**
      * PairDayDatas (historical) 🔥
      *
-     * Gets pairdaydatas.
+     * Gets pairDayDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -249,7 +301,7 @@ public class SushiswapApiTest {
     /**
      * PairHourDatas (historical) 🔥
      *
-     * Gets pairhourdatas.
+     * Gets pairHourDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -300,19 +352,6 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Swaps (current) 🔥
-     *
-     * Gets swaps.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetSwapsCurrentTest() throws ApiException {
-        List<SushiswapSwapDTO> response = api.sushiswapGetSwapsCurrent();
-        // TODO: test validations
-    }
-
-    /**
      * Swaps (historical) 🔥
      *
      * Gets swaps.
@@ -334,7 +373,7 @@ public class SushiswapApiTest {
     /**
      * TokenDayDatas (historical) 🔥
      *
-     * Gets tokendaydatas.
+     * Gets tokenDayDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -346,19 +385,6 @@ public class SushiswapApiTest {
         OffsetDateTime endDate = null;
         String id = null;
         List<SushiswapTokenDayDataDTO> response = api.sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
-     * Tokens (current) 🔥
-     *
-     * Gets tokens.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetTokensCurrentTest() throws ApiException {
-        List<SushiswapTokenDTO> response = api.sushiswapGetTokensCurrent();
         // TODO: test validations
     }
 
@@ -415,6 +441,164 @@ public class SushiswapApiTest {
         OffsetDateTime endDate = null;
         String id = null;
         List<SushiswapUserDTO> response = api.sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * HourDatas (current)
+     *
+     * Gets hourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapHourDatasCurrentTest() throws ApiException {
+        List<SushiswapHourDataDTO> response = api.sushiswapHourDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPositionSnapshots (current)
+     *
+     * Gets liquidityPositionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapLiquidityPositionSnapshotsCurrentTest() throws ApiException {
+        List<SushiswapLiquidityPositionSnapshotDTO> response = api.sushiswapLiquidityPositionSnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPositions (current)
+     *
+     * Gets liquidityPositions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapLiquidityPositionsCurrentTest() throws ApiException {
+        List<SushiswapLiquidityPositionDTO> response = api.sushiswapLiquidityPositionsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Mints (current)
+     *
+     * Gets mints.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapMintsCurrentTest() throws ApiException {
+        List<SushiswapMintDTO> response = api.sushiswapMintsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * PairDayDatas (current)
+     *
+     * Gets pairDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapPairDayDatasCurrentTest() throws ApiException {
+        List<SushiswapPairDayDataDTO> response = api.sushiswapPairDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * PairHourDatas (current)
+     *
+     * Gets pairHourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapPairHourDatasCurrentTest() throws ApiException {
+        List<SushiswapPairHourDataDTO> response = api.sushiswapPairHourDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Pairs (current)
+     *
+     * Gets pairs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapPairsCurrentTest() throws ApiException {
+        String id = null;
+        List<SushiswapPairDTO> response = api.sushiswapPairsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * Swaps (current)
+     *
+     * Gets swaps.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapSwapsCurrentTest() throws ApiException {
+        String pair = null;
+        List<SushiswapSwapDTO> response = api.sushiswapSwapsCurrent(pair);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenDayDatas (current)
+     *
+     * Gets tokenDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapTokenDayDatasCurrentTest() throws ApiException {
+        List<SushiswapTokenDayDataDTO> response = api.sushiswapTokenDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
+     *
+     * Gets tokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapTokensCurrentTest() throws ApiException {
+        List<SushiswapTokenDTO> response = api.sushiswapTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Transactions (current)
+     *
+     * Gets transactions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapTransactionsCurrentTest() throws ApiException {
+        List<SushiswapTransactionDTO> response = api.sushiswapTransactionsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Users (current)
+     *
+     * Gets users.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sushiswapUsersCurrentTest() throws ApiException {
+        List<SushiswapUserDTO> response = api.sushiswapUsersCurrent();
         // TODO: test validations
     }
 

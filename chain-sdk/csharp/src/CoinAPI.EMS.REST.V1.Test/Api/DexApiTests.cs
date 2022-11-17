@@ -64,6 +64,28 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
+        /// Test DexBatchsCurrent
+        /// </summary>
+        [Test]
+        public void DexBatchsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexBatchsCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexBatchDTO>), response, "response is List<DexBatchDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexDepositsCurrent
+        /// </summary>
+        [Test]
+        public void DexDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexDepositsCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexDepositDTO>), response, "response is List<DexDepositDTO>");
+        }
+        
+        /// <summary>
         /// Test DexGetBatchsHistorical
         /// </summary>
         [Test]
@@ -246,6 +268,105 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string id = null;
             //string user = null;
             //var response = instance.DexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user);
+            //Assert.IsInstanceOf(typeof(List<DexWithdrawDTO>), response, "response is List<DexWithdrawDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexOrdersCurrent
+        /// </summary>
+        [Test]
+        public void DexOrdersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexOrdersCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexOrderDTO>), response, "response is List<DexOrderDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexPricesCurrent
+        /// </summary>
+        [Test]
+        public void DexPricesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexPricesCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexPriceDTO>), response, "response is List<DexPriceDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexSolutionsCurrent
+        /// </summary>
+        [Test]
+        public void DexSolutionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexSolutionsCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexSolutionDTO>), response, "response is List<DexSolutionDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexStatssCurrent
+        /// </summary>
+        [Test]
+        public void DexStatssCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexStatssCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexStatsDTO>), response, "response is List<DexStatsDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexTokensCurrent
+        /// </summary>
+        [Test]
+        public void DexTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexTokenDTO>), response, "response is List<DexTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexTradesCurrent
+        /// </summary>
+        [Test]
+        public void DexTradesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexTradesCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexTradeDTO>), response, "response is List<DexTradeDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexUsersCurrent
+        /// </summary>
+        [Test]
+        public void DexUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexUsersCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexUserDTO>), response, "response is List<DexUserDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexWithdrawRequestsCurrent
+        /// </summary>
+        [Test]
+        public void DexWithdrawRequestsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexWithdrawRequestsCurrent();
+            //Assert.IsInstanceOf(typeof(List<DexWithdrawRequestDTO>), response, "response is List<DexWithdrawRequestDTO>");
+        }
+        
+        /// <summary>
+        /// Test DexWithdrawsCurrent
+        /// </summary>
+        [Test]
+        public void DexWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexWithdrawsCurrent();
             //Assert.IsInstanceOf(typeof(List<DexWithdrawDTO>), response, "response is List<DexWithdrawDTO>");
         }
         

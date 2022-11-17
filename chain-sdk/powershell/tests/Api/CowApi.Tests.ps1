@@ -47,4 +47,44 @@ Describe -tag 'PSOpenAPITools' -name 'CowApi' {
         }
     }
 
+    Context 'Invoke-CowOrdersCurrent' {
+        It 'Test Invoke-CowOrdersCurrent' {
+            #$TestResult = Invoke-CowOrdersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CowSettlementsCurrent' {
+        It 'Test Invoke-CowSettlementsCurrent' {
+            #$TestResult = Invoke-CowSettlementsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CowTokensCurrent' {
+        It 'Test Invoke-CowTokensCurrent' {
+            #$TestResult = Invoke-CowTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CowTradesCurrent' {
+        It 'Test Invoke-CowTradesCurrent' {
+            #$TestResult = Invoke-CowTradesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-CowUsersCurrent' {
+        It 'Test Invoke-CowUsersCurrent' {
+            #$TestResult = Invoke-CowUsersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
 }

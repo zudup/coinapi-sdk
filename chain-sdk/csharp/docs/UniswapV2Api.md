@@ -4,34 +4,47 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UniswapV2GetBundleV2sHistorical**](UniswapV2Api.md#uniswapv2getbundlev2shistorical) | **GET** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**UniswapV2GetBurnV2sHistorical**](UniswapV2Api.md#uniswapv2getburnv2shistorical) | **GET** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**UniswapV2GetLiquidityPositionSnapshotV2sHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionsnapshotv2shistorical) | **GET** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**UniswapV2GetLiquidityPositionV2sHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionv2shistorical) | **GET** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**UniswapV2GetMintV2sHistorical**](UniswapV2Api.md#uniswapv2getmintv2shistorical) | **GET** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**UniswapV2GetPairDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatav2shistorical) | **GET** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**UniswapV2GetPairHourDataV2sHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatav2shistorical) | **GET** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**UniswapV2GetPairV2sHistorical**](UniswapV2Api.md#uniswapv2getpairv2shistorical) | **GET** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**UniswapV2BundlesCurrent**](UniswapV2Api.md#uniswapv2bundlescurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**UniswapV2BurnsCurrent**](UniswapV2Api.md#uniswapv2burnscurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
+[**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapv2getbundleshistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapv2getburnshistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionsnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**UniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatashistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatashistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**UniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapv2getpairshistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**UniswapV2GetSwapV2sHistorical**](UniswapV2Api.md#uniswapv2getswapv2shistorical) | **GET** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**UniswapV2GetTokenDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatav2shistorical) | **GET** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**UniswapV2GetTokenV2sHistorical**](UniswapV2Api.md#uniswapv2gettokenv2shistorical) | **GET** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatashistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**UniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**UniswapV2GetTransactionV2sHistorical**](UniswapV2Api.md#uniswapv2gettransactionv2shistorical) | **GET** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**UniswapV2GetUniswapDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatav2shistorical) | **GET** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**UniswapV2GetUniswapFactoryV2sHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactoryv2shistorical) | **GET** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**UniswapV2GetUserV2sHistorical**](UniswapV2Api.md#uniswapv2getuserv2shistorical) | **GET** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**UniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatashistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactoryshistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**UniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**UniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionsnapshotscurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**UniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionscurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**UniswapV2MintsCurrent**](UniswapV2Api.md#uniswapv2mintscurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
+[**UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapv2pairdaydatascurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapv2pairhourdatascurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**UniswapV2PairsCurrent**](UniswapV2Api.md#uniswapv2pairscurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapv2tokendaydatascurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapv2transactionscurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatascurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoryscurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**UniswapV2UsersCurrent**](UniswapV2Api.md#uniswapv2userscurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
 
-## UniswapV2GetBundleV2sHistorical
+## UniswapV2BundlesCurrent
 
-> List&lt;UniswapV2BundleV2DTO&gt; UniswapV2GetBundleV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2BundleDTO&gt; UniswapV2BundlesCurrent ()
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
 
 ### Example
 
@@ -44,27 +57,22 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetBundleV2sHistoricalExample
+    public class UniswapV2BundlesCurrentExample
     {
         public static void Main()
         {
             Configuration.Default.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV2Api(Configuration.Default);
-            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
-            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
-            var id = "id_example";  // string | Constant 1. (optional) 
 
             try
             {
-                // BundleV2s (historical) 🔥
-                List<UniswapV2BundleV2DTO> result = apiInstance.UniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Bundles (current)
+                List<UniswapV2BundleDTO> result = apiInstance.UniswapV2BundlesCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetBundleV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2BundlesCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -75,18 +83,11 @@ namespace Example
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
- **id** | **string**| Constant 1. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;UniswapV2BundleV2DTO&gt;**](UniswapV2BundleV2DTO.md)
+[**List&lt;UniswapV2BundleDTO&gt;**](UniswapV2BundleDTO.md)
 
 ### Authorization
 
@@ -109,13 +110,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetBurnV2sHistorical
+## UniswapV2BurnsCurrent
 
-> List&lt;UniswapV2BurnV2DTO&gt; UniswapV2GetBurnV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
+> List&lt;UniswapV2BurnDTO&gt; UniswapV2BurnsCurrent ()
 
-BurnV2s (historical) 🔥
+Burns (current)
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 
@@ -128,7 +129,163 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetBurnV2sHistoricalExample
+    public class UniswapV2BurnsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // Burns (current)
+                List<UniswapV2BurnDTO> result = apiInstance.UniswapV2BurnsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2BurnsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2BurnDTO&gt;**](UniswapV2BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2GetBundlesHistorical
+
+> List&lt;UniswapV2BundleDTO&gt; UniswapV2GetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+
+Bundles (historical) 🔥
+
+Gets bundles.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2GetBundlesHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Constant 1. (optional) 
+
+            try
+            {
+                // Bundles (historical) 🔥
+                List<UniswapV2BundleDTO> result = apiInstance.UniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetBundlesHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
+ **id** | **string**| Constant 1. | [optional] 
+
+### Return type
+
+[**List&lt;UniswapV2BundleDTO&gt;**](UniswapV2BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2GetBurnsHistorical
+
+> List&lt;UniswapV2BurnDTO&gt; UniswapV2GetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
+
+Burns (historical) 🔥
+
+Gets burns.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2GetBurnsHistoricalExample
     {
         public static void Main()
         {
@@ -143,13 +300,13 @@ namespace Example
 
             try
             {
-                // BurnV2s (historical) 🔥
-                List<UniswapV2BurnV2DTO> result = apiInstance.UniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+                // Burns (historical) 🔥
+                List<UniswapV2BurnDTO> result = apiInstance.UniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetBurnV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetBurnsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -172,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2BurnV2DTO&gt;**](UniswapV2BurnV2DTO.md)
+[**List&lt;UniswapV2BurnDTO&gt;**](UniswapV2BurnDTO.md)
 
 ### Authorization
 
@@ -195,13 +352,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetLiquidityPositionSnapshotV2sHistorical
+## UniswapV2GetLiquidityPositionSnapshotsHistorical
 
-> List&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt; UniswapV2GetLiquidityPositionSnapshotV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
+> List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt; UniswapV2GetLiquidityPositionSnapshotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -214,7 +371,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetLiquidityPositionSnapshotV2sHistoricalExample
+    public class UniswapV2GetLiquidityPositionSnapshotsHistoricalExample
     {
         public static void Main()
         {
@@ -230,13 +387,13 @@ namespace Example
 
             try
             {
-                // LiquidityPositionSnapshotV2s (historical) 🔥
-                List<UniswapV2LiquidityPositionSnapshotV2DTO> result = apiInstance.UniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+                // LiquidityPositionSnapshots (historical) 🔥
+                List<UniswapV2LiquidityPositionSnapshotDTO> result = apiInstance.UniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetLiquidityPositionSnapshotV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetLiquidityPositionSnapshotsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -260,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt;**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
+[**List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;**](UniswapV2LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -283,13 +440,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetLiquidityPositionV2sHistorical
+## UniswapV2GetLiquidityPositionsHistorical
 
-> List&lt;UniswapV2LiquidityPositionV2DTO&gt; UniswapV2GetLiquidityPositionV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
+> List&lt;UniswapV2LiquidityPositionDTO&gt; UniswapV2GetLiquidityPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 
@@ -302,7 +459,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetLiquidityPositionV2sHistoricalExample
+    public class UniswapV2GetLiquidityPositionsHistoricalExample
     {
         public static void Main()
         {
@@ -318,13 +475,13 @@ namespace Example
 
             try
             {
-                // LiquidityPositionV2s (historical) 🔥
-                List<UniswapV2LiquidityPositionV2DTO> result = apiInstance.UniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+                // LiquidityPositions (historical) 🔥
+                List<UniswapV2LiquidityPositionDTO> result = apiInstance.UniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetLiquidityPositionV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetLiquidityPositionsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -348,7 +505,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2LiquidityPositionV2DTO&gt;**](UniswapV2LiquidityPositionV2DTO.md)
+[**List&lt;UniswapV2LiquidityPositionDTO&gt;**](UniswapV2LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -371,13 +528,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetMintV2sHistorical
+## UniswapV2GetMintsHistorical
 
-> List&lt;UniswapV2MintV2DTO&gt; UniswapV2GetMintV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
+> List&lt;UniswapV2MintDTO&gt; UniswapV2GetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 
@@ -390,7 +547,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetMintV2sHistoricalExample
+    public class UniswapV2GetMintsHistoricalExample
     {
         public static void Main()
         {
@@ -405,13 +562,13 @@ namespace Example
 
             try
             {
-                // MintV2s (historical) 🔥
-                List<UniswapV2MintV2DTO> result = apiInstance.UniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+                // Mints (historical) 🔥
+                List<UniswapV2MintDTO> result = apiInstance.UniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetMintV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetMintsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -434,7 +591,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2MintV2DTO&gt;**](UniswapV2MintV2DTO.md)
+[**List&lt;UniswapV2MintDTO&gt;**](UniswapV2MintDTO.md)
 
 ### Authorization
 
@@ -457,13 +614,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetPairDayDataV2sHistorical
+## UniswapV2GetPairDayDatasHistorical
 
-> List&lt;UniswapV2PairDayDataV2DTO&gt; UniswapV2GetPairDayDataV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
+> List&lt;UniswapV2PairDayDataDTO&gt; UniswapV2GetPairDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 
@@ -476,7 +633,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetPairDayDataV2sHistoricalExample
+    public class UniswapV2GetPairDayDatasHistoricalExample
     {
         public static void Main()
         {
@@ -492,13 +649,13 @@ namespace Example
 
             try
             {
-                // PairDayDataV2s (historical) 🔥
-                List<UniswapV2PairDayDataV2DTO> result = apiInstance.UniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+                // PairDayDatas (historical) 🔥
+                List<UniswapV2PairDayDataDTO> result = apiInstance.UniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairDayDataV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairDayDatasHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -522,7 +679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2PairDayDataV2DTO&gt;**](UniswapV2PairDayDataV2DTO.md)
+[**List&lt;UniswapV2PairDayDataDTO&gt;**](UniswapV2PairDayDataDTO.md)
 
 ### Authorization
 
@@ -545,13 +702,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetPairHourDataV2sHistorical
+## UniswapV2GetPairHourDatasHistorical
 
-> List&lt;UniswapV2PairHourDataV2DTO&gt; UniswapV2GetPairHourDataV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
+> List&lt;UniswapV2PairHourDataDTO&gt; UniswapV2GetPairHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 
@@ -564,7 +721,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetPairHourDataV2sHistoricalExample
+    public class UniswapV2GetPairHourDatasHistoricalExample
     {
         public static void Main()
         {
@@ -579,13 +736,13 @@ namespace Example
 
             try
             {
-                // PairHourDataV2s (historical) 🔥
-                List<UniswapV2PairHourDataV2DTO> result = apiInstance.UniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+                // PairHourDatas (historical) 🔥
+                List<UniswapV2PairHourDataDTO> result = apiInstance.UniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairHourDataV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairHourDatasHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -608,7 +765,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2PairHourDataV2DTO&gt;**](UniswapV2PairHourDataV2DTO.md)
+[**List&lt;UniswapV2PairHourDataDTO&gt;**](UniswapV2PairHourDataDTO.md)
 
 ### Authorization
 
@@ -631,13 +788,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetPairV2sHistorical
+## UniswapV2GetPairsHistorical
 
-> List&lt;UniswapV2PairV2DTO&gt; UniswapV2GetPairV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
+> List&lt;UniswapV2PairDTO&gt; UniswapV2GetPairsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 
@@ -650,7 +807,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetPairV2sHistoricalExample
+    public class UniswapV2GetPairsHistoricalExample
     {
         public static void Main()
         {
@@ -666,13 +823,13 @@ namespace Example
 
             try
             {
-                // PairV2s (historical) 🔥
-                List<UniswapV2PairV2DTO> result = apiInstance.UniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+                // Pairs (historical) 🔥
+                List<UniswapV2PairDTO> result = apiInstance.UniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPairsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -696,7 +853,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
+[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -721,7 +878,7 @@ No authorization required
 
 ## UniswapV2GetPoolsCurrent
 
-> List&lt;UniswapV2PairV2DTO&gt; UniswapV2GetPoolsCurrent (string filterPoolId = null)
+> List&lt;UniswapV2PairDTO&gt; UniswapV2GetPoolsCurrent (string filterPoolId = null)
 
 Pools (current) 🔥
 
@@ -749,7 +906,7 @@ namespace Example
             try
             {
                 // Pools (current) 🔥
-                List<UniswapV2PairV2DTO> result = apiInstance.UniswapV2GetPoolsCurrent(filterPoolId);
+                List<UniswapV2PairDTO> result = apiInstance.UniswapV2GetPoolsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -772,93 +929,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetSwapV2sHistorical
-
-> List&lt;UniswapV2SwapV2DTO&gt; UniswapV2GetSwapV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
-
-SwapV2s (historical) 🔥
-
-Gets swapv2s.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV2GetSwapV2sHistoricalExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV2Api(Configuration.Default);
-            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
-            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
-            var id = "id_example";  // string | Transaction hash plus index in Transaction swap array. (optional) 
-            var pair = "pair_example";  // string | Reference to pair. (optional) 
-
-            try
-            {
-                // SwapV2s (historical) 🔥
-                List<UniswapV2SwapV2DTO> result = apiInstance.UniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetSwapV2sHistorical: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
- **id** | **string**| Transaction hash plus index in Transaction swap array. | [optional] 
- **pair** | **string**| Reference to pair. | [optional] 
-
-### Return type
-
-[**List&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
+[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -883,7 +954,7 @@ No authorization required
 
 ## UniswapV2GetSwapsCurrent
 
-> List&lt;UniswapV2SwapV2DTO&gt; UniswapV2GetSwapsCurrent ()
+> List&lt;UniswapV2SwapDTO&gt; UniswapV2GetSwapsCurrent ()
 
 Swaps (current) 🔥
 
@@ -910,7 +981,7 @@ namespace Example
             try
             {
                 // Swaps (current) 🔥
-                List<UniswapV2SwapV2DTO> result = apiInstance.UniswapV2GetSwapsCurrent();
+                List<UniswapV2SwapDTO> result = apiInstance.UniswapV2GetSwapsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -930,7 +1001,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
+[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
 
 ### Authorization
 
@@ -953,13 +1024,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetTokenDayDataV2sHistorical
+## UniswapV2GetSwapsHistorical
 
-> List&lt;UniswapV2TokenDayDataV2DTO&gt; UniswapV2GetTokenDayDataV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2SwapDTO&gt; UniswapV2GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-TokenDayDataV2s (historical) 🔥
+Swaps (historical) 🔥
 
-Gets tokendaydatav2s.
+Gets swaps.
 
 ### Example
 
@@ -972,7 +1043,93 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetTokenDayDataV2sHistoricalExample
+    public class UniswapV2GetSwapsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Transaction hash plus index in Transaction swap array. (optional) 
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
+
+            try
+            {
+                // Swaps (historical) 🔥
+                List<UniswapV2SwapDTO> result = apiInstance.UniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetSwapsHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
+ **id** | **string**| Transaction hash plus index in Transaction swap array. | [optional] 
+ **pair** | **string**| Reference to pair. | [optional] 
+
+### Return type
+
+[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2GetTokenDayDatasHistorical
+
+> List&lt;UniswapV2TokenDayDataDTO&gt; UniswapV2GetTokenDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+
+TokenDayDatas (historical) 🔥
+
+Gets tokenDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2GetTokenDayDatasHistoricalExample
     {
         public static void Main()
         {
@@ -986,13 +1143,13 @@ namespace Example
 
             try
             {
-                // TokenDayDataV2s (historical) 🔥
-                List<UniswapV2TokenDayDataV2DTO> result = apiInstance.UniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // TokenDayDatas (historical) 🔥
+                List<UniswapV2TokenDayDataDTO> result = apiInstance.UniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTokenDayDataV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTokenDayDatasHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1014,95 +1171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2TokenDayDataV2DTO&gt;**](UniswapV2TokenDayDataV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetTokenV2sHistorical
-
-> List&lt;UniswapV2TokenV2DTO&gt; UniswapV2GetTokenV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
-
-TokenV2s (historical) 🔥
-
-Gets tokenv2s.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV2GetTokenV2sHistoricalExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV2Api(Configuration.Default);
-            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
-            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
-            var id = "id_example";  // string | Token address. (optional) 
-            var symbol = "symbol_example";  // string | Token symbol. (optional) 
-            var name = "name_example";  // string | Token name. (optional) 
-
-            try
-            {
-                // TokenV2s (historical) 🔥
-                List<UniswapV2TokenV2DTO> result = apiInstance.UniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTokenV2sHistorical: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
- **id** | **string**| Token address. | [optional] 
- **symbol** | **string**| Token symbol. | [optional] 
- **name** | **string**| Token name. | [optional] 
-
-### Return type
-
-[**List&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
+[**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -1127,7 +1196,7 @@ No authorization required
 
 ## UniswapV2GetTokensCurrent
 
-> List&lt;UniswapV2TokenV2DTO&gt; UniswapV2GetTokensCurrent ()
+> List&lt;UniswapV2TokenDTO&gt; UniswapV2GetTokensCurrent ()
 
 Tokens (current) 🔥
 
@@ -1154,7 +1223,7 @@ namespace Example
             try
             {
                 // Tokens (current) 🔥
-                List<UniswapV2TokenV2DTO> result = apiInstance.UniswapV2GetTokensCurrent();
+                List<UniswapV2TokenDTO> result = apiInstance.UniswapV2GetTokensCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1174,7 +1243,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
+[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1197,13 +1266,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetTransactionV2sHistorical
+## UniswapV2GetTokensHistorical
 
-> List&lt;UniswapV2TransactionV2DTO&gt; UniswapV2GetTransactionV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2TokenDTO&gt; UniswapV2GetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
 
-TransactionV2s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets transactionv2s.
+Gets tokens.
 
 ### Example
 
@@ -1216,7 +1285,95 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetTransactionV2sHistoricalExample
+    public class UniswapV2GetTokensHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Token address. (optional) 
+            var symbol = "symbol_example";  // string | Token symbol. (optional) 
+            var name = "name_example";  // string | Token name. (optional) 
+
+            try
+            {
+                // Tokens (historical) 🔥
+                List<UniswapV2TokenDTO> result = apiInstance.UniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTokensHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **long?**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime?**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime?**| The end date of timeframe. | [optional] 
+ **id** | **string**| Token address. | [optional] 
+ **symbol** | **string**| Token symbol. | [optional] 
+ **name** | **string**| Token name. | [optional] 
+
+### Return type
+
+[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2GetTransactionsHistorical
+
+> List&lt;UniswapV2TransactionDTO&gt; UniswapV2GetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+
+Transactions (historical) 🔥
+
+Gets transactions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2GetTransactionsHistoricalExample
     {
         public static void Main()
         {
@@ -1230,13 +1387,13 @@ namespace Example
 
             try
             {
-                // TransactionV2s (historical) 🔥
-                List<UniswapV2TransactionV2DTO> result = apiInstance.UniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Transactions (historical) 🔥
+                List<UniswapV2TransactionDTO> result = apiInstance.UniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTransactionV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTransactionsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1258,7 +1415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2TransactionV2DTO&gt;**](UniswapV2TransactionV2DTO.md)
+[**List&lt;UniswapV2TransactionDTO&gt;**](UniswapV2TransactionDTO.md)
 
 ### Authorization
 
@@ -1281,13 +1438,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetUniswapDayDataV2sHistorical
+## UniswapV2GetUniswapDayDatasHistorical
 
-> List&lt;UniswapV2UniswapDayDataV2DTO&gt; UniswapV2GetUniswapDayDataV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2UniswapDayDataDTO&gt; UniswapV2GetUniswapDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 ### Example
 
@@ -1300,7 +1457,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetUniswapDayDataV2sHistoricalExample
+    public class UniswapV2GetUniswapDayDatasHistoricalExample
     {
         public static void Main()
         {
@@ -1314,13 +1471,13 @@ namespace Example
 
             try
             {
-                // UniswapDayDataV2s (historical) 🔥
-                List<UniswapV2UniswapDayDataV2DTO> result = apiInstance.UniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // UniswapDayDatas (historical) 🔥
+                List<UniswapV2UniswapDayDataDTO> result = apiInstance.UniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUniswapDayDataV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUniswapDayDatasHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1342,7 +1499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2UniswapDayDataV2DTO&gt;**](UniswapV2UniswapDayDataV2DTO.md)
+[**List&lt;UniswapV2UniswapDayDataDTO&gt;**](UniswapV2UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -1365,13 +1522,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetUniswapFactoryV2sHistorical
+## UniswapV2GetUniswapFactorysHistorical
 
-> List&lt;UniswapV2UniswapFactoryV2DTO&gt; UniswapV2GetUniswapFactoryV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2UniswapFactoryDTO&gt; UniswapV2GetUniswapFactorysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 ### Example
 
@@ -1384,7 +1541,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetUniswapFactoryV2sHistoricalExample
+    public class UniswapV2GetUniswapFactorysHistoricalExample
     {
         public static void Main()
         {
@@ -1398,13 +1555,13 @@ namespace Example
 
             try
             {
-                // UniswapFactoryV2s (historical) 🔥
-                List<UniswapV2UniswapFactoryV2DTO> result = apiInstance.UniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // UniswapFactorys (historical) 🔥
+                List<UniswapV2UniswapFactoryDTO> result = apiInstance.UniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUniswapFactoryV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUniswapFactorysHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1426,7 +1583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2UniswapFactoryV2DTO&gt;**](UniswapV2UniswapFactoryV2DTO.md)
+[**List&lt;UniswapV2UniswapFactoryDTO&gt;**](UniswapV2UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -1449,13 +1606,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetUserV2sHistorical
+## UniswapV2GetUsersHistorical
 
-> List&lt;UniswapV2UserV2DTO&gt; UniswapV2GetUserV2sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV2UserDTO&gt; UniswapV2GetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 ### Example
 
@@ -1468,7 +1625,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV2GetUserV2sHistoricalExample
+    public class UniswapV2GetUsersHistoricalExample
     {
         public static void Main()
         {
@@ -1482,13 +1639,13 @@ namespace Example
 
             try
             {
-                // UserV2s (historical) 🔥
-                List<UniswapV2UserV2DTO> result = apiInstance.UniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Users (historical) 🔥
+                List<UniswapV2UserDTO> result = apiInstance.UniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUserV2sHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetUsersHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1510,7 +1667,803 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;UniswapV2UserV2DTO&gt;**](UniswapV2UserV2DTO.md)
+[**List&lt;UniswapV2UserDTO&gt;**](UniswapV2UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2LiquidityPositionSnapshotsCurrent
+
+> List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt; UniswapV2LiquidityPositionSnapshotsCurrent ()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2LiquidityPositionSnapshotsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // LiquidityPositionSnapshots (current)
+                List<UniswapV2LiquidityPositionSnapshotDTO> result = apiInstance.UniswapV2LiquidityPositionSnapshotsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2LiquidityPositionSnapshotsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;**](UniswapV2LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2LiquidityPositionsCurrent
+
+> List&lt;UniswapV2LiquidityPositionDTO&gt; UniswapV2LiquidityPositionsCurrent ()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2LiquidityPositionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // LiquidityPositions (current)
+                List<UniswapV2LiquidityPositionDTO> result = apiInstance.UniswapV2LiquidityPositionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2LiquidityPositionsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2LiquidityPositionDTO&gt;**](UniswapV2LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2MintsCurrent
+
+> List&lt;UniswapV2MintDTO&gt; UniswapV2MintsCurrent ()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2MintsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // Mints (current)
+                List<UniswapV2MintDTO> result = apiInstance.UniswapV2MintsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2MintsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2MintDTO&gt;**](UniswapV2MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2PairDayDatasCurrent
+
+> List&lt;UniswapV2PairDayDataDTO&gt; UniswapV2PairDayDatasCurrent ()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2PairDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // PairDayDatas (current)
+                List<UniswapV2PairDayDataDTO> result = apiInstance.UniswapV2PairDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2PairDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2PairDayDataDTO&gt;**](UniswapV2PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2PairHourDatasCurrent
+
+> List&lt;UniswapV2PairHourDataDTO&gt; UniswapV2PairHourDatasCurrent ()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2PairHourDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // PairHourDatas (current)
+                List<UniswapV2PairHourDataDTO> result = apiInstance.UniswapV2PairHourDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2PairHourDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2PairHourDataDTO&gt;**](UniswapV2PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2PairsCurrent
+
+> List&lt;UniswapV2PairDTO&gt; UniswapV2PairsCurrent (string id = null)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2PairsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+            var id = "id_example";  // string | Pair contract address. (optional) 
+
+            try
+            {
+                // Pairs (current)
+                List<UniswapV2PairDTO> result = apiInstance.UniswapV2PairsCurrent(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2PairsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Pair contract address. | [optional] 
+
+### Return type
+
+[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2TokenDayDatasCurrent
+
+> List&lt;UniswapV2TokenDayDataDTO&gt; UniswapV2TokenDayDatasCurrent ()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2TokenDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // TokenDayDatas (current)
+                List<UniswapV2TokenDayDataDTO> result = apiInstance.UniswapV2TokenDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2TokenDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2TransactionsCurrent
+
+> List&lt;UniswapV2TransactionDTO&gt; UniswapV2TransactionsCurrent ()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2TransactionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // Transactions (current)
+                List<UniswapV2TransactionDTO> result = apiInstance.UniswapV2TransactionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2TransactionsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2TransactionDTO&gt;**](UniswapV2TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2UniswapDayDatasCurrent
+
+> List&lt;UniswapV2UniswapDayDataDTO&gt; UniswapV2UniswapDayDatasCurrent ()
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2UniswapDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // UniswapDayDatas (current)
+                List<UniswapV2UniswapDayDataDTO> result = apiInstance.UniswapV2UniswapDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2UniswapDayDatasCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2UniswapDayDataDTO&gt;**](UniswapV2UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2UniswapFactorysCurrent
+
+> List&lt;UniswapV2UniswapFactoryDTO&gt; UniswapV2UniswapFactorysCurrent ()
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2UniswapFactorysCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // UniswapFactorys (current)
+                List<UniswapV2UniswapFactoryDTO> result = apiInstance.UniswapV2UniswapFactorysCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2UniswapFactorysCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2UniswapFactoryDTO&gt;**](UniswapV2UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2UsersCurrent
+
+> List&lt;UniswapV2UserDTO&gt; UniswapV2UsersCurrent ()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2UsersCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // Users (current)
+                List<UniswapV2UserDTO> result = apiInstance.UniswapV2UsersCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2UsersCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2UserDTO&gt;**](UniswapV2UserDTO.md)
 
 ### Authorization
 

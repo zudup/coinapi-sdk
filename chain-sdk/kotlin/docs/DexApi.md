@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
 [**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
 [**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
@@ -13,9 +15,104 @@ Method | HTTP request | Description
 [**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
 [**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
 [**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawrequests/historical | WithdrawRequests (historical) 🔥
+[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
 [**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dexOrdersCurrent**](DexApi.md#dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
+[**dexPricesCurrent**](DexApi.md#dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
+[**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
+[**dexStatssCurrent**](DexApi.md#dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexTokensCurrent**](DexApi.md#dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
+[**dexTradesCurrent**](DexApi.md#dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
+[**dexUsersCurrent**](DexApi.md#dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
+[**dexWithdrawRequestsCurrent**](DexApi.md#dexWithdrawRequestsCurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
+[**dexWithdrawsCurrent**](DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
+
+<a name="dexBatchsCurrent"></a>
+# **dexBatchsCurrent**
+> kotlin.collections.List&lt;DexBatchDTO&gt; dexBatchsCurrent()
+
+Batchs (current)
+
+Gets batchs.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexBatchsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexBatchsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexBatchsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexDepositsCurrent"></a>
+# **dexDepositsCurrent**
+> kotlin.collections.List&lt;DexDepositDTO&gt; dexDepositsCurrent()
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexDepositDTO> = apiInstance.dexDepositsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexDepositsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexDepositsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="dexGetBatchsHistorical"></a>
 # **dexGetBatchsHistorical**
@@ -534,7 +631,7 @@ No authorization required
 
 WithdrawRequests (historical) 🔥
 
-Gets withdrawrequests.
+Gets withdrawRequests.
 
 ### Example
 ```kotlin
@@ -628,6 +725,393 @@ Name | Type | Description  | Notes
  **endDate** | **java.time.OffsetDateTime**|  | [optional]
  **id** | **kotlin.String**|  | [optional]
  **user** | **kotlin.String**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexOrdersCurrent"></a>
+# **dexOrdersCurrent**
+> kotlin.collections.List&lt;DexOrderDTO&gt; dexOrdersCurrent()
+
+Orders (current)
+
+Gets orders.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexOrderDTO> = apiInstance.dexOrdersCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexOrdersCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexOrdersCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexPricesCurrent"></a>
+# **dexPricesCurrent**
+> kotlin.collections.List&lt;DexPriceDTO&gt; dexPricesCurrent()
+
+Prices (current)
+
+Gets prices.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexPriceDTO> = apiInstance.dexPricesCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexPricesCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexPricesCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexSolutionsCurrent"></a>
+# **dexSolutionsCurrent**
+> kotlin.collections.List&lt;DexSolutionDTO&gt; dexSolutionsCurrent()
+
+Solutions (current)
+
+Gets solutions.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexSolutionDTO> = apiInstance.dexSolutionsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexSolutionsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexSolutionsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexStatssCurrent"></a>
+# **dexStatssCurrent**
+> kotlin.collections.List&lt;DexStatsDTO&gt; dexStatssCurrent()
+
+Statss (current)
+
+Gets statss.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexStatssCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexStatssCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexStatssCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexTokensCurrent"></a>
+# **dexTokensCurrent**
+> kotlin.collections.List&lt;DexTokenDTO&gt; dexTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexTokenDTO> = apiInstance.dexTokensCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexTokensCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexTokensCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexTradesCurrent"></a>
+# **dexTradesCurrent**
+> kotlin.collections.List&lt;DexTradeDTO&gt; dexTradesCurrent()
+
+Trades (current)
+
+Gets trades.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexTradeDTO> = apiInstance.dexTradesCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexTradesCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexTradesCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexUsersCurrent"></a>
+# **dexUsersCurrent**
+> kotlin.collections.List&lt;DexUserDTO&gt; dexUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexUserDTO> = apiInstance.dexUsersCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexUsersCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexUsersCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexUserDTO&gt;**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexWithdrawRequestsCurrent"></a>
+# **dexWithdrawRequestsCurrent**
+> kotlin.collections.List&lt;DexWithdrawRequestDTO&gt; dexWithdrawRequestsCurrent()
+
+WithdrawRequests (current)
+
+Gets withdrawRequests.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexWithdrawRequestDTO> = apiInstance.dexWithdrawRequestsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexWithdrawRequestsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexWithdrawRequestsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**kotlin.collections.List&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexWithdrawsCurrent"></a>
+# **dexWithdrawsCurrent**
+> kotlin.collections.List&lt;DexWithdrawDTO&gt; dexWithdrawsCurrent()
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+try {
+    val result : kotlin.collections.List<DexWithdrawDTO> = apiInstance.dexWithdrawsCurrent()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexWithdrawsCurrent")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexWithdrawsCurrent")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

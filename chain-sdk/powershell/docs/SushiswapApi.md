@@ -6,25 +6,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Invoke-CurveGetExchangesCurrent**](SushiswapApi.md#Invoke-CurveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**Invoke-DexGetTradesCurrent**](SushiswapApi.md#Invoke-DexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**Invoke-SushiswapBundlesCurrent**](SushiswapApi.md#Invoke-SushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**Invoke-SushiswapBurnsCurrent**](SushiswapApi.md#Invoke-SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**Invoke-SushiswapDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**Invoke-SushiswapFactorysCurrent**](SushiswapApi.md#Invoke-SushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**Invoke-SushiswapGetBundlesHistorical**](SushiswapApi.md#Invoke-SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**Invoke-SushiswapGetBurnsHistorical**](SushiswapApi.md#Invoke-SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**Invoke-SushiswapGetDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**Invoke-SushiswapGetDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**Invoke-SushiswapGetFactorysHistorical**](SushiswapApi.md#Invoke-SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**Invoke-SushiswapGetHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**Invoke-SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**Invoke-SushiswapGetHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**Invoke-SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**Invoke-SushiswapGetMintsHistorical**](SushiswapApi.md#Invoke-SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**Invoke-SushiswapGetPairsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**Invoke-SushiswapGetSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**Invoke-SushiswapGetTokensCurrent**](SushiswapApi.md#Invoke-SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**Invoke-SushiswapGetTransactionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**Invoke-SushiswapGetUsersHistorical**](SushiswapApi.md#Invoke-SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**Invoke-SushiswapHourDatasCurrent**](SushiswapApi.md#Invoke-SushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**Invoke-SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**Invoke-SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**Invoke-SushiswapMintsCurrent**](SushiswapApi.md#Invoke-SushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**Invoke-SushiswapPairDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**Invoke-SushiswapPairHourDatasCurrent**](SushiswapApi.md#Invoke-SushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**Invoke-SushiswapPairsCurrent**](SushiswapApi.md#Invoke-SushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**Invoke-SushiswapSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**Invoke-SushiswapTokenDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**Invoke-SushiswapTokensCurrent**](SushiswapApi.md#Invoke-SushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**Invoke-SushiswapTransactionsCurrent**](SushiswapApi.md#Invoke-SushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**Invoke-SushiswapUsersCurrent**](SushiswapApi.md#Invoke-SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 <a name="Invoke-CurveGetExchangesCurrent"></a>
@@ -91,6 +105,158 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**DexTradeDTO[]**](DexTradeDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapBundlesCurrent"></a>
+# **Invoke-SushiswapBundlesCurrent**
+> SushiswapBundleDTO[] Invoke-SushiswapBundlesCurrent<br>
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+```powershell
+
+# Bundles (current)
+try {
+    $Result = Invoke-SushiswapBundlesCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapBundlesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapBundleDTO[]**](SushiswapBundleDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapBurnsCurrent"></a>
+# **Invoke-SushiswapBurnsCurrent**
+> SushiswapBurnDTO[] Invoke-SushiswapBurnsCurrent<br>
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```powershell
+
+# Burns (current)
+try {
+    $Result = Invoke-SushiswapBurnsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapBurnsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapBurnDTO[]**](SushiswapBurnDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapDayDatasCurrent"></a>
+# **Invoke-SushiswapDayDatasCurrent**
+> SushiswapDayDataDTO[] Invoke-SushiswapDayDatasCurrent<br>
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+```powershell
+
+# DayDatas (current)
+try {
+    $Result = Invoke-SushiswapDayDatasCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapDayDataDTO[]**](SushiswapDayDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapFactorysCurrent"></a>
+# **Invoke-SushiswapFactorysCurrent**
+> SushiswapFactoryDTO[] Invoke-SushiswapFactorysCurrent<br>
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```powershell
+
+# Factorys (current)
+try {
+    $Result = Invoke-SushiswapFactorysCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapFactorysCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapFactoryDTO[]**](SushiswapFactoryDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -227,7 +393,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 ```powershell
@@ -337,7 +503,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 ```powershell
@@ -394,7 +560,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```powershell
@@ -455,7 +621,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 ```powershell
@@ -575,7 +741,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 ```powershell
@@ -637,7 +803,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 ```powershell
@@ -785,44 +951,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetSwapsCurrent"></a>
-# **Invoke-SushiswapGetSwapsCurrent**
-> SushiswapSwapDTO[] Invoke-SushiswapGetSwapsCurrent<br>
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```powershell
-
-# Swaps (current) 🔥
-try {
-    $Result = Invoke-SushiswapGetSwapsCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetSwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="Invoke-SushiswapGetSwapsHistorical"></a>
 # **Invoke-SushiswapGetSwapsHistorical**
 > SushiswapSwapDTO[] Invoke-SushiswapGetSwapsHistorical<br>
@@ -892,7 +1020,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 ```powershell
@@ -924,44 +1052,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SushiswapTokenDayDataDTO[]**](SushiswapTokenDayDataDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-SushiswapGetTokensCurrent"></a>
-# **Invoke-SushiswapGetTokensCurrent**
-> SushiswapTokenDTO[] Invoke-SushiswapGetTokensCurrent<br>
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```powershell
-
-# Tokens (current) 🔥
-try {
-    $Result = Invoke-SushiswapGetTokensCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1129,6 +1219,472 @@ Name | Type | Description  | Notes
  **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
  **Id** | **String**| User address. | [optional] 
+
+### Return type
+
+[**SushiswapUserDTO[]**](SushiswapUserDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapHourDatasCurrent"></a>
+# **Invoke-SushiswapHourDatasCurrent**
+> SushiswapHourDataDTO[] Invoke-SushiswapHourDatasCurrent<br>
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+```powershell
+
+# HourDatas (current)
+try {
+    $Result = Invoke-SushiswapHourDatasCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapHourDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapHourDataDTO[]**](SushiswapHourDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapLiquidityPositionSnapshotsCurrent"></a>
+# **Invoke-SushiswapLiquidityPositionSnapshotsCurrent**
+> SushiswapLiquidityPositionSnapshotDTO[] Invoke-SushiswapLiquidityPositionSnapshotsCurrent<br>
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```powershell
+
+# LiquidityPositionSnapshots (current)
+try {
+    $Result = Invoke-SushiswapLiquidityPositionSnapshotsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapLiquidityPositionSnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapLiquidityPositionSnapshotDTO[]**](SushiswapLiquidityPositionSnapshotDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapLiquidityPositionsCurrent"></a>
+# **Invoke-SushiswapLiquidityPositionsCurrent**
+> SushiswapLiquidityPositionDTO[] Invoke-SushiswapLiquidityPositionsCurrent<br>
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```powershell
+
+# LiquidityPositions (current)
+try {
+    $Result = Invoke-SushiswapLiquidityPositionsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapLiquidityPositionsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapLiquidityPositionDTO[]**](SushiswapLiquidityPositionDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapMintsCurrent"></a>
+# **Invoke-SushiswapMintsCurrent**
+> SushiswapMintDTO[] Invoke-SushiswapMintsCurrent<br>
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```powershell
+
+# Mints (current)
+try {
+    $Result = Invoke-SushiswapMintsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapMintsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapMintDTO[]**](SushiswapMintDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapPairDayDatasCurrent"></a>
+# **Invoke-SushiswapPairDayDatasCurrent**
+> SushiswapPairDayDataDTO[] Invoke-SushiswapPairDayDatasCurrent<br>
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```powershell
+
+# PairDayDatas (current)
+try {
+    $Result = Invoke-SushiswapPairDayDatasCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapPairDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapPairDayDataDTO[]**](SushiswapPairDayDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapPairHourDatasCurrent"></a>
+# **Invoke-SushiswapPairHourDatasCurrent**
+> SushiswapPairHourDataDTO[] Invoke-SushiswapPairHourDatasCurrent<br>
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```powershell
+
+# PairHourDatas (current)
+try {
+    $Result = Invoke-SushiswapPairHourDatasCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapPairHourDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapPairHourDataDTO[]**](SushiswapPairHourDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapPairsCurrent"></a>
+# **Invoke-SushiswapPairsCurrent**
+> SushiswapPairDTO[] Invoke-SushiswapPairsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```powershell
+$Id = "MyId" # String | Pair contract address. (optional)
+
+# Pairs (current)
+try {
+    $Result = Invoke-SushiswapPairsCurrent -Id $Id
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapPairsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| Pair contract address. | [optional] 
+
+### Return type
+
+[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapSwapsCurrent"></a>
+# **Invoke-SushiswapSwapsCurrent**
+> SushiswapSwapDTO[] Invoke-SushiswapSwapsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```powershell
+$Pair = "MyPair" # String | Reference to pair. (optional)
+
+# Swaps (current)
+try {
+    $Result = Invoke-SushiswapSwapsCurrent -Pair $Pair
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapSwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**SushiswapSwapDTO[]**](SushiswapSwapDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapTokenDayDatasCurrent"></a>
+# **Invoke-SushiswapTokenDayDatasCurrent**
+> SushiswapTokenDayDataDTO[] Invoke-SushiswapTokenDayDatasCurrent<br>
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```powershell
+
+# TokenDayDatas (current)
+try {
+    $Result = Invoke-SushiswapTokenDayDatasCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapTokenDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapTokenDayDataDTO[]**](SushiswapTokenDayDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapTokensCurrent"></a>
+# **Invoke-SushiswapTokensCurrent**
+> SushiswapTokenDTO[] Invoke-SushiswapTokensCurrent<br>
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```powershell
+
+# Tokens (current)
+try {
+    $Result = Invoke-SushiswapTokensCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapTokenDTO[]**](SushiswapTokenDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapTransactionsCurrent"></a>
+# **Invoke-SushiswapTransactionsCurrent**
+> SushiswapTransactionDTO[] Invoke-SushiswapTransactionsCurrent<br>
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```powershell
+
+# Transactions (current)
+try {
+    $Result = Invoke-SushiswapTransactionsCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapTransactionsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SushiswapTransactionDTO[]**](SushiswapTransactionDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-SushiswapUsersCurrent"></a>
+# **Invoke-SushiswapUsersCurrent**
+> SushiswapUserDTO[] Invoke-SushiswapUsersCurrent<br>
+
+Users (current)
+
+Gets users.
+
+### Example
+```powershell
+
+# Users (current)
+try {
+    $Result = Invoke-SushiswapUsersCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-SushiswapUsersCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

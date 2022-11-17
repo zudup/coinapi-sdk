@@ -9,32 +9,123 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV2GetBundleV2sHistorical**](UniswapV2Api.md#uniswapv2getbundlev2shistorical) | **GET** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**uniswapV2GetBurnV2sHistorical**](UniswapV2Api.md#uniswapv2getburnv2shistorical) | **GET** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionSnapshotV2sHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionsnapshotv2shistorical) | **GET** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionV2sHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionv2shistorical) | **GET** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**uniswapV2GetMintV2sHistorical**](UniswapV2Api.md#uniswapv2getmintv2shistorical) | **GET** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**uniswapV2GetPairDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatav2shistorical) | **GET** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**uniswapV2GetPairHourDataV2sHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatav2shistorical) | **GET** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**uniswapV2GetPairV2sHistorical**](UniswapV2Api.md#uniswapv2getpairv2shistorical) | **GET** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**uniswapV2BundlesCurrent**](UniswapV2Api.md#uniswapv2bundlescurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**uniswapV2BurnsCurrent**](UniswapV2Api.md#uniswapv2burnscurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
+[**uniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapv2getbundleshistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**uniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapv2getburnshistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionsnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatashistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatashistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapv2getpairshistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapV2sHistorical**](UniswapV2Api.md#uniswapv2getswapv2shistorical) | **GET** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**uniswapV2GetTokenDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatav2shistorical) | **GET** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**uniswapV2GetTokenV2sHistorical**](UniswapV2Api.md#uniswapv2gettokenv2shistorical) | **GET** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatashistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**uniswapV2GetTransactionV2sHistorical**](UniswapV2Api.md#uniswapv2gettransactionv2shistorical) | **GET** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**uniswapV2GetUniswapDayDataV2sHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatav2shistorical) | **GET** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**uniswapV2GetUniswapFactoryV2sHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactoryv2shistorical) | **GET** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**uniswapV2GetUserV2sHistorical**](UniswapV2Api.md#uniswapv2getuserv2shistorical) | **GET** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatashistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactoryshistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionsnapshotscurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionscurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapv2mintscurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
+[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapv2pairdaydatascurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapv2pairhourdatascurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapv2pairscurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapv2tokendaydatascurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapv2transactionscurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatascurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoryscurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapv2userscurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
-# **uniswapV2GetBundleV2sHistorical**
-> List<UniswapV2BundleV2DTO> uniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2BundlesCurrent**
+> List<UniswapV2BundleDTO> uniswapV2BundlesCurrent()
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2BundlesCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2BundlesCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2BundleDTO>**](UniswapV2BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2BurnsCurrent**
+> List<UniswapV2BurnDTO> uniswapV2BurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2BurnsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2BurnsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2BurnDTO>**](UniswapV2BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetBundlesHistorical**
+> List<UniswapV2BundleDTO> uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 ```dart
@@ -48,10 +139,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Constant 1.
 
 try {
-    final result = api_instance.uniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetBundleV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetBundlesHistorical: $e\n');
 }
 ```
 
@@ -67,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2BundleV2DTO>**](UniswapV2BundleV2DTO.md)
+[**List<UniswapV2BundleDTO>**](UniswapV2BundleDTO.md)
 
 ### Authorization
 
@@ -80,12 +171,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetBurnV2sHistorical**
-> List<UniswapV2BurnV2DTO> uniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+# **uniswapV2GetBurnsHistorical**
+> List<UniswapV2BurnDTO> uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 ```dart
@@ -100,10 +191,10 @@ final id = id_example; // String | Transaction hash plus index in the transactio
 final pair = pair_example; // String | Reference to pair.
 
 try {
-    final result = api_instance.uniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    final result = api_instance.uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetBurnV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetBurnsHistorical: $e\n');
 }
 ```
 
@@ -120,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2BurnV2DTO>**](UniswapV2BurnV2DTO.md)
+[**List<UniswapV2BurnDTO>**](UniswapV2BurnDTO.md)
 
 ### Authorization
 
@@ -133,12 +224,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetLiquidityPositionSnapshotV2sHistorical**
-> List<UniswapV2LiquidityPositionSnapshotV2DTO> uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
+# **uniswapV2GetLiquidityPositionSnapshotsHistorical**
+> List<UniswapV2LiquidityPositionSnapshotDTO> uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```dart
@@ -154,10 +245,10 @@ final user = user_example; // String |
 final pair = pair_example; // String | 
 
 try {
-    final result = api_instance.uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+    final result = api_instance.uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionSnapshotV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionSnapshotsHistorical: $e\n');
 }
 ```
 
@@ -175,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2LiquidityPositionSnapshotV2DTO>**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
+[**List<UniswapV2LiquidityPositionSnapshotDTO>**](UniswapV2LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -188,12 +279,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetLiquidityPositionV2sHistorical**
-> List<UniswapV2LiquidityPositionV2DTO> uniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
+# **uniswapV2GetLiquidityPositionsHistorical**
+> List<UniswapV2LiquidityPositionDTO> uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 ```dart
@@ -209,10 +300,10 @@ final user = user_example; // String | Reference to user.
 final pair = pair_example; // String | Reference to the pair liquidity is being provided on.
 
 try {
-    final result = api_instance.uniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+    final result = api_instance.uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionsHistorical: $e\n');
 }
 ```
 
@@ -230,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2LiquidityPositionV2DTO>**](UniswapV2LiquidityPositionV2DTO.md)
+[**List<UniswapV2LiquidityPositionDTO>**](UniswapV2LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -243,12 +334,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetMintV2sHistorical**
-> List<UniswapV2MintV2DTO> uniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+# **uniswapV2GetMintsHistorical**
+> List<UniswapV2MintDTO> uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 ```dart
@@ -263,10 +354,10 @@ final id = id_example; // String | Transaction hash plus index in the transactio
 final pair = pair_example; // String | Reference to pair.
 
 try {
-    final result = api_instance.uniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    final result = api_instance.uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetMintV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetMintsHistorical: $e\n');
 }
 ```
 
@@ -283,7 +374,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2MintV2DTO>**](UniswapV2MintV2DTO.md)
+[**List<UniswapV2MintDTO>**](UniswapV2MintDTO.md)
 
 ### Authorization
 
@@ -296,12 +387,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPairDayDataV2sHistorical**
-> List<UniswapV2PairDayDataV2DTO> uniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+# **uniswapV2GetPairDayDatasHistorical**
+> List<UniswapV2PairDayDataDTO> uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 ```dart
@@ -317,10 +408,10 @@ final token0 = token0_example; // String | Reference to token0.
 final token1 = token1_example; // String | Reference to token1.
 
 try {
-    final result = api_instance.uniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    final result = api_instance.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPairDayDataV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPairDayDatasHistorical: $e\n');
 }
 ```
 
@@ -338,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2PairDayDataV2DTO>**](UniswapV2PairDayDataV2DTO.md)
+[**List<UniswapV2PairDayDataDTO>**](UniswapV2PairDayDataDTO.md)
 
 ### Authorization
 
@@ -351,12 +442,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPairHourDataV2sHistorical**
-> List<UniswapV2PairHourDataV2DTO> uniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+# **uniswapV2GetPairHourDatasHistorical**
+> List<UniswapV2PairHourDataDTO> uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 ```dart
@@ -371,10 +462,10 @@ final id = id_example; // String |
 final pair = pair_example; // String | Address for pair contract.
 
 try {
-    final result = api_instance.uniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    final result = api_instance.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPairHourDataV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPairHourDatasHistorical: $e\n');
 }
 ```
 
@@ -391,7 +482,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2PairHourDataV2DTO>**](UniswapV2PairHourDataV2DTO.md)
+[**List<UniswapV2PairHourDataDTO>**](UniswapV2PairHourDataDTO.md)
 
 ### Authorization
 
@@ -404,12 +495,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPairV2sHistorical**
-> List<UniswapV2PairV2DTO> uniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+# **uniswapV2GetPairsHistorical**
+> List<UniswapV2PairDTO> uniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 ```dart
@@ -425,10 +516,10 @@ final token0 = token0_example; // String | Reference to token0 as stored in pair
 final token1 = token1_example; // String | Reference to token1 as stored in pair contract.
 
 try {
-    final result = api_instance.uniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    final result = api_instance.uniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPairV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPairsHistorical: $e\n');
 }
 ```
 
@@ -446,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2PairV2DTO>**](UniswapV2PairV2DTO.md)
+[**List<UniswapV2PairDTO>**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -460,7 +551,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uniswapV2GetPoolsCurrent**
-> List<UniswapV2PairV2DTO> uniswapV2GetPoolsCurrent(filterPoolId)
+> List<UniswapV2PairDTO> uniswapV2GetPoolsCurrent(filterPoolId)
 
 Pools (current) 🔥
 
@@ -489,60 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2PairV2DTO>**](UniswapV2PairV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV2GetSwapV2sHistorical**
-> List<UniswapV2SwapV2DTO> uniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair)
-
-SwapV2s (historical) 🔥
-
-Gets swapv2s.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = UniswapV2Api();
-final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final id = id_example; // String | Transaction hash plus index in Transaction swap array.
-final pair = pair_example; // String | Reference to pair.
-
-try {
-    final result = api_instance.uniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-    print(result);
-} catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetSwapV2sHistorical: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime**| The end date of timeframe. | [optional] 
- **id** | **String**| Transaction hash plus index in Transaction swap array. | [optional] 
- **pair** | **String**| Reference to pair. | [optional] 
-
-### Return type
-
-[**List<UniswapV2SwapV2DTO>**](UniswapV2SwapV2DTO.md)
+[**List<UniswapV2PairDTO>**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -556,7 +594,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uniswapV2GetSwapsCurrent**
-> List<UniswapV2SwapV2DTO> uniswapV2GetSwapsCurrent()
+> List<UniswapV2SwapDTO> uniswapV2GetSwapsCurrent()
 
 Swaps (current) 🔥
 
@@ -581,7 +619,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List<UniswapV2SwapV2DTO>**](UniswapV2SwapV2DTO.md)
+[**List<UniswapV2SwapDTO>**](UniswapV2SwapDTO.md)
 
 ### Authorization
 
@@ -594,12 +632,65 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetTokenDayDataV2sHistorical**
-> List<UniswapV2TokenDayDataV2DTO> uniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetSwapsHistorical**
+> List<UniswapV2SwapDTO> uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-TokenDayDataV2s (historical) 🔥
+Swaps (historical) 🔥
 
-Gets tokendaydatav2s.
+Gets swaps.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Transaction hash plus index in Transaction swap array.
+final pair = pair_example; // String | Reference to pair.
+
+try {
+    final result = api_instance.uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetSwapsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Transaction hash plus index in Transaction swap array. | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**List<UniswapV2SwapDTO>**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetTokenDayDatasHistorical**
+> List<UniswapV2TokenDayDataDTO> uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+
+TokenDayDatas (historical) 🔥
+
+Gets tokenDayDatas.
 
 ### Example
 ```dart
@@ -613,10 +704,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 
 try {
-    final result = api_instance.uniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetTokenDayDataV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokenDayDatasHistorical: $e\n');
 }
 ```
 
@@ -632,62 +723,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2TokenDayDataV2DTO>**](UniswapV2TokenDayDataV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV2GetTokenV2sHistorical**
-> List<UniswapV2TokenV2DTO> uniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
-
-TokenV2s (historical) 🔥
-
-Gets tokenv2s.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = UniswapV2Api();
-final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final id = id_example; // String | Token address.
-final symbol = symbol_example; // String | Token symbol.
-final name = name_example; // String | Token name.
-
-try {
-    final result = api_instance.uniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
-    print(result);
-} catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetTokenV2sHistorical: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **DateTime**| The end date of timeframe. | [optional] 
- **id** | **String**| Token address. | [optional] 
- **symbol** | **String**| Token symbol. | [optional] 
- **name** | **String**| Token name. | [optional] 
-
-### Return type
-
-[**List<UniswapV2TokenV2DTO>**](UniswapV2TokenV2DTO.md)
+[**List<UniswapV2TokenDayDataDTO>**](UniswapV2TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -701,7 +737,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uniswapV2GetTokensCurrent**
-> List<UniswapV2TokenV2DTO> uniswapV2GetTokensCurrent()
+> List<UniswapV2TokenDTO> uniswapV2GetTokensCurrent()
 
 Tokens (current) 🔥
 
@@ -726,7 +762,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List<UniswapV2TokenV2DTO>**](UniswapV2TokenV2DTO.md)
+[**List<UniswapV2TokenDTO>**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -739,12 +775,67 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetTransactionV2sHistorical**
-> List<UniswapV2TransactionV2DTO> uniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetTokensHistorical**
+> List<UniswapV2TokenDTO> uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
-TransactionV2s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets transactionv2s.
+Gets tokens.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Token address.
+final symbol = symbol_example; // String | Token symbol.
+final name = name_example; // String | Token name.
+
+try {
+    final result = api_instance.uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokensHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Token address. | [optional] 
+ **symbol** | **String**| Token symbol. | [optional] 
+ **name** | **String**| Token name. | [optional] 
+
+### Return type
+
+[**List<UniswapV2TokenDTO>**](UniswapV2TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetTransactionsHistorical**
+> List<UniswapV2TransactionDTO> uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
+
+Transactions (historical) 🔥
+
+Gets transactions.
 
 ### Example
 ```dart
@@ -758,10 +849,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Ethereum transaction hash.
 
 try {
-    final result = api_instance.uniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetTransactionV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTransactionsHistorical: $e\n');
 }
 ```
 
@@ -777,7 +868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2TransactionV2DTO>**](UniswapV2TransactionV2DTO.md)
+[**List<UniswapV2TransactionDTO>**](UniswapV2TransactionDTO.md)
 
 ### Authorization
 
@@ -790,12 +881,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetUniswapDayDataV2sHistorical**
-> List<UniswapV2UniswapDayDataV2DTO> uniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetUniswapDayDatasHistorical**
+> List<UniswapV2UniswapDayDataDTO> uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 ### Example
 ```dart
@@ -809,10 +900,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Unix timestamp for start of day / 86400 giving a unique day index.
 
 try {
-    final result = api_instance.uniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDataV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDatasHistorical: $e\n');
 }
 ```
 
@@ -828,7 +919,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2UniswapDayDataV2DTO>**](UniswapV2UniswapDayDataV2DTO.md)
+[**List<UniswapV2UniswapDayDataDTO>**](UniswapV2UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -841,12 +932,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetUniswapFactoryV2sHistorical**
-> List<UniswapV2UniswapFactoryV2DTO> uniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetUniswapFactorysHistorical**
+> List<UniswapV2UniswapFactoryDTO> uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 ### Example
 ```dart
@@ -860,10 +951,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Factory address.
 
 try {
-    final result = api_instance.uniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapFactoryV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapFactorysHistorical: $e\n');
 }
 ```
 
@@ -879,7 +970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2UniswapFactoryV2DTO>**](UniswapV2UniswapFactoryV2DTO.md)
+[**List<UniswapV2UniswapFactoryDTO>**](UniswapV2UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -892,12 +983,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetUserV2sHistorical**
-> List<UniswapV2UserV2DTO> uniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetUsersHistorical**
+> List<UniswapV2UserDTO> uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 ### Example
 ```dart
@@ -911,10 +1002,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | User address.
 
 try {
-    final result = api_instance.uniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetUserV2sHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUsersHistorical: $e\n');
 }
 ```
 
@@ -930,7 +1021,440 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<UniswapV2UserV2DTO>**](UniswapV2UserV2DTO.md)
+[**List<UniswapV2UserDTO>**](UniswapV2UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2LiquidityPositionSnapshotsCurrent**
+> List<UniswapV2LiquidityPositionSnapshotDTO> uniswapV2LiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2LiquidityPositionSnapshotsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2LiquidityPositionSnapshotsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2LiquidityPositionSnapshotDTO>**](UniswapV2LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2LiquidityPositionsCurrent**
+> List<UniswapV2LiquidityPositionDTO> uniswapV2LiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2LiquidityPositionsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2LiquidityPositionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2LiquidityPositionDTO>**](UniswapV2LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2MintsCurrent**
+> List<UniswapV2MintDTO> uniswapV2MintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2MintsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2MintsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2MintDTO>**](UniswapV2MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2PairDayDatasCurrent**
+> List<UniswapV2PairDayDataDTO> uniswapV2PairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2PairDayDatasCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2PairDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2PairDayDataDTO>**](UniswapV2PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2PairHourDatasCurrent**
+> List<UniswapV2PairHourDataDTO> uniswapV2PairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2PairHourDatasCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2PairHourDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2PairHourDataDTO>**](UniswapV2PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2PairsCurrent**
+> List<UniswapV2PairDTO> uniswapV2PairsCurrent(id)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+final id = id_example; // String | Pair contract address.
+
+try {
+    final result = api_instance.uniswapV2PairsCurrent(id);
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2PairsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pair contract address. | [optional] 
+
+### Return type
+
+[**List<UniswapV2PairDTO>**](UniswapV2PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2TokenDayDatasCurrent**
+> List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2TokenDayDatasCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2TokenDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2TokenDayDataDTO>**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2TransactionsCurrent**
+> List<UniswapV2TransactionDTO> uniswapV2TransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2TransactionsCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2TransactionsCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2TransactionDTO>**](UniswapV2TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2UniswapDayDatasCurrent**
+> List<UniswapV2UniswapDayDataDTO> uniswapV2UniswapDayDatasCurrent()
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2UniswapDayDatasCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2UniswapDayDatasCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2UniswapDayDataDTO>**](UniswapV2UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2UniswapFactorysCurrent**
+> List<UniswapV2UniswapFactoryDTO> uniswapV2UniswapFactorysCurrent()
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2UniswapFactorysCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2UniswapFactorysCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2UniswapFactoryDTO>**](UniswapV2UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2UsersCurrent**
+> List<UniswapV2UserDTO> uniswapV2UsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2UsersCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2UsersCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2UserDTO>**](UniswapV2UserDTO.md)
 
 ### Authorization
 

@@ -131,4 +131,64 @@ class CowApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for cowOrdersCurrent
+     *
+     * Orders (current).
+     *
+     */
+    public function testCowOrdersCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowSettlementsCurrent
+     *
+     * Settlements (current).
+     *
+     */
+    public function testCowSettlementsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowTokensCurrent
+     *
+     * Tokens (current).
+     *
+     */
+    public function testCowTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowTradesCurrent
+     *
+     * Trades (current).
+     *
+     */
+    public function testCowTradesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowUsersCurrent
+     *
+     * Users (current).
+     *
+     */
+    public function testCowUsersCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

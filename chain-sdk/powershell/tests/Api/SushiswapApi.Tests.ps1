@@ -23,6 +23,38 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
         }
     }
 
+    Context 'Invoke-SushiswapBundlesCurrent' {
+        It 'Test Invoke-SushiswapBundlesCurrent' {
+            #$TestResult = Invoke-SushiswapBundlesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapBurnsCurrent' {
+        It 'Test Invoke-SushiswapBurnsCurrent' {
+            #$TestResult = Invoke-SushiswapBurnsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapDayDatasCurrent' {
+        It 'Test Invoke-SushiswapDayDatasCurrent' {
+            #$TestResult = Invoke-SushiswapDayDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapFactorysCurrent' {
+        It 'Test Invoke-SushiswapFactorysCurrent' {
+            #$TestResult = Invoke-SushiswapFactorysCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SushiswapGetBundlesHistorical' {
         It 'Test Invoke-SushiswapGetBundlesHistorical' {
             #$TestResult = Invoke-SushiswapGetBundlesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
@@ -119,14 +151,6 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
         }
     }
 
-    Context 'Invoke-SushiswapGetSwapsCurrent' {
-        It 'Test Invoke-SushiswapGetSwapsCurrent' {
-            #$TestResult = Invoke-SushiswapGetSwapsCurrent
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-SushiswapGetSwapsHistorical' {
         It 'Test Invoke-SushiswapGetSwapsHistorical' {
             #$TestResult = Invoke-SushiswapGetSwapsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
@@ -138,14 +162,6 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
     Context 'Invoke-SushiswapGetTokenDayDatasHistorical' {
         It 'Test Invoke-SushiswapGetTokenDayDatasHistorical' {
             #$TestResult = Invoke-SushiswapGetTokenDayDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-SushiswapGetTokensCurrent' {
-        It 'Test Invoke-SushiswapGetTokensCurrent' {
-            #$TestResult = Invoke-SushiswapGetTokensCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -170,6 +186,102 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
     Context 'Invoke-SushiswapGetUsersHistorical' {
         It 'Test Invoke-SushiswapGetUsersHistorical' {
             #$TestResult = Invoke-SushiswapGetUsersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapHourDatasCurrent' {
+        It 'Test Invoke-SushiswapHourDatasCurrent' {
+            #$TestResult = Invoke-SushiswapHourDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapLiquidityPositionSnapshotsCurrent' {
+        It 'Test Invoke-SushiswapLiquidityPositionSnapshotsCurrent' {
+            #$TestResult = Invoke-SushiswapLiquidityPositionSnapshotsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapLiquidityPositionsCurrent' {
+        It 'Test Invoke-SushiswapLiquidityPositionsCurrent' {
+            #$TestResult = Invoke-SushiswapLiquidityPositionsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapMintsCurrent' {
+        It 'Test Invoke-SushiswapMintsCurrent' {
+            #$TestResult = Invoke-SushiswapMintsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapPairDayDatasCurrent' {
+        It 'Test Invoke-SushiswapPairDayDatasCurrent' {
+            #$TestResult = Invoke-SushiswapPairDayDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapPairHourDatasCurrent' {
+        It 'Test Invoke-SushiswapPairHourDatasCurrent' {
+            #$TestResult = Invoke-SushiswapPairHourDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapPairsCurrent' {
+        It 'Test Invoke-SushiswapPairsCurrent' {
+            #$TestResult = Invoke-SushiswapPairsCurrent -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapSwapsCurrent' {
+        It 'Test Invoke-SushiswapSwapsCurrent' {
+            #$TestResult = Invoke-SushiswapSwapsCurrent -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapTokenDayDatasCurrent' {
+        It 'Test Invoke-SushiswapTokenDayDatasCurrent' {
+            #$TestResult = Invoke-SushiswapTokenDayDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapTokensCurrent' {
+        It 'Test Invoke-SushiswapTokensCurrent' {
+            #$TestResult = Invoke-SushiswapTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapTransactionsCurrent' {
+        It 'Test Invoke-SushiswapTransactionsCurrent' {
+            #$TestResult = Invoke-SushiswapTransactionsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapUsersCurrent' {
+        It 'Test Invoke-SushiswapUsersCurrent' {
+            #$TestResult = Invoke-SushiswapUsersCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

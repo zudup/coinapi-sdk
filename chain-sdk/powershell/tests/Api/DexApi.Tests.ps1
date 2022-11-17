@@ -7,6 +7,22 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'DexApi' {
+    Context 'Invoke-DexBatchsCurrent' {
+        It 'Test Invoke-DexBatchsCurrent' {
+            #$TestResult = Invoke-DexBatchsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexDepositsCurrent' {
+        It 'Test Invoke-DexDepositsCurrent' {
+            #$TestResult = Invoke-DexDepositsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-DexGetBatchsHistorical' {
         It 'Test Invoke-DexGetBatchsHistorical' {
             #$TestResult = Invoke-DexGetBatchsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
@@ -90,6 +106,78 @@ Describe -tag 'PSOpenAPITools' -name 'DexApi' {
     Context 'Invoke-DexGetWithdrawsHistorical' {
         It 'Test Invoke-DexGetWithdrawsHistorical' {
             #$TestResult = Invoke-DexGetWithdrawsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -User "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexOrdersCurrent' {
+        It 'Test Invoke-DexOrdersCurrent' {
+            #$TestResult = Invoke-DexOrdersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexPricesCurrent' {
+        It 'Test Invoke-DexPricesCurrent' {
+            #$TestResult = Invoke-DexPricesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexSolutionsCurrent' {
+        It 'Test Invoke-DexSolutionsCurrent' {
+            #$TestResult = Invoke-DexSolutionsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexStatssCurrent' {
+        It 'Test Invoke-DexStatssCurrent' {
+            #$TestResult = Invoke-DexStatssCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexTokensCurrent' {
+        It 'Test Invoke-DexTokensCurrent' {
+            #$TestResult = Invoke-DexTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexTradesCurrent' {
+        It 'Test Invoke-DexTradesCurrent' {
+            #$TestResult = Invoke-DexTradesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexUsersCurrent' {
+        It 'Test Invoke-DexUsersCurrent' {
+            #$TestResult = Invoke-DexUsersCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexWithdrawRequestsCurrent' {
+        It 'Test Invoke-DexWithdrawRequestsCurrent' {
+            #$TestResult = Invoke-DexWithdrawRequestsCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexWithdrawsCurrent' {
+        It 'Test Invoke-DexWithdrawsCurrent' {
+            #$TestResult = Invoke-DexWithdrawsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

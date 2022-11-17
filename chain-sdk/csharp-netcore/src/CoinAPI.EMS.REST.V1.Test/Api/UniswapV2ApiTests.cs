@@ -56,10 +56,32 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test UniswapV2GetBundleV2sHistorical
+        /// Test UniswapV2BundlesCurrent
         /// </summary>
         [Fact]
-        public void UniswapV2GetBundleV2sHistoricalTest()
+        public void UniswapV2BundlesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2BundlesCurrent();
+            //Assert.IsType<List<UniswapV2BundleDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2BurnsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2BurnsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2BurnsCurrent();
+            //Assert.IsType<List<UniswapV2BurnDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2GetBundlesHistorical
+        /// </summary>
+        [Fact]
+        public void UniswapV2GetBundlesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -67,15 +89,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2BundleV2DTO>>(response);
+            //var response = instance.UniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2BundleDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetBurnV2sHistorical
+        /// Test UniswapV2GetBurnsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetBurnV2sHistoricalTest()
+        public void UniswapV2GetBurnsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -84,15 +106,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-            //Assert.IsType<List<UniswapV2BurnV2DTO>>(response);
+            //var response = instance.UniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //Assert.IsType<List<UniswapV2BurnDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetLiquidityPositionSnapshotV2sHistorical
+        /// Test UniswapV2GetLiquidityPositionSnapshotsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetLiquidityPositionSnapshotV2sHistoricalTest()
+        public void UniswapV2GetLiquidityPositionSnapshotsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -102,15 +124,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string user = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
-            //Assert.IsType<List<UniswapV2LiquidityPositionSnapshotV2DTO>>(response);
+            //var response = instance.UniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+            //Assert.IsType<List<UniswapV2LiquidityPositionSnapshotDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetLiquidityPositionV2sHistorical
+        /// Test UniswapV2GetLiquidityPositionsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetLiquidityPositionV2sHistoricalTest()
+        public void UniswapV2GetLiquidityPositionsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -120,15 +142,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string user = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
-            //Assert.IsType<List<UniswapV2LiquidityPositionV2DTO>>(response);
+            //var response = instance.UniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+            //Assert.IsType<List<UniswapV2LiquidityPositionDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetMintV2sHistorical
+        /// Test UniswapV2GetMintsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetMintV2sHistoricalTest()
+        public void UniswapV2GetMintsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -137,15 +159,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-            //Assert.IsType<List<UniswapV2MintV2DTO>>(response);
+            //var response = instance.UniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //Assert.IsType<List<UniswapV2MintDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetPairDayDataV2sHistorical
+        /// Test UniswapV2GetPairDayDatasHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetPairDayDataV2sHistoricalTest()
+        public void UniswapV2GetPairDayDatasHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -155,15 +177,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string token0 = null;
             //string token1 = null;
-            //var response = instance.UniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
-            //Assert.IsType<List<UniswapV2PairDayDataV2DTO>>(response);
+            //var response = instance.UniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+            //Assert.IsType<List<UniswapV2PairDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetPairHourDataV2sHistorical
+        /// Test UniswapV2GetPairHourDatasHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetPairHourDataV2sHistoricalTest()
+        public void UniswapV2GetPairHourDatasHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -172,15 +194,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-            //Assert.IsType<List<UniswapV2PairHourDataV2DTO>>(response);
+            //var response = instance.UniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //Assert.IsType<List<UniswapV2PairHourDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetPairV2sHistorical
+        /// Test UniswapV2GetPairsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetPairV2sHistoricalTest()
+        public void UniswapV2GetPairsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -190,8 +212,8 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string token0 = null;
             //string token1 = null;
-            //var response = instance.UniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
-            //Assert.IsType<List<UniswapV2PairV2DTO>>(response);
+            //var response = instance.UniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+            //Assert.IsType<List<UniswapV2PairDTO>>(response);
         }
 
         /// <summary>
@@ -203,24 +225,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string filterPoolId = null;
             //var response = instance.UniswapV2GetPoolsCurrent(filterPoolId);
-            //Assert.IsType<List<UniswapV2PairV2DTO>>(response);
-        }
-
-        /// <summary>
-        /// Test UniswapV2GetSwapV2sHistorical
-        /// </summary>
-        [Fact]
-        public void UniswapV2GetSwapV2sHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string id = null;
-            //string pair = null;
-            //var response = instance.UniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
-            //Assert.IsType<List<UniswapV2SwapV2DTO>>(response);
+            //Assert.IsType<List<UniswapV2PairDTO>>(response);
         }
 
         /// <summary>
@@ -231,14 +236,14 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.UniswapV2GetSwapsCurrent();
-            //Assert.IsType<List<UniswapV2SwapV2DTO>>(response);
+            //Assert.IsType<List<UniswapV2SwapDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetTokenDayDataV2sHistorical
+        /// Test UniswapV2GetSwapsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetTokenDayDataV2sHistoricalTest()
+        public void UniswapV2GetSwapsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -246,15 +251,16 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2TokenDayDataV2DTO>>(response);
+            //string pair = null;
+            //var response = instance.UniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //Assert.IsType<List<UniswapV2SwapDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetTokenV2sHistorical
+        /// Test UniswapV2GetTokenDayDatasHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetTokenV2sHistoricalTest()
+        public void UniswapV2GetTokenDayDatasHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -262,10 +268,8 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //string symbol = null;
-            //string name = null;
-            //var response = instance.UniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
-            //Assert.IsType<List<UniswapV2TokenV2DTO>>(response);
+            //var response = instance.UniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2TokenDayDataDTO>>(response);
         }
 
         /// <summary>
@@ -276,14 +280,14 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.UniswapV2GetTokensCurrent();
-            //Assert.IsType<List<UniswapV2TokenV2DTO>>(response);
+            //Assert.IsType<List<UniswapV2TokenDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetTransactionV2sHistorical
+        /// Test UniswapV2GetTokensHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetTransactionV2sHistoricalTest()
+        public void UniswapV2GetTokensHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -291,15 +295,17 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2TransactionV2DTO>>(response);
+            //string symbol = null;
+            //string name = null;
+            //var response = instance.UniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+            //Assert.IsType<List<UniswapV2TokenDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetUniswapDayDataV2sHistorical
+        /// Test UniswapV2GetTransactionsHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetUniswapDayDataV2sHistoricalTest()
+        public void UniswapV2GetTransactionsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -307,15 +313,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2UniswapDayDataV2DTO>>(response);
+            //var response = instance.UniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2TransactionDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetUniswapFactoryV2sHistorical
+        /// Test UniswapV2GetUniswapDayDatasHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetUniswapFactoryV2sHistoricalTest()
+        public void UniswapV2GetUniswapDayDatasHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -323,15 +329,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2UniswapFactoryV2DTO>>(response);
+            //var response = instance.UniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2UniswapDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test UniswapV2GetUserV2sHistorical
+        /// Test UniswapV2GetUniswapFactorysHistorical
         /// </summary>
         [Fact]
-        public void UniswapV2GetUserV2sHistoricalTest()
+        public void UniswapV2GetUniswapFactorysHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -339,8 +345,146 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id);
-            //Assert.IsType<List<UniswapV2UserV2DTO>>(response);
+            //var response = instance.UniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2UniswapFactoryDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2GetUsersHistorical
+        /// </summary>
+        [Fact]
+        public void UniswapV2GetUsersHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string id = null;
+            //var response = instance.UniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<UniswapV2UserDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2LiquidityPositionSnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2LiquidityPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2LiquidityPositionSnapshotsCurrent();
+            //Assert.IsType<List<UniswapV2LiquidityPositionSnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2LiquidityPositionsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2LiquidityPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2LiquidityPositionsCurrent();
+            //Assert.IsType<List<UniswapV2LiquidityPositionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2MintsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2MintsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2MintsCurrent();
+            //Assert.IsType<List<UniswapV2MintDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2PairDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2PairDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2PairDayDatasCurrent();
+            //Assert.IsType<List<UniswapV2PairDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2PairHourDatasCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2PairHourDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2PairHourDatasCurrent();
+            //Assert.IsType<List<UniswapV2PairHourDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2PairsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2PairsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.UniswapV2PairsCurrent(id);
+            //Assert.IsType<List<UniswapV2PairDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2TokenDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2TokenDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2TokenDayDatasCurrent();
+            //Assert.IsType<List<UniswapV2TokenDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2TransactionsCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2TransactionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2TransactionsCurrent();
+            //Assert.IsType<List<UniswapV2TransactionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2UniswapDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2UniswapDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2UniswapDayDatasCurrent();
+            //Assert.IsType<List<UniswapV2UniswapDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2UniswapFactorysCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2UniswapFactorysCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2UniswapFactorysCurrent();
+            //Assert.IsType<List<UniswapV2UniswapFactoryDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test UniswapV2UsersCurrent
+        /// </summary>
+        [Fact]
+        public void UniswapV2UsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2UsersCurrent();
+            //Assert.IsType<List<UniswapV2UserDTO>>(response);
         }
     }
 }

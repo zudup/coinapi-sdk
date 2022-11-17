@@ -150,6 +150,46 @@ public:
         boost::optional<utility::string_t> id,
         boost::optional<utility::string_t> address
     ) const;
+    /// <summary>
+    /// Orders (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets orders.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Cow_OrderDTO>>> cow_Orders__current(
+    ) const;
+    /// <summary>
+    /// Settlements (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets settlements.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Cow_SettlementDTO>>> cow_Settlements__current(
+    ) const;
+    /// <summary>
+    /// Tokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Cow_TokenDTO>>> cow_Tokens__current(
+    ) const;
+    /// <summary>
+    /// Trades (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets trades.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Cow_TradeDTO>>> cow_Trades__current(
+    ) const;
+    /// <summary>
+    /// Users (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets users.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Cow_UserDTO>>> cow_Users__current(
+    ) const;
 
 protected:
     std::shared_ptr<const ApiClient> m_ApiClient;

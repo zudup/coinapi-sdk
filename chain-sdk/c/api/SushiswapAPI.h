@@ -41,6 +41,38 @@ list_t*
 SushiswapAPI_dexGetTradesCurrent(apiClient_t *apiClient);
 
 
+// Bundles (current)
+//
+// Gets bundles.
+//
+list_t*
+SushiswapAPI_sushiswapBundlesCurrent(apiClient_t *apiClient);
+
+
+// Burns (current)
+//
+// Gets burns.
+//
+list_t*
+SushiswapAPI_sushiswapBurnsCurrent(apiClient_t *apiClient);
+
+
+// DayDatas (current)
+//
+// Gets dayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapDayDatasCurrent(apiClient_t *apiClient);
+
+
+// Factorys (current)
+//
+// Gets factorys.
+//
+list_t*
+SushiswapAPI_sushiswapFactorysCurrent(apiClient_t *apiClient);
+
+
 // Bundles (historical) 🔥
 //
 // Gets bundles.
@@ -59,7 +91,7 @@ SushiswapAPI_sushiswapGetBurnsHistorical(apiClient_t *apiClient, long startBlock
 
 // DayDatas (historical) 🔥
 //
-// Gets daydatas.
+// Gets dayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
@@ -75,7 +107,7 @@ SushiswapAPI_sushiswapGetFactorysHistorical(apiClient_t *apiClient, long startBl
 
 // HourDatas (historical) 🔥
 //
-// Gets hourdatas.
+// Gets hourDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
@@ -83,7 +115,7 @@ SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startB
 
 // LiquidityPositionSnapshots (historical) 🔥
 //
-// Gets liquiditypositionsnapshots.
+// Gets liquidityPositionSnapshots.
 //
 list_t*
 SushiswapAPI_sushiswapGetLiquidityPositionSnapshotsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user , char * pair );
@@ -91,7 +123,7 @@ SushiswapAPI_sushiswapGetLiquidityPositionSnapshotsHistorical(apiClient_t *apiCl
 
 // LiquidityPositions (historical) 🔥
 //
-// Gets liquiditypositions.
+// Gets liquidityPositions.
 //
 list_t*
 SushiswapAPI_sushiswapGetLiquidityPositionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user , char * pair );
@@ -107,7 +139,7 @@ SushiswapAPI_sushiswapGetMintsHistorical(apiClient_t *apiClient, long startBlock
 
 // PairDayDatas (historical) 🔥
 //
-// Gets pairdaydatas.
+// Gets pairDayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair , char * token_0 , char * token_1 );
@@ -115,7 +147,7 @@ SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long sta
 
 // PairHourDatas (historical) 🔥
 //
-// Gets pairhourdatas.
+// Gets pairHourDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair );
@@ -137,14 +169,6 @@ list_t*
 SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
 
 
-// Swaps (current) 🔥
-//
-// Gets swaps.
-//
-list_t*
-SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient);
-
-
 // Swaps (historical) 🔥
 //
 // Gets swaps.
@@ -155,18 +179,10 @@ SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock
 
 // TokenDayDatas (historical) 🔥
 //
-// Gets tokendaydatas.
+// Gets tokenDayDatas.
 //
 list_t*
 SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
-
-
-// Tokens (current) 🔥
-//
-// Gets tokens.
-//
-list_t*
-SushiswapAPI_sushiswapGetTokensCurrent(apiClient_t *apiClient);
 
 
 // Tokens (historical) 🔥
@@ -191,5 +207,101 @@ SushiswapAPI_sushiswapGetTransactionsHistorical(apiClient_t *apiClient, long sta
 //
 list_t*
 SushiswapAPI_sushiswapGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+
+
+// HourDatas (current)
+//
+// Gets hourDatas.
+//
+list_t*
+SushiswapAPI_sushiswapHourDatasCurrent(apiClient_t *apiClient);
+
+
+// LiquidityPositionSnapshots (current)
+//
+// Gets liquidityPositionSnapshots.
+//
+list_t*
+SushiswapAPI_sushiswapLiquidityPositionSnapshotsCurrent(apiClient_t *apiClient);
+
+
+// LiquidityPositions (current)
+//
+// Gets liquidityPositions.
+//
+list_t*
+SushiswapAPI_sushiswapLiquidityPositionsCurrent(apiClient_t *apiClient);
+
+
+// Mints (current)
+//
+// Gets mints.
+//
+list_t*
+SushiswapAPI_sushiswapMintsCurrent(apiClient_t *apiClient);
+
+
+// PairDayDatas (current)
+//
+// Gets pairDayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapPairDayDatasCurrent(apiClient_t *apiClient);
+
+
+// PairHourDatas (current)
+//
+// Gets pairHourDatas.
+//
+list_t*
+SushiswapAPI_sushiswapPairHourDatasCurrent(apiClient_t *apiClient);
+
+
+// Pairs (current)
+//
+// Gets pairs.
+//
+list_t*
+SushiswapAPI_sushiswapPairsCurrent(apiClient_t *apiClient, char * id );
+
+
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t*
+SushiswapAPI_sushiswapSwapsCurrent(apiClient_t *apiClient, char * pair );
+
+
+// TokenDayDatas (current)
+//
+// Gets tokenDayDatas.
+//
+list_t*
+SushiswapAPI_sushiswapTokenDayDatasCurrent(apiClient_t *apiClient);
+
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+SushiswapAPI_sushiswapTokensCurrent(apiClient_t *apiClient);
+
+
+// Transactions (current)
+//
+// Gets transactions.
+//
+list_t*
+SushiswapAPI_sushiswapTransactionsCurrent(apiClient_t *apiClient);
+
+
+// Users (current)
+//
+// Gets users.
+//
+list_t*
+SushiswapAPI_sushiswapUsersCurrent(apiClient_t *apiClient);
 
 

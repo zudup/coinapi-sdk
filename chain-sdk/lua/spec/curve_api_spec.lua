@@ -15,6 +15,139 @@ Please update as you see appropriate
 ]]
 describe("curve_api", function()
   local openapiclient_curve_api = require "openapiclient.api.curve_api"
+  -- unit tests for curve_accounts__current
+  describe("curve_accounts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_add_liquidity_events__current
+  describe("curve_add_liquidity_events__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_admin_fee_change_logs__current
+  describe("curve_admin_fee_change_logs__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_amplification_coeff_change_logs__current
+  describe("curve_amplification_coeff_change_logs__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_coins__current
+  describe("curve_coins__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_contract_versions__current
+  describe("curve_contract_versions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_contracts__current
+  describe("curve_contracts__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_daily_volumes__current
+  describe("curve_daily_volumes__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_exchanges__current
+  describe("curve_exchanges__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_fee_change_logs__current
+  describe("curve_fee_change_logs__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_deposits__current
+  describe("curve_gauge_deposits__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_liquiditys__current
+  describe("curve_gauge_liquiditys__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_total_weights__current
+  describe("curve_gauge_total_weights__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_type_weights__current
+  describe("curve_gauge_type_weights__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_types__current
+  describe("curve_gauge_types__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_weight_votes__current
+  describe("curve_gauge_weight_votes__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_weights__current
+  describe("curve_gauge_weights__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauge_withdraws__current
+  describe("curve_gauge_withdraws__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_gauges__current
+  describe("curve_gauges__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for curve_get_accounts__historical
   describe("curve_get_accounts__historical test", function()
     it("should work", function()
@@ -234,6 +367,97 @@ describe("curve_api", function()
 
   -- unit tests for curve_get_weekly_volumes__historical
   describe("curve_get_weekly_volumes__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_hourly_volumes__current
+  describe("curve_hourly_volumes__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_lp_tokens__current
+  describe("curve_lp_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_pools__current
+  describe("curve_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_proposal_votes__current
+  describe("curve_proposal_votes__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_proposals__current
+  describe("curve_proposals__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_remove_liquidity_events__current
+  describe("curve_remove_liquidity_events__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_remove_liquidity_one_events__current
+  describe("curve_remove_liquidity_one_events__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_system_states__current
+  describe("curve_system_states__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_tokens__current
+  describe("curve_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_transfer_ownership_events__current
+  describe("curve_transfer_ownership_events__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_underlying_coins__current
+  describe("curve_underlying_coins__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_voting_apps__current
+  describe("curve_voting_apps__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for curve_weekly_volumes__current
+  describe("curve_weekly_volumes__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

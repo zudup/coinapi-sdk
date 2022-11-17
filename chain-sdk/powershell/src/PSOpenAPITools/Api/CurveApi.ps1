@@ -9,6 +9,1441 @@
 <#
 .SYNOPSIS
 
+Accounts (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveAccountDTO[]
+#>
+function Invoke-CurveAccountsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveAccountsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/accounts/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveAccountDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+AddLiquidityEvents (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveAddLiquidityEventDTO[]
+#>
+function Invoke-CurveAddLiquidityEventsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveAddLiquidityEventsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/addLiquidityEvents/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveAddLiquidityEventDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+AdminFeeChangeLogs (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveAdminFeeChangeLogDTO[]
+#>
+function Invoke-CurveAdminFeeChangeLogsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveAdminFeeChangeLogsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/adminFeeChangeLogs/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveAdminFeeChangeLogDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+AmplificationCoeffChangeLogs (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveAmplificationCoeffChangeLogDTO[]
+#>
+function Invoke-CurveAmplificationCoeffChangeLogsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveAmplificationCoeffChangeLogsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/amplificationCoeffChangeLogs/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveAmplificationCoeffChangeLogDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Coins (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveCoinDTO[]
+#>
+function Invoke-CurveCoinsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveCoinsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/coins/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveCoinDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+ContractVersions (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveContractVersionDTO[]
+#>
+function Invoke-CurveContractVersionsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveContractVersionsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/contractVersions/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveContractVersionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Contracts (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveContractDTO[]
+#>
+function Invoke-CurveContractsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveContractsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/contracts/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveContractDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+DailyVolumes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveDailyVolumeDTO[]
+#>
+function Invoke-CurveDailyVolumesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveDailyVolumesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/dailyVolumes/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveDailyVolumeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Exchanges (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Pool
+
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveExchangeDTO[]
+#>
+function Invoke-CurveExchangesCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Pool},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveExchangesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/exchanges/current'
+
+        if ($Pool) {
+            $LocalVarQueryParameters['pool'] = $Pool
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveExchangeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+FeeChangeLogs (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveFeeChangeLogDTO[]
+#>
+function Invoke-CurveFeeChangeLogsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveFeeChangeLogsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/feeChangeLogs/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveFeeChangeLogDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeDeposits (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeDepositDTO[]
+#>
+function Invoke-CurveGaugeDepositsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeDepositsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeDeposits/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeDepositDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeLiquiditys (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeLiquidityDTO[]
+#>
+function Invoke-CurveGaugeLiquiditysCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeLiquiditysCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeLiquiditys/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeLiquidityDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeTotalWeights (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeTotalWeightDTO[]
+#>
+function Invoke-CurveGaugeTotalWeightsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeTotalWeightsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeTotalWeights/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeTotalWeightDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeTypeWeights (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeTypeWeightDTO[]
+#>
+function Invoke-CurveGaugeTypeWeightsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeTypeWeightsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeTypeWeights/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeTypeWeightDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeTypes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeTypeDTO[]
+#>
+function Invoke-CurveGaugeTypesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeTypesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeTypes/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeTypeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeWeightVotes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeWeightVoteDTO[]
+#>
+function Invoke-CurveGaugeWeightVotesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeWeightVotesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeWeightVotes/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeWeightVoteDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeWeights (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeWeightDTO[]
+#>
+function Invoke-CurveGaugeWeightsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeWeightsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeWeights/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeWeightDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GaugeWithdraws (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeWithdrawDTO[]
+#>
+function Invoke-CurveGaugeWithdrawsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugeWithdrawsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gaugeWithdraws/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeWithdrawDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Gauges (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveGaugeDTO[]
+#>
+function Invoke-CurveGaugesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGaugesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/gauges/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveGaugeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 Accounts (historical) 🔥
 
 .DESCRIPTION
@@ -230,7 +1665,7 @@ function Invoke-CurveGetAddLiquidityEventsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/addliquidityevents/historical'
+        $LocalVarUri = '/dapps/curve/addLiquidityEvents/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -365,7 +1800,7 @@ function Invoke-CurveGetAdminFeeChangeLogsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/adminfeechangelogs/historical'
+        $LocalVarUri = '/dapps/curve/adminFeeChangeLogs/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -500,7 +1935,7 @@ function Invoke-CurveGetAmplificationCoeffChangeLogsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/amplificationcoeffchangelogs/historical'
+        $LocalVarUri = '/dapps/curve/amplificationCoeffChangeLogs/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -770,7 +2205,7 @@ function Invoke-CurveGetContractVersionsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/contractversions/historical'
+        $LocalVarUri = '/dapps/curve/contractVersions/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1030,7 +2465,7 @@ function Invoke-CurveGetDailyVolumesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/dailyvolumes/historical'
+        $LocalVarUri = '/dapps/curve/dailyVolumes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1300,7 +2735,7 @@ function Invoke-CurveGetFeeChangeLogsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/feechangelogs/historical'
+        $LocalVarUri = '/dapps/curve/feeChangeLogs/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1429,7 +2864,7 @@ function Invoke-CurveGetGaugeDepositsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugedeposits/historical'
+        $LocalVarUri = '/dapps/curve/gaugeDeposits/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1560,7 +2995,7 @@ function Invoke-CurveGetGaugeLiquiditysHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugeliquiditys/historical'
+        $LocalVarUri = '/dapps/curve/gaugeLiquiditys/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1689,7 +3124,7 @@ function Invoke-CurveGetGaugeTotalWeightsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugetotalweights/historical'
+        $LocalVarUri = '/dapps/curve/gaugeTotalWeights/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1814,7 +3249,7 @@ function Invoke-CurveGetGaugeTypeWeightsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugetypeweights/historical'
+        $LocalVarUri = '/dapps/curve/gaugeTypeWeights/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1945,7 +3380,7 @@ function Invoke-CurveGetGaugeTypesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugetypes/historical'
+        $LocalVarUri = '/dapps/curve/gaugeTypes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2080,7 +3515,7 @@ function Invoke-CurveGetGaugeWeightVotesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugeweightvotes/historical'
+        $LocalVarUri = '/dapps/curve/gaugeWeightVotes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2209,7 +3644,7 @@ function Invoke-CurveGetGaugeWeightsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugeweights/historical'
+        $LocalVarUri = '/dapps/curve/gaugeWeights/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2334,7 +3769,7 @@ function Invoke-CurveGetGaugeWithdrawsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugewithdraws/historical'
+        $LocalVarUri = '/dapps/curve/gaugeWithdraws/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2610,7 +4045,7 @@ function Invoke-CurveGetHourlyVolumesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/hourlyvolumes/historical'
+        $LocalVarUri = '/dapps/curve/hourlyVolumes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2763,7 +4198,7 @@ function Invoke-CurveGetLpTokensHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/lptokens/historical'
+        $LocalVarUri = '/dapps/curve/lpTokens/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3039,7 +4474,7 @@ function Invoke-CurveGetProposalVotesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/proposalvotes/historical'
+        $LocalVarUri = '/dapps/curve/proposalVotes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3295,7 +4730,7 @@ function Invoke-CurveGetRemoveLiquidityEventsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/removeliquidityevents/historical'
+        $LocalVarUri = '/dapps/curve/removeLiquidityEvents/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3430,7 +4865,7 @@ function Invoke-CurveGetRemoveLiquidityOneEventsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/removeliquidityoneevents/historical'
+        $LocalVarUri = '/dapps/curve/removeLiquidityOneEvents/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3559,7 +4994,7 @@ function Invoke-CurveGetSystemStatesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/systemstates/historical'
+        $LocalVarUri = '/dapps/curve/systemStates/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3845,7 +5280,7 @@ function Invoke-CurveGetTransferOwnershipEventsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/transferownershipevents/historical'
+        $LocalVarUri = '/dapps/curve/transferOwnershipEvents/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3980,7 +5415,7 @@ function Invoke-CurveGetUnderlyingCoinsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/underlyingcoins/historical'
+        $LocalVarUri = '/dapps/curve/underlyingCoins/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -4115,7 +5550,7 @@ function Invoke-CurveGetVotingAppsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/votingapps/historical'
+        $LocalVarUri = '/dapps/curve/votingApps/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -4250,7 +5685,7 @@ function Invoke-CurveGetWeeklyVolumesHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/weeklyvolumes/historical'
+        $LocalVarUri = '/dapps/curve/weeklyVolumes/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -4275,6 +5710,991 @@ function Invoke-CurveGetWeeklyVolumesHistorical {
         if ($Pool) {
             $LocalVarQueryParameters['pool'] = $Pool
         }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveWeeklyVolumeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+HourlyVolumes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveHourlyVolumeDTO[]
+#>
+function Invoke-CurveHourlyVolumesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveHourlyVolumesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/hourlyVolumes/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveHourlyVolumeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+LpTokens (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveLpTokenDTO[]
+#>
+function Invoke-CurveLpTokensCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveLpTokensCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/lpTokens/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveLpTokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Pools (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+Pool address.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurvePoolDTO[]
+#>
+function Invoke-CurvePoolsCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurvePoolsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/pools/current'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurvePoolDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+ProposalVotes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveProposalVoteDTO[]
+#>
+function Invoke-CurveProposalVotesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveProposalVotesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/proposalVotes/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveProposalVoteDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Proposals (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveProposalDTO[]
+#>
+function Invoke-CurveProposalsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveProposalsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/proposals/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveProposalDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+RemoveLiquidityEvents (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveRemoveLiquidityEventDTO[]
+#>
+function Invoke-CurveRemoveLiquidityEventsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveRemoveLiquidityEventsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/removeLiquidityEvents/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveRemoveLiquidityEventDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+RemoveLiquidityOneEvents (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveRemoveLiquidityOneEventDTO[]
+#>
+function Invoke-CurveRemoveLiquidityOneEventsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveRemoveLiquidityOneEventsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/removeLiquidityOneEvents/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveRemoveLiquidityOneEventDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+SystemStates (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveSystemStateDTO[]
+#>
+function Invoke-CurveSystemStatesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveSystemStatesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/systemStates/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveSystemStateDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Tokens (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveTokenDTO[]
+#>
+function Invoke-CurveTokensCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveTokensCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/tokens/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveTokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+TransferOwnershipEvents (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveTransferOwnershipEventDTO[]
+#>
+function Invoke-CurveTransferOwnershipEventsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveTransferOwnershipEventsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/transferOwnershipEvents/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveTransferOwnershipEventDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+UnderlyingCoins (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveUnderlyingCoinDTO[]
+#>
+function Invoke-CurveUnderlyingCoinsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveUnderlyingCoinsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/underlyingCoins/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveUnderlyingCoinDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+VotingApps (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveVotingAppDTO[]
+#>
+function Invoke-CurveVotingAppsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveVotingAppsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/votingApps/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveVotingAppDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+WeeklyVolumes (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveWeeklyVolumeDTO[]
+#>
+function Invoke-CurveWeeklyVolumesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveWeeklyVolumesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/curve/weeklyVolumes/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

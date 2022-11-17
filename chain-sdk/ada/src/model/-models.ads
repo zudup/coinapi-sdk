@@ -60,95 +60,7 @@ package .Models is
 
 
 
-   type UniswapV3TokenHourDataV3DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Period_Start_Unix : Swagger.Nullable_Integer;
-       Token : Swagger.Nullable_UString;
-       Volume : Swagger.Nullable_UString;
-       Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
-       Total_Value_Locked : Swagger.Nullable_UString;
-       Total_Value_Locked_Usd : Swagger.Nullable_UString;
-       Price_Usd : Swagger.Nullable_UString;
-       Fees_Usd : Swagger.Nullable_UString;
-       Open : Swagger.Nullable_UString;
-       High : Swagger.Nullable_UString;
-       Low : Swagger.Nullable_UString;
-       Close : Swagger.Nullable_UString;
-       Vid : Swagger.Nullable_Long;
-     end record;
-
-   package UniswapV3TokenHourDataV3DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3TokenHourDataV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TokenHourDataV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TokenHourDataV3DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TokenHourDataV3DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TokenHourDataV3DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV3TickDayDataV3DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Date : Swagger.Nullable_Integer;
-       Pool : Swagger.Nullable_UString;
-       Tick : Swagger.Nullable_UString;
-       Liquidity_Gross : Swagger.Nullable_UString;
-       Liquidity_Net : Swagger.Nullable_UString;
-       Volume_Token_0 : Swagger.Nullable_UString;
-       Volume_Token_1 : Swagger.Nullable_UString;
-       Volume_Usd : Swagger.Nullable_UString;
-       Fees_Usd : Swagger.Nullable_UString;
-       Fee_Growth_Outside_0x_128 : Swagger.Nullable_UString;
-       Fee_Growth_Outside_1x_128 : Swagger.Nullable_UString;
-       Vid : Swagger.Nullable_Long;
-     end record;
-
-   package UniswapV3TickDayDataV3DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3TickDayDataV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TickDayDataV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TickDayDataV3DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TickDayDataV3DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TickDayDataV3DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV3PositionV3DTO_Type is
+   type UniswapV3PositionSnapshotDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -156,10 +68,8 @@ package .Models is
        Id : Swagger.Nullable_UString;
        Owner : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
-       Token_0 : Swagger.Nullable_UString;
-       Token_1 : Swagger.Nullable_UString;
-       Tick_Lower : Swagger.Nullable_UString;
-       Tick_Upper : Swagger.Nullable_UString;
+       Position : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
        Liquidity : Swagger.Nullable_UString;
        Deposited_Token_0 : Swagger.Nullable_UString;
        Deposited_Token_1 : Swagger.Nullable_UString;
@@ -173,36 +83,36 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3PositionV3DTO_Type_Vectors is
+   package UniswapV3PositionSnapshotDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3PositionV3DTO_Type);
+                                  Element_Type => UniswapV3PositionSnapshotDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PositionV3DTO_Type);
+                        Value : in UniswapV3PositionSnapshotDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PositionV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3PositionSnapshotDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PositionV3DTO_Type);
+                          Value : out UniswapV3PositionSnapshotDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PositionV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3PositionSnapshotDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3PoolDayDataV3DTO_Type is
+   type UniswapV3PoolHourDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Date : Swagger.Nullable_Integer;
+       Period_Start_Unix : Swagger.Nullable_Integer;
        Pool : Swagger.Nullable_UString;
        Liquidity : Swagger.Nullable_UString;
        Sqrt_Price : Swagger.Nullable_UString;
@@ -224,30 +134,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3PoolDayDataV3DTO_Type_Vectors is
+   package UniswapV3PoolHourDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3PoolDayDataV3DTO_Type);
+                                  Element_Type => UniswapV3PoolHourDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolDayDataV3DTO_Type);
+                        Value : in UniswapV3PoolHourDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolDayDataV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3PoolHourDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolDayDataV3DTO_Type);
+                          Value : out UniswapV3PoolHourDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolDayDataV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3PoolHourDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3FactoryV3DTO_Type is
+   type UniswapV3FactoryDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -268,30 +178,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3FactoryV3DTO_Type_Vectors is
+   package UniswapV3FactoryDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3FactoryV3DTO_Type);
+                                  Element_Type => UniswapV3FactoryDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3FactoryV3DTO_Type);
+                        Value : in UniswapV3FactoryDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3FactoryV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3FactoryDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3FactoryV3DTO_Type);
+                          Value : out UniswapV3FactoryDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3FactoryV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3FactoryDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3BundleV3DTO_Type is
+   type UniswapV3BundleDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -301,30 +211,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3BundleV3DTO_Type_Vectors is
+   package UniswapV3BundleDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3BundleV3DTO_Type);
+                                  Element_Type => UniswapV3BundleDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3BundleV3DTO_Type);
+                        Value : in UniswapV3BundleDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3BundleV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3BundleDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3BundleV3DTO_Type);
+                          Value : out UniswapV3BundleDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3BundleV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3BundleDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2UniswapFactoryV2DTO_Type is
+   type UniswapV2UniswapFactoryDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -340,30 +250,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2UniswapFactoryV2DTO_Type_Vectors is
+   package UniswapV2UniswapFactoryDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2UniswapFactoryV2DTO_Type);
+                                  Element_Type => UniswapV2UniswapFactoryDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UniswapFactoryV2DTO_Type);
+                        Value : in UniswapV2UniswapFactoryDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UniswapFactoryV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2UniswapFactoryDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UniswapFactoryV2DTO_Type);
+                          Value : out UniswapV2UniswapFactoryDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UniswapFactoryV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2UniswapFactoryDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2TransactionV2DTO_Type is
+   type UniswapV2TransactionDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -376,151 +286,117 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2TransactionV2DTO_Type_Vectors is
+   package UniswapV2TransactionDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2TransactionV2DTO_Type);
+                                  Element_Type => UniswapV2TransactionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2TransactionV2DTO_Type);
+                        Value : in UniswapV2TransactionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2TransactionV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2TransactionDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2TransactionV2DTO_Type);
+                          Value : out UniswapV2TransactionDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2TransactionV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2TransactionDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2TokenDayDataV2DTO_Type is
+   type UniswapV2PairHourDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Date : Swagger.Nullable_Integer;
-       Token : Swagger.Nullable_UString;
-       Daily_Volume_Token : Swagger.Nullable_UString;
-       Daily_Volume_Eth : Swagger.Nullable_UString;
-       Daily_Volume_Usd : Swagger.Nullable_UString;
-       Daily_Txns : Swagger.Nullable_UString;
-       Total_Liquidity_Token : Swagger.Nullable_UString;
-       Total_Liquidity_Eth : Swagger.Nullable_UString;
-       Total_Liquidity_Usd : Swagger.Nullable_UString;
-       Price_Usd : Swagger.Nullable_UString;
-       Vid : Swagger.Nullable_Long;
-     end record;
-
-   package UniswapV2TokenDayDataV2DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2TokenDayDataV2DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2TokenDayDataV2DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2TokenDayDataV2DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2TokenDayDataV2DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2TokenDayDataV2DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV2PairDayDataV2DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Date : Swagger.Nullable_Integer;
-       Pair_Address : Swagger.Nullable_UString;
-       Token_0 : Swagger.Nullable_UString;
-       Token_1 : Swagger.Nullable_UString;
+       Hour_Start_Unix : Swagger.Nullable_Integer;
+       Pair : Swagger.Nullable_UString;
        Reserve_0 : Swagger.Nullable_UString;
        Reserve_1 : Swagger.Nullable_UString;
        Total_Supply : Swagger.Nullable_UString;
        Reserve_Usd : Swagger.Nullable_UString;
-       Daily_Volume_Token_0 : Swagger.Nullable_UString;
-       Daily_Volume_Token_1 : Swagger.Nullable_UString;
-       Daily_Volume_Usd : Swagger.Nullable_UString;
-       Daily_Txns : Swagger.Nullable_UString;
+       Hourly_Volume_Token_0 : Swagger.Nullable_UString;
+       Hourly_Volume_Token_1 : Swagger.Nullable_UString;
+       Hourly_Volume_Usd : Swagger.Nullable_UString;
+       Hourly_Txns : Swagger.Nullable_UString;
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2PairDayDataV2DTO_Type_Vectors is
+   package UniswapV2PairHourDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2PairDayDataV2DTO_Type);
+                                  Element_Type => UniswapV2PairHourDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairDayDataV2DTO_Type);
+                        Value : in UniswapV2PairHourDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairDayDataV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2PairHourDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairDayDataV2DTO_Type);
+                          Value : out UniswapV2PairHourDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairDayDataV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2PairHourDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2LiquidityPositionV2DTO_Type is
+   type UniswapV2LiquidityPositionSnapshotDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
+       Liquidity_Position : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_Integer;
+       Block : Swagger.Nullable_Integer;
        User : Swagger.Nullable_UString;
        Pair : Swagger.Nullable_UString;
+       Token_0_Price_Usd : Swagger.Nullable_UString;
+       Token_1_Price_Usd : Swagger.Nullable_UString;
+       Reserve_0 : Swagger.Nullable_UString;
+       Reserve_1 : Swagger.Nullable_UString;
+       Reserve_Usd : Swagger.Nullable_UString;
+       Liquidity_Token_Total_Supply : Swagger.Nullable_UString;
        Liquidity_Token_Balance : Swagger.Nullable_UString;
        Vid : Swagger.Nullable_Long;
+       Block_Range : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV2LiquidityPositionV2DTO_Type_Vectors is
+   package UniswapV2LiquidityPositionSnapshotDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2LiquidityPositionV2DTO_Type);
+                                  Element_Type => UniswapV2LiquidityPositionSnapshotDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2LiquidityPositionV2DTO_Type);
+                        Value : in UniswapV2LiquidityPositionSnapshotDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2LiquidityPositionV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2LiquidityPositionSnapshotDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2LiquidityPositionV2DTO_Type);
+                          Value : out UniswapV2LiquidityPositionSnapshotDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2LiquidityPositionV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2LiquidityPositionSnapshotDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2BurnV2DTO_Type is
+   type UniswapV2BurnDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -542,25 +418,25 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2BurnV2DTO_Type_Vectors is
+   package UniswapV2BurnDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2BurnV2DTO_Type);
+                                  Element_Type => UniswapV2BurnDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2BurnV2DTO_Type);
+                        Value : in UniswapV2BurnDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2BurnV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2BurnDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2BurnV2DTO_Type);
+                          Value : out UniswapV2BurnDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2BurnV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2BurnDTO_Type_Vectors.Vector);
 
 
 
@@ -2897,7 +2773,7 @@ package .Models is
 
 
 
-   type UniswapV3UniswapDayDataV3DTO_Type is
+   type UniswapV3UniswapDayDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -2913,30 +2789,30 @@ package .Models is
        Tvl_Usd : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV3UniswapDayDataV3DTO_Type_Vectors is
+   package UniswapV3UniswapDayDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3UniswapDayDataV3DTO_Type);
+                                  Element_Type => UniswapV3UniswapDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3UniswapDayDataV3DTO_Type);
+                        Value : in UniswapV3UniswapDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3UniswapDayDataV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3UniswapDayDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3UniswapDayDataV3DTO_Type);
+                          Value : out UniswapV3UniswapDayDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3UniswapDayDataV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3UniswapDayDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2SwapV2DTO_Type is
+   type UniswapV2SwapDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -2962,30 +2838,30 @@ package .Models is
        Transaction_Id : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV2SwapV2DTO_Type_Vectors is
+   package UniswapV2SwapDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2SwapV2DTO_Type);
+                                  Element_Type => UniswapV2SwapDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2SwapV2DTO_Type);
+                        Value : in UniswapV2SwapDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2SwapV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2SwapDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2SwapV2DTO_Type);
+                          Value : out UniswapV2SwapDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2SwapV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2SwapDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3SwapV3DTO_Type is
+   type UniswapV3SwapDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3013,30 +2889,129 @@ package .Models is
        Transaction_Id : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV3SwapV3DTO_Type_Vectors is
+   package UniswapV3SwapDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3SwapV3DTO_Type);
+                                  Element_Type => UniswapV3SwapDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3SwapV3DTO_Type);
+                        Value : in UniswapV3SwapDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3SwapV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3SwapDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3SwapV3DTO_Type);
+                          Value : out UniswapV3SwapDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3SwapV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3SwapDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3PoolV3DTO_Type is
+   type UniswapV3TokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_Integer;
+       Total_Supply : .Models.NumericsBigInteger_Type;
+       Volume : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Fees_Usd : Swagger.Nullable_UString;
+       Tx_Count : .Models.NumericsBigInteger_Type;
+       Pool_Count : .Models.NumericsBigInteger_Type;
+       Total_Value_Locked : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd_Untracked : Swagger.Nullable_UString;
+       Derived_Eth : Swagger.Nullable_UString;
+       Whitelist_Pools : Swagger.UString_Vectors.Vector;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package UniswapV3TokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV3TokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV3TickDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Pool_Address : Swagger.Nullable_UString;
+       Tick_Idx : .Models.NumericsBigInteger_Type;
+       Pool : Swagger.Nullable_UString;
+       Liquidity_Gross : .Models.NumericsBigInteger_Type;
+       Liquidity_Net : .Models.NumericsBigInteger_Type;
+       Price_0 : Swagger.Nullable_UString;
+       Price_1 : Swagger.Nullable_UString;
+       Volume_Token_0 : Swagger.Nullable_UString;
+       Volume_Token_1 : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Fees_Usd : Swagger.Nullable_UString;
+       Collected_Fees_Token_0 : Swagger.Nullable_UString;
+       Collected_Fees_Token_1 : Swagger.Nullable_UString;
+       Collected_Fees_Usd : Swagger.Nullable_UString;
+       Created_At_Timestamp : Swagger.Nullable_Date;
+       Liquidity_Provider_Count : .Models.NumericsBigInteger_Type;
+       Fee_Growth_Outside_0x_128 : .Models.NumericsBigInteger_Type;
+       Fee_Growth_Outside_1x_128 : .Models.NumericsBigInteger_Type;
+     end record;
+
+   package UniswapV3TickDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV3TickDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TickDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TickDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TickDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TickDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV3PoolDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3073,30 +3048,73 @@ package .Models is
        Evaluated_Ask : double;
      end record;
 
-   package UniswapV3PoolV3DTO_Type_Vectors is
+   package UniswapV3PoolDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3PoolV3DTO_Type);
+                                  Element_Type => UniswapV3PoolDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolV3DTO_Type);
+                        Value : in UniswapV3PoolDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3PoolDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolV3DTO_Type);
+                          Value : out UniswapV3PoolDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3PoolDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2PairV2DTO_Type is
+   type UniswapV2TokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Vid : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_Integer;
+       Total_Supply : .Models.NumericsBigInteger_Type;
+       Trade_Volume : Swagger.Nullable_UString;
+       Trade_Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Tx_Count : .Models.NumericsBigInteger_Type;
+       Total_Liquidity : Swagger.Nullable_UString;
+       Derived_Eth : Swagger.Nullable_UString;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package UniswapV2TokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV2TokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2TokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2TokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2TokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2TokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV2PairDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3123,167 +3141,25 @@ package .Models is
        Evaluated_Ask : double;
      end record;
 
-   package UniswapV2PairV2DTO_Type_Vectors is
+   package UniswapV2PairDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2PairV2DTO_Type);
+                                  Element_Type => UniswapV2PairDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairV2DTO_Type);
+                        Value : in UniswapV2PairDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2PairDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairV2DTO_Type);
+                          Value : out UniswapV2PairDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairV2DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV2TokenV2DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_Integer;
-       Total_Supply : .Models.NumericsBigInteger_Type;
-       Trade_Volume : Swagger.Nullable_UString;
-       Trade_Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
-       Tx_Count : .Models.NumericsBigInteger_Type;
-       Total_Liquidity : Swagger.Nullable_UString;
-       Derived_Eth : Swagger.Nullable_UString;
-       Token_Symbol : Swagger.Nullable_UString;
-     end record;
-
-   package UniswapV2TokenV2DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2TokenV2DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2TokenV2DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV2TokenV2DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2TokenV2DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV2TokenV2DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV3TickV3DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Pool_Address : Swagger.Nullable_UString;
-       Tick_Idx : .Models.NumericsBigInteger_Type;
-       Pool : Swagger.Nullable_UString;
-       Liquidity_Gross : .Models.NumericsBigInteger_Type;
-       Liquidity_Net : .Models.NumericsBigInteger_Type;
-       Price_0 : Swagger.Nullable_UString;
-       Price_1 : Swagger.Nullable_UString;
-       Volume_Token_0 : Swagger.Nullable_UString;
-       Volume_Token_1 : Swagger.Nullable_UString;
-       Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
-       Fees_Usd : Swagger.Nullable_UString;
-       Collected_Fees_Token_0 : Swagger.Nullable_UString;
-       Collected_Fees_Token_1 : Swagger.Nullable_UString;
-       Collected_Fees_Usd : Swagger.Nullable_UString;
-       Created_At_Timestamp : Swagger.Nullable_Date;
-       Liquidity_Provider_Count : .Models.NumericsBigInteger_Type;
-       Fee_Growth_Outside_0x_128 : .Models.NumericsBigInteger_Type;
-       Fee_Growth_Outside_1x_128 : .Models.NumericsBigInteger_Type;
-     end record;
-
-   package UniswapV3TickV3DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3TickV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TickV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TickV3DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TickV3DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TickV3DTO_Type_Vectors.Vector);
-
-
-
-
-   type UniswapV3TokenV3DTO_Type is
-     record
-       Entry_Time : Swagger.Nullable_Date;
-       Recv_Time : Swagger.Nullable_Date;
-       Block_Number : Swagger.Nullable_Long;
-       Vid : Swagger.Nullable_Long;
-       Id : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_Integer;
-       Total_Supply : .Models.NumericsBigInteger_Type;
-       Volume : Swagger.Nullable_UString;
-       Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
-       Fees_Usd : Swagger.Nullable_UString;
-       Tx_Count : .Models.NumericsBigInteger_Type;
-       Pool_Count : .Models.NumericsBigInteger_Type;
-       Total_Value_Locked : Swagger.Nullable_UString;
-       Total_Value_Locked_Usd : Swagger.Nullable_UString;
-       Total_Value_Locked_Usd_Untracked : Swagger.Nullable_UString;
-       Derived_Eth : Swagger.Nullable_UString;
-       Whitelist_Pools : Swagger.UString_Vectors.Vector;
-       Token_Symbol : Swagger.Nullable_UString;
-     end record;
-
-   package UniswapV3TokenV3DTO_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3TokenV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TokenV3DTO_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in UniswapV3TokenV3DTO_Type_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TokenV3DTO_Type);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out UniswapV3TokenV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2PairDTO_Type_Vectors.Vector);
 
 
 
@@ -3573,7 +3449,7 @@ package .Models is
 
 
 
-   type UniswapV2BundleV2DTO_Type is
+   type UniswapV2BundleDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3584,75 +3460,65 @@ package .Models is
        Block_Range : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV2BundleV2DTO_Type_Vectors is
+   package UniswapV2BundleDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2BundleV2DTO_Type);
+                                  Element_Type => UniswapV2BundleDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2BundleV2DTO_Type);
+                        Value : in UniswapV2BundleDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2BundleV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2BundleDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2BundleV2DTO_Type);
+                          Value : out UniswapV2BundleDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2BundleV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2BundleDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2LiquidityPositionSnapshotV2DTO_Type is
+   type UniswapV2LiquidityPositionDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Liquidity_Position : Swagger.Nullable_UString;
-       Timestamp : Swagger.Nullable_Integer;
-       Block : Swagger.Nullable_Integer;
        User : Swagger.Nullable_UString;
        Pair : Swagger.Nullable_UString;
-       Token_0_Price_Usd : Swagger.Nullable_UString;
-       Token_1_Price_Usd : Swagger.Nullable_UString;
-       Reserve_0 : Swagger.Nullable_UString;
-       Reserve_1 : Swagger.Nullable_UString;
-       Reserve_Usd : Swagger.Nullable_UString;
-       Liquidity_Token_Total_Supply : Swagger.Nullable_UString;
        Liquidity_Token_Balance : Swagger.Nullable_UString;
        Vid : Swagger.Nullable_Long;
-       Block_Range : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV2LiquidityPositionSnapshotV2DTO_Type_Vectors is
+   package UniswapV2LiquidityPositionDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2LiquidityPositionSnapshotV2DTO_Type);
+                                  Element_Type => UniswapV2LiquidityPositionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2LiquidityPositionSnapshotV2DTO_Type);
+                        Value : in UniswapV2LiquidityPositionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2LiquidityPositionSnapshotV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2LiquidityPositionDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2LiquidityPositionSnapshotV2DTO_Type);
+                          Value : out UniswapV2LiquidityPositionDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2LiquidityPositionSnapshotV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2LiquidityPositionDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2MintV2DTO_Type is
+   type UniswapV2MintDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3674,72 +3540,116 @@ package .Models is
        Block_Range : Swagger.Nullable_UString;
      end record;
 
-   package UniswapV2MintV2DTO_Type_Vectors is
+   package UniswapV2MintDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2MintV2DTO_Type);
+                                  Element_Type => UniswapV2MintDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2MintV2DTO_Type);
+                        Value : in UniswapV2MintDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2MintV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2MintDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2MintV2DTO_Type);
+                          Value : out UniswapV2MintDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2MintV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2MintDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2PairHourDataV2DTO_Type is
+   type UniswapV2PairDayDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Hour_Start_Unix : Swagger.Nullable_Integer;
-       Pair : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Pair_Address : Swagger.Nullable_UString;
+       Token_0 : Swagger.Nullable_UString;
+       Token_1 : Swagger.Nullable_UString;
        Reserve_0 : Swagger.Nullable_UString;
        Reserve_1 : Swagger.Nullable_UString;
        Total_Supply : Swagger.Nullable_UString;
        Reserve_Usd : Swagger.Nullable_UString;
-       Hourly_Volume_Token_0 : Swagger.Nullable_UString;
-       Hourly_Volume_Token_1 : Swagger.Nullable_UString;
-       Hourly_Volume_Usd : Swagger.Nullable_UString;
-       Hourly_Txns : Swagger.Nullable_UString;
+       Daily_Volume_Token_0 : Swagger.Nullable_UString;
+       Daily_Volume_Token_1 : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Txns : Swagger.Nullable_UString;
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2PairHourDataV2DTO_Type_Vectors is
+   package UniswapV2PairDayDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2PairHourDataV2DTO_Type);
+                                  Element_Type => UniswapV2PairDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairHourDataV2DTO_Type);
+                        Value : in UniswapV2PairDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2PairHourDataV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2PairDayDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairHourDataV2DTO_Type);
+                          Value : out UniswapV2PairDayDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2PairHourDataV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2PairDayDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2UniswapDayDataV2DTO_Type is
+   type UniswapV2TokenDayDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Token : Swagger.Nullable_UString;
+       Daily_Volume_Token : Swagger.Nullable_UString;
+       Daily_Volume_Eth : Swagger.Nullable_UString;
+       Daily_Volume_Usd : Swagger.Nullable_UString;
+       Daily_Txns : Swagger.Nullable_UString;
+       Total_Liquidity_Token : Swagger.Nullable_UString;
+       Total_Liquidity_Eth : Swagger.Nullable_UString;
+       Total_Liquidity_Usd : Swagger.Nullable_UString;
+       Price_Usd : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package UniswapV2TokenDayDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV2TokenDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2TokenDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2TokenDayDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV2UniswapDayDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3757,30 +3667,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2UniswapDayDataV2DTO_Type_Vectors is
+   package UniswapV2UniswapDayDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2UniswapDayDataV2DTO_Type);
+                                  Element_Type => UniswapV2UniswapDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UniswapDayDataV2DTO_Type);
+                        Value : in UniswapV2UniswapDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UniswapDayDataV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2UniswapDayDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UniswapDayDataV2DTO_Type);
+                          Value : out UniswapV2UniswapDayDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UniswapDayDataV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2UniswapDayDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV2UserV2DTO_Type is
+   type UniswapV2UserDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3790,30 +3700,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV2UserV2DTO_Type_Vectors is
+   package UniswapV2UserDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV2UserV2DTO_Type);
+                                  Element_Type => UniswapV2UserDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UserV2DTO_Type);
+                        Value : in UniswapV2UserDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV2UserV2DTO_Type_Vectors.Vector);
+                        Value : in UniswapV2UserDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UserV2DTO_Type);
+                          Value : out UniswapV2UserDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV2UserV2DTO_Type_Vectors.Vector);
+                          Value : out UniswapV2UserDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3BurnV3DTO_Type is
+   type UniswapV3BurnDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3836,30 +3746,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3BurnV3DTO_Type_Vectors is
+   package UniswapV3BurnDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3BurnV3DTO_Type);
+                                  Element_Type => UniswapV3BurnDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3BurnV3DTO_Type);
+                        Value : in UniswapV3BurnDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3BurnV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3BurnDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3BurnV3DTO_Type);
+                          Value : out UniswapV3BurnDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3BurnV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3BurnDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3MintV3DTO_Type is
+   type UniswapV3MintDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3883,36 +3793,36 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3MintV3DTO_Type_Vectors is
+   package UniswapV3MintDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3MintV3DTO_Type);
+                                  Element_Type => UniswapV3MintDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3MintV3DTO_Type);
+                        Value : in UniswapV3MintDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3MintV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3MintDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3MintV3DTO_Type);
+                          Value : out UniswapV3MintDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3MintV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3MintDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3PoolHourDataV3DTO_Type is
+   type UniswapV3PoolDayDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Period_Start_Unix : Swagger.Nullable_Integer;
+       Date : Swagger.Nullable_Integer;
        Pool : Swagger.Nullable_UString;
        Liquidity : Swagger.Nullable_UString;
        Sqrt_Price : Swagger.Nullable_UString;
@@ -3934,30 +3844,30 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3PoolHourDataV3DTO_Type_Vectors is
+   package UniswapV3PoolDayDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3PoolHourDataV3DTO_Type);
+                                  Element_Type => UniswapV3PoolDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolHourDataV3DTO_Type);
+                        Value : in UniswapV3PoolDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PoolHourDataV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3PoolDayDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolHourDataV3DTO_Type);
+                          Value : out UniswapV3PoolDayDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PoolHourDataV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3PoolDayDataDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3PositionSnapshotV3DTO_Type is
+   type UniswapV3PositionDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -3965,8 +3875,10 @@ package .Models is
        Id : Swagger.Nullable_UString;
        Owner : Swagger.Nullable_UString;
        Pool : Swagger.Nullable_UString;
-       Position : Swagger.Nullable_UString;
-       Timestamp : Swagger.Nullable_UString;
+       Token_0 : Swagger.Nullable_UString;
+       Token_1 : Swagger.Nullable_UString;
+       Tick_Lower : Swagger.Nullable_UString;
+       Tick_Upper : Swagger.Nullable_UString;
        Liquidity : Swagger.Nullable_UString;
        Deposited_Token_0 : Swagger.Nullable_UString;
        Deposited_Token_1 : Swagger.Nullable_UString;
@@ -3980,30 +3892,118 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3PositionSnapshotV3DTO_Type_Vectors is
+   package UniswapV3PositionDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3PositionSnapshotV3DTO_Type);
+                                  Element_Type => UniswapV3PositionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PositionSnapshotV3DTO_Type);
+                        Value : in UniswapV3PositionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3PositionSnapshotV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3PositionDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PositionSnapshotV3DTO_Type);
+                          Value : out UniswapV3PositionDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3PositionSnapshotV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3PositionDTO_Type_Vectors.Vector);
 
 
 
 
-   type UniswapV3TransactionV3DTO_Type is
+   type UniswapV3TickDayDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Pool : Swagger.Nullable_UString;
+       Tick : Swagger.Nullable_UString;
+       Liquidity_Gross : Swagger.Nullable_UString;
+       Liquidity_Net : Swagger.Nullable_UString;
+       Volume_Token_0 : Swagger.Nullable_UString;
+       Volume_Token_1 : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Fees_Usd : Swagger.Nullable_UString;
+       Fee_Growth_Outside_0x_128 : Swagger.Nullable_UString;
+       Fee_Growth_Outside_1x_128 : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package UniswapV3TickDayDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV3TickDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TickDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TickDayDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TickDayDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TickDayDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV3TokenHourDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Period_Start_Unix : Swagger.Nullable_Integer;
+       Token : Swagger.Nullable_UString;
+       Volume : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Total_Value_Locked : Swagger.Nullable_UString;
+       Total_Value_Locked_Usd : Swagger.Nullable_UString;
+       Price_Usd : Swagger.Nullable_UString;
+       Fees_Usd : Swagger.Nullable_UString;
+       Open : Swagger.Nullable_UString;
+       High : Swagger.Nullable_UString;
+       Low : Swagger.Nullable_UString;
+       Close : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package UniswapV3TokenHourDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => UniswapV3TokenHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TokenHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in UniswapV3TokenHourDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TokenHourDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out UniswapV3TokenHourDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type UniswapV3TransactionDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
@@ -4015,25 +4015,25 @@ package .Models is
        Vid : Swagger.Nullable_Long;
      end record;
 
-   package UniswapV3TransactionV3DTO_Type_Vectors is
+   package UniswapV3TransactionDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => UniswapV3TransactionV3DTO_Type);
+                                  Element_Type => UniswapV3TransactionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3TransactionV3DTO_Type);
+                        Value : in UniswapV3TransactionDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in UniswapV3TransactionV3DTO_Type_Vectors.Vector);
+                        Value : in UniswapV3TransactionDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3TransactionV3DTO_Type);
+                          Value : out UniswapV3TransactionDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out UniswapV3TransactionV3DTO_Type_Vectors.Vector);
+                          Value : out UniswapV3TransactionDTO_Type_Vectors.Vector);
 
 
 

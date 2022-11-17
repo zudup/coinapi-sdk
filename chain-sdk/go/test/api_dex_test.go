@@ -22,6 +22,30 @@ func Test_openapi_DexApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
+    t.Run("Test DexApiService DexBatchsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexBatchsCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexDepositsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexDepositsCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test DexApiService DexGetBatchsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -147,6 +171,114 @@ func Test_openapi_DexApiService(t *testing.T) {
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.DexApi.DexGetWithdrawsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexOrdersCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexOrdersCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexPricesCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexPricesCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexSolutionsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexSolutionsCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexStatssCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexStatssCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexTokensCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexTokensCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexTradesCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexTradesCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexUsersCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexUsersCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexWithdrawRequestsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexWithdrawRequestsCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexWithdrawsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexWithdrawsCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

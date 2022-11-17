@@ -98,6 +98,56 @@
         done();
       });
     });
+    describe('cowOrdersCurrent', function() {
+      it('should call cowOrdersCurrent successfully', function(done) {
+        //uncomment below and update the code to test cowOrdersCurrent
+        //instance.cowOrdersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowSettlementsCurrent', function() {
+      it('should call cowSettlementsCurrent successfully', function(done) {
+        //uncomment below and update the code to test cowSettlementsCurrent
+        //instance.cowSettlementsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowTokensCurrent', function() {
+      it('should call cowTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test cowTokensCurrent
+        //instance.cowTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowTradesCurrent', function() {
+      it('should call cowTradesCurrent successfully', function(done) {
+        //uncomment below and update the code to test cowTradesCurrent
+        //instance.cowTradesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowUsersCurrent', function() {
+      it('should call cowUsersCurrent successfully', function(done) {
+        //uncomment below and update the code to test cowUsersCurrent
+        //instance.cowUsersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

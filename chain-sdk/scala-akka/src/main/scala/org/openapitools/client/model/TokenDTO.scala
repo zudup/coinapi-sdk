@@ -19,34 +19,37 @@ case class TokenDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
+  /*  */
+  vid: Option[Long] = None,
   /* Token address. */
   id: Option[String] = None,
-  /* Factory address. */
-  factory: Option[String] = None,
   /* Token symbol. */
   symbol: Option[String] = None,
   /* Token name. */
   name: Option[String] = None,
   /* Token decimals. */
-  decimals: Option[String] = None,
-  /* Total supply of liquidity token. */
-  totalSupply: Option[String] = None,
-  /* Amount of token traded all time across all pairs. */
+  decimals: Option[Int] = None,
+  totalSupply: Option[BigInteger] = None,
+  /* Volume in token units. */
   volume: Option[String] = None,
-  /* Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold). */
+  /* Volume in derived USD. */
   volumeUsd: Option[String] = None,
-  /* Amount of token in USD traded all time across pairs (no minimum liquidity threshold). */
+  /* Volume in USD even on pools with less reliable USD values. */
   untrackedVolumeUsd: Option[String] = None,
-  /* Amount of transactions all time in pairs including token. */
-  txCount: Option[String] = None,
-  /* Total amount of token provided as liquidity across all pairs. */
-  liquidity: Option[String] = None,
-  /* ETH per token. */
+  /* Fees in USD. */
+  feesUsd: Option[String] = None,
+  txCount: Option[BigInteger] = None,
+  poolCount: Option[BigInteger] = None,
+  /* Liquidity across all pools in token units. */
+  totalValueLocked: Option[String] = None,
+  /* Liquidity across all pools in derived USD. */
+  totalValueLockedUsd: Option[String] = None,
+  /* TVL derived in USD untracked. */
+  totalValueLockedUsdUntracked: Option[String] = None,
+  /* Derived price in ETH. */
   derivedEth: Option[String] = None,
-  /* Array of whitelisted pairs. */
-  whitelistPairs: Option[Seq[String]] = None,
-  /*  */
-  vid: Option[Long] = None,
+  /* Pools token is in that are white listed for USD pricing. */
+  whitelistPools: Option[Seq[String]] = None,
   tokenSymbol: Option[String] = None
 ) extends ApiModel
 

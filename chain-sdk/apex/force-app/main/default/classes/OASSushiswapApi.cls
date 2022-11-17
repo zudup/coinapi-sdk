@@ -68,6 +68,90 @@ public class OASSushiswapApi {
         );
     }
     /**
+     * Bundles (current)
+     * Gets bundles.
+     * @return List<OASSushiswapBundleDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapBundleDTO> sushiswapBundlesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapBundleDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/bundles/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapBundleDTO>.class
+        );
+    }
+    /**
+     * Burns (current)
+     * Gets burns.
+     * @return List<OASSushiswapBurnDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapBurnDTO> sushiswapBurnsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapBurnDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/burns/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapBurnDTO>.class
+        );
+    }
+    /**
+     * DayDatas (current)
+     * Gets dayDatas.
+     * @return List<OASSushiswapDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapDayDataDTO> sushiswapDayDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapDayDataDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/dayDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapDayDataDTO>.class
+        );
+    }
+    /**
+     * Factorys (current)
+     * Gets factorys.
+     * @return List<OASSushiswapFactoryDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapFactoryDTO> sushiswapFactorysCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapFactoryDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/factorys/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapFactoryDTO>.class
+        );
+    }
+    /**
      * Bundles (historical) 🔥
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -139,7 +223,7 @@ public class OASSushiswapApi {
     }
     /**
      * DayDatas (historical) 🔥
-     * Gets daydatas.
+     * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -161,7 +245,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/daydatas/historical', '',
+            'GET', '/dapps/sushiswap/dayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -207,7 +291,7 @@ public class OASSushiswapApi {
     }
     /**
      * HourDatas (historical) 🔥
-     * Gets hourdatas.
+     * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -229,7 +313,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/hourdatas/historical', '',
+            'GET', '/dapps/sushiswap/hourDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -241,7 +325,7 @@ public class OASSushiswapApi {
     }
     /**
      * LiquidityPositionSnapshots (historical) 🔥
-     * Gets liquiditypositionsnapshots.
+     * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -267,7 +351,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapLiquidityPositionSnapsho>) client.invoke(
-            'GET', '/dapps/sushiswap/liquiditypositionsnapshots/historical', '',
+            'GET', '/dapps/sushiswap/liquidityPositionSnapshots/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -279,7 +363,7 @@ public class OASSushiswapApi {
     }
     /**
      * LiquidityPositions (historical) 🔥
-     * Gets liquiditypositions.
+     * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -305,7 +389,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapLiquidityPositionDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/liquiditypositions/historical', '',
+            'GET', '/dapps/sushiswap/liquidityPositions/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -353,7 +437,7 @@ public class OASSushiswapApi {
     }
     /**
      * PairDayDatas (historical) 🔥
-     * Gets pairdaydatas.
+     * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -381,7 +465,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairdaydatas/historical', '',
+            'GET', '/dapps/sushiswap/pairDayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -393,7 +477,7 @@ public class OASSushiswapApi {
     }
     /**
      * PairHourDatas (historical) 🔥
-     * Gets pairhourdatas.
+     * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -417,7 +501,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairhourdatas/historical', '',
+            'GET', '/dapps/sushiswap/pairHourDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -489,27 +573,6 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @return List<OASSushiswapSwapDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASSushiswapSwapDTO> sushiswapGetSwapsCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASSushiswapSwapDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/swaps/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASSushiswapSwapDTO>.class
-        );
-    }
-    /**
      * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -547,7 +610,7 @@ public class OASSushiswapApi {
     }
     /**
      * TokenDayDatas (historical) 🔥
-     * Gets tokendaydatas.
+     * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -569,7 +632,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapTokenDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/tokendaydatas/historical', '',
+            'GET', '/dapps/sushiswap/tokenDayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -577,27 +640,6 @@ public class OASSushiswapApi {
             new List<String>(),
             new List<String>(),
             List<OASSushiswapTokenDayDataDTO>.class
-        );
-    }
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @return List<OASSushiswapTokenDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASSushiswapTokenDTO> sushiswapGetTokensCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASSushiswapTokenDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/tokens/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASSushiswapTokenDTO>.class
         );
     }
     /**
@@ -697,6 +739,268 @@ public class OASSushiswapApi {
 
         return (List<OASSushiswapUserDTO>) client.invoke(
             'GET', '/dapps/sushiswap/users/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapUserDTO>.class
+        );
+    }
+    /**
+     * HourDatas (current)
+     * Gets hourDatas.
+     * @return List<OASSushiswapHourDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapHourDataDTO> sushiswapHourDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapHourDataDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/hourDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapHourDataDTO>.class
+        );
+    }
+    /**
+     * LiquidityPositionSnapshots (current)
+     * Gets liquidityPositionSnapshots.
+     * @return List<OASSushiswapLiquidityPositionSnapsho>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapLiquidityPositionSnapsho> sushiswapLiquidityPositionSnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapLiquidityPositionSnapsho>) client.invoke(
+            'GET', '/dapps/sushiswap/liquidityPositionSnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapLiquidityPositionSnapsho>.class
+        );
+    }
+    /**
+     * LiquidityPositions (current)
+     * Gets liquidityPositions.
+     * @return List<OASSushiswapLiquidityPositionDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapLiquidityPositionDTO> sushiswapLiquidityPositionsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapLiquidityPositionDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/liquidityPositions/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapLiquidityPositionDTO>.class
+        );
+    }
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @return List<OASSushiswapMintDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapMintDTO> sushiswapMintsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapMintDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/mints/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapMintDTO>.class
+        );
+    }
+    /**
+     * PairDayDatas (current)
+     * Gets pairDayDatas.
+     * @return List<OASSushiswapPairDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapPairDayDataDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/pairDayDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapPairDayDataDTO>.class
+        );
+    }
+    /**
+     * PairHourDatas (current)
+     * Gets pairHourDatas.
+     * @return List<OASSushiswapPairHourDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapPairHourDataDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/pairHourDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapPairHourDataDTO>.class
+        );
+    }
+    /**
+     * Pairs (current)
+     * Gets pairs.
+     * @param id Pair contract address. (optional)
+     * @return List<OASSushiswapPairDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapPairDTO> sushiswapPairsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapPairDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/pairs/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapPairDTO>.class
+        );
+    }
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @return List<OASSushiswapSwapDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapSwapDTO> sushiswapSwapsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pair', (String) params.get('pair')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapSwapDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/swaps/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapSwapDTO>.class
+        );
+    }
+    /**
+     * TokenDayDatas (current)
+     * Gets tokenDayDatas.
+     * @return List<OASSushiswapTokenDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapTokenDayDataDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/tokenDayDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapTokenDayDataDTO>.class
+        );
+    }
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List<OASSushiswapTokenDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapTokenDTO> sushiswapTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapTokenDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/tokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapTokenDTO>.class
+        );
+    }
+    /**
+     * Transactions (current)
+     * Gets transactions.
+     * @return List<OASSushiswapTransactionDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapTransactionDTO> sushiswapTransactionsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapTransactionDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/transactions/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASSushiswapTransactionDTO>.class
+        );
+    }
+    /**
+     * Users (current)
+     * Gets users.
+     * @return List<OASSushiswapUserDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASSushiswapUserDTO> sushiswapUsersCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASSushiswapUserDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/users/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

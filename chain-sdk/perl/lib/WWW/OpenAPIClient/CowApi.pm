@@ -634,4 +634,249 @@ sub cow_get_users__historical {
     return $_response_object;
 }
 
+#
+# cow_orders__current
+#
+# Orders (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'cow_orders__current' } = {
+        summary => 'Orders (current)',
+        params => $params,
+        returns => 'ARRAY[CowOrderDTO]',
+        };
+}
+# @return ARRAY[CowOrderDTO]
+#
+sub cow_orders__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/cow/orders/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowOrderDTO]', $response);
+    return $_response_object;
+}
+
+#
+# cow_settlements__current
+#
+# Settlements (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'cow_settlements__current' } = {
+        summary => 'Settlements (current)',
+        params => $params,
+        returns => 'ARRAY[CowSettlementDTO]',
+        };
+}
+# @return ARRAY[CowSettlementDTO]
+#
+sub cow_settlements__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/cow/settlements/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowSettlementDTO]', $response);
+    return $_response_object;
+}
+
+#
+# cow_tokens__current
+#
+# Tokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'cow_tokens__current' } = {
+        summary => 'Tokens (current)',
+        params => $params,
+        returns => 'ARRAY[CowTokenDTO]',
+        };
+}
+# @return ARRAY[CowTokenDTO]
+#
+sub cow_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/cow/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# cow_trades__current
+#
+# Trades (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'cow_trades__current' } = {
+        summary => 'Trades (current)',
+        params => $params,
+        returns => 'ARRAY[CowTradeDTO]',
+        };
+}
+# @return ARRAY[CowTradeDTO]
+#
+sub cow_trades__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/cow/trades/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowTradeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# cow_users__current
+#
+# Users (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'cow_users__current' } = {
+        summary => 'Users (current)',
+        params => $params,
+        returns => 'ARRAY[CowUserDTO]',
+        };
+}
+# @return ARRAY[CowUserDTO]
+#
+sub cow_users__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/cow/users/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowUserDTO]', $response);
+    return $_response_object;
+}
+
 1;

@@ -15,183 +15,113 @@ Please update as you see appropriate
 ]]
 describe("uniswap_v3_api", function()
   local openapiclient_uniswap_v3_api = require "openapiclient.api.uniswap_v3_api"
-  -- unit tests for uniswap_v3_get_bundle_v3s__historical
-  describe("uniswap_v3_get_bundle_v3s__historical test", function()
+  -- unit tests for uniswap_v3_bundles__current
+  describe("uniswap_v3_bundles__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_bundles__current
-  describe("uniswap_v3_get_bundles__current test", function()
+  -- unit tests for uniswap_v3_burns__current
+  describe("uniswap_v3_burns__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_burn_v3s__historical
-  describe("uniswap_v3_get_burn_v3s__historical test", function()
+  -- unit tests for uniswap_v3_factorys__current
+  describe("uniswap_v3_factorys__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_burns__current
-  describe("uniswap_v3_get_burns__current test", function()
+  -- unit tests for uniswap_v3_get_bundles__historical
+  describe("uniswap_v3_get_bundles__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_day_data__current
-  describe("uniswap_v3_get_day_data__current test", function()
+  -- unit tests for uniswap_v3_get_burns__historical
+  describe("uniswap_v3_get_burns__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_factory__current
-  describe("uniswap_v3_get_factory__current test", function()
+  -- unit tests for uniswap_v3_get_factorys__historical
+  describe("uniswap_v3_get_factorys__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_factory_v3s__historical
-  describe("uniswap_v3_get_factory_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_mints__historical
+  describe("uniswap_v3_get_mints__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_mint_v3s__historical
-  describe("uniswap_v3_get_mint_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_pool_day_datas__historical
+  describe("uniswap_v3_get_pool_day_datas__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_mints__current
-  describe("uniswap_v3_get_mints__current test", function()
+  -- unit tests for uniswap_v3_get_pool_hour_datas__historical
+  describe("uniswap_v3_get_pool_hour_datas__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pool_day_data_v3s__historical
-  describe("uniswap_v3_get_pool_day_data_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_pools__historical
+  describe("uniswap_v3_get_pools__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pool_hour_data_v3s__historical
-  describe("uniswap_v3_get_pool_hour_data_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_position_snapshots__historical
+  describe("uniswap_v3_get_position_snapshots__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pool_v3s__historical
-  describe("uniswap_v3_get_pool_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_positions__historical
+  describe("uniswap_v3_get_positions__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pools__current
-  describe("uniswap_v3_get_pools__current test", function()
+  -- unit tests for uniswap_v3_get_swaps__historical
+  describe("uniswap_v3_get_swaps__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pools_day_data__current
-  describe("uniswap_v3_get_pools_day_data__current test", function()
+  -- unit tests for uniswap_v3_get_tick_day_datas__historical
+  describe("uniswap_v3_get_tick_day_datas__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_pools_hour_data__current
-  describe("uniswap_v3_get_pools_hour_data__current test", function()
+  -- unit tests for uniswap_v3_get_ticks__historical
+  describe("uniswap_v3_get_ticks__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_position_snapshot_v3s__historical
-  describe("uniswap_v3_get_position_snapshot_v3s__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_position_v3s__historical
-  describe("uniswap_v3_get_position_v3s__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_positions__current
-  describe("uniswap_v3_get_positions__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_positions_snapshots__current
-  describe("uniswap_v3_get_positions_snapshots__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_swap_v3s__historical
-  describe("uniswap_v3_get_swap_v3s__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_swaps__current
-  describe("uniswap_v3_get_swaps__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_tick_day_data_v3s__historical
-  describe("uniswap_v3_get_tick_day_data_v3s__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_tick_v3s__historical
-  describe("uniswap_v3_get_tick_v3s__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_ticks__current
-  describe("uniswap_v3_get_ticks__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_ticks_day_data__current
-  describe("uniswap_v3_get_ticks_day_data__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v3_get_token_hour_data_v3s__historical
-  describe("uniswap_v3_get_token_hour_data_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_token_hour_datas__historical
+  describe("uniswap_v3_get_token_hour_datas__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -204,43 +134,120 @@ describe("uniswap_v3_api", function()
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_token_v3s__historical
-  describe("uniswap_v3_get_token_v3s__historical test", function()
+  -- unit tests for uniswap_v3_get_tokens__historical
+  describe("uniswap_v3_get_tokens__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_tokens__current
-  describe("uniswap_v3_get_tokens__current test", function()
+  -- unit tests for uniswap_v3_get_transactions__historical
+  describe("uniswap_v3_get_transactions__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_tokens_day_data__current
-  describe("uniswap_v3_get_tokens_day_data__current test", function()
+  -- unit tests for uniswap_v3_get_uniswap_day_datas__historical
+  describe("uniswap_v3_get_uniswap_day_datas__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_tokens_hour_data__current
-  describe("uniswap_v3_get_tokens_hour_data__current test", function()
+  -- unit tests for uniswap_v3_mints__current
+  describe("uniswap_v3_mints__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_transaction_v3s__historical
-  describe("uniswap_v3_get_transaction_v3s__historical test", function()
+  -- unit tests for uniswap_v3_pool_day_datas__current
+  describe("uniswap_v3_pool_day_datas__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for uniswap_v3_get_uniswap_day_data_v3s__historical
-  describe("uniswap_v3_get_uniswap_day_data_v3s__historical test", function()
+  -- unit tests for uniswap_v3_pool_hour_datas__current
+  describe("uniswap_v3_pool_hour_datas__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_pools__current
+  describe("uniswap_v3_pools__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_position_snapshots__current
+  describe("uniswap_v3_position_snapshots__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_positions__current
+  describe("uniswap_v3_positions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_swaps__current
+  describe("uniswap_v3_swaps__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_tick_day_datas__current
+  describe("uniswap_v3_tick_day_datas__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_ticks__current
+  describe("uniswap_v3_ticks__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_token_hour_datas__current
+  describe("uniswap_v3_token_hour_datas__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_token_v3_day_datas__current
+  describe("uniswap_v3_token_v3_day_datas__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_tokens__current
+  describe("uniswap_v3_tokens__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_transactions__current
+  describe("uniswap_v3_transactions__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v3_uniswap_day_datas__current
+  describe("uniswap_v3_uniswap_day_datas__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

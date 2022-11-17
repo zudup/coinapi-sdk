@@ -48,6 +48,196 @@
   }
 
   describe('CurveApi', function() {
+    describe('curveAccountsCurrent', function() {
+      it('should call curveAccountsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveAccountsCurrent
+        //instance.curveAccountsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveAddLiquidityEventsCurrent', function() {
+      it('should call curveAddLiquidityEventsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveAddLiquidityEventsCurrent
+        //instance.curveAddLiquidityEventsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveAdminFeeChangeLogsCurrent', function() {
+      it('should call curveAdminFeeChangeLogsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveAdminFeeChangeLogsCurrent
+        //instance.curveAdminFeeChangeLogsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveAmplificationCoeffChangeLogsCurrent', function() {
+      it('should call curveAmplificationCoeffChangeLogsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveAmplificationCoeffChangeLogsCurrent
+        //instance.curveAmplificationCoeffChangeLogsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveCoinsCurrent', function() {
+      it('should call curveCoinsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveCoinsCurrent
+        //instance.curveCoinsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveContractVersionsCurrent', function() {
+      it('should call curveContractVersionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveContractVersionsCurrent
+        //instance.curveContractVersionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveContractsCurrent', function() {
+      it('should call curveContractsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveContractsCurrent
+        //instance.curveContractsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveDailyVolumesCurrent', function() {
+      it('should call curveDailyVolumesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveDailyVolumesCurrent
+        //instance.curveDailyVolumesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveExchangesCurrent', function() {
+      it('should call curveExchangesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveExchangesCurrent
+        //instance.curveExchangesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveFeeChangeLogsCurrent', function() {
+      it('should call curveFeeChangeLogsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveFeeChangeLogsCurrent
+        //instance.curveFeeChangeLogsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeDepositsCurrent', function() {
+      it('should call curveGaugeDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeDepositsCurrent
+        //instance.curveGaugeDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeLiquiditysCurrent', function() {
+      it('should call curveGaugeLiquiditysCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeLiquiditysCurrent
+        //instance.curveGaugeLiquiditysCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeTotalWeightsCurrent', function() {
+      it('should call curveGaugeTotalWeightsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeTotalWeightsCurrent
+        //instance.curveGaugeTotalWeightsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeTypeWeightsCurrent', function() {
+      it('should call curveGaugeTypeWeightsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeTypeWeightsCurrent
+        //instance.curveGaugeTypeWeightsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeTypesCurrent', function() {
+      it('should call curveGaugeTypesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeTypesCurrent
+        //instance.curveGaugeTypesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeWeightVotesCurrent', function() {
+      it('should call curveGaugeWeightVotesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeWeightVotesCurrent
+        //instance.curveGaugeWeightVotesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeWeightsCurrent', function() {
+      it('should call curveGaugeWeightsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeWeightsCurrent
+        //instance.curveGaugeWeightsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugeWithdrawsCurrent', function() {
+      it('should call curveGaugeWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeWithdrawsCurrent
+        //instance.curveGaugeWithdrawsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveGaugesCurrent', function() {
+      it('should call curveGaugesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugesCurrent
+        //instance.curveGaugesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('curveGetAccountsHistorical', function() {
       it('should call curveGetAccountsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetAccountsHistorical
@@ -362,6 +552,136 @@
       it('should call curveGetWeeklyVolumesHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetWeeklyVolumesHistorical
         //instance.curveGetWeeklyVolumesHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveHourlyVolumesCurrent', function() {
+      it('should call curveHourlyVolumesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveHourlyVolumesCurrent
+        //instance.curveHourlyVolumesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveLpTokensCurrent', function() {
+      it('should call curveLpTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveLpTokensCurrent
+        //instance.curveLpTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curvePoolsCurrent', function() {
+      it('should call curvePoolsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curvePoolsCurrent
+        //instance.curvePoolsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveProposalVotesCurrent', function() {
+      it('should call curveProposalVotesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveProposalVotesCurrent
+        //instance.curveProposalVotesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveProposalsCurrent', function() {
+      it('should call curveProposalsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveProposalsCurrent
+        //instance.curveProposalsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveRemoveLiquidityEventsCurrent', function() {
+      it('should call curveRemoveLiquidityEventsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveRemoveLiquidityEventsCurrent
+        //instance.curveRemoveLiquidityEventsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveRemoveLiquidityOneEventsCurrent', function() {
+      it('should call curveRemoveLiquidityOneEventsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveRemoveLiquidityOneEventsCurrent
+        //instance.curveRemoveLiquidityOneEventsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveSystemStatesCurrent', function() {
+      it('should call curveSystemStatesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveSystemStatesCurrent
+        //instance.curveSystemStatesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveTokensCurrent', function() {
+      it('should call curveTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveTokensCurrent
+        //instance.curveTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveTransferOwnershipEventsCurrent', function() {
+      it('should call curveTransferOwnershipEventsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveTransferOwnershipEventsCurrent
+        //instance.curveTransferOwnershipEventsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveUnderlyingCoinsCurrent', function() {
+      it('should call curveUnderlyingCoinsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveUnderlyingCoinsCurrent
+        //instance.curveUnderlyingCoinsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveVotingAppsCurrent', function() {
+      it('should call curveVotingAppsCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveVotingAppsCurrent
+        //instance.curveVotingAppsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('curveWeeklyVolumesCurrent', function() {
+      it('should call curveWeeklyVolumesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveWeeklyVolumesCurrent
+        //instance.curveWeeklyVolumesCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -82,9 +82,6 @@ newtype EndDate = EndDate { unEndDate :: DateTime } deriving (P.Eq, P.Show)
 -- ** FilterPoolId
 newtype FilterPoolId = FilterPoolId { unFilterPoolId :: Text } deriving (P.Eq, P.Show)
 
--- ** FilterTokenId
-newtype FilterTokenId = FilterTokenId { unFilterTokenId :: Text } deriving (P.Eq, P.Show)
-
 -- ** Id
 newtype Id = Id { unId :: Text } deriving (P.Eq, P.Show)
 
@@ -5047,23 +5044,23 @@ mkSushiswapUserDTO =
   , sushiswapUserDTOVid = Nothing
   }
 
--- ** UniswapV2BundleV2DTO
--- | UniswapV2BundleV2DTO
+-- ** UniswapV2BundleDTO
+-- | UniswapV2BundleDTO
 -- The Bundle is used as a global store of derived ETH price in USD. Because there is no guaranteed common base token across pairs, a global reference of USD price is useful for deriving other USD values. The Bundle entity stores an updated weighted average of ETH<->Stablecoin pair prices. This provides a strong estimate for the USD price of ETH.
-data UniswapV2BundleV2DTO = UniswapV2BundleV2DTO
-  { uniswapV2BundleV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2BundleV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2BundleV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2BundleV2DTOId :: !(Maybe Text) -- ^ "id" - Constant 1.
-  , uniswapV2BundleV2DTOEthPrice :: !(Maybe Text) -- ^ "eth_price" - Derived price of ETH in USD based on stablecoin pairs.
-  , uniswapV2BundleV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2BundleV2DTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+data UniswapV2BundleDTO = UniswapV2BundleDTO
+  { uniswapV2BundleDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2BundleDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2BundleDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2BundleDTOId :: !(Maybe Text) -- ^ "id" - Constant 1.
+  , uniswapV2BundleDTOEthPrice :: !(Maybe Text) -- ^ "eth_price" - Derived price of ETH in USD based on stablecoin pairs.
+  , uniswapV2BundleDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2BundleDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2BundleV2DTO
-instance A.FromJSON UniswapV2BundleV2DTO where
-  parseJSON = A.withObject "UniswapV2BundleV2DTO" $ \o ->
-    UniswapV2BundleV2DTO
+-- | FromJSON UniswapV2BundleDTO
+instance A.FromJSON UniswapV2BundleDTO where
+  parseJSON = A.withObject "UniswapV2BundleDTO" $ \o ->
+    UniswapV2BundleDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5072,62 +5069,62 @@ instance A.FromJSON UniswapV2BundleV2DTO where
       <*> (o .:? "vid")
       <*> (o .:? "block_range")
 
--- | ToJSON UniswapV2BundleV2DTO
-instance A.ToJSON UniswapV2BundleV2DTO where
-  toJSON UniswapV2BundleV2DTO {..} =
+-- | ToJSON UniswapV2BundleDTO
+instance A.ToJSON UniswapV2BundleDTO where
+  toJSON UniswapV2BundleDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2BundleV2DTOEntryTime
-      , "recv_time" .= uniswapV2BundleV2DTORecvTime
-      , "block_number" .= uniswapV2BundleV2DTOBlockNumber
-      , "id" .= uniswapV2BundleV2DTOId
-      , "eth_price" .= uniswapV2BundleV2DTOEthPrice
-      , "vid" .= uniswapV2BundleV2DTOVid
-      , "block_range" .= uniswapV2BundleV2DTOBlockRange
+      [ "entry_time" .= uniswapV2BundleDTOEntryTime
+      , "recv_time" .= uniswapV2BundleDTORecvTime
+      , "block_number" .= uniswapV2BundleDTOBlockNumber
+      , "id" .= uniswapV2BundleDTOId
+      , "eth_price" .= uniswapV2BundleDTOEthPrice
+      , "vid" .= uniswapV2BundleDTOVid
+      , "block_range" .= uniswapV2BundleDTOBlockRange
       ]
 
 
--- | Construct a value of type 'UniswapV2BundleV2DTO' (by applying it's required fields, if any)
-mkUniswapV2BundleV2DTO
-  :: UniswapV2BundleV2DTO
-mkUniswapV2BundleV2DTO =
-  UniswapV2BundleV2DTO
-  { uniswapV2BundleV2DTOEntryTime = Nothing
-  , uniswapV2BundleV2DTORecvTime = Nothing
-  , uniswapV2BundleV2DTOBlockNumber = Nothing
-  , uniswapV2BundleV2DTOId = Nothing
-  , uniswapV2BundleV2DTOEthPrice = Nothing
-  , uniswapV2BundleV2DTOVid = Nothing
-  , uniswapV2BundleV2DTOBlockRange = Nothing
+-- | Construct a value of type 'UniswapV2BundleDTO' (by applying it's required fields, if any)
+mkUniswapV2BundleDTO
+  :: UniswapV2BundleDTO
+mkUniswapV2BundleDTO =
+  UniswapV2BundleDTO
+  { uniswapV2BundleDTOEntryTime = Nothing
+  , uniswapV2BundleDTORecvTime = Nothing
+  , uniswapV2BundleDTOBlockNumber = Nothing
+  , uniswapV2BundleDTOId = Nothing
+  , uniswapV2BundleDTOEthPrice = Nothing
+  , uniswapV2BundleDTOVid = Nothing
+  , uniswapV2BundleDTOBlockRange = Nothing
   }
 
--- ** UniswapV2BurnV2DTO
--- | UniswapV2BurnV2DTO
+-- ** UniswapV2BurnDTO
+-- | UniswapV2BurnDTO
 -- Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
-data UniswapV2BurnV2DTO = UniswapV2BurnV2DTO
-  { uniswapV2BurnV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2BurnV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2BurnV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2BurnV2DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in the transaction burn array
-  , uniswapV2BurnV2DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Burn was included in.
-  , uniswapV2BurnV2DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Burn, used to sort recent liquidity removals.
-  , uniswapV2BurnV2DTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
-  , uniswapV2BurnV2DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens burned.
-  , uniswapV2BurnV2DTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity removal.
-  , uniswapV2BurnV2DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 removed.
-  , uniswapV2BurnV2DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 removed.
-  , uniswapV2BurnV2DTOTo :: !(Maybe Text) -- ^ "to" - Recipient of tokens.
-  , uniswapV2BurnV2DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
-  , uniswapV2BurnV2DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived USD value of token0 amount plus token1 amount.
-  , uniswapV2BurnV2DTONeedsComplete :: !(Maybe Bool) -- ^ "needs_complete" - 
-  , uniswapV2BurnV2DTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
-  , uniswapV2BurnV2DTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of tokens sent to fee recipient (if fee is on).
-  , uniswapV2BurnV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV2BurnDTO = UniswapV2BurnDTO
+  { uniswapV2BurnDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2BurnDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2BurnDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2BurnDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in the transaction burn array
+  , uniswapV2BurnDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Burn was included in.
+  , uniswapV2BurnDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Burn, used to sort recent liquidity removals.
+  , uniswapV2BurnDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , uniswapV2BurnDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens burned.
+  , uniswapV2BurnDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity removal.
+  , uniswapV2BurnDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 removed.
+  , uniswapV2BurnDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 removed.
+  , uniswapV2BurnDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of tokens.
+  , uniswapV2BurnDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
+  , uniswapV2BurnDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived USD value of token0 amount plus token1 amount.
+  , uniswapV2BurnDTONeedsComplete :: !(Maybe Bool) -- ^ "needs_complete" - 
+  , uniswapV2BurnDTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
+  , uniswapV2BurnDTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of tokens sent to fee recipient (if fee is on).
+  , uniswapV2BurnDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2BurnV2DTO
-instance A.FromJSON UniswapV2BurnV2DTO where
-  parseJSON = A.withObject "UniswapV2BurnV2DTO" $ \o ->
-    UniswapV2BurnV2DTO
+-- | FromJSON UniswapV2BurnDTO
+instance A.FromJSON UniswapV2BurnDTO where
+  parseJSON = A.withObject "UniswapV2BurnDTO" $ \o ->
+    UniswapV2BurnDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5147,84 +5144,141 @@ instance A.FromJSON UniswapV2BurnV2DTO where
       <*> (o .:? "fee_liquidity")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV2BurnV2DTO
-instance A.ToJSON UniswapV2BurnV2DTO where
-  toJSON UniswapV2BurnV2DTO {..} =
+-- | ToJSON UniswapV2BurnDTO
+instance A.ToJSON UniswapV2BurnDTO where
+  toJSON UniswapV2BurnDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2BurnV2DTOEntryTime
-      , "recv_time" .= uniswapV2BurnV2DTORecvTime
-      , "block_number" .= uniswapV2BurnV2DTOBlockNumber
-      , "id" .= uniswapV2BurnV2DTOId
-      , "transaction" .= uniswapV2BurnV2DTOTransaction
-      , "timestamp" .= uniswapV2BurnV2DTOTimestamp
-      , "pair" .= uniswapV2BurnV2DTOPair
-      , "liquidity" .= uniswapV2BurnV2DTOLiquidity
-      , "sender" .= uniswapV2BurnV2DTOSender
-      , "amount_0" .= uniswapV2BurnV2DTOAmount0
-      , "amount_1" .= uniswapV2BurnV2DTOAmount1
-      , "to" .= uniswapV2BurnV2DTOTo
-      , "log_index" .= uniswapV2BurnV2DTOLogIndex
-      , "amount_usd" .= uniswapV2BurnV2DTOAmountUsd
-      , "needs_complete" .= uniswapV2BurnV2DTONeedsComplete
-      , "fee_to" .= uniswapV2BurnV2DTOFeeTo
-      , "fee_liquidity" .= uniswapV2BurnV2DTOFeeLiquidity
-      , "vid" .= uniswapV2BurnV2DTOVid
+      [ "entry_time" .= uniswapV2BurnDTOEntryTime
+      , "recv_time" .= uniswapV2BurnDTORecvTime
+      , "block_number" .= uniswapV2BurnDTOBlockNumber
+      , "id" .= uniswapV2BurnDTOId
+      , "transaction" .= uniswapV2BurnDTOTransaction
+      , "timestamp" .= uniswapV2BurnDTOTimestamp
+      , "pair" .= uniswapV2BurnDTOPair
+      , "liquidity" .= uniswapV2BurnDTOLiquidity
+      , "sender" .= uniswapV2BurnDTOSender
+      , "amount_0" .= uniswapV2BurnDTOAmount0
+      , "amount_1" .= uniswapV2BurnDTOAmount1
+      , "to" .= uniswapV2BurnDTOTo
+      , "log_index" .= uniswapV2BurnDTOLogIndex
+      , "amount_usd" .= uniswapV2BurnDTOAmountUsd
+      , "needs_complete" .= uniswapV2BurnDTONeedsComplete
+      , "fee_to" .= uniswapV2BurnDTOFeeTo
+      , "fee_liquidity" .= uniswapV2BurnDTOFeeLiquidity
+      , "vid" .= uniswapV2BurnDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV2BurnV2DTO' (by applying it's required fields, if any)
-mkUniswapV2BurnV2DTO
-  :: UniswapV2BurnV2DTO
-mkUniswapV2BurnV2DTO =
-  UniswapV2BurnV2DTO
-  { uniswapV2BurnV2DTOEntryTime = Nothing
-  , uniswapV2BurnV2DTORecvTime = Nothing
-  , uniswapV2BurnV2DTOBlockNumber = Nothing
-  , uniswapV2BurnV2DTOId = Nothing
-  , uniswapV2BurnV2DTOTransaction = Nothing
-  , uniswapV2BurnV2DTOTimestamp = Nothing
-  , uniswapV2BurnV2DTOPair = Nothing
-  , uniswapV2BurnV2DTOLiquidity = Nothing
-  , uniswapV2BurnV2DTOSender = Nothing
-  , uniswapV2BurnV2DTOAmount0 = Nothing
-  , uniswapV2BurnV2DTOAmount1 = Nothing
-  , uniswapV2BurnV2DTOTo = Nothing
-  , uniswapV2BurnV2DTOLogIndex = Nothing
-  , uniswapV2BurnV2DTOAmountUsd = Nothing
-  , uniswapV2BurnV2DTONeedsComplete = Nothing
-  , uniswapV2BurnV2DTOFeeTo = Nothing
-  , uniswapV2BurnV2DTOFeeLiquidity = Nothing
-  , uniswapV2BurnV2DTOVid = Nothing
+-- | Construct a value of type 'UniswapV2BurnDTO' (by applying it's required fields, if any)
+mkUniswapV2BurnDTO
+  :: UniswapV2BurnDTO
+mkUniswapV2BurnDTO =
+  UniswapV2BurnDTO
+  { uniswapV2BurnDTOEntryTime = Nothing
+  , uniswapV2BurnDTORecvTime = Nothing
+  , uniswapV2BurnDTOBlockNumber = Nothing
+  , uniswapV2BurnDTOId = Nothing
+  , uniswapV2BurnDTOTransaction = Nothing
+  , uniswapV2BurnDTOTimestamp = Nothing
+  , uniswapV2BurnDTOPair = Nothing
+  , uniswapV2BurnDTOLiquidity = Nothing
+  , uniswapV2BurnDTOSender = Nothing
+  , uniswapV2BurnDTOAmount0 = Nothing
+  , uniswapV2BurnDTOAmount1 = Nothing
+  , uniswapV2BurnDTOTo = Nothing
+  , uniswapV2BurnDTOLogIndex = Nothing
+  , uniswapV2BurnDTOAmountUsd = Nothing
+  , uniswapV2BurnDTONeedsComplete = Nothing
+  , uniswapV2BurnDTOFeeTo = Nothing
+  , uniswapV2BurnDTOFeeLiquidity = Nothing
+  , uniswapV2BurnDTOVid = Nothing
   }
 
--- ** UniswapV2LiquidityPositionSnapshotV2DTO
--- | UniswapV2LiquidityPositionSnapshotV2DTO
--- This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
-data UniswapV2LiquidityPositionSnapshotV2DTO = UniswapV2LiquidityPositionSnapshotV2DTO
-  { uniswapV2LiquidityPositionSnapshotV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2LiquidityPositionSnapshotV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2LiquidityPositionSnapshotV2DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition :: !(Maybe Text) -- ^ "liquidity_position" - Reference to LP identifier.
-  , uniswapV2LiquidityPositionSnapshotV2DTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlock :: !(Maybe Int) -- ^ "block" - Number of block in which LP snapshot was recorded.
-  , uniswapV2LiquidityPositionSnapshotV2DTOUser :: !(Maybe Text) -- ^ "user" - Reference to user.
-  , uniswapV2LiquidityPositionSnapshotV2DTOPair :: !(Maybe Text) -- ^ "pair" - Reference to the pair liquidity is being provided on.
-  , uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd :: !(Maybe Text) -- ^ "token_0_price_usd" - Snapshot of token0 price.
-  , uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd :: !(Maybe Text) -- ^ "token_1_price_usd" - Snapshot of token0 price.
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Snapshot of pair token0 reserves.
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Snapshot of pair token1 reserves.
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Snapshot of pair reserves in USD.
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply :: !(Maybe Text) -- ^ "liquidity_token_total_supply" - Snapshot of pool token supply.
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Snapshot of users pool token balance.
-  , uniswapV2LiquidityPositionSnapshotV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+-- ** UniswapV2LiquidityPositionDTO
+-- | UniswapV2LiquidityPositionDTO
+-- This entity is used to store data about a user's liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.
+data UniswapV2LiquidityPositionDTO = UniswapV2LiquidityPositionDTO
+  { uniswapV2LiquidityPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2LiquidityPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2LiquidityPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2LiquidityPositionDTOId :: !(Maybe Text) -- ^ "id" - User address and pair address concatenated with a dash.
+  , uniswapV2LiquidityPositionDTOUser :: !(Maybe Text) -- ^ "user" - Reference to user.
+  , uniswapV2LiquidityPositionDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to the pair liquidity is being provided on.
+  , uniswapV2LiquidityPositionDTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Amount of LP tokens minted for this position.
+  , uniswapV2LiquidityPositionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2LiquidityPositionSnapshotV2DTO
-instance A.FromJSON UniswapV2LiquidityPositionSnapshotV2DTO where
-  parseJSON = A.withObject "UniswapV2LiquidityPositionSnapshotV2DTO" $ \o ->
-    UniswapV2LiquidityPositionSnapshotV2DTO
+-- | FromJSON UniswapV2LiquidityPositionDTO
+instance A.FromJSON UniswapV2LiquidityPositionDTO where
+  parseJSON = A.withObject "UniswapV2LiquidityPositionDTO" $ \o ->
+    UniswapV2LiquidityPositionDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "user")
+      <*> (o .:? "pair")
+      <*> (o .:? "liquidity_token_balance")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV2LiquidityPositionDTO
+instance A.ToJSON UniswapV2LiquidityPositionDTO where
+  toJSON UniswapV2LiquidityPositionDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV2LiquidityPositionDTOEntryTime
+      , "recv_time" .= uniswapV2LiquidityPositionDTORecvTime
+      , "block_number" .= uniswapV2LiquidityPositionDTOBlockNumber
+      , "id" .= uniswapV2LiquidityPositionDTOId
+      , "user" .= uniswapV2LiquidityPositionDTOUser
+      , "pair" .= uniswapV2LiquidityPositionDTOPair
+      , "liquidity_token_balance" .= uniswapV2LiquidityPositionDTOLiquidityTokenBalance
+      , "vid" .= uniswapV2LiquidityPositionDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV2LiquidityPositionDTO' (by applying it's required fields, if any)
+mkUniswapV2LiquidityPositionDTO
+  :: UniswapV2LiquidityPositionDTO
+mkUniswapV2LiquidityPositionDTO =
+  UniswapV2LiquidityPositionDTO
+  { uniswapV2LiquidityPositionDTOEntryTime = Nothing
+  , uniswapV2LiquidityPositionDTORecvTime = Nothing
+  , uniswapV2LiquidityPositionDTOBlockNumber = Nothing
+  , uniswapV2LiquidityPositionDTOId = Nothing
+  , uniswapV2LiquidityPositionDTOUser = Nothing
+  , uniswapV2LiquidityPositionDTOPair = Nothing
+  , uniswapV2LiquidityPositionDTOLiquidityTokenBalance = Nothing
+  , uniswapV2LiquidityPositionDTOVid = Nothing
+  }
+
+-- ** UniswapV2LiquidityPositionSnapshotDTO
+-- | UniswapV2LiquidityPositionSnapshotDTO
+-- This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
+data UniswapV2LiquidityPositionSnapshotDTO = UniswapV2LiquidityPositionSnapshotDTO
+  { uniswapV2LiquidityPositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2LiquidityPositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2LiquidityPositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2LiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityPosition :: !(Maybe Text) -- ^ "liquidity_position" - Reference to LP identifier.
+  , uniswapV2LiquidityPositionSnapshotDTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
+  , uniswapV2LiquidityPositionSnapshotDTOBlock :: !(Maybe Int) -- ^ "block" - Number of block in which LP snapshot was recorded.
+  , uniswapV2LiquidityPositionSnapshotDTOUser :: !(Maybe Text) -- ^ "user" - Reference to user.
+  , uniswapV2LiquidityPositionSnapshotDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to the pair liquidity is being provided on.
+  , uniswapV2LiquidityPositionSnapshotDTOToken0PriceUsd :: !(Maybe Text) -- ^ "token_0_price_usd" - Snapshot of token0 price.
+  , uniswapV2LiquidityPositionSnapshotDTOToken1PriceUsd :: !(Maybe Text) -- ^ "token_1_price_usd" - Snapshot of token0 price.
+  , uniswapV2LiquidityPositionSnapshotDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Snapshot of pair token0 reserves.
+  , uniswapV2LiquidityPositionSnapshotDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Snapshot of pair token1 reserves.
+  , uniswapV2LiquidityPositionSnapshotDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Snapshot of pair reserves in USD.
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenTotalSupply :: !(Maybe Text) -- ^ "liquidity_token_total_supply" - Snapshot of pool token supply.
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Snapshot of users pool token balance.
+  , uniswapV2LiquidityPositionSnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2LiquidityPositionSnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV2LiquidityPositionSnapshotDTO
+instance A.FromJSON UniswapV2LiquidityPositionSnapshotDTO where
+  parseJSON = A.withObject "UniswapV2LiquidityPositionSnapshotDTO" $ \o ->
+    UniswapV2LiquidityPositionSnapshotDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5244,141 +5298,84 @@ instance A.FromJSON UniswapV2LiquidityPositionSnapshotV2DTO where
       <*> (o .:? "vid")
       <*> (o .:? "block_range")
 
--- | ToJSON UniswapV2LiquidityPositionSnapshotV2DTO
-instance A.ToJSON UniswapV2LiquidityPositionSnapshotV2DTO where
-  toJSON UniswapV2LiquidityPositionSnapshotV2DTO {..} =
+-- | ToJSON UniswapV2LiquidityPositionSnapshotDTO
+instance A.ToJSON UniswapV2LiquidityPositionSnapshotDTO where
+  toJSON UniswapV2LiquidityPositionSnapshotDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2LiquidityPositionSnapshotV2DTOEntryTime
-      , "recv_time" .= uniswapV2LiquidityPositionSnapshotV2DTORecvTime
-      , "block_number" .= uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber
-      , "id" .= uniswapV2LiquidityPositionSnapshotV2DTOId
-      , "liquidity_position" .= uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition
-      , "timestamp" .= uniswapV2LiquidityPositionSnapshotV2DTOTimestamp
-      , "block" .= uniswapV2LiquidityPositionSnapshotV2DTOBlock
-      , "user" .= uniswapV2LiquidityPositionSnapshotV2DTOUser
-      , "pair" .= uniswapV2LiquidityPositionSnapshotV2DTOPair
-      , "token_0_price_usd" .= uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd
-      , "token_1_price_usd" .= uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd
-      , "reserve_0" .= uniswapV2LiquidityPositionSnapshotV2DTOReserve0
-      , "reserve_1" .= uniswapV2LiquidityPositionSnapshotV2DTOReserve1
-      , "reserve_usd" .= uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd
-      , "liquidity_token_total_supply" .= uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply
-      , "liquidity_token_balance" .= uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance
-      , "vid" .= uniswapV2LiquidityPositionSnapshotV2DTOVid
-      , "block_range" .= uniswapV2LiquidityPositionSnapshotV2DTOBlockRange
+      [ "entry_time" .= uniswapV2LiquidityPositionSnapshotDTOEntryTime
+      , "recv_time" .= uniswapV2LiquidityPositionSnapshotDTORecvTime
+      , "block_number" .= uniswapV2LiquidityPositionSnapshotDTOBlockNumber
+      , "id" .= uniswapV2LiquidityPositionSnapshotDTOId
+      , "liquidity_position" .= uniswapV2LiquidityPositionSnapshotDTOLiquidityPosition
+      , "timestamp" .= uniswapV2LiquidityPositionSnapshotDTOTimestamp
+      , "block" .= uniswapV2LiquidityPositionSnapshotDTOBlock
+      , "user" .= uniswapV2LiquidityPositionSnapshotDTOUser
+      , "pair" .= uniswapV2LiquidityPositionSnapshotDTOPair
+      , "token_0_price_usd" .= uniswapV2LiquidityPositionSnapshotDTOToken0PriceUsd
+      , "token_1_price_usd" .= uniswapV2LiquidityPositionSnapshotDTOToken1PriceUsd
+      , "reserve_0" .= uniswapV2LiquidityPositionSnapshotDTOReserve0
+      , "reserve_1" .= uniswapV2LiquidityPositionSnapshotDTOReserve1
+      , "reserve_usd" .= uniswapV2LiquidityPositionSnapshotDTOReserveUsd
+      , "liquidity_token_total_supply" .= uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenTotalSupply
+      , "liquidity_token_balance" .= uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenBalance
+      , "vid" .= uniswapV2LiquidityPositionSnapshotDTOVid
+      , "block_range" .= uniswapV2LiquidityPositionSnapshotDTOBlockRange
       ]
 
 
--- | Construct a value of type 'UniswapV2LiquidityPositionSnapshotV2DTO' (by applying it's required fields, if any)
-mkUniswapV2LiquidityPositionSnapshotV2DTO
-  :: UniswapV2LiquidityPositionSnapshotV2DTO
-mkUniswapV2LiquidityPositionSnapshotV2DTO =
-  UniswapV2LiquidityPositionSnapshotV2DTO
-  { uniswapV2LiquidityPositionSnapshotV2DTOEntryTime = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTORecvTime = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOId = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOTimestamp = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlock = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOUser = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOPair = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserve0 = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserve1 = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOVid = Nothing
-  , uniswapV2LiquidityPositionSnapshotV2DTOBlockRange = Nothing
+-- | Construct a value of type 'UniswapV2LiquidityPositionSnapshotDTO' (by applying it's required fields, if any)
+mkUniswapV2LiquidityPositionSnapshotDTO
+  :: UniswapV2LiquidityPositionSnapshotDTO
+mkUniswapV2LiquidityPositionSnapshotDTO =
+  UniswapV2LiquidityPositionSnapshotDTO
+  { uniswapV2LiquidityPositionSnapshotDTOEntryTime = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTORecvTime = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOBlockNumber = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOId = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityPosition = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOTimestamp = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOBlock = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOUser = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOPair = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOToken0PriceUsd = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOToken1PriceUsd = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOReserve0 = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOReserve1 = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOReserveUsd = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenTotalSupply = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOLiquidityTokenBalance = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOVid = Nothing
+  , uniswapV2LiquidityPositionSnapshotDTOBlockRange = Nothing
   }
 
--- ** UniswapV2LiquidityPositionV2DTO
--- | UniswapV2LiquidityPositionV2DTO
--- This entity is used to store data about a user's liquidity position. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more.
-data UniswapV2LiquidityPositionV2DTO = UniswapV2LiquidityPositionV2DTO
-  { uniswapV2LiquidityPositionV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2LiquidityPositionV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2LiquidityPositionV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2LiquidityPositionV2DTOId :: !(Maybe Text) -- ^ "id" - User address and pair address concatenated with a dash.
-  , uniswapV2LiquidityPositionV2DTOUser :: !(Maybe Text) -- ^ "user" - Reference to user.
-  , uniswapV2LiquidityPositionV2DTOPair :: !(Maybe Text) -- ^ "pair" - Reference to the pair liquidity is being provided on.
-  , uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Amount of LP tokens minted for this position.
-  , uniswapV2LiquidityPositionV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV2LiquidityPositionV2DTO
-instance A.FromJSON UniswapV2LiquidityPositionV2DTO where
-  parseJSON = A.withObject "UniswapV2LiquidityPositionV2DTO" $ \o ->
-    UniswapV2LiquidityPositionV2DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "user")
-      <*> (o .:? "pair")
-      <*> (o .:? "liquidity_token_balance")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV2LiquidityPositionV2DTO
-instance A.ToJSON UniswapV2LiquidityPositionV2DTO where
-  toJSON UniswapV2LiquidityPositionV2DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV2LiquidityPositionV2DTOEntryTime
-      , "recv_time" .= uniswapV2LiquidityPositionV2DTORecvTime
-      , "block_number" .= uniswapV2LiquidityPositionV2DTOBlockNumber
-      , "id" .= uniswapV2LiquidityPositionV2DTOId
-      , "user" .= uniswapV2LiquidityPositionV2DTOUser
-      , "pair" .= uniswapV2LiquidityPositionV2DTOPair
-      , "liquidity_token_balance" .= uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance
-      , "vid" .= uniswapV2LiquidityPositionV2DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV2LiquidityPositionV2DTO' (by applying it's required fields, if any)
-mkUniswapV2LiquidityPositionV2DTO
-  :: UniswapV2LiquidityPositionV2DTO
-mkUniswapV2LiquidityPositionV2DTO =
-  UniswapV2LiquidityPositionV2DTO
-  { uniswapV2LiquidityPositionV2DTOEntryTime = Nothing
-  , uniswapV2LiquidityPositionV2DTORecvTime = Nothing
-  , uniswapV2LiquidityPositionV2DTOBlockNumber = Nothing
-  , uniswapV2LiquidityPositionV2DTOId = Nothing
-  , uniswapV2LiquidityPositionV2DTOUser = Nothing
-  , uniswapV2LiquidityPositionV2DTOPair = Nothing
-  , uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance = Nothing
-  , uniswapV2LiquidityPositionV2DTOVid = Nothing
-  }
-
--- ** UniswapV2MintV2DTO
--- | UniswapV2MintV2DTO
+-- ** UniswapV2MintDTO
+-- | UniswapV2MintDTO
 -- Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
-data UniswapV2MintV2DTO = UniswapV2MintV2DTO
-  { uniswapV2MintV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2MintV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2MintV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2MintV2DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in the transaction mint array.
-  , uniswapV2MintV2DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Mint was included in.
-  , uniswapV2MintV2DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Mint, used to sort recent liquidity provisions.
-  , uniswapV2MintV2DTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
-  , uniswapV2MintV2DTOTo :: !(Maybe Text) -- ^ "to" - Recipient of liquidity tokens.
-  , uniswapV2MintV2DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens minted.
-  , uniswapV2MintV2DTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity provision.
-  , uniswapV2MintV2DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 provided.
-  , uniswapV2MintV2DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 provided.
-  , uniswapV2MintV2DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
-  , uniswapV2MintV2DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived USD value of token0 amount plus token1 amount.
-  , uniswapV2MintV2DTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
-  , uniswapV2MintV2DTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of liquidity sent to fee recipient (if fee is on).
-  , uniswapV2MintV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2MintV2DTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+data UniswapV2MintDTO = UniswapV2MintDTO
+  { uniswapV2MintDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2MintDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2MintDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2MintDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in the transaction mint array.
+  , uniswapV2MintDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Mint was included in.
+  , uniswapV2MintDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Mint, used to sort recent liquidity provisions.
+  , uniswapV2MintDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , uniswapV2MintDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of liquidity tokens.
+  , uniswapV2MintDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens minted.
+  , uniswapV2MintDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity provision.
+  , uniswapV2MintDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 provided.
+  , uniswapV2MintDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 provided.
+  , uniswapV2MintDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
+  , uniswapV2MintDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived USD value of token0 amount plus token1 amount.
+  , uniswapV2MintDTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
+  , uniswapV2MintDTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of liquidity sent to fee recipient (if fee is on).
+  , uniswapV2MintDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2MintDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2MintV2DTO
-instance A.FromJSON UniswapV2MintV2DTO where
-  parseJSON = A.withObject "UniswapV2MintV2DTO" $ \o ->
-    UniswapV2MintV2DTO
+-- | FromJSON UniswapV2MintDTO
+instance A.FromJSON UniswapV2MintDTO where
+  parseJSON = A.withObject "UniswapV2MintDTO" $ \o ->
+    UniswapV2MintDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5398,267 +5395,89 @@ instance A.FromJSON UniswapV2MintV2DTO where
       <*> (o .:? "vid")
       <*> (o .:? "block_range")
 
--- | ToJSON UniswapV2MintV2DTO
-instance A.ToJSON UniswapV2MintV2DTO where
-  toJSON UniswapV2MintV2DTO {..} =
+-- | ToJSON UniswapV2MintDTO
+instance A.ToJSON UniswapV2MintDTO where
+  toJSON UniswapV2MintDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2MintV2DTOEntryTime
-      , "recv_time" .= uniswapV2MintV2DTORecvTime
-      , "block_number" .= uniswapV2MintV2DTOBlockNumber
-      , "id" .= uniswapV2MintV2DTOId
-      , "transaction" .= uniswapV2MintV2DTOTransaction
-      , "timestamp" .= uniswapV2MintV2DTOTimestamp
-      , "pair" .= uniswapV2MintV2DTOPair
-      , "to" .= uniswapV2MintV2DTOTo
-      , "liquidity" .= uniswapV2MintV2DTOLiquidity
-      , "sender" .= uniswapV2MintV2DTOSender
-      , "amount_0" .= uniswapV2MintV2DTOAmount0
-      , "amount_1" .= uniswapV2MintV2DTOAmount1
-      , "log_index" .= uniswapV2MintV2DTOLogIndex
-      , "amount_usd" .= uniswapV2MintV2DTOAmountUsd
-      , "fee_to" .= uniswapV2MintV2DTOFeeTo
-      , "fee_liquidity" .= uniswapV2MintV2DTOFeeLiquidity
-      , "vid" .= uniswapV2MintV2DTOVid
-      , "block_range" .= uniswapV2MintV2DTOBlockRange
+      [ "entry_time" .= uniswapV2MintDTOEntryTime
+      , "recv_time" .= uniswapV2MintDTORecvTime
+      , "block_number" .= uniswapV2MintDTOBlockNumber
+      , "id" .= uniswapV2MintDTOId
+      , "transaction" .= uniswapV2MintDTOTransaction
+      , "timestamp" .= uniswapV2MintDTOTimestamp
+      , "pair" .= uniswapV2MintDTOPair
+      , "to" .= uniswapV2MintDTOTo
+      , "liquidity" .= uniswapV2MintDTOLiquidity
+      , "sender" .= uniswapV2MintDTOSender
+      , "amount_0" .= uniswapV2MintDTOAmount0
+      , "amount_1" .= uniswapV2MintDTOAmount1
+      , "log_index" .= uniswapV2MintDTOLogIndex
+      , "amount_usd" .= uniswapV2MintDTOAmountUsd
+      , "fee_to" .= uniswapV2MintDTOFeeTo
+      , "fee_liquidity" .= uniswapV2MintDTOFeeLiquidity
+      , "vid" .= uniswapV2MintDTOVid
+      , "block_range" .= uniswapV2MintDTOBlockRange
       ]
 
 
--- | Construct a value of type 'UniswapV2MintV2DTO' (by applying it's required fields, if any)
-mkUniswapV2MintV2DTO
-  :: UniswapV2MintV2DTO
-mkUniswapV2MintV2DTO =
-  UniswapV2MintV2DTO
-  { uniswapV2MintV2DTOEntryTime = Nothing
-  , uniswapV2MintV2DTORecvTime = Nothing
-  , uniswapV2MintV2DTOBlockNumber = Nothing
-  , uniswapV2MintV2DTOId = Nothing
-  , uniswapV2MintV2DTOTransaction = Nothing
-  , uniswapV2MintV2DTOTimestamp = Nothing
-  , uniswapV2MintV2DTOPair = Nothing
-  , uniswapV2MintV2DTOTo = Nothing
-  , uniswapV2MintV2DTOLiquidity = Nothing
-  , uniswapV2MintV2DTOSender = Nothing
-  , uniswapV2MintV2DTOAmount0 = Nothing
-  , uniswapV2MintV2DTOAmount1 = Nothing
-  , uniswapV2MintV2DTOLogIndex = Nothing
-  , uniswapV2MintV2DTOAmountUsd = Nothing
-  , uniswapV2MintV2DTOFeeTo = Nothing
-  , uniswapV2MintV2DTOFeeLiquidity = Nothing
-  , uniswapV2MintV2DTOVid = Nothing
-  , uniswapV2MintV2DTOBlockRange = Nothing
+-- | Construct a value of type 'UniswapV2MintDTO' (by applying it's required fields, if any)
+mkUniswapV2MintDTO
+  :: UniswapV2MintDTO
+mkUniswapV2MintDTO =
+  UniswapV2MintDTO
+  { uniswapV2MintDTOEntryTime = Nothing
+  , uniswapV2MintDTORecvTime = Nothing
+  , uniswapV2MintDTOBlockNumber = Nothing
+  , uniswapV2MintDTOId = Nothing
+  , uniswapV2MintDTOTransaction = Nothing
+  , uniswapV2MintDTOTimestamp = Nothing
+  , uniswapV2MintDTOPair = Nothing
+  , uniswapV2MintDTOTo = Nothing
+  , uniswapV2MintDTOLiquidity = Nothing
+  , uniswapV2MintDTOSender = Nothing
+  , uniswapV2MintDTOAmount0 = Nothing
+  , uniswapV2MintDTOAmount1 = Nothing
+  , uniswapV2MintDTOLogIndex = Nothing
+  , uniswapV2MintDTOAmountUsd = Nothing
+  , uniswapV2MintDTOFeeTo = Nothing
+  , uniswapV2MintDTOFeeLiquidity = Nothing
+  , uniswapV2MintDTOVid = Nothing
+  , uniswapV2MintDTOBlockRange = Nothing
   }
 
--- ** UniswapV2PairDayDataV2DTO
--- | UniswapV2PairDayDataV2DTO
--- Tracks pair data across each day.
-data UniswapV2PairDayDataV2DTO = UniswapV2PairDayDataV2DTO
-  { uniswapV2PairDayDataV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2PairDayDataV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2PairDayDataV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2PairDayDataV2DTOId :: !(Maybe Text) -- ^ "id" - 
-  , uniswapV2PairDayDataV2DTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
-  , uniswapV2PairDayDataV2DTOPairAddress :: !(Maybe Text) -- ^ "pair_address" - Address for pair contract.
-  , uniswapV2PairDayDataV2DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0.
-  , uniswapV2PairDayDataV2DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1.
-  , uniswapV2PairDayDataV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
-  , uniswapV2PairDayDataV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
-  , uniswapV2PairDayDataV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
-  , uniswapV2PairDayDataV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
-  , uniswapV2PairDayDataV2DTODailyVolumeToken0 :: !(Maybe Text) -- ^ "daily_volume_token_0" - Total amount of token0 swapped throughout day.
-  , uniswapV2PairDayDataV2DTODailyVolumeToken1 :: !(Maybe Text) -- ^ "daily_volume_token_1" - Total amount of token1 swapped throughout day.
-  , uniswapV2PairDayDataV2DTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Total volume within pair throughout day.
-  , uniswapV2PairDayDataV2DTODailyTxns :: !(Maybe Text) -- ^ "daily_txns" - Amount of transactions on pair throughout day.
-  , uniswapV2PairDayDataV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV2PairDayDataV2DTO
-instance A.FromJSON UniswapV2PairDayDataV2DTO where
-  parseJSON = A.withObject "UniswapV2PairDayDataV2DTO" $ \o ->
-    UniswapV2PairDayDataV2DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "date")
-      <*> (o .:? "pair_address")
-      <*> (o .:? "token_0")
-      <*> (o .:? "token_1")
-      <*> (o .:? "reserve_0")
-      <*> (o .:? "reserve_1")
-      <*> (o .:? "total_supply")
-      <*> (o .:? "reserve_usd")
-      <*> (o .:? "daily_volume_token_0")
-      <*> (o .:? "daily_volume_token_1")
-      <*> (o .:? "daily_volume_usd")
-      <*> (o .:? "daily_txns")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV2PairDayDataV2DTO
-instance A.ToJSON UniswapV2PairDayDataV2DTO where
-  toJSON UniswapV2PairDayDataV2DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV2PairDayDataV2DTOEntryTime
-      , "recv_time" .= uniswapV2PairDayDataV2DTORecvTime
-      , "block_number" .= uniswapV2PairDayDataV2DTOBlockNumber
-      , "id" .= uniswapV2PairDayDataV2DTOId
-      , "date" .= uniswapV2PairDayDataV2DTODate
-      , "pair_address" .= uniswapV2PairDayDataV2DTOPairAddress
-      , "token_0" .= uniswapV2PairDayDataV2DTOToken0
-      , "token_1" .= uniswapV2PairDayDataV2DTOToken1
-      , "reserve_0" .= uniswapV2PairDayDataV2DTOReserve0
-      , "reserve_1" .= uniswapV2PairDayDataV2DTOReserve1
-      , "total_supply" .= uniswapV2PairDayDataV2DTOTotalSupply
-      , "reserve_usd" .= uniswapV2PairDayDataV2DTOReserveUsd
-      , "daily_volume_token_0" .= uniswapV2PairDayDataV2DTODailyVolumeToken0
-      , "daily_volume_token_1" .= uniswapV2PairDayDataV2DTODailyVolumeToken1
-      , "daily_volume_usd" .= uniswapV2PairDayDataV2DTODailyVolumeUsd
-      , "daily_txns" .= uniswapV2PairDayDataV2DTODailyTxns
-      , "vid" .= uniswapV2PairDayDataV2DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV2PairDayDataV2DTO' (by applying it's required fields, if any)
-mkUniswapV2PairDayDataV2DTO
-  :: UniswapV2PairDayDataV2DTO
-mkUniswapV2PairDayDataV2DTO =
-  UniswapV2PairDayDataV2DTO
-  { uniswapV2PairDayDataV2DTOEntryTime = Nothing
-  , uniswapV2PairDayDataV2DTORecvTime = Nothing
-  , uniswapV2PairDayDataV2DTOBlockNumber = Nothing
-  , uniswapV2PairDayDataV2DTOId = Nothing
-  , uniswapV2PairDayDataV2DTODate = Nothing
-  , uniswapV2PairDayDataV2DTOPairAddress = Nothing
-  , uniswapV2PairDayDataV2DTOToken0 = Nothing
-  , uniswapV2PairDayDataV2DTOToken1 = Nothing
-  , uniswapV2PairDayDataV2DTOReserve0 = Nothing
-  , uniswapV2PairDayDataV2DTOReserve1 = Nothing
-  , uniswapV2PairDayDataV2DTOTotalSupply = Nothing
-  , uniswapV2PairDayDataV2DTOReserveUsd = Nothing
-  , uniswapV2PairDayDataV2DTODailyVolumeToken0 = Nothing
-  , uniswapV2PairDayDataV2DTODailyVolumeToken1 = Nothing
-  , uniswapV2PairDayDataV2DTODailyVolumeUsd = Nothing
-  , uniswapV2PairDayDataV2DTODailyTxns = Nothing
-  , uniswapV2PairDayDataV2DTOVid = Nothing
-  }
-
--- ** UniswapV2PairHourDataV2DTO
--- | UniswapV2PairHourDataV2DTO
--- Tracks pair data across each hour.
-data UniswapV2PairHourDataV2DTO = UniswapV2PairHourDataV2DTO
-  { uniswapV2PairHourDataV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2PairHourDataV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2PairHourDataV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2PairHourDataV2DTOId :: !(Maybe Text) -- ^ "id" - 
-  , uniswapV2PairHourDataV2DTOHourStartUnix :: !(Maybe Int) -- ^ "hour_start_unix" - Unix timestamp for start of hour.
-  , uniswapV2PairHourDataV2DTOPair :: !(Maybe Text) -- ^ "pair" - Address for pair contract.
-  , uniswapV2PairHourDataV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
-  , uniswapV2PairHourDataV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
-  , uniswapV2PairHourDataV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
-  , uniswapV2PairHourDataV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
-  , uniswapV2PairHourDataV2DTOHourlyVolumeToken0 :: !(Maybe Text) -- ^ "hourly_volume_token_0" - Total amount of token0 swapped throughout hour.
-  , uniswapV2PairHourDataV2DTOHourlyVolumeToken1 :: !(Maybe Text) -- ^ "hourly_volume_token_1" - Total amount of token1 swapped throughout hour.
-  , uniswapV2PairHourDataV2DTOHourlyVolumeUsd :: !(Maybe Text) -- ^ "hourly_volume_usd" - Total volume within pair throughout hour.
-  , uniswapV2PairHourDataV2DTOHourlyTxns :: !(Maybe Text) -- ^ "hourly_txns" - Amount of transactions on pair throughout hour.
-  , uniswapV2PairHourDataV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV2PairHourDataV2DTO
-instance A.FromJSON UniswapV2PairHourDataV2DTO where
-  parseJSON = A.withObject "UniswapV2PairHourDataV2DTO" $ \o ->
-    UniswapV2PairHourDataV2DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "hour_start_unix")
-      <*> (o .:? "pair")
-      <*> (o .:? "reserve_0")
-      <*> (o .:? "reserve_1")
-      <*> (o .:? "total_supply")
-      <*> (o .:? "reserve_usd")
-      <*> (o .:? "hourly_volume_token_0")
-      <*> (o .:? "hourly_volume_token_1")
-      <*> (o .:? "hourly_volume_usd")
-      <*> (o .:? "hourly_txns")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV2PairHourDataV2DTO
-instance A.ToJSON UniswapV2PairHourDataV2DTO where
-  toJSON UniswapV2PairHourDataV2DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV2PairHourDataV2DTOEntryTime
-      , "recv_time" .= uniswapV2PairHourDataV2DTORecvTime
-      , "block_number" .= uniswapV2PairHourDataV2DTOBlockNumber
-      , "id" .= uniswapV2PairHourDataV2DTOId
-      , "hour_start_unix" .= uniswapV2PairHourDataV2DTOHourStartUnix
-      , "pair" .= uniswapV2PairHourDataV2DTOPair
-      , "reserve_0" .= uniswapV2PairHourDataV2DTOReserve0
-      , "reserve_1" .= uniswapV2PairHourDataV2DTOReserve1
-      , "total_supply" .= uniswapV2PairHourDataV2DTOTotalSupply
-      , "reserve_usd" .= uniswapV2PairHourDataV2DTOReserveUsd
-      , "hourly_volume_token_0" .= uniswapV2PairHourDataV2DTOHourlyVolumeToken0
-      , "hourly_volume_token_1" .= uniswapV2PairHourDataV2DTOHourlyVolumeToken1
-      , "hourly_volume_usd" .= uniswapV2PairHourDataV2DTOHourlyVolumeUsd
-      , "hourly_txns" .= uniswapV2PairHourDataV2DTOHourlyTxns
-      , "vid" .= uniswapV2PairHourDataV2DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV2PairHourDataV2DTO' (by applying it's required fields, if any)
-mkUniswapV2PairHourDataV2DTO
-  :: UniswapV2PairHourDataV2DTO
-mkUniswapV2PairHourDataV2DTO =
-  UniswapV2PairHourDataV2DTO
-  { uniswapV2PairHourDataV2DTOEntryTime = Nothing
-  , uniswapV2PairHourDataV2DTORecvTime = Nothing
-  , uniswapV2PairHourDataV2DTOBlockNumber = Nothing
-  , uniswapV2PairHourDataV2DTOId = Nothing
-  , uniswapV2PairHourDataV2DTOHourStartUnix = Nothing
-  , uniswapV2PairHourDataV2DTOPair = Nothing
-  , uniswapV2PairHourDataV2DTOReserve0 = Nothing
-  , uniswapV2PairHourDataV2DTOReserve1 = Nothing
-  , uniswapV2PairHourDataV2DTOTotalSupply = Nothing
-  , uniswapV2PairHourDataV2DTOReserveUsd = Nothing
-  , uniswapV2PairHourDataV2DTOHourlyVolumeToken0 = Nothing
-  , uniswapV2PairHourDataV2DTOHourlyVolumeToken1 = Nothing
-  , uniswapV2PairHourDataV2DTOHourlyVolumeUsd = Nothing
-  , uniswapV2PairHourDataV2DTOHourlyTxns = Nothing
-  , uniswapV2PairHourDataV2DTOVid = Nothing
-  }
-
--- ** UniswapV2PairV2DTO
--- | UniswapV2PairV2DTO
+-- ** UniswapV2PairDTO
+-- | UniswapV2PairDTO
 -- Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
-data UniswapV2PairV2DTO = UniswapV2PairV2DTO
-  { uniswapV2PairV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2PairV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2PairV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2PairV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2PairV2DTOId :: !(Maybe Text) -- ^ "id" - Pair contract address.
-  , uniswapV2PairV2DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
-  , uniswapV2PairV2DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
-  , uniswapV2PairV2DTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0.
-  , uniswapV2PairV2DTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1.
-  , uniswapV2PairV2DTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
-  , uniswapV2PairV2DTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - Total liquidity in pair stored as an amount of ETH.
-  , uniswapV2PairV2DTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Total liquidity amount in pair stored as an amount of USD.
-  , uniswapV2PairV2DTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - Total liquidity with only tracked amount.
-  , uniswapV2PairV2DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
-  , uniswapV2PairV2DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
-  , uniswapV2PairV2DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Amount of token0 swapped on this pair.
-  , uniswapV2PairV2DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Amount of token1 swapped on this pair.
-  , uniswapV2PairV2DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
-  , uniswapV2PairV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
-  , uniswapV2PairV2DTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
-  , uniswapV2PairV2DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Timestamp contract was created.
-  , uniswapV2PairV2DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Total number of LPs.
-  , uniswapV2PairV2DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
+data UniswapV2PairDTO = UniswapV2PairDTO
+  { uniswapV2PairDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2PairDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2PairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2PairDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2PairDTOId :: !(Maybe Text) -- ^ "id" - Pair contract address.
+  , uniswapV2PairDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , uniswapV2PairDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
+  , uniswapV2PairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0.
+  , uniswapV2PairDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1.
+  , uniswapV2PairDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
+  , uniswapV2PairDTOReserveEth :: !(Maybe Text) -- ^ "reserve_eth" - Total liquidity in pair stored as an amount of ETH.
+  , uniswapV2PairDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Total liquidity amount in pair stored as an amount of USD.
+  , uniswapV2PairDTOTrackedReserveEth :: !(Maybe Text) -- ^ "tracked_reserve_eth" - Total liquidity with only tracked amount.
+  , uniswapV2PairDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
+  , uniswapV2PairDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
+  , uniswapV2PairDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Amount of token0 swapped on this pair.
+  , uniswapV2PairDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Amount of token1 swapped on this pair.
+  , uniswapV2PairDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold).
+  , uniswapV2PairDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold.
+  , uniswapV2PairDTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
+  , uniswapV2PairDTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Timestamp contract was created.
+  , uniswapV2PairDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Total number of LPs.
+  , uniswapV2PairDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2PairV2DTO
-instance A.FromJSON UniswapV2PairV2DTO where
-  parseJSON = A.withObject "UniswapV2PairV2DTO" $ \o ->
-    UniswapV2PairV2DTO
+-- | FromJSON UniswapV2PairDTO
+instance A.FromJSON UniswapV2PairDTO where
+  parseJSON = A.withObject "UniswapV2PairDTO" $ \o ->
+    UniswapV2PairDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5683,98 +5502,276 @@ instance A.FromJSON UniswapV2PairV2DTO where
       <*> (o .:? "liquidity_provider_count")
       <*> (o .:? "evaluated_ask")
 
--- | ToJSON UniswapV2PairV2DTO
-instance A.ToJSON UniswapV2PairV2DTO where
-  toJSON UniswapV2PairV2DTO {..} =
+-- | ToJSON UniswapV2PairDTO
+instance A.ToJSON UniswapV2PairDTO where
+  toJSON UniswapV2PairDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2PairV2DTOEntryTime
-      , "recv_time" .= uniswapV2PairV2DTORecvTime
-      , "block_number" .= uniswapV2PairV2DTOBlockNumber
-      , "vid" .= uniswapV2PairV2DTOVid
-      , "id" .= uniswapV2PairV2DTOId
-      , "token_0" .= uniswapV2PairV2DTOToken0
-      , "token_1" .= uniswapV2PairV2DTOToken1
-      , "reserve_0" .= uniswapV2PairV2DTOReserve0
-      , "reserve_1" .= uniswapV2PairV2DTOReserve1
-      , "total_supply" .= uniswapV2PairV2DTOTotalSupply
-      , "reserve_eth" .= uniswapV2PairV2DTOReserveEth
-      , "reserve_usd" .= uniswapV2PairV2DTOReserveUsd
-      , "tracked_reserve_eth" .= uniswapV2PairV2DTOTrackedReserveEth
-      , "token_0_price" .= uniswapV2PairV2DTOToken0Price
-      , "token_1_price" .= uniswapV2PairV2DTOToken1Price
-      , "volume_token_0" .= uniswapV2PairV2DTOVolumeToken0
-      , "volume_token_1" .= uniswapV2PairV2DTOVolumeToken1
-      , "volume_usd" .= uniswapV2PairV2DTOVolumeUsd
-      , "untracked_volume_usd" .= uniswapV2PairV2DTOUntrackedVolumeUsd
-      , "tx_count" .= uniswapV2PairV2DTOTxCount
-      , "created_at_timestamp" .= uniswapV2PairV2DTOCreatedAtTimestamp
-      , "liquidity_provider_count" .= uniswapV2PairV2DTOLiquidityProviderCount
-      , "evaluated_ask" .= uniswapV2PairV2DTOEvaluatedAsk
+      [ "entry_time" .= uniswapV2PairDTOEntryTime
+      , "recv_time" .= uniswapV2PairDTORecvTime
+      , "block_number" .= uniswapV2PairDTOBlockNumber
+      , "vid" .= uniswapV2PairDTOVid
+      , "id" .= uniswapV2PairDTOId
+      , "token_0" .= uniswapV2PairDTOToken0
+      , "token_1" .= uniswapV2PairDTOToken1
+      , "reserve_0" .= uniswapV2PairDTOReserve0
+      , "reserve_1" .= uniswapV2PairDTOReserve1
+      , "total_supply" .= uniswapV2PairDTOTotalSupply
+      , "reserve_eth" .= uniswapV2PairDTOReserveEth
+      , "reserve_usd" .= uniswapV2PairDTOReserveUsd
+      , "tracked_reserve_eth" .= uniswapV2PairDTOTrackedReserveEth
+      , "token_0_price" .= uniswapV2PairDTOToken0Price
+      , "token_1_price" .= uniswapV2PairDTOToken1Price
+      , "volume_token_0" .= uniswapV2PairDTOVolumeToken0
+      , "volume_token_1" .= uniswapV2PairDTOVolumeToken1
+      , "volume_usd" .= uniswapV2PairDTOVolumeUsd
+      , "untracked_volume_usd" .= uniswapV2PairDTOUntrackedVolumeUsd
+      , "tx_count" .= uniswapV2PairDTOTxCount
+      , "created_at_timestamp" .= uniswapV2PairDTOCreatedAtTimestamp
+      , "liquidity_provider_count" .= uniswapV2PairDTOLiquidityProviderCount
+      , "evaluated_ask" .= uniswapV2PairDTOEvaluatedAsk
       ]
 
 
--- | Construct a value of type 'UniswapV2PairV2DTO' (by applying it's required fields, if any)
-mkUniswapV2PairV2DTO
-  :: UniswapV2PairV2DTO
-mkUniswapV2PairV2DTO =
-  UniswapV2PairV2DTO
-  { uniswapV2PairV2DTOEntryTime = Nothing
-  , uniswapV2PairV2DTORecvTime = Nothing
-  , uniswapV2PairV2DTOBlockNumber = Nothing
-  , uniswapV2PairV2DTOVid = Nothing
-  , uniswapV2PairV2DTOId = Nothing
-  , uniswapV2PairV2DTOToken0 = Nothing
-  , uniswapV2PairV2DTOToken1 = Nothing
-  , uniswapV2PairV2DTOReserve0 = Nothing
-  , uniswapV2PairV2DTOReserve1 = Nothing
-  , uniswapV2PairV2DTOTotalSupply = Nothing
-  , uniswapV2PairV2DTOReserveEth = Nothing
-  , uniswapV2PairV2DTOReserveUsd = Nothing
-  , uniswapV2PairV2DTOTrackedReserveEth = Nothing
-  , uniswapV2PairV2DTOToken0Price = Nothing
-  , uniswapV2PairV2DTOToken1Price = Nothing
-  , uniswapV2PairV2DTOVolumeToken0 = Nothing
-  , uniswapV2PairV2DTOVolumeToken1 = Nothing
-  , uniswapV2PairV2DTOVolumeUsd = Nothing
-  , uniswapV2PairV2DTOUntrackedVolumeUsd = Nothing
-  , uniswapV2PairV2DTOTxCount = Nothing
-  , uniswapV2PairV2DTOCreatedAtTimestamp = Nothing
-  , uniswapV2PairV2DTOLiquidityProviderCount = Nothing
-  , uniswapV2PairV2DTOEvaluatedAsk = Nothing
+-- | Construct a value of type 'UniswapV2PairDTO' (by applying it's required fields, if any)
+mkUniswapV2PairDTO
+  :: UniswapV2PairDTO
+mkUniswapV2PairDTO =
+  UniswapV2PairDTO
+  { uniswapV2PairDTOEntryTime = Nothing
+  , uniswapV2PairDTORecvTime = Nothing
+  , uniswapV2PairDTOBlockNumber = Nothing
+  , uniswapV2PairDTOVid = Nothing
+  , uniswapV2PairDTOId = Nothing
+  , uniswapV2PairDTOToken0 = Nothing
+  , uniswapV2PairDTOToken1 = Nothing
+  , uniswapV2PairDTOReserve0 = Nothing
+  , uniswapV2PairDTOReserve1 = Nothing
+  , uniswapV2PairDTOTotalSupply = Nothing
+  , uniswapV2PairDTOReserveEth = Nothing
+  , uniswapV2PairDTOReserveUsd = Nothing
+  , uniswapV2PairDTOTrackedReserveEth = Nothing
+  , uniswapV2PairDTOToken0Price = Nothing
+  , uniswapV2PairDTOToken1Price = Nothing
+  , uniswapV2PairDTOVolumeToken0 = Nothing
+  , uniswapV2PairDTOVolumeToken1 = Nothing
+  , uniswapV2PairDTOVolumeUsd = Nothing
+  , uniswapV2PairDTOUntrackedVolumeUsd = Nothing
+  , uniswapV2PairDTOTxCount = Nothing
+  , uniswapV2PairDTOCreatedAtTimestamp = Nothing
+  , uniswapV2PairDTOLiquidityProviderCount = Nothing
+  , uniswapV2PairDTOEvaluatedAsk = Nothing
   }
 
--- ** UniswapV2SwapV2DTO
--- | UniswapV2SwapV2DTO
--- Swap are created for each token swap within a pair.
-data UniswapV2SwapV2DTO = UniswapV2SwapV2DTO
-  { uniswapV2SwapV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2SwapV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2SwapV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2SwapV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2SwapV2DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in Transaction swap array.
-  , uniswapV2SwapV2DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to transaction swap was included in.
-  , uniswapV2SwapV2DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of swap, used for sorted lookups.
-  , uniswapV2SwapV2DTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
-  , uniswapV2SwapV2DTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the swap.
-  , uniswapV2SwapV2DTOFrom :: !(Maybe Text) -- ^ "from" - The EOA (Externally Owned Account) that initiated the transaction.
-  , uniswapV2SwapV2DTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - Amount of token0 sold.
-  , uniswapV2SwapV2DTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - Amount of token1 sold.
-  , uniswapV2SwapV2DTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - Amount of token0 received.
-  , uniswapV2SwapV2DTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - Amount of token1 received.
-  , uniswapV2SwapV2DTOTo :: !(Maybe Text) -- ^ "to" - Recipient of output tokens.
-  , uniswapV2SwapV2DTOLogIndex :: !(Maybe NumericsBigInteger) -- ^ "log_index"
-  , uniswapV2SwapV2DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
-  , uniswapV2SwapV2DTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
-  , uniswapV2SwapV2DTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
-  , uniswapV2SwapV2DTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
-  , uniswapV2SwapV2DTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
-  , uniswapV2SwapV2DTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+-- ** UniswapV2PairDayDataDTO
+-- | UniswapV2PairDayDataDTO
+-- Tracks pair data across each day.
+data UniswapV2PairDayDataDTO = UniswapV2PairDayDataDTO
+  { uniswapV2PairDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2PairDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2PairDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2PairDayDataDTOId :: !(Maybe Text) -- ^ "id" - 
+  , uniswapV2PairDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , uniswapV2PairDayDataDTOPairAddress :: !(Maybe Text) -- ^ "pair_address" - Address for pair contract.
+  , uniswapV2PairDayDataDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0.
+  , uniswapV2PairDayDataDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1.
+  , uniswapV2PairDayDataDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
+  , uniswapV2PairDayDataDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
+  , uniswapV2PairDayDataDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
+  , uniswapV2PairDayDataDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
+  , uniswapV2PairDayDataDTODailyVolumeToken0 :: !(Maybe Text) -- ^ "daily_volume_token_0" - Total amount of token0 swapped throughout day.
+  , uniswapV2PairDayDataDTODailyVolumeToken1 :: !(Maybe Text) -- ^ "daily_volume_token_1" - Total amount of token1 swapped throughout day.
+  , uniswapV2PairDayDataDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Total volume within pair throughout day.
+  , uniswapV2PairDayDataDTODailyTxns :: !(Maybe Text) -- ^ "daily_txns" - Amount of transactions on pair throughout day.
+  , uniswapV2PairDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2SwapV2DTO
-instance A.FromJSON UniswapV2SwapV2DTO where
-  parseJSON = A.withObject "UniswapV2SwapV2DTO" $ \o ->
-    UniswapV2SwapV2DTO
+-- | FromJSON UniswapV2PairDayDataDTO
+instance A.FromJSON UniswapV2PairDayDataDTO where
+  parseJSON = A.withObject "UniswapV2PairDayDataDTO" $ \o ->
+    UniswapV2PairDayDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "pair_address")
+      <*> (o .:? "token_0")
+      <*> (o .:? "token_1")
+      <*> (o .:? "reserve_0")
+      <*> (o .:? "reserve_1")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "reserve_usd")
+      <*> (o .:? "daily_volume_token_0")
+      <*> (o .:? "daily_volume_token_1")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "daily_txns")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV2PairDayDataDTO
+instance A.ToJSON UniswapV2PairDayDataDTO where
+  toJSON UniswapV2PairDayDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV2PairDayDataDTOEntryTime
+      , "recv_time" .= uniswapV2PairDayDataDTORecvTime
+      , "block_number" .= uniswapV2PairDayDataDTOBlockNumber
+      , "id" .= uniswapV2PairDayDataDTOId
+      , "date" .= uniswapV2PairDayDataDTODate
+      , "pair_address" .= uniswapV2PairDayDataDTOPairAddress
+      , "token_0" .= uniswapV2PairDayDataDTOToken0
+      , "token_1" .= uniswapV2PairDayDataDTOToken1
+      , "reserve_0" .= uniswapV2PairDayDataDTOReserve0
+      , "reserve_1" .= uniswapV2PairDayDataDTOReserve1
+      , "total_supply" .= uniswapV2PairDayDataDTOTotalSupply
+      , "reserve_usd" .= uniswapV2PairDayDataDTOReserveUsd
+      , "daily_volume_token_0" .= uniswapV2PairDayDataDTODailyVolumeToken0
+      , "daily_volume_token_1" .= uniswapV2PairDayDataDTODailyVolumeToken1
+      , "daily_volume_usd" .= uniswapV2PairDayDataDTODailyVolumeUsd
+      , "daily_txns" .= uniswapV2PairDayDataDTODailyTxns
+      , "vid" .= uniswapV2PairDayDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV2PairDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV2PairDayDataDTO
+  :: UniswapV2PairDayDataDTO
+mkUniswapV2PairDayDataDTO =
+  UniswapV2PairDayDataDTO
+  { uniswapV2PairDayDataDTOEntryTime = Nothing
+  , uniswapV2PairDayDataDTORecvTime = Nothing
+  , uniswapV2PairDayDataDTOBlockNumber = Nothing
+  , uniswapV2PairDayDataDTOId = Nothing
+  , uniswapV2PairDayDataDTODate = Nothing
+  , uniswapV2PairDayDataDTOPairAddress = Nothing
+  , uniswapV2PairDayDataDTOToken0 = Nothing
+  , uniswapV2PairDayDataDTOToken1 = Nothing
+  , uniswapV2PairDayDataDTOReserve0 = Nothing
+  , uniswapV2PairDayDataDTOReserve1 = Nothing
+  , uniswapV2PairDayDataDTOTotalSupply = Nothing
+  , uniswapV2PairDayDataDTOReserveUsd = Nothing
+  , uniswapV2PairDayDataDTODailyVolumeToken0 = Nothing
+  , uniswapV2PairDayDataDTODailyVolumeToken1 = Nothing
+  , uniswapV2PairDayDataDTODailyVolumeUsd = Nothing
+  , uniswapV2PairDayDataDTODailyTxns = Nothing
+  , uniswapV2PairDayDataDTOVid = Nothing
+  }
+
+-- ** UniswapV2PairHourDataDTO
+-- | UniswapV2PairHourDataDTO
+-- Tracks pair data across each hour.
+data UniswapV2PairHourDataDTO = UniswapV2PairHourDataDTO
+  { uniswapV2PairHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2PairHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2PairHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2PairHourDataDTOId :: !(Maybe Text) -- ^ "id" - 
+  , uniswapV2PairHourDataDTOHourStartUnix :: !(Maybe Int) -- ^ "hour_start_unix" - Unix timestamp for start of hour.
+  , uniswapV2PairHourDataDTOPair :: !(Maybe Text) -- ^ "pair" - Address for pair contract.
+  , uniswapV2PairHourDataDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
+  , uniswapV2PairHourDataDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
+  , uniswapV2PairHourDataDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
+  , uniswapV2PairHourDataDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
+  , uniswapV2PairHourDataDTOHourlyVolumeToken0 :: !(Maybe Text) -- ^ "hourly_volume_token_0" - Total amount of token0 swapped throughout hour.
+  , uniswapV2PairHourDataDTOHourlyVolumeToken1 :: !(Maybe Text) -- ^ "hourly_volume_token_1" - Total amount of token1 swapped throughout hour.
+  , uniswapV2PairHourDataDTOHourlyVolumeUsd :: !(Maybe Text) -- ^ "hourly_volume_usd" - Total volume within pair throughout hour.
+  , uniswapV2PairHourDataDTOHourlyTxns :: !(Maybe Text) -- ^ "hourly_txns" - Amount of transactions on pair throughout hour.
+  , uniswapV2PairHourDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV2PairHourDataDTO
+instance A.FromJSON UniswapV2PairHourDataDTO where
+  parseJSON = A.withObject "UniswapV2PairHourDataDTO" $ \o ->
+    UniswapV2PairHourDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "hour_start_unix")
+      <*> (o .:? "pair")
+      <*> (o .:? "reserve_0")
+      <*> (o .:? "reserve_1")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "reserve_usd")
+      <*> (o .:? "hourly_volume_token_0")
+      <*> (o .:? "hourly_volume_token_1")
+      <*> (o .:? "hourly_volume_usd")
+      <*> (o .:? "hourly_txns")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV2PairHourDataDTO
+instance A.ToJSON UniswapV2PairHourDataDTO where
+  toJSON UniswapV2PairHourDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV2PairHourDataDTOEntryTime
+      , "recv_time" .= uniswapV2PairHourDataDTORecvTime
+      , "block_number" .= uniswapV2PairHourDataDTOBlockNumber
+      , "id" .= uniswapV2PairHourDataDTOId
+      , "hour_start_unix" .= uniswapV2PairHourDataDTOHourStartUnix
+      , "pair" .= uniswapV2PairHourDataDTOPair
+      , "reserve_0" .= uniswapV2PairHourDataDTOReserve0
+      , "reserve_1" .= uniswapV2PairHourDataDTOReserve1
+      , "total_supply" .= uniswapV2PairHourDataDTOTotalSupply
+      , "reserve_usd" .= uniswapV2PairHourDataDTOReserveUsd
+      , "hourly_volume_token_0" .= uniswapV2PairHourDataDTOHourlyVolumeToken0
+      , "hourly_volume_token_1" .= uniswapV2PairHourDataDTOHourlyVolumeToken1
+      , "hourly_volume_usd" .= uniswapV2PairHourDataDTOHourlyVolumeUsd
+      , "hourly_txns" .= uniswapV2PairHourDataDTOHourlyTxns
+      , "vid" .= uniswapV2PairHourDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV2PairHourDataDTO' (by applying it's required fields, if any)
+mkUniswapV2PairHourDataDTO
+  :: UniswapV2PairHourDataDTO
+mkUniswapV2PairHourDataDTO =
+  UniswapV2PairHourDataDTO
+  { uniswapV2PairHourDataDTOEntryTime = Nothing
+  , uniswapV2PairHourDataDTORecvTime = Nothing
+  , uniswapV2PairHourDataDTOBlockNumber = Nothing
+  , uniswapV2PairHourDataDTOId = Nothing
+  , uniswapV2PairHourDataDTOHourStartUnix = Nothing
+  , uniswapV2PairHourDataDTOPair = Nothing
+  , uniswapV2PairHourDataDTOReserve0 = Nothing
+  , uniswapV2PairHourDataDTOReserve1 = Nothing
+  , uniswapV2PairHourDataDTOTotalSupply = Nothing
+  , uniswapV2PairHourDataDTOReserveUsd = Nothing
+  , uniswapV2PairHourDataDTOHourlyVolumeToken0 = Nothing
+  , uniswapV2PairHourDataDTOHourlyVolumeToken1 = Nothing
+  , uniswapV2PairHourDataDTOHourlyVolumeUsd = Nothing
+  , uniswapV2PairHourDataDTOHourlyTxns = Nothing
+  , uniswapV2PairHourDataDTOVid = Nothing
+  }
+
+-- ** UniswapV2SwapDTO
+-- | UniswapV2SwapDTO
+-- Swap are created for each token swap within a pair.
+data UniswapV2SwapDTO = UniswapV2SwapDTO
+  { uniswapV2SwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2SwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2SwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2SwapDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2SwapDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash plus index in Transaction swap array.
+  , uniswapV2SwapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to transaction swap was included in.
+  , uniswapV2SwapDTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of swap, used for sorted lookups.
+  , uniswapV2SwapDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , uniswapV2SwapDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the swap.
+  , uniswapV2SwapDTOFrom :: !(Maybe Text) -- ^ "from" - The EOA (Externally Owned Account) that initiated the transaction.
+  , uniswapV2SwapDTOAmount0In :: !(Maybe Text) -- ^ "amount_0_in" - Amount of token0 sold.
+  , uniswapV2SwapDTOAmount1In :: !(Maybe Text) -- ^ "amount_1_in" - Amount of token1 sold.
+  , uniswapV2SwapDTOAmount0Out :: !(Maybe Text) -- ^ "amount_0_out" - Amount of token0 received.
+  , uniswapV2SwapDTOAmount1Out :: !(Maybe Text) -- ^ "amount_1_out" - Amount of token1 received.
+  , uniswapV2SwapDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of output tokens.
+  , uniswapV2SwapDTOLogIndex :: !(Maybe NumericsBigInteger) -- ^ "log_index"
+  , uniswapV2SwapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
+  , uniswapV2SwapDTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
+  , uniswapV2SwapDTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
+  , uniswapV2SwapDTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
+  , uniswapV2SwapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
+  , uniswapV2SwapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV2SwapDTO
+instance A.FromJSON UniswapV2SwapDTO where
+  parseJSON = A.withObject "UniswapV2SwapDTO" $ \o ->
+    UniswapV2SwapDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5798,175 +5795,90 @@ instance A.FromJSON UniswapV2SwapV2DTO where
       <*> (o .:? "pool_id")
       <*> (o .:? "transaction_id")
 
--- | ToJSON UniswapV2SwapV2DTO
-instance A.ToJSON UniswapV2SwapV2DTO where
-  toJSON UniswapV2SwapV2DTO {..} =
+-- | ToJSON UniswapV2SwapDTO
+instance A.ToJSON UniswapV2SwapDTO where
+  toJSON UniswapV2SwapDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2SwapV2DTOEntryTime
-      , "recv_time" .= uniswapV2SwapV2DTORecvTime
-      , "block_number" .= uniswapV2SwapV2DTOBlockNumber
-      , "vid" .= uniswapV2SwapV2DTOVid
-      , "id" .= uniswapV2SwapV2DTOId
-      , "transaction" .= uniswapV2SwapV2DTOTransaction
-      , "timestamp" .= uniswapV2SwapV2DTOTimestamp
-      , "pair" .= uniswapV2SwapV2DTOPair
-      , "sender" .= uniswapV2SwapV2DTOSender
-      , "from" .= uniswapV2SwapV2DTOFrom
-      , "amount_0_in" .= uniswapV2SwapV2DTOAmount0In
-      , "amount_1_in" .= uniswapV2SwapV2DTOAmount1In
-      , "amount_0_out" .= uniswapV2SwapV2DTOAmount0Out
-      , "amount_1_out" .= uniswapV2SwapV2DTOAmount1Out
-      , "to" .= uniswapV2SwapV2DTOTo
-      , "log_index" .= uniswapV2SwapV2DTOLogIndex
-      , "amount_usd" .= uniswapV2SwapV2DTOAmountUsd
-      , "evaluated_price" .= uniswapV2SwapV2DTOEvaluatedPrice
-      , "evaluated_amount" .= uniswapV2SwapV2DTOEvaluatedAmount
-      , "evaluated_aggressor" .= uniswapV2SwapV2DTOEvaluatedAggressor
-      , "pool_id" .= uniswapV2SwapV2DTOPoolId
-      , "transaction_id" .= uniswapV2SwapV2DTOTransactionId
+      [ "entry_time" .= uniswapV2SwapDTOEntryTime
+      , "recv_time" .= uniswapV2SwapDTORecvTime
+      , "block_number" .= uniswapV2SwapDTOBlockNumber
+      , "vid" .= uniswapV2SwapDTOVid
+      , "id" .= uniswapV2SwapDTOId
+      , "transaction" .= uniswapV2SwapDTOTransaction
+      , "timestamp" .= uniswapV2SwapDTOTimestamp
+      , "pair" .= uniswapV2SwapDTOPair
+      , "sender" .= uniswapV2SwapDTOSender
+      , "from" .= uniswapV2SwapDTOFrom
+      , "amount_0_in" .= uniswapV2SwapDTOAmount0In
+      , "amount_1_in" .= uniswapV2SwapDTOAmount1In
+      , "amount_0_out" .= uniswapV2SwapDTOAmount0Out
+      , "amount_1_out" .= uniswapV2SwapDTOAmount1Out
+      , "to" .= uniswapV2SwapDTOTo
+      , "log_index" .= uniswapV2SwapDTOLogIndex
+      , "amount_usd" .= uniswapV2SwapDTOAmountUsd
+      , "evaluated_price" .= uniswapV2SwapDTOEvaluatedPrice
+      , "evaluated_amount" .= uniswapV2SwapDTOEvaluatedAmount
+      , "evaluated_aggressor" .= uniswapV2SwapDTOEvaluatedAggressor
+      , "pool_id" .= uniswapV2SwapDTOPoolId
+      , "transaction_id" .= uniswapV2SwapDTOTransactionId
       ]
 
 
--- | Construct a value of type 'UniswapV2SwapV2DTO' (by applying it's required fields, if any)
-mkUniswapV2SwapV2DTO
-  :: UniswapV2SwapV2DTO
-mkUniswapV2SwapV2DTO =
-  UniswapV2SwapV2DTO
-  { uniswapV2SwapV2DTOEntryTime = Nothing
-  , uniswapV2SwapV2DTORecvTime = Nothing
-  , uniswapV2SwapV2DTOBlockNumber = Nothing
-  , uniswapV2SwapV2DTOVid = Nothing
-  , uniswapV2SwapV2DTOId = Nothing
-  , uniswapV2SwapV2DTOTransaction = Nothing
-  , uniswapV2SwapV2DTOTimestamp = Nothing
-  , uniswapV2SwapV2DTOPair = Nothing
-  , uniswapV2SwapV2DTOSender = Nothing
-  , uniswapV2SwapV2DTOFrom = Nothing
-  , uniswapV2SwapV2DTOAmount0In = Nothing
-  , uniswapV2SwapV2DTOAmount1In = Nothing
-  , uniswapV2SwapV2DTOAmount0Out = Nothing
-  , uniswapV2SwapV2DTOAmount1Out = Nothing
-  , uniswapV2SwapV2DTOTo = Nothing
-  , uniswapV2SwapV2DTOLogIndex = Nothing
-  , uniswapV2SwapV2DTOAmountUsd = Nothing
-  , uniswapV2SwapV2DTOEvaluatedPrice = Nothing
-  , uniswapV2SwapV2DTOEvaluatedAmount = Nothing
-  , uniswapV2SwapV2DTOEvaluatedAggressor = Nothing
-  , uniswapV2SwapV2DTOPoolId = Nothing
-  , uniswapV2SwapV2DTOTransactionId = Nothing
+-- | Construct a value of type 'UniswapV2SwapDTO' (by applying it's required fields, if any)
+mkUniswapV2SwapDTO
+  :: UniswapV2SwapDTO
+mkUniswapV2SwapDTO =
+  UniswapV2SwapDTO
+  { uniswapV2SwapDTOEntryTime = Nothing
+  , uniswapV2SwapDTORecvTime = Nothing
+  , uniswapV2SwapDTOBlockNumber = Nothing
+  , uniswapV2SwapDTOVid = Nothing
+  , uniswapV2SwapDTOId = Nothing
+  , uniswapV2SwapDTOTransaction = Nothing
+  , uniswapV2SwapDTOTimestamp = Nothing
+  , uniswapV2SwapDTOPair = Nothing
+  , uniswapV2SwapDTOSender = Nothing
+  , uniswapV2SwapDTOFrom = Nothing
+  , uniswapV2SwapDTOAmount0In = Nothing
+  , uniswapV2SwapDTOAmount1In = Nothing
+  , uniswapV2SwapDTOAmount0Out = Nothing
+  , uniswapV2SwapDTOAmount1Out = Nothing
+  , uniswapV2SwapDTOTo = Nothing
+  , uniswapV2SwapDTOLogIndex = Nothing
+  , uniswapV2SwapDTOAmountUsd = Nothing
+  , uniswapV2SwapDTOEvaluatedPrice = Nothing
+  , uniswapV2SwapDTOEvaluatedAmount = Nothing
+  , uniswapV2SwapDTOEvaluatedAggressor = Nothing
+  , uniswapV2SwapDTOPoolId = Nothing
+  , uniswapV2SwapDTOTransactionId = Nothing
   }
 
--- ** UniswapV2TokenDayDataV2DTO
--- | UniswapV2TokenDayDataV2DTO
--- Token data aggregated across all pairs that include token.
-data UniswapV2TokenDayDataV2DTO = UniswapV2TokenDayDataV2DTO
-  { uniswapV2TokenDayDataV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2TokenDayDataV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2TokenDayDataV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2TokenDayDataV2DTOId :: !(Maybe Text) -- ^ "id" - Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
-  , uniswapV2TokenDayDataV2DTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
-  , uniswapV2TokenDayDataV2DTOToken :: !(Maybe Text) -- ^ "token" - Reference to token entity.
-  , uniswapV2TokenDayDataV2DTODailyVolumeToken :: !(Maybe Text) -- ^ "daily_volume_token" - Amount of token swapped across all pairs throughout day.
-  , uniswapV2TokenDayDataV2DTODailyVolumeEth :: !(Maybe Text) -- ^ "daily_volume_eth" - Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
-  , uniswapV2TokenDayDataV2DTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
-  , uniswapV2TokenDayDataV2DTODailyTxns :: !(Maybe Text) -- ^ "daily_txns" - Amount of transactions with this token across all pairs.
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityToken :: !(Maybe Text) -- ^ "total_liquidity_token" - Token amount of token deposited across all pairs.
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Token amount of token deposited across all pairs stored as amount of ETH.
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Token amount of token deposited across all pairs stored as amount of USD.
-  , uniswapV2TokenDayDataV2DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - Price of token in derived USD.
-  , uniswapV2TokenDayDataV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV2TokenDayDataV2DTO
-instance A.FromJSON UniswapV2TokenDayDataV2DTO where
-  parseJSON = A.withObject "UniswapV2TokenDayDataV2DTO" $ \o ->
-    UniswapV2TokenDayDataV2DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "date")
-      <*> (o .:? "token")
-      <*> (o .:? "daily_volume_token")
-      <*> (o .:? "daily_volume_eth")
-      <*> (o .:? "daily_volume_usd")
-      <*> (o .:? "daily_txns")
-      <*> (o .:? "total_liquidity_token")
-      <*> (o .:? "total_liquidity_eth")
-      <*> (o .:? "total_liquidity_usd")
-      <*> (o .:? "price_usd")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV2TokenDayDataV2DTO
-instance A.ToJSON UniswapV2TokenDayDataV2DTO where
-  toJSON UniswapV2TokenDayDataV2DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV2TokenDayDataV2DTOEntryTime
-      , "recv_time" .= uniswapV2TokenDayDataV2DTORecvTime
-      , "block_number" .= uniswapV2TokenDayDataV2DTOBlockNumber
-      , "id" .= uniswapV2TokenDayDataV2DTOId
-      , "date" .= uniswapV2TokenDayDataV2DTODate
-      , "token" .= uniswapV2TokenDayDataV2DTOToken
-      , "daily_volume_token" .= uniswapV2TokenDayDataV2DTODailyVolumeToken
-      , "daily_volume_eth" .= uniswapV2TokenDayDataV2DTODailyVolumeEth
-      , "daily_volume_usd" .= uniswapV2TokenDayDataV2DTODailyVolumeUsd
-      , "daily_txns" .= uniswapV2TokenDayDataV2DTODailyTxns
-      , "total_liquidity_token" .= uniswapV2TokenDayDataV2DTOTotalLiquidityToken
-      , "total_liquidity_eth" .= uniswapV2TokenDayDataV2DTOTotalLiquidityEth
-      , "total_liquidity_usd" .= uniswapV2TokenDayDataV2DTOTotalLiquidityUsd
-      , "price_usd" .= uniswapV2TokenDayDataV2DTOPriceUsd
-      , "vid" .= uniswapV2TokenDayDataV2DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV2TokenDayDataV2DTO' (by applying it's required fields, if any)
-mkUniswapV2TokenDayDataV2DTO
-  :: UniswapV2TokenDayDataV2DTO
-mkUniswapV2TokenDayDataV2DTO =
-  UniswapV2TokenDayDataV2DTO
-  { uniswapV2TokenDayDataV2DTOEntryTime = Nothing
-  , uniswapV2TokenDayDataV2DTORecvTime = Nothing
-  , uniswapV2TokenDayDataV2DTOBlockNumber = Nothing
-  , uniswapV2TokenDayDataV2DTOId = Nothing
-  , uniswapV2TokenDayDataV2DTODate = Nothing
-  , uniswapV2TokenDayDataV2DTOToken = Nothing
-  , uniswapV2TokenDayDataV2DTODailyVolumeToken = Nothing
-  , uniswapV2TokenDayDataV2DTODailyVolumeEth = Nothing
-  , uniswapV2TokenDayDataV2DTODailyVolumeUsd = Nothing
-  , uniswapV2TokenDayDataV2DTODailyTxns = Nothing
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityToken = Nothing
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityEth = Nothing
-  , uniswapV2TokenDayDataV2DTOTotalLiquidityUsd = Nothing
-  , uniswapV2TokenDayDataV2DTOPriceUsd = Nothing
-  , uniswapV2TokenDayDataV2DTOVid = Nothing
-  }
-
--- ** UniswapV2TokenV2DTO
--- | UniswapV2TokenV2DTO
+-- ** UniswapV2TokenDTO
+-- | UniswapV2TokenDTO
 -- Stores aggregated information for a specific token across all pairs that token is included in.
-data UniswapV2TokenV2DTO = UniswapV2TokenV2DTO
-  { uniswapV2TokenV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2TokenV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2TokenV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2TokenV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV2TokenV2DTOId :: !(Maybe Text) -- ^ "id" - Token address.
-  , uniswapV2TokenV2DTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
-  , uniswapV2TokenV2DTOName :: !(Maybe Text) -- ^ "name" - Token name.
-  , uniswapV2TokenV2DTODecimals :: !(Maybe Int) -- ^ "decimals" - Token decimals.
-  , uniswapV2TokenV2DTOTotalSupply :: !(Maybe NumericsBigInteger) -- ^ "total_supply"
-  , uniswapV2TokenV2DTOTradeVolume :: !(Maybe Text) -- ^ "trade_volume" - Amount of token traded all time across all pairs.
-  , uniswapV2TokenV2DTOTradeVolumeUsd :: !(Maybe Text) -- ^ "trade_volume_usd" - Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
-  , uniswapV2TokenV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
-  , uniswapV2TokenV2DTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
-  , uniswapV2TokenV2DTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - Total amount of token provided as liquidity across all pairs.
-  , uniswapV2TokenV2DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - ETH per token.
-  , uniswapV2TokenV2DTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
+data UniswapV2TokenDTO = UniswapV2TokenDTO
+  { uniswapV2TokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2TokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2TokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2TokenDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV2TokenDTOId :: !(Maybe Text) -- ^ "id" - Token address.
+  , uniswapV2TokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
+  , uniswapV2TokenDTOName :: !(Maybe Text) -- ^ "name" - Token name.
+  , uniswapV2TokenDTODecimals :: !(Maybe Int) -- ^ "decimals" - Token decimals.
+  , uniswapV2TokenDTOTotalSupply :: !(Maybe NumericsBigInteger) -- ^ "total_supply"
+  , uniswapV2TokenDTOTradeVolume :: !(Maybe Text) -- ^ "trade_volume" - Amount of token traded all time across all pairs.
+  , uniswapV2TokenDTOTradeVolumeUsd :: !(Maybe Text) -- ^ "trade_volume_usd" - Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).
+  , uniswapV2TokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Amount of token in USD traded all time across pairs (no minimum liquidity threshold).
+  , uniswapV2TokenDTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
+  , uniswapV2TokenDTOTotalLiquidity :: !(Maybe Text) -- ^ "total_liquidity" - Total amount of token provided as liquidity across all pairs.
+  , uniswapV2TokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - ETH per token.
+  , uniswapV2TokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2TokenV2DTO
-instance A.FromJSON UniswapV2TokenV2DTO where
-  parseJSON = A.withObject "UniswapV2TokenV2DTO" $ \o ->
-    UniswapV2TokenV2DTO
+-- | FromJSON UniswapV2TokenDTO
+instance A.FromJSON UniswapV2TokenDTO where
+  parseJSON = A.withObject "UniswapV2TokenDTO" $ \o ->
+    UniswapV2TokenDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -5984,71 +5896,156 @@ instance A.FromJSON UniswapV2TokenV2DTO where
       <*> (o .:? "derived_eth")
       <*> (o .:? "token_symbol")
 
--- | ToJSON UniswapV2TokenV2DTO
-instance A.ToJSON UniswapV2TokenV2DTO where
-  toJSON UniswapV2TokenV2DTO {..} =
+-- | ToJSON UniswapV2TokenDTO
+instance A.ToJSON UniswapV2TokenDTO where
+  toJSON UniswapV2TokenDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2TokenV2DTOEntryTime
-      , "recv_time" .= uniswapV2TokenV2DTORecvTime
-      , "block_number" .= uniswapV2TokenV2DTOBlockNumber
-      , "vid" .= uniswapV2TokenV2DTOVid
-      , "id" .= uniswapV2TokenV2DTOId
-      , "symbol" .= uniswapV2TokenV2DTOSymbol
-      , "name" .= uniswapV2TokenV2DTOName
-      , "decimals" .= uniswapV2TokenV2DTODecimals
-      , "total_supply" .= uniswapV2TokenV2DTOTotalSupply
-      , "trade_volume" .= uniswapV2TokenV2DTOTradeVolume
-      , "trade_volume_usd" .= uniswapV2TokenV2DTOTradeVolumeUsd
-      , "untracked_volume_usd" .= uniswapV2TokenV2DTOUntrackedVolumeUsd
-      , "tx_count" .= uniswapV2TokenV2DTOTxCount
-      , "total_liquidity" .= uniswapV2TokenV2DTOTotalLiquidity
-      , "derived_eth" .= uniswapV2TokenV2DTODerivedEth
-      , "token_symbol" .= uniswapV2TokenV2DTOTokenSymbol
+      [ "entry_time" .= uniswapV2TokenDTOEntryTime
+      , "recv_time" .= uniswapV2TokenDTORecvTime
+      , "block_number" .= uniswapV2TokenDTOBlockNumber
+      , "vid" .= uniswapV2TokenDTOVid
+      , "id" .= uniswapV2TokenDTOId
+      , "symbol" .= uniswapV2TokenDTOSymbol
+      , "name" .= uniswapV2TokenDTOName
+      , "decimals" .= uniswapV2TokenDTODecimals
+      , "total_supply" .= uniswapV2TokenDTOTotalSupply
+      , "trade_volume" .= uniswapV2TokenDTOTradeVolume
+      , "trade_volume_usd" .= uniswapV2TokenDTOTradeVolumeUsd
+      , "untracked_volume_usd" .= uniswapV2TokenDTOUntrackedVolumeUsd
+      , "tx_count" .= uniswapV2TokenDTOTxCount
+      , "total_liquidity" .= uniswapV2TokenDTOTotalLiquidity
+      , "derived_eth" .= uniswapV2TokenDTODerivedEth
+      , "token_symbol" .= uniswapV2TokenDTOTokenSymbol
       ]
 
 
--- | Construct a value of type 'UniswapV2TokenV2DTO' (by applying it's required fields, if any)
-mkUniswapV2TokenV2DTO
-  :: UniswapV2TokenV2DTO
-mkUniswapV2TokenV2DTO =
-  UniswapV2TokenV2DTO
-  { uniswapV2TokenV2DTOEntryTime = Nothing
-  , uniswapV2TokenV2DTORecvTime = Nothing
-  , uniswapV2TokenV2DTOBlockNumber = Nothing
-  , uniswapV2TokenV2DTOVid = Nothing
-  , uniswapV2TokenV2DTOId = Nothing
-  , uniswapV2TokenV2DTOSymbol = Nothing
-  , uniswapV2TokenV2DTOName = Nothing
-  , uniswapV2TokenV2DTODecimals = Nothing
-  , uniswapV2TokenV2DTOTotalSupply = Nothing
-  , uniswapV2TokenV2DTOTradeVolume = Nothing
-  , uniswapV2TokenV2DTOTradeVolumeUsd = Nothing
-  , uniswapV2TokenV2DTOUntrackedVolumeUsd = Nothing
-  , uniswapV2TokenV2DTOTxCount = Nothing
-  , uniswapV2TokenV2DTOTotalLiquidity = Nothing
-  , uniswapV2TokenV2DTODerivedEth = Nothing
-  , uniswapV2TokenV2DTOTokenSymbol = Nothing
+-- | Construct a value of type 'UniswapV2TokenDTO' (by applying it's required fields, if any)
+mkUniswapV2TokenDTO
+  :: UniswapV2TokenDTO
+mkUniswapV2TokenDTO =
+  UniswapV2TokenDTO
+  { uniswapV2TokenDTOEntryTime = Nothing
+  , uniswapV2TokenDTORecvTime = Nothing
+  , uniswapV2TokenDTOBlockNumber = Nothing
+  , uniswapV2TokenDTOVid = Nothing
+  , uniswapV2TokenDTOId = Nothing
+  , uniswapV2TokenDTOSymbol = Nothing
+  , uniswapV2TokenDTOName = Nothing
+  , uniswapV2TokenDTODecimals = Nothing
+  , uniswapV2TokenDTOTotalSupply = Nothing
+  , uniswapV2TokenDTOTradeVolume = Nothing
+  , uniswapV2TokenDTOTradeVolumeUsd = Nothing
+  , uniswapV2TokenDTOUntrackedVolumeUsd = Nothing
+  , uniswapV2TokenDTOTxCount = Nothing
+  , uniswapV2TokenDTOTotalLiquidity = Nothing
+  , uniswapV2TokenDTODerivedEth = Nothing
+  , uniswapV2TokenDTOTokenSymbol = Nothing
   }
 
--- ** UniswapV2TransactionV2DTO
--- | UniswapV2TransactionV2DTO
--- Transaction entities are created for each Ethereum transaction that contains an interaction within Uniswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
-data UniswapV2TransactionV2DTO = UniswapV2TransactionV2DTO
-  { uniswapV2TransactionV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2TransactionV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2TransactionV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2TransactionV2DTOId :: !(Maybe Text) -- ^ "id" - Ethereum transaction hash.
-  , uniswapV2TransactionV2DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
-  , uniswapV2TransactionV2DTOMints :: !(Maybe [Text]) -- ^ "mints" - Array of Mint events within the transaction, 0 or greater.
-  , uniswapV2TransactionV2DTOBurns :: !(Maybe [Text]) -- ^ "burns" - Array of Burn events within transaction, 0 or greater.
-  , uniswapV2TransactionV2DTOSwaps :: !(Maybe [Text]) -- ^ "swaps" - Array of Swap events within transaction, 0 or greater.
-  , uniswapV2TransactionV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+-- ** UniswapV2TokenDayDataDTO
+-- | UniswapV2TokenDayDataDTO
+-- Token data aggregated across all pairs that include token.
+data UniswapV2TokenDayDataDTO = UniswapV2TokenDayDataDTO
+  { uniswapV2TokenDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2TokenDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2TokenDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2TokenDayDataDTOId :: !(Maybe Text) -- ^ "id" - Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
+  , uniswapV2TokenDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , uniswapV2TokenDayDataDTOToken :: !(Maybe Text) -- ^ "token" - Reference to token entity.
+  , uniswapV2TokenDayDataDTODailyVolumeToken :: !(Maybe Text) -- ^ "daily_volume_token" - Amount of token swapped across all pairs throughout day.
+  , uniswapV2TokenDayDataDTODailyVolumeEth :: !(Maybe Text) -- ^ "daily_volume_eth" - Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
+  , uniswapV2TokenDayDataDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
+  , uniswapV2TokenDayDataDTODailyTxns :: !(Maybe Text) -- ^ "daily_txns" - Amount of transactions with this token across all pairs.
+  , uniswapV2TokenDayDataDTOTotalLiquidityToken :: !(Maybe Text) -- ^ "total_liquidity_token" - Token amount of token deposited across all pairs.
+  , uniswapV2TokenDayDataDTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Token amount of token deposited across all pairs stored as amount of ETH.
+  , uniswapV2TokenDayDataDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Token amount of token deposited across all pairs stored as amount of USD.
+  , uniswapV2TokenDayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - Price of token in derived USD.
+  , uniswapV2TokenDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2TransactionV2DTO
-instance A.FromJSON UniswapV2TransactionV2DTO where
-  parseJSON = A.withObject "UniswapV2TransactionV2DTO" $ \o ->
-    UniswapV2TransactionV2DTO
+-- | FromJSON UniswapV2TokenDayDataDTO
+instance A.FromJSON UniswapV2TokenDayDataDTO where
+  parseJSON = A.withObject "UniswapV2TokenDayDataDTO" $ \o ->
+    UniswapV2TokenDayDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "token")
+      <*> (o .:? "daily_volume_token")
+      <*> (o .:? "daily_volume_eth")
+      <*> (o .:? "daily_volume_usd")
+      <*> (o .:? "daily_txns")
+      <*> (o .:? "total_liquidity_token")
+      <*> (o .:? "total_liquidity_eth")
+      <*> (o .:? "total_liquidity_usd")
+      <*> (o .:? "price_usd")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV2TokenDayDataDTO
+instance A.ToJSON UniswapV2TokenDayDataDTO where
+  toJSON UniswapV2TokenDayDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV2TokenDayDataDTOEntryTime
+      , "recv_time" .= uniswapV2TokenDayDataDTORecvTime
+      , "block_number" .= uniswapV2TokenDayDataDTOBlockNumber
+      , "id" .= uniswapV2TokenDayDataDTOId
+      , "date" .= uniswapV2TokenDayDataDTODate
+      , "token" .= uniswapV2TokenDayDataDTOToken
+      , "daily_volume_token" .= uniswapV2TokenDayDataDTODailyVolumeToken
+      , "daily_volume_eth" .= uniswapV2TokenDayDataDTODailyVolumeEth
+      , "daily_volume_usd" .= uniswapV2TokenDayDataDTODailyVolumeUsd
+      , "daily_txns" .= uniswapV2TokenDayDataDTODailyTxns
+      , "total_liquidity_token" .= uniswapV2TokenDayDataDTOTotalLiquidityToken
+      , "total_liquidity_eth" .= uniswapV2TokenDayDataDTOTotalLiquidityEth
+      , "total_liquidity_usd" .= uniswapV2TokenDayDataDTOTotalLiquidityUsd
+      , "price_usd" .= uniswapV2TokenDayDataDTOPriceUsd
+      , "vid" .= uniswapV2TokenDayDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV2TokenDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV2TokenDayDataDTO
+  :: UniswapV2TokenDayDataDTO
+mkUniswapV2TokenDayDataDTO =
+  UniswapV2TokenDayDataDTO
+  { uniswapV2TokenDayDataDTOEntryTime = Nothing
+  , uniswapV2TokenDayDataDTORecvTime = Nothing
+  , uniswapV2TokenDayDataDTOBlockNumber = Nothing
+  , uniswapV2TokenDayDataDTOId = Nothing
+  , uniswapV2TokenDayDataDTODate = Nothing
+  , uniswapV2TokenDayDataDTOToken = Nothing
+  , uniswapV2TokenDayDataDTODailyVolumeToken = Nothing
+  , uniswapV2TokenDayDataDTODailyVolumeEth = Nothing
+  , uniswapV2TokenDayDataDTODailyVolumeUsd = Nothing
+  , uniswapV2TokenDayDataDTODailyTxns = Nothing
+  , uniswapV2TokenDayDataDTOTotalLiquidityToken = Nothing
+  , uniswapV2TokenDayDataDTOTotalLiquidityEth = Nothing
+  , uniswapV2TokenDayDataDTOTotalLiquidityUsd = Nothing
+  , uniswapV2TokenDayDataDTOPriceUsd = Nothing
+  , uniswapV2TokenDayDataDTOVid = Nothing
+  }
+
+-- ** UniswapV2TransactionDTO
+-- | UniswapV2TransactionDTO
+-- Transaction entities are created for each Ethereum transaction that contains an interaction within Uniswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
+data UniswapV2TransactionDTO = UniswapV2TransactionDTO
+  { uniswapV2TransactionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2TransactionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2TransactionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2TransactionDTOId :: !(Maybe Text) -- ^ "id" - Ethereum transaction hash.
+  , uniswapV2TransactionDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
+  , uniswapV2TransactionDTOMints :: !(Maybe [Text]) -- ^ "mints" - Array of Mint events within the transaction, 0 or greater.
+  , uniswapV2TransactionDTOBurns :: !(Maybe [Text]) -- ^ "burns" - Array of Burn events within transaction, 0 or greater.
+  , uniswapV2TransactionDTOSwaps :: !(Maybe [Text]) -- ^ "swaps" - Array of Swap events within transaction, 0 or greater.
+  , uniswapV2TransactionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV2TransactionDTO
+instance A.FromJSON UniswapV2TransactionDTO where
+  parseJSON = A.withObject "UniswapV2TransactionDTO" $ \o ->
+    UniswapV2TransactionDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6059,62 +6056,62 @@ instance A.FromJSON UniswapV2TransactionV2DTO where
       <*> (o .:? "swaps")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV2TransactionV2DTO
-instance A.ToJSON UniswapV2TransactionV2DTO where
-  toJSON UniswapV2TransactionV2DTO {..} =
+-- | ToJSON UniswapV2TransactionDTO
+instance A.ToJSON UniswapV2TransactionDTO where
+  toJSON UniswapV2TransactionDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2TransactionV2DTOEntryTime
-      , "recv_time" .= uniswapV2TransactionV2DTORecvTime
-      , "block_number" .= uniswapV2TransactionV2DTOBlockNumber
-      , "id" .= uniswapV2TransactionV2DTOId
-      , "timestamp" .= uniswapV2TransactionV2DTOTimestamp
-      , "mints" .= uniswapV2TransactionV2DTOMints
-      , "burns" .= uniswapV2TransactionV2DTOBurns
-      , "swaps" .= uniswapV2TransactionV2DTOSwaps
-      , "vid" .= uniswapV2TransactionV2DTOVid
+      [ "entry_time" .= uniswapV2TransactionDTOEntryTime
+      , "recv_time" .= uniswapV2TransactionDTORecvTime
+      , "block_number" .= uniswapV2TransactionDTOBlockNumber
+      , "id" .= uniswapV2TransactionDTOId
+      , "timestamp" .= uniswapV2TransactionDTOTimestamp
+      , "mints" .= uniswapV2TransactionDTOMints
+      , "burns" .= uniswapV2TransactionDTOBurns
+      , "swaps" .= uniswapV2TransactionDTOSwaps
+      , "vid" .= uniswapV2TransactionDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV2TransactionV2DTO' (by applying it's required fields, if any)
-mkUniswapV2TransactionV2DTO
-  :: UniswapV2TransactionV2DTO
-mkUniswapV2TransactionV2DTO =
-  UniswapV2TransactionV2DTO
-  { uniswapV2TransactionV2DTOEntryTime = Nothing
-  , uniswapV2TransactionV2DTORecvTime = Nothing
-  , uniswapV2TransactionV2DTOBlockNumber = Nothing
-  , uniswapV2TransactionV2DTOId = Nothing
-  , uniswapV2TransactionV2DTOTimestamp = Nothing
-  , uniswapV2TransactionV2DTOMints = Nothing
-  , uniswapV2TransactionV2DTOBurns = Nothing
-  , uniswapV2TransactionV2DTOSwaps = Nothing
-  , uniswapV2TransactionV2DTOVid = Nothing
+-- | Construct a value of type 'UniswapV2TransactionDTO' (by applying it's required fields, if any)
+mkUniswapV2TransactionDTO
+  :: UniswapV2TransactionDTO
+mkUniswapV2TransactionDTO =
+  UniswapV2TransactionDTO
+  { uniswapV2TransactionDTOEntryTime = Nothing
+  , uniswapV2TransactionDTORecvTime = Nothing
+  , uniswapV2TransactionDTOBlockNumber = Nothing
+  , uniswapV2TransactionDTOId = Nothing
+  , uniswapV2TransactionDTOTimestamp = Nothing
+  , uniswapV2TransactionDTOMints = Nothing
+  , uniswapV2TransactionDTOBurns = Nothing
+  , uniswapV2TransactionDTOSwaps = Nothing
+  , uniswapV2TransactionDTOVid = Nothing
   }
 
--- ** UniswapV2UniswapDayDataV2DTO
--- | UniswapV2UniswapDayDataV2DTO
+-- ** UniswapV2UniswapDayDataDTO
+-- | UniswapV2UniswapDayDataDTO
 -- Tracks data across all pairs aggregated into a daily bucket.
-data UniswapV2UniswapDayDataV2DTO = UniswapV2UniswapDayDataV2DTO
-  { uniswapV2UniswapDayDataV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2UniswapDayDataV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2UniswapDayDataV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2UniswapDayDataV2DTOId :: !(Maybe Text) -- ^ "id" - Unix timestamp for start of day / 86400 giving a unique day index.
-  , uniswapV2UniswapDayDataV2DTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
-  , uniswapV2UniswapDayDataV2DTODailyVolumeEth :: !(Maybe Text) -- ^ "daily_volume_eth" - Total volume across all pairs on this day, stored as a derived amount of ETH.
-  , uniswapV2UniswapDayDataV2DTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Total volume across all pairs on this day, stored as a derived amount of USD.
-  , uniswapV2UniswapDayDataV2DTODailyVolumeUntracked :: !(Maybe Text) -- ^ "daily_volume_untracked" - Total volume across all pairs on this day, untracked.
-  , uniswapV2UniswapDayDataV2DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - All time volume across all pairs in ETH up to and including this day.
-  , uniswapV2UniswapDayDataV2DTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Total liquidity across all pairs in ETH up to and including this day.
-  , uniswapV2UniswapDayDataV2DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - All time volume across all pairs in USD up to and including this day.
-  , uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Total liquidity across all pairs in USD up to and including this day.
-  , uniswapV2UniswapDayDataV2DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions throughout this day.
-  , uniswapV2UniswapDayDataV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV2UniswapDayDataDTO = UniswapV2UniswapDayDataDTO
+  { uniswapV2UniswapDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2UniswapDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2UniswapDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2UniswapDayDataDTOId :: !(Maybe Text) -- ^ "id" - Unix timestamp for start of day / 86400 giving a unique day index.
+  , uniswapV2UniswapDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , uniswapV2UniswapDayDataDTODailyVolumeEth :: !(Maybe Text) -- ^ "daily_volume_eth" - Total volume across all pairs on this day, stored as a derived amount of ETH.
+  , uniswapV2UniswapDayDataDTODailyVolumeUsd :: !(Maybe Text) -- ^ "daily_volume_usd" - Total volume across all pairs on this day, stored as a derived amount of USD.
+  , uniswapV2UniswapDayDataDTODailyVolumeUntracked :: !(Maybe Text) -- ^ "daily_volume_untracked" - Total volume across all pairs on this day, untracked.
+  , uniswapV2UniswapDayDataDTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - All time volume across all pairs in ETH up to and including this day.
+  , uniswapV2UniswapDayDataDTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Total liquidity across all pairs in ETH up to and including this day.
+  , uniswapV2UniswapDayDataDTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - All time volume across all pairs in USD up to and including this day.
+  , uniswapV2UniswapDayDataDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Total liquidity across all pairs in USD up to and including this day.
+  , uniswapV2UniswapDayDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions throughout this day.
+  , uniswapV2UniswapDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2UniswapDayDataV2DTO
-instance A.FromJSON UniswapV2UniswapDayDataV2DTO where
-  parseJSON = A.withObject "UniswapV2UniswapDayDataV2DTO" $ \o ->
-    UniswapV2UniswapDayDataV2DTO
+-- | FromJSON UniswapV2UniswapDayDataDTO
+instance A.FromJSON UniswapV2UniswapDayDataDTO where
+  parseJSON = A.withObject "UniswapV2UniswapDayDataDTO" $ \o ->
+    UniswapV2UniswapDayDataDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6130,70 +6127,70 @@ instance A.FromJSON UniswapV2UniswapDayDataV2DTO where
       <*> (o .:? "tx_count")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV2UniswapDayDataV2DTO
-instance A.ToJSON UniswapV2UniswapDayDataV2DTO where
-  toJSON UniswapV2UniswapDayDataV2DTO {..} =
+-- | ToJSON UniswapV2UniswapDayDataDTO
+instance A.ToJSON UniswapV2UniswapDayDataDTO where
+  toJSON UniswapV2UniswapDayDataDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2UniswapDayDataV2DTOEntryTime
-      , "recv_time" .= uniswapV2UniswapDayDataV2DTORecvTime
-      , "block_number" .= uniswapV2UniswapDayDataV2DTOBlockNumber
-      , "id" .= uniswapV2UniswapDayDataV2DTOId
-      , "date" .= uniswapV2UniswapDayDataV2DTODate
-      , "daily_volume_eth" .= uniswapV2UniswapDayDataV2DTODailyVolumeEth
-      , "daily_volume_usd" .= uniswapV2UniswapDayDataV2DTODailyVolumeUsd
-      , "daily_volume_untracked" .= uniswapV2UniswapDayDataV2DTODailyVolumeUntracked
-      , "total_volume_eth" .= uniswapV2UniswapDayDataV2DTOTotalVolumeEth
-      , "total_liquidity_eth" .= uniswapV2UniswapDayDataV2DTOTotalLiquidityEth
-      , "total_volume_usd" .= uniswapV2UniswapDayDataV2DTOTotalVolumeUsd
-      , "total_liquidity_usd" .= uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd
-      , "tx_count" .= uniswapV2UniswapDayDataV2DTOTxCount
-      , "vid" .= uniswapV2UniswapDayDataV2DTOVid
+      [ "entry_time" .= uniswapV2UniswapDayDataDTOEntryTime
+      , "recv_time" .= uniswapV2UniswapDayDataDTORecvTime
+      , "block_number" .= uniswapV2UniswapDayDataDTOBlockNumber
+      , "id" .= uniswapV2UniswapDayDataDTOId
+      , "date" .= uniswapV2UniswapDayDataDTODate
+      , "daily_volume_eth" .= uniswapV2UniswapDayDataDTODailyVolumeEth
+      , "daily_volume_usd" .= uniswapV2UniswapDayDataDTODailyVolumeUsd
+      , "daily_volume_untracked" .= uniswapV2UniswapDayDataDTODailyVolumeUntracked
+      , "total_volume_eth" .= uniswapV2UniswapDayDataDTOTotalVolumeEth
+      , "total_liquidity_eth" .= uniswapV2UniswapDayDataDTOTotalLiquidityEth
+      , "total_volume_usd" .= uniswapV2UniswapDayDataDTOTotalVolumeUsd
+      , "total_liquidity_usd" .= uniswapV2UniswapDayDataDTOTotalLiquidityUsd
+      , "tx_count" .= uniswapV2UniswapDayDataDTOTxCount
+      , "vid" .= uniswapV2UniswapDayDataDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV2UniswapDayDataV2DTO' (by applying it's required fields, if any)
-mkUniswapV2UniswapDayDataV2DTO
-  :: UniswapV2UniswapDayDataV2DTO
-mkUniswapV2UniswapDayDataV2DTO =
-  UniswapV2UniswapDayDataV2DTO
-  { uniswapV2UniswapDayDataV2DTOEntryTime = Nothing
-  , uniswapV2UniswapDayDataV2DTORecvTime = Nothing
-  , uniswapV2UniswapDayDataV2DTOBlockNumber = Nothing
-  , uniswapV2UniswapDayDataV2DTOId = Nothing
-  , uniswapV2UniswapDayDataV2DTODate = Nothing
-  , uniswapV2UniswapDayDataV2DTODailyVolumeEth = Nothing
-  , uniswapV2UniswapDayDataV2DTODailyVolumeUsd = Nothing
-  , uniswapV2UniswapDayDataV2DTODailyVolumeUntracked = Nothing
-  , uniswapV2UniswapDayDataV2DTOTotalVolumeEth = Nothing
-  , uniswapV2UniswapDayDataV2DTOTotalLiquidityEth = Nothing
-  , uniswapV2UniswapDayDataV2DTOTotalVolumeUsd = Nothing
-  , uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd = Nothing
-  , uniswapV2UniswapDayDataV2DTOTxCount = Nothing
-  , uniswapV2UniswapDayDataV2DTOVid = Nothing
+-- | Construct a value of type 'UniswapV2UniswapDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV2UniswapDayDataDTO
+  :: UniswapV2UniswapDayDataDTO
+mkUniswapV2UniswapDayDataDTO =
+  UniswapV2UniswapDayDataDTO
+  { uniswapV2UniswapDayDataDTOEntryTime = Nothing
+  , uniswapV2UniswapDayDataDTORecvTime = Nothing
+  , uniswapV2UniswapDayDataDTOBlockNumber = Nothing
+  , uniswapV2UniswapDayDataDTOId = Nothing
+  , uniswapV2UniswapDayDataDTODate = Nothing
+  , uniswapV2UniswapDayDataDTODailyVolumeEth = Nothing
+  , uniswapV2UniswapDayDataDTODailyVolumeUsd = Nothing
+  , uniswapV2UniswapDayDataDTODailyVolumeUntracked = Nothing
+  , uniswapV2UniswapDayDataDTOTotalVolumeEth = Nothing
+  , uniswapV2UniswapDayDataDTOTotalLiquidityEth = Nothing
+  , uniswapV2UniswapDayDataDTOTotalVolumeUsd = Nothing
+  , uniswapV2UniswapDayDataDTOTotalLiquidityUsd = Nothing
+  , uniswapV2UniswapDayDataDTOTxCount = Nothing
+  , uniswapV2UniswapDayDataDTOVid = Nothing
   }
 
--- ** UniswapV2UniswapFactoryV2DTO
--- | UniswapV2UniswapFactoryV2DTO
+-- ** UniswapV2UniswapFactoryDTO
+-- | UniswapV2UniswapFactoryDTO
 -- The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
-data UniswapV2UniswapFactoryV2DTO = UniswapV2UniswapFactoryV2DTO
-  { uniswapV2UniswapFactoryV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2UniswapFactoryV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2UniswapFactoryV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2UniswapFactoryV2DTOId :: !(Maybe Text) -- ^ "id" - Factory address.
-  , uniswapV2UniswapFactoryV2DTOPairCount :: !(Maybe Int) -- ^ "pair_count" - Amount of pairs created by the Uniswap factory.
-  , uniswapV2UniswapFactoryV2DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - All time USD volume across all pairs (USD is derived).
-  , uniswapV2UniswapFactoryV2DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - All time volume in ETH across all pairs (ETH is derived).
-  , uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Untracked volume USD.
-  , uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Total liquidity across all pairs stored as a derived USD amount.
-  , uniswapV2UniswapFactoryV2DTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Total liquidity across all pairs stored as a derived ETH amount.
-  , uniswapV2UniswapFactoryV2DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - All time amount of transactions across all pairs.
-  , uniswapV2UniswapFactoryV2DTOVid :: !(Maybe Integer) -- ^ "vid" - .
+data UniswapV2UniswapFactoryDTO = UniswapV2UniswapFactoryDTO
+  { uniswapV2UniswapFactoryDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2UniswapFactoryDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2UniswapFactoryDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2UniswapFactoryDTOId :: !(Maybe Text) -- ^ "id" - Factory address.
+  , uniswapV2UniswapFactoryDTOPairCount :: !(Maybe Int) -- ^ "pair_count" - Amount of pairs created by the Uniswap factory.
+  , uniswapV2UniswapFactoryDTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - All time USD volume across all pairs (USD is derived).
+  , uniswapV2UniswapFactoryDTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - All time volume in ETH across all pairs (ETH is derived).
+  , uniswapV2UniswapFactoryDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Untracked volume USD.
+  , uniswapV2UniswapFactoryDTOTotalLiquidityUsd :: !(Maybe Text) -- ^ "total_liquidity_usd" - Total liquidity across all pairs stored as a derived USD amount.
+  , uniswapV2UniswapFactoryDTOTotalLiquidityEth :: !(Maybe Text) -- ^ "total_liquidity_eth" - Total liquidity across all pairs stored as a derived ETH amount.
+  , uniswapV2UniswapFactoryDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - All time amount of transactions across all pairs.
+  , uniswapV2UniswapFactoryDTOVid :: !(Maybe Integer) -- ^ "vid" - .
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2UniswapFactoryV2DTO
-instance A.FromJSON UniswapV2UniswapFactoryV2DTO where
-  parseJSON = A.withObject "UniswapV2UniswapFactoryV2DTO" $ \o ->
-    UniswapV2UniswapFactoryV2DTO
+-- | FromJSON UniswapV2UniswapFactoryDTO
+instance A.FromJSON UniswapV2UniswapFactoryDTO where
+  parseJSON = A.withObject "UniswapV2UniswapFactoryDTO" $ \o ->
+    UniswapV2UniswapFactoryDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6207,60 +6204,60 @@ instance A.FromJSON UniswapV2UniswapFactoryV2DTO where
       <*> (o .:? "tx_count")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV2UniswapFactoryV2DTO
-instance A.ToJSON UniswapV2UniswapFactoryV2DTO where
-  toJSON UniswapV2UniswapFactoryV2DTO {..} =
+-- | ToJSON UniswapV2UniswapFactoryDTO
+instance A.ToJSON UniswapV2UniswapFactoryDTO where
+  toJSON UniswapV2UniswapFactoryDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2UniswapFactoryV2DTOEntryTime
-      , "recv_time" .= uniswapV2UniswapFactoryV2DTORecvTime
-      , "block_number" .= uniswapV2UniswapFactoryV2DTOBlockNumber
-      , "id" .= uniswapV2UniswapFactoryV2DTOId
-      , "pair_count" .= uniswapV2UniswapFactoryV2DTOPairCount
-      , "total_volume_usd" .= uniswapV2UniswapFactoryV2DTOTotalVolumeUsd
-      , "total_volume_eth" .= uniswapV2UniswapFactoryV2DTOTotalVolumeEth
-      , "untracked_volume_usd" .= uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd
-      , "total_liquidity_usd" .= uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd
-      , "total_liquidity_eth" .= uniswapV2UniswapFactoryV2DTOTotalLiquidityEth
-      , "tx_count" .= uniswapV2UniswapFactoryV2DTOTxCount
-      , "vid" .= uniswapV2UniswapFactoryV2DTOVid
+      [ "entry_time" .= uniswapV2UniswapFactoryDTOEntryTime
+      , "recv_time" .= uniswapV2UniswapFactoryDTORecvTime
+      , "block_number" .= uniswapV2UniswapFactoryDTOBlockNumber
+      , "id" .= uniswapV2UniswapFactoryDTOId
+      , "pair_count" .= uniswapV2UniswapFactoryDTOPairCount
+      , "total_volume_usd" .= uniswapV2UniswapFactoryDTOTotalVolumeUsd
+      , "total_volume_eth" .= uniswapV2UniswapFactoryDTOTotalVolumeEth
+      , "untracked_volume_usd" .= uniswapV2UniswapFactoryDTOUntrackedVolumeUsd
+      , "total_liquidity_usd" .= uniswapV2UniswapFactoryDTOTotalLiquidityUsd
+      , "total_liquidity_eth" .= uniswapV2UniswapFactoryDTOTotalLiquidityEth
+      , "tx_count" .= uniswapV2UniswapFactoryDTOTxCount
+      , "vid" .= uniswapV2UniswapFactoryDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV2UniswapFactoryV2DTO' (by applying it's required fields, if any)
-mkUniswapV2UniswapFactoryV2DTO
-  :: UniswapV2UniswapFactoryV2DTO
-mkUniswapV2UniswapFactoryV2DTO =
-  UniswapV2UniswapFactoryV2DTO
-  { uniswapV2UniswapFactoryV2DTOEntryTime = Nothing
-  , uniswapV2UniswapFactoryV2DTORecvTime = Nothing
-  , uniswapV2UniswapFactoryV2DTOBlockNumber = Nothing
-  , uniswapV2UniswapFactoryV2DTOId = Nothing
-  , uniswapV2UniswapFactoryV2DTOPairCount = Nothing
-  , uniswapV2UniswapFactoryV2DTOTotalVolumeUsd = Nothing
-  , uniswapV2UniswapFactoryV2DTOTotalVolumeEth = Nothing
-  , uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd = Nothing
-  , uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd = Nothing
-  , uniswapV2UniswapFactoryV2DTOTotalLiquidityEth = Nothing
-  , uniswapV2UniswapFactoryV2DTOTxCount = Nothing
-  , uniswapV2UniswapFactoryV2DTOVid = Nothing
+-- | Construct a value of type 'UniswapV2UniswapFactoryDTO' (by applying it's required fields, if any)
+mkUniswapV2UniswapFactoryDTO
+  :: UniswapV2UniswapFactoryDTO
+mkUniswapV2UniswapFactoryDTO =
+  UniswapV2UniswapFactoryDTO
+  { uniswapV2UniswapFactoryDTOEntryTime = Nothing
+  , uniswapV2UniswapFactoryDTORecvTime = Nothing
+  , uniswapV2UniswapFactoryDTOBlockNumber = Nothing
+  , uniswapV2UniswapFactoryDTOId = Nothing
+  , uniswapV2UniswapFactoryDTOPairCount = Nothing
+  , uniswapV2UniswapFactoryDTOTotalVolumeUsd = Nothing
+  , uniswapV2UniswapFactoryDTOTotalVolumeEth = Nothing
+  , uniswapV2UniswapFactoryDTOUntrackedVolumeUsd = Nothing
+  , uniswapV2UniswapFactoryDTOTotalLiquidityUsd = Nothing
+  , uniswapV2UniswapFactoryDTOTotalLiquidityEth = Nothing
+  , uniswapV2UniswapFactoryDTOTxCount = Nothing
+  , uniswapV2UniswapFactoryDTOVid = Nothing
   }
 
--- ** UniswapV2UserV2DTO
--- | UniswapV2UserV2DTO
+-- ** UniswapV2UserDTO
+-- | UniswapV2UserDTO
 -- A user entity is created for any address that provides liquidity to a pool on Uniswap. This entity can be used to track open positions for users.
-data UniswapV2UserV2DTO = UniswapV2UserV2DTO
-  { uniswapV2UserV2DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV2UserV2DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV2UserV2DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2UserV2DTOId :: !(Maybe Text) -- ^ "id" - User address.
-  , uniswapV2UserV2DTOUsdSwapped :: !(Maybe Text) -- ^ "usd_swapped" - Total USD value swapped.
-  , uniswapV2UserV2DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV2UserDTO = UniswapV2UserDTO
+  { uniswapV2UserDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV2UserDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV2UserDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV2UserDTOId :: !(Maybe Text) -- ^ "id" - User address.
+  , uniswapV2UserDTOUsdSwapped :: !(Maybe Text) -- ^ "usd_swapped" - Total USD value swapped.
+  , uniswapV2UserDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV2UserV2DTO
-instance A.FromJSON UniswapV2UserV2DTO where
-  parseJSON = A.withObject "UniswapV2UserV2DTO" $ \o ->
-    UniswapV2UserV2DTO
+-- | FromJSON UniswapV2UserDTO
+instance A.FromJSON UniswapV2UserDTO where
+  parseJSON = A.withObject "UniswapV2UserDTO" $ \o ->
+    UniswapV2UserDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6268,48 +6265,48 @@ instance A.FromJSON UniswapV2UserV2DTO where
       <*> (o .:? "usd_swapped")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV2UserV2DTO
-instance A.ToJSON UniswapV2UserV2DTO where
-  toJSON UniswapV2UserV2DTO {..} =
+-- | ToJSON UniswapV2UserDTO
+instance A.ToJSON UniswapV2UserDTO where
+  toJSON UniswapV2UserDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV2UserV2DTOEntryTime
-      , "recv_time" .= uniswapV2UserV2DTORecvTime
-      , "block_number" .= uniswapV2UserV2DTOBlockNumber
-      , "id" .= uniswapV2UserV2DTOId
-      , "usd_swapped" .= uniswapV2UserV2DTOUsdSwapped
-      , "vid" .= uniswapV2UserV2DTOVid
+      [ "entry_time" .= uniswapV2UserDTOEntryTime
+      , "recv_time" .= uniswapV2UserDTORecvTime
+      , "block_number" .= uniswapV2UserDTOBlockNumber
+      , "id" .= uniswapV2UserDTOId
+      , "usd_swapped" .= uniswapV2UserDTOUsdSwapped
+      , "vid" .= uniswapV2UserDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV2UserV2DTO' (by applying it's required fields, if any)
-mkUniswapV2UserV2DTO
-  :: UniswapV2UserV2DTO
-mkUniswapV2UserV2DTO =
-  UniswapV2UserV2DTO
-  { uniswapV2UserV2DTOEntryTime = Nothing
-  , uniswapV2UserV2DTORecvTime = Nothing
-  , uniswapV2UserV2DTOBlockNumber = Nothing
-  , uniswapV2UserV2DTOId = Nothing
-  , uniswapV2UserV2DTOUsdSwapped = Nothing
-  , uniswapV2UserV2DTOVid = Nothing
+-- | Construct a value of type 'UniswapV2UserDTO' (by applying it's required fields, if any)
+mkUniswapV2UserDTO
+  :: UniswapV2UserDTO
+mkUniswapV2UserDTO =
+  UniswapV2UserDTO
+  { uniswapV2UserDTOEntryTime = Nothing
+  , uniswapV2UserDTORecvTime = Nothing
+  , uniswapV2UserDTOBlockNumber = Nothing
+  , uniswapV2UserDTOId = Nothing
+  , uniswapV2UserDTOUsdSwapped = Nothing
+  , uniswapV2UserDTOVid = Nothing
   }
 
--- ** UniswapV3BundleV3DTO
--- | UniswapV3BundleV3DTO
+-- ** UniswapV3BundleDTO
+-- | UniswapV3BundleDTO
 -- The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
-data UniswapV3BundleV3DTO = UniswapV3BundleV3DTO
-  { uniswapV3BundleV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3BundleV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3BundleV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3BundleV3DTOId :: !(Maybe Text) -- ^ "id" - 
-  , uniswapV3BundleV3DTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd" - Price of ETH in usd.
-  , uniswapV3BundleV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV3BundleDTO = UniswapV3BundleDTO
+  { uniswapV3BundleDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3BundleDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3BundleDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3BundleDTOId :: !(Maybe Text) -- ^ "id" - 
+  , uniswapV3BundleDTOEthPriceUsd :: !(Maybe Text) -- ^ "eth_price_usd" - Price of ETH in usd.
+  , uniswapV3BundleDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3BundleV3DTO
-instance A.FromJSON UniswapV3BundleV3DTO where
-  parseJSON = A.withObject "UniswapV3BundleV3DTO" $ \o ->
-    UniswapV3BundleV3DTO
+-- | FromJSON UniswapV3BundleDTO
+instance A.FromJSON UniswapV3BundleDTO where
+  parseJSON = A.withObject "UniswapV3BundleDTO" $ \o ->
+    UniswapV3BundleDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6317,61 +6314,61 @@ instance A.FromJSON UniswapV3BundleV3DTO where
       <*> (o .:? "eth_price_usd")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3BundleV3DTO
-instance A.ToJSON UniswapV3BundleV3DTO where
-  toJSON UniswapV3BundleV3DTO {..} =
+-- | ToJSON UniswapV3BundleDTO
+instance A.ToJSON UniswapV3BundleDTO where
+  toJSON UniswapV3BundleDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3BundleV3DTOEntryTime
-      , "recv_time" .= uniswapV3BundleV3DTORecvTime
-      , "block_number" .= uniswapV3BundleV3DTOBlockNumber
-      , "id" .= uniswapV3BundleV3DTOId
-      , "eth_price_usd" .= uniswapV3BundleV3DTOEthPriceUsd
-      , "vid" .= uniswapV3BundleV3DTOVid
+      [ "entry_time" .= uniswapV3BundleDTOEntryTime
+      , "recv_time" .= uniswapV3BundleDTORecvTime
+      , "block_number" .= uniswapV3BundleDTOBlockNumber
+      , "id" .= uniswapV3BundleDTOId
+      , "eth_price_usd" .= uniswapV3BundleDTOEthPriceUsd
+      , "vid" .= uniswapV3BundleDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3BundleV3DTO' (by applying it's required fields, if any)
-mkUniswapV3BundleV3DTO
-  :: UniswapV3BundleV3DTO
-mkUniswapV3BundleV3DTO =
-  UniswapV3BundleV3DTO
-  { uniswapV3BundleV3DTOEntryTime = Nothing
-  , uniswapV3BundleV3DTORecvTime = Nothing
-  , uniswapV3BundleV3DTOBlockNumber = Nothing
-  , uniswapV3BundleV3DTOId = Nothing
-  , uniswapV3BundleV3DTOEthPriceUsd = Nothing
-  , uniswapV3BundleV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3BundleDTO' (by applying it's required fields, if any)
+mkUniswapV3BundleDTO
+  :: UniswapV3BundleDTO
+mkUniswapV3BundleDTO =
+  UniswapV3BundleDTO
+  { uniswapV3BundleDTOEntryTime = Nothing
+  , uniswapV3BundleDTORecvTime = Nothing
+  , uniswapV3BundleDTOBlockNumber = Nothing
+  , uniswapV3BundleDTOId = Nothing
+  , uniswapV3BundleDTOEthPriceUsd = Nothing
+  , uniswapV3BundleDTOVid = Nothing
   }
 
--- ** UniswapV3BurnV3DTO
--- | UniswapV3BurnV3DTO
+-- ** UniswapV3BurnDTO
+-- | UniswapV3BurnDTO
 -- Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
-data UniswapV3BurnV3DTO = UniswapV3BurnV3DTO
-  { uniswapV3BurnV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3BurnV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3BurnV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3BurnV3DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
-  , uniswapV3BurnV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction burn was included in.
-  , uniswapV3BurnV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
-  , uniswapV3BurnV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
-  , uniswapV3BurnV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
-  , uniswapV3BurnV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
-  , uniswapV3BurnV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity was burned.
-  , uniswapV3BurnV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
-  , uniswapV3BurnV3DTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity burned.
-  , uniswapV3BurnV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 burned.
-  , uniswapV3BurnV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 burned.
-  , uniswapV3BurnV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
-  , uniswapV3BurnV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of position.
-  , uniswapV3BurnV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of position.
-  , uniswapV3BurnV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Position within the transactions.
-  , uniswapV3BurnV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV3BurnDTO = UniswapV3BurnDTO
+  { uniswapV3BurnDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3BurnDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3BurnDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3BurnDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
+  , uniswapV3BurnDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction burn was included in.
+  , uniswapV3BurnDTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
+  , uniswapV3BurnDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , uniswapV3BurnDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
+  , uniswapV3BurnDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
+  , uniswapV3BurnDTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity was burned.
+  , uniswapV3BurnDTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+  , uniswapV3BurnDTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity burned.
+  , uniswapV3BurnDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 burned.
+  , uniswapV3BurnDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 burned.
+  , uniswapV3BurnDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
+  , uniswapV3BurnDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of position.
+  , uniswapV3BurnDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of position.
+  , uniswapV3BurnDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Position within the transactions.
+  , uniswapV3BurnDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3BurnV3DTO
-instance A.FromJSON UniswapV3BurnV3DTO where
-  parseJSON = A.withObject "UniswapV3BurnV3DTO" $ \o ->
-    UniswapV3BurnV3DTO
+-- | FromJSON UniswapV3BurnDTO
+instance A.FromJSON UniswapV3BurnDTO where
+  parseJSON = A.withObject "UniswapV3BurnDTO" $ \o ->
+    UniswapV3BurnDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6392,85 +6389,85 @@ instance A.FromJSON UniswapV3BurnV3DTO where
       <*> (o .:? "log_index")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3BurnV3DTO
-instance A.ToJSON UniswapV3BurnV3DTO where
-  toJSON UniswapV3BurnV3DTO {..} =
+-- | ToJSON UniswapV3BurnDTO
+instance A.ToJSON UniswapV3BurnDTO where
+  toJSON UniswapV3BurnDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3BurnV3DTOEntryTime
-      , "recv_time" .= uniswapV3BurnV3DTORecvTime
-      , "block_number" .= uniswapV3BurnV3DTOBlockNumber
-      , "id" .= uniswapV3BurnV3DTOId
-      , "transaction" .= uniswapV3BurnV3DTOTransaction
-      , "pool" .= uniswapV3BurnV3DTOPool
-      , "token_0" .= uniswapV3BurnV3DTOToken0
-      , "token_1" .= uniswapV3BurnV3DTOToken1
-      , "timestamp" .= uniswapV3BurnV3DTOTimestamp
-      , "owner" .= uniswapV3BurnV3DTOOwner
-      , "origin" .= uniswapV3BurnV3DTOOrigin
-      , "amount" .= uniswapV3BurnV3DTOAmount
-      , "amount_0" .= uniswapV3BurnV3DTOAmount0
-      , "amount_1" .= uniswapV3BurnV3DTOAmount1
-      , "amount_usd" .= uniswapV3BurnV3DTOAmountUsd
-      , "tick_lower" .= uniswapV3BurnV3DTOTickLower
-      , "tick_upper" .= uniswapV3BurnV3DTOTickUpper
-      , "log_index" .= uniswapV3BurnV3DTOLogIndex
-      , "vid" .= uniswapV3BurnV3DTOVid
+      [ "entry_time" .= uniswapV3BurnDTOEntryTime
+      , "recv_time" .= uniswapV3BurnDTORecvTime
+      , "block_number" .= uniswapV3BurnDTOBlockNumber
+      , "id" .= uniswapV3BurnDTOId
+      , "transaction" .= uniswapV3BurnDTOTransaction
+      , "pool" .= uniswapV3BurnDTOPool
+      , "token_0" .= uniswapV3BurnDTOToken0
+      , "token_1" .= uniswapV3BurnDTOToken1
+      , "timestamp" .= uniswapV3BurnDTOTimestamp
+      , "owner" .= uniswapV3BurnDTOOwner
+      , "origin" .= uniswapV3BurnDTOOrigin
+      , "amount" .= uniswapV3BurnDTOAmount
+      , "amount_0" .= uniswapV3BurnDTOAmount0
+      , "amount_1" .= uniswapV3BurnDTOAmount1
+      , "amount_usd" .= uniswapV3BurnDTOAmountUsd
+      , "tick_lower" .= uniswapV3BurnDTOTickLower
+      , "tick_upper" .= uniswapV3BurnDTOTickUpper
+      , "log_index" .= uniswapV3BurnDTOLogIndex
+      , "vid" .= uniswapV3BurnDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3BurnV3DTO' (by applying it's required fields, if any)
-mkUniswapV3BurnV3DTO
-  :: UniswapV3BurnV3DTO
-mkUniswapV3BurnV3DTO =
-  UniswapV3BurnV3DTO
-  { uniswapV3BurnV3DTOEntryTime = Nothing
-  , uniswapV3BurnV3DTORecvTime = Nothing
-  , uniswapV3BurnV3DTOBlockNumber = Nothing
-  , uniswapV3BurnV3DTOId = Nothing
-  , uniswapV3BurnV3DTOTransaction = Nothing
-  , uniswapV3BurnV3DTOPool = Nothing
-  , uniswapV3BurnV3DTOToken0 = Nothing
-  , uniswapV3BurnV3DTOToken1 = Nothing
-  , uniswapV3BurnV3DTOTimestamp = Nothing
-  , uniswapV3BurnV3DTOOwner = Nothing
-  , uniswapV3BurnV3DTOOrigin = Nothing
-  , uniswapV3BurnV3DTOAmount = Nothing
-  , uniswapV3BurnV3DTOAmount0 = Nothing
-  , uniswapV3BurnV3DTOAmount1 = Nothing
-  , uniswapV3BurnV3DTOAmountUsd = Nothing
-  , uniswapV3BurnV3DTOTickLower = Nothing
-  , uniswapV3BurnV3DTOTickUpper = Nothing
-  , uniswapV3BurnV3DTOLogIndex = Nothing
-  , uniswapV3BurnV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3BurnDTO' (by applying it's required fields, if any)
+mkUniswapV3BurnDTO
+  :: UniswapV3BurnDTO
+mkUniswapV3BurnDTO =
+  UniswapV3BurnDTO
+  { uniswapV3BurnDTOEntryTime = Nothing
+  , uniswapV3BurnDTORecvTime = Nothing
+  , uniswapV3BurnDTOBlockNumber = Nothing
+  , uniswapV3BurnDTOId = Nothing
+  , uniswapV3BurnDTOTransaction = Nothing
+  , uniswapV3BurnDTOPool = Nothing
+  , uniswapV3BurnDTOToken0 = Nothing
+  , uniswapV3BurnDTOToken1 = Nothing
+  , uniswapV3BurnDTOTimestamp = Nothing
+  , uniswapV3BurnDTOOwner = Nothing
+  , uniswapV3BurnDTOOrigin = Nothing
+  , uniswapV3BurnDTOAmount = Nothing
+  , uniswapV3BurnDTOAmount0 = Nothing
+  , uniswapV3BurnDTOAmount1 = Nothing
+  , uniswapV3BurnDTOAmountUsd = Nothing
+  , uniswapV3BurnDTOTickLower = Nothing
+  , uniswapV3BurnDTOTickUpper = Nothing
+  , uniswapV3BurnDTOLogIndex = Nothing
+  , uniswapV3BurnDTOVid = Nothing
   }
 
--- ** UniswapV3FactoryV3DTO
--- | UniswapV3FactoryV3DTO
+-- ** UniswapV3FactoryDTO
+-- | UniswapV3FactoryDTO
 -- The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
-data UniswapV3FactoryV3DTO = UniswapV3FactoryV3DTO
-  { uniswapV3FactoryV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3FactoryV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3FactoryV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3FactoryV3DTOId :: !(Maybe Text) -- ^ "id" - Factory address.
-  , uniswapV3FactoryV3DTOPoolCount :: !(Maybe Text) -- ^ "pool_count" - Amount of pools created.
-  , uniswapV3FactoryV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions all time.
-  , uniswapV3FactoryV3DTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - Total volume all time in derived USD.
-  , uniswapV3FactoryV3DTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - Total volume all time in derived ETH.
-  , uniswapV3FactoryV3DTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd" - Total swap fees all time in USD.
-  , uniswapV3FactoryV3DTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth" - All volume even through less reliable USD values.
-  , uniswapV3FactoryV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All volume even through less reliable USD values.
-  , uniswapV3FactoryV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked derived in USD.
-  , uniswapV3FactoryV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total value locked derived in ETH.
-  , uniswapV3FactoryV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived in USD untracked.
-  , uniswapV3FactoryV3DTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked" - Total value locked derived in ETH untracked.
-  , uniswapV3FactoryV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Current owner of the factory.
-  , uniswapV3FactoryV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV3FactoryDTO = UniswapV3FactoryDTO
+  { uniswapV3FactoryDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3FactoryDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3FactoryDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3FactoryDTOId :: !(Maybe Text) -- ^ "id" - Factory address.
+  , uniswapV3FactoryDTOPoolCount :: !(Maybe Text) -- ^ "pool_count" - Amount of pools created.
+  , uniswapV3FactoryDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions all time.
+  , uniswapV3FactoryDTOTotalVolumeUsd :: !(Maybe Text) -- ^ "total_volume_usd" - Total volume all time in derived USD.
+  , uniswapV3FactoryDTOTotalVolumeEth :: !(Maybe Text) -- ^ "total_volume_eth" - Total volume all time in derived ETH.
+  , uniswapV3FactoryDTOTotalFeesUsd :: !(Maybe Text) -- ^ "total_fees_usd" - Total swap fees all time in USD.
+  , uniswapV3FactoryDTOTotalFeesEth :: !(Maybe Text) -- ^ "total_fees_eth" - All volume even through less reliable USD values.
+  , uniswapV3FactoryDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All volume even through less reliable USD values.
+  , uniswapV3FactoryDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked derived in USD.
+  , uniswapV3FactoryDTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total value locked derived in ETH.
+  , uniswapV3FactoryDTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived in USD untracked.
+  , uniswapV3FactoryDTOTotalValueLockedEthUntracked :: !(Maybe Text) -- ^ "total_value_locked_eth_untracked" - Total value locked derived in ETH untracked.
+  , uniswapV3FactoryDTOOwner :: !(Maybe Text) -- ^ "owner" - Current owner of the factory.
+  , uniswapV3FactoryDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3FactoryV3DTO
-instance A.FromJSON UniswapV3FactoryV3DTO where
-  parseJSON = A.withObject "UniswapV3FactoryV3DTO" $ \o ->
-    UniswapV3FactoryV3DTO
+-- | FromJSON UniswapV3FactoryDTO
+instance A.FromJSON UniswapV3FactoryDTO where
+  parseJSON = A.withObject "UniswapV3FactoryDTO" $ \o ->
+    UniswapV3FactoryDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6489,84 +6486,84 @@ instance A.FromJSON UniswapV3FactoryV3DTO where
       <*> (o .:? "owner")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3FactoryV3DTO
-instance A.ToJSON UniswapV3FactoryV3DTO where
-  toJSON UniswapV3FactoryV3DTO {..} =
+-- | ToJSON UniswapV3FactoryDTO
+instance A.ToJSON UniswapV3FactoryDTO where
+  toJSON UniswapV3FactoryDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3FactoryV3DTOEntryTime
-      , "recv_time" .= uniswapV3FactoryV3DTORecvTime
-      , "block_number" .= uniswapV3FactoryV3DTOBlockNumber
-      , "id" .= uniswapV3FactoryV3DTOId
-      , "pool_count" .= uniswapV3FactoryV3DTOPoolCount
-      , "tx_count" .= uniswapV3FactoryV3DTOTxCount
-      , "total_volume_usd" .= uniswapV3FactoryV3DTOTotalVolumeUsd
-      , "total_volume_eth" .= uniswapV3FactoryV3DTOTotalVolumeEth
-      , "total_fees_usd" .= uniswapV3FactoryV3DTOTotalFeesUsd
-      , "total_fees_eth" .= uniswapV3FactoryV3DTOTotalFeesEth
-      , "untracked_volume_usd" .= uniswapV3FactoryV3DTOUntrackedVolumeUsd
-      , "total_value_locked_usd" .= uniswapV3FactoryV3DTOTotalValueLockedUsd
-      , "total_value_locked_eth" .= uniswapV3FactoryV3DTOTotalValueLockedEth
-      , "total_value_locked_usd_untracked" .= uniswapV3FactoryV3DTOTotalValueLockedUsdUntracked
-      , "total_value_locked_eth_untracked" .= uniswapV3FactoryV3DTOTotalValueLockedEthUntracked
-      , "owner" .= uniswapV3FactoryV3DTOOwner
-      , "vid" .= uniswapV3FactoryV3DTOVid
+      [ "entry_time" .= uniswapV3FactoryDTOEntryTime
+      , "recv_time" .= uniswapV3FactoryDTORecvTime
+      , "block_number" .= uniswapV3FactoryDTOBlockNumber
+      , "id" .= uniswapV3FactoryDTOId
+      , "pool_count" .= uniswapV3FactoryDTOPoolCount
+      , "tx_count" .= uniswapV3FactoryDTOTxCount
+      , "total_volume_usd" .= uniswapV3FactoryDTOTotalVolumeUsd
+      , "total_volume_eth" .= uniswapV3FactoryDTOTotalVolumeEth
+      , "total_fees_usd" .= uniswapV3FactoryDTOTotalFeesUsd
+      , "total_fees_eth" .= uniswapV3FactoryDTOTotalFeesEth
+      , "untracked_volume_usd" .= uniswapV3FactoryDTOUntrackedVolumeUsd
+      , "total_value_locked_usd" .= uniswapV3FactoryDTOTotalValueLockedUsd
+      , "total_value_locked_eth" .= uniswapV3FactoryDTOTotalValueLockedEth
+      , "total_value_locked_usd_untracked" .= uniswapV3FactoryDTOTotalValueLockedUsdUntracked
+      , "total_value_locked_eth_untracked" .= uniswapV3FactoryDTOTotalValueLockedEthUntracked
+      , "owner" .= uniswapV3FactoryDTOOwner
+      , "vid" .= uniswapV3FactoryDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3FactoryV3DTO' (by applying it's required fields, if any)
-mkUniswapV3FactoryV3DTO
-  :: UniswapV3FactoryV3DTO
-mkUniswapV3FactoryV3DTO =
-  UniswapV3FactoryV3DTO
-  { uniswapV3FactoryV3DTOEntryTime = Nothing
-  , uniswapV3FactoryV3DTORecvTime = Nothing
-  , uniswapV3FactoryV3DTOBlockNumber = Nothing
-  , uniswapV3FactoryV3DTOId = Nothing
-  , uniswapV3FactoryV3DTOPoolCount = Nothing
-  , uniswapV3FactoryV3DTOTxCount = Nothing
-  , uniswapV3FactoryV3DTOTotalVolumeUsd = Nothing
-  , uniswapV3FactoryV3DTOTotalVolumeEth = Nothing
-  , uniswapV3FactoryV3DTOTotalFeesUsd = Nothing
-  , uniswapV3FactoryV3DTOTotalFeesEth = Nothing
-  , uniswapV3FactoryV3DTOUntrackedVolumeUsd = Nothing
-  , uniswapV3FactoryV3DTOTotalValueLockedUsd = Nothing
-  , uniswapV3FactoryV3DTOTotalValueLockedEth = Nothing
-  , uniswapV3FactoryV3DTOTotalValueLockedUsdUntracked = Nothing
-  , uniswapV3FactoryV3DTOTotalValueLockedEthUntracked = Nothing
-  , uniswapV3FactoryV3DTOOwner = Nothing
-  , uniswapV3FactoryV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3FactoryDTO' (by applying it's required fields, if any)
+mkUniswapV3FactoryDTO
+  :: UniswapV3FactoryDTO
+mkUniswapV3FactoryDTO =
+  UniswapV3FactoryDTO
+  { uniswapV3FactoryDTOEntryTime = Nothing
+  , uniswapV3FactoryDTORecvTime = Nothing
+  , uniswapV3FactoryDTOBlockNumber = Nothing
+  , uniswapV3FactoryDTOId = Nothing
+  , uniswapV3FactoryDTOPoolCount = Nothing
+  , uniswapV3FactoryDTOTxCount = Nothing
+  , uniswapV3FactoryDTOTotalVolumeUsd = Nothing
+  , uniswapV3FactoryDTOTotalVolumeEth = Nothing
+  , uniswapV3FactoryDTOTotalFeesUsd = Nothing
+  , uniswapV3FactoryDTOTotalFeesEth = Nothing
+  , uniswapV3FactoryDTOUntrackedVolumeUsd = Nothing
+  , uniswapV3FactoryDTOTotalValueLockedUsd = Nothing
+  , uniswapV3FactoryDTOTotalValueLockedEth = Nothing
+  , uniswapV3FactoryDTOTotalValueLockedUsdUntracked = Nothing
+  , uniswapV3FactoryDTOTotalValueLockedEthUntracked = Nothing
+  , uniswapV3FactoryDTOOwner = Nothing
+  , uniswapV3FactoryDTOVid = Nothing
   }
 
--- ** UniswapV3MintV3DTO
--- | UniswapV3MintV3DTO
+-- ** UniswapV3MintDTO
+-- | UniswapV3MintDTO
 -- Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
-data UniswapV3MintV3DTO = UniswapV3MintV3DTO
-  { uniswapV3MintV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3MintV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3MintV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3MintV3DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
-  , uniswapV3MintV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Which txn the mint was included in.
-  , uniswapV3MintV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Time of transaction.
-  , uniswapV3MintV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
-  , uniswapV3MintV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
-  , uniswapV3MintV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
-  , uniswapV3MintV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity minted to.
-  , uniswapV3MintV3DTOSender :: !(Maybe Text) -- ^ "sender" - The address that minted the liquidity.
-  , uniswapV3MintV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
-  , uniswapV3MintV3DTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity minted.
-  , uniswapV3MintV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 minted.
-  , uniswapV3MintV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 minted.
-  , uniswapV3MintV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
-  , uniswapV3MintV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
-  , uniswapV3MintV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
-  , uniswapV3MintV3DTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Order within the transaction.
-  , uniswapV3MintV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+data UniswapV3MintDTO = UniswapV3MintDTO
+  { uniswapV3MintDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3MintDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3MintDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3MintDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash + &#39;#&#39; + index in mints Transaction array.
+  , uniswapV3MintDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Which txn the mint was included in.
+  , uniswapV3MintDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Time of transaction.
+  , uniswapV3MintDTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
+  , uniswapV3MintDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , uniswapV3MintDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
+  , uniswapV3MintDTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of position where liquidity minted to.
+  , uniswapV3MintDTOSender :: !(Maybe Text) -- ^ "sender" - The address that minted the liquidity.
+  , uniswapV3MintDTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.
+  , uniswapV3MintDTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of liquidity minted.
+  , uniswapV3MintDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token 0 minted.
+  , uniswapV3MintDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token 1 minted.
+  , uniswapV3MintDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
+  , uniswapV3MintDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
+  , uniswapV3MintDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
+  , uniswapV3MintDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Order within the transaction.
+  , uniswapV3MintDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3MintV3DTO
-instance A.FromJSON UniswapV3MintV3DTO where
-  parseJSON = A.withObject "UniswapV3MintV3DTO" $ \o ->
-    UniswapV3MintV3DTO
+-- | FromJSON UniswapV3MintDTO
+instance A.FromJSON UniswapV3MintDTO where
+  parseJSON = A.withObject "UniswapV3MintDTO" $ \o ->
+    UniswapV3MintDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6588,345 +6585,103 @@ instance A.FromJSON UniswapV3MintV3DTO where
       <*> (o .:? "log_index")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3MintV3DTO
-instance A.ToJSON UniswapV3MintV3DTO where
-  toJSON UniswapV3MintV3DTO {..} =
+-- | ToJSON UniswapV3MintDTO
+instance A.ToJSON UniswapV3MintDTO where
+  toJSON UniswapV3MintDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3MintV3DTOEntryTime
-      , "recv_time" .= uniswapV3MintV3DTORecvTime
-      , "block_number" .= uniswapV3MintV3DTOBlockNumber
-      , "id" .= uniswapV3MintV3DTOId
-      , "transaction" .= uniswapV3MintV3DTOTransaction
-      , "timestamp" .= uniswapV3MintV3DTOTimestamp
-      , "pool" .= uniswapV3MintV3DTOPool
-      , "token_0" .= uniswapV3MintV3DTOToken0
-      , "token_1" .= uniswapV3MintV3DTOToken1
-      , "owner" .= uniswapV3MintV3DTOOwner
-      , "sender" .= uniswapV3MintV3DTOSender
-      , "origin" .= uniswapV3MintV3DTOOrigin
-      , "amount" .= uniswapV3MintV3DTOAmount
-      , "amount_0" .= uniswapV3MintV3DTOAmount0
-      , "amount_1" .= uniswapV3MintV3DTOAmount1
-      , "amount_usd" .= uniswapV3MintV3DTOAmountUsd
-      , "tick_lower" .= uniswapV3MintV3DTOTickLower
-      , "tick_upper" .= uniswapV3MintV3DTOTickUpper
-      , "log_index" .= uniswapV3MintV3DTOLogIndex
-      , "vid" .= uniswapV3MintV3DTOVid
+      [ "entry_time" .= uniswapV3MintDTOEntryTime
+      , "recv_time" .= uniswapV3MintDTORecvTime
+      , "block_number" .= uniswapV3MintDTOBlockNumber
+      , "id" .= uniswapV3MintDTOId
+      , "transaction" .= uniswapV3MintDTOTransaction
+      , "timestamp" .= uniswapV3MintDTOTimestamp
+      , "pool" .= uniswapV3MintDTOPool
+      , "token_0" .= uniswapV3MintDTOToken0
+      , "token_1" .= uniswapV3MintDTOToken1
+      , "owner" .= uniswapV3MintDTOOwner
+      , "sender" .= uniswapV3MintDTOSender
+      , "origin" .= uniswapV3MintDTOOrigin
+      , "amount" .= uniswapV3MintDTOAmount
+      , "amount_0" .= uniswapV3MintDTOAmount0
+      , "amount_1" .= uniswapV3MintDTOAmount1
+      , "amount_usd" .= uniswapV3MintDTOAmountUsd
+      , "tick_lower" .= uniswapV3MintDTOTickLower
+      , "tick_upper" .= uniswapV3MintDTOTickUpper
+      , "log_index" .= uniswapV3MintDTOLogIndex
+      , "vid" .= uniswapV3MintDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3MintV3DTO' (by applying it's required fields, if any)
-mkUniswapV3MintV3DTO
-  :: UniswapV3MintV3DTO
-mkUniswapV3MintV3DTO =
-  UniswapV3MintV3DTO
-  { uniswapV3MintV3DTOEntryTime = Nothing
-  , uniswapV3MintV3DTORecvTime = Nothing
-  , uniswapV3MintV3DTOBlockNumber = Nothing
-  , uniswapV3MintV3DTOId = Nothing
-  , uniswapV3MintV3DTOTransaction = Nothing
-  , uniswapV3MintV3DTOTimestamp = Nothing
-  , uniswapV3MintV3DTOPool = Nothing
-  , uniswapV3MintV3DTOToken0 = Nothing
-  , uniswapV3MintV3DTOToken1 = Nothing
-  , uniswapV3MintV3DTOOwner = Nothing
-  , uniswapV3MintV3DTOSender = Nothing
-  , uniswapV3MintV3DTOOrigin = Nothing
-  , uniswapV3MintV3DTOAmount = Nothing
-  , uniswapV3MintV3DTOAmount0 = Nothing
-  , uniswapV3MintV3DTOAmount1 = Nothing
-  , uniswapV3MintV3DTOAmountUsd = Nothing
-  , uniswapV3MintV3DTOTickLower = Nothing
-  , uniswapV3MintV3DTOTickUpper = Nothing
-  , uniswapV3MintV3DTOLogIndex = Nothing
-  , uniswapV3MintV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3MintDTO' (by applying it's required fields, if any)
+mkUniswapV3MintDTO
+  :: UniswapV3MintDTO
+mkUniswapV3MintDTO =
+  UniswapV3MintDTO
+  { uniswapV3MintDTOEntryTime = Nothing
+  , uniswapV3MintDTORecvTime = Nothing
+  , uniswapV3MintDTOBlockNumber = Nothing
+  , uniswapV3MintDTOId = Nothing
+  , uniswapV3MintDTOTransaction = Nothing
+  , uniswapV3MintDTOTimestamp = Nothing
+  , uniswapV3MintDTOPool = Nothing
+  , uniswapV3MintDTOToken0 = Nothing
+  , uniswapV3MintDTOToken1 = Nothing
+  , uniswapV3MintDTOOwner = Nothing
+  , uniswapV3MintDTOSender = Nothing
+  , uniswapV3MintDTOOrigin = Nothing
+  , uniswapV3MintDTOAmount = Nothing
+  , uniswapV3MintDTOAmount0 = Nothing
+  , uniswapV3MintDTOAmount1 = Nothing
+  , uniswapV3MintDTOAmountUsd = Nothing
+  , uniswapV3MintDTOTickLower = Nothing
+  , uniswapV3MintDTOTickUpper = Nothing
+  , uniswapV3MintDTOLogIndex = Nothing
+  , uniswapV3MintDTOVid = Nothing
   }
 
--- ** UniswapV3PoolDayDataV3DTO
--- | UniswapV3PoolDayDataV3DTO
--- Data accumulated and condensed into day stats for each pool.
-data UniswapV3PoolDayDataV3DTO = UniswapV3PoolDayDataV3DTO
-  { uniswapV3PoolDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3PoolDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3PoolDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PoolDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
-  , uniswapV3PoolDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400
-  , uniswapV3PoolDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
-  , uniswapV3PoolDayDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
-  , uniswapV3PoolDayDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
-  , uniswapV3PoolDayDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
-  , uniswapV3PoolDayDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
-  , uniswapV3PoolDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
-  , uniswapV3PoolDayDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
-  , uniswapV3PoolDayDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
-  , uniswapV3PoolDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
-  , uniswapV3PoolDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
-  , uniswapV3PoolDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
-  , uniswapV3PoolDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
-  , uniswapV3PoolDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3PoolDayDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
-  , uniswapV3PoolDayDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
-  , uniswapV3PoolDayDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
-  , uniswapV3PoolDayDataV3DTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
-  , uniswapV3PoolDayDataV3DTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
-  , uniswapV3PoolDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV3PoolDayDataV3DTO
-instance A.FromJSON UniswapV3PoolDayDataV3DTO where
-  parseJSON = A.withObject "UniswapV3PoolDayDataV3DTO" $ \o ->
-    UniswapV3PoolDayDataV3DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "date")
-      <*> (o .:? "pool")
-      <*> (o .:? "liquidity")
-      <*> (o .:? "sqrt_price")
-      <*> (o .:? "token_0_price")
-      <*> (o .:? "token_1_price")
-      <*> (o .:? "tick")
-      <*> (o .:? "fee_growth_global_0x128")
-      <*> (o .:? "fee_growth_global_1x128")
-      <*> (o .:? "tvl_usd")
-      <*> (o .:? "volume_token_0")
-      <*> (o .:? "volume_token_1")
-      <*> (o .:? "volume_usd")
-      <*> (o .:? "fees_usd")
-      <*> (o .:? "tx_count")
-      <*> (o .:? "open")
-      <*> (o .:? "high")
-      <*> (o .:? "low")
-      <*> (o .:? "close")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV3PoolDayDataV3DTO
-instance A.ToJSON UniswapV3PoolDayDataV3DTO where
-  toJSON UniswapV3PoolDayDataV3DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV3PoolDayDataV3DTOEntryTime
-      , "recv_time" .= uniswapV3PoolDayDataV3DTORecvTime
-      , "block_number" .= uniswapV3PoolDayDataV3DTOBlockNumber
-      , "id" .= uniswapV3PoolDayDataV3DTOId
-      , "date" .= uniswapV3PoolDayDataV3DTODate
-      , "pool" .= uniswapV3PoolDayDataV3DTOPool
-      , "liquidity" .= uniswapV3PoolDayDataV3DTOLiquidity
-      , "sqrt_price" .= uniswapV3PoolDayDataV3DTOSqrtPrice
-      , "token_0_price" .= uniswapV3PoolDayDataV3DTOToken0Price
-      , "token_1_price" .= uniswapV3PoolDayDataV3DTOToken1Price
-      , "tick" .= uniswapV3PoolDayDataV3DTOTick
-      , "fee_growth_global_0x128" .= uniswapV3PoolDayDataV3DTOFeeGrowthGlobal0x128
-      , "fee_growth_global_1x128" .= uniswapV3PoolDayDataV3DTOFeeGrowthGlobal1x128
-      , "tvl_usd" .= uniswapV3PoolDayDataV3DTOTvlUsd
-      , "volume_token_0" .= uniswapV3PoolDayDataV3DTOVolumeToken0
-      , "volume_token_1" .= uniswapV3PoolDayDataV3DTOVolumeToken1
-      , "volume_usd" .= uniswapV3PoolDayDataV3DTOVolumeUsd
-      , "fees_usd" .= uniswapV3PoolDayDataV3DTOFeesUsd
-      , "tx_count" .= uniswapV3PoolDayDataV3DTOTxCount
-      , "open" .= uniswapV3PoolDayDataV3DTOOpen
-      , "high" .= uniswapV3PoolDayDataV3DTOHigh
-      , "low" .= uniswapV3PoolDayDataV3DTOLow
-      , "close" .= uniswapV3PoolDayDataV3DTOClose
-      , "vid" .= uniswapV3PoolDayDataV3DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV3PoolDayDataV3DTO' (by applying it's required fields, if any)
-mkUniswapV3PoolDayDataV3DTO
-  :: UniswapV3PoolDayDataV3DTO
-mkUniswapV3PoolDayDataV3DTO =
-  UniswapV3PoolDayDataV3DTO
-  { uniswapV3PoolDayDataV3DTOEntryTime = Nothing
-  , uniswapV3PoolDayDataV3DTORecvTime = Nothing
-  , uniswapV3PoolDayDataV3DTOBlockNumber = Nothing
-  , uniswapV3PoolDayDataV3DTOId = Nothing
-  , uniswapV3PoolDayDataV3DTODate = Nothing
-  , uniswapV3PoolDayDataV3DTOPool = Nothing
-  , uniswapV3PoolDayDataV3DTOLiquidity = Nothing
-  , uniswapV3PoolDayDataV3DTOSqrtPrice = Nothing
-  , uniswapV3PoolDayDataV3DTOToken0Price = Nothing
-  , uniswapV3PoolDayDataV3DTOToken1Price = Nothing
-  , uniswapV3PoolDayDataV3DTOTick = Nothing
-  , uniswapV3PoolDayDataV3DTOFeeGrowthGlobal0x128 = Nothing
-  , uniswapV3PoolDayDataV3DTOFeeGrowthGlobal1x128 = Nothing
-  , uniswapV3PoolDayDataV3DTOTvlUsd = Nothing
-  , uniswapV3PoolDayDataV3DTOVolumeToken0 = Nothing
-  , uniswapV3PoolDayDataV3DTOVolumeToken1 = Nothing
-  , uniswapV3PoolDayDataV3DTOVolumeUsd = Nothing
-  , uniswapV3PoolDayDataV3DTOFeesUsd = Nothing
-  , uniswapV3PoolDayDataV3DTOTxCount = Nothing
-  , uniswapV3PoolDayDataV3DTOOpen = Nothing
-  , uniswapV3PoolDayDataV3DTOHigh = Nothing
-  , uniswapV3PoolDayDataV3DTOLow = Nothing
-  , uniswapV3PoolDayDataV3DTOClose = Nothing
-  , uniswapV3PoolDayDataV3DTOVid = Nothing
-  }
-
--- ** UniswapV3PoolHourDataV3DTO
--- | UniswapV3PoolHourDataV3DTO
--- Hourly stats tracker for pool.
-data UniswapV3PoolHourDataV3DTO = UniswapV3PoolHourDataV3DTO
-  { uniswapV3PoolHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3PoolHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3PoolHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PoolHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
-  , uniswapV3PoolHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
-  , uniswapV3PoolHourDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
-  , uniswapV3PoolHourDataV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
-  , uniswapV3PoolHourDataV3DTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
-  , uniswapV3PoolHourDataV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
-  , uniswapV3PoolHourDataV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
-  , uniswapV3PoolHourDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
-  , uniswapV3PoolHourDataV3DTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
-  , uniswapV3PoolHourDataV3DTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
-  , uniswapV3PoolHourDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
-  , uniswapV3PoolHourDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
-  , uniswapV3PoolHourDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
-  , uniswapV3PoolHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
-  , uniswapV3PoolHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3PoolHourDataV3DTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
-  , uniswapV3PoolHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
-  , uniswapV3PoolHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
-  , uniswapV3PoolHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
-  , uniswapV3PoolHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
-  , uniswapV3PoolHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV3PoolHourDataV3DTO
-instance A.FromJSON UniswapV3PoolHourDataV3DTO where
-  parseJSON = A.withObject "UniswapV3PoolHourDataV3DTO" $ \o ->
-    UniswapV3PoolHourDataV3DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "period_start_unix")
-      <*> (o .:? "pool")
-      <*> (o .:? "liquidity")
-      <*> (o .:? "sqrt_price")
-      <*> (o .:? "token_0_price")
-      <*> (o .:? "token_1_price")
-      <*> (o .:? "tick")
-      <*> (o .:? "fee_growth_global_0x128")
-      <*> (o .:? "fee_growth_global_1x128")
-      <*> (o .:? "tvl_usd")
-      <*> (o .:? "volume_token_0")
-      <*> (o .:? "volume_token_1")
-      <*> (o .:? "volume_usd")
-      <*> (o .:? "fees_usd")
-      <*> (o .:? "tx_count")
-      <*> (o .:? "open")
-      <*> (o .:? "high")
-      <*> (o .:? "low")
-      <*> (o .:? "close")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV3PoolHourDataV3DTO
-instance A.ToJSON UniswapV3PoolHourDataV3DTO where
-  toJSON UniswapV3PoolHourDataV3DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV3PoolHourDataV3DTOEntryTime
-      , "recv_time" .= uniswapV3PoolHourDataV3DTORecvTime
-      , "block_number" .= uniswapV3PoolHourDataV3DTOBlockNumber
-      , "id" .= uniswapV3PoolHourDataV3DTOId
-      , "period_start_unix" .= uniswapV3PoolHourDataV3DTOPeriodStartUnix
-      , "pool" .= uniswapV3PoolHourDataV3DTOPool
-      , "liquidity" .= uniswapV3PoolHourDataV3DTOLiquidity
-      , "sqrt_price" .= uniswapV3PoolHourDataV3DTOSqrtPrice
-      , "token_0_price" .= uniswapV3PoolHourDataV3DTOToken0Price
-      , "token_1_price" .= uniswapV3PoolHourDataV3DTOToken1Price
-      , "tick" .= uniswapV3PoolHourDataV3DTOTick
-      , "fee_growth_global_0x128" .= uniswapV3PoolHourDataV3DTOFeeGrowthGlobal0x128
-      , "fee_growth_global_1x128" .= uniswapV3PoolHourDataV3DTOFeeGrowthGlobal1x128
-      , "tvl_usd" .= uniswapV3PoolHourDataV3DTOTvlUsd
-      , "volume_token_0" .= uniswapV3PoolHourDataV3DTOVolumeToken0
-      , "volume_token_1" .= uniswapV3PoolHourDataV3DTOVolumeToken1
-      , "volume_usd" .= uniswapV3PoolHourDataV3DTOVolumeUsd
-      , "fees_usd" .= uniswapV3PoolHourDataV3DTOFeesUsd
-      , "tx_count" .= uniswapV3PoolHourDataV3DTOTxCount
-      , "open" .= uniswapV3PoolHourDataV3DTOOpen
-      , "high" .= uniswapV3PoolHourDataV3DTOHigh
-      , "low" .= uniswapV3PoolHourDataV3DTOLow
-      , "close" .= uniswapV3PoolHourDataV3DTOClose
-      , "vid" .= uniswapV3PoolHourDataV3DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV3PoolHourDataV3DTO' (by applying it's required fields, if any)
-mkUniswapV3PoolHourDataV3DTO
-  :: UniswapV3PoolHourDataV3DTO
-mkUniswapV3PoolHourDataV3DTO =
-  UniswapV3PoolHourDataV3DTO
-  { uniswapV3PoolHourDataV3DTOEntryTime = Nothing
-  , uniswapV3PoolHourDataV3DTORecvTime = Nothing
-  , uniswapV3PoolHourDataV3DTOBlockNumber = Nothing
-  , uniswapV3PoolHourDataV3DTOId = Nothing
-  , uniswapV3PoolHourDataV3DTOPeriodStartUnix = Nothing
-  , uniswapV3PoolHourDataV3DTOPool = Nothing
-  , uniswapV3PoolHourDataV3DTOLiquidity = Nothing
-  , uniswapV3PoolHourDataV3DTOSqrtPrice = Nothing
-  , uniswapV3PoolHourDataV3DTOToken0Price = Nothing
-  , uniswapV3PoolHourDataV3DTOToken1Price = Nothing
-  , uniswapV3PoolHourDataV3DTOTick = Nothing
-  , uniswapV3PoolHourDataV3DTOFeeGrowthGlobal0x128 = Nothing
-  , uniswapV3PoolHourDataV3DTOFeeGrowthGlobal1x128 = Nothing
-  , uniswapV3PoolHourDataV3DTOTvlUsd = Nothing
-  , uniswapV3PoolHourDataV3DTOVolumeToken0 = Nothing
-  , uniswapV3PoolHourDataV3DTOVolumeToken1 = Nothing
-  , uniswapV3PoolHourDataV3DTOVolumeUsd = Nothing
-  , uniswapV3PoolHourDataV3DTOFeesUsd = Nothing
-  , uniswapV3PoolHourDataV3DTOTxCount = Nothing
-  , uniswapV3PoolHourDataV3DTOOpen = Nothing
-  , uniswapV3PoolHourDataV3DTOHigh = Nothing
-  , uniswapV3PoolHourDataV3DTOLow = Nothing
-  , uniswapV3PoolHourDataV3DTOClose = Nothing
-  , uniswapV3PoolHourDataV3DTOVid = Nothing
-  }
-
--- ** UniswapV3PoolV3DTO
--- | UniswapV3PoolV3DTO
+-- ** UniswapV3PoolDTO
+-- | UniswapV3PoolDTO
 -- Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
-data UniswapV3PoolV3DTO = UniswapV3PoolV3DTO
-  { uniswapV3PoolV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3PoolV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3PoolV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PoolV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3PoolV3DTOId :: !(Maybe Text) -- ^ "id" - Pool address.
-  , uniswapV3PoolV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Creation time.
-  , uniswapV3PoolV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
-  , uniswapV3PoolV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
-  , uniswapV3PoolV3DTOFeeTier :: !(Maybe NumericsBigInteger) -- ^ "fee_tier"
-  , uniswapV3PoolV3DTOLiquidity :: !(Maybe NumericsBigInteger) -- ^ "liquidity"
-  , uniswapV3PoolV3DTOSqrtPrice :: !(Maybe NumericsBigInteger) -- ^ "sqrt_price"
-  , uniswapV3PoolV3DTOFeeGrowthGlobal0x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_global_0x128"
-  , uniswapV3PoolV3DTOFeeGrowthGlobal1x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_global_1x128"
-  , uniswapV3PoolV3DTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
-  , uniswapV3PoolV3DTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
-  , uniswapV3PoolV3DTOTick :: !(Maybe NumericsBigInteger) -- ^ "tick"
-  , uniswapV3PoolV3DTOObservationIndex :: !(Maybe NumericsBigInteger) -- ^ "observation_index"
-  , uniswapV3PoolV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - All time token0 swapped.
-  , uniswapV3PoolV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - All time token1 swapped.
-  , uniswapV3PoolV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - All time USD swapped.
-  , uniswapV3PoolV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All time USD swapped, unfiltered for unreliable USD pools.
-  , uniswapV3PoolV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3PoolV3DTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
-  , uniswapV3PoolV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time fees collected token0.
-  , uniswapV3PoolV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time fees collected token1.
-  , uniswapV3PoolV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time fees collected derived USD.
-  , uniswapV3PoolV3DTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0" - Total token 0 across all ticks.
-  , uniswapV3PoolV3DTOTotalValueLockedToken1 :: !(Maybe Text) -- ^ "total_value_locked_token_1" - 
-  , uniswapV3PoolV3DTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total token 1 across all ticks.
-  , uniswapV3PoolV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked USD.
-  , uniswapV3PoolV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived ETH.
-  , uniswapV3PoolV3DTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Liquidity providers count, used to detect new exchanges.
-  , uniswapV3PoolV3DTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
+data UniswapV3PoolDTO = UniswapV3PoolDTO
+  { uniswapV3PoolDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3PoolDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3PoolDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3PoolDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV3PoolDTOId :: !(Maybe Text) -- ^ "id" - Pool address.
+  , uniswapV3PoolDTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Creation time.
+  , uniswapV3PoolDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pool contract.
+  , uniswapV3PoolDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pool contract.
+  , uniswapV3PoolDTOFeeTier :: !(Maybe NumericsBigInteger) -- ^ "fee_tier"
+  , uniswapV3PoolDTOLiquidity :: !(Maybe NumericsBigInteger) -- ^ "liquidity"
+  , uniswapV3PoolDTOSqrtPrice :: !(Maybe NumericsBigInteger) -- ^ "sqrt_price"
+  , uniswapV3PoolDTOFeeGrowthGlobal0x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_global_0x128"
+  , uniswapV3PoolDTOFeeGrowthGlobal1x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_global_1x128"
+  , uniswapV3PoolDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Token0 per token1.
+  , uniswapV3PoolDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Token1 per token0.
+  , uniswapV3PoolDTOTick :: !(Maybe NumericsBigInteger) -- ^ "tick"
+  , uniswapV3PoolDTOObservationIndex :: !(Maybe NumericsBigInteger) -- ^ "observation_index"
+  , uniswapV3PoolDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - All time token0 swapped.
+  , uniswapV3PoolDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - All time token1 swapped.
+  , uniswapV3PoolDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - All time USD swapped.
+  , uniswapV3PoolDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - All time USD swapped, unfiltered for unreliable USD pools.
+  , uniswapV3PoolDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3PoolDTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
+  , uniswapV3PoolDTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time fees collected token0.
+  , uniswapV3PoolDTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time fees collected token1.
+  , uniswapV3PoolDTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time fees collected derived USD.
+  , uniswapV3PoolDTOTotalValueLockedToken0 :: !(Maybe Text) -- ^ "total_value_locked_token_0" - Total token 0 across all ticks.
+  , uniswapV3PoolDTOTotalValueLockedToken1 :: !(Maybe Text) -- ^ "total_value_locked_token_1" - 
+  , uniswapV3PoolDTOTotalValueLockedEth :: !(Maybe Text) -- ^ "total_value_locked_eth" - Total token 1 across all ticks.
+  , uniswapV3PoolDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Total value locked USD.
+  , uniswapV3PoolDTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - Total value locked derived ETH.
+  , uniswapV3PoolDTOLiquidityProviderCount :: !(Maybe Text) -- ^ "liquidity_provider_count" - Liquidity providers count, used to detect new exchanges.
+  , uniswapV3PoolDTOEvaluatedAsk :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_ask"
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3PoolV3DTO
-instance A.FromJSON UniswapV3PoolV3DTO where
-  parseJSON = A.withObject "UniswapV3PoolV3DTO" $ \o ->
-    UniswapV3PoolV3DTO
+-- | FromJSON UniswapV3PoolDTO
+instance A.FromJSON UniswapV3PoolDTO where
+  parseJSON = A.withObject "UniswapV3PoolDTO" $ \o ->
+    UniswapV3PoolDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -6961,217 +6716,359 @@ instance A.FromJSON UniswapV3PoolV3DTO where
       <*> (o .:? "liquidity_provider_count")
       <*> (o .:? "evaluated_ask")
 
--- | ToJSON UniswapV3PoolV3DTO
-instance A.ToJSON UniswapV3PoolV3DTO where
-  toJSON UniswapV3PoolV3DTO {..} =
+-- | ToJSON UniswapV3PoolDTO
+instance A.ToJSON UniswapV3PoolDTO where
+  toJSON UniswapV3PoolDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3PoolV3DTOEntryTime
-      , "recv_time" .= uniswapV3PoolV3DTORecvTime
-      , "block_number" .= uniswapV3PoolV3DTOBlockNumber
-      , "vid" .= uniswapV3PoolV3DTOVid
-      , "id" .= uniswapV3PoolV3DTOId
-      , "created_at_timestamp" .= uniswapV3PoolV3DTOCreatedAtTimestamp
-      , "token_0" .= uniswapV3PoolV3DTOToken0
-      , "token_1" .= uniswapV3PoolV3DTOToken1
-      , "fee_tier" .= uniswapV3PoolV3DTOFeeTier
-      , "liquidity" .= uniswapV3PoolV3DTOLiquidity
-      , "sqrt_price" .= uniswapV3PoolV3DTOSqrtPrice
-      , "fee_growth_global_0x128" .= uniswapV3PoolV3DTOFeeGrowthGlobal0x128
-      , "fee_growth_global_1x128" .= uniswapV3PoolV3DTOFeeGrowthGlobal1x128
-      , "token_0_price" .= uniswapV3PoolV3DTOToken0Price
-      , "token_1_price" .= uniswapV3PoolV3DTOToken1Price
-      , "tick" .= uniswapV3PoolV3DTOTick
-      , "observation_index" .= uniswapV3PoolV3DTOObservationIndex
-      , "volume_token_0" .= uniswapV3PoolV3DTOVolumeToken0
-      , "volume_token_1" .= uniswapV3PoolV3DTOVolumeToken1
-      , "volume_usd" .= uniswapV3PoolV3DTOVolumeUsd
-      , "untracked_volume_usd" .= uniswapV3PoolV3DTOUntrackedVolumeUsd
-      , "fees_usd" .= uniswapV3PoolV3DTOFeesUsd
-      , "tx_count" .= uniswapV3PoolV3DTOTxCount
-      , "collected_fees_token_0" .= uniswapV3PoolV3DTOCollectedFeesToken0
-      , "collected_fees_token_1" .= uniswapV3PoolV3DTOCollectedFeesToken1
-      , "collected_fees_usd" .= uniswapV3PoolV3DTOCollectedFeesUsd
-      , "total_value_locked_token_0" .= uniswapV3PoolV3DTOTotalValueLockedToken0
-      , "total_value_locked_token_1" .= uniswapV3PoolV3DTOTotalValueLockedToken1
-      , "total_value_locked_eth" .= uniswapV3PoolV3DTOTotalValueLockedEth
-      , "total_value_locked_usd" .= uniswapV3PoolV3DTOTotalValueLockedUsd
-      , "total_value_locked_usd_untracked" .= uniswapV3PoolV3DTOTotalValueLockedUsdUntracked
-      , "liquidity_provider_count" .= uniswapV3PoolV3DTOLiquidityProviderCount
-      , "evaluated_ask" .= uniswapV3PoolV3DTOEvaluatedAsk
+      [ "entry_time" .= uniswapV3PoolDTOEntryTime
+      , "recv_time" .= uniswapV3PoolDTORecvTime
+      , "block_number" .= uniswapV3PoolDTOBlockNumber
+      , "vid" .= uniswapV3PoolDTOVid
+      , "id" .= uniswapV3PoolDTOId
+      , "created_at_timestamp" .= uniswapV3PoolDTOCreatedAtTimestamp
+      , "token_0" .= uniswapV3PoolDTOToken0
+      , "token_1" .= uniswapV3PoolDTOToken1
+      , "fee_tier" .= uniswapV3PoolDTOFeeTier
+      , "liquidity" .= uniswapV3PoolDTOLiquidity
+      , "sqrt_price" .= uniswapV3PoolDTOSqrtPrice
+      , "fee_growth_global_0x128" .= uniswapV3PoolDTOFeeGrowthGlobal0x128
+      , "fee_growth_global_1x128" .= uniswapV3PoolDTOFeeGrowthGlobal1x128
+      , "token_0_price" .= uniswapV3PoolDTOToken0Price
+      , "token_1_price" .= uniswapV3PoolDTOToken1Price
+      , "tick" .= uniswapV3PoolDTOTick
+      , "observation_index" .= uniswapV3PoolDTOObservationIndex
+      , "volume_token_0" .= uniswapV3PoolDTOVolumeToken0
+      , "volume_token_1" .= uniswapV3PoolDTOVolumeToken1
+      , "volume_usd" .= uniswapV3PoolDTOVolumeUsd
+      , "untracked_volume_usd" .= uniswapV3PoolDTOUntrackedVolumeUsd
+      , "fees_usd" .= uniswapV3PoolDTOFeesUsd
+      , "tx_count" .= uniswapV3PoolDTOTxCount
+      , "collected_fees_token_0" .= uniswapV3PoolDTOCollectedFeesToken0
+      , "collected_fees_token_1" .= uniswapV3PoolDTOCollectedFeesToken1
+      , "collected_fees_usd" .= uniswapV3PoolDTOCollectedFeesUsd
+      , "total_value_locked_token_0" .= uniswapV3PoolDTOTotalValueLockedToken0
+      , "total_value_locked_token_1" .= uniswapV3PoolDTOTotalValueLockedToken1
+      , "total_value_locked_eth" .= uniswapV3PoolDTOTotalValueLockedEth
+      , "total_value_locked_usd" .= uniswapV3PoolDTOTotalValueLockedUsd
+      , "total_value_locked_usd_untracked" .= uniswapV3PoolDTOTotalValueLockedUsdUntracked
+      , "liquidity_provider_count" .= uniswapV3PoolDTOLiquidityProviderCount
+      , "evaluated_ask" .= uniswapV3PoolDTOEvaluatedAsk
       ]
 
 
--- | Construct a value of type 'UniswapV3PoolV3DTO' (by applying it's required fields, if any)
-mkUniswapV3PoolV3DTO
-  :: UniswapV3PoolV3DTO
-mkUniswapV3PoolV3DTO =
-  UniswapV3PoolV3DTO
-  { uniswapV3PoolV3DTOEntryTime = Nothing
-  , uniswapV3PoolV3DTORecvTime = Nothing
-  , uniswapV3PoolV3DTOBlockNumber = Nothing
-  , uniswapV3PoolV3DTOVid = Nothing
-  , uniswapV3PoolV3DTOId = Nothing
-  , uniswapV3PoolV3DTOCreatedAtTimestamp = Nothing
-  , uniswapV3PoolV3DTOToken0 = Nothing
-  , uniswapV3PoolV3DTOToken1 = Nothing
-  , uniswapV3PoolV3DTOFeeTier = Nothing
-  , uniswapV3PoolV3DTOLiquidity = Nothing
-  , uniswapV3PoolV3DTOSqrtPrice = Nothing
-  , uniswapV3PoolV3DTOFeeGrowthGlobal0x128 = Nothing
-  , uniswapV3PoolV3DTOFeeGrowthGlobal1x128 = Nothing
-  , uniswapV3PoolV3DTOToken0Price = Nothing
-  , uniswapV3PoolV3DTOToken1Price = Nothing
-  , uniswapV3PoolV3DTOTick = Nothing
-  , uniswapV3PoolV3DTOObservationIndex = Nothing
-  , uniswapV3PoolV3DTOVolumeToken0 = Nothing
-  , uniswapV3PoolV3DTOVolumeToken1 = Nothing
-  , uniswapV3PoolV3DTOVolumeUsd = Nothing
-  , uniswapV3PoolV3DTOUntrackedVolumeUsd = Nothing
-  , uniswapV3PoolV3DTOFeesUsd = Nothing
-  , uniswapV3PoolV3DTOTxCount = Nothing
-  , uniswapV3PoolV3DTOCollectedFeesToken0 = Nothing
-  , uniswapV3PoolV3DTOCollectedFeesToken1 = Nothing
-  , uniswapV3PoolV3DTOCollectedFeesUsd = Nothing
-  , uniswapV3PoolV3DTOTotalValueLockedToken0 = Nothing
-  , uniswapV3PoolV3DTOTotalValueLockedToken1 = Nothing
-  , uniswapV3PoolV3DTOTotalValueLockedEth = Nothing
-  , uniswapV3PoolV3DTOTotalValueLockedUsd = Nothing
-  , uniswapV3PoolV3DTOTotalValueLockedUsdUntracked = Nothing
-  , uniswapV3PoolV3DTOLiquidityProviderCount = Nothing
-  , uniswapV3PoolV3DTOEvaluatedAsk = Nothing
+-- | Construct a value of type 'UniswapV3PoolDTO' (by applying it's required fields, if any)
+mkUniswapV3PoolDTO
+  :: UniswapV3PoolDTO
+mkUniswapV3PoolDTO =
+  UniswapV3PoolDTO
+  { uniswapV3PoolDTOEntryTime = Nothing
+  , uniswapV3PoolDTORecvTime = Nothing
+  , uniswapV3PoolDTOBlockNumber = Nothing
+  , uniswapV3PoolDTOVid = Nothing
+  , uniswapV3PoolDTOId = Nothing
+  , uniswapV3PoolDTOCreatedAtTimestamp = Nothing
+  , uniswapV3PoolDTOToken0 = Nothing
+  , uniswapV3PoolDTOToken1 = Nothing
+  , uniswapV3PoolDTOFeeTier = Nothing
+  , uniswapV3PoolDTOLiquidity = Nothing
+  , uniswapV3PoolDTOSqrtPrice = Nothing
+  , uniswapV3PoolDTOFeeGrowthGlobal0x128 = Nothing
+  , uniswapV3PoolDTOFeeGrowthGlobal1x128 = Nothing
+  , uniswapV3PoolDTOToken0Price = Nothing
+  , uniswapV3PoolDTOToken1Price = Nothing
+  , uniswapV3PoolDTOTick = Nothing
+  , uniswapV3PoolDTOObservationIndex = Nothing
+  , uniswapV3PoolDTOVolumeToken0 = Nothing
+  , uniswapV3PoolDTOVolumeToken1 = Nothing
+  , uniswapV3PoolDTOVolumeUsd = Nothing
+  , uniswapV3PoolDTOUntrackedVolumeUsd = Nothing
+  , uniswapV3PoolDTOFeesUsd = Nothing
+  , uniswapV3PoolDTOTxCount = Nothing
+  , uniswapV3PoolDTOCollectedFeesToken0 = Nothing
+  , uniswapV3PoolDTOCollectedFeesToken1 = Nothing
+  , uniswapV3PoolDTOCollectedFeesUsd = Nothing
+  , uniswapV3PoolDTOTotalValueLockedToken0 = Nothing
+  , uniswapV3PoolDTOTotalValueLockedToken1 = Nothing
+  , uniswapV3PoolDTOTotalValueLockedEth = Nothing
+  , uniswapV3PoolDTOTotalValueLockedUsd = Nothing
+  , uniswapV3PoolDTOTotalValueLockedUsdUntracked = Nothing
+  , uniswapV3PoolDTOLiquidityProviderCount = Nothing
+  , uniswapV3PoolDTOEvaluatedAsk = Nothing
   }
 
--- ** UniswapV3PositionSnapshotV3DTO
--- | UniswapV3PositionSnapshotV3DTO
-data UniswapV3PositionSnapshotV3DTO = UniswapV3PositionSnapshotV3DTO
-  { uniswapV3PositionSnapshotV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3PositionSnapshotV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3PositionSnapshotV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PositionSnapshotV3DTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
-  , uniswapV3PositionSnapshotV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
-  , uniswapV3PositionSnapshotV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool the position is within.
-  , uniswapV3PositionSnapshotV3DTOPosition :: !(Maybe Text) -- ^ "position" - Position of which the snap was taken of.
-  , uniswapV3PositionSnapshotV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of block in which the snap was created.
-  , uniswapV3PositionSnapshotV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
-  , uniswapV3PositionSnapshotV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
-  , uniswapV3PositionSnapshotV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
-  , uniswapV3PositionSnapshotV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
-  , uniswapV3PositionSnapshotV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
-  , uniswapV3PositionSnapshotV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
-  , uniswapV3PositionSnapshotV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
-  , uniswapV3PositionSnapshotV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the snapshot was initialized.
-  , uniswapV3PositionSnapshotV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
-  , uniswapV3PositionSnapshotV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
-  , uniswapV3PositionSnapshotV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+-- ** UniswapV3PoolDayDataDTO
+-- | UniswapV3PoolDayDataDTO
+-- Data accumulated and condensed into day stats for each pool.
+data UniswapV3PoolDayDataDTO = UniswapV3PoolDayDataDTO
+  { uniswapV3PoolDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3PoolDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3PoolDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3PoolDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
+  , uniswapV3PoolDayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400
+  , uniswapV3PoolDayDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , uniswapV3PoolDayDataDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
+  , uniswapV3PoolDayDataDTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
+  , uniswapV3PoolDayDataDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
+  , uniswapV3PoolDayDataDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
+  , uniswapV3PoolDayDataDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
+  , uniswapV3PoolDayDataDTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
+  , uniswapV3PoolDayDataDTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
+  , uniswapV3PoolDayDataDTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
+  , uniswapV3PoolDayDataDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
+  , uniswapV3PoolDayDataDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
+  , uniswapV3PoolDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
+  , uniswapV3PoolDayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3PoolDayDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
+  , uniswapV3PoolDayDataDTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
+  , uniswapV3PoolDayDataDTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
+  , uniswapV3PoolDayDataDTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
+  , uniswapV3PoolDayDataDTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
+  , uniswapV3PoolDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3PositionSnapshotV3DTO
-instance A.FromJSON UniswapV3PositionSnapshotV3DTO where
-  parseJSON = A.withObject "UniswapV3PositionSnapshotV3DTO" $ \o ->
-    UniswapV3PositionSnapshotV3DTO
+-- | FromJSON UniswapV3PoolDayDataDTO
+instance A.FromJSON UniswapV3PoolDayDataDTO where
+  parseJSON = A.withObject "UniswapV3PoolDayDataDTO" $ \o ->
+    UniswapV3PoolDayDataDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
       <*> (o .:? "id")
-      <*> (o .:? "owner")
+      <*> (o .:? "date")
       <*> (o .:? "pool")
-      <*> (o .:? "position")
-      <*> (o .:? "timestamp")
       <*> (o .:? "liquidity")
-      <*> (o .:? "deposited_token_0")
-      <*> (o .:? "deposited_token_1")
-      <*> (o .:? "withdrawn_token_0")
-      <*> (o .:? "withdrawn_token_1")
-      <*> (o .:? "collected_fees_token_0")
-      <*> (o .:? "collected_fees_token_1")
-      <*> (o .:? "transaction")
-      <*> (o .:? "fee_growth_inside_0_last_x128")
-      <*> (o .:? "fee_growth_inside_1_last_x128")
+      <*> (o .:? "sqrt_price")
+      <*> (o .:? "token_0_price")
+      <*> (o .:? "token_1_price")
+      <*> (o .:? "tick")
+      <*> (o .:? "fee_growth_global_0x128")
+      <*> (o .:? "fee_growth_global_1x128")
+      <*> (o .:? "tvl_usd")
+      <*> (o .:? "volume_token_0")
+      <*> (o .:? "volume_token_1")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "fees_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "open")
+      <*> (o .:? "high")
+      <*> (o .:? "low")
+      <*> (o .:? "close")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3PositionSnapshotV3DTO
-instance A.ToJSON UniswapV3PositionSnapshotV3DTO where
-  toJSON UniswapV3PositionSnapshotV3DTO {..} =
+-- | ToJSON UniswapV3PoolDayDataDTO
+instance A.ToJSON UniswapV3PoolDayDataDTO where
+  toJSON UniswapV3PoolDayDataDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3PositionSnapshotV3DTOEntryTime
-      , "recv_time" .= uniswapV3PositionSnapshotV3DTORecvTime
-      , "block_number" .= uniswapV3PositionSnapshotV3DTOBlockNumber
-      , "id" .= uniswapV3PositionSnapshotV3DTOId
-      , "owner" .= uniswapV3PositionSnapshotV3DTOOwner
-      , "pool" .= uniswapV3PositionSnapshotV3DTOPool
-      , "position" .= uniswapV3PositionSnapshotV3DTOPosition
-      , "timestamp" .= uniswapV3PositionSnapshotV3DTOTimestamp
-      , "liquidity" .= uniswapV3PositionSnapshotV3DTOLiquidity
-      , "deposited_token_0" .= uniswapV3PositionSnapshotV3DTODepositedToken0
-      , "deposited_token_1" .= uniswapV3PositionSnapshotV3DTODepositedToken1
-      , "withdrawn_token_0" .= uniswapV3PositionSnapshotV3DTOWithdrawnToken0
-      , "withdrawn_token_1" .= uniswapV3PositionSnapshotV3DTOWithdrawnToken1
-      , "collected_fees_token_0" .= uniswapV3PositionSnapshotV3DTOCollectedFeesToken0
-      , "collected_fees_token_1" .= uniswapV3PositionSnapshotV3DTOCollectedFeesToken1
-      , "transaction" .= uniswapV3PositionSnapshotV3DTOTransaction
-      , "fee_growth_inside_0_last_x128" .= uniswapV3PositionSnapshotV3DTOFeeGrowthInside0LastX128
-      , "fee_growth_inside_1_last_x128" .= uniswapV3PositionSnapshotV3DTOFeeGrowthInside1LastX128
-      , "vid" .= uniswapV3PositionSnapshotV3DTOVid
+      [ "entry_time" .= uniswapV3PoolDayDataDTOEntryTime
+      , "recv_time" .= uniswapV3PoolDayDataDTORecvTime
+      , "block_number" .= uniswapV3PoolDayDataDTOBlockNumber
+      , "id" .= uniswapV3PoolDayDataDTOId
+      , "date" .= uniswapV3PoolDayDataDTODate
+      , "pool" .= uniswapV3PoolDayDataDTOPool
+      , "liquidity" .= uniswapV3PoolDayDataDTOLiquidity
+      , "sqrt_price" .= uniswapV3PoolDayDataDTOSqrtPrice
+      , "token_0_price" .= uniswapV3PoolDayDataDTOToken0Price
+      , "token_1_price" .= uniswapV3PoolDayDataDTOToken1Price
+      , "tick" .= uniswapV3PoolDayDataDTOTick
+      , "fee_growth_global_0x128" .= uniswapV3PoolDayDataDTOFeeGrowthGlobal0x128
+      , "fee_growth_global_1x128" .= uniswapV3PoolDayDataDTOFeeGrowthGlobal1x128
+      , "tvl_usd" .= uniswapV3PoolDayDataDTOTvlUsd
+      , "volume_token_0" .= uniswapV3PoolDayDataDTOVolumeToken0
+      , "volume_token_1" .= uniswapV3PoolDayDataDTOVolumeToken1
+      , "volume_usd" .= uniswapV3PoolDayDataDTOVolumeUsd
+      , "fees_usd" .= uniswapV3PoolDayDataDTOFeesUsd
+      , "tx_count" .= uniswapV3PoolDayDataDTOTxCount
+      , "open" .= uniswapV3PoolDayDataDTOOpen
+      , "high" .= uniswapV3PoolDayDataDTOHigh
+      , "low" .= uniswapV3PoolDayDataDTOLow
+      , "close" .= uniswapV3PoolDayDataDTOClose
+      , "vid" .= uniswapV3PoolDayDataDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3PositionSnapshotV3DTO' (by applying it's required fields, if any)
-mkUniswapV3PositionSnapshotV3DTO
-  :: UniswapV3PositionSnapshotV3DTO
-mkUniswapV3PositionSnapshotV3DTO =
-  UniswapV3PositionSnapshotV3DTO
-  { uniswapV3PositionSnapshotV3DTOEntryTime = Nothing
-  , uniswapV3PositionSnapshotV3DTORecvTime = Nothing
-  , uniswapV3PositionSnapshotV3DTOBlockNumber = Nothing
-  , uniswapV3PositionSnapshotV3DTOId = Nothing
-  , uniswapV3PositionSnapshotV3DTOOwner = Nothing
-  , uniswapV3PositionSnapshotV3DTOPool = Nothing
-  , uniswapV3PositionSnapshotV3DTOPosition = Nothing
-  , uniswapV3PositionSnapshotV3DTOTimestamp = Nothing
-  , uniswapV3PositionSnapshotV3DTOLiquidity = Nothing
-  , uniswapV3PositionSnapshotV3DTODepositedToken0 = Nothing
-  , uniswapV3PositionSnapshotV3DTODepositedToken1 = Nothing
-  , uniswapV3PositionSnapshotV3DTOWithdrawnToken0 = Nothing
-  , uniswapV3PositionSnapshotV3DTOWithdrawnToken1 = Nothing
-  , uniswapV3PositionSnapshotV3DTOCollectedFeesToken0 = Nothing
-  , uniswapV3PositionSnapshotV3DTOCollectedFeesToken1 = Nothing
-  , uniswapV3PositionSnapshotV3DTOTransaction = Nothing
-  , uniswapV3PositionSnapshotV3DTOFeeGrowthInside0LastX128 = Nothing
-  , uniswapV3PositionSnapshotV3DTOFeeGrowthInside1LastX128 = Nothing
-  , uniswapV3PositionSnapshotV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3PoolDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV3PoolDayDataDTO
+  :: UniswapV3PoolDayDataDTO
+mkUniswapV3PoolDayDataDTO =
+  UniswapV3PoolDayDataDTO
+  { uniswapV3PoolDayDataDTOEntryTime = Nothing
+  , uniswapV3PoolDayDataDTORecvTime = Nothing
+  , uniswapV3PoolDayDataDTOBlockNumber = Nothing
+  , uniswapV3PoolDayDataDTOId = Nothing
+  , uniswapV3PoolDayDataDTODate = Nothing
+  , uniswapV3PoolDayDataDTOPool = Nothing
+  , uniswapV3PoolDayDataDTOLiquidity = Nothing
+  , uniswapV3PoolDayDataDTOSqrtPrice = Nothing
+  , uniswapV3PoolDayDataDTOToken0Price = Nothing
+  , uniswapV3PoolDayDataDTOToken1Price = Nothing
+  , uniswapV3PoolDayDataDTOTick = Nothing
+  , uniswapV3PoolDayDataDTOFeeGrowthGlobal0x128 = Nothing
+  , uniswapV3PoolDayDataDTOFeeGrowthGlobal1x128 = Nothing
+  , uniswapV3PoolDayDataDTOTvlUsd = Nothing
+  , uniswapV3PoolDayDataDTOVolumeToken0 = Nothing
+  , uniswapV3PoolDayDataDTOVolumeToken1 = Nothing
+  , uniswapV3PoolDayDataDTOVolumeUsd = Nothing
+  , uniswapV3PoolDayDataDTOFeesUsd = Nothing
+  , uniswapV3PoolDayDataDTOTxCount = Nothing
+  , uniswapV3PoolDayDataDTOOpen = Nothing
+  , uniswapV3PoolDayDataDTOHigh = Nothing
+  , uniswapV3PoolDayDataDTOLow = Nothing
+  , uniswapV3PoolDayDataDTOClose = Nothing
+  , uniswapV3PoolDayDataDTOVid = Nothing
   }
 
--- ** UniswapV3PositionV3DTO
--- | UniswapV3PositionV3DTO
--- Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
-data UniswapV3PositionV3DTO = UniswapV3PositionV3DTO
-  { uniswapV3PositionV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3PositionV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3PositionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PositionV3DTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier.
-  , uniswapV3PositionV3DTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
-  , uniswapV3PositionV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
-  , uniswapV3PositionV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
-  , uniswapV3PositionV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
-  , uniswapV3PositionV3DTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
-  , uniswapV3PositionV3DTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
-  , uniswapV3PositionV3DTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
-  , uniswapV3PositionV3DTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
-  , uniswapV3PositionV3DTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
-  , uniswapV3PositionV3DTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
-  , uniswapV3PositionV3DTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
-  , uniswapV3PositionV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
-  , uniswapV3PositionV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
-  , uniswapV3PositionV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the position was initialized.
-  , uniswapV3PositionV3DTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
-  , uniswapV3PositionV3DTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
-  , uniswapV3PositionV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+-- ** UniswapV3PoolHourDataDTO
+-- | UniswapV3PoolHourDataDTO
+-- Hourly stats tracker for pool.
+data UniswapV3PoolHourDataDTO = UniswapV3PoolHourDataDTO
+  { uniswapV3PoolHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3PoolHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3PoolHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3PoolHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
+  , uniswapV3PoolHourDataDTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
+  , uniswapV3PoolHourDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , uniswapV3PoolHourDataDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
+  , uniswapV3PoolHourDataDTOSqrtPrice :: !(Maybe Text) -- ^ "sqrt_price" - Current price tracker at end of period.
+  , uniswapV3PoolHourDataDTOToken0Price :: !(Maybe Text) -- ^ "token_0_price" - Price of token0 - derived from sqrtPrice.
+  , uniswapV3PoolHourDataDTOToken1Price :: !(Maybe Text) -- ^ "token_1_price" - Price of token1 - derived from sqrtPrice.
+  , uniswapV3PoolHourDataDTOTick :: !(Maybe Text) -- ^ "tick" - Current tick at end of period.
+  , uniswapV3PoolHourDataDTOFeeGrowthGlobal0x128 :: !(Maybe Text) -- ^ "fee_growth_global_0x128" - Tracker for global fee growth.
+  , uniswapV3PoolHourDataDTOFeeGrowthGlobal1x128 :: !(Maybe Text) -- ^ "fee_growth_global_1x128" - Tracker for global fee growth.
+  , uniswapV3PoolHourDataDTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Total value locked derived in USD at end of period.
+  , uniswapV3PoolHourDataDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Volume in token0.
+  , uniswapV3PoolHourDataDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Volume in token1.
+  , uniswapV3PoolHourDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in USD.
+  , uniswapV3PoolHourDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3PoolHourDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions during period.
+  , uniswapV3PoolHourDataDTOOpen :: !(Maybe Text) -- ^ "open" - Opening price of token0.
+  , uniswapV3PoolHourDataDTOHigh :: !(Maybe Text) -- ^ "high" - High price of token0.
+  , uniswapV3PoolHourDataDTOLow :: !(Maybe Text) -- ^ "low" - Low price of token0.
+  , uniswapV3PoolHourDataDTOClose :: !(Maybe Text) -- ^ "close" - Close price of token0.
+  , uniswapV3PoolHourDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3PositionV3DTO
-instance A.FromJSON UniswapV3PositionV3DTO where
-  parseJSON = A.withObject "UniswapV3PositionV3DTO" $ \o ->
-    UniswapV3PositionV3DTO
+-- | FromJSON UniswapV3PoolHourDataDTO
+instance A.FromJSON UniswapV3PoolHourDataDTO where
+  parseJSON = A.withObject "UniswapV3PoolHourDataDTO" $ \o ->
+    UniswapV3PoolHourDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "period_start_unix")
+      <*> (o .:? "pool")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "sqrt_price")
+      <*> (o .:? "token_0_price")
+      <*> (o .:? "token_1_price")
+      <*> (o .:? "tick")
+      <*> (o .:? "fee_growth_global_0x128")
+      <*> (o .:? "fee_growth_global_1x128")
+      <*> (o .:? "tvl_usd")
+      <*> (o .:? "volume_token_0")
+      <*> (o .:? "volume_token_1")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "fees_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "open")
+      <*> (o .:? "high")
+      <*> (o .:? "low")
+      <*> (o .:? "close")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV3PoolHourDataDTO
+instance A.ToJSON UniswapV3PoolHourDataDTO where
+  toJSON UniswapV3PoolHourDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV3PoolHourDataDTOEntryTime
+      , "recv_time" .= uniswapV3PoolHourDataDTORecvTime
+      , "block_number" .= uniswapV3PoolHourDataDTOBlockNumber
+      , "id" .= uniswapV3PoolHourDataDTOId
+      , "period_start_unix" .= uniswapV3PoolHourDataDTOPeriodStartUnix
+      , "pool" .= uniswapV3PoolHourDataDTOPool
+      , "liquidity" .= uniswapV3PoolHourDataDTOLiquidity
+      , "sqrt_price" .= uniswapV3PoolHourDataDTOSqrtPrice
+      , "token_0_price" .= uniswapV3PoolHourDataDTOToken0Price
+      , "token_1_price" .= uniswapV3PoolHourDataDTOToken1Price
+      , "tick" .= uniswapV3PoolHourDataDTOTick
+      , "fee_growth_global_0x128" .= uniswapV3PoolHourDataDTOFeeGrowthGlobal0x128
+      , "fee_growth_global_1x128" .= uniswapV3PoolHourDataDTOFeeGrowthGlobal1x128
+      , "tvl_usd" .= uniswapV3PoolHourDataDTOTvlUsd
+      , "volume_token_0" .= uniswapV3PoolHourDataDTOVolumeToken0
+      , "volume_token_1" .= uniswapV3PoolHourDataDTOVolumeToken1
+      , "volume_usd" .= uniswapV3PoolHourDataDTOVolumeUsd
+      , "fees_usd" .= uniswapV3PoolHourDataDTOFeesUsd
+      , "tx_count" .= uniswapV3PoolHourDataDTOTxCount
+      , "open" .= uniswapV3PoolHourDataDTOOpen
+      , "high" .= uniswapV3PoolHourDataDTOHigh
+      , "low" .= uniswapV3PoolHourDataDTOLow
+      , "close" .= uniswapV3PoolHourDataDTOClose
+      , "vid" .= uniswapV3PoolHourDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV3PoolHourDataDTO' (by applying it's required fields, if any)
+mkUniswapV3PoolHourDataDTO
+  :: UniswapV3PoolHourDataDTO
+mkUniswapV3PoolHourDataDTO =
+  UniswapV3PoolHourDataDTO
+  { uniswapV3PoolHourDataDTOEntryTime = Nothing
+  , uniswapV3PoolHourDataDTORecvTime = Nothing
+  , uniswapV3PoolHourDataDTOBlockNumber = Nothing
+  , uniswapV3PoolHourDataDTOId = Nothing
+  , uniswapV3PoolHourDataDTOPeriodStartUnix = Nothing
+  , uniswapV3PoolHourDataDTOPool = Nothing
+  , uniswapV3PoolHourDataDTOLiquidity = Nothing
+  , uniswapV3PoolHourDataDTOSqrtPrice = Nothing
+  , uniswapV3PoolHourDataDTOToken0Price = Nothing
+  , uniswapV3PoolHourDataDTOToken1Price = Nothing
+  , uniswapV3PoolHourDataDTOTick = Nothing
+  , uniswapV3PoolHourDataDTOFeeGrowthGlobal0x128 = Nothing
+  , uniswapV3PoolHourDataDTOFeeGrowthGlobal1x128 = Nothing
+  , uniswapV3PoolHourDataDTOTvlUsd = Nothing
+  , uniswapV3PoolHourDataDTOVolumeToken0 = Nothing
+  , uniswapV3PoolHourDataDTOVolumeToken1 = Nothing
+  , uniswapV3PoolHourDataDTOVolumeUsd = Nothing
+  , uniswapV3PoolHourDataDTOFeesUsd = Nothing
+  , uniswapV3PoolHourDataDTOTxCount = Nothing
+  , uniswapV3PoolHourDataDTOOpen = Nothing
+  , uniswapV3PoolHourDataDTOHigh = Nothing
+  , uniswapV3PoolHourDataDTOLow = Nothing
+  , uniswapV3PoolHourDataDTOClose = Nothing
+  , uniswapV3PoolHourDataDTOVid = Nothing
+  }
+
+-- ** UniswapV3PositionDTO
+-- | UniswapV3PositionDTO
+-- Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+data UniswapV3PositionDTO = UniswapV3PositionDTO
+  { uniswapV3PositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3PositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3PositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3PositionDTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier.
+  , uniswapV3PositionDTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
+  , uniswapV3PositionDTOPool :: !(Maybe Text) -- ^ "pool" - Pool position is within.
+  , uniswapV3PositionDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , uniswapV3PositionDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
+  , uniswapV3PositionDTOTickLower :: !(Maybe Text) -- ^ "tick_lower" - Lower tick of the position.
+  , uniswapV3PositionDTOTickUpper :: !(Maybe Text) -- ^ "tick_upper" - Upper tick of the position.
+  , uniswapV3PositionDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
+  , uniswapV3PositionDTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
+  , uniswapV3PositionDTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
+  , uniswapV3PositionDTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
+  , uniswapV3PositionDTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
+  , uniswapV3PositionDTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , uniswapV3PositionDTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , uniswapV3PositionDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the position was initialized.
+  , uniswapV3PositionDTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
+  , uniswapV3PositionDTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
+  , uniswapV3PositionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV3PositionDTO
+instance A.FromJSON UniswapV3PositionDTO where
+  parseJSON = A.withObject "UniswapV3PositionDTO" $ \o ->
+    UniswapV3PositionDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7194,96 +7091,196 @@ instance A.FromJSON UniswapV3PositionV3DTO where
       <*> (o .:? "fee_growth_inside_1_last_x128")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3PositionV3DTO
-instance A.ToJSON UniswapV3PositionV3DTO where
-  toJSON UniswapV3PositionV3DTO {..} =
+-- | ToJSON UniswapV3PositionDTO
+instance A.ToJSON UniswapV3PositionDTO where
+  toJSON UniswapV3PositionDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3PositionV3DTOEntryTime
-      , "recv_time" .= uniswapV3PositionV3DTORecvTime
-      , "block_number" .= uniswapV3PositionV3DTOBlockNumber
-      , "id" .= uniswapV3PositionV3DTOId
-      , "owner" .= uniswapV3PositionV3DTOOwner
-      , "pool" .= uniswapV3PositionV3DTOPool
-      , "token_0" .= uniswapV3PositionV3DTOToken0
-      , "token_1" .= uniswapV3PositionV3DTOToken1
-      , "tick_lower" .= uniswapV3PositionV3DTOTickLower
-      , "tick_upper" .= uniswapV3PositionV3DTOTickUpper
-      , "liquidity" .= uniswapV3PositionV3DTOLiquidity
-      , "deposited_token_0" .= uniswapV3PositionV3DTODepositedToken0
-      , "deposited_token_1" .= uniswapV3PositionV3DTODepositedToken1
-      , "withdrawn_token_0" .= uniswapV3PositionV3DTOWithdrawnToken0
-      , "withdrawn_token_1" .= uniswapV3PositionV3DTOWithdrawnToken1
-      , "collected_fees_token_0" .= uniswapV3PositionV3DTOCollectedFeesToken0
-      , "collected_fees_token_1" .= uniswapV3PositionV3DTOCollectedFeesToken1
-      , "transaction" .= uniswapV3PositionV3DTOTransaction
-      , "fee_growth_inside_0_last_x128" .= uniswapV3PositionV3DTOFeeGrowthInside0LastX128
-      , "fee_growth_inside_1_last_x128" .= uniswapV3PositionV3DTOFeeGrowthInside1LastX128
-      , "vid" .= uniswapV3PositionV3DTOVid
+      [ "entry_time" .= uniswapV3PositionDTOEntryTime
+      , "recv_time" .= uniswapV3PositionDTORecvTime
+      , "block_number" .= uniswapV3PositionDTOBlockNumber
+      , "id" .= uniswapV3PositionDTOId
+      , "owner" .= uniswapV3PositionDTOOwner
+      , "pool" .= uniswapV3PositionDTOPool
+      , "token_0" .= uniswapV3PositionDTOToken0
+      , "token_1" .= uniswapV3PositionDTOToken1
+      , "tick_lower" .= uniswapV3PositionDTOTickLower
+      , "tick_upper" .= uniswapV3PositionDTOTickUpper
+      , "liquidity" .= uniswapV3PositionDTOLiquidity
+      , "deposited_token_0" .= uniswapV3PositionDTODepositedToken0
+      , "deposited_token_1" .= uniswapV3PositionDTODepositedToken1
+      , "withdrawn_token_0" .= uniswapV3PositionDTOWithdrawnToken0
+      , "withdrawn_token_1" .= uniswapV3PositionDTOWithdrawnToken1
+      , "collected_fees_token_0" .= uniswapV3PositionDTOCollectedFeesToken0
+      , "collected_fees_token_1" .= uniswapV3PositionDTOCollectedFeesToken1
+      , "transaction" .= uniswapV3PositionDTOTransaction
+      , "fee_growth_inside_0_last_x128" .= uniswapV3PositionDTOFeeGrowthInside0LastX128
+      , "fee_growth_inside_1_last_x128" .= uniswapV3PositionDTOFeeGrowthInside1LastX128
+      , "vid" .= uniswapV3PositionDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3PositionV3DTO' (by applying it's required fields, if any)
-mkUniswapV3PositionV3DTO
-  :: UniswapV3PositionV3DTO
-mkUniswapV3PositionV3DTO =
-  UniswapV3PositionV3DTO
-  { uniswapV3PositionV3DTOEntryTime = Nothing
-  , uniswapV3PositionV3DTORecvTime = Nothing
-  , uniswapV3PositionV3DTOBlockNumber = Nothing
-  , uniswapV3PositionV3DTOId = Nothing
-  , uniswapV3PositionV3DTOOwner = Nothing
-  , uniswapV3PositionV3DTOPool = Nothing
-  , uniswapV3PositionV3DTOToken0 = Nothing
-  , uniswapV3PositionV3DTOToken1 = Nothing
-  , uniswapV3PositionV3DTOTickLower = Nothing
-  , uniswapV3PositionV3DTOTickUpper = Nothing
-  , uniswapV3PositionV3DTOLiquidity = Nothing
-  , uniswapV3PositionV3DTODepositedToken0 = Nothing
-  , uniswapV3PositionV3DTODepositedToken1 = Nothing
-  , uniswapV3PositionV3DTOWithdrawnToken0 = Nothing
-  , uniswapV3PositionV3DTOWithdrawnToken1 = Nothing
-  , uniswapV3PositionV3DTOCollectedFeesToken0 = Nothing
-  , uniswapV3PositionV3DTOCollectedFeesToken1 = Nothing
-  , uniswapV3PositionV3DTOTransaction = Nothing
-  , uniswapV3PositionV3DTOFeeGrowthInside0LastX128 = Nothing
-  , uniswapV3PositionV3DTOFeeGrowthInside1LastX128 = Nothing
-  , uniswapV3PositionV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3PositionDTO' (by applying it's required fields, if any)
+mkUniswapV3PositionDTO
+  :: UniswapV3PositionDTO
+mkUniswapV3PositionDTO =
+  UniswapV3PositionDTO
+  { uniswapV3PositionDTOEntryTime = Nothing
+  , uniswapV3PositionDTORecvTime = Nothing
+  , uniswapV3PositionDTOBlockNumber = Nothing
+  , uniswapV3PositionDTOId = Nothing
+  , uniswapV3PositionDTOOwner = Nothing
+  , uniswapV3PositionDTOPool = Nothing
+  , uniswapV3PositionDTOToken0 = Nothing
+  , uniswapV3PositionDTOToken1 = Nothing
+  , uniswapV3PositionDTOTickLower = Nothing
+  , uniswapV3PositionDTOTickUpper = Nothing
+  , uniswapV3PositionDTOLiquidity = Nothing
+  , uniswapV3PositionDTODepositedToken0 = Nothing
+  , uniswapV3PositionDTODepositedToken1 = Nothing
+  , uniswapV3PositionDTOWithdrawnToken0 = Nothing
+  , uniswapV3PositionDTOWithdrawnToken1 = Nothing
+  , uniswapV3PositionDTOCollectedFeesToken0 = Nothing
+  , uniswapV3PositionDTOCollectedFeesToken1 = Nothing
+  , uniswapV3PositionDTOTransaction = Nothing
+  , uniswapV3PositionDTOFeeGrowthInside0LastX128 = Nothing
+  , uniswapV3PositionDTOFeeGrowthInside1LastX128 = Nothing
+  , uniswapV3PositionDTOVid = Nothing
   }
 
--- ** UniswapV3SwapV3DTO
--- | UniswapV3SwapV3DTO
--- Swap are created for each token swap within a pair.
-data UniswapV3SwapV3DTO = UniswapV3SwapV3DTO
-  { uniswapV3SwapV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3SwapV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3SwapV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3SwapV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3SwapV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
-  , uniswapV3SwapV3DTOTransaction :: !(Maybe Text) -- ^ "transaction" - Pointer to transaction.
-  , uniswapV3SwapV3DTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of transaction.
-  , uniswapV3SwapV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool swap occured within.
-  , uniswapV3SwapV3DTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
-  , uniswapV3SwapV3DTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
-  , uniswapV3SwapV3DTOSender :: !(Maybe Text) -- ^ "sender" - Sender of the swap.
-  , uniswapV3SwapV3DTORecipient :: !(Maybe Text) -- ^ "recipient" - Recipient of the swap.
-  , uniswapV3SwapV3DTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
-  , uniswapV3SwapV3DTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Delta of token0 swapped.
-  , uniswapV3SwapV3DTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Delta of token1 swapped.
-  , uniswapV3SwapV3DTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
-  , uniswapV3SwapV3DTOSqrtPriceX96 :: !(Maybe NumericsBigInteger) -- ^ "sqrt_price_x96"
-  , uniswapV3SwapV3DTOTick :: !(Maybe NumericsBigInteger) -- ^ "tick"
-  , uniswapV3SwapV3DTOLogIndex :: !(Maybe NumericsBigInteger) -- ^ "log_index"
-  , uniswapV3SwapV3DTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
-  , uniswapV3SwapV3DTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
-  , uniswapV3SwapV3DTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
-  , uniswapV3SwapV3DTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
-  , uniswapV3SwapV3DTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+-- ** UniswapV3PositionSnapshotDTO
+-- | UniswapV3PositionSnapshotDTO
+data UniswapV3PositionSnapshotDTO = UniswapV3PositionSnapshotDTO
+  { uniswapV3PositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3PositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3PositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3PositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+  , uniswapV3PositionSnapshotDTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
+  , uniswapV3PositionSnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - Pool the position is within.
+  , uniswapV3PositionSnapshotDTOPosition :: !(Maybe Text) -- ^ "position" - Position of which the snap was taken of.
+  , uniswapV3PositionSnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of block in which the snap was created.
+  , uniswapV3PositionSnapshotDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Total position liquidity.
+  , uniswapV3PositionSnapshotDTODepositedToken0 :: !(Maybe Text) -- ^ "deposited_token_0" - Amount of token 0 ever deposited to position.
+  , uniswapV3PositionSnapshotDTODepositedToken1 :: !(Maybe Text) -- ^ "deposited_token_1" - Amount of token 1 ever deposited to position.
+  , uniswapV3PositionSnapshotDTOWithdrawnToken0 :: !(Maybe Text) -- ^ "withdrawn_token_0" - Amount of token 0 ever withdrawn from position (without fees).
+  , uniswapV3PositionSnapshotDTOWithdrawnToken1 :: !(Maybe Text) -- ^ "withdrawn_token_1" - Amount of token 1 ever withdrawn from position (without fees).
+  , uniswapV3PositionSnapshotDTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , uniswapV3PositionSnapshotDTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , uniswapV3PositionSnapshotDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Transaction in which the snapshot was initialized.
+  , uniswapV3PositionSnapshotDTOFeeGrowthInside0LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_0_last_x128" - Variable needed for fee computation.
+  , uniswapV3PositionSnapshotDTOFeeGrowthInside1LastX128 :: !(Maybe Text) -- ^ "fee_growth_inside_1_last_x128" - Variable needed for fee computation.
+  , uniswapV3PositionSnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3SwapV3DTO
-instance A.FromJSON UniswapV3SwapV3DTO where
-  parseJSON = A.withObject "UniswapV3SwapV3DTO" $ \o ->
-    UniswapV3SwapV3DTO
+-- | FromJSON UniswapV3PositionSnapshotDTO
+instance A.FromJSON UniswapV3PositionSnapshotDTO where
+  parseJSON = A.withObject "UniswapV3PositionSnapshotDTO" $ \o ->
+    UniswapV3PositionSnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "owner")
+      <*> (o .:? "pool")
+      <*> (o .:? "position")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "deposited_token_0")
+      <*> (o .:? "deposited_token_1")
+      <*> (o .:? "withdrawn_token_0")
+      <*> (o .:? "withdrawn_token_1")
+      <*> (o .:? "collected_fees_token_0")
+      <*> (o .:? "collected_fees_token_1")
+      <*> (o .:? "transaction")
+      <*> (o .:? "fee_growth_inside_0_last_x128")
+      <*> (o .:? "fee_growth_inside_1_last_x128")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV3PositionSnapshotDTO
+instance A.ToJSON UniswapV3PositionSnapshotDTO where
+  toJSON UniswapV3PositionSnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV3PositionSnapshotDTOEntryTime
+      , "recv_time" .= uniswapV3PositionSnapshotDTORecvTime
+      , "block_number" .= uniswapV3PositionSnapshotDTOBlockNumber
+      , "id" .= uniswapV3PositionSnapshotDTOId
+      , "owner" .= uniswapV3PositionSnapshotDTOOwner
+      , "pool" .= uniswapV3PositionSnapshotDTOPool
+      , "position" .= uniswapV3PositionSnapshotDTOPosition
+      , "timestamp" .= uniswapV3PositionSnapshotDTOTimestamp
+      , "liquidity" .= uniswapV3PositionSnapshotDTOLiquidity
+      , "deposited_token_0" .= uniswapV3PositionSnapshotDTODepositedToken0
+      , "deposited_token_1" .= uniswapV3PositionSnapshotDTODepositedToken1
+      , "withdrawn_token_0" .= uniswapV3PositionSnapshotDTOWithdrawnToken0
+      , "withdrawn_token_1" .= uniswapV3PositionSnapshotDTOWithdrawnToken1
+      , "collected_fees_token_0" .= uniswapV3PositionSnapshotDTOCollectedFeesToken0
+      , "collected_fees_token_1" .= uniswapV3PositionSnapshotDTOCollectedFeesToken1
+      , "transaction" .= uniswapV3PositionSnapshotDTOTransaction
+      , "fee_growth_inside_0_last_x128" .= uniswapV3PositionSnapshotDTOFeeGrowthInside0LastX128
+      , "fee_growth_inside_1_last_x128" .= uniswapV3PositionSnapshotDTOFeeGrowthInside1LastX128
+      , "vid" .= uniswapV3PositionSnapshotDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV3PositionSnapshotDTO' (by applying it's required fields, if any)
+mkUniswapV3PositionSnapshotDTO
+  :: UniswapV3PositionSnapshotDTO
+mkUniswapV3PositionSnapshotDTO =
+  UniswapV3PositionSnapshotDTO
+  { uniswapV3PositionSnapshotDTOEntryTime = Nothing
+  , uniswapV3PositionSnapshotDTORecvTime = Nothing
+  , uniswapV3PositionSnapshotDTOBlockNumber = Nothing
+  , uniswapV3PositionSnapshotDTOId = Nothing
+  , uniswapV3PositionSnapshotDTOOwner = Nothing
+  , uniswapV3PositionSnapshotDTOPool = Nothing
+  , uniswapV3PositionSnapshotDTOPosition = Nothing
+  , uniswapV3PositionSnapshotDTOTimestamp = Nothing
+  , uniswapV3PositionSnapshotDTOLiquidity = Nothing
+  , uniswapV3PositionSnapshotDTODepositedToken0 = Nothing
+  , uniswapV3PositionSnapshotDTODepositedToken1 = Nothing
+  , uniswapV3PositionSnapshotDTOWithdrawnToken0 = Nothing
+  , uniswapV3PositionSnapshotDTOWithdrawnToken1 = Nothing
+  , uniswapV3PositionSnapshotDTOCollectedFeesToken0 = Nothing
+  , uniswapV3PositionSnapshotDTOCollectedFeesToken1 = Nothing
+  , uniswapV3PositionSnapshotDTOTransaction = Nothing
+  , uniswapV3PositionSnapshotDTOFeeGrowthInside0LastX128 = Nothing
+  , uniswapV3PositionSnapshotDTOFeeGrowthInside1LastX128 = Nothing
+  , uniswapV3PositionSnapshotDTOVid = Nothing
+  }
+
+-- ** UniswapV3SwapDTO
+-- | UniswapV3SwapDTO
+-- Swap are created for each token swap within a pair.
+data UniswapV3SwapDTO = UniswapV3SwapDTO
+  { uniswapV3SwapDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3SwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3SwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3SwapDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV3SwapDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+  , uniswapV3SwapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Pointer to transaction.
+  , uniswapV3SwapDTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of transaction.
+  , uniswapV3SwapDTOPool :: !(Maybe Text) -- ^ "pool" - Pool swap occured within.
+  , uniswapV3SwapDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
+  , uniswapV3SwapDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1 as stored in pair contract.
+  , uniswapV3SwapDTOSender :: !(Maybe Text) -- ^ "sender" - Sender of the swap.
+  , uniswapV3SwapDTORecipient :: !(Maybe Text) -- ^ "recipient" - Recipient of the swap.
+  , uniswapV3SwapDTOOrigin :: !(Maybe Text) -- ^ "origin" - Transaction origin: the EOA (Externally Owned Account) that initiated the transaction
+  , uniswapV3SwapDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Delta of token0 swapped.
+  , uniswapV3SwapDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Delta of token1 swapped.
+  , uniswapV3SwapDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount of tokens sold in USD.
+  , uniswapV3SwapDTOSqrtPriceX96 :: !(Maybe NumericsBigInteger) -- ^ "sqrt_price_x96"
+  , uniswapV3SwapDTOTick :: !(Maybe NumericsBigInteger) -- ^ "tick"
+  , uniswapV3SwapDTOLogIndex :: !(Maybe NumericsBigInteger) -- ^ "log_index"
+  , uniswapV3SwapDTOEvaluatedPrice :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_price"
+  , uniswapV3SwapDTOEvaluatedAmount :: !(Maybe Double) -- ^ /ReadOnly/ "evaluated_amount"
+  , uniswapV3SwapDTOEvaluatedAggressor :: !(Maybe TransactionsETradeAggressiveSide) -- ^ "evaluated_aggressor"
+  , uniswapV3SwapDTOPoolId :: !(Maybe Text) -- ^ /ReadOnly/ "pool_id"
+  , uniswapV3SwapDTOTransactionId :: !(Maybe Text) -- ^ /ReadOnly/ "transaction_id"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV3SwapDTO
+instance A.FromJSON UniswapV3SwapDTO where
+  parseJSON = A.withObject "UniswapV3SwapDTO" $ \o ->
+    UniswapV3SwapDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7309,191 +7306,102 @@ instance A.FromJSON UniswapV3SwapV3DTO where
       <*> (o .:? "pool_id")
       <*> (o .:? "transaction_id")
 
--- | ToJSON UniswapV3SwapV3DTO
-instance A.ToJSON UniswapV3SwapV3DTO where
-  toJSON UniswapV3SwapV3DTO {..} =
+-- | ToJSON UniswapV3SwapDTO
+instance A.ToJSON UniswapV3SwapDTO where
+  toJSON UniswapV3SwapDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3SwapV3DTOEntryTime
-      , "recv_time" .= uniswapV3SwapV3DTORecvTime
-      , "block_number" .= uniswapV3SwapV3DTOBlockNumber
-      , "vid" .= uniswapV3SwapV3DTOVid
-      , "id" .= uniswapV3SwapV3DTOId
-      , "transaction" .= uniswapV3SwapV3DTOTransaction
-      , "timestamp" .= uniswapV3SwapV3DTOTimestamp
-      , "pool" .= uniswapV3SwapV3DTOPool
-      , "token_0" .= uniswapV3SwapV3DTOToken0
-      , "token_1" .= uniswapV3SwapV3DTOToken1
-      , "sender" .= uniswapV3SwapV3DTOSender
-      , "recipient" .= uniswapV3SwapV3DTORecipient
-      , "origin" .= uniswapV3SwapV3DTOOrigin
-      , "amount_0" .= uniswapV3SwapV3DTOAmount0
-      , "amount_1" .= uniswapV3SwapV3DTOAmount1
-      , "amount_usd" .= uniswapV3SwapV3DTOAmountUsd
-      , "sqrt_price_x96" .= uniswapV3SwapV3DTOSqrtPriceX96
-      , "tick" .= uniswapV3SwapV3DTOTick
-      , "log_index" .= uniswapV3SwapV3DTOLogIndex
-      , "evaluated_price" .= uniswapV3SwapV3DTOEvaluatedPrice
-      , "evaluated_amount" .= uniswapV3SwapV3DTOEvaluatedAmount
-      , "evaluated_aggressor" .= uniswapV3SwapV3DTOEvaluatedAggressor
-      , "pool_id" .= uniswapV3SwapV3DTOPoolId
-      , "transaction_id" .= uniswapV3SwapV3DTOTransactionId
+      [ "entry_time" .= uniswapV3SwapDTOEntryTime
+      , "recv_time" .= uniswapV3SwapDTORecvTime
+      , "block_number" .= uniswapV3SwapDTOBlockNumber
+      , "vid" .= uniswapV3SwapDTOVid
+      , "id" .= uniswapV3SwapDTOId
+      , "transaction" .= uniswapV3SwapDTOTransaction
+      , "timestamp" .= uniswapV3SwapDTOTimestamp
+      , "pool" .= uniswapV3SwapDTOPool
+      , "token_0" .= uniswapV3SwapDTOToken0
+      , "token_1" .= uniswapV3SwapDTOToken1
+      , "sender" .= uniswapV3SwapDTOSender
+      , "recipient" .= uniswapV3SwapDTORecipient
+      , "origin" .= uniswapV3SwapDTOOrigin
+      , "amount_0" .= uniswapV3SwapDTOAmount0
+      , "amount_1" .= uniswapV3SwapDTOAmount1
+      , "amount_usd" .= uniswapV3SwapDTOAmountUsd
+      , "sqrt_price_x96" .= uniswapV3SwapDTOSqrtPriceX96
+      , "tick" .= uniswapV3SwapDTOTick
+      , "log_index" .= uniswapV3SwapDTOLogIndex
+      , "evaluated_price" .= uniswapV3SwapDTOEvaluatedPrice
+      , "evaluated_amount" .= uniswapV3SwapDTOEvaluatedAmount
+      , "evaluated_aggressor" .= uniswapV3SwapDTOEvaluatedAggressor
+      , "pool_id" .= uniswapV3SwapDTOPoolId
+      , "transaction_id" .= uniswapV3SwapDTOTransactionId
       ]
 
 
--- | Construct a value of type 'UniswapV3SwapV3DTO' (by applying it's required fields, if any)
-mkUniswapV3SwapV3DTO
-  :: UniswapV3SwapV3DTO
-mkUniswapV3SwapV3DTO =
-  UniswapV3SwapV3DTO
-  { uniswapV3SwapV3DTOEntryTime = Nothing
-  , uniswapV3SwapV3DTORecvTime = Nothing
-  , uniswapV3SwapV3DTOBlockNumber = Nothing
-  , uniswapV3SwapV3DTOVid = Nothing
-  , uniswapV3SwapV3DTOId = Nothing
-  , uniswapV3SwapV3DTOTransaction = Nothing
-  , uniswapV3SwapV3DTOTimestamp = Nothing
-  , uniswapV3SwapV3DTOPool = Nothing
-  , uniswapV3SwapV3DTOToken0 = Nothing
-  , uniswapV3SwapV3DTOToken1 = Nothing
-  , uniswapV3SwapV3DTOSender = Nothing
-  , uniswapV3SwapV3DTORecipient = Nothing
-  , uniswapV3SwapV3DTOOrigin = Nothing
-  , uniswapV3SwapV3DTOAmount0 = Nothing
-  , uniswapV3SwapV3DTOAmount1 = Nothing
-  , uniswapV3SwapV3DTOAmountUsd = Nothing
-  , uniswapV3SwapV3DTOSqrtPriceX96 = Nothing
-  , uniswapV3SwapV3DTOTick = Nothing
-  , uniswapV3SwapV3DTOLogIndex = Nothing
-  , uniswapV3SwapV3DTOEvaluatedPrice = Nothing
-  , uniswapV3SwapV3DTOEvaluatedAmount = Nothing
-  , uniswapV3SwapV3DTOEvaluatedAggressor = Nothing
-  , uniswapV3SwapV3DTOPoolId = Nothing
-  , uniswapV3SwapV3DTOTransactionId = Nothing
+-- | Construct a value of type 'UniswapV3SwapDTO' (by applying it's required fields, if any)
+mkUniswapV3SwapDTO
+  :: UniswapV3SwapDTO
+mkUniswapV3SwapDTO =
+  UniswapV3SwapDTO
+  { uniswapV3SwapDTOEntryTime = Nothing
+  , uniswapV3SwapDTORecvTime = Nothing
+  , uniswapV3SwapDTOBlockNumber = Nothing
+  , uniswapV3SwapDTOVid = Nothing
+  , uniswapV3SwapDTOId = Nothing
+  , uniswapV3SwapDTOTransaction = Nothing
+  , uniswapV3SwapDTOTimestamp = Nothing
+  , uniswapV3SwapDTOPool = Nothing
+  , uniswapV3SwapDTOToken0 = Nothing
+  , uniswapV3SwapDTOToken1 = Nothing
+  , uniswapV3SwapDTOSender = Nothing
+  , uniswapV3SwapDTORecipient = Nothing
+  , uniswapV3SwapDTOOrigin = Nothing
+  , uniswapV3SwapDTOAmount0 = Nothing
+  , uniswapV3SwapDTOAmount1 = Nothing
+  , uniswapV3SwapDTOAmountUsd = Nothing
+  , uniswapV3SwapDTOSqrtPriceX96 = Nothing
+  , uniswapV3SwapDTOTick = Nothing
+  , uniswapV3SwapDTOLogIndex = Nothing
+  , uniswapV3SwapDTOEvaluatedPrice = Nothing
+  , uniswapV3SwapDTOEvaluatedAmount = Nothing
+  , uniswapV3SwapDTOEvaluatedAggressor = Nothing
+  , uniswapV3SwapDTOPoolId = Nothing
+  , uniswapV3SwapDTOTransactionId = Nothing
   }
 
--- ** UniswapV3TickDayDataV3DTO
--- | UniswapV3TickDayDataV3DTO
--- Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
-data UniswapV3TickDayDataV3DTO = UniswapV3TickDayDataV3DTO
-  { uniswapV3TickDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3TickDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3TickDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TickDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
-  , uniswapV3TickDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
-  , uniswapV3TickDayDataV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
-  , uniswapV3TickDayDataV3DTOTick :: !(Maybe Text) -- ^ "tick" - Pointer to tick.
-  , uniswapV3TickDayDataV3DTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - Total liquidity pool has as tick lower or upper at end of period.
-  , uniswapV3TickDayDataV3DTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - How much liquidity changes when tick crossed at end of period.
-  , uniswapV3TickDayDataV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Hourly volume of token0 with this tick in range.
-  , uniswapV3TickDayDataV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Hourly volume of token1 with this tick in range.
-  , uniswapV3TickDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Hourly volume in derived USD with this tick in range.
-  , uniswapV3TickDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3TickDayDataV3DTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128" - Variable needed for fee computation.
-  , uniswapV3TickDayDataV3DTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128" - Variable needed for fee computation.
-  , uniswapV3TickDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON UniswapV3TickDayDataV3DTO
-instance A.FromJSON UniswapV3TickDayDataV3DTO where
-  parseJSON = A.withObject "UniswapV3TickDayDataV3DTO" $ \o ->
-    UniswapV3TickDayDataV3DTO
-      <$> (o .:? "entry_time")
-      <*> (o .:? "recv_time")
-      <*> (o .:? "block_number")
-      <*> (o .:? "id")
-      <*> (o .:? "date")
-      <*> (o .:? "pool")
-      <*> (o .:? "tick")
-      <*> (o .:? "liquidity_gross")
-      <*> (o .:? "liquidity_net")
-      <*> (o .:? "volume_token_0")
-      <*> (o .:? "volume_token_1")
-      <*> (o .:? "volume_usd")
-      <*> (o .:? "fees_usd")
-      <*> (o .:? "fee_growth_outside_0x128")
-      <*> (o .:? "fee_growth_outside_1x128")
-      <*> (o .:? "vid")
-
--- | ToJSON UniswapV3TickDayDataV3DTO
-instance A.ToJSON UniswapV3TickDayDataV3DTO where
-  toJSON UniswapV3TickDayDataV3DTO {..} =
-   _omitNulls
-      [ "entry_time" .= uniswapV3TickDayDataV3DTOEntryTime
-      , "recv_time" .= uniswapV3TickDayDataV3DTORecvTime
-      , "block_number" .= uniswapV3TickDayDataV3DTOBlockNumber
-      , "id" .= uniswapV3TickDayDataV3DTOId
-      , "date" .= uniswapV3TickDayDataV3DTODate
-      , "pool" .= uniswapV3TickDayDataV3DTOPool
-      , "tick" .= uniswapV3TickDayDataV3DTOTick
-      , "liquidity_gross" .= uniswapV3TickDayDataV3DTOLiquidityGross
-      , "liquidity_net" .= uniswapV3TickDayDataV3DTOLiquidityNet
-      , "volume_token_0" .= uniswapV3TickDayDataV3DTOVolumeToken0
-      , "volume_token_1" .= uniswapV3TickDayDataV3DTOVolumeToken1
-      , "volume_usd" .= uniswapV3TickDayDataV3DTOVolumeUsd
-      , "fees_usd" .= uniswapV3TickDayDataV3DTOFeesUsd
-      , "fee_growth_outside_0x128" .= uniswapV3TickDayDataV3DTOFeeGrowthOutside0x128
-      , "fee_growth_outside_1x128" .= uniswapV3TickDayDataV3DTOFeeGrowthOutside1x128
-      , "vid" .= uniswapV3TickDayDataV3DTOVid
-      ]
-
-
--- | Construct a value of type 'UniswapV3TickDayDataV3DTO' (by applying it's required fields, if any)
-mkUniswapV3TickDayDataV3DTO
-  :: UniswapV3TickDayDataV3DTO
-mkUniswapV3TickDayDataV3DTO =
-  UniswapV3TickDayDataV3DTO
-  { uniswapV3TickDayDataV3DTOEntryTime = Nothing
-  , uniswapV3TickDayDataV3DTORecvTime = Nothing
-  , uniswapV3TickDayDataV3DTOBlockNumber = Nothing
-  , uniswapV3TickDayDataV3DTOId = Nothing
-  , uniswapV3TickDayDataV3DTODate = Nothing
-  , uniswapV3TickDayDataV3DTOPool = Nothing
-  , uniswapV3TickDayDataV3DTOTick = Nothing
-  , uniswapV3TickDayDataV3DTOLiquidityGross = Nothing
-  , uniswapV3TickDayDataV3DTOLiquidityNet = Nothing
-  , uniswapV3TickDayDataV3DTOVolumeToken0 = Nothing
-  , uniswapV3TickDayDataV3DTOVolumeToken1 = Nothing
-  , uniswapV3TickDayDataV3DTOVolumeUsd = Nothing
-  , uniswapV3TickDayDataV3DTOFeesUsd = Nothing
-  , uniswapV3TickDayDataV3DTOFeeGrowthOutside0x128 = Nothing
-  , uniswapV3TickDayDataV3DTOFeeGrowthOutside1x128 = Nothing
-  , uniswapV3TickDayDataV3DTOVid = Nothing
-  }
-
--- ** UniswapV3TickV3DTO
--- | UniswapV3TickV3DTO
+-- ** UniswapV3TickDTO
+-- | UniswapV3TickDTO
 -- Ticks are the boundaries between discrete areas in price space.
-data UniswapV3TickV3DTO = UniswapV3TickV3DTO
-  { uniswapV3TickV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3TickV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3TickV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TickV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3TickV3DTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
-  , uniswapV3TickV3DTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Pool address.
-  , uniswapV3TickV3DTOTickIdx :: !(Maybe NumericsBigInteger) -- ^ "tick_idx"
-  , uniswapV3TickV3DTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
-  , uniswapV3TickV3DTOLiquidityGross :: !(Maybe NumericsBigInteger) -- ^ "liquidity_gross"
-  , uniswapV3TickV3DTOLiquidityNet :: !(Maybe NumericsBigInteger) -- ^ "liquidity_net"
-  , uniswapV3TickV3DTOPrice0 :: !(Maybe Text) -- ^ "price_0" - Calculated price of token0 of tick within this pool - constant.
-  , uniswapV3TickV3DTOPrice1 :: !(Maybe Text) -- ^ "price_1" - Calculated price of token1 of tick within this pool - constant.
-  , uniswapV3TickV3DTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Lifetime volume of token0 with this tick in range.
-  , uniswapV3TickV3DTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Lifetime volume of token1 with this tick in range.
-  , uniswapV3TickV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Lifetime volume in derived USD with this tick in range.
-  , uniswapV3TickV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Lifetime volume in untracked USD with this tick in range.
-  , uniswapV3TickV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3TickV3DTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
-  , uniswapV3TickV3DTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
-  , uniswapV3TickV3DTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time collected fees in USD.
-  , uniswapV3TickV3DTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Created time.
-  , uniswapV3TickV3DTOLiquidityProviderCount :: !(Maybe NumericsBigInteger) -- ^ "liquidity_provider_count"
-  , uniswapV3TickV3DTOFeeGrowthOutside0x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_outside_0x128"
-  , uniswapV3TickV3DTOFeeGrowthOutside1x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_outside_1x128"
+data UniswapV3TickDTO = UniswapV3TickDTO
+  { uniswapV3TickDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3TickDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3TickDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3TickDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV3TickDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
+  , uniswapV3TickDTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Pool address.
+  , uniswapV3TickDTOTickIdx :: !(Maybe NumericsBigInteger) -- ^ "tick_idx"
+  , uniswapV3TickDTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
+  , uniswapV3TickDTOLiquidityGross :: !(Maybe NumericsBigInteger) -- ^ "liquidity_gross"
+  , uniswapV3TickDTOLiquidityNet :: !(Maybe NumericsBigInteger) -- ^ "liquidity_net"
+  , uniswapV3TickDTOPrice0 :: !(Maybe Text) -- ^ "price_0" - Calculated price of token0 of tick within this pool - constant.
+  , uniswapV3TickDTOPrice1 :: !(Maybe Text) -- ^ "price_1" - Calculated price of token1 of tick within this pool - constant.
+  , uniswapV3TickDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Lifetime volume of token0 with this tick in range.
+  , uniswapV3TickDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Lifetime volume of token1 with this tick in range.
+  , uniswapV3TickDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Lifetime volume in derived USD with this tick in range.
+  , uniswapV3TickDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Lifetime volume in untracked USD with this tick in range.
+  , uniswapV3TickDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3TickDTOCollectedFeesToken0 :: !(Maybe Text) -- ^ "collected_fees_token_0" - All time collected fees in token0.
+  , uniswapV3TickDTOCollectedFeesToken1 :: !(Maybe Text) -- ^ "collected_fees_token_1" - All time collected fees in token1.
+  , uniswapV3TickDTOCollectedFeesUsd :: !(Maybe Text) -- ^ "collected_fees_usd" - All time collected fees in USD.
+  , uniswapV3TickDTOCreatedAtTimestamp :: !(Maybe DateTime) -- ^ "created_at_timestamp" - Created time.
+  , uniswapV3TickDTOLiquidityProviderCount :: !(Maybe NumericsBigInteger) -- ^ "liquidity_provider_count"
+  , uniswapV3TickDTOFeeGrowthOutside0x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_outside_0x128"
+  , uniswapV3TickDTOFeeGrowthOutside1x128 :: !(Maybe NumericsBigInteger) -- ^ "fee_growth_outside_1x128"
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3TickV3DTO
-instance A.FromJSON UniswapV3TickV3DTO where
-  parseJSON = A.withObject "UniswapV3TickV3DTO" $ \o ->
-    UniswapV3TickV3DTO
+-- | FromJSON UniswapV3TickDTO
+instance A.FromJSON UniswapV3TickDTO where
+  parseJSON = A.withObject "UniswapV3TickDTO" $ \o ->
+    UniswapV3TickDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7519,196 +7427,188 @@ instance A.FromJSON UniswapV3TickV3DTO where
       <*> (o .:? "fee_growth_outside_0x128")
       <*> (o .:? "fee_growth_outside_1x128")
 
--- | ToJSON UniswapV3TickV3DTO
-instance A.ToJSON UniswapV3TickV3DTO where
-  toJSON UniswapV3TickV3DTO {..} =
+-- | ToJSON UniswapV3TickDTO
+instance A.ToJSON UniswapV3TickDTO where
+  toJSON UniswapV3TickDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3TickV3DTOEntryTime
-      , "recv_time" .= uniswapV3TickV3DTORecvTime
-      , "block_number" .= uniswapV3TickV3DTOBlockNumber
-      , "vid" .= uniswapV3TickV3DTOVid
-      , "id" .= uniswapV3TickV3DTOId
-      , "pool_address" .= uniswapV3TickV3DTOPoolAddress
-      , "tick_idx" .= uniswapV3TickV3DTOTickIdx
-      , "pool" .= uniswapV3TickV3DTOPool
-      , "liquidity_gross" .= uniswapV3TickV3DTOLiquidityGross
-      , "liquidity_net" .= uniswapV3TickV3DTOLiquidityNet
-      , "price_0" .= uniswapV3TickV3DTOPrice0
-      , "price_1" .= uniswapV3TickV3DTOPrice1
-      , "volume_token_0" .= uniswapV3TickV3DTOVolumeToken0
-      , "volume_token_1" .= uniswapV3TickV3DTOVolumeToken1
-      , "volume_usd" .= uniswapV3TickV3DTOVolumeUsd
-      , "untracked_volume_usd" .= uniswapV3TickV3DTOUntrackedVolumeUsd
-      , "fees_usd" .= uniswapV3TickV3DTOFeesUsd
-      , "collected_fees_token_0" .= uniswapV3TickV3DTOCollectedFeesToken0
-      , "collected_fees_token_1" .= uniswapV3TickV3DTOCollectedFeesToken1
-      , "collected_fees_usd" .= uniswapV3TickV3DTOCollectedFeesUsd
-      , "created_at_timestamp" .= uniswapV3TickV3DTOCreatedAtTimestamp
-      , "liquidity_provider_count" .= uniswapV3TickV3DTOLiquidityProviderCount
-      , "fee_growth_outside_0x128" .= uniswapV3TickV3DTOFeeGrowthOutside0x128
-      , "fee_growth_outside_1x128" .= uniswapV3TickV3DTOFeeGrowthOutside1x128
+      [ "entry_time" .= uniswapV3TickDTOEntryTime
+      , "recv_time" .= uniswapV3TickDTORecvTime
+      , "block_number" .= uniswapV3TickDTOBlockNumber
+      , "vid" .= uniswapV3TickDTOVid
+      , "id" .= uniswapV3TickDTOId
+      , "pool_address" .= uniswapV3TickDTOPoolAddress
+      , "tick_idx" .= uniswapV3TickDTOTickIdx
+      , "pool" .= uniswapV3TickDTOPool
+      , "liquidity_gross" .= uniswapV3TickDTOLiquidityGross
+      , "liquidity_net" .= uniswapV3TickDTOLiquidityNet
+      , "price_0" .= uniswapV3TickDTOPrice0
+      , "price_1" .= uniswapV3TickDTOPrice1
+      , "volume_token_0" .= uniswapV3TickDTOVolumeToken0
+      , "volume_token_1" .= uniswapV3TickDTOVolumeToken1
+      , "volume_usd" .= uniswapV3TickDTOVolumeUsd
+      , "untracked_volume_usd" .= uniswapV3TickDTOUntrackedVolumeUsd
+      , "fees_usd" .= uniswapV3TickDTOFeesUsd
+      , "collected_fees_token_0" .= uniswapV3TickDTOCollectedFeesToken0
+      , "collected_fees_token_1" .= uniswapV3TickDTOCollectedFeesToken1
+      , "collected_fees_usd" .= uniswapV3TickDTOCollectedFeesUsd
+      , "created_at_timestamp" .= uniswapV3TickDTOCreatedAtTimestamp
+      , "liquidity_provider_count" .= uniswapV3TickDTOLiquidityProviderCount
+      , "fee_growth_outside_0x128" .= uniswapV3TickDTOFeeGrowthOutside0x128
+      , "fee_growth_outside_1x128" .= uniswapV3TickDTOFeeGrowthOutside1x128
       ]
 
 
--- | Construct a value of type 'UniswapV3TickV3DTO' (by applying it's required fields, if any)
-mkUniswapV3TickV3DTO
-  :: UniswapV3TickV3DTO
-mkUniswapV3TickV3DTO =
-  UniswapV3TickV3DTO
-  { uniswapV3TickV3DTOEntryTime = Nothing
-  , uniswapV3TickV3DTORecvTime = Nothing
-  , uniswapV3TickV3DTOBlockNumber = Nothing
-  , uniswapV3TickV3DTOVid = Nothing
-  , uniswapV3TickV3DTOId = Nothing
-  , uniswapV3TickV3DTOPoolAddress = Nothing
-  , uniswapV3TickV3DTOTickIdx = Nothing
-  , uniswapV3TickV3DTOPool = Nothing
-  , uniswapV3TickV3DTOLiquidityGross = Nothing
-  , uniswapV3TickV3DTOLiquidityNet = Nothing
-  , uniswapV3TickV3DTOPrice0 = Nothing
-  , uniswapV3TickV3DTOPrice1 = Nothing
-  , uniswapV3TickV3DTOVolumeToken0 = Nothing
-  , uniswapV3TickV3DTOVolumeToken1 = Nothing
-  , uniswapV3TickV3DTOVolumeUsd = Nothing
-  , uniswapV3TickV3DTOUntrackedVolumeUsd = Nothing
-  , uniswapV3TickV3DTOFeesUsd = Nothing
-  , uniswapV3TickV3DTOCollectedFeesToken0 = Nothing
-  , uniswapV3TickV3DTOCollectedFeesToken1 = Nothing
-  , uniswapV3TickV3DTOCollectedFeesUsd = Nothing
-  , uniswapV3TickV3DTOCreatedAtTimestamp = Nothing
-  , uniswapV3TickV3DTOLiquidityProviderCount = Nothing
-  , uniswapV3TickV3DTOFeeGrowthOutside0x128 = Nothing
-  , uniswapV3TickV3DTOFeeGrowthOutside1x128 = Nothing
+-- | Construct a value of type 'UniswapV3TickDTO' (by applying it's required fields, if any)
+mkUniswapV3TickDTO
+  :: UniswapV3TickDTO
+mkUniswapV3TickDTO =
+  UniswapV3TickDTO
+  { uniswapV3TickDTOEntryTime = Nothing
+  , uniswapV3TickDTORecvTime = Nothing
+  , uniswapV3TickDTOBlockNumber = Nothing
+  , uniswapV3TickDTOVid = Nothing
+  , uniswapV3TickDTOId = Nothing
+  , uniswapV3TickDTOPoolAddress = Nothing
+  , uniswapV3TickDTOTickIdx = Nothing
+  , uniswapV3TickDTOPool = Nothing
+  , uniswapV3TickDTOLiquidityGross = Nothing
+  , uniswapV3TickDTOLiquidityNet = Nothing
+  , uniswapV3TickDTOPrice0 = Nothing
+  , uniswapV3TickDTOPrice1 = Nothing
+  , uniswapV3TickDTOVolumeToken0 = Nothing
+  , uniswapV3TickDTOVolumeToken1 = Nothing
+  , uniswapV3TickDTOVolumeUsd = Nothing
+  , uniswapV3TickDTOUntrackedVolumeUsd = Nothing
+  , uniswapV3TickDTOFeesUsd = Nothing
+  , uniswapV3TickDTOCollectedFeesToken0 = Nothing
+  , uniswapV3TickDTOCollectedFeesToken1 = Nothing
+  , uniswapV3TickDTOCollectedFeesUsd = Nothing
+  , uniswapV3TickDTOCreatedAtTimestamp = Nothing
+  , uniswapV3TickDTOLiquidityProviderCount = Nothing
+  , uniswapV3TickDTOFeeGrowthOutside0x128 = Nothing
+  , uniswapV3TickDTOFeeGrowthOutside1x128 = Nothing
   }
 
--- ** UniswapV3TokenHourDataV3DTO
--- | UniswapV3TokenHourDataV3DTO
--- Token data aggregated across all pairs that include token.
-data UniswapV3TokenHourDataV3DTO = UniswapV3TokenHourDataV3DTO
-  { uniswapV3TokenHourDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3TokenHourDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3TokenHourDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TokenHourDataV3DTOId :: !(Maybe Text) -- ^ "id" - Token address concatendated with date.
-  , uniswapV3TokenHourDataV3DTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
-  , uniswapV3TokenHourDataV3DTOToken :: !(Maybe Text) -- ^ "token" - Pointer to token.
-  , uniswapV3TokenHourDataV3DTOVolume :: !(Maybe Text) -- ^ "volume" - Volume in token units.
-  , uniswapV3TokenHourDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in derived USD.
-  , uniswapV3TokenHourDataV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Volume in USD even on pools with less reliable USD values.
-  , uniswapV3TokenHourDataV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - Liquidity across all pools in token units.
-  , uniswapV3TokenHourDataV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Liquidity across all pools in derived USD.
-  , uniswapV3TokenHourDataV3DTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - Price at end of period in USD.
-  , uniswapV3TokenHourDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3TokenHourDataV3DTOOpen :: !(Maybe Text) -- ^ "open" - Opening price USD.
-  , uniswapV3TokenHourDataV3DTOHigh :: !(Maybe Text) -- ^ "high" - High price USD.
-  , uniswapV3TokenHourDataV3DTOLow :: !(Maybe Text) -- ^ "low" - Low price USD.
-  , uniswapV3TokenHourDataV3DTOClose :: !(Maybe Text) -- ^ "close" - Close price USD.
-  , uniswapV3TokenHourDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+-- ** UniswapV3TickDayDataDTO
+-- | UniswapV3TickDayDataDTO
+-- Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+data UniswapV3TickDayDataDTO = UniswapV3TickDayDataDTO
+  { uniswapV3TickDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3TickDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3TickDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3TickDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
+  , uniswapV3TickDayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
+  , uniswapV3TickDayDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
+  , uniswapV3TickDayDataDTOTick :: !(Maybe Text) -- ^ "tick" - Pointer to tick.
+  , uniswapV3TickDayDataDTOLiquidityGross :: !(Maybe Text) -- ^ "liquidity_gross" - Total liquidity pool has as tick lower or upper at end of period.
+  , uniswapV3TickDayDataDTOLiquidityNet :: !(Maybe Text) -- ^ "liquidity_net" - How much liquidity changes when tick crossed at end of period.
+  , uniswapV3TickDayDataDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Hourly volume of token0 with this tick in range.
+  , uniswapV3TickDayDataDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Hourly volume of token1 with this tick in range.
+  , uniswapV3TickDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Hourly volume in derived USD with this tick in range.
+  , uniswapV3TickDayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3TickDayDataDTOFeeGrowthOutside0x128 :: !(Maybe Text) -- ^ "fee_growth_outside_0x128" - Variable needed for fee computation.
+  , uniswapV3TickDayDataDTOFeeGrowthOutside1x128 :: !(Maybe Text) -- ^ "fee_growth_outside_1x128" - Variable needed for fee computation.
+  , uniswapV3TickDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3TokenHourDataV3DTO
-instance A.FromJSON UniswapV3TokenHourDataV3DTO where
-  parseJSON = A.withObject "UniswapV3TokenHourDataV3DTO" $ \o ->
-    UniswapV3TokenHourDataV3DTO
+-- | FromJSON UniswapV3TickDayDataDTO
+instance A.FromJSON UniswapV3TickDayDataDTO where
+  parseJSON = A.withObject "UniswapV3TickDayDataDTO" $ \o ->
+    UniswapV3TickDayDataDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
       <*> (o .:? "id")
-      <*> (o .:? "period_start_unix")
-      <*> (o .:? "token")
-      <*> (o .:? "volume")
+      <*> (o .:? "date")
+      <*> (o .:? "pool")
+      <*> (o .:? "tick")
+      <*> (o .:? "liquidity_gross")
+      <*> (o .:? "liquidity_net")
+      <*> (o .:? "volume_token_0")
+      <*> (o .:? "volume_token_1")
       <*> (o .:? "volume_usd")
-      <*> (o .:? "untracked_volume_usd")
-      <*> (o .:? "total_value_locked")
-      <*> (o .:? "total_value_locked_usd")
-      <*> (o .:? "price_usd")
       <*> (o .:? "fees_usd")
-      <*> (o .:? "open")
-      <*> (o .:? "high")
-      <*> (o .:? "low")
-      <*> (o .:? "close")
+      <*> (o .:? "fee_growth_outside_0x128")
+      <*> (o .:? "fee_growth_outside_1x128")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3TokenHourDataV3DTO
-instance A.ToJSON UniswapV3TokenHourDataV3DTO where
-  toJSON UniswapV3TokenHourDataV3DTO {..} =
+-- | ToJSON UniswapV3TickDayDataDTO
+instance A.ToJSON UniswapV3TickDayDataDTO where
+  toJSON UniswapV3TickDayDataDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3TokenHourDataV3DTOEntryTime
-      , "recv_time" .= uniswapV3TokenHourDataV3DTORecvTime
-      , "block_number" .= uniswapV3TokenHourDataV3DTOBlockNumber
-      , "id" .= uniswapV3TokenHourDataV3DTOId
-      , "period_start_unix" .= uniswapV3TokenHourDataV3DTOPeriodStartUnix
-      , "token" .= uniswapV3TokenHourDataV3DTOToken
-      , "volume" .= uniswapV3TokenHourDataV3DTOVolume
-      , "volume_usd" .= uniswapV3TokenHourDataV3DTOVolumeUsd
-      , "untracked_volume_usd" .= uniswapV3TokenHourDataV3DTOUntrackedVolumeUsd
-      , "total_value_locked" .= uniswapV3TokenHourDataV3DTOTotalValueLocked
-      , "total_value_locked_usd" .= uniswapV3TokenHourDataV3DTOTotalValueLockedUsd
-      , "price_usd" .= uniswapV3TokenHourDataV3DTOPriceUsd
-      , "fees_usd" .= uniswapV3TokenHourDataV3DTOFeesUsd
-      , "open" .= uniswapV3TokenHourDataV3DTOOpen
-      , "high" .= uniswapV3TokenHourDataV3DTOHigh
-      , "low" .= uniswapV3TokenHourDataV3DTOLow
-      , "close" .= uniswapV3TokenHourDataV3DTOClose
-      , "vid" .= uniswapV3TokenHourDataV3DTOVid
+      [ "entry_time" .= uniswapV3TickDayDataDTOEntryTime
+      , "recv_time" .= uniswapV3TickDayDataDTORecvTime
+      , "block_number" .= uniswapV3TickDayDataDTOBlockNumber
+      , "id" .= uniswapV3TickDayDataDTOId
+      , "date" .= uniswapV3TickDayDataDTODate
+      , "pool" .= uniswapV3TickDayDataDTOPool
+      , "tick" .= uniswapV3TickDayDataDTOTick
+      , "liquidity_gross" .= uniswapV3TickDayDataDTOLiquidityGross
+      , "liquidity_net" .= uniswapV3TickDayDataDTOLiquidityNet
+      , "volume_token_0" .= uniswapV3TickDayDataDTOVolumeToken0
+      , "volume_token_1" .= uniswapV3TickDayDataDTOVolumeToken1
+      , "volume_usd" .= uniswapV3TickDayDataDTOVolumeUsd
+      , "fees_usd" .= uniswapV3TickDayDataDTOFeesUsd
+      , "fee_growth_outside_0x128" .= uniswapV3TickDayDataDTOFeeGrowthOutside0x128
+      , "fee_growth_outside_1x128" .= uniswapV3TickDayDataDTOFeeGrowthOutside1x128
+      , "vid" .= uniswapV3TickDayDataDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3TokenHourDataV3DTO' (by applying it's required fields, if any)
-mkUniswapV3TokenHourDataV3DTO
-  :: UniswapV3TokenHourDataV3DTO
-mkUniswapV3TokenHourDataV3DTO =
-  UniswapV3TokenHourDataV3DTO
-  { uniswapV3TokenHourDataV3DTOEntryTime = Nothing
-  , uniswapV3TokenHourDataV3DTORecvTime = Nothing
-  , uniswapV3TokenHourDataV3DTOBlockNumber = Nothing
-  , uniswapV3TokenHourDataV3DTOId = Nothing
-  , uniswapV3TokenHourDataV3DTOPeriodStartUnix = Nothing
-  , uniswapV3TokenHourDataV3DTOToken = Nothing
-  , uniswapV3TokenHourDataV3DTOVolume = Nothing
-  , uniswapV3TokenHourDataV3DTOVolumeUsd = Nothing
-  , uniswapV3TokenHourDataV3DTOUntrackedVolumeUsd = Nothing
-  , uniswapV3TokenHourDataV3DTOTotalValueLocked = Nothing
-  , uniswapV3TokenHourDataV3DTOTotalValueLockedUsd = Nothing
-  , uniswapV3TokenHourDataV3DTOPriceUsd = Nothing
-  , uniswapV3TokenHourDataV3DTOFeesUsd = Nothing
-  , uniswapV3TokenHourDataV3DTOOpen = Nothing
-  , uniswapV3TokenHourDataV3DTOHigh = Nothing
-  , uniswapV3TokenHourDataV3DTOLow = Nothing
-  , uniswapV3TokenHourDataV3DTOClose = Nothing
-  , uniswapV3TokenHourDataV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3TickDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV3TickDayDataDTO
+  :: UniswapV3TickDayDataDTO
+mkUniswapV3TickDayDataDTO =
+  UniswapV3TickDayDataDTO
+  { uniswapV3TickDayDataDTOEntryTime = Nothing
+  , uniswapV3TickDayDataDTORecvTime = Nothing
+  , uniswapV3TickDayDataDTOBlockNumber = Nothing
+  , uniswapV3TickDayDataDTOId = Nothing
+  , uniswapV3TickDayDataDTODate = Nothing
+  , uniswapV3TickDayDataDTOPool = Nothing
+  , uniswapV3TickDayDataDTOTick = Nothing
+  , uniswapV3TickDayDataDTOLiquidityGross = Nothing
+  , uniswapV3TickDayDataDTOLiquidityNet = Nothing
+  , uniswapV3TickDayDataDTOVolumeToken0 = Nothing
+  , uniswapV3TickDayDataDTOVolumeToken1 = Nothing
+  , uniswapV3TickDayDataDTOVolumeUsd = Nothing
+  , uniswapV3TickDayDataDTOFeesUsd = Nothing
+  , uniswapV3TickDayDataDTOFeeGrowthOutside0x128 = Nothing
+  , uniswapV3TickDayDataDTOFeeGrowthOutside1x128 = Nothing
+  , uniswapV3TickDayDataDTOVid = Nothing
   }
 
--- ** UniswapV3TokenV3DTO
--- | UniswapV3TokenV3DTO
+-- ** UniswapV3TokenDTO
+-- | UniswapV3TokenDTO
 -- Stores aggregated information for a specific token across all pairs that token is included in.
-data UniswapV3TokenV3DTO = UniswapV3TokenV3DTO
-  { uniswapV3TokenV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3TokenV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3TokenV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TokenV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3TokenV3DTOId :: !(Maybe Text) -- ^ "id" - Token address.
-  , uniswapV3TokenV3DTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
-  , uniswapV3TokenV3DTOName :: !(Maybe Text) -- ^ "name" - Token name.
-  , uniswapV3TokenV3DTODecimals :: !(Maybe Int) -- ^ "decimals" - Token decimals.
-  , uniswapV3TokenV3DTOTotalSupply :: !(Maybe NumericsBigInteger) -- ^ "total_supply"
-  , uniswapV3TokenV3DTOVolume :: !(Maybe Text) -- ^ "volume" - Volume in token units.
-  , uniswapV3TokenV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in derived USD.
-  , uniswapV3TokenV3DTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Volume in USD even on pools with less reliable USD values.
-  , uniswapV3TokenV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
-  , uniswapV3TokenV3DTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
-  , uniswapV3TokenV3DTOPoolCount :: !(Maybe NumericsBigInteger) -- ^ "pool_count"
-  , uniswapV3TokenV3DTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - Liquidity across all pools in token units.
-  , uniswapV3TokenV3DTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Liquidity across all pools in derived USD.
-  , uniswapV3TokenV3DTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - TVL derived in USD untracked.
-  , uniswapV3TokenV3DTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - Derived price in ETH.
-  , uniswapV3TokenV3DTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - Pools token is in that are white listed for USD pricing.
-  , uniswapV3TokenV3DTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
+data UniswapV3TokenDTO = UniswapV3TokenDTO
+  { uniswapV3TokenDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3TokenDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3TokenDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3TokenDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV3TokenDTOId :: !(Maybe Text) -- ^ "id" - Token address.
+  , uniswapV3TokenDTOSymbol :: !(Maybe Text) -- ^ "symbol" - Token symbol.
+  , uniswapV3TokenDTOName :: !(Maybe Text) -- ^ "name" - Token name.
+  , uniswapV3TokenDTODecimals :: !(Maybe Int) -- ^ "decimals" - Token decimals.
+  , uniswapV3TokenDTOTotalSupply :: !(Maybe NumericsBigInteger) -- ^ "total_supply"
+  , uniswapV3TokenDTOVolume :: !(Maybe Text) -- ^ "volume" - Volume in token units.
+  , uniswapV3TokenDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in derived USD.
+  , uniswapV3TokenDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Volume in USD even on pools with less reliable USD values.
+  , uniswapV3TokenDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3TokenDTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
+  , uniswapV3TokenDTOPoolCount :: !(Maybe NumericsBigInteger) -- ^ "pool_count"
+  , uniswapV3TokenDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - Liquidity across all pools in token units.
+  , uniswapV3TokenDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Liquidity across all pools in derived USD.
+  , uniswapV3TokenDTOTotalValueLockedUsdUntracked :: !(Maybe Text) -- ^ "total_value_locked_usd_untracked" - TVL derived in USD untracked.
+  , uniswapV3TokenDTODerivedEth :: !(Maybe Text) -- ^ "derived_eth" - Derived price in ETH.
+  , uniswapV3TokenDTOWhitelistPools :: !(Maybe [Text]) -- ^ "whitelist_pools" - Pools token is in that are white listed for USD pricing.
+  , uniswapV3TokenDTOTokenSymbol :: !(Maybe Text) -- ^ /ReadOnly/ "token_symbol"
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3TokenV3DTO
-instance A.FromJSON UniswapV3TokenV3DTO where
-  parseJSON = A.withObject "UniswapV3TokenV3DTO" $ \o ->
-    UniswapV3TokenV3DTO
+-- | FromJSON UniswapV3TokenDTO
+instance A.FromJSON UniswapV3TokenDTO where
+  parseJSON = A.withObject "UniswapV3TokenDTO" $ \o ->
+    UniswapV3TokenDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7731,60 +7631,157 @@ instance A.FromJSON UniswapV3TokenV3DTO where
       <*> (o .:? "whitelist_pools")
       <*> (o .:? "token_symbol")
 
--- | ToJSON UniswapV3TokenV3DTO
-instance A.ToJSON UniswapV3TokenV3DTO where
-  toJSON UniswapV3TokenV3DTO {..} =
+-- | ToJSON UniswapV3TokenDTO
+instance A.ToJSON UniswapV3TokenDTO where
+  toJSON UniswapV3TokenDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3TokenV3DTOEntryTime
-      , "recv_time" .= uniswapV3TokenV3DTORecvTime
-      , "block_number" .= uniswapV3TokenV3DTOBlockNumber
-      , "vid" .= uniswapV3TokenV3DTOVid
-      , "id" .= uniswapV3TokenV3DTOId
-      , "symbol" .= uniswapV3TokenV3DTOSymbol
-      , "name" .= uniswapV3TokenV3DTOName
-      , "decimals" .= uniswapV3TokenV3DTODecimals
-      , "total_supply" .= uniswapV3TokenV3DTOTotalSupply
-      , "volume" .= uniswapV3TokenV3DTOVolume
-      , "volume_usd" .= uniswapV3TokenV3DTOVolumeUsd
-      , "untracked_volume_usd" .= uniswapV3TokenV3DTOUntrackedVolumeUsd
-      , "fees_usd" .= uniswapV3TokenV3DTOFeesUsd
-      , "tx_count" .= uniswapV3TokenV3DTOTxCount
-      , "pool_count" .= uniswapV3TokenV3DTOPoolCount
-      , "total_value_locked" .= uniswapV3TokenV3DTOTotalValueLocked
-      , "total_value_locked_usd" .= uniswapV3TokenV3DTOTotalValueLockedUsd
-      , "total_value_locked_usd_untracked" .= uniswapV3TokenV3DTOTotalValueLockedUsdUntracked
-      , "derived_eth" .= uniswapV3TokenV3DTODerivedEth
-      , "whitelist_pools" .= uniswapV3TokenV3DTOWhitelistPools
-      , "token_symbol" .= uniswapV3TokenV3DTOTokenSymbol
+      [ "entry_time" .= uniswapV3TokenDTOEntryTime
+      , "recv_time" .= uniswapV3TokenDTORecvTime
+      , "block_number" .= uniswapV3TokenDTOBlockNumber
+      , "vid" .= uniswapV3TokenDTOVid
+      , "id" .= uniswapV3TokenDTOId
+      , "symbol" .= uniswapV3TokenDTOSymbol
+      , "name" .= uniswapV3TokenDTOName
+      , "decimals" .= uniswapV3TokenDTODecimals
+      , "total_supply" .= uniswapV3TokenDTOTotalSupply
+      , "volume" .= uniswapV3TokenDTOVolume
+      , "volume_usd" .= uniswapV3TokenDTOVolumeUsd
+      , "untracked_volume_usd" .= uniswapV3TokenDTOUntrackedVolumeUsd
+      , "fees_usd" .= uniswapV3TokenDTOFeesUsd
+      , "tx_count" .= uniswapV3TokenDTOTxCount
+      , "pool_count" .= uniswapV3TokenDTOPoolCount
+      , "total_value_locked" .= uniswapV3TokenDTOTotalValueLocked
+      , "total_value_locked_usd" .= uniswapV3TokenDTOTotalValueLockedUsd
+      , "total_value_locked_usd_untracked" .= uniswapV3TokenDTOTotalValueLockedUsdUntracked
+      , "derived_eth" .= uniswapV3TokenDTODerivedEth
+      , "whitelist_pools" .= uniswapV3TokenDTOWhitelistPools
+      , "token_symbol" .= uniswapV3TokenDTOTokenSymbol
       ]
 
 
--- | Construct a value of type 'UniswapV3TokenV3DTO' (by applying it's required fields, if any)
-mkUniswapV3TokenV3DTO
-  :: UniswapV3TokenV3DTO
-mkUniswapV3TokenV3DTO =
-  UniswapV3TokenV3DTO
-  { uniswapV3TokenV3DTOEntryTime = Nothing
-  , uniswapV3TokenV3DTORecvTime = Nothing
-  , uniswapV3TokenV3DTOBlockNumber = Nothing
-  , uniswapV3TokenV3DTOVid = Nothing
-  , uniswapV3TokenV3DTOId = Nothing
-  , uniswapV3TokenV3DTOSymbol = Nothing
-  , uniswapV3TokenV3DTOName = Nothing
-  , uniswapV3TokenV3DTODecimals = Nothing
-  , uniswapV3TokenV3DTOTotalSupply = Nothing
-  , uniswapV3TokenV3DTOVolume = Nothing
-  , uniswapV3TokenV3DTOVolumeUsd = Nothing
-  , uniswapV3TokenV3DTOUntrackedVolumeUsd = Nothing
-  , uniswapV3TokenV3DTOFeesUsd = Nothing
-  , uniswapV3TokenV3DTOTxCount = Nothing
-  , uniswapV3TokenV3DTOPoolCount = Nothing
-  , uniswapV3TokenV3DTOTotalValueLocked = Nothing
-  , uniswapV3TokenV3DTOTotalValueLockedUsd = Nothing
-  , uniswapV3TokenV3DTOTotalValueLockedUsdUntracked = Nothing
-  , uniswapV3TokenV3DTODerivedEth = Nothing
-  , uniswapV3TokenV3DTOWhitelistPools = Nothing
-  , uniswapV3TokenV3DTOTokenSymbol = Nothing
+-- | Construct a value of type 'UniswapV3TokenDTO' (by applying it's required fields, if any)
+mkUniswapV3TokenDTO
+  :: UniswapV3TokenDTO
+mkUniswapV3TokenDTO =
+  UniswapV3TokenDTO
+  { uniswapV3TokenDTOEntryTime = Nothing
+  , uniswapV3TokenDTORecvTime = Nothing
+  , uniswapV3TokenDTOBlockNumber = Nothing
+  , uniswapV3TokenDTOVid = Nothing
+  , uniswapV3TokenDTOId = Nothing
+  , uniswapV3TokenDTOSymbol = Nothing
+  , uniswapV3TokenDTOName = Nothing
+  , uniswapV3TokenDTODecimals = Nothing
+  , uniswapV3TokenDTOTotalSupply = Nothing
+  , uniswapV3TokenDTOVolume = Nothing
+  , uniswapV3TokenDTOVolumeUsd = Nothing
+  , uniswapV3TokenDTOUntrackedVolumeUsd = Nothing
+  , uniswapV3TokenDTOFeesUsd = Nothing
+  , uniswapV3TokenDTOTxCount = Nothing
+  , uniswapV3TokenDTOPoolCount = Nothing
+  , uniswapV3TokenDTOTotalValueLocked = Nothing
+  , uniswapV3TokenDTOTotalValueLockedUsd = Nothing
+  , uniswapV3TokenDTOTotalValueLockedUsdUntracked = Nothing
+  , uniswapV3TokenDTODerivedEth = Nothing
+  , uniswapV3TokenDTOWhitelistPools = Nothing
+  , uniswapV3TokenDTOTokenSymbol = Nothing
+  }
+
+-- ** UniswapV3TokenHourDataDTO
+-- | UniswapV3TokenHourDataDTO
+-- Token data aggregated across all pairs that include token.
+data UniswapV3TokenHourDataDTO = UniswapV3TokenHourDataDTO
+  { uniswapV3TokenHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3TokenHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3TokenHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3TokenHourDataDTOId :: !(Maybe Text) -- ^ "id" - Token address concatendated with date.
+  , uniswapV3TokenHourDataDTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
+  , uniswapV3TokenHourDataDTOToken :: !(Maybe Text) -- ^ "token" - Pointer to token.
+  , uniswapV3TokenHourDataDTOVolume :: !(Maybe Text) -- ^ "volume" - Volume in token units.
+  , uniswapV3TokenHourDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Volume in derived USD.
+  , uniswapV3TokenHourDataDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Volume in USD even on pools with less reliable USD values.
+  , uniswapV3TokenHourDataDTOTotalValueLocked :: !(Maybe Text) -- ^ "total_value_locked" - Liquidity across all pools in token units.
+  , uniswapV3TokenHourDataDTOTotalValueLockedUsd :: !(Maybe Text) -- ^ "total_value_locked_usd" - Liquidity across all pools in derived USD.
+  , uniswapV3TokenHourDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - Price at end of period in USD.
+  , uniswapV3TokenHourDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD.
+  , uniswapV3TokenHourDataDTOOpen :: !(Maybe Text) -- ^ "open" - Opening price USD.
+  , uniswapV3TokenHourDataDTOHigh :: !(Maybe Text) -- ^ "high" - High price USD.
+  , uniswapV3TokenHourDataDTOLow :: !(Maybe Text) -- ^ "low" - Low price USD.
+  , uniswapV3TokenHourDataDTOClose :: !(Maybe Text) -- ^ "close" - Close price USD.
+  , uniswapV3TokenHourDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON UniswapV3TokenHourDataDTO
+instance A.FromJSON UniswapV3TokenHourDataDTO where
+  parseJSON = A.withObject "UniswapV3TokenHourDataDTO" $ \o ->
+    UniswapV3TokenHourDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "period_start_unix")
+      <*> (o .:? "token")
+      <*> (o .:? "volume")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "untracked_volume_usd")
+      <*> (o .:? "total_value_locked")
+      <*> (o .:? "total_value_locked_usd")
+      <*> (o .:? "price_usd")
+      <*> (o .:? "fees_usd")
+      <*> (o .:? "open")
+      <*> (o .:? "high")
+      <*> (o .:? "low")
+      <*> (o .:? "close")
+      <*> (o .:? "vid")
+
+-- | ToJSON UniswapV3TokenHourDataDTO
+instance A.ToJSON UniswapV3TokenHourDataDTO where
+  toJSON UniswapV3TokenHourDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= uniswapV3TokenHourDataDTOEntryTime
+      , "recv_time" .= uniswapV3TokenHourDataDTORecvTime
+      , "block_number" .= uniswapV3TokenHourDataDTOBlockNumber
+      , "id" .= uniswapV3TokenHourDataDTOId
+      , "period_start_unix" .= uniswapV3TokenHourDataDTOPeriodStartUnix
+      , "token" .= uniswapV3TokenHourDataDTOToken
+      , "volume" .= uniswapV3TokenHourDataDTOVolume
+      , "volume_usd" .= uniswapV3TokenHourDataDTOVolumeUsd
+      , "untracked_volume_usd" .= uniswapV3TokenHourDataDTOUntrackedVolumeUsd
+      , "total_value_locked" .= uniswapV3TokenHourDataDTOTotalValueLocked
+      , "total_value_locked_usd" .= uniswapV3TokenHourDataDTOTotalValueLockedUsd
+      , "price_usd" .= uniswapV3TokenHourDataDTOPriceUsd
+      , "fees_usd" .= uniswapV3TokenHourDataDTOFeesUsd
+      , "open" .= uniswapV3TokenHourDataDTOOpen
+      , "high" .= uniswapV3TokenHourDataDTOHigh
+      , "low" .= uniswapV3TokenHourDataDTOLow
+      , "close" .= uniswapV3TokenHourDataDTOClose
+      , "vid" .= uniswapV3TokenHourDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'UniswapV3TokenHourDataDTO' (by applying it's required fields, if any)
+mkUniswapV3TokenHourDataDTO
+  :: UniswapV3TokenHourDataDTO
+mkUniswapV3TokenHourDataDTO =
+  UniswapV3TokenHourDataDTO
+  { uniswapV3TokenHourDataDTOEntryTime = Nothing
+  , uniswapV3TokenHourDataDTORecvTime = Nothing
+  , uniswapV3TokenHourDataDTOBlockNumber = Nothing
+  , uniswapV3TokenHourDataDTOId = Nothing
+  , uniswapV3TokenHourDataDTOPeriodStartUnix = Nothing
+  , uniswapV3TokenHourDataDTOToken = Nothing
+  , uniswapV3TokenHourDataDTOVolume = Nothing
+  , uniswapV3TokenHourDataDTOVolumeUsd = Nothing
+  , uniswapV3TokenHourDataDTOUntrackedVolumeUsd = Nothing
+  , uniswapV3TokenHourDataDTOTotalValueLocked = Nothing
+  , uniswapV3TokenHourDataDTOTotalValueLockedUsd = Nothing
+  , uniswapV3TokenHourDataDTOPriceUsd = Nothing
+  , uniswapV3TokenHourDataDTOFeesUsd = Nothing
+  , uniswapV3TokenHourDataDTOOpen = Nothing
+  , uniswapV3TokenHourDataDTOHigh = Nothing
+  , uniswapV3TokenHourDataDTOLow = Nothing
+  , uniswapV3TokenHourDataDTOClose = Nothing
+  , uniswapV3TokenHourDataDTOVid = Nothing
   }
 
 -- ** UniswapV3TokenV3DayDataDTO
@@ -7884,23 +7881,23 @@ mkUniswapV3TokenV3DayDataDTO =
   , uniswapV3TokenV3DayDataDTOClose = Nothing
   }
 
--- ** UniswapV3TransactionV3DTO
--- | UniswapV3TransactionV3DTO
-data UniswapV3TransactionV3DTO = UniswapV3TransactionV3DTO
-  { uniswapV3TransactionV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3TransactionV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3TransactionV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TransactionV3DTOId :: !(Maybe Text) -- ^ "id" - Transaction hash.
-  , uniswapV3TransactionV3DTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp txn was confirmed.
-  , uniswapV3TransactionV3DTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used during txn execution.
-  , uniswapV3TransactionV3DTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - 
-  , uniswapV3TransactionV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
+-- ** UniswapV3TransactionDTO
+-- | UniswapV3TransactionDTO
+data UniswapV3TransactionDTO = UniswapV3TransactionDTO
+  { uniswapV3TransactionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3TransactionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3TransactionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3TransactionDTOId :: !(Maybe Text) -- ^ "id" - Transaction hash.
+  , uniswapV3TransactionDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp txn was confirmed.
+  , uniswapV3TransactionDTOGasUsed :: !(Maybe Text) -- ^ "gas_used" - Gas used during txn execution.
+  , uniswapV3TransactionDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - 
+  , uniswapV3TransactionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3TransactionV3DTO
-instance A.FromJSON UniswapV3TransactionV3DTO where
-  parseJSON = A.withObject "UniswapV3TransactionV3DTO" $ \o ->
-    UniswapV3TransactionV3DTO
+-- | FromJSON UniswapV3TransactionDTO
+instance A.FromJSON UniswapV3TransactionDTO where
+  parseJSON = A.withObject "UniswapV3TransactionDTO" $ \o ->
+    UniswapV3TransactionDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7910,58 +7907,58 @@ instance A.FromJSON UniswapV3TransactionV3DTO where
       <*> (o .:? "gas_price")
       <*> (o .:? "vid")
 
--- | ToJSON UniswapV3TransactionV3DTO
-instance A.ToJSON UniswapV3TransactionV3DTO where
-  toJSON UniswapV3TransactionV3DTO {..} =
+-- | ToJSON UniswapV3TransactionDTO
+instance A.ToJSON UniswapV3TransactionDTO where
+  toJSON UniswapV3TransactionDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3TransactionV3DTOEntryTime
-      , "recv_time" .= uniswapV3TransactionV3DTORecvTime
-      , "block_number" .= uniswapV3TransactionV3DTOBlockNumber
-      , "id" .= uniswapV3TransactionV3DTOId
-      , "timestamp" .= uniswapV3TransactionV3DTOTimestamp
-      , "gas_used" .= uniswapV3TransactionV3DTOGasUsed
-      , "gas_price" .= uniswapV3TransactionV3DTOGasPrice
-      , "vid" .= uniswapV3TransactionV3DTOVid
+      [ "entry_time" .= uniswapV3TransactionDTOEntryTime
+      , "recv_time" .= uniswapV3TransactionDTORecvTime
+      , "block_number" .= uniswapV3TransactionDTOBlockNumber
+      , "id" .= uniswapV3TransactionDTOId
+      , "timestamp" .= uniswapV3TransactionDTOTimestamp
+      , "gas_used" .= uniswapV3TransactionDTOGasUsed
+      , "gas_price" .= uniswapV3TransactionDTOGasPrice
+      , "vid" .= uniswapV3TransactionDTOVid
       ]
 
 
--- | Construct a value of type 'UniswapV3TransactionV3DTO' (by applying it's required fields, if any)
-mkUniswapV3TransactionV3DTO
-  :: UniswapV3TransactionV3DTO
-mkUniswapV3TransactionV3DTO =
-  UniswapV3TransactionV3DTO
-  { uniswapV3TransactionV3DTOEntryTime = Nothing
-  , uniswapV3TransactionV3DTORecvTime = Nothing
-  , uniswapV3TransactionV3DTOBlockNumber = Nothing
-  , uniswapV3TransactionV3DTOId = Nothing
-  , uniswapV3TransactionV3DTOTimestamp = Nothing
-  , uniswapV3TransactionV3DTOGasUsed = Nothing
-  , uniswapV3TransactionV3DTOGasPrice = Nothing
-  , uniswapV3TransactionV3DTOVid = Nothing
+-- | Construct a value of type 'UniswapV3TransactionDTO' (by applying it's required fields, if any)
+mkUniswapV3TransactionDTO
+  :: UniswapV3TransactionDTO
+mkUniswapV3TransactionDTO =
+  UniswapV3TransactionDTO
+  { uniswapV3TransactionDTOEntryTime = Nothing
+  , uniswapV3TransactionDTORecvTime = Nothing
+  , uniswapV3TransactionDTOBlockNumber = Nothing
+  , uniswapV3TransactionDTOId = Nothing
+  , uniswapV3TransactionDTOTimestamp = Nothing
+  , uniswapV3TransactionDTOGasUsed = Nothing
+  , uniswapV3TransactionDTOGasPrice = Nothing
+  , uniswapV3TransactionDTOVid = Nothing
   }
 
--- ** UniswapV3UniswapDayDataV3DTO
--- | UniswapV3UniswapDayDataV3DTO
+-- ** UniswapV3UniswapDayDataDTO
+-- | UniswapV3UniswapDayDataDTO
 -- Data accumulated and condensed into day stats for all of Uniswap.
-data UniswapV3UniswapDayDataV3DTO = UniswapV3UniswapDayDataV3DTO
-  { uniswapV3UniswapDayDataV3DTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
-  , uniswapV3UniswapDayDataV3DTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
-  , uniswapV3UniswapDayDataV3DTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3UniswapDayDataV3DTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3UniswapDayDataV3DTOId :: !(Maybe Text) -- ^ "id" - Timestamp rounded to current day by dividing by 86400.
-  , uniswapV3UniswapDayDataV3DTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
-  , uniswapV3UniswapDayDataV3DTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - Total volume across all pairs on this day, stored as a derived amount of ETH.
-  , uniswapV3UniswapDayDataV3DTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total volume across all pairs on this day, stored as a derived amount of USD.
-  , uniswapV3UniswapDayDataV3DTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked" - Total daily volume in Uniswap derived in terms of USD untracked.
-  , uniswapV3UniswapDayDataV3DTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD
-  , uniswapV3UniswapDayDataV3DTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
-  , uniswapV3UniswapDayDataV3DTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Tvl in terms of USD.
+data UniswapV3UniswapDayDataDTO = UniswapV3UniswapDayDataDTO
+  { uniswapV3UniswapDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , uniswapV3UniswapDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , uniswapV3UniswapDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , uniswapV3UniswapDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , uniswapV3UniswapDayDataDTOId :: !(Maybe Text) -- ^ "id" - Timestamp rounded to current day by dividing by 86400.
+  , uniswapV3UniswapDayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
+  , uniswapV3UniswapDayDataDTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - Total volume across all pairs on this day, stored as a derived amount of ETH.
+  , uniswapV3UniswapDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total volume across all pairs on this day, stored as a derived amount of USD.
+  , uniswapV3UniswapDayDataDTOVolumeUsdUntracked :: !(Maybe Text) -- ^ "volume_usd_untracked" - Total daily volume in Uniswap derived in terms of USD untracked.
+  , uniswapV3UniswapDayDataDTOFeesUsd :: !(Maybe Text) -- ^ "fees_usd" - Fees in USD
+  , uniswapV3UniswapDayDataDTOTxCount :: !(Maybe NumericsBigInteger) -- ^ "tx_count"
+  , uniswapV3UniswapDayDataDTOTvlUsd :: !(Maybe Text) -- ^ "tvl_usd" - Tvl in terms of USD.
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON UniswapV3UniswapDayDataV3DTO
-instance A.FromJSON UniswapV3UniswapDayDataV3DTO where
-  parseJSON = A.withObject "UniswapV3UniswapDayDataV3DTO" $ \o ->
-    UniswapV3UniswapDayDataV3DTO
+-- | FromJSON UniswapV3UniswapDayDataDTO
+instance A.FromJSON UniswapV3UniswapDayDataDTO where
+  parseJSON = A.withObject "UniswapV3UniswapDayDataDTO" $ \o ->
+    UniswapV3UniswapDayDataDTO
       <$> (o .:? "entry_time")
       <*> (o .:? "recv_time")
       <*> (o .:? "block_number")
@@ -7975,42 +7972,42 @@ instance A.FromJSON UniswapV3UniswapDayDataV3DTO where
       <*> (o .:? "tx_count")
       <*> (o .:? "tvl_usd")
 
--- | ToJSON UniswapV3UniswapDayDataV3DTO
-instance A.ToJSON UniswapV3UniswapDayDataV3DTO where
-  toJSON UniswapV3UniswapDayDataV3DTO {..} =
+-- | ToJSON UniswapV3UniswapDayDataDTO
+instance A.ToJSON UniswapV3UniswapDayDataDTO where
+  toJSON UniswapV3UniswapDayDataDTO {..} =
    _omitNulls
-      [ "entry_time" .= uniswapV3UniswapDayDataV3DTOEntryTime
-      , "recv_time" .= uniswapV3UniswapDayDataV3DTORecvTime
-      , "block_number" .= uniswapV3UniswapDayDataV3DTOBlockNumber
-      , "vid" .= uniswapV3UniswapDayDataV3DTOVid
-      , "id" .= uniswapV3UniswapDayDataV3DTOId
-      , "date" .= uniswapV3UniswapDayDataV3DTODate
-      , "volume_eth" .= uniswapV3UniswapDayDataV3DTOVolumeEth
-      , "volume_usd" .= uniswapV3UniswapDayDataV3DTOVolumeUsd
-      , "volume_usd_untracked" .= uniswapV3UniswapDayDataV3DTOVolumeUsdUntracked
-      , "fees_usd" .= uniswapV3UniswapDayDataV3DTOFeesUsd
-      , "tx_count" .= uniswapV3UniswapDayDataV3DTOTxCount
-      , "tvl_usd" .= uniswapV3UniswapDayDataV3DTOTvlUsd
+      [ "entry_time" .= uniswapV3UniswapDayDataDTOEntryTime
+      , "recv_time" .= uniswapV3UniswapDayDataDTORecvTime
+      , "block_number" .= uniswapV3UniswapDayDataDTOBlockNumber
+      , "vid" .= uniswapV3UniswapDayDataDTOVid
+      , "id" .= uniswapV3UniswapDayDataDTOId
+      , "date" .= uniswapV3UniswapDayDataDTODate
+      , "volume_eth" .= uniswapV3UniswapDayDataDTOVolumeEth
+      , "volume_usd" .= uniswapV3UniswapDayDataDTOVolumeUsd
+      , "volume_usd_untracked" .= uniswapV3UniswapDayDataDTOVolumeUsdUntracked
+      , "fees_usd" .= uniswapV3UniswapDayDataDTOFeesUsd
+      , "tx_count" .= uniswapV3UniswapDayDataDTOTxCount
+      , "tvl_usd" .= uniswapV3UniswapDayDataDTOTvlUsd
       ]
 
 
--- | Construct a value of type 'UniswapV3UniswapDayDataV3DTO' (by applying it's required fields, if any)
-mkUniswapV3UniswapDayDataV3DTO
-  :: UniswapV3UniswapDayDataV3DTO
-mkUniswapV3UniswapDayDataV3DTO =
-  UniswapV3UniswapDayDataV3DTO
-  { uniswapV3UniswapDayDataV3DTOEntryTime = Nothing
-  , uniswapV3UniswapDayDataV3DTORecvTime = Nothing
-  , uniswapV3UniswapDayDataV3DTOBlockNumber = Nothing
-  , uniswapV3UniswapDayDataV3DTOVid = Nothing
-  , uniswapV3UniswapDayDataV3DTOId = Nothing
-  , uniswapV3UniswapDayDataV3DTODate = Nothing
-  , uniswapV3UniswapDayDataV3DTOVolumeEth = Nothing
-  , uniswapV3UniswapDayDataV3DTOVolumeUsd = Nothing
-  , uniswapV3UniswapDayDataV3DTOVolumeUsdUntracked = Nothing
-  , uniswapV3UniswapDayDataV3DTOFeesUsd = Nothing
-  , uniswapV3UniswapDayDataV3DTOTxCount = Nothing
-  , uniswapV3UniswapDayDataV3DTOTvlUsd = Nothing
+-- | Construct a value of type 'UniswapV3UniswapDayDataDTO' (by applying it's required fields, if any)
+mkUniswapV3UniswapDayDataDTO
+  :: UniswapV3UniswapDayDataDTO
+mkUniswapV3UniswapDayDataDTO =
+  UniswapV3UniswapDayDataDTO
+  { uniswapV3UniswapDayDataDTOEntryTime = Nothing
+  , uniswapV3UniswapDayDataDTORecvTime = Nothing
+  , uniswapV3UniswapDayDataDTOBlockNumber = Nothing
+  , uniswapV3UniswapDayDataDTOVid = Nothing
+  , uniswapV3UniswapDayDataDTOId = Nothing
+  , uniswapV3UniswapDayDataDTODate = Nothing
+  , uniswapV3UniswapDayDataDTOVolumeEth = Nothing
+  , uniswapV3UniswapDayDataDTOVolumeUsd = Nothing
+  , uniswapV3UniswapDayDataDTOVolumeUsdUntracked = Nothing
+  , uniswapV3UniswapDayDataDTOFeesUsd = Nothing
+  , uniswapV3UniswapDayDataDTOTxCount = Nothing
+  , uniswapV3UniswapDayDataDTOTvlUsd = Nothing
   }
 
 

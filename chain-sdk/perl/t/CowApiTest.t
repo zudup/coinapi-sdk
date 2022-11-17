@@ -90,3 +90,33 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $cow_get_users__historical_address = undef; # replace NULL with a proper value
 #my $cow_get_users__historical_result = $api->cow_get_users__historical(start_block => $cow_get_users__historical_start_block, end_block => $cow_get_users__historical_end_block, start_date => $cow_get_users__historical_start_date, end_date => $cow_get_users__historical_end_date, id => $cow_get_users__historical_id, address => $cow_get_users__historical_address);
 
+#
+# cow_orders__current test
+#
+# uncomment below and update the test
+#my $cow_orders__current_result = $api->cow_orders__current();
+
+#
+# cow_settlements__current test
+#
+# uncomment below and update the test
+#my $cow_settlements__current_result = $api->cow_settlements__current();
+
+#
+# cow_tokens__current test
+#
+# uncomment below and update the test
+#my $cow_tokens__current_result = $api->cow_tokens__current();
+
+#
+# cow_trades__current test
+#
+# uncomment below and update the test
+#my $cow_trades__current_result = $api->cow_trades__current();
+
+#
+# cow_users__current test
+#
+# uncomment below and update the test
+#my $cow_users__current_result = $api->cow_users__current();
+

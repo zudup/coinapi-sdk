@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapTokensCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapTokensCurrent unit test stubs
-        Tokens (current) 🔥  # noqa: E501
+        Tokens (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

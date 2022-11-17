@@ -104,6 +104,98 @@ instance Produces DexGetTradesCurrent MimeTextJson
 instance Produces DexGetTradesCurrent MimePlainText
 
 
+-- *** sushiswapBundlesCurrent
+
+-- | @GET \/dapps\/sushiswap\/bundles\/current@
+-- 
+-- Bundles (current)
+-- 
+-- Gets bundles.
+-- 
+sushiswapBundlesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapBundlesCurrent MimeNoContent [SushiswapBundleDTO] accept
+sushiswapBundlesCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/bundles/current"]
+
+data SushiswapBundlesCurrent  
+-- | @application/json@
+instance Produces SushiswapBundlesCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapBundlesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapBundlesCurrent MimePlainText
+
+
+-- *** sushiswapBurnsCurrent
+
+-- | @GET \/dapps\/sushiswap\/burns\/current@
+-- 
+-- Burns (current)
+-- 
+-- Gets burns.
+-- 
+sushiswapBurnsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapBurnsCurrent MimeNoContent [SushiswapBurnDTO] accept
+sushiswapBurnsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/burns/current"]
+
+data SushiswapBurnsCurrent  
+-- | @application/json@
+instance Produces SushiswapBurnsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapBurnsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapBurnsCurrent MimePlainText
+
+
+-- *** sushiswapDayDatasCurrent
+
+-- | @GET \/dapps\/sushiswap\/dayDatas\/current@
+-- 
+-- DayDatas (current)
+-- 
+-- Gets dayDatas.
+-- 
+sushiswapDayDatasCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapDayDatasCurrent MimeNoContent [SushiswapDayDataDTO] accept
+sushiswapDayDatasCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/dayDatas/current"]
+
+data SushiswapDayDatasCurrent  
+-- | @application/json@
+instance Produces SushiswapDayDatasCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapDayDatasCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapDayDatasCurrent MimePlainText
+
+
+-- *** sushiswapFactorysCurrent
+
+-- | @GET \/dapps\/sushiswap\/factorys\/current@
+-- 
+-- Factorys (current)
+-- 
+-- Gets factorys.
+-- 
+sushiswapFactorysCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapFactorysCurrent MimeNoContent [SushiswapFactoryDTO] accept
+sushiswapFactorysCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/factorys/current"]
+
+data SushiswapFactorysCurrent  
+-- | @application/json@
+instance Produces SushiswapFactorysCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapFactorysCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapFactorysCurrent MimePlainText
+
+
 -- *** sushiswapGetBundlesHistorical
 
 -- | @GET \/dapps\/sushiswap\/bundles\/historical@
@@ -195,17 +287,17 @@ instance Produces SushiswapGetBurnsHistorical MimePlainText
 
 -- *** sushiswapGetDayDatasHistorical
 
--- | @GET \/dapps\/sushiswap\/daydatas\/historical@
+-- | @GET \/dapps\/sushiswap\/dayDatas\/historical@
 -- 
 -- DayDatas (historical) 🔥
 -- 
--- Gets daydatas.
+-- Gets dayDatas.
 -- 
 sushiswapGetDayDatasHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetDayDatasHistorical MimeNoContent [SushiswapDayDataDTO] accept
 sushiswapGetDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/daydatas/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/dayDatas/historical"]
 
 data SushiswapGetDayDatasHistorical  
 
@@ -291,17 +383,17 @@ instance Produces SushiswapGetFactorysHistorical MimePlainText
 
 -- *** sushiswapGetHourDatasHistorical
 
--- | @GET \/dapps\/sushiswap\/hourdatas\/historical@
+-- | @GET \/dapps\/sushiswap\/hourDatas\/historical@
 -- 
 -- HourDatas (historical) 🔥
 -- 
--- Gets hourdatas.
+-- Gets hourDatas.
 -- 
 sushiswapGetHourDatasHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetHourDatasHistorical MimeNoContent [SushiswapHourDataDTO] accept
 sushiswapGetHourDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/hourdatas/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/hourDatas/historical"]
 
 data SushiswapGetHourDatasHistorical  
 
@@ -339,17 +431,17 @@ instance Produces SushiswapGetHourDatasHistorical MimePlainText
 
 -- *** sushiswapGetLiquidityPositionSnapshotsHistorical
 
--- | @GET \/dapps\/sushiswap\/liquiditypositionsnapshots\/historical@
+-- | @GET \/dapps\/sushiswap\/liquidityPositionSnapshots\/historical@
 -- 
 -- LiquidityPositionSnapshots (historical) 🔥
 -- 
--- Gets liquiditypositionsnapshots.
+-- Gets liquidityPositionSnapshots.
 -- 
 sushiswapGetLiquidityPositionSnapshotsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetLiquidityPositionSnapshotsHistorical MimeNoContent [SushiswapLiquidityPositionSnapshotDTO] accept
 sushiswapGetLiquidityPositionSnapshotsHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/liquiditypositionsnapshots/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/liquidityPositionSnapshots/historical"]
 
 data SushiswapGetLiquidityPositionSnapshotsHistorical  
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical StartBlock where
@@ -383,17 +475,17 @@ instance Produces SushiswapGetLiquidityPositionSnapshotsHistorical MimePlainText
 
 -- *** sushiswapGetLiquidityPositionsHistorical
 
--- | @GET \/dapps\/sushiswap\/liquiditypositions\/historical@
+-- | @GET \/dapps\/sushiswap\/liquidityPositions\/historical@
 -- 
 -- LiquidityPositions (historical) 🔥
 -- 
--- Gets liquiditypositions.
+-- Gets liquidityPositions.
 -- 
 sushiswapGetLiquidityPositionsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetLiquidityPositionsHistorical MimeNoContent [SushiswapLiquidityPositionDTO] accept
 sushiswapGetLiquidityPositionsHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/liquiditypositions/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/liquidityPositions/historical"]
 
 data SushiswapGetLiquidityPositionsHistorical  
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical StartBlock where
@@ -468,17 +560,17 @@ instance Produces SushiswapGetMintsHistorical MimePlainText
 
 -- *** sushiswapGetPairDayDatasHistorical
 
--- | @GET \/dapps\/sushiswap\/pairdaydatas\/historical@
+-- | @GET \/dapps\/sushiswap\/pairDayDatas\/historical@
 -- 
 -- PairDayDatas (historical) 🔥
 -- 
--- Gets pairdaydatas.
+-- Gets pairDayDatas.
 -- 
 sushiswapGetPairDayDatasHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetPairDayDatasHistorical MimeNoContent [SushiswapPairDayDataDTO] accept
 sushiswapGetPairDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/pairdaydatas/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/pairDayDatas/historical"]
 
 data SushiswapGetPairDayDatasHistorical  
 instance HasOptionalParam SushiswapGetPairDayDatasHistorical StartBlock where
@@ -515,17 +607,17 @@ instance Produces SushiswapGetPairDayDatasHistorical MimePlainText
 
 -- *** sushiswapGetPairHourDatasHistorical
 
--- | @GET \/dapps\/sushiswap\/pairhourdatas\/historical@
+-- | @GET \/dapps\/sushiswap\/pairHourDatas\/historical@
 -- 
 -- PairHourDatas (historical) 🔥
 -- 
--- Gets pairhourdatas.
+-- Gets pairHourDatas.
 -- 
 sushiswapGetPairHourDatasHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetPairHourDatasHistorical MimeNoContent [SushiswapPairHourDataDTO] accept
 sushiswapGetPairHourDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/pairhourdatas/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/pairHourDatas/historical"]
 
 data SushiswapGetPairHourDatasHistorical  
 instance HasOptionalParam SushiswapGetPairHourDatasHistorical StartBlock where
@@ -624,29 +716,6 @@ instance Produces SushiswapGetPoolsCurrent MimeTextJson
 instance Produces SushiswapGetPoolsCurrent MimePlainText
 
 
--- *** sushiswapGetSwapsCurrent
-
--- | @GET \/dapps\/sushiswap\/swaps\/current@
--- 
--- Swaps (current) 🔥
--- 
--- Gets swaps.
--- 
-sushiswapGetSwapsCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest SushiswapGetSwapsCurrent MimeNoContent [SushiswapSwapDTO] accept
-sushiswapGetSwapsCurrent  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/swaps/current"]
-
-data SushiswapGetSwapsCurrent  
--- | @application/json@
-instance Produces SushiswapGetSwapsCurrent MimeJSON
--- | @text/json@
-instance Produces SushiswapGetSwapsCurrent MimeTextJson
--- | @text/plain@
-instance Produces SushiswapGetSwapsCurrent MimePlainText
-
-
 -- *** sushiswapGetSwapsHistorical
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
@@ -702,17 +771,17 @@ instance Produces SushiswapGetSwapsHistorical MimePlainText
 
 -- *** sushiswapGetTokenDayDatasHistorical
 
--- | @GET \/dapps\/sushiswap\/tokendaydatas\/historical@
+-- | @GET \/dapps\/sushiswap\/tokenDayDatas\/historical@
 -- 
 -- TokenDayDatas (historical) 🔥
 -- 
--- Gets tokendaydatas.
+-- Gets tokenDayDatas.
 -- 
 sushiswapGetTokenDayDatasHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest SushiswapGetTokenDayDatasHistorical MimeNoContent [SushiswapTokenDayDataDTO] accept
 sushiswapGetTokenDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/tokendaydatas/historical"]
+  _mkRequest "GET" ["/dapps/sushiswap/tokenDayDatas/historical"]
 
 data SushiswapGetTokenDayDatasHistorical  
 
@@ -746,29 +815,6 @@ instance Produces SushiswapGetTokenDayDatasHistorical MimeJSON
 instance Produces SushiswapGetTokenDayDatasHistorical MimeTextJson
 -- | @text/plain@
 instance Produces SushiswapGetTokenDayDatasHistorical MimePlainText
-
-
--- *** sushiswapGetTokensCurrent
-
--- | @GET \/dapps\/sushiswap\/tokens\/current@
--- 
--- Tokens (current) 🔥
--- 
--- Gets tokens.
--- 
-sushiswapGetTokensCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest SushiswapGetTokensCurrent MimeNoContent [SushiswapTokenDTO] accept
-sushiswapGetTokensCurrent  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/tokens/current"]
-
-data SushiswapGetTokensCurrent  
--- | @application/json@
-instance Produces SushiswapGetTokensCurrent MimeJSON
--- | @text/json@
-instance Produces SushiswapGetTokensCurrent MimeTextJson
--- | @text/plain@
-instance Produces SushiswapGetTokensCurrent MimePlainText
 
 
 -- *** sushiswapGetTokensHistorical
@@ -923,4 +969,290 @@ instance Produces SushiswapGetUsersHistorical MimeJSON
 instance Produces SushiswapGetUsersHistorical MimeTextJson
 -- | @text/plain@
 instance Produces SushiswapGetUsersHistorical MimePlainText
+
+
+-- *** sushiswapHourDatasCurrent
+
+-- | @GET \/dapps\/sushiswap\/hourDatas\/current@
+-- 
+-- HourDatas (current)
+-- 
+-- Gets hourDatas.
+-- 
+sushiswapHourDatasCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapHourDatasCurrent MimeNoContent [SushiswapHourDataDTO] accept
+sushiswapHourDatasCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/hourDatas/current"]
+
+data SushiswapHourDatasCurrent  
+-- | @application/json@
+instance Produces SushiswapHourDatasCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapHourDatasCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapHourDatasCurrent MimePlainText
+
+
+-- *** sushiswapLiquidityPositionSnapshotsCurrent
+
+-- | @GET \/dapps\/sushiswap\/liquidityPositionSnapshots\/current@
+-- 
+-- LiquidityPositionSnapshots (current)
+-- 
+-- Gets liquidityPositionSnapshots.
+-- 
+sushiswapLiquidityPositionSnapshotsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapLiquidityPositionSnapshotsCurrent MimeNoContent [SushiswapLiquidityPositionSnapshotDTO] accept
+sushiswapLiquidityPositionSnapshotsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/liquidityPositionSnapshots/current"]
+
+data SushiswapLiquidityPositionSnapshotsCurrent  
+-- | @application/json@
+instance Produces SushiswapLiquidityPositionSnapshotsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapLiquidityPositionSnapshotsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapLiquidityPositionSnapshotsCurrent MimePlainText
+
+
+-- *** sushiswapLiquidityPositionsCurrent
+
+-- | @GET \/dapps\/sushiswap\/liquidityPositions\/current@
+-- 
+-- LiquidityPositions (current)
+-- 
+-- Gets liquidityPositions.
+-- 
+sushiswapLiquidityPositionsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapLiquidityPositionsCurrent MimeNoContent [SushiswapLiquidityPositionDTO] accept
+sushiswapLiquidityPositionsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/liquidityPositions/current"]
+
+data SushiswapLiquidityPositionsCurrent  
+-- | @application/json@
+instance Produces SushiswapLiquidityPositionsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapLiquidityPositionsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapLiquidityPositionsCurrent MimePlainText
+
+
+-- *** sushiswapMintsCurrent
+
+-- | @GET \/dapps\/sushiswap\/mints\/current@
+-- 
+-- Mints (current)
+-- 
+-- Gets mints.
+-- 
+sushiswapMintsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapMintsCurrent MimeNoContent [SushiswapMintDTO] accept
+sushiswapMintsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/mints/current"]
+
+data SushiswapMintsCurrent  
+-- | @application/json@
+instance Produces SushiswapMintsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapMintsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapMintsCurrent MimePlainText
+
+
+-- *** sushiswapPairDayDatasCurrent
+
+-- | @GET \/dapps\/sushiswap\/pairDayDatas\/current@
+-- 
+-- PairDayDatas (current)
+-- 
+-- Gets pairDayDatas.
+-- 
+sushiswapPairDayDatasCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapPairDayDatasCurrent MimeNoContent [SushiswapPairDayDataDTO] accept
+sushiswapPairDayDatasCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/pairDayDatas/current"]
+
+data SushiswapPairDayDatasCurrent  
+-- | @application/json@
+instance Produces SushiswapPairDayDatasCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapPairDayDatasCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapPairDayDatasCurrent MimePlainText
+
+
+-- *** sushiswapPairHourDatasCurrent
+
+-- | @GET \/dapps\/sushiswap\/pairHourDatas\/current@
+-- 
+-- PairHourDatas (current)
+-- 
+-- Gets pairHourDatas.
+-- 
+sushiswapPairHourDatasCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapPairHourDatasCurrent MimeNoContent [SushiswapPairHourDataDTO] accept
+sushiswapPairHourDatasCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/pairHourDatas/current"]
+
+data SushiswapPairHourDatasCurrent  
+-- | @application/json@
+instance Produces SushiswapPairHourDatasCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapPairHourDatasCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapPairHourDatasCurrent MimePlainText
+
+
+-- *** sushiswapPairsCurrent
+
+-- | @GET \/dapps\/sushiswap\/pairs\/current@
+-- 
+-- Pairs (current)
+-- 
+-- Gets pairs.
+-- 
+sushiswapPairsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapPairsCurrent MimeNoContent [SushiswapPairDTO] accept
+sushiswapPairsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/pairs/current"]
+
+data SushiswapPairsCurrent  
+
+-- | /Optional Param/ "id" - Pair contract address.
+instance HasOptionalParam SushiswapPairsCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
+-- | @application/json@
+instance Produces SushiswapPairsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapPairsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapPairsCurrent MimePlainText
+
+
+-- *** sushiswapSwapsCurrent
+
+-- | @GET \/dapps\/sushiswap\/swaps\/current@
+-- 
+-- Swaps (current)
+-- 
+-- Gets swaps.
+-- 
+sushiswapSwapsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapSwapsCurrent MimeNoContent [SushiswapSwapDTO] accept
+sushiswapSwapsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/swaps/current"]
+
+data SushiswapSwapsCurrent  
+
+-- | /Optional Param/ "pair" - Reference to pair.
+instance HasOptionalParam SushiswapSwapsCurrent Pair where
+  applyOptionalParam req (Pair xs) =
+    req `addQuery` toQuery ("pair", Just xs)
+-- | @application/json@
+instance Produces SushiswapSwapsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapSwapsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapSwapsCurrent MimePlainText
+
+
+-- *** sushiswapTokenDayDatasCurrent
+
+-- | @GET \/dapps\/sushiswap\/tokenDayDatas\/current@
+-- 
+-- TokenDayDatas (current)
+-- 
+-- Gets tokenDayDatas.
+-- 
+sushiswapTokenDayDatasCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapTokenDayDatasCurrent MimeNoContent [SushiswapTokenDayDataDTO] accept
+sushiswapTokenDayDatasCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/tokenDayDatas/current"]
+
+data SushiswapTokenDayDatasCurrent  
+-- | @application/json@
+instance Produces SushiswapTokenDayDatasCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapTokenDayDatasCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapTokenDayDatasCurrent MimePlainText
+
+
+-- *** sushiswapTokensCurrent
+
+-- | @GET \/dapps\/sushiswap\/tokens\/current@
+-- 
+-- Tokens (current)
+-- 
+-- Gets tokens.
+-- 
+sushiswapTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapTokensCurrent MimeNoContent [SushiswapTokenDTO] accept
+sushiswapTokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/tokens/current"]
+
+data SushiswapTokensCurrent  
+-- | @application/json@
+instance Produces SushiswapTokensCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapTokensCurrent MimePlainText
+
+
+-- *** sushiswapTransactionsCurrent
+
+-- | @GET \/dapps\/sushiswap\/transactions\/current@
+-- 
+-- Transactions (current)
+-- 
+-- Gets transactions.
+-- 
+sushiswapTransactionsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapTransactionsCurrent MimeNoContent [SushiswapTransactionDTO] accept
+sushiswapTransactionsCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/transactions/current"]
+
+data SushiswapTransactionsCurrent  
+-- | @application/json@
+instance Produces SushiswapTransactionsCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapTransactionsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapTransactionsCurrent MimePlainText
+
+
+-- *** sushiswapUsersCurrent
+
+-- | @GET \/dapps\/sushiswap\/users\/current@
+-- 
+-- Users (current)
+-- 
+-- Gets users.
+-- 
+sushiswapUsersCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest SushiswapUsersCurrent MimeNoContent [SushiswapUserDTO] accept
+sushiswapUsersCurrent  _ =
+  _mkRequest "GET" ["/dapps/sushiswap/users/current"]
+
+data SushiswapUsersCurrent  
+-- | @application/json@
+instance Produces SushiswapUsersCurrent MimeJSON
+-- | @text/json@
+instance Produces SushiswapUsersCurrent MimeTextJson
+-- | @text/plain@
+instance Produces SushiswapUsersCurrent MimePlainText
 

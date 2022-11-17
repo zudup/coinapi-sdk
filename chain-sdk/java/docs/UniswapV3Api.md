@@ -4,48 +4,223 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapV3GetBundleV3sHistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥 |
-| [**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
-| [**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapV3GetBurnV3sHistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥 |
-| [**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
-| [**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current) |
-| [**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current) |
-| [**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥 |
-| [**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapV3GetMintV3sHistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥 |
-| [**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
-| [**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥 |
-| [**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥 |
-| [**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolV3sHistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥 |
-| [**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥 |
-| [**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current) |
-| [**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current) |
-| [**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥 |
-| [**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionV3sHistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥 |
-| [**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
-| [**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current) |
-| [**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapV3GetSwapV3sHistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥 |
-| [**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥 |
-| [**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥 |
-| [**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickV3sHistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥 |
-| [**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
-| [**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current) |
-| [**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥 |
-| [**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥 |
-| [**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3sHistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥 |
-| [**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥 |
-| [**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current) |
-| [**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current) |
-| [**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥 |
-| [**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥 |
+| [**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
+| [**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
+| [**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current) |
+| [**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥 |
+| [**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥 |
+| [**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥 |
+| [**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥 |
+| [**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥 |
+| [**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥 |
+| [**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥 |
+| [**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥 |
+| [**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥 |
+| [**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥 |
+| [**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥 |
+| [**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥 |
+| [**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥 |
+| [**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥 |
+| [**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥 |
+| [**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥 |
+| [**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥 |
+| [**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
+| [**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current) |
+| [**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current) |
+| [**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) |
+| [**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current) |
+| [**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
+| [**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) |
+| [**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current) |
+| [**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
+| [**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current) |
+| [**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current) |
+| [**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) |
+| [**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
+| [**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current) |
 
 
-<a name="uniswapV3GetBundleV3sHistorical"></a>
-# **uniswapV3GetBundleV3sHistorical**
-> List&lt;UniswapV3BundleV3DTO&gt; uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3BundlesCurrent"></a>
+# **uniswapV3BundlesCurrent**
+> List&lt;UniswapV3BundleDTO&gt; uniswapV3BundlesCurrent()
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3BundleDTO> result = apiInstance.uniswapV3BundlesCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3BundlesCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3BurnsCurrent"></a>
+# **uniswapV3BurnsCurrent**
+> List&lt;UniswapV3BurnDTO&gt; uniswapV3BurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3BurnDTO> result = apiInstance.uniswapV3BurnsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3BurnsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3FactorysCurrent"></a>
+# **uniswapV3FactorysCurrent**
+> List&lt;UniswapV3FactoryDTO&gt; uniswapV3FactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3FactorysCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3GetBundlesHistorical"></a>
+# **uniswapV3GetBundlesHistorical**
+> List&lt;UniswapV3BundleDTO&gt; uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 ```java
@@ -68,10 +243,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | 
     try {
-      List<UniswapV3BundleV3DTO> result = apiInstance.uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3BundleDTO> result = apiInstance.uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundleV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -93,7 +268,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
+[**List&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
 
 ### Authorization
 
@@ -109,71 +284,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetBundlesCurrent"></a>
-# **uniswapV3GetBundlesCurrent**
-> List&lt;UniswapV3BundleV3DTO&gt; uniswapV3GetBundlesCurrent()
+<a name="uniswapV3GetBurnsHistorical"></a>
+# **uniswapV3GetBurnsHistorical**
+> List&lt;UniswapV3BurnDTO&gt; uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    try {
-      List<UniswapV3BundleV3DTO> result = apiInstance.uniswapV3GetBundlesCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetBurnV3sHistorical"></a>
-# **uniswapV3GetBurnV3sHistorical**
-> List&lt;UniswapV3BurnV3DTO&gt; uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 ```java
@@ -199,10 +316,10 @@ public class Example {
     String token0 = "token0_example"; // String | Reference to token0 as stored in pool contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pool contract.
     try {
-      List<UniswapV3BurnV3DTO> result = apiInstance.uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+      List<UniswapV3BurnDTO> result = apiInstance.uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -227,7 +344,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
+[**List&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
 
 ### Authorization
 
@@ -243,191 +360,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetBurnsCurrent"></a>
-# **uniswapV3GetBurnsCurrent**
-> List&lt;UniswapV3BurnV3DTO&gt; uniswapV3GetBurnsCurrent(filterPoolId)
+<a name="uniswapV3GetFactorysHistorical"></a>
+# **uniswapV3GetFactorysHistorical**
+> List&lt;UniswapV3FactoryDTO&gt; uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3BurnV3DTO> result = apiInstance.uniswapV3GetBurnsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetDayDataCurrent"></a>
-# **uniswapV3GetDayDataCurrent**
-> List&lt;UniswapV3UniswapDayDataV3DTO&gt; uniswapV3GetDayDataCurrent()
-
-DayData (current)
-
-Gets uniswapv3 day data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    try {
-      List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.uniswapV3GetDayDataCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetDayDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetFactoryCurrent"></a>
-# **uniswapV3GetFactoryCurrent**
-> List&lt;UniswapV3FactoryV3DTO&gt; uniswapV3GetFactoryCurrent()
-
-Factory (current)
-
-Gets factory.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    try {
-      List<UniswapV3FactoryV3DTO> result = apiInstance.uniswapV3GetFactoryCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetFactoryV3sHistorical"></a>
-# **uniswapV3GetFactoryV3sHistorical**
-> List&lt;UniswapV3FactoryV3DTO&gt; uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id)
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
+Gets factorys.
 
 ### Example
 ```java
@@ -450,10 +389,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Factory address.
     try {
-      List<UniswapV3FactoryV3DTO> result = apiInstance.uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -475,7 +414,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
+[**List&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
 
 ### Authorization
 
@@ -491,13 +430,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetMintV3sHistorical"></a>
-# **uniswapV3GetMintV3sHistorical**
-> List&lt;UniswapV3MintV3DTO&gt; uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+<a name="uniswapV3GetMintsHistorical"></a>
+# **uniswapV3GetMintsHistorical**
+> List&lt;UniswapV3MintDTO&gt; uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 ```java
@@ -523,10 +462,10 @@ public class Example {
     String token0 = "token0_example"; // String | Reference to token0 as stored in pool contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pool contract.
     try {
-      List<UniswapV3MintV3DTO> result = apiInstance.uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+      List<UniswapV3MintDTO> result = apiInstance.uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -551,7 +490,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
+[**List&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
 
 ### Authorization
 
@@ -567,75 +506,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetMintsCurrent"></a>
-# **uniswapV3GetMintsCurrent**
-> List&lt;UniswapV3MintV3DTO&gt; uniswapV3GetMintsCurrent(filterPoolId)
+<a name="uniswapV3GetPoolDayDatasHistorical"></a>
+# **uniswapV3GetPoolDayDatasHistorical**
+> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3MintV3DTO> result = apiInstance.uniswapV3GetMintsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetPoolDayDataV3sHistorical"></a>
-# **uniswapV3GetPoolDayDataV3sHistorical**
-> List&lt;UniswapV3PoolDayDataV3DTO&gt; uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 ```java
@@ -659,10 +536,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3PoolDayDataV3DTO> result = apiInstance.uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -685,7 +562,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
+[**List&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
 
 ### Authorization
 
@@ -701,13 +578,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolHourDataV3sHistorical"></a>
-# **uniswapV3GetPoolHourDataV3sHistorical**
-> List&lt;UniswapV3PoolHourDataV3DTO&gt; uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+<a name="uniswapV3GetPoolHourDatasHistorical"></a>
+# **uniswapV3GetPoolHourDatasHistorical**
+> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 ```java
@@ -731,10 +608,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3PoolHourDataV3DTO> result = apiInstance.uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -757,7 +634,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
+[**List&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
 
 ### Authorization
 
@@ -773,13 +650,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolV3sHistorical"></a>
-# **uniswapV3GetPoolV3sHistorical**
-> List&lt;UniswapV3PoolV3DTO&gt; uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+<a name="uniswapV3GetPoolsHistorical"></a>
+# **uniswapV3GetPoolsHistorical**
+> List&lt;UniswapV3PoolDTO&gt; uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 ```java
@@ -804,10 +681,10 @@ public class Example {
     String token0 = "token0_example"; // String | Reference to token0 as stored in pool contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pool contract.
     try {
-      List<UniswapV3PoolV3DTO> result = apiInstance.uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+      List<UniswapV3PoolDTO> result = apiInstance.uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -831,7 +708,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
+[**List&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
 
 ### Authorization
 
@@ -847,199 +724,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolsCurrent"></a>
-# **uniswapV3GetPoolsCurrent**
-> List&lt;UniswapV3PoolV3DTO&gt; uniswapV3GetPoolsCurrent(filterPoolId)
+<a name="uniswapV3GetPositionSnapshotsHistorical"></a>
+# **uniswapV3GetPositionSnapshotsHistorical**
+> List&lt;UniswapV3PositionSnapshotDTO&gt; uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3PoolV3DTO> result = apiInstance.uniswapV3GetPoolsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetPoolsDayDataCurrent"></a>
-# **uniswapV3GetPoolsDayDataCurrent**
-> List&lt;UniswapV3PoolDayDataV3DTO&gt; uniswapV3GetPoolsDayDataCurrent(filterPoolId)
-
-PoolsDayData (current)
-
-Gets pools day data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3PoolDayDataV3DTO> result = apiInstance.uniswapV3GetPoolsDayDataCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsDayDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetPoolsHourDataCurrent"></a>
-# **uniswapV3GetPoolsHourDataCurrent**
-> List&lt;UniswapV3PoolHourDataV3DTO&gt; uniswapV3GetPoolsHourDataCurrent(filterPoolId)
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3PoolHourDataV3DTO> result = apiInstance.uniswapV3GetPoolsHourDataCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHourDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetPositionSnapshotV3sHistorical"></a>
-# **uniswapV3GetPositionSnapshotV3sHistorical**
-> List&lt;UniswapV3PositionSnapshotV3DTO&gt; uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
+Gets positionSnapshots.
 
 ### Example
 ```java
@@ -1063,10 +754,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3PositionSnapshotDTO> result = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1089,7 +780,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
+[**List&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -1105,13 +796,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPositionV3sHistorical"></a>
-# **uniswapV3GetPositionV3sHistorical**
-> List&lt;UniswapV3PositionV3DTO&gt; uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+<a name="uniswapV3GetPositionsHistorical"></a>
+# **uniswapV3GetPositionsHistorical**
+> List&lt;UniswapV3PositionDTO&gt; uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 ```java
@@ -1137,10 +828,10 @@ public class Example {
     String token0 = "token0_example"; // String | Reference to token0 as stored in pair contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pair contract.
     try {
-      List<UniswapV3PositionV3DTO> result = apiInstance.uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+      List<UniswapV3PositionDTO> result = apiInstance.uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1165,7 +856,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
+[**List&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
 
 ### Authorization
 
@@ -1181,137 +872,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPositionsCurrent"></a>
-# **uniswapV3GetPositionsCurrent**
-> List&lt;UniswapV3PositionV3DTO&gt; uniswapV3GetPositionsCurrent(filterPoolId)
+<a name="uniswapV3GetSwapsHistorical"></a>
+# **uniswapV3GetSwapsHistorical**
+> List&lt;UniswapV3SwapDTO&gt; uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3PositionV3DTO> result = apiInstance.uniswapV3GetPositionsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetPositionsSnapshotsCurrent"></a>
-# **uniswapV3GetPositionsSnapshotsCurrent**
-> List&lt;UniswapV3PositionSnapshotV3DTO&gt; uniswapV3GetPositionsSnapshotsCurrent(filterPoolId)
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.uniswapV3GetPositionsSnapshotsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsSnapshotsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetSwapV3sHistorical"></a>
-# **uniswapV3GetSwapV3sHistorical**
-> List&lt;UniswapV3SwapV3DTO&gt; uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
+Gets swaps.
 
 ### Example
 ```java
@@ -1337,10 +904,10 @@ public class Example {
     String token0 = "token0_example"; // String | Reference to token0 as stored in pair contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pair contract.
     try {
-      List<UniswapV3SwapV3DTO> result = apiInstance.uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+      List<UniswapV3SwapDTO> result = apiInstance.uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1365,7 +932,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
+[**List&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
 
 ### Authorization
 
@@ -1381,75 +948,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetSwapsCurrent"></a>
-# **uniswapV3GetSwapsCurrent**
-> List&lt;UniswapV3SwapV3DTO&gt; uniswapV3GetSwapsCurrent(filterPoolId)
+<a name="uniswapV3GetTickDayDatasHistorical"></a>
+# **uniswapV3GetTickDayDatasHistorical**
+> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3SwapV3DTO> result = apiInstance.uniswapV3GetSwapsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTickDayDataV3sHistorical"></a>
-# **uniswapV3GetTickDayDataV3sHistorical**
-> List&lt;UniswapV3TickDayDataV3DTO&gt; uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 ```java
@@ -1473,10 +978,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3TickDayDataV3DTO> result = apiInstance.uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1499,7 +1004,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
+[**List&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
 
 ### Authorization
 
@@ -1515,83 +1020,11 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTickV3sHistorical"></a>
-# **uniswapV3GetTickV3sHistorical**
-> List&lt;UniswapV3TickV3DTO&gt; uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+<a name="uniswapV3GetTicksHistorical"></a>
+# **uniswapV3GetTicksHistorical**
+> List&lt;UniswapV3TickDTO&gt; uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
-    try {
-      List<UniswapV3TickV3DTO> result = apiInstance.uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickV3sHistorical");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTicksCurrent"></a>
-# **uniswapV3GetTicksCurrent**
-> List&lt;UniswapV3TickV3DTO&gt; uniswapV3GetTicksCurrent(filterPoolId)
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
@@ -1610,12 +1043,17 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
+    Long startBlock = 56L; // Long | 
+    Long endBlock = 56L; // Long | 
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
+    String id = "id_example"; // String | 
+    String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3TickV3DTO> result = apiInstance.uniswapV3GetTicksCurrent(filterPoolId);
+      List<UniswapV3TickDTO> result = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1629,11 +1067,16 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
+| **startBlock** | **Long**|  | [optional] |
+| **endBlock** | **Long**|  | [optional] |
+| **startDate** | **OffsetDateTime**|  | [optional] |
+| **endDate** | **OffsetDateTime**|  | [optional] |
+| **id** | **String**|  | [optional] |
+| **pool** | **String**|  | [optional] |
 
 ### Return type
 
-[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
+[**List&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
 
 ### Authorization
 
@@ -1649,75 +1092,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTicksDayDataCurrent"></a>
-# **uniswapV3GetTicksDayDataCurrent**
-> List&lt;UniswapV3TickDayDataV3DTO&gt; uniswapV3GetTicksDayDataCurrent(filterPoolId)
+<a name="uniswapV3GetTokenHourDatasHistorical"></a>
+# **uniswapV3GetTokenHourDatasHistorical**
+> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TicksDayData (current)
+TokenHourDatas (historical) 🔥
 
-Gets ticks day data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV3TickDayDataV3DTO> result = apiInstance.uniswapV3GetTicksDayDataCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksDayDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTokenHourDataV3sHistorical"></a>
-# **uniswapV3GetTokenHourDataV3sHistorical**
-> List&lt;UniswapV3TokenHourDataV3DTO&gt; uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
-
-TokenHourDataV3s (historical) 🔥
-
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 ```java
@@ -1740,10 +1121,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Token address concatendated with date.
     try {
-      List<UniswapV3TokenHourDataV3DTO> result = apiInstance.uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1765,7 +1146,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+[**List&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
 
 ### Authorization
 
@@ -1787,7 +1168,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 ```java
@@ -1851,13 +1232,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokenV3sHistorical"></a>
-# **uniswapV3GetTokenV3sHistorical**
-> List&lt;UniswapV3TokenV3DTO&gt; uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
+<a name="uniswapV3GetTokensHistorical"></a>
+# **uniswapV3GetTokensHistorical**
+> List&lt;UniswapV3TokenDTO&gt; uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 ```java
@@ -1882,10 +1263,10 @@ public class Example {
     String symbol = "symbol_example"; // String | Token symbol.
     String name = "name_example"; // String | Token name.
     try {
-      List<UniswapV3TokenV3DTO> result = apiInstance.uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+      List<UniswapV3TokenDTO> result = apiInstance.uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1909,7 +1290,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
+[**List&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1925,199 +1306,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokensCurrent"></a>
-# **uniswapV3GetTokensCurrent**
-> List&lt;UniswapV3TokenV3DTO&gt; uniswapV3GetTokensCurrent(filterTokenId)
+<a name="uniswapV3GetTransactionsHistorical"></a>
+# **uniswapV3GetTransactionsHistorical**
+> List&lt;UniswapV3TransactionDTO&gt; uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterTokenId = "filterTokenId_example"; // String | 
-    try {
-      List<UniswapV3TokenV3DTO> result = apiInstance.uniswapV3GetTokensCurrent(filterTokenId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterTokenId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTokensDayDataCurrent"></a>
-# **uniswapV3GetTokensDayDataCurrent**
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3GetTokensDayDataCurrent(filterTokenId)
-
-TokensDayData (current)
-
-Gets tokens day data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterTokenId = "filterTokenId_example"; // String | 
-    try {
-      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3GetTokensDayDataCurrent(filterTokenId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensDayDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterTokenId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTokensHourDataCurrent"></a>
-# **uniswapV3GetTokensHourDataCurrent**
-> List&lt;UniswapV3TokenHourDataV3DTO&gt; uniswapV3GetTokensHourDataCurrent(filterTokenId)
-
-TokensHourData (current)
-
-Gets tokens hour data.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV3Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    String filterTokenId = "filterTokenId_example"; // String | 
-    try {
-      List<UniswapV3TokenHourDataV3DTO> result = apiInstance.uniswapV3GetTokensHourDataCurrent(filterTokenId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHourDataCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterTokenId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV3GetTransactionV3sHistorical"></a>
-# **uniswapV3GetTransactionV3sHistorical**
-> List&lt;UniswapV3TransactionV3DTO&gt; uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id)
-
-TransactionV3s (historical) 🔥
-
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 ```java
@@ -2140,10 +1335,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Transaction hash.
     try {
-      List<UniswapV3TransactionV3DTO> result = apiInstance.uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3TransactionDTO> result = apiInstance.uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionsHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -2165,7 +1360,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3TransactionV3DTO&gt;**](UniswapV3TransactionV3DTO.md)
+[**List&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -2181,13 +1376,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetUniswapDayDataV3sHistorical"></a>
-# **uniswapV3GetUniswapDayDataV3sHistorical**
-> List&lt;UniswapV3UniswapDayDataV3DTO&gt; uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3GetUniswapDayDatasHistorical"></a>
+# **uniswapV3GetUniswapDayDatasHistorical**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 ```java
@@ -2210,10 +1405,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Timestamp rounded to current day by dividing by 86400.
     try {
-      List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataV3sHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -2235,7 +1430,827 @@ public class Example {
 
 ### Return type
 
-[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
+[**List&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3MintsCurrent"></a>
+# **uniswapV3MintsCurrent**
+> List&lt;UniswapV3MintDTO&gt; uniswapV3MintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3MintDTO> result = apiInstance.uniswapV3MintsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3MintsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3PoolDayDatasCurrent"></a>
+# **uniswapV3PoolDayDatasCurrent**
+> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3PoolDayDatasCurrent()
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3PoolDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3PoolHourDatasCurrent"></a>
+# **uniswapV3PoolHourDatasCurrent**
+> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3PoolHourDatasCurrent()
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3PoolHourDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3PoolsCurrent"></a>
+# **uniswapV3PoolsCurrent**
+> List&lt;UniswapV3PoolDTO&gt; uniswapV3PoolsCurrent(id)
+
+Pools (current)
+
+Gets pools.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    String id = "id_example"; // String | Pool address.
+    try {
+      List<UniswapV3PoolDTO> result = apiInstance.uniswapV3PoolsCurrent(id);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Pool address. | [optional] |
+
+### Return type
+
+[**List&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3PositionSnapshotsCurrent"></a>
+# **uniswapV3PositionSnapshotsCurrent**
+> List&lt;UniswapV3PositionSnapshotDTO&gt; uniswapV3PositionSnapshotsCurrent()
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3PositionSnapshotDTO> result = apiInstance.uniswapV3PositionSnapshotsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionSnapshotsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3PositionsCurrent"></a>
+# **uniswapV3PositionsCurrent**
+> List&lt;UniswapV3PositionDTO&gt; uniswapV3PositionsCurrent()
+
+Positions (current)
+
+Gets positions.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3PositionDTO> result = apiInstance.uniswapV3PositionsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3SwapsCurrent"></a>
+# **uniswapV3SwapsCurrent**
+> List&lt;UniswapV3SwapDTO&gt; uniswapV3SwapsCurrent(pool)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    String pool = "pool_example"; // String | Pool swap occured within.
+    try {
+      List<UniswapV3SwapDTO> result = apiInstance.uniswapV3SwapsCurrent(pool);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3SwapsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pool** | **String**| Pool swap occured within. | [optional] |
+
+### Return type
+
+[**List&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TickDayDatasCurrent"></a>
+# **uniswapV3TickDayDatasCurrent**
+> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3TickDayDatasCurrent()
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3TickDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TicksCurrent"></a>
+# **uniswapV3TicksCurrent**
+> List&lt;UniswapV3TickDTO&gt; uniswapV3TicksCurrent()
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TickDTO> result = apiInstance.uniswapV3TicksCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TicksCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TokenHourDatasCurrent"></a>
+# **uniswapV3TokenHourDatasCurrent**
+> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3TokenHourDatasCurrent()
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3TokenHourDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TokenV3DayDatasCurrent"></a>
+# **uniswapV3TokenV3DayDatasCurrent**
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3TokenV3DayDatasCurrent()
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3TokenV3DayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TokensCurrent"></a>
+# **uniswapV3TokensCurrent**
+> List&lt;UniswapV3TokenDTO&gt; uniswapV3TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TokenDTO> result = apiInstance.uniswapV3TokensCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokensCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3TransactionsCurrent"></a>
+# **uniswapV3TransactionsCurrent**
+> List&lt;UniswapV3TransactionDTO&gt; uniswapV3TransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3TransactionDTO> result = apiInstance.uniswapV3TransactionsCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TransactionsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV3UniswapDayDatasCurrent"></a>
+# **uniswapV3UniswapDayDatasCurrent**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3UniswapDayDatasCurrent()
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV3Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
+    try {
+      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3UniswapDayDatasCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
 
 ### Authorization
 

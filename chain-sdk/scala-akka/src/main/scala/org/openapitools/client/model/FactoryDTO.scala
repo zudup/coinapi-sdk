@@ -21,24 +21,30 @@ case class FactoryDTO (
   blockNumber: Option[Long] = None,
   /* Factory address. */
   id: Option[String] = None,
-  /* Amount of pairs created by the Sushiswap factory. */
-  pairCount: Option[String] = None,
-  /* All time USD volume across all pairs (USD is derived). */
-  volumeUsd: Option[String] = None,
-  /* All time volume in ETH across all pairs (ETH is derived). */
-  volumeEth: Option[String] = None,
-  /* Untracked volume USD. */
-  untrackedVolumeUsd: Option[String] = None,
-  /* Total liquidity across all pairs stored as a derived USD amount. */
-  liquidityUsd: Option[String] = None,
-  /* Total liquidity across all pairs stored as a derived ETH amount. */
-  liquidityEth: Option[String] = None,
-  /* All time amount of transactions across all pairs. */
+  /* Amount of pools created. */
+  poolCount: Option[String] = None,
+  /* Amount of transactions all time. */
   txCount: Option[String] = None,
-  /* Total count of tokens. */
-  tokenCount: Option[String] = None,
-  /* Users count. */
-  userCount: Option[String] = None,
+  /* Total volume all time in derived USD. */
+  totalVolumeUsd: Option[String] = None,
+  /* Total volume all time in derived ETH. */
+  totalVolumeEth: Option[String] = None,
+  /* Total swap fees all time in USD. */
+  totalFeesUsd: Option[String] = None,
+  /* All volume even through less reliable USD values. */
+  totalFeesEth: Option[String] = None,
+  /* All volume even through less reliable USD values. */
+  untrackedVolumeUsd: Option[String] = None,
+  /* Total value locked derived in USD. */
+  totalValueLockedUsd: Option[String] = None,
+  /* Total value locked derived in ETH. */
+  totalValueLockedEth: Option[String] = None,
+  /* Total value locked derived in USD untracked. */
+  totalValueLockedUsdUntracked: Option[String] = None,
+  /* Total value locked derived in ETH untracked. */
+  totalValueLockedEthUntracked: Option[String] = None,
+  /* Current owner of the factory. */
+  owner: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

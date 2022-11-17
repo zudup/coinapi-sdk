@@ -356,3 +356,158 @@ API.Client.CowApi.prototype.cowGetUsersHistorical = function(opt_startBlock, opt
 
   return (/** @type {?} */ (this.http_))(httpRequestParams);
 }
+
+/**
+ * Orders (current)
+ * Gets orders.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.OrderDTO>>}
+ */
+API.Client.CowApi.prototype.cowOrdersCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/cow/orders/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Settlements (current)
+ * Gets settlements.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.SettlementDTO>>}
+ */
+API.Client.CowApi.prototype.cowSettlementsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/cow/settlements/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Tokens (current)
+ * Gets tokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.TokenDTO>>}
+ */
+API.Client.CowApi.prototype.cowTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/cow/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Trades (current)
+ * Gets trades.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.TradeDTO>>}
+ */
+API.Client.CowApi.prototype.cowTradesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/cow/trades/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Users (current)
+ * Gets users.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.UserDTO>>}
+ */
+API.Client.CowApi.prototype.cowUsersCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/cow/users/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}

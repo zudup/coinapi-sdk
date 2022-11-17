@@ -39,6 +39,28 @@ class DexApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[BatchDTO] (successful operation)
+   */
+  def dexBatchsCurrent(): ApiRequest[Seq[BatchDTO]] =
+    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/batchs/current", "application/json")
+      .withSuccessResponse[Seq[BatchDTO]](200)
+      
+
+  /**
+   * Gets deposits.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DepositDTO] (successful operation)
+   */
+  def dexDepositsCurrent(): ApiRequest[Seq[DepositDTO]] =
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/deposits/current", "application/json")
+      .withSuccessResponse[Seq[DepositDTO]](200)
+      
+
+  /**
+   * Gets batchs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BatchDTO] (successful operation)
    * 
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -249,7 +271,7 @@ class DexApi(baseUrl: String) {
       
 
   /**
-   * Gets withdrawrequests.
+   * Gets withdrawRequests.
    * 
    * Expected answers:
    *   code 200 : Seq[WithdrawRequestDTO] (successful operation)
@@ -262,7 +284,7 @@ class DexApi(baseUrl: String) {
    * @param user 
    */
   def dexGetWithdrawRequestsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[WithdrawRequestDTO]] =
-    ApiRequest[Seq[WithdrawRequestDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/withdrawrequests/historical", "application/json")
+    ApiRequest[Seq[WithdrawRequestDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/withdrawRequests/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -293,6 +315,105 @@ class DexApi(baseUrl: String) {
       .withQueryParam("endDate", endDate)
       .withQueryParam("id", id)
       .withQueryParam("user", user)
+      .withSuccessResponse[Seq[WithdrawDTO]](200)
+      
+
+  /**
+   * Gets orders.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[OrderDTO] (successful operation)
+   */
+  def dexOrdersCurrent(): ApiRequest[Seq[OrderDTO]] =
+    ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/orders/current", "application/json")
+      .withSuccessResponse[Seq[OrderDTO]](200)
+      
+
+  /**
+   * Gets prices.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PriceDTO] (successful operation)
+   */
+  def dexPricesCurrent(): ApiRequest[Seq[PriceDTO]] =
+    ApiRequest[Seq[PriceDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/prices/current", "application/json")
+      .withSuccessResponse[Seq[PriceDTO]](200)
+      
+
+  /**
+   * Gets solutions.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SolutionDTO] (successful operation)
+   */
+  def dexSolutionsCurrent(): ApiRequest[Seq[SolutionDTO]] =
+    ApiRequest[Seq[SolutionDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/solutions/current", "application/json")
+      .withSuccessResponse[Seq[SolutionDTO]](200)
+      
+
+  /**
+   * Gets statss.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[StatsDTO] (successful operation)
+   */
+  def dexStatssCurrent(): ApiRequest[Seq[StatsDTO]] =
+    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/statss/current", "application/json")
+      .withSuccessResponse[Seq[StatsDTO]](200)
+      
+
+  /**
+   * Gets tokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   */
+  def dexTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/tokens/current", "application/json")
+      .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets trades.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TradeDTO] (successful operation)
+   */
+  def dexTradesCurrent(): ApiRequest[Seq[TradeDTO]] =
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/trades/current", "application/json")
+      .withSuccessResponse[Seq[TradeDTO]](200)
+      
+
+  /**
+   * Gets users.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserDTO] (successful operation)
+   */
+  def dexUsersCurrent(): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/users/current", "application/json")
+      .withSuccessResponse[Seq[UserDTO]](200)
+      
+
+  /**
+   * Gets withdrawRequests.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawRequestDTO] (successful operation)
+   */
+  def dexWithdrawRequestsCurrent(): ApiRequest[Seq[WithdrawRequestDTO]] =
+    ApiRequest[Seq[WithdrawRequestDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/withdrawRequests/current", "application/json")
+      .withSuccessResponse[Seq[WithdrawRequestDTO]](200)
+      
+
+  /**
+   * Gets withdraws.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawDTO] (successful operation)
+   */
+  def dexWithdrawsCurrent(): ApiRequest[Seq[WithdrawDTO]] =
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/withdraws/current", "application/json")
       .withSuccessResponse[Seq[WithdrawDTO]](200)
       
 

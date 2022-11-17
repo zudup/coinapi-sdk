@@ -5,39 +5,238 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswap_v2_get_bundle_v2s__historical**](#uniswap_v2_get_bundle_v2s__historical) | **get** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**uniswap_v2_get_burn_v2s__historical**](#uniswap_v2_get_burn_v2s__historical) | **get** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**uniswap_v2_get_liquidity_position_snapshot_v2s__historical**](#uniswap_v2_get_liquidity_position_snapshot_v2s__historical) | **get** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**uniswap_v2_get_liquidity_position_v2s__historical**](#uniswap_v2_get_liquidity_position_v2s__historical) | **get** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**uniswap_v2_get_mint_v2s__historical**](#uniswap_v2_get_mint_v2s__historical) | **get** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**uniswap_v2_get_pair_day_data_v2s__historical**](#uniswap_v2_get_pair_day_data_v2s__historical) | **get** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**uniswap_v2_get_pair_hour_data_v2s__historical**](#uniswap_v2_get_pair_hour_data_v2s__historical) | **get** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**uniswap_v2_get_pair_v2s__historical**](#uniswap_v2_get_pair_v2s__historical) | **get** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**uniswap_v2_bundles__current**](#uniswap_v2_bundles__current) | **get** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**uniswap_v2_burns__current**](#uniswap_v2_burns__current) | **get** /dapps/uniswapv2/burns/current | Burns (current)
+[**uniswap_v2_get_bundles__historical**](#uniswap_v2_get_bundles__historical) | **get** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**uniswap_v2_get_burns__historical**](#uniswap_v2_get_burns__historical) | **get** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**uniswap_v2_get_liquidity_position_snapshots__historical**](#uniswap_v2_get_liquidity_position_snapshots__historical) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**uniswap_v2_get_liquidity_positions__historical**](#uniswap_v2_get_liquidity_positions__historical) | **get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**uniswap_v2_get_mints__historical**](#uniswap_v2_get_mints__historical) | **get** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**uniswap_v2_get_pair_day_datas__historical**](#uniswap_v2_get_pair_day_datas__historical) | **get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**uniswap_v2_get_pair_hour_datas__historical**](#uniswap_v2_get_pair_hour_datas__historical) | **get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**uniswap_v2_get_pairs__historical**](#uniswap_v2_get_pairs__historical) | **get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**uniswap_v2_get_pools__current**](#uniswap_v2_get_pools__current) | **get** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswap_v2_get_swap_v2s__historical**](#uniswap_v2_get_swap_v2s__historical) | **get** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**uniswap_v2_get_swaps__current**](#uniswap_v2_get_swaps__current) | **get** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**uniswap_v2_get_token_day_data_v2s__historical**](#uniswap_v2_get_token_day_data_v2s__historical) | **get** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**uniswap_v2_get_token_v2s__historical**](#uniswap_v2_get_token_v2s__historical) | **get** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**uniswap_v2_get_swaps__historical**](#uniswap_v2_get_swaps__historical) | **get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**uniswap_v2_get_token_day_datas__historical**](#uniswap_v2_get_token_day_datas__historical) | **get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**uniswap_v2_get_tokens__current**](#uniswap_v2_get_tokens__current) | **get** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**uniswap_v2_get_transaction_v2s__historical**](#uniswap_v2_get_transaction_v2s__historical) | **get** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**uniswap_v2_get_uniswap_day_data_v2s__historical**](#uniswap_v2_get_uniswap_day_data_v2s__historical) | **get** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**uniswap_v2_get_uniswap_factory_v2s__historical**](#uniswap_v2_get_uniswap_factory_v2s__historical) | **get** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**uniswap_v2_get_user_v2s__historical**](#uniswap_v2_get_user_v2s__historical) | **get** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**uniswap_v2_get_tokens__historical**](#uniswap_v2_get_tokens__historical) | **get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**uniswap_v2_get_transactions__historical**](#uniswap_v2_get_transactions__historical) | **get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**uniswap_v2_get_uniswap_day_datas__historical**](#uniswap_v2_get_uniswap_day_datas__historical) | **get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswap_v2_get_uniswap_factorys__historical**](#uniswap_v2_get_uniswap_factorys__historical) | **get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**uniswap_v2_get_users__historical**](#uniswap_v2_get_users__historical) | **get** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswap_v2_liquidity_position_snapshots__current**](#uniswap_v2_liquidity_position_snapshots__current) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**uniswap_v2_liquidity_positions__current**](#uniswap_v2_liquidity_positions__current) | **get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**uniswap_v2_mints__current**](#uniswap_v2_mints__current) | **get** /dapps/uniswapv2/mints/current | Mints (current)
+[**uniswap_v2_pair_day_datas__current**](#uniswap_v2_pair_day_datas__current) | **get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**uniswap_v2_pair_hour_datas__current**](#uniswap_v2_pair_hour_datas__current) | **get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswap_v2_pairs__current**](#uniswap_v2_pairs__current) | **get** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswap_v2_token_day_datas__current**](#uniswap_v2_token_day_datas__current) | **get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_transactions__current**](#uniswap_v2_transactions__current) | **get** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**uniswap_v2_uniswap_day_datas__current**](#uniswap_v2_uniswap_day_datas__current) | **get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswap_v2_uniswap_factorys__current**](#uniswap_v2_uniswap_factorys__current) | **get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswap_v2_users__current**](#uniswap_v2_users__current) | **get** /dapps/uniswapv2/users/current | Users (current)
 
-# **uniswap_v2_get_bundle_v2s__historical**
-<a name="uniswap_v2_get_bundle_v2s__historical"></a>
-> [UniswapV2BundleV2DTO] uniswap_v2_get_bundle_v2s__historical()
+# **uniswap_v2_bundles__current**
+<a name="uniswap_v2_bundles__current"></a>
+> [UniswapV2BundleDTO] uniswap_v2_bundles__current()
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_bundle_v2_dto import UniswapV2BundleV2DTO
+from openapi_client.model.uniswap_v2_bundle_dto import UniswapV2BundleDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Bundles (current)
+        api_response = api_instance.uniswap_v2_bundles__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_bundles__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_bundles__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_bundles__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_burns__current**
+<a name="uniswap_v2_burns__current"></a>
+> [UniswapV2BurnDTO] uniswap_v2_burns__current()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_burn_dto import UniswapV2BurnDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Burns (current)
+        api_response = api_instance.uniswap_v2_burns__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_burns__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_burns__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_burns__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_bundles__historical**
+<a name="uniswap_v2_get_bundles__historical"></a>
+> [UniswapV2BundleDTO] uniswap_v2_get_bundles__historical()
+
+Bundles (historical) 🔥
+
+Gets bundles.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_bundle_dto import UniswapV2BundleDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -59,13 +258,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # BundleV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_bundle_v2s__historical(
+        # Bundles (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_bundles__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_bundle_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_bundles__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -129,9 +328,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_bundle_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_bundles__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_bundle_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_bundles__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -148,7 +347,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) |  | 
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -160,7 +359,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) |  | 
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -172,7 +371,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) | [**UniswapV2BundleV2DTO**]({{complexTypePrefix}}UniswapV2BundleV2DTO.md) |  | 
+[**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) | [**UniswapV2BundleDTO**]({{complexTypePrefix}}UniswapV2BundleDTO.md) |  | 
 
 ### Authorization
 
@@ -180,20 +379,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_burn_v2s__historical**
-<a name="uniswap_v2_get_burn_v2s__historical"></a>
-> [UniswapV2BurnV2DTO] uniswap_v2_get_burn_v2s__historical()
+# **uniswap_v2_get_burns__historical**
+<a name="uniswap_v2_get_burns__historical"></a>
+> [UniswapV2BurnDTO] uniswap_v2_get_burns__historical()
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_burn_v2_dto import UniswapV2BurnV2DTO
+from openapi_client.model.uniswap_v2_burn_dto import UniswapV2BurnDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -216,13 +415,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # BurnV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_burn_v2s__historical(
+        # Burns (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_burns__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_burn_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_burns__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -294,9 +493,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_burn_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_burns__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_burn_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_burns__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -313,7 +512,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) |  | 
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -325,7 +524,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) |  | 
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -337,7 +536,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) | [**UniswapV2BurnV2DTO**]({{complexTypePrefix}}UniswapV2BurnV2DTO.md) |  | 
+[**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) | [**UniswapV2BurnDTO**]({{complexTypePrefix}}UniswapV2BurnDTO.md) |  | 
 
 ### Authorization
 
@@ -345,20 +544,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_liquidity_position_snapshot_v2s__historical**
-<a name="uniswap_v2_get_liquidity_position_snapshot_v2s__historical"></a>
-> [UniswapV2LiquidityPositionSnapshotV2DTO] uniswap_v2_get_liquidity_position_snapshot_v2s__historical()
+# **uniswap_v2_get_liquidity_position_snapshots__historical**
+<a name="uniswap_v2_get_liquidity_position_snapshots__historical"></a>
+> [UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_get_liquidity_position_snapshots__historical()
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_liquidity_position_snapshot_v2_dto import UniswapV2LiquidityPositionSnapshotV2DTO
+from openapi_client.model.uniswap_v2_liquidity_position_snapshot_dto import UniswapV2LiquidityPositionSnapshotDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -382,13 +581,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositionSnapshotV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_liquidity_position_snapshot_v2s__historical(
+        # LiquidityPositionSnapshots (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_liquidity_position_snapshots__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_liquidity_position_snapshot_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_liquidity_position_snapshots__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -468,9 +667,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_liquidity_position_snapshot_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_liquidity_position_snapshots__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_liquidity_position_snapshot_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_liquidity_position_snapshots__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -487,7 +686,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -499,7 +698,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -511,7 +710,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) | [**UniswapV2LiquidityPositionSnapshotV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 ### Authorization
 
@@ -519,20 +718,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_liquidity_position_v2s__historical**
-<a name="uniswap_v2_get_liquidity_position_v2s__historical"></a>
-> [UniswapV2LiquidityPositionV2DTO] uniswap_v2_get_liquidity_position_v2s__historical()
+# **uniswap_v2_get_liquidity_positions__historical**
+<a name="uniswap_v2_get_liquidity_positions__historical"></a>
+> [UniswapV2LiquidityPositionDTO] uniswap_v2_get_liquidity_positions__historical()
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_liquidity_position_v2_dto import UniswapV2LiquidityPositionV2DTO
+from openapi_client.model.uniswap_v2_liquidity_position_dto import UniswapV2LiquidityPositionDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -556,13 +755,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositionV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_liquidity_position_v2s__historical(
+        # LiquidityPositions (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_liquidity_positions__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_liquidity_position_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_liquidity_positions__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -642,9 +841,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_liquidity_position_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_liquidity_positions__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_liquidity_position_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_liquidity_positions__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -661,7 +860,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -673,7 +872,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -685,7 +884,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) | [**UniswapV2LiquidityPositionV2DTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
 
 ### Authorization
 
@@ -693,20 +892,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_mint_v2s__historical**
-<a name="uniswap_v2_get_mint_v2s__historical"></a>
-> [UniswapV2MintV2DTO] uniswap_v2_get_mint_v2s__historical()
+# **uniswap_v2_get_mints__historical**
+<a name="uniswap_v2_get_mints__historical"></a>
+> [UniswapV2MintDTO] uniswap_v2_get_mints__historical()
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_mint_v2_dto import UniswapV2MintV2DTO
+from openapi_client.model.uniswap_v2_mint_dto import UniswapV2MintDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -729,13 +928,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # MintV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_mint_v2s__historical(
+        # Mints (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_mints__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_mint_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_mints__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -807,9 +1006,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_mint_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_mints__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_mint_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_mints__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -826,7 +1025,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) |  | 
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -838,7 +1037,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) |  | 
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -850,7 +1049,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) | [**UniswapV2MintV2DTO**]({{complexTypePrefix}}UniswapV2MintV2DTO.md) |  | 
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
 
 ### Authorization
 
@@ -858,20 +1057,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_pair_day_data_v2s__historical**
-<a name="uniswap_v2_get_pair_day_data_v2s__historical"></a>
-> [UniswapV2PairDayDataV2DTO] uniswap_v2_get_pair_day_data_v2s__historical()
+# **uniswap_v2_get_pair_day_datas__historical**
+<a name="uniswap_v2_get_pair_day_datas__historical"></a>
+> [UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_datas__historical()
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_pair_day_data_v2_dto import UniswapV2PairDayDataV2DTO
+from openapi_client.model.uniswap_v2_pair_day_data_dto import UniswapV2PairDayDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -895,13 +1094,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairDayDataV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_pair_day_data_v2s__historical(
+        # PairDayDatas (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_pair_day_datas__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_data_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_datas__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -981,9 +1180,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_pair_day_data_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_pair_day_datas__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_pair_day_data_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_pair_day_datas__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1000,7 +1199,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) |  | 
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1012,7 +1211,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) |  | 
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1024,7 +1223,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) | [**UniswapV2PairDayDataV2DTO**]({{complexTypePrefix}}UniswapV2PairDayDataV2DTO.md) |  | 
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
 
 ### Authorization
 
@@ -1032,20 +1231,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_pair_hour_data_v2s__historical**
-<a name="uniswap_v2_get_pair_hour_data_v2s__historical"></a>
-> [UniswapV2PairHourDataV2DTO] uniswap_v2_get_pair_hour_data_v2s__historical()
+# **uniswap_v2_get_pair_hour_datas__historical**
+<a name="uniswap_v2_get_pair_hour_datas__historical"></a>
+> [UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_datas__historical()
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_pair_hour_data_v2_dto import UniswapV2PairHourDataV2DTO
+from openapi_client.model.uniswap_v2_pair_hour_data_dto import UniswapV2PairHourDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1068,13 +1267,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # PairHourDataV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_pair_hour_data_v2s__historical(
+        # PairHourDatas (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_pair_hour_datas__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_data_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_datas__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1146,9 +1345,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_pair_hour_data_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_pair_hour_datas__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_pair_hour_data_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_pair_hour_datas__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1165,7 +1364,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) |  | 
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1177,7 +1376,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) |  | 
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1189,7 +1388,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) | [**UniswapV2PairHourDataV2DTO**]({{complexTypePrefix}}UniswapV2PairHourDataV2DTO.md) |  | 
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
 
 ### Authorization
 
@@ -1197,20 +1396,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_pair_v2s__historical**
-<a name="uniswap_v2_get_pair_v2s__historical"></a>
-> [UniswapV2PairV2DTO] uniswap_v2_get_pair_v2s__historical()
+# **uniswap_v2_get_pairs__historical**
+<a name="uniswap_v2_get_pairs__historical"></a>
+> [UniswapV2PairDTO] uniswap_v2_get_pairs__historical()
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_pair_v2_dto import UniswapV2PairV2DTO
+from openapi_client.model.uniswap_v2_pair_dto import UniswapV2PairDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1234,13 +1433,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_pair_v2s__historical(
+        # Pairs (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_pairs__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_pairs__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1320,9 +1519,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_pair_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_pairs__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_pair_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_pairs__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1339,7 +1538,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1351,7 +1550,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1363,7 +1562,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 ### Authorization
 
@@ -1373,7 +1572,7 @@ No authorization required
 
 # **uniswap_v2_get_pools__current**
 <a name="uniswap_v2_get_pools__current"></a>
-> [UniswapV2PairV2DTO] uniswap_v2_get_pools__current()
+> [UniswapV2PairDTO] uniswap_v2_get_pools__current()
 
 Pools (current) 🔥
 
@@ -1384,7 +1583,7 @@ Gets pools.
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_pair_v2_dto import UniswapV2PairV2DTO
+from openapi_client.model.uniswap_v2_pair_dto import UniswapV2PairDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1459,7 +1658,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1471,7 +1670,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1483,7 +1682,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) | [**UniswapV2PairV2DTO**]({{complexTypePrefix}}UniswapV2PairV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 ### Authorization
 
@@ -1491,20 +1690,113 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_swap_v2s__historical**
-<a name="uniswap_v2_get_swap_v2s__historical"></a>
-> [UniswapV2SwapV2DTO] uniswap_v2_get_swap_v2s__historical()
+# **uniswap_v2_get_swaps__current**
+<a name="uniswap_v2_get_swaps__current"></a>
+> [UniswapV2SwapDTO] uniswap_v2_get_swaps__current()
 
-SwapV2s (historical) 🔥
+Swaps (current) 🔥
 
-Gets swapv2s.
+Gets swaps.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_swap_v2_dto import UniswapV2SwapV2DTO
+from openapi_client.model.uniswap_v2_swap_dto import UniswapV2SwapDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Swaps (current) 🔥
+        api_response = api_instance.uniswap_v2_get_swaps__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_swaps__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_swaps__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_swaps__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_swaps__historical**
+<a name="uniswap_v2_get_swaps__historical"></a>
+> [UniswapV2SwapDTO] uniswap_v2_get_swaps__historical()
+
+Swaps (historical) 🔥
+
+Gets swaps.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_swap_dto import UniswapV2SwapDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1527,13 +1819,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # SwapV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_swap_v2s__historical(
+        # Swaps (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_swaps__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_swap_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_swaps__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1605,9 +1897,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_swap_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_swaps__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_swap_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_swaps__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1624,7 +1916,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1636,7 +1928,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1648,7 +1940,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
+[**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) | [**UniswapV2SwapDTO**]({{complexTypePrefix}}UniswapV2SwapDTO.md) |  | 
 
 ### Authorization
 
@@ -1656,113 +1948,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_swaps__current**
-<a name="uniswap_v2_get_swaps__current"></a>
-> [UniswapV2SwapV2DTO] uniswap_v2_get_swaps__current()
+# **uniswap_v2_get_token_day_datas__historical**
+<a name="uniswap_v2_get_token_day_datas__historical"></a>
+> [UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_datas__historical()
 
-Swaps (current) 🔥
+TokenDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-
-```python
-import openapi_client
-from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_swap_v2_dto import UniswapV2SwapV2DTO
-from pprint import pprint
-# Defining the host is optional and defaults to https://onchain.coinapi.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "https://onchain.coinapi.io"
-)
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
-
-    # example, this endpoint has no required or optional parameters
-    try:
-        # Swaps (current) 🔥
-        api_response = api_instance.uniswap_v2_get_swaps__current()
-        pprint(api_response)
-    except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_swaps__current: %s\n" % e)
-```
-### Parameters
-This endpoint does not need any parameter.
-
-### Return Types, Responses
-
-Code | Class | Description
-------------- | ------------- | -------------
-n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_swaps__current.ApiResponseFor200) | successful operation
-
-#### uniswap_v2_get_swaps__current.ApiResponseFor200
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
-headers | Unset | headers were not defined |
-
-# SchemaFor200ResponseBodyTextPlain
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
-
-# SchemaFor200ResponseBodyApplicationJson
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
-
-# SchemaFor200ResponseBodyTextJson
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-list, tuple,  | tuple,  |  | 
-
-### Tuple Items
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) | [**UniswapV2SwapV2DTO**]({{complexTypePrefix}}UniswapV2SwapV2DTO.md) |  | 
-
-### Authorization
-
-No authorization required
-
-[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
-
-# **uniswap_v2_get_token_day_data_v2s__historical**
-<a name="uniswap_v2_get_token_day_data_v2s__historical"></a>
-> [UniswapV2TokenDayDataV2DTO] uniswap_v2_get_token_day_data_v2s__historical()
-
-TokenDayDataV2s (historical) 🔥
-
-Gets tokendaydatav2s.
+Gets tokenDayDatas.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_token_day_data_v2_dto import UniswapV2TokenDayDataV2DTO
+from openapi_client.model.uniswap_v2_token_day_data_dto import UniswapV2TokenDayDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1784,13 +1983,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # TokenDayDataV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_token_day_data_v2s__historical(
+        # TokenDayDatas (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_token_day_datas__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_token_day_data_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_token_day_datas__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1854,9 +2053,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_token_day_data_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_token_day_datas__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_token_day_data_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_token_day_datas__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1873,7 +2072,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -1885,7 +2084,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -1897,7 +2096,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) | [**UniswapV2TokenDayDataV2DTO**]({{complexTypePrefix}}UniswapV2TokenDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 ### Authorization
 
@@ -1905,20 +2104,113 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_token_v2s__historical**
-<a name="uniswap_v2_get_token_v2s__historical"></a>
-> [UniswapV2TokenV2DTO] uniswap_v2_get_token_v2s__historical()
+# **uniswap_v2_get_tokens__current**
+<a name="uniswap_v2_get_tokens__current"></a>
+> [UniswapV2TokenDTO] uniswap_v2_get_tokens__current()
 
-TokenV2s (historical) 🔥
+Tokens (current) 🔥
 
-Gets tokenv2s.
+Gets tokens.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_token_v2_dto import UniswapV2TokenV2DTO
+from openapi_client.model.uniswap_v2_token_dto import UniswapV2TokenDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Tokens (current) 🔥
+        api_response = api_instance.uniswap_v2_get_tokens__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_tokens__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_tokens__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_tokens__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_tokens__historical**
+<a name="uniswap_v2_get_tokens__historical"></a>
+> [UniswapV2TokenDTO] uniswap_v2_get_tokens__historical()
+
+Tokens (historical) 🔥
+
+Gets tokens.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_token_dto import UniswapV2TokenDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -1942,13 +2234,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'name': "name_example",
     }
     try:
-        # TokenV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_token_v2s__historical(
+        # Tokens (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_tokens__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_token_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_tokens__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2028,9 +2320,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_token_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_tokens__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_token_v2s__historical.ApiResponseFor200
+#### uniswap_v2_get_tokens__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2047,7 +2339,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2059,7 +2351,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2071,7 +2363,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) | [**UniswapV2TokenDTO**]({{complexTypePrefix}}UniswapV2TokenDTO.md) |  | 
 
 ### Authorization
 
@@ -2079,20 +2371,644 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_tokens__current**
-<a name="uniswap_v2_get_tokens__current"></a>
-> [UniswapV2TokenV2DTO] uniswap_v2_get_tokens__current()
+# **uniswap_v2_get_transactions__historical**
+<a name="uniswap_v2_get_transactions__historical"></a>
+> [UniswapV2TransactionDTO] uniswap_v2_get_transactions__historical()
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
+Gets transactions.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_token_v2_dto import UniswapV2TokenV2DTO
+from openapi_client.model.uniswap_v2_transaction_dto import UniswapV2TransactionDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'id': "id_example",
+    }
+    try:
+        # Transactions (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_transactions__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_transactions__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+id | IdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_transactions__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_transactions__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_uniswap_day_datas__historical**
+<a name="uniswap_v2_get_uniswap_day_datas__historical"></a>
+> [UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_datas__historical()
+
+UniswapDayDatas (historical) 🔥
+
+Gets uniswapDayDatas.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_uniswap_day_data_dto import UniswapV2UniswapDayDataDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'id': "id_example",
+    }
+    try:
+        # UniswapDayDatas (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_uniswap_day_datas__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_datas__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+id | IdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_day_datas__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_uniswap_day_datas__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_uniswap_factorys__historical**
+<a name="uniswap_v2_get_uniswap_factorys__historical"></a>
+> [UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factorys__historical()
+
+UniswapFactorys (historical) 🔥
+
+Gets uniswapFactorys.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_uniswap_factory_dto import UniswapV2UniswapFactoryDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'id': "id_example",
+    }
+    try:
+        # UniswapFactorys (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_uniswap_factorys__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factorys__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+id | IdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_factorys__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_uniswap_factorys__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_get_users__historical**
+<a name="uniswap_v2_get_users__historical"></a>
+> [UniswapV2UserDTO] uniswap_v2_get_users__historical()
+
+Users (historical) 🔥
+
+Gets users.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_user_dto import UniswapV2UserDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'id': "id_example",
+    }
+    try:
+        # Users (historical) 🔥
+        api_response = api_instance.uniswap_v2_get_users__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_users__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+id | IdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_get_users__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_get_users__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_liquidity_position_snapshots__current**
+<a name="uniswap_v2_liquidity_position_snapshots__current"></a>
+> [UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_liquidity_position_snapshots__current()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_liquidity_position_snapshot_dto import UniswapV2LiquidityPositionSnapshotDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2107,11 +3023,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Tokens (current) 🔥
-        api_response = api_instance.uniswap_v2_get_tokens__current()
+        # LiquidityPositionSnapshots (current)
+        api_response = api_instance.uniswap_v2_liquidity_position_snapshots__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_tokens__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_liquidity_position_snapshots__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -2121,9 +3037,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_tokens__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_liquidity_position_snapshots__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_tokens__current.ApiResponseFor200
+#### uniswap_v2_liquidity_position_snapshots__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2140,7 +3056,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2152,7 +3068,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2164,7 +3080,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) | [**UniswapV2TokenV2DTO**]({{complexTypePrefix}}UniswapV2TokenV2DTO.md) |  | 
+[**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) | [**UniswapV2LiquidityPositionSnapshotDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionSnapshotDTO.md) |  | 
 
 ### Authorization
 
@@ -2172,20 +3088,392 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_transaction_v2s__historical**
-<a name="uniswap_v2_get_transaction_v2s__historical"></a>
-> [UniswapV2TransactionV2DTO] uniswap_v2_get_transaction_v2s__historical()
+# **uniswap_v2_liquidity_positions__current**
+<a name="uniswap_v2_liquidity_positions__current"></a>
+> [UniswapV2LiquidityPositionDTO] uniswap_v2_liquidity_positions__current()
 
-TransactionV2s (historical) 🔥
+LiquidityPositions (current)
 
-Gets transactionv2s.
+Gets liquidityPositions.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_transaction_v2_dto import UniswapV2TransactionV2DTO
+from openapi_client.model.uniswap_v2_liquidity_position_dto import UniswapV2LiquidityPositionDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # LiquidityPositions (current)
+        api_response = api_instance.uniswap_v2_liquidity_positions__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_liquidity_positions__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_liquidity_positions__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_liquidity_positions__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) | [**UniswapV2LiquidityPositionDTO**]({{complexTypePrefix}}UniswapV2LiquidityPositionDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_mints__current**
+<a name="uniswap_v2_mints__current"></a>
+> [UniswapV2MintDTO] uniswap_v2_mints__current()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_mint_dto import UniswapV2MintDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Mints (current)
+        api_response = api_instance.uniswap_v2_mints__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_mints__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_mints__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_mints__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) | [**UniswapV2MintDTO**]({{complexTypePrefix}}UniswapV2MintDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_pair_day_datas__current**
+<a name="uniswap_v2_pair_day_datas__current"></a>
+> [UniswapV2PairDayDataDTO] uniswap_v2_pair_day_datas__current()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_pair_day_data_dto import UniswapV2PairDayDataDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # PairDayDatas (current)
+        api_response = api_instance.uniswap_v2_pair_day_datas__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_pair_day_datas__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_pair_day_datas__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_pair_day_datas__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) | [**UniswapV2PairDayDataDTO**]({{complexTypePrefix}}UniswapV2PairDayDataDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_pair_hour_datas__current**
+<a name="uniswap_v2_pair_hour_datas__current"></a>
+> [UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_datas__current()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_pair_hour_data_dto import UniswapV2PairHourDataDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # PairHourDatas (current)
+        api_response = api_instance.uniswap_v2_pair_hour_datas__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_pair_hour_datas__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_pair_hour_datas__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_pair_hour_datas__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) | [**UniswapV2PairHourDataDTO**]({{complexTypePrefix}}UniswapV2PairHourDataDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_pairs__current**
+<a name="uniswap_v2_pairs__current"></a>
+> [UniswapV2PairDTO] uniswap_v2_pairs__current()
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_pair_dto import UniswapV2PairDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2200,20 +3488,16 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example passing only optional values
     query_params = {
-        'startBlock': 1,
-        'endBlock': 1,
-        'startDate': "1970-01-01T00:00:00.00Z",
-        'endDate': "1970-01-01T00:00:00.00Z",
         'id': "id_example",
     }
     try:
-        # TransactionV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_transaction_v2s__historical(
+        # Pairs (current)
+        api_response = api_instance.uniswap_v2_pairs__current(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_transaction_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_pairs__current: %s\n" % e)
 ```
 ### Parameters
 
@@ -2230,40 +3514,8 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-startBlock | StartBlockSchema | | optional
-endBlock | EndBlockSchema | | optional
-startDate | StartDateSchema | | optional
-endDate | EndDateSchema | | optional
 id | IdSchema | | optional
 
-
-# StartBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# EndBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# StartDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# EndDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
 
 # IdSchema
 
@@ -2277,9 +3529,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_transaction_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_pairs__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_transaction_v2s__historical.ApiResponseFor200
+#### uniswap_v2_pairs__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2296,7 +3548,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2308,7 +3560,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2320,7 +3572,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) | [**UniswapV2TransactionV2DTO**]({{complexTypePrefix}}UniswapV2TransactionV2DTO.md) |  | 
+[**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) | [**UniswapV2PairDTO**]({{complexTypePrefix}}UniswapV2PairDTO.md) |  | 
 
 ### Authorization
 
@@ -2328,20 +3580,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_uniswap_day_data_v2s__historical**
-<a name="uniswap_v2_get_uniswap_day_data_v2s__historical"></a>
-> [UniswapV2UniswapDayDataV2DTO] uniswap_v2_get_uniswap_day_data_v2s__historical()
+# **uniswap_v2_token_day_datas__current**
+<a name="uniswap_v2_token_day_datas__current"></a>
+> [UniswapV2TokenDayDataDTO] uniswap_v2_token_day_datas__current()
 
-UniswapDayDataV2s (historical) 🔥
+TokenDayDatas (current)
 
-Gets uniswapdaydatav2s.
+Gets tokenDayDatas.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_uniswap_day_data_v2_dto import UniswapV2UniswapDayDataV2DTO
+from openapi_client.model.uniswap_v2_token_day_data_dto import UniswapV2TokenDayDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2354,88 +3606,25 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswap_v2_api.UniswapV2Api(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'startBlock': 1,
-        'endBlock': 1,
-        'startDate': "1970-01-01T00:00:00.00Z",
-        'endDate': "1970-01-01T00:00:00.00Z",
-        'id': "id_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
-        # UniswapDayDataV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_uniswap_day_data_v2s__historical(
-            query_params=query_params,
-        )
+        # TokenDayDatas (current)
+        api_response = api_instance.uniswap_v2_token_day_datas__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_data_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_token_day_datas__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-startBlock | StartBlockSchema | | optional
-endBlock | EndBlockSchema | | optional
-startDate | StartDateSchema | | optional
-endDate | EndDateSchema | | optional
-id | IdSchema | | optional
-
-
-# StartBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# EndBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# StartDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# EndDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# IdSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_day_data_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_token_day_datas__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_uniswap_day_data_v2s__historical.ApiResponseFor200
+#### uniswap_v2_token_day_datas__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2452,7 +3641,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2464,7 +3653,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2476,7 +3665,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) | [**UniswapV2UniswapDayDataV2DTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataV2DTO.md) |  | 
+[**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) | [**UniswapV2TokenDayDataDTO**]({{complexTypePrefix}}UniswapV2TokenDayDataDTO.md) |  | 
 
 ### Authorization
 
@@ -2484,20 +3673,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_uniswap_factory_v2s__historical**
-<a name="uniswap_v2_get_uniswap_factory_v2s__historical"></a>
-> [UniswapV2UniswapFactoryV2DTO] uniswap_v2_get_uniswap_factory_v2s__historical()
+# **uniswap_v2_transactions__current**
+<a name="uniswap_v2_transactions__current"></a>
+> [UniswapV2TransactionDTO] uniswap_v2_transactions__current()
 
-UniswapFactoryV2s (historical) 🔥
+Transactions (current)
 
-Gets uniswapfactoryv2s.
+Gets transactions.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_uniswap_factory_v2_dto import UniswapV2UniswapFactoryV2DTO
+from openapi_client.model.uniswap_v2_transaction_dto import UniswapV2TransactionDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2510,88 +3699,25 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswap_v2_api.UniswapV2Api(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'startBlock': 1,
-        'endBlock': 1,
-        'startDate': "1970-01-01T00:00:00.00Z",
-        'endDate': "1970-01-01T00:00:00.00Z",
-        'id': "id_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
-        # UniswapFactoryV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_uniswap_factory_v2s__historical(
-            query_params=query_params,
-        )
+        # Transactions (current)
+        api_response = api_instance.uniswap_v2_transactions__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factory_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_transactions__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-startBlock | StartBlockSchema | | optional
-endBlock | EndBlockSchema | | optional
-startDate | StartDateSchema | | optional
-endDate | EndDateSchema | | optional
-id | IdSchema | | optional
-
-
-# StartBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# EndBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# StartDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# EndDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# IdSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_factory_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_transactions__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_uniswap_factory_v2s__historical.ApiResponseFor200
+#### uniswap_v2_transactions__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2608,7 +3734,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) |  | 
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2620,7 +3746,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) |  | 
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2632,7 +3758,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) | [**UniswapV2UniswapFactoryV2DTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryV2DTO.md) |  | 
+[**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) | [**UniswapV2TransactionDTO**]({{complexTypePrefix}}UniswapV2TransactionDTO.md) |  | 
 
 ### Authorization
 
@@ -2640,20 +3766,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_user_v2s__historical**
-<a name="uniswap_v2_get_user_v2s__historical"></a>
-> [UniswapV2UserV2DTO] uniswap_v2_get_user_v2s__historical()
+# **uniswap_v2_uniswap_day_datas__current**
+<a name="uniswap_v2_uniswap_day_datas__current"></a>
+> [UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_datas__current()
 
-UserV2s (historical) 🔥
+UniswapDayDatas (current)
 
-Gets userv2s.
+Gets uniswapDayDatas.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import uniswap_v2_api
-from openapi_client.model.uniswap_v2_user_v2_dto import UniswapV2UserV2DTO
+from openapi_client.model.uniswap_v2_uniswap_day_data_dto import UniswapV2UniswapDayDataDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -2666,88 +3792,25 @@ with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uniswap_v2_api.UniswapV2Api(api_client)
 
-    # example passing only optional values
-    query_params = {
-        'startBlock': 1,
-        'endBlock': 1,
-        'startDate': "1970-01-01T00:00:00.00Z",
-        'endDate': "1970-01-01T00:00:00.00Z",
-        'id': "id_example",
-    }
+    # example, this endpoint has no required or optional parameters
     try:
-        # UserV2s (historical) 🔥
-        api_response = api_instance.uniswap_v2_get_user_v2s__historical(
-            query_params=query_params,
-        )
+        # UniswapDayDatas (current)
+        api_response = api_instance.uniswap_v2_uniswap_day_datas__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_user_v2s__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_day_datas__current: %s\n" % e)
 ```
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
-stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
-timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
-skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
-
-### query_params
-#### RequestQueryParams
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-startBlock | StartBlockSchema | | optional
-endBlock | EndBlockSchema | | optional
-startDate | StartDateSchema | | optional
-endDate | EndDateSchema | | optional
-id | IdSchema | | optional
-
-
-# StartBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# EndBlockSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
-
-# StartDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# EndDateSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
-
-# IdSchema
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-str,  | str,  |  | 
+This endpoint does not need any parameter.
 
 ### Return Types, Responses
 
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_user_v2s__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_uniswap_day_datas__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_user_v2s__historical.ApiResponseFor200
+#### uniswap_v2_uniswap_day_datas__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2764,7 +3827,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) |  | 
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -2776,7 +3839,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) |  | 
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -2788,7 +3851,193 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) | [**UniswapV2UserV2DTO**]({{complexTypePrefix}}UniswapV2UserV2DTO.md) |  | 
+[**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) | [**UniswapV2UniswapDayDataDTO**]({{complexTypePrefix}}UniswapV2UniswapDayDataDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_uniswap_factorys__current**
+<a name="uniswap_v2_uniswap_factorys__current"></a>
+> [UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factorys__current()
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_uniswap_factory_dto import UniswapV2UniswapFactoryDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # UniswapFactorys (current)
+        api_response = api_instance.uniswap_v2_uniswap_factorys__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_factorys__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_uniswap_factorys__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_uniswap_factorys__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) | [**UniswapV2UniswapFactoryDTO**]({{complexTypePrefix}}UniswapV2UniswapFactoryDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v2_users__current**
+<a name="uniswap_v2_users__current"></a>
+> [UniswapV2UserDTO] uniswap_v2_users__current()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v2_api
+from openapi_client.model.uniswap_v2_user_dto import UniswapV2UserDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v2_api.UniswapV2Api(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Users (current)
+        api_response = api_instance.uniswap_v2_users__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV2Api->uniswap_v2_users__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v2_users__current.ApiResponseFor200) | successful operation
+
+#### uniswap_v2_users__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) | [**UniswapV2UserDTO**]({{complexTypePrefix}}UniswapV2UserDTO.md) |  | 
 
 ### Authorization
 

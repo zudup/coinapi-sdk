@@ -4,34 +4,129 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV2GetBundleV2sHistorical**](UniswapV2Api.md#uniswapV2GetBundleV2sHistorical) | **GET** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**uniswapV2GetBurnV2sHistorical**](UniswapV2Api.md#uniswapV2GetBurnV2sHistorical) | **GET** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionSnapshotV2sHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionV2sHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**uniswapV2GetMintV2sHistorical**](UniswapV2Api.md#uniswapV2GetMintV2sHistorical) | **GET** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**uniswapV2GetPairDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDataV2sHistorical) | **GET** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**uniswapV2GetPairHourDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDataV2sHistorical) | **GET** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**uniswapV2GetPairV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairV2sHistorical) | **GET** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**uniswapV2BundlesCurrent**](UniswapV2Api.md#uniswapV2BundlesCurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**uniswapV2BurnsCurrent**](UniswapV2Api.md#uniswapV2BurnsCurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
+[**uniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**uniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapV2sHistorical**](UniswapV2Api.md#uniswapV2GetSwapV2sHistorical) | **GET** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**uniswapV2GetTokenDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDataV2sHistorical) | **GET** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**uniswapV2GetTokenV2sHistorical**](UniswapV2Api.md#uniswapV2GetTokenV2sHistorical) | **GET** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**uniswapV2GetTransactionV2sHistorical**](UniswapV2Api.md#uniswapV2GetTransactionV2sHistorical) | **GET** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**uniswapV2GetUniswapDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDataV2sHistorical) | **GET** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**uniswapV2GetUniswapFactoryV2sHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactoryV2sHistorical) | **GET** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**uniswapV2GetUserV2sHistorical**](UniswapV2Api.md#uniswapV2GetUserV2sHistorical) | **GET** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
+[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
 
-## uniswapV2GetBundleV2sHistorical
+## uniswapV2BundlesCurrent
 
-> [UniswapV2BundleV2DTO] uniswapV2GetBundleV2sHistorical(opts)
+> [UniswapV2BundleDTO] uniswapV2BundlesCurrent()
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2BundlesCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2BundleDTO]**](UniswapV2BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2BurnsCurrent
+
+> [UniswapV2BurnDTO] uniswapV2BurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2BurnsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2BurnDTO]**](UniswapV2BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2GetBundlesHistorical
+
+> [UniswapV2BundleDTO] uniswapV2GetBundlesHistorical(opts)
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 
@@ -46,7 +141,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Constant 1.
 };
-apiInstance.uniswapV2GetBundleV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetBundlesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -68,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2BundleV2DTO]**](UniswapV2BundleV2DTO.md)
+[**[UniswapV2BundleDTO]**](UniswapV2BundleDTO.md)
 
 ### Authorization
 
@@ -80,13 +175,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetBurnV2sHistorical
+## uniswapV2GetBurnsHistorical
 
-> [UniswapV2BurnV2DTO] uniswapV2GetBurnV2sHistorical(opts)
+> [UniswapV2BurnDTO] uniswapV2GetBurnsHistorical(opts)
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 
@@ -102,7 +197,7 @@ let opts = {
   'id': "id_example", // String | Transaction hash plus index in the transaction burn array
   'pair': "pair_example" // String | Reference to pair.
 };
-apiInstance.uniswapV2GetBurnV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetBurnsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -125,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2BurnV2DTO]**](UniswapV2BurnV2DTO.md)
+[**[UniswapV2BurnDTO]**](UniswapV2BurnDTO.md)
 
 ### Authorization
 
@@ -137,13 +232,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetLiquidityPositionSnapshotV2sHistorical
+## uniswapV2GetLiquidityPositionSnapshotsHistorical
 
-> [UniswapV2LiquidityPositionSnapshotV2DTO] uniswapV2GetLiquidityPositionSnapshotV2sHistorical(opts)
+> [UniswapV2LiquidityPositionSnapshotDTO] uniswapV2GetLiquidityPositionSnapshotsHistorical(opts)
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -160,7 +255,7 @@ let opts = {
   'user': "user_example", // String | 
   'pair': "pair_example" // String | 
 };
-apiInstance.uniswapV2GetLiquidityPositionSnapshotV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -184,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2LiquidityPositionSnapshotV2DTO]**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
+[**[UniswapV2LiquidityPositionSnapshotDTO]**](UniswapV2LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -196,13 +291,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetLiquidityPositionV2sHistorical
+## uniswapV2GetLiquidityPositionsHistorical
 
-> [UniswapV2LiquidityPositionV2DTO] uniswapV2GetLiquidityPositionV2sHistorical(opts)
+> [UniswapV2LiquidityPositionDTO] uniswapV2GetLiquidityPositionsHistorical(opts)
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 
@@ -219,7 +314,7 @@ let opts = {
   'user': "user_example", // String | Reference to user.
   'pair': "pair_example" // String | Reference to the pair liquidity is being provided on.
 };
-apiInstance.uniswapV2GetLiquidityPositionV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetLiquidityPositionsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -243,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2LiquidityPositionV2DTO]**](UniswapV2LiquidityPositionV2DTO.md)
+[**[UniswapV2LiquidityPositionDTO]**](UniswapV2LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -255,13 +350,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetMintV2sHistorical
+## uniswapV2GetMintsHistorical
 
-> [UniswapV2MintV2DTO] uniswapV2GetMintV2sHistorical(opts)
+> [UniswapV2MintDTO] uniswapV2GetMintsHistorical(opts)
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 
@@ -277,7 +372,7 @@ let opts = {
   'id': "id_example", // String | Transaction hash plus index in the transaction mint array.
   'pair': "pair_example" // String | Reference to pair.
 };
-apiInstance.uniswapV2GetMintV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetMintsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -300,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2MintV2DTO]**](UniswapV2MintV2DTO.md)
+[**[UniswapV2MintDTO]**](UniswapV2MintDTO.md)
 
 ### Authorization
 
@@ -312,13 +407,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPairDayDataV2sHistorical
+## uniswapV2GetPairDayDatasHistorical
 
-> [UniswapV2PairDayDataV2DTO] uniswapV2GetPairDayDataV2sHistorical(opts)
+> [UniswapV2PairDayDataDTO] uniswapV2GetPairDayDatasHistorical(opts)
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 
@@ -335,7 +430,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0.
   'token1': "token1_example" // String | Reference to token1.
 };
-apiInstance.uniswapV2GetPairDayDataV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetPairDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -359,7 +454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2PairDayDataV2DTO]**](UniswapV2PairDayDataV2DTO.md)
+[**[UniswapV2PairDayDataDTO]**](UniswapV2PairDayDataDTO.md)
 
 ### Authorization
 
@@ -371,13 +466,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPairHourDataV2sHistorical
+## uniswapV2GetPairHourDatasHistorical
 
-> [UniswapV2PairHourDataV2DTO] uniswapV2GetPairHourDataV2sHistorical(opts)
+> [UniswapV2PairHourDataDTO] uniswapV2GetPairHourDatasHistorical(opts)
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 
@@ -393,7 +488,7 @@ let opts = {
   'id': "id_example", // String | 
   'pair': "pair_example" // String | Address for pair contract.
 };
-apiInstance.uniswapV2GetPairHourDataV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetPairHourDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -416,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2PairHourDataV2DTO]**](UniswapV2PairHourDataV2DTO.md)
+[**[UniswapV2PairHourDataDTO]**](UniswapV2PairHourDataDTO.md)
 
 ### Authorization
 
@@ -428,13 +523,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPairV2sHistorical
+## uniswapV2GetPairsHistorical
 
-> [UniswapV2PairV2DTO] uniswapV2GetPairV2sHistorical(opts)
+> [UniswapV2PairDTO] uniswapV2GetPairsHistorical(opts)
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 
@@ -451,7 +546,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pair contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pair contract.
 };
-apiInstance.uniswapV2GetPairV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetPairsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -475,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
+[**[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -489,7 +584,7 @@ No authorization required
 
 ## uniswapV2GetPoolsCurrent
 
-> [UniswapV2PairV2DTO] uniswapV2GetPoolsCurrent(opts)
+> [UniswapV2PairDTO] uniswapV2GetPoolsCurrent(opts)
 
 Pools (current) 🔥
 
@@ -522,64 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV2GetSwapV2sHistorical
-
-> [UniswapV2SwapV2DTO] uniswapV2GetSwapV2sHistorical(opts)
-
-SwapV2s (historical) 🔥
-
-Gets swapv2s.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV2Api();
-let opts = {
-  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
-  'id': "id_example", // String | Transaction hash plus index in Transaction swap array.
-  'pair': "pair_example" // String | Reference to pair.
-};
-apiInstance.uniswapV2GetSwapV2sHistorical(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **Date**| The end date of timeframe. | [optional] 
- **id** | **String**| Transaction hash plus index in Transaction swap array. | [optional] 
- **pair** | **String**| Reference to pair. | [optional] 
-
-### Return type
-
-[**[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
+[**[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -593,7 +631,7 @@ No authorization required
 
 ## uniswapV2GetSwapsCurrent
 
-> [UniswapV2SwapV2DTO] uniswapV2GetSwapsCurrent()
+> [UniswapV2SwapDTO] uniswapV2GetSwapsCurrent()
 
 Swaps (current) 🔥
 
@@ -620,7 +658,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
+[**[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
 
 ### Authorization
 
@@ -632,13 +670,70 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetTokenDayDataV2sHistorical
+## uniswapV2GetSwapsHistorical
 
-> [UniswapV2TokenDayDataV2DTO] uniswapV2GetTokenDayDataV2sHistorical(opts)
+> [UniswapV2SwapDTO] uniswapV2GetSwapsHistorical(opts)
 
-TokenDayDataV2s (historical) 🔥
+Swaps (historical) 🔥
 
-Gets tokendaydatav2s.
+Gets swaps.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+let opts = {
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Transaction hash plus index in Transaction swap array.
+  'pair': "pair_example" // String | Reference to pair.
+};
+apiInstance.uniswapV2GetSwapsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Transaction hash plus index in Transaction swap array. | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2GetTokenDayDatasHistorical
+
+> [UniswapV2TokenDayDataDTO] uniswapV2GetTokenDayDatasHistorical(opts)
+
+TokenDayDatas (historical) 🔥
+
+Gets tokenDayDatas.
 
 ### Example
 
@@ -653,7 +748,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 };
-apiInstance.uniswapV2GetTokenDayDataV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetTokenDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -675,66 +770,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2TokenDayDataV2DTO]**](UniswapV2TokenDayDataV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV2GetTokenV2sHistorical
-
-> [UniswapV2TokenV2DTO] uniswapV2GetTokenV2sHistorical(opts)
-
-TokenV2s (historical) 🔥
-
-Gets tokenv2s.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV2Api();
-let opts = {
-  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
-  'id': "id_example", // String | Token address.
-  'symbol': "symbol_example", // String | Token symbol.
-  'name': "name_example" // String | Token name.
-};
-apiInstance.uniswapV2GetTokenV2sHistorical(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
- **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
- **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
- **endDate** | **Date**| The end date of timeframe. | [optional] 
- **id** | **String**| Token address. | [optional] 
- **symbol** | **String**| Token symbol. | [optional] 
- **name** | **String**| Token name. | [optional] 
-
-### Return type
-
-[**[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+[**[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -748,7 +784,7 @@ No authorization required
 
 ## uniswapV2GetTokensCurrent
 
-> [UniswapV2TokenV2DTO] uniswapV2GetTokensCurrent()
+> [UniswapV2TokenDTO] uniswapV2GetTokensCurrent()
 
 Tokens (current) 🔥
 
@@ -775,7 +811,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+[**[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -787,13 +823,72 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetTransactionV2sHistorical
+## uniswapV2GetTokensHistorical
 
-> [UniswapV2TransactionV2DTO] uniswapV2GetTransactionV2sHistorical(opts)
+> [UniswapV2TokenDTO] uniswapV2GetTokensHistorical(opts)
 
-TransactionV2s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets transactionv2s.
+Gets tokens.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+let opts = {
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Token address.
+  'symbol': "symbol_example", // String | Token symbol.
+  'name': "name_example" // String | Token name.
+};
+apiInstance.uniswapV2GetTokensHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Token address. | [optional] 
+ **symbol** | **String**| Token symbol. | [optional] 
+ **name** | **String**| Token name. | [optional] 
+
+### Return type
+
+[**[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2GetTransactionsHistorical
+
+> [UniswapV2TransactionDTO] uniswapV2GetTransactionsHistorical(opts)
+
+Transactions (historical) 🔥
+
+Gets transactions.
 
 ### Example
 
@@ -808,7 +903,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Ethereum transaction hash.
 };
-apiInstance.uniswapV2GetTransactionV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetTransactionsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -830,7 +925,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2TransactionV2DTO]**](UniswapV2TransactionV2DTO.md)
+[**[UniswapV2TransactionDTO]**](UniswapV2TransactionDTO.md)
 
 ### Authorization
 
@@ -842,13 +937,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetUniswapDayDataV2sHistorical
+## uniswapV2GetUniswapDayDatasHistorical
 
-> [UniswapV2UniswapDayDataV2DTO] uniswapV2GetUniswapDayDataV2sHistorical(opts)
+> [UniswapV2UniswapDayDataDTO] uniswapV2GetUniswapDayDatasHistorical(opts)
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 ### Example
 
@@ -863,7 +958,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Unix timestamp for start of day / 86400 giving a unique day index.
 };
-apiInstance.uniswapV2GetUniswapDayDataV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetUniswapDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -885,7 +980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2UniswapDayDataV2DTO]**](UniswapV2UniswapDayDataV2DTO.md)
+[**[UniswapV2UniswapDayDataDTO]**](UniswapV2UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -897,13 +992,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetUniswapFactoryV2sHistorical
+## uniswapV2GetUniswapFactorysHistorical
 
-> [UniswapV2UniswapFactoryV2DTO] uniswapV2GetUniswapFactoryV2sHistorical(opts)
+> [UniswapV2UniswapFactoryDTO] uniswapV2GetUniswapFactorysHistorical(opts)
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 ### Example
 
@@ -918,7 +1013,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Factory address.
 };
-apiInstance.uniswapV2GetUniswapFactoryV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetUniswapFactorysHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -940,7 +1035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2UniswapFactoryV2DTO]**](UniswapV2UniswapFactoryV2DTO.md)
+[**[UniswapV2UniswapFactoryDTO]**](UniswapV2UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -952,13 +1047,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetUserV2sHistorical
+## uniswapV2GetUsersHistorical
 
-> [UniswapV2UserV2DTO] uniswapV2GetUserV2sHistorical(opts)
+> [UniswapV2UserDTO] uniswapV2GetUsersHistorical(opts)
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 ### Example
 
@@ -973,7 +1068,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | User address.
 };
-apiInstance.uniswapV2GetUserV2sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV2GetUsersHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -995,7 +1090,464 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV2UserV2DTO]**](UniswapV2UserV2DTO.md)
+[**[UniswapV2UserDTO]**](UniswapV2UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2LiquidityPositionSnapshotsCurrent
+
+> [UniswapV2LiquidityPositionSnapshotDTO] uniswapV2LiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2LiquidityPositionSnapshotsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2LiquidityPositionSnapshotDTO]**](UniswapV2LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2LiquidityPositionsCurrent
+
+> [UniswapV2LiquidityPositionDTO] uniswapV2LiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2LiquidityPositionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2LiquidityPositionDTO]**](UniswapV2LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2MintsCurrent
+
+> [UniswapV2MintDTO] uniswapV2MintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2MintsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2MintDTO]**](UniswapV2MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2PairDayDatasCurrent
+
+> [UniswapV2PairDayDataDTO] uniswapV2PairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2PairDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2PairDayDataDTO]**](UniswapV2PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2PairHourDatasCurrent
+
+> [UniswapV2PairHourDataDTO] uniswapV2PairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2PairHourDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2PairHourDataDTO]**](UniswapV2PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2PairsCurrent
+
+> [UniswapV2PairDTO] uniswapV2PairsCurrent(opts)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+let opts = {
+  'id': "id_example" // String | Pair contract address.
+};
+apiInstance.uniswapV2PairsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pair contract address. | [optional] 
+
+### Return type
+
+[**[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2TokenDayDatasCurrent
+
+> [UniswapV2TokenDayDataDTO] uniswapV2TokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2TokenDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2TransactionsCurrent
+
+> [UniswapV2TransactionDTO] uniswapV2TransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2TransactionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2TransactionDTO]**](UniswapV2TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2UniswapDayDatasCurrent
+
+> [UniswapV2UniswapDayDataDTO] uniswapV2UniswapDayDatasCurrent()
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2UniswapDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2UniswapDayDataDTO]**](UniswapV2UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2UniswapFactorysCurrent
+
+> [UniswapV2UniswapFactoryDTO] uniswapV2UniswapFactorysCurrent()
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2UniswapFactorysCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2UniswapFactoryDTO]**](UniswapV2UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2UsersCurrent
+
+> [UniswapV2UserDTO] uniswapV2UsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV2Api();
+apiInstance.uniswapV2UsersCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV2UserDTO]**](UniswapV2UserDTO.md)
 
 ### Authorization
 

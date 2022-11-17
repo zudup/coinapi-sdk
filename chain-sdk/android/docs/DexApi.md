@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
 [**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
 [**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
@@ -13,9 +15,102 @@ Method | HTTP request | Description
 [**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
 [**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
 [**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawrequests/historical | WithdrawRequests (historical) 🔥
+[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
 [**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dexOrdersCurrent**](DexApi.md#dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
+[**dexPricesCurrent**](DexApi.md#dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
+[**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
+[**dexStatssCurrent**](DexApi.md#dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexTokensCurrent**](DexApi.md#dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
+[**dexTradesCurrent**](DexApi.md#dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
+[**dexUsersCurrent**](DexApi.md#dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
+[**dexWithdrawRequestsCurrent**](DexApi.md#dexWithdrawRequestsCurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
+[**dexWithdrawsCurrent**](DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
+
+
+## dexBatchsCurrent
+
+> List&lt;DexBatchDTO&gt; dexBatchsCurrent()
+
+Batchs (current)
+
+Gets batchs.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexBatchDTO> result = apiInstance.dexBatchsCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexBatchsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexDepositsCurrent
+
+> List&lt;DexDepositDTO&gt; dexDepositsCurrent()
+
+Deposits (current)
+
+Gets deposits.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexDepositDTO> result = apiInstance.dexDepositsCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexDepositsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## dexGetBatchsHistorical
@@ -526,7 +621,7 @@ No authorization required
 
 WithdrawRequests (historical) 🔥
 
-Gets withdrawrequests.
+Gets withdrawRequests.
 
 ### Example
 
@@ -617,6 +712,384 @@ Name | Type | Description  | Notes
  **endDate** | **Date**|  | [optional] [default to null]
  **id** | **String**|  | [optional] [default to null]
  **user** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexOrdersCurrent
+
+> List&lt;DexOrderDTO&gt; dexOrdersCurrent()
+
+Orders (current)
+
+Gets orders.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexOrderDTO> result = apiInstance.dexOrdersCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexOrdersCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexPricesCurrent
+
+> List&lt;DexPriceDTO&gt; dexPricesCurrent()
+
+Prices (current)
+
+Gets prices.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexPriceDTO> result = apiInstance.dexPricesCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexPricesCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexSolutionsCurrent
+
+> List&lt;DexSolutionDTO&gt; dexSolutionsCurrent()
+
+Solutions (current)
+
+Gets solutions.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexSolutionDTO> result = apiInstance.dexSolutionsCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexSolutionsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexStatssCurrent
+
+> List&lt;DexStatsDTO&gt; dexStatssCurrent()
+
+Statss (current)
+
+Gets statss.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexStatsDTO> result = apiInstance.dexStatssCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexStatssCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexTokensCurrent
+
+> List&lt;DexTokenDTO&gt; dexTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexTokenDTO> result = apiInstance.dexTokensCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexTokensCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexTradesCurrent
+
+> List&lt;DexTradeDTO&gt; dexTradesCurrent()
+
+Trades (current)
+
+Gets trades.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexTradeDTO> result = apiInstance.dexTradesCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexTradesCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexUsersCurrent
+
+> List&lt;DexUserDTO&gt; dexUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexUserDTO> result = apiInstance.dexUsersCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexUsersCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexUserDTO&gt;**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexWithdrawRequestsCurrent
+
+> List&lt;DexWithdrawRequestDTO&gt; dexWithdrawRequestsCurrent()
+
+WithdrawRequests (current)
+
+Gets withdrawRequests.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexWithdrawRequestDTO> result = apiInstance.dexWithdrawRequestsCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexWithdrawRequestsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexWithdrawsCurrent
+
+> List&lt;DexWithdrawDTO&gt; dexWithdrawsCurrent()
+
+Withdraws (current)
+
+Gets withdraws.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.DexApi;
+
+DexApi apiInstance = new DexApi();
+try {
+    List<DexWithdrawDTO> result = apiInstance.dexWithdrawsCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DexApi#dexWithdrawsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

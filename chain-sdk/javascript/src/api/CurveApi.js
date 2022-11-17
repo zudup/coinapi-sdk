@@ -66,6 +66,713 @@ export default class CurveApi {
 
 
     /**
+     * Callback function to receive the result of the curveAccountsCurrent operation.
+     * @callback module:api/CurveApi~curveAccountsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveAccountDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @param {module:api/CurveApi~curveAccountsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveAccountDTO>}
+     */
+    curveAccountsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveAccountDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/accounts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveAddLiquidityEventsCurrent operation.
+     * @callback module:api/CurveApi~curveAddLiquidityEventsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveAddLiquidityEventDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * AddLiquidityEvents (current)
+     * Gets addLiquidityEvents.
+     * @param {module:api/CurveApi~curveAddLiquidityEventsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveAddLiquidityEventDTO>}
+     */
+    curveAddLiquidityEventsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveAddLiquidityEventDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/addLiquidityEvents/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveAdminFeeChangeLogsCurrent operation.
+     * @callback module:api/CurveApi~curveAdminFeeChangeLogsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveAdminFeeChangeLogDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * AdminFeeChangeLogs (current)
+     * Gets adminFeeChangeLogs.
+     * @param {module:api/CurveApi~curveAdminFeeChangeLogsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveAdminFeeChangeLogDTO>}
+     */
+    curveAdminFeeChangeLogsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveAdminFeeChangeLogDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/adminFeeChangeLogs/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveAmplificationCoeffChangeLogsCurrent operation.
+     * @callback module:api/CurveApi~curveAmplificationCoeffChangeLogsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveAmplificationCoeffChangeLogDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     * Gets amplificationCoeffChangeLogs.
+     * @param {module:api/CurveApi~curveAmplificationCoeffChangeLogsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveAmplificationCoeffChangeLogDTO>}
+     */
+    curveAmplificationCoeffChangeLogsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveAmplificationCoeffChangeLogDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/amplificationCoeffChangeLogs/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveCoinsCurrent operation.
+     * @callback module:api/CurveApi~curveCoinsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveCoinDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Coins (current)
+     * Gets coins.
+     * @param {module:api/CurveApi~curveCoinsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveCoinDTO>}
+     */
+    curveCoinsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveCoinDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/coins/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveContractVersionsCurrent operation.
+     * @callback module:api/CurveApi~curveContractVersionsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveContractVersionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ContractVersions (current)
+     * Gets contractVersions.
+     * @param {module:api/CurveApi~curveContractVersionsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveContractVersionDTO>}
+     */
+    curveContractVersionsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveContractVersionDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/contractVersions/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveContractsCurrent operation.
+     * @callback module:api/CurveApi~curveContractsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveContractDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Contracts (current)
+     * Gets contracts.
+     * @param {module:api/CurveApi~curveContractsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveContractDTO>}
+     */
+    curveContractsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveContractDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/contracts/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveDailyVolumesCurrent operation.
+     * @callback module:api/CurveApi~curveDailyVolumesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveDailyVolumeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DailyVolumes (current)
+     * Gets dailyVolumes.
+     * @param {module:api/CurveApi~curveDailyVolumesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveDailyVolumeDTO>}
+     */
+    curveDailyVolumesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveDailyVolumeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/dailyVolumes/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveExchangesCurrent operation.
+     * @callback module:api/CurveApi~curveExchangesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveExchangeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Exchanges (current)
+     * Gets exchanges.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.pool 
+     * @param {module:api/CurveApi~curveExchangesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
+     */
+    curveExchangesCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveExchangeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/exchanges/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveFeeChangeLogsCurrent operation.
+     * @callback module:api/CurveApi~curveFeeChangeLogsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveFeeChangeLogDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FeeChangeLogs (current)
+     * Gets feeChangeLogs.
+     * @param {module:api/CurveApi~curveFeeChangeLogsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveFeeChangeLogDTO>}
+     */
+    curveFeeChangeLogsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveFeeChangeLogDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/feeChangeLogs/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeDepositsCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeDepositsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeDeposits (current)
+     * Gets gaugeDeposits.
+     * @param {module:api/CurveApi~curveGaugeDepositsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeDepositDTO>}
+     */
+    curveGaugeDepositsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeDepositDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeDeposits/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeLiquiditysCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeLiquiditysCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeLiquidityDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeLiquiditys (current)
+     * Gets gaugeLiquiditys.
+     * @param {module:api/CurveApi~curveGaugeLiquiditysCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeLiquidityDTO>}
+     */
+    curveGaugeLiquiditysCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeLiquidityDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeLiquiditys/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeTotalWeightsCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeTotalWeightsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeTotalWeightDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeTotalWeights (current)
+     * Gets gaugeTotalWeights.
+     * @param {module:api/CurveApi~curveGaugeTotalWeightsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeTotalWeightDTO>}
+     */
+    curveGaugeTotalWeightsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeTotalWeightDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeTotalWeights/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeTypeWeightsCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeTypeWeightsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeTypeWeightDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeTypeWeights (current)
+     * Gets gaugeTypeWeights.
+     * @param {module:api/CurveApi~curveGaugeTypeWeightsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeTypeWeightDTO>}
+     */
+    curveGaugeTypeWeightsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeTypeWeightDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeTypeWeights/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeTypesCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeTypesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeTypeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeTypes (current)
+     * Gets gaugeTypes.
+     * @param {module:api/CurveApi~curveGaugeTypesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeTypeDTO>}
+     */
+    curveGaugeTypesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeTypeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeTypes/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeWeightVotesCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeWeightVotesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeWeightVoteDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeWeightVotes (current)
+     * Gets gaugeWeightVotes.
+     * @param {module:api/CurveApi~curveGaugeWeightVotesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeWeightVoteDTO>}
+     */
+    curveGaugeWeightVotesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeWeightVoteDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeWeightVotes/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeWeightsCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeWeightsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeWeightDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeWeights (current)
+     * Gets gaugeWeights.
+     * @param {module:api/CurveApi~curveGaugeWeightsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeWeightDTO>}
+     */
+    curveGaugeWeightsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeWeightDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeWeights/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugeWithdrawsCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeWithdrawsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GaugeWithdraws (current)
+     * Gets gaugeWithdraws.
+     * @param {module:api/CurveApi~curveGaugeWithdrawsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeWithdrawDTO>}
+     */
+    curveGaugeWithdrawsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeWithdrawDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gaugeWithdraws/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveGaugesCurrent operation.
+     * @callback module:api/CurveApi~curveGaugesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveGaugeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gauges (current)
+     * Gets gauges.
+     * @param {module:api/CurveApi~curveGaugesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveGaugeDTO>}
+     */
+    curveGaugesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveGaugeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/gauges/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the curveGetAccountsHistorical operation.
      * @callback module:api/CurveApi~curveGetAccountsHistoricalCallback
      * @param {String} error Error message, if any.
@@ -126,7 +833,7 @@ export default class CurveApi {
 
     /**
      * AddLiquidityEvents (historical) 🔥
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -161,7 +868,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveAddLiquidityEventDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/addliquidityevents/historical', 'GET',
+        '/dapps/curve/addLiquidityEvents/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -177,7 +884,7 @@ export default class CurveApi {
 
     /**
      * AdminFeeChangeLogs (historical) 🔥
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -212,7 +919,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveAdminFeeChangeLogDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/adminfeechangelogs/historical', 'GET',
+        '/dapps/curve/adminFeeChangeLogs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -228,7 +935,7 @@ export default class CurveApi {
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -263,7 +970,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveAmplificationCoeffChangeLogDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/amplificationcoeffchangelogs/historical', 'GET',
+        '/dapps/curve/amplificationCoeffChangeLogs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -330,7 +1037,7 @@ export default class CurveApi {
 
     /**
      * ContractVersions (historical) 🔥
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -365,7 +1072,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveContractVersionDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/contractversions/historical', 'GET',
+        '/dapps/curve/contractVersions/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -430,7 +1137,7 @@ export default class CurveApi {
 
     /**
      * DailyVolumes (historical) 🔥
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -465,7 +1172,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveDailyVolumeDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/dailyvolumes/historical', 'GET',
+        '/dapps/curve/dailyVolumes/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -532,7 +1239,7 @@ export default class CurveApi {
 
     /**
      * FeeChangeLogs (historical) 🔥
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -567,7 +1274,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveFeeChangeLogDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/feechangelogs/historical', 'GET',
+        '/dapps/curve/feeChangeLogs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -583,7 +1290,7 @@ export default class CurveApi {
 
     /**
      * GaugeDeposits (historical) 🔥
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -616,7 +1323,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeDepositDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugedeposits/historical', 'GET',
+        '/dapps/curve/gaugeDeposits/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -632,7 +1339,7 @@ export default class CurveApi {
 
     /**
      * GaugeLiquiditys (historical) 🔥
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -667,7 +1374,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeLiquidityDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugeliquiditys/historical', 'GET',
+        '/dapps/curve/gaugeLiquiditys/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -683,7 +1390,7 @@ export default class CurveApi {
 
     /**
      * GaugeTotalWeights (historical) 🔥
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -716,7 +1423,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeTotalWeightDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugetotalweights/historical', 'GET',
+        '/dapps/curve/gaugeTotalWeights/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -732,7 +1439,7 @@ export default class CurveApi {
 
     /**
      * GaugeTypeWeights (historical) 🔥
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -765,7 +1472,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeTypeWeightDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugetypeweights/historical', 'GET',
+        '/dapps/curve/gaugeTypeWeights/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -781,7 +1488,7 @@ export default class CurveApi {
 
     /**
      * GaugeTypes (historical) 🔥
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -816,7 +1523,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeTypeDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugetypes/historical', 'GET',
+        '/dapps/curve/gaugeTypes/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -832,7 +1539,7 @@ export default class CurveApi {
 
     /**
      * GaugeWeightVotes (historical) 🔥
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -867,7 +1574,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeWeightVoteDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugeweightvotes/historical', 'GET',
+        '/dapps/curve/gaugeWeightVotes/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -883,7 +1590,7 @@ export default class CurveApi {
 
     /**
      * GaugeWeights (historical) 🔥
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -916,7 +1623,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeWeightDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugeweights/historical', 'GET',
+        '/dapps/curve/gaugeWeights/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -932,7 +1639,7 @@ export default class CurveApi {
 
     /**
      * GaugeWithdraws (historical) 🔥
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -965,7 +1672,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeWithdrawDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugewithdraws/historical', 'GET',
+        '/dapps/curve/gaugeWithdraws/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1034,7 +1741,7 @@ export default class CurveApi {
 
     /**
      * HourlyVolumes (historical) 🔥
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1069,7 +1776,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveHourlyVolumeDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/hourlyvolumes/historical', 'GET',
+        '/dapps/curve/hourlyVolumes/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1085,7 +1792,7 @@ export default class CurveApi {
 
     /**
      * LpTokens (historical) 🔥
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1126,7 +1833,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveLpTokenDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/lptokens/historical', 'GET',
+        '/dapps/curve/lpTokens/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1193,7 +1900,7 @@ export default class CurveApi {
 
     /**
      * ProposalVotes (historical) 🔥
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1226,7 +1933,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveProposalVoteDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/proposalvotes/historical', 'GET',
+        '/dapps/curve/proposalVotes/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1291,7 +1998,7 @@ export default class CurveApi {
 
     /**
      * RemoveLiquidityEvents (historical) 🔥
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1326,7 +2033,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveRemoveLiquidityEventDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/removeliquidityevents/historical', 'GET',
+        '/dapps/curve/removeLiquidityEvents/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1342,7 +2049,7 @@ export default class CurveApi {
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1377,7 +2084,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveRemoveLiquidityOneEventDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/removeliquidityoneevents/historical', 'GET',
+        '/dapps/curve/removeLiquidityOneEvents/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1393,7 +2100,7 @@ export default class CurveApi {
 
     /**
      * SystemStates (historical) 🔥
-     * Gets systemstates.
+     * Gets systemStates.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1426,7 +2133,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveSystemStateDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/systemstates/historical', 'GET',
+        '/dapps/curve/systemStates/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1497,7 +2204,7 @@ export default class CurveApi {
 
     /**
      * TransferOwnershipEvents (historical) 🔥
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1532,7 +2239,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveTransferOwnershipEventDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/transferownershipevents/historical', 'GET',
+        '/dapps/curve/transferOwnershipEvents/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1548,7 +2255,7 @@ export default class CurveApi {
 
     /**
      * UnderlyingCoins (historical) 🔥
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 
@@ -1583,7 +2290,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveUnderlyingCoinDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/underlyingcoins/historical', 'GET',
+        '/dapps/curve/underlyingCoins/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1599,7 +2306,7 @@ export default class CurveApi {
 
     /**
      * VotingApps (historical) 🔥
-     * Gets votingapps.
+     * Gets votingApps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1634,7 +2341,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveVotingAppDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/votingapps/historical', 'GET',
+        '/dapps/curve/votingApps/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1650,7 +2357,7 @@ export default class CurveApi {
 
     /**
      * WeeklyVolumes (historical) 🔥
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1685,7 +2392,492 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveWeeklyVolumeDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/weeklyvolumes/historical', 'GET',
+        '/dapps/curve/weeklyVolumes/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveHourlyVolumesCurrent operation.
+     * @callback module:api/CurveApi~curveHourlyVolumesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveHourlyVolumeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * HourlyVolumes (current)
+     * Gets hourlyVolumes.
+     * @param {module:api/CurveApi~curveHourlyVolumesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveHourlyVolumeDTO>}
+     */
+    curveHourlyVolumesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveHourlyVolumeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/hourlyVolumes/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveLpTokensCurrent operation.
+     * @callback module:api/CurveApi~curveLpTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveLpTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @param {module:api/CurveApi~curveLpTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveLpTokenDTO>}
+     */
+    curveLpTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveLpTokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/lpTokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curvePoolsCurrent operation.
+     * @callback module:api/CurveApi~curvePoolsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurvePoolDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.id Pool address.
+     * @param {module:api/CurveApi~curvePoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurvePoolDTO>}
+     */
+    curvePoolsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurvePoolDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/pools/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveProposalVotesCurrent operation.
+     * @callback module:api/CurveApi~curveProposalVotesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveProposalVoteDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * ProposalVotes (current)
+     * Gets proposalVotes.
+     * @param {module:api/CurveApi~curveProposalVotesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveProposalVoteDTO>}
+     */
+    curveProposalVotesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveProposalVoteDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/proposalVotes/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveProposalsCurrent operation.
+     * @callback module:api/CurveApi~curveProposalsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveProposalDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Proposals (current)
+     * Gets proposals.
+     * @param {module:api/CurveApi~curveProposalsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveProposalDTO>}
+     */
+    curveProposalsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveProposalDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/proposals/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveRemoveLiquidityEventsCurrent operation.
+     * @callback module:api/CurveApi~curveRemoveLiquidityEventsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveRemoveLiquidityEventDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RemoveLiquidityEvents (current)
+     * Gets removeLiquidityEvents.
+     * @param {module:api/CurveApi~curveRemoveLiquidityEventsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveRemoveLiquidityEventDTO>}
+     */
+    curveRemoveLiquidityEventsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveRemoveLiquidityEventDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/removeLiquidityEvents/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveRemoveLiquidityOneEventsCurrent operation.
+     * @callback module:api/CurveApi~curveRemoveLiquidityOneEventsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveRemoveLiquidityOneEventDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     * Gets removeLiquidityOneEvents.
+     * @param {module:api/CurveApi~curveRemoveLiquidityOneEventsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveRemoveLiquidityOneEventDTO>}
+     */
+    curveRemoveLiquidityOneEventsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveRemoveLiquidityOneEventDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/removeLiquidityOneEvents/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveSystemStatesCurrent operation.
+     * @callback module:api/CurveApi~curveSystemStatesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveSystemStateDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * SystemStates (current)
+     * Gets systemStates.
+     * @param {module:api/CurveApi~curveSystemStatesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveSystemStateDTO>}
+     */
+    curveSystemStatesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveSystemStateDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/systemStates/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveTokensCurrent operation.
+     * @callback module:api/CurveApi~curveTokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param {module:api/CurveApi~curveTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveTokenDTO>}
+     */
+    curveTokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveTokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveTransferOwnershipEventsCurrent operation.
+     * @callback module:api/CurveApi~curveTransferOwnershipEventsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveTransferOwnershipEventDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TransferOwnershipEvents (current)
+     * Gets transferOwnershipEvents.
+     * @param {module:api/CurveApi~curveTransferOwnershipEventsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveTransferOwnershipEventDTO>}
+     */
+    curveTransferOwnershipEventsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveTransferOwnershipEventDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/transferOwnershipEvents/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveUnderlyingCoinsCurrent operation.
+     * @callback module:api/CurveApi~curveUnderlyingCoinsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveUnderlyingCoinDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UnderlyingCoins (current)
+     * Gets underlyingCoins.
+     * @param {module:api/CurveApi~curveUnderlyingCoinsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveUnderlyingCoinDTO>}
+     */
+    curveUnderlyingCoinsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveUnderlyingCoinDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/underlyingCoins/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveVotingAppsCurrent operation.
+     * @callback module:api/CurveApi~curveVotingAppsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveVotingAppDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * VotingApps (current)
+     * Gets votingApps.
+     * @param {module:api/CurveApi~curveVotingAppsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveVotingAppDTO>}
+     */
+    curveVotingAppsCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveVotingAppDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/votingApps/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the curveWeeklyVolumesCurrent operation.
+     * @callback module:api/CurveApi~curveWeeklyVolumesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveWeeklyVolumeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * WeeklyVolumes (current)
+     * Gets weeklyVolumes.
+     * @param {module:api/CurveApi~curveWeeklyVolumesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveWeeklyVolumeDTO>}
+     */
+    curveWeeklyVolumesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveWeeklyVolumeDTO];
+      return this.apiClient.callApi(
+        '/dapps/curve/weeklyVolumes/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

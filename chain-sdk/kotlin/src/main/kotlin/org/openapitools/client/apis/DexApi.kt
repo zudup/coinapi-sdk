@@ -56,6 +56,140 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
+     * Batchs (current)
+     * Gets batchs.
+     * @return kotlin.collections.List<DexBatchDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexBatchsCurrent() : kotlin.collections.List<DexBatchDTO> {
+        val localVarResponse = dexBatchsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexBatchDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Batchs (current)
+     * Gets batchs.
+     * @return ApiResponse<kotlin.collections.List<DexBatchDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexBatchsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexBatchDTO>?> {
+        val localVariableConfig = dexBatchsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexBatchDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexBatchsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexBatchsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/batchs/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return kotlin.collections.List<DexDepositDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexDepositsCurrent() : kotlin.collections.List<DexDepositDTO> {
+        val localVarResponse = dexDepositsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexDepositDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse<kotlin.collections.List<DexDepositDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexDepositsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexDepositDTO>?> {
+        val localVariableConfig = dexDepositsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexDepositDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexDepositsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexDepositsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/deposits/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Batchs (historical) 🔥
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -996,7 +1130,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
     /**
      * WithdrawRequests (historical) 🔥
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1032,7 +1166,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
     /**
      * WithdrawRequests (historical) 🔥
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1092,7 +1226,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/dex/withdrawrequests/historical",
+            path = "/dapps/dex/withdrawRequests/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1198,6 +1332,609 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/dapps/dex/withdraws/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return kotlin.collections.List<DexOrderDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexOrdersCurrent() : kotlin.collections.List<DexOrderDTO> {
+        val localVarResponse = dexOrdersCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexOrderDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return ApiResponse<kotlin.collections.List<DexOrderDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexOrdersCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexOrderDTO>?> {
+        val localVariableConfig = dexOrdersCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexOrderDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexOrdersCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexOrdersCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/orders/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Prices (current)
+     * Gets prices.
+     * @return kotlin.collections.List<DexPriceDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexPricesCurrent() : kotlin.collections.List<DexPriceDTO> {
+        val localVarResponse = dexPricesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexPriceDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Prices (current)
+     * Gets prices.
+     * @return ApiResponse<kotlin.collections.List<DexPriceDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexPricesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexPriceDTO>?> {
+        val localVariableConfig = dexPricesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexPriceDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexPricesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexPricesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/prices/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Solutions (current)
+     * Gets solutions.
+     * @return kotlin.collections.List<DexSolutionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexSolutionsCurrent() : kotlin.collections.List<DexSolutionDTO> {
+        val localVarResponse = dexSolutionsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexSolutionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Solutions (current)
+     * Gets solutions.
+     * @return ApiResponse<kotlin.collections.List<DexSolutionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexSolutionsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexSolutionDTO>?> {
+        val localVariableConfig = dexSolutionsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexSolutionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexSolutionsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexSolutionsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/solutions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Statss (current)
+     * Gets statss.
+     * @return kotlin.collections.List<DexStatsDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexStatssCurrent() : kotlin.collections.List<DexStatsDTO> {
+        val localVarResponse = dexStatssCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexStatsDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Statss (current)
+     * Gets statss.
+     * @return ApiResponse<kotlin.collections.List<DexStatsDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexStatssCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexStatsDTO>?> {
+        val localVariableConfig = dexStatssCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexStatsDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexStatssCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexStatssCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/statss/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return kotlin.collections.List<DexTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexTokensCurrent() : kotlin.collections.List<DexTokenDTO> {
+        val localVarResponse = dexTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse<kotlin.collections.List<DexTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexTokenDTO>?> {
+        val localVariableConfig = dexTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return kotlin.collections.List<DexTradeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexTradesCurrent() : kotlin.collections.List<DexTradeDTO> {
+        val localVarResponse = dexTradesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexTradeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return ApiResponse<kotlin.collections.List<DexTradeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexTradesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexTradeDTO>?> {
+        val localVariableConfig = dexTradesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexTradeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexTradesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexTradesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/trades/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return kotlin.collections.List<DexUserDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexUsersCurrent() : kotlin.collections.List<DexUserDTO> {
+        val localVarResponse = dexUsersCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexUserDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return ApiResponse<kotlin.collections.List<DexUserDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexUsersCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexUserDTO>?> {
+        val localVariableConfig = dexUsersCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexUserDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexUsersCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexUsersCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/users/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * WithdrawRequests (current)
+     * Gets withdrawRequests.
+     * @return kotlin.collections.List<DexWithdrawRequestDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexWithdrawRequestsCurrent() : kotlin.collections.List<DexWithdrawRequestDTO> {
+        val localVarResponse = dexWithdrawRequestsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexWithdrawRequestDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * WithdrawRequests (current)
+     * Gets withdrawRequests.
+     * @return ApiResponse<kotlin.collections.List<DexWithdrawRequestDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexWithdrawRequestsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexWithdrawRequestDTO>?> {
+        val localVariableConfig = dexWithdrawRequestsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexWithdrawRequestDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexWithdrawRequestsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexWithdrawRequestsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/withdrawRequests/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return kotlin.collections.List<DexWithdrawDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun dexWithdrawsCurrent() : kotlin.collections.List<DexWithdrawDTO> {
+        val localVarResponse = dexWithdrawsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexWithdrawDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse<kotlin.collections.List<DexWithdrawDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun dexWithdrawsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexWithdrawDTO>?> {
+        val localVariableConfig = dexWithdrawsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<DexWithdrawDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation dexWithdrawsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun dexWithdrawsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/dex/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

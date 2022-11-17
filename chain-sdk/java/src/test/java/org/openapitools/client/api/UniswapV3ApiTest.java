@@ -15,23 +15,23 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import java.time.OffsetDateTime;
-import org.openapitools.client.model.UniswapV3BundleV3DTO;
-import org.openapitools.client.model.UniswapV3BurnV3DTO;
-import org.openapitools.client.model.UniswapV3FactoryV3DTO;
-import org.openapitools.client.model.UniswapV3MintV3DTO;
-import org.openapitools.client.model.UniswapV3PoolDayDataV3DTO;
-import org.openapitools.client.model.UniswapV3PoolHourDataV3DTO;
-import org.openapitools.client.model.UniswapV3PoolV3DTO;
-import org.openapitools.client.model.UniswapV3PositionSnapshotV3DTO;
-import org.openapitools.client.model.UniswapV3PositionV3DTO;
-import org.openapitools.client.model.UniswapV3SwapV3DTO;
-import org.openapitools.client.model.UniswapV3TickDayDataV3DTO;
-import org.openapitools.client.model.UniswapV3TickV3DTO;
-import org.openapitools.client.model.UniswapV3TokenHourDataV3DTO;
-import org.openapitools.client.model.UniswapV3TokenV3DTO;
+import org.openapitools.client.model.UniswapV3BundleDTO;
+import org.openapitools.client.model.UniswapV3BurnDTO;
+import org.openapitools.client.model.UniswapV3FactoryDTO;
+import org.openapitools.client.model.UniswapV3MintDTO;
+import org.openapitools.client.model.UniswapV3PoolDTO;
+import org.openapitools.client.model.UniswapV3PoolDayDataDTO;
+import org.openapitools.client.model.UniswapV3PoolHourDataDTO;
+import org.openapitools.client.model.UniswapV3PositionDTO;
+import org.openapitools.client.model.UniswapV3PositionSnapshotDTO;
+import org.openapitools.client.model.UniswapV3SwapDTO;
+import org.openapitools.client.model.UniswapV3TickDTO;
+import org.openapitools.client.model.UniswapV3TickDayDataDTO;
+import org.openapitools.client.model.UniswapV3TokenDTO;
+import org.openapitools.client.model.UniswapV3TokenHourDataDTO;
 import org.openapitools.client.model.UniswapV3TokenV3DayDataDTO;
-import org.openapitools.client.model.UniswapV3TransactionV3DTO;
-import org.openapitools.client.model.UniswapV3UniswapDayDataV3DTO;
+import org.openapitools.client.model.UniswapV3TransactionDTO;
+import org.openapitools.client.model.UniswapV3UniswapDayDataDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -49,24 +49,6 @@ public class UniswapV3ApiTest {
     private final UniswapV3Api api = new UniswapV3Api();
 
     /**
-     * BundleV3s (historical) 🔥
-     *
-     * Gets bundlev3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetBundleV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        List<UniswapV3BundleV3DTO> response = api.uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
      * Bundles (current)
      *
      * Gets bundles.
@@ -74,29 +56,8 @@ public class UniswapV3ApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetBundlesCurrentTest() throws ApiException {
-        List<UniswapV3BundleV3DTO> response = api.uniswapV3GetBundlesCurrent();
-        // TODO: test validations
-    }
-
-    /**
-     * BurnV3s (historical) 🔥
-     *
-     * Gets burnv3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetBurnV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String pool = null;
-        String token0 = null;
-        String token1 = null;
-        List<UniswapV3BurnV3DTO> response = api.uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    public void uniswapV3BundlesCurrentTest() throws ApiException {
+        List<UniswapV3BundleDTO> response = api.uniswapV3BundlesCurrent();
         // TODO: test validations
     }
 
@@ -108,65 +69,51 @@ public class UniswapV3ApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetBurnsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3BurnV3DTO> response = api.uniswapV3GetBurnsCurrent(filterPoolId);
+    public void uniswapV3BurnsCurrentTest() throws ApiException {
+        List<UniswapV3BurnDTO> response = api.uniswapV3BurnsCurrent();
         // TODO: test validations
     }
 
     /**
-     * DayData (current)
+     * Factorys (current)
      *
-     * Gets uniswapv3 day data.
+     * Gets factorys.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetDayDataCurrentTest() throws ApiException {
-        List<UniswapV3UniswapDayDataV3DTO> response = api.uniswapV3GetDayDataCurrent();
+    public void uniswapV3FactorysCurrentTest() throws ApiException {
+        List<UniswapV3FactoryDTO> response = api.uniswapV3FactorysCurrent();
         // TODO: test validations
     }
 
     /**
-     * Factory (current)
+     * Bundles (historical) 🔥
      *
-     * Gets factory.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetFactoryCurrentTest() throws ApiException {
-        List<UniswapV3FactoryV3DTO> response = api.uniswapV3GetFactoryCurrent();
-        // TODO: test validations
-    }
-
-    /**
-     * FactoryV3s (historical) 🔥
-     *
-     * Gets factoryv3s.
+     * Gets bundles.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetFactoryV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetBundlesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<UniswapV3FactoryV3DTO> response = api.uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<UniswapV3BundleDTO> response = api.uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
     /**
-     * MintV3s (historical) 🔥
+     * Burns (historical) 🔥
      *
-     * Gets mintv3s.
+     * Gets burns.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetMintV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetBurnsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
@@ -175,201 +122,135 @@ public class UniswapV3ApiTest {
         String pool = null;
         String token0 = null;
         String token1 = null;
-        List<UniswapV3MintV3DTO> response = api.uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+        List<UniswapV3BurnDTO> response = api.uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * Mints (current)
+     * Factorys (historical) 🔥
+     *
+     * Gets factorys.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetFactorysHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV3FactoryDTO> response = api.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * Mints (historical) 🔥
      *
      * Gets mints.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetMintsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3MintV3DTO> response = api.uniswapV3GetMintsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolDayDataV3s (historical) 🔥
-     *
-     * Gets pooldaydatav3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPoolDayDataV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetMintsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String pool = null;
-        List<UniswapV3PoolDayDataV3DTO> response = api.uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolHourDataV3s (historical) 🔥
-     *
-     * Gets poolhourdatav3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPoolHourDataV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String pool = null;
-        List<UniswapV3PoolHourDataV3DTO> response = api.uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolV3s (historical) 🔥
-     *
-     * Gets poolv3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPoolV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
         String token0 = null;
         String token1 = null;
-        List<UniswapV3PoolV3DTO> response = api.uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+        List<UniswapV3MintDTO> response = api.uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * Pools (current) 🔥
+     * PoolDayDatas (historical) 🔥
+     *
+     * Gets poolDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetPoolDayDatasHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pool = null;
+        List<UniswapV3PoolDayDataDTO> response = api.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        // TODO: test validations
+    }
+
+    /**
+     * PoolHourDatas (historical) 🔥
+     *
+     * Gets poolHourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetPoolHourDatasHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pool = null;
+        List<UniswapV3PoolHourDataDTO> response = api.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        // TODO: test validations
+    }
+
+    /**
+     * Pools (historical) 🔥
      *
      * Gets pools.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetPoolsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3PoolV3DTO> response = api.uniswapV3GetPoolsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolsDayData (current)
-     *
-     * Gets pools day data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPoolsDayDataCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3PoolDayDataV3DTO> response = api.uniswapV3GetPoolsDayDataCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolsHourData (current)
-     *
-     * Gets pools hour data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPoolsHourDataCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3PoolHourDataV3DTO> response = api.uniswapV3GetPoolsHourDataCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PositionSnapshotV3s (historical) 🔥
-     *
-     * Gets positionsnapshotv3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPositionSnapshotV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetPoolsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        String pool = null;
-        List<UniswapV3PositionSnapshotV3DTO> response = api.uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-        // TODO: test validations
-    }
-
-    /**
-     * PositionV3s (historical) 🔥
-     *
-     * Gets positionv3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPositionV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        String pool = null;
         String token0 = null;
         String token1 = null;
-        List<UniswapV3PositionV3DTO> response = api.uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+        List<UniswapV3PoolDTO> response = api.uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * Positions (current)
+     * PositionSnapshots (historical) 🔥
+     *
+     * Gets positionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetPositionSnapshotsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pool = null;
+        List<UniswapV3PositionSnapshotDTO> response = api.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        // TODO: test validations
+    }
+
+    /**
+     * Positions (historical) 🔥
      *
      * Gets positions.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetPositionsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3PositionV3DTO> response = api.uniswapV3GetPositionsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PositionsSnapshots (current)
-     *
-     * Gets positions snapshots.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetPositionsSnapshotsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3PositionSnapshotV3DTO> response = api.uniswapV3GetPositionsSnapshotsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * SwapV3s (historical) 🔥
-     *
-     * Gets swapv3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetSwapV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetPositionsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
@@ -378,112 +259,91 @@ public class UniswapV3ApiTest {
         String pool = null;
         String token0 = null;
         String token1 = null;
-        List<UniswapV3SwapV3DTO> response = api.uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+        List<UniswapV3PositionDTO> response = api.uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * Swaps (current) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets swaps.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetSwapsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3SwapV3DTO> response = api.uniswapV3GetSwapsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * TickDayDataV3s (historical) 🔥
-     *
-     * Gets tickdaydatav3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetTickDayDataV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetSwapsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String pool = null;
-        List<UniswapV3TickDayDataV3DTO> response = api.uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        String token0 = null;
+        String token1 = null;
+        List<UniswapV3SwapDTO> response = api.uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * TickV3s (historical) 🔥
+     * TickDayDatas (historical) 🔥
      *
-     * Gets tickv3s.
+     * Gets tickDayDatas.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTickV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetTickDayDatasHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String pool = null;
-        List<UniswapV3TickV3DTO> response = api.uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        List<UniswapV3TickDayDataDTO> response = api.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
         // TODO: test validations
     }
 
     /**
-     * Ticks (current)
+     * Ticks (historical) 🔥
      *
      * Gets ticks.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTicksCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3TickV3DTO> response = api.uniswapV3GetTicksCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * TicksDayData (current)
-     *
-     * Gets ticks day data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetTicksDayDataCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV3TickDayDataV3DTO> response = api.uniswapV3GetTicksDayDataCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * TokenHourDataV3s (historical) 🔥
-     *
-     * Gets tokenhourdatav3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetTokenHourDataV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetTicksHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<UniswapV3TokenHourDataV3DTO> response = api.uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+        String pool = null;
+        List<UniswapV3TickDTO> response = api.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenHourDatas (historical) 🔥
+     *
+     * Gets tokenHourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetTokenHourDatasHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV3TokenHourDataDTO> response = api.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
     /**
      * TokenV3DayDatas (historical) 🔥
      *
-     * Gets tokenv3daydatas.
+     * Gets tokenV3DayDatas.
      *
      * @throws ApiException if the Api call fails
      */
@@ -499,14 +359,14 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * TokenV3s (historical) 🔥
+     * Tokens (historical) 🔥
      *
-     * Gets tokenv3s.
+     * Gets tokens.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTokenV3sHistoricalTest() throws ApiException {
+    public void uniswapV3GetTokensHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
@@ -514,85 +374,227 @@ public class UniswapV3ApiTest {
         String id = null;
         String symbol = null;
         String name = null;
-        List<UniswapV3TokenV3DTO> response = api.uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+        List<UniswapV3TokenDTO> response = api.uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
         // TODO: test validations
     }
 
     /**
-     * Tokens (current) 🔥
+     * Transactions (historical) 🔥
+     *
+     * Gets transactions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetTransactionsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV3TransactionDTO> response = api.uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * UniswapDayDatas (historical) 🔥
+     *
+     * Gets uniswapDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3GetUniswapDayDatasHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV3UniswapDayDataDTO> response = api.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * Mints (current)
+     *
+     * Gets mints.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3MintsCurrentTest() throws ApiException {
+        List<UniswapV3MintDTO> response = api.uniswapV3MintsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * PoolDayDatas (current)
+     *
+     * Gets poolDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3PoolDayDatasCurrentTest() throws ApiException {
+        List<UniswapV3PoolDayDataDTO> response = api.uniswapV3PoolDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * PoolHourDatas (current)
+     *
+     * Gets poolHourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3PoolHourDatasCurrentTest() throws ApiException {
+        List<UniswapV3PoolHourDataDTO> response = api.uniswapV3PoolHourDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Pools (current)
+     *
+     * Gets pools.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3PoolsCurrentTest() throws ApiException {
+        String id = null;
+        List<UniswapV3PoolDTO> response = api.uniswapV3PoolsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * PositionSnapshots (current)
+     *
+     * Gets positionSnapshots.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3PositionSnapshotsCurrentTest() throws ApiException {
+        List<UniswapV3PositionSnapshotDTO> response = api.uniswapV3PositionSnapshotsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Positions (current)
+     *
+     * Gets positions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3PositionsCurrentTest() throws ApiException {
+        List<UniswapV3PositionDTO> response = api.uniswapV3PositionsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Swaps (current)
+     *
+     * Gets swaps.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3SwapsCurrentTest() throws ApiException {
+        String pool = null;
+        List<UniswapV3SwapDTO> response = api.uniswapV3SwapsCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * TickDayDatas (current)
+     *
+     * Gets tickDayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3TickDayDatasCurrentTest() throws ApiException {
+        List<UniswapV3TickDayDataDTO> response = api.uniswapV3TickDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Ticks (current)
+     *
+     * Gets ticks.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3TicksCurrentTest() throws ApiException {
+        List<UniswapV3TickDTO> response = api.uniswapV3TicksCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TokenHourDatas (current)
+     *
+     * Gets tokenHourDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3TokenHourDatasCurrentTest() throws ApiException {
+        List<UniswapV3TokenHourDataDTO> response = api.uniswapV3TokenHourDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TokenV3DayDatas (current)
+     *
+     * Gets tokenV3DayDatas.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV3TokenV3DayDatasCurrentTest() throws ApiException {
+        List<UniswapV3TokenV3DayDataDTO> response = api.uniswapV3TokenV3DayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
      *
      * Gets tokens.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTokensCurrentTest() throws ApiException {
-        String filterTokenId = null;
-        List<UniswapV3TokenV3DTO> response = api.uniswapV3GetTokensCurrent(filterTokenId);
+    public void uniswapV3TokensCurrentTest() throws ApiException {
+        List<UniswapV3TokenDTO> response = api.uniswapV3TokensCurrent();
         // TODO: test validations
     }
 
     /**
-     * TokensDayData (current)
+     * Transactions (current)
      *
-     * Gets tokens day data.
+     * Gets transactions.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTokensDayDataCurrentTest() throws ApiException {
-        String filterTokenId = null;
-        List<UniswapV3TokenV3DayDataDTO> response = api.uniswapV3GetTokensDayDataCurrent(filterTokenId);
+    public void uniswapV3TransactionsCurrentTest() throws ApiException {
+        List<UniswapV3TransactionDTO> response = api.uniswapV3TransactionsCurrent();
         // TODO: test validations
     }
 
     /**
-     * TokensHourData (current)
+     * UniswapDayDatas (current)
      *
-     * Gets tokens hour data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetTokensHourDataCurrentTest() throws ApiException {
-        String filterTokenId = null;
-        List<UniswapV3TokenHourDataV3DTO> response = api.uniswapV3GetTokensHourDataCurrent(filterTokenId);
-        // TODO: test validations
-    }
-
-    /**
-     * TransactionV3s (historical) 🔥
-     *
-     * Gets transactionv3s.
+     * Gets uniswapDayDatas.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV3GetTransactionV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        List<UniswapV3TransactionV3DTO> response = api.uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
-     * UniswapDayDataV3s (historical) 🔥
-     *
-     * Gets uniswapdaydatav3s.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV3GetUniswapDayDataV3sHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String id = null;
-        List<UniswapV3UniswapDayDataV3DTO> response = api.uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    public void uniswapV3UniswapDayDatasCurrentTest() throws ApiException {
+        List<UniswapV3UniswapDayDataDTO> response = api.uniswapV3UniswapDayDatasCurrent();
         // TODO: test validations
     }
 

@@ -26,25 +26,48 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// BundleV2s (historical) 🔥
+        /// Bundles (current)
         /// </summary>
         /// <remarks>
-        /// Gets bundlev2s.
+        /// Gets bundles.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Constant 1. (optional)</param>
-        /// <returns>List<UniswapV2BundleV2DTO></returns>
-        List<UniswapV2BundleV2DTO> UniswapV2GetBundleV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2BundleDTO></returns>
+        List<UniswapV2BundleDTO> UniswapV2BundlesCurrent ();
 
         /// <summary>
-        /// BundleV2s (historical) 🔥
+        /// Bundles (current)
         /// </summary>
         /// <remarks>
-        /// Gets bundlev2s.
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2BundleDTO></returns>
+        ApiResponse<List<UniswapV2BundleDTO>> UniswapV2BundlesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2BurnDTO></returns>
+        List<UniswapV2BurnDTO> UniswapV2BurnsCurrent ();
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2BurnDTO></returns>
+        ApiResponse<List<UniswapV2BurnDTO>> UniswapV2BurnsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Bundles (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -52,13 +75,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Constant 1. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2BundleV2DTO></returns>
-        ApiResponse<List<UniswapV2BundleV2DTO>> UniswapV2GetBundleV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2BundleDTO></returns>
+        List<UniswapV2BundleDTO> UniswapV2GetBundlesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+
         /// <summary>
-        /// BurnV2s (historical) 🔥
+        /// Bundles (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets burnv2s.
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Constant 1. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2BundleDTO></returns>
+        ApiResponse<List<UniswapV2BundleDTO>> UniswapV2GetBundlesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <summary>
+        /// Burns (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -67,14 +105,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2BurnV2DTO></returns>
-        List<UniswapV2BurnV2DTO> UniswapV2GetBurnV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>List<UniswapV2BurnDTO></returns>
+        List<UniswapV2BurnDTO> UniswapV2GetBurnsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
 
         /// <summary>
-        /// BurnV2s (historical) 🔥
+        /// Burns (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets burnv2s.
+        /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -83,13 +121,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2BurnV2DTO></returns>
-        ApiResponse<List<UniswapV2BurnV2DTO>> UniswapV2GetBurnV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2BurnDTO></returns>
+        ApiResponse<List<UniswapV2BurnDTO>> UniswapV2GetBurnsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥
+        /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshotv2s.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -99,14 +137,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
-        /// <returns>List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        List<UniswapV2LiquidityPositionSnapshotV2DTO> UniswapV2GetLiquidityPositionSnapshotV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
+        /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2GetLiquidityPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥
+        /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshotv2s.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -116,13 +154,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥
+        /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionv2s.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -132,14 +170,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">User address and pair address concatenated with a dash. (optional)</param>
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
-        /// <returns>List<UniswapV2LiquidityPositionV2DTO></returns>
-        List<UniswapV2LiquidityPositionV2DTO> UniswapV2GetLiquidityPositionV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
+        /// <returns>List<UniswapV2LiquidityPositionDTO></returns>
+        List<UniswapV2LiquidityPositionDTO> UniswapV2GetLiquidityPositionsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥
+        /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionv2s.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -149,13 +187,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">User address and pair address concatenated with a dash. (optional)</param>
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionV2DTO></returns>
-        ApiResponse<List<UniswapV2LiquidityPositionV2DTO>> UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionDTO></returns>
+        ApiResponse<List<UniswapV2LiquidityPositionDTO>> UniswapV2GetLiquidityPositionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
         /// <summary>
-        /// MintV2s (historical) 🔥
+        /// Mints (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets mintv2s.
+        /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -164,14 +202,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2MintV2DTO></returns>
-        List<UniswapV2MintV2DTO> UniswapV2GetMintV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>List<UniswapV2MintDTO></returns>
+        List<UniswapV2MintDTO> UniswapV2GetMintsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
 
         /// <summary>
-        /// MintV2s (historical) 🔥
+        /// Mints (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets mintv2s.
+        /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -180,13 +218,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2MintV2DTO></returns>
-        ApiResponse<List<UniswapV2MintV2DTO>> UniswapV2GetMintV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2MintDTO></returns>
+        ApiResponse<List<UniswapV2MintDTO>> UniswapV2GetMintsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥
+        /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatav2s.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -196,14 +234,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
-        /// <returns>List<UniswapV2PairDayDataV2DTO></returns>
-        List<UniswapV2PairDayDataV2DTO> UniswapV2GetPairDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
+        /// <returns>List<UniswapV2PairDayDataDTO></returns>
+        List<UniswapV2PairDayDataDTO> UniswapV2GetPairDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥
+        /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatav2s.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -213,13 +251,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairDayDataV2DTO></returns>
-        ApiResponse<List<UniswapV2PairDayDataV2DTO>> UniswapV2GetPairDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
+        /// <returns>ApiResponse of List<UniswapV2PairDayDataDTO></returns>
+        ApiResponse<List<UniswapV2PairDayDataDTO>> UniswapV2GetPairDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥
+        /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatav2s.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -228,14 +266,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
-        /// <returns>List<UniswapV2PairHourDataV2DTO></returns>
-        List<UniswapV2PairHourDataV2DTO> UniswapV2GetPairHourDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>List<UniswapV2PairHourDataDTO></returns>
+        List<UniswapV2PairHourDataDTO> UniswapV2GetPairHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥
+        /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatav2s.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -244,13 +282,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairHourDataV2DTO></returns>
-        ApiResponse<List<UniswapV2PairHourDataV2DTO>> UniswapV2GetPairHourDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2PairHourDataDTO></returns>
+        ApiResponse<List<UniswapV2PairHourDataDTO>> UniswapV2GetPairHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
         /// <summary>
-        /// PairV2s (historical) 🔥
+        /// Pairs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairv2s.
+        /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -260,14 +298,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Pair contract address. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
-        /// <returns>List<UniswapV2PairV2DTO></returns>
-        List<UniswapV2PairV2DTO> UniswapV2GetPairV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
+        /// <returns>List<UniswapV2PairDTO></returns>
+        List<UniswapV2PairDTO> UniswapV2GetPairsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
 
         /// <summary>
-        /// PairV2s (historical) 🔥
+        /// Pairs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairv2s.
+        /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -277,8 +315,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Pair contract address. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
-        ApiResponse<List<UniswapV2PairV2DTO>> UniswapV2GetPairV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        ApiResponse<List<UniswapV2PairDTO>> UniswapV2GetPairsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string));
         /// <summary>
         /// Pools (current) 🔥
         /// </summary>
@@ -287,8 +325,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
-        /// <returns>List<UniswapV2PairV2DTO></returns>
-        List<UniswapV2PairV2DTO> UniswapV2GetPoolsCurrent (string filterPoolId = default(string));
+        /// <returns>List<UniswapV2PairDTO></returns>
+        List<UniswapV2PairDTO> UniswapV2GetPoolsCurrent (string filterPoolId = default(string));
 
         /// <summary>
         /// Pools (current) 🔥
@@ -298,39 +336,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
-        ApiResponse<List<UniswapV2PairV2DTO>> UniswapV2GetPoolsCurrentWithHttpInfo (string filterPoolId = default(string));
-        /// <summary>
-        /// SwapV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swapv2s.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2SwapV2DTO></returns>
-        List<UniswapV2SwapV2DTO> UniswapV2GetSwapV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swapv2s.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
-        ApiResponse<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        ApiResponse<List<UniswapV2PairDTO>> UniswapV2GetPoolsCurrentWithHttpInfo (string filterPoolId = default(string));
         /// <summary>
         /// Swaps (current) 🔥
         /// </summary>
@@ -338,8 +345,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets swaps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<UniswapV2SwapV2DTO></returns>
-        List<UniswapV2SwapV2DTO> UniswapV2GetSwapsCurrent ();
+        /// <returns>List<UniswapV2SwapDTO></returns>
+        List<UniswapV2SwapDTO> UniswapV2GetSwapsCurrent ();
 
         /// <summary>
         /// Swaps (current) 🔥
@@ -348,28 +355,44 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets swaps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
-        ApiResponse<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapsCurrentWithHttpInfo ();
+        /// <returns>ApiResponse of List<UniswapV2SwapDTO></returns>
+        ApiResponse<List<UniswapV2SwapDTO>> UniswapV2GetSwapsCurrentWithHttpInfo ();
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥
+        /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatav2s.
+        /// Gets swaps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
-        /// <returns>List<UniswapV2TokenDayDataV2DTO></returns>
-        List<UniswapV2TokenDayDataV2DTO> UniswapV2GetTokenDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>List<UniswapV2SwapDTO></returns>
+        List<UniswapV2SwapDTO> UniswapV2GetSwapsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥
+        /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatav2s.
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2SwapDTO></returns>
+        ApiResponse<List<UniswapV2SwapDTO>> UniswapV2GetSwapsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string));
+        /// <summary>
+        /// TokenDayDatas (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -377,13 +400,47 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TokenDayDataV2DTO></returns>
-        ApiResponse<List<UniswapV2TokenDayDataV2DTO>> UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2TokenDayDataDTO></returns>
+        List<UniswapV2TokenDayDataDTO> UniswapV2GetTokenDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+
         /// <summary>
-        /// TokenV2s (historical) 🔥
+        /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokenv2s.
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2TokenDayDataDTO></returns>
+        ApiResponse<List<UniswapV2TokenDayDataDTO>> UniswapV2GetTokenDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <summary>
+        /// Tokens (current) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2TokenDTO></returns>
+        List<UniswapV2TokenDTO> UniswapV2GetTokensCurrent ();
+
+        /// <summary>
+        /// Tokens (current) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2TokenDTO></returns>
+        ApiResponse<List<UniswapV2TokenDTO>> UniswapV2GetTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// Tokens (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -393,14 +450,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address. (optional)</param>
         /// <param name="symbol">Token symbol. (optional)</param>
         /// <param name="name">Token name. (optional)</param>
-        /// <returns>List<UniswapV2TokenV2DTO></returns>
-        List<UniswapV2TokenV2DTO> UniswapV2GetTokenV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string));
+        /// <returns>List<UniswapV2TokenDTO></returns>
+        List<UniswapV2TokenDTO> UniswapV2GetTokensHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string));
 
         /// <summary>
-        /// TokenV2s (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokenv2s.
+        /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -410,32 +467,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address. (optional)</param>
         /// <param name="symbol">Token symbol. (optional)</param>
         /// <param name="name">Token name. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
-        ApiResponse<List<UniswapV2TokenV2DTO>> UniswapV2GetTokenV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string));
+        /// <returns>ApiResponse of List<UniswapV2TokenDTO></returns>
+        ApiResponse<List<UniswapV2TokenDTO>> UniswapV2GetTokensHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string));
         /// <summary>
-        /// Tokens (current) 🔥
+        /// Transactions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<UniswapV2TokenV2DTO></returns>
-        List<UniswapV2TokenV2DTO> UniswapV2GetTokensCurrent ();
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
-        ApiResponse<List<UniswapV2TokenV2DTO>> UniswapV2GetTokensCurrentWithHttpInfo ();
-        /// <summary>
-        /// TransactionV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets transactionv2s.
+        /// Gets transactions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -443,14 +481,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
-        /// <returns>List<UniswapV2TransactionV2DTO></returns>
-        List<UniswapV2TransactionV2DTO> UniswapV2GetTransactionV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2TransactionDTO></returns>
+        List<UniswapV2TransactionDTO> UniswapV2GetTransactionsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥
+        /// Transactions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transactionv2s.
+        /// Gets transactions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -458,13 +496,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TransactionV2DTO></returns>
-        ApiResponse<List<UniswapV2TransactionV2DTO>> UniswapV2GetTransactionV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>ApiResponse of List<UniswapV2TransactionDTO></returns>
+        ApiResponse<List<UniswapV2TransactionDTO>> UniswapV2GetTransactionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥
+        /// UniswapDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapdaydatav2s.
+        /// Gets uniswapDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -472,14 +510,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
-        /// <returns>List<UniswapV2UniswapDayDataV2DTO></returns>
-        List<UniswapV2UniswapDayDataV2DTO> UniswapV2GetUniswapDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2UniswapDayDataDTO></returns>
+        List<UniswapV2UniswapDayDataDTO> UniswapV2GetUniswapDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥
+        /// UniswapDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapdaydatav2s.
+        /// Gets uniswapDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -487,13 +525,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataV2DTO></returns>
-        ApiResponse<List<UniswapV2UniswapDayDataV2DTO>> UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataDTO></returns>
+        ApiResponse<List<UniswapV2UniswapDayDataDTO>> UniswapV2GetUniswapDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥
+        /// UniswapFactorys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapfactoryv2s.
+        /// Gets uniswapFactorys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -501,14 +539,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
-        /// <returns>List<UniswapV2UniswapFactoryV2DTO></returns>
-        List<UniswapV2UniswapFactoryV2DTO> UniswapV2GetUniswapFactoryV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2UniswapFactoryDTO></returns>
+        List<UniswapV2UniswapFactoryDTO> UniswapV2GetUniswapFactorysHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥
+        /// UniswapFactorys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapfactoryv2s.
+        /// Gets uniswapFactorys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -516,13 +554,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryV2DTO></returns>
-        ApiResponse<List<UniswapV2UniswapFactoryV2DTO>> UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryDTO></returns>
+        ApiResponse<List<UniswapV2UniswapFactoryDTO>> UniswapV2GetUniswapFactorysHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// UserV2s (historical) 🔥
+        /// Users (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets userv2s.
+        /// Gets users.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -530,14 +568,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
-        /// <returns>List<UniswapV2UserV2DTO></returns>
-        List<UniswapV2UserV2DTO> UniswapV2GetUserV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>List<UniswapV2UserDTO></returns>
+        List<UniswapV2UserDTO> UniswapV2GetUsersHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// UserV2s (historical) 🔥
+        /// Users (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets userv2s.
+        /// Gets users.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -545,31 +583,268 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UserV2DTO></returns>
-        ApiResponse<List<UniswapV2UserV2DTO>> UniswapV2GetUserV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <returns>ApiResponse of List<UniswapV2UserDTO></returns>
+        ApiResponse<List<UniswapV2UserDTO>> UniswapV2GetUsersHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2LiquidityPositionSnapshotsCurrent ();
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfo ();
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2LiquidityPositionDTO></returns>
+        List<UniswapV2LiquidityPositionDTO> UniswapV2LiquidityPositionsCurrent ();
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionDTO></returns>
+        ApiResponse<List<UniswapV2LiquidityPositionDTO>> UniswapV2LiquidityPositionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2MintDTO></returns>
+        List<UniswapV2MintDTO> UniswapV2MintsCurrent ();
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2MintDTO></returns>
+        ApiResponse<List<UniswapV2MintDTO>> UniswapV2MintsCurrentWithHttpInfo ();
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2PairDayDataDTO></returns>
+        List<UniswapV2PairDayDataDTO> UniswapV2PairDayDatasCurrent ();
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2PairDayDataDTO></returns>
+        ApiResponse<List<UniswapV2PairDayDataDTO>> UniswapV2PairDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2PairHourDataDTO></returns>
+        List<UniswapV2PairHourDataDTO> UniswapV2PairHourDatasCurrent ();
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2PairHourDataDTO></returns>
+        ApiResponse<List<UniswapV2PairHourDataDTO>> UniswapV2PairHourDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>List<UniswapV2PairDTO></returns>
+        List<UniswapV2PairDTO> UniswapV2PairsCurrent (string id = default(string));
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        ApiResponse<List<UniswapV2PairDTO>> UniswapV2PairsCurrentWithHttpInfo (string id = default(string));
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2TokenDayDataDTO></returns>
+        List<UniswapV2TokenDayDataDTO> UniswapV2TokenDayDatasCurrent ();
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2TokenDayDataDTO></returns>
+        ApiResponse<List<UniswapV2TokenDayDataDTO>> UniswapV2TokenDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2TransactionDTO></returns>
+        List<UniswapV2TransactionDTO> UniswapV2TransactionsCurrent ();
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2TransactionDTO></returns>
+        ApiResponse<List<UniswapV2TransactionDTO>> UniswapV2TransactionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// UniswapDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UniswapDayDataDTO></returns>
+        List<UniswapV2UniswapDayDataDTO> UniswapV2UniswapDayDatasCurrent ();
+
+        /// <summary>
+        /// UniswapDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataDTO></returns>
+        ApiResponse<List<UniswapV2UniswapDayDataDTO>> UniswapV2UniswapDayDatasCurrentWithHttpInfo ();
+        /// <summary>
+        /// UniswapFactorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapFactorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UniswapFactoryDTO></returns>
+        List<UniswapV2UniswapFactoryDTO> UniswapV2UniswapFactorysCurrent ();
+
+        /// <summary>
+        /// UniswapFactorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapFactorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryDTO></returns>
+        ApiResponse<List<UniswapV2UniswapFactoryDTO>> UniswapV2UniswapFactorysCurrentWithHttpInfo ();
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UserDTO></returns>
+        List<UniswapV2UserDTO> UniswapV2UsersCurrent ();
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UserDTO></returns>
+        ApiResponse<List<UniswapV2UserDTO>> UniswapV2UsersCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// BundleV2s (historical) 🔥
+        /// Bundles (current)
         /// </summary>
         /// <remarks>
-        /// Gets bundlev2s.
+        /// Gets bundles.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Constant 1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2BundleV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2BundleV2DTO>> UniswapV2GetBundleV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2BundleDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2BundleDTO>> UniswapV2BundlesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// BundleV2s (historical) 🔥
+        /// Bundles (current)
         /// </summary>
         /// <remarks>
-        /// Gets bundlev2s.
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleDTO>>> UniswapV2BundlesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2BurnDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2BurnDTO>> UniswapV2BurnsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Burns (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnDTO>>> UniswapV2BurnsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Bundles (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets bundles.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -578,13 +853,29 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Constant 1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleV2DTO>>> UniswapV2GetBundleV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2BundleDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2BundleDTO>> UniswapV2GetBundlesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
         /// <summary>
-        /// BurnV2s (historical) 🔥
+        /// Bundles (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets burnv2s.
+        /// Gets bundles.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Constant 1. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleDTO>>> UniswapV2GetBundlesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Burns (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -594,14 +885,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2BurnV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2BurnV2DTO>> UniswapV2GetBurnV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2BurnDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2BurnDTO>> UniswapV2GetBurnsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// BurnV2s (historical) 🔥
+        /// Burns (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets burnv2s.
+        /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -611,13 +902,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnV2DTO>>> UniswapV2GetBurnV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnDTO>>> UniswapV2GetBurnsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥
+        /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshotv2s.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -628,14 +919,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotV2DTO>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥
+        /// LiquidityPositionSnapshots (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionsnapshotv2s.
+        /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -646,13 +937,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥
+        /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionv2s.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -663,14 +954,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2LiquidityPositionV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionV2DTO>> UniswapV2GetLiquidityPositionV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2LiquidityPositionDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionDTO>> UniswapV2GetLiquidityPositionsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥
+        /// LiquidityPositions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets liquiditypositionv2s.
+        /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -681,13 +972,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionV2DTO>>> UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionDTO>>> UniswapV2GetLiquidityPositionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// MintV2s (historical) 🔥
+        /// Mints (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets mintv2s.
+        /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -697,14 +988,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2MintV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2MintV2DTO>> UniswapV2GetMintV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2MintDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2MintDTO>> UniswapV2GetMintsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// MintV2s (historical) 🔥
+        /// Mints (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets mintv2s.
+        /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -714,13 +1005,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintV2DTO>>> UniswapV2GetMintV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintDTO>>> UniswapV2GetMintsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥
+        /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatav2s.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -731,14 +1022,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairDayDataV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2PairDayDataV2DTO>> UniswapV2GetPairDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2PairDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairDayDataDTO>> UniswapV2GetPairDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥
+        /// PairDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairdaydatav2s.
+        /// Gets pairDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -749,13 +1040,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataV2DTO>>> UniswapV2GetPairDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataDTO>>> UniswapV2GetPairDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥
+        /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatav2s.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -765,14 +1056,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairHourDataV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2PairHourDataV2DTO>> UniswapV2GetPairHourDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2PairHourDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairHourDataDTO>> UniswapV2GetPairHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥
+        /// PairHourDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairhourdatav2s.
+        /// Gets pairHourDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -782,13 +1073,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataV2DTO>>> UniswapV2GetPairHourDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataDTO>>> UniswapV2GetPairHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PairV2s (historical) 🔥
+        /// Pairs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairv2s.
+        /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -799,14 +1090,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> UniswapV2GetPairV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2GetPairsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PairV2s (historical) 🔥
+        /// Pairs (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets pairv2s.
+        /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -817,8 +1108,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> UniswapV2GetPairV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2GetPairsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Pools (current) 🔥
         /// </summary>
@@ -828,8 +1119,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> UniswapV2GetPoolsCurrentAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2GetPoolsCurrentAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Pools (current) 🔥
@@ -840,41 +1131,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> UniswapV2GetPoolsCurrentWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// SwapV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swapv2s.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets swapv2s.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> UniswapV2GetSwapV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2GetPoolsCurrentWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Swaps (current) 🔥
         /// </summary>
@@ -883,8 +1141,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2SwapDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2SwapDTO>> UniswapV2GetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Swaps (current) 🔥
@@ -894,29 +1152,46 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> UniswapV2GetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapDTO>>> UniswapV2GetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥
+        /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatav2s.
+        /// Gets swaps.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenDayDataV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2TokenDayDataV2DTO>> UniswapV2GetTokenDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2SwapDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2SwapDTO>> UniswapV2GetSwapsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥
+        /// Swaps (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokendaydatav2s.
+        /// Gets swaps.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapDTO>>> UniswapV2GetSwapsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenDayDatas (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -925,13 +1200,50 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataV2DTO>>> UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2TokenDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TokenDayDataDTO>> UniswapV2GetTokenDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
         /// <summary>
-        /// TokenV2s (historical) 🔥
+        /// TokenDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokenv2s.
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataDTO>>> UniswapV2GetTokenDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (current) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TokenDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TokenDTO>> UniswapV2GetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Tokens (current) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDTO>>> UniswapV2GetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (historical) 🔥
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -942,14 +1254,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="symbol">Token symbol. (optional)</param>
         /// <param name="name">Token name. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> UniswapV2GetTokenV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2TokenDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TokenDTO>> UniswapV2GetTokensHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenV2s (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokenv2s.
+        /// Gets tokens.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -960,34 +1272,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="symbol">Token symbol. (optional)</param>
         /// <param name="name">Token name. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> UniswapV2GetTokenV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDTO>>> UniswapV2GetTokensHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Tokens (current) 🔥
+        /// Transactions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> UniswapV2GetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Tokens (current) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets tokens.
-        /// </remarks>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> UniswapV2GetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// TransactionV2s (historical) 🔥
-        /// </summary>
-        /// <remarks>
-        /// Gets transactionv2s.
+        /// Gets transactions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -996,14 +1287,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TransactionV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2TransactionV2DTO>> UniswapV2GetTransactionV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2TransactionDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TransactionDTO>> UniswapV2GetTransactionsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥
+        /// Transactions (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets transactionv2s.
+        /// Gets transactions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1012,13 +1303,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionV2DTO>>> UniswapV2GetTransactionV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionDTO>>> UniswapV2GetTransactionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥
+        /// UniswapDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapdaydatav2s.
+        /// Gets uniswapDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1027,14 +1318,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UniswapDayDataV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataV2DTO>> UniswapV2GetUniswapDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2UniswapDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataDTO>> UniswapV2GetUniswapDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥
+        /// UniswapDayDatas (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapdaydatav2s.
+        /// Gets uniswapDayDatas.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1043,13 +1334,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataV2DTO>>> UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataDTO>>> UniswapV2GetUniswapDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥
+        /// UniswapFactorys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapfactoryv2s.
+        /// Gets uniswapFactorys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1058,14 +1349,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UniswapFactoryV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryV2DTO>> UniswapV2GetUniswapFactoryV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2UniswapFactoryDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryDTO>> UniswapV2GetUniswapFactorysHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥
+        /// UniswapFactorys (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets uniswapfactoryv2s.
+        /// Gets uniswapFactorys.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1074,13 +1365,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryV2DTO>>> UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryDTO>>> UniswapV2GetUniswapFactorysHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// UserV2s (historical) 🔥
+        /// Users (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets userv2s.
+        /// Gets users.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1089,14 +1380,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UserV2DTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV2UserV2DTO>> UniswapV2GetUserV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of List<UniswapV2UserDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UserDTO>> UniswapV2GetUsersHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// UserV2s (historical) 🔥
+        /// Users (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets userv2s.
+        /// Gets users.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1105,8 +1396,241 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserV2DTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserV2DTO>>> UniswapV2GetUserV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserDTO>>> UniswapV2GetUsersHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2LiquidityPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositionSnapshots.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2LiquidityPositionDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionDTO>> UniswapV2LiquidityPositionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// LiquidityPositions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets liquidityPositions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionDTO>>> UniswapV2LiquidityPositionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2MintDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2MintDTO>> UniswapV2MintsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Mints (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets mints.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintDTO>>> UniswapV2MintsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairDayDataDTO>> UniswapV2PairDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PairDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataDTO>>> UniswapV2PairDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairHourDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairHourDataDTO>> UniswapV2PairHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// PairHourDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairHourDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataDTO>>> UniswapV2PairHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2PairsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Pairs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets pairs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2PairsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TokenDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TokenDayDataDTO>> UniswapV2TokenDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// TokenDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokenDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataDTO>>> UniswapV2TokenDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TransactionDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2TransactionDTO>> UniswapV2TransactionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Transactions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets transactions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionDTO>>> UniswapV2TransactionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UniswapDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UniswapDayDataDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataDTO>> UniswapV2UniswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UniswapDayDatas (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapDayDatas.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataDTO>>> UniswapV2UniswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// UniswapFactorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapFactorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UniswapFactoryDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryDTO>> UniswapV2UniswapFactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// UniswapFactorys (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets uniswapFactorys.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryDTO>>> UniswapV2UniswapFactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UserDTO></returns>
+        System.Threading.Tasks.Task<List<UniswapV2UserDTO>> UniswapV2UsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserDTO>>> UniswapV2UsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1219,23 +1743,261 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// BundleV2s (historical) 🔥 Gets bundlev2s.
+        /// Bundles (current) Gets bundles.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Constant 1. (optional)</param>
-        /// <returns>List<UniswapV2BundleV2DTO></returns>
-        public List<UniswapV2BundleV2DTO> UniswapV2GetBundleV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2BundleDTO></returns>
+        public List<UniswapV2BundleDTO> UniswapV2BundlesCurrent ()
         {
-             ApiResponse<List<UniswapV2BundleV2DTO>> localVarResponse = UniswapV2GetBundleV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2BundleDTO>> localVarResponse = UniswapV2BundlesCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// BundleV2s (historical) 🔥 Gets bundlev2s.
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2BundleDTO></returns>
+        public ApiResponse<List<UniswapV2BundleDTO>> UniswapV2BundlesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/bundles/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2BundlesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2BundleDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2BundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleDTO>)));
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2BundleDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2BundleDTO>> UniswapV2BundlesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2BundleDTO>> localVarResponse = await UniswapV2BundlesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bundles (current) Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleDTO>>> UniswapV2BundlesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/bundles/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2BundlesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2BundleDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2BundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleDTO>)));
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2BurnDTO></returns>
+        public List<UniswapV2BurnDTO> UniswapV2BurnsCurrent ()
+        {
+             ApiResponse<List<UniswapV2BurnDTO>> localVarResponse = UniswapV2BurnsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2BurnDTO></returns>
+        public ApiResponse<List<UniswapV2BurnDTO>> UniswapV2BurnsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/burns/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2BurnsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2BurnDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2BurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnDTO>)));
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2BurnDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2BurnDTO>> UniswapV2BurnsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2BurnDTO>> localVarResponse = await UniswapV2BurnsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Burns (current) Gets burns.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnDTO>>> UniswapV2BurnsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/burns/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2BurnsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2BurnDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2BurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnDTO>)));
+        }
+
+        /// <summary>
+        /// Bundles (historical) 🔥 Gets bundles.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1243,11 +2005,27 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Constant 1. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2BundleV2DTO></returns>
-        public ApiResponse<List<UniswapV2BundleV2DTO>> UniswapV2GetBundleV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2BundleDTO></returns>
+        public List<UniswapV2BundleDTO> UniswapV2GetBundlesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        {
+             ApiResponse<List<UniswapV2BundleDTO>> localVarResponse = UniswapV2GetBundlesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bundles (historical) 🔥 Gets bundles.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Constant 1. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2BundleDTO></returns>
+        public ApiResponse<List<UniswapV2BundleDTO>> UniswapV2GetBundlesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/bundlev2s/historical";
+            var localVarPath = "/dapps/uniswapv2/bundles/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1286,17 +2064,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetBundleV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetBundlesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2BundleV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2BundleDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2BundleV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleV2DTO>)));
+                (List<UniswapV2BundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleDTO>)));
         }
 
         /// <summary>
-        /// BundleV2s (historical) 🔥 Gets bundlev2s.
+        /// Bundles (historical) 🔥 Gets bundles.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1305,16 +2083,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Constant 1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2BundleV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2BundleV2DTO>> UniswapV2GetBundleV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2BundleDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2BundleDTO>> UniswapV2GetBundlesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2BundleV2DTO>> localVarResponse = await UniswapV2GetBundleV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2BundleDTO>> localVarResponse = await UniswapV2GetBundlesHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// BundleV2s (historical) 🔥 Gets bundlev2s.
+        /// Bundles (historical) 🔥 Gets bundles.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1323,11 +2101,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Constant 1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleV2DTO>>> UniswapV2GetBundleV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BundleDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BundleDTO>>> UniswapV2GetBundlesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/bundlev2s/historical";
+            var localVarPath = "/dapps/uniswapv2/bundles/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1366,17 +2144,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetBundleV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetBundlesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2BundleV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2BundleDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2BundleV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleV2DTO>)));
+                (List<UniswapV2BundleDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BundleDTO>)));
         }
 
         /// <summary>
-        /// BurnV2s (historical) 🔥 Gets burnv2s.
+        /// Burns (historical) 🔥 Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1385,15 +2163,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2BurnV2DTO></returns>
-        public List<UniswapV2BurnV2DTO> UniswapV2GetBurnV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>List<UniswapV2BurnDTO></returns>
+        public List<UniswapV2BurnDTO> UniswapV2GetBurnsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2BurnV2DTO>> localVarResponse = UniswapV2GetBurnV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
+             ApiResponse<List<UniswapV2BurnDTO>> localVarResponse = UniswapV2GetBurnsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// BurnV2s (historical) 🔥 Gets burnv2s.
+        /// Burns (historical) 🔥 Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1402,11 +2180,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2BurnV2DTO></returns>
-        public ApiResponse<List<UniswapV2BurnV2DTO>> UniswapV2GetBurnV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>ApiResponse of List<UniswapV2BurnDTO></returns>
+        public ApiResponse<List<UniswapV2BurnDTO>> UniswapV2GetBurnsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/burnv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/burns/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1446,17 +2224,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetBurnV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetBurnsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2BurnV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2BurnDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2BurnV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnV2DTO>)));
+                (List<UniswapV2BurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnDTO>)));
         }
 
         /// <summary>
-        /// BurnV2s (historical) 🔥 Gets burnv2s.
+        /// Burns (historical) 🔥 Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1466,16 +2244,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2BurnV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2BurnV2DTO>> UniswapV2GetBurnV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2BurnDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2BurnDTO>> UniswapV2GetBurnsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2BurnV2DTO>> localVarResponse = await UniswapV2GetBurnV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
+             ApiResponse<List<UniswapV2BurnDTO>> localVarResponse = await UniswapV2GetBurnsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// BurnV2s (historical) 🔥 Gets burnv2s.
+        /// Burns (historical) 🔥 Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1485,11 +2263,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction burn array (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnV2DTO>>> UniswapV2GetBurnV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2BurnDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2BurnDTO>>> UniswapV2GetBurnsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/burnv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/burns/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1529,17 +2307,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetBurnV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetBurnsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2BurnV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2BurnDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2BurnV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnV2DTO>)));
+                (List<UniswapV2BurnDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2BurnDTO>)));
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥 Gets liquiditypositionsnapshotv2s.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1549,15 +2327,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
-        /// <returns>List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        public List<UniswapV2LiquidityPositionSnapshotV2DTO> UniswapV2GetLiquidityPositionSnapshotV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
+        /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2GetLiquidityPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>> localVarResponse = UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
+             ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> localVarResponse = UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥 Gets liquiditypositionsnapshotv2s.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1567,11 +2345,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        public ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/liquidityPositionSnapshots/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1612,17 +2390,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionSnapshotV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionSnapshotsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2LiquidityPositionSnapshotV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotV2DTO>)));
+                (List<UniswapV2LiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotDTO>)));
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥 Gets liquiditypositionsnapshotv2s.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1633,16 +2411,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotV2DTO>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>> localVarResponse = await UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, pair, cancellationToken);
+             ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> localVarResponse = await UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, pair, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// LiquidityPositionSnapshotV2s (historical) 🔥 Gets liquiditypositionsnapshotv2s.
+        /// LiquidityPositionSnapshots (historical) 🔥 Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1653,11 +2431,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="pair"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>>> UniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/liquidityPositionSnapshots/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1698,17 +2476,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionSnapshotV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionSnapshotsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2LiquidityPositionSnapshotV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotV2DTO>)));
+                (List<UniswapV2LiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotDTO>)));
         }
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥 Gets liquiditypositionv2s.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1718,15 +2496,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">User address and pair address concatenated with a dash. (optional)</param>
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
-        /// <returns>List<UniswapV2LiquidityPositionV2DTO></returns>
-        public List<UniswapV2LiquidityPositionV2DTO> UniswapV2GetLiquidityPositionV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
+        /// <returns>List<UniswapV2LiquidityPositionDTO></returns>
+        public List<UniswapV2LiquidityPositionDTO> UniswapV2GetLiquidityPositionsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2LiquidityPositionV2DTO>> localVarResponse = UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
+             ApiResponse<List<UniswapV2LiquidityPositionDTO>> localVarResponse = UniswapV2GetLiquidityPositionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥 Gets liquiditypositionv2s.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1736,11 +2514,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">User address and pair address concatenated with a dash. (optional)</param>
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionV2DTO></returns>
-        public ApiResponse<List<UniswapV2LiquidityPositionV2DTO>> UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionDTO></returns>
+        public ApiResponse<List<UniswapV2LiquidityPositionDTO>> UniswapV2GetLiquidityPositionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/liquiditypositionv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/liquidityPositions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1781,17 +2559,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2LiquidityPositionV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2LiquidityPositionDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2LiquidityPositionV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionV2DTO>)));
+                (List<UniswapV2LiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionDTO>)));
         }
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥 Gets liquiditypositionv2s.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1802,16 +2580,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2LiquidityPositionV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionV2DTO>> UniswapV2GetLiquidityPositionV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2LiquidityPositionDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionDTO>> UniswapV2GetLiquidityPositionsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2LiquidityPositionV2DTO>> localVarResponse = await UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, pair, cancellationToken);
+             ApiResponse<List<UniswapV2LiquidityPositionDTO>> localVarResponse = await UniswapV2GetLiquidityPositionsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, pair, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// LiquidityPositionV2s (historical) 🔥 Gets liquiditypositionv2s.
+        /// LiquidityPositions (historical) 🔥 Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1822,11 +2600,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user">Reference to user. (optional)</param>
         /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionV2DTO>>> UniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionDTO>>> UniswapV2GetLiquidityPositionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/liquiditypositionv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/liquidityPositions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1867,17 +2645,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetLiquidityPositionsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2LiquidityPositionV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2LiquidityPositionDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2LiquidityPositionV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionV2DTO>)));
+                (List<UniswapV2LiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionDTO>)));
         }
 
         /// <summary>
-        /// MintV2s (historical) 🔥 Gets mintv2s.
+        /// Mints (historical) 🔥 Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1886,15 +2664,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2MintV2DTO></returns>
-        public List<UniswapV2MintV2DTO> UniswapV2GetMintV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>List<UniswapV2MintDTO></returns>
+        public List<UniswapV2MintDTO> UniswapV2GetMintsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2MintV2DTO>> localVarResponse = UniswapV2GetMintV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
+             ApiResponse<List<UniswapV2MintDTO>> localVarResponse = UniswapV2GetMintsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// MintV2s (historical) 🔥 Gets mintv2s.
+        /// Mints (historical) 🔥 Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1903,11 +2681,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2MintV2DTO></returns>
-        public ApiResponse<List<UniswapV2MintV2DTO>> UniswapV2GetMintV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>ApiResponse of List<UniswapV2MintDTO></returns>
+        public ApiResponse<List<UniswapV2MintDTO>> UniswapV2GetMintsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/mintv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/mints/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1947,17 +2725,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetMintV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetMintsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2MintV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2MintDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2MintV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintV2DTO>)));
+                (List<UniswapV2MintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintDTO>)));
         }
 
         /// <summary>
-        /// MintV2s (historical) 🔥 Gets mintv2s.
+        /// Mints (historical) 🔥 Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1967,16 +2745,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2MintV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2MintV2DTO>> UniswapV2GetMintV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2MintDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2MintDTO>> UniswapV2GetMintsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2MintV2DTO>> localVarResponse = await UniswapV2GetMintV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
+             ApiResponse<List<UniswapV2MintDTO>> localVarResponse = await UniswapV2GetMintsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// MintV2s (historical) 🔥 Gets mintv2s.
+        /// Mints (historical) 🔥 Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1986,11 +2764,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Transaction hash plus index in the transaction mint array. (optional)</param>
         /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintV2DTO>>> UniswapV2GetMintV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintDTO>>> UniswapV2GetMintsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/mintv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/mints/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2030,17 +2808,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetMintV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetMintsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2MintV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2MintDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2MintV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintV2DTO>)));
+                (List<UniswapV2MintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintDTO>)));
         }
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥 Gets pairdaydatav2s.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2050,15 +2828,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
-        /// <returns>List<UniswapV2PairDayDataV2DTO></returns>
-        public List<UniswapV2PairDayDataV2DTO> UniswapV2GetPairDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
+        /// <returns>List<UniswapV2PairDayDataDTO></returns>
+        public List<UniswapV2PairDayDataDTO> UniswapV2GetPairDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
         {
-             ApiResponse<List<UniswapV2PairDayDataV2DTO>> localVarResponse = UniswapV2GetPairDayDataV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
+             ApiResponse<List<UniswapV2PairDayDataDTO>> localVarResponse = UniswapV2GetPairDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥 Gets pairdaydatav2s.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2068,11 +2846,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairDayDataV2DTO></returns>
-        public ApiResponse<List<UniswapV2PairDayDataV2DTO>> UniswapV2GetPairDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
+        /// <returns>ApiResponse of List<UniswapV2PairDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2PairDayDataDTO>> UniswapV2GetPairDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairdaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2113,17 +2891,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataV2DTO>)));
+                (List<UniswapV2PairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataDTO>)));
         }
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥 Gets pairdaydatav2s.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2134,16 +2912,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairDayDataV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2PairDayDataV2DTO>> UniswapV2GetPairDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2PairDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairDayDataDTO>> UniswapV2GetPairDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2PairDayDataV2DTO>> localVarResponse = await UniswapV2GetPairDayDataV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, token0, token1, cancellationToken);
+             ApiResponse<List<UniswapV2PairDayDataDTO>> localVarResponse = await UniswapV2GetPairDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, token0, token1, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PairDayDataV2s (historical) 🔥 Gets pairdaydatav2s.
+        /// PairDayDatas (historical) 🔥 Gets pairDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2154,11 +2932,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0. (optional)</param>
         /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataV2DTO>>> UniswapV2GetPairDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataDTO>>> UniswapV2GetPairDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairdaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2199,17 +2977,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataV2DTO>)));
+                (List<UniswapV2PairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataDTO>)));
         }
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥 Gets pairhourdatav2s.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2218,15 +2996,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
-        /// <returns>List<UniswapV2PairHourDataV2DTO></returns>
-        public List<UniswapV2PairHourDataV2DTO> UniswapV2GetPairHourDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>List<UniswapV2PairHourDataDTO></returns>
+        public List<UniswapV2PairHourDataDTO> UniswapV2GetPairHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2PairHourDataV2DTO>> localVarResponse = UniswapV2GetPairHourDataV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
+             ApiResponse<List<UniswapV2PairHourDataDTO>> localVarResponse = UniswapV2GetPairHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥 Gets pairhourdatav2s.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2235,11 +3013,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairHourDataV2DTO></returns>
-        public ApiResponse<List<UniswapV2PairHourDataV2DTO>> UniswapV2GetPairHourDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        /// <returns>ApiResponse of List<UniswapV2PairHourDataDTO></returns>
+        public ApiResponse<List<UniswapV2PairHourDataDTO>> UniswapV2GetPairHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairhourdatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairHourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2279,17 +3057,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairHourDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairHourDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairHourDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairHourDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairHourDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataV2DTO>)));
+                (List<UniswapV2PairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataDTO>)));
         }
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥 Gets pairhourdatav2s.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2299,16 +3077,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairHourDataV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2PairHourDataV2DTO>> UniswapV2GetPairHourDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2PairHourDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairHourDataDTO>> UniswapV2GetPairHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2PairHourDataV2DTO>> localVarResponse = await UniswapV2GetPairHourDataV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
+             ApiResponse<List<UniswapV2PairHourDataDTO>> localVarResponse = await UniswapV2GetPairHourDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PairHourDataV2s (historical) 🔥 Gets pairhourdatav2s.
+        /// PairHourDatas (historical) 🔥 Gets pairHourDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2318,11 +3096,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pair">Address for pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataV2DTO>>> UniswapV2GetPairHourDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataDTO>>> UniswapV2GetPairHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairhourdatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairHourDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2362,17 +3140,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairHourDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairHourDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairHourDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairHourDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairHourDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataV2DTO>)));
+                (List<UniswapV2PairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataDTO>)));
         }
 
         /// <summary>
-        /// PairV2s (historical) 🔥 Gets pairv2s.
+        /// Pairs (historical) 🔥 Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2382,15 +3160,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Pair contract address. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
-        /// <returns>List<UniswapV2PairV2DTO></returns>
-        public List<UniswapV2PairV2DTO> UniswapV2GetPairV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
+        /// <returns>List<UniswapV2PairDTO></returns>
+        public List<UniswapV2PairDTO> UniswapV2GetPairsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
         {
-             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = UniswapV2GetPairV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = UniswapV2GetPairsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PairV2s (historical) 🔥 Gets pairv2s.
+        /// Pairs (historical) 🔥 Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2400,11 +3178,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Pair contract address. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
-        public ApiResponse<List<UniswapV2PairV2DTO>> UniswapV2GetPairV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        public ApiResponse<List<UniswapV2PairDTO>> UniswapV2GetPairsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2445,17 +3223,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
         }
 
         /// <summary>
-        /// PairV2s (historical) 🔥 Gets pairv2s.
+        /// Pairs (historical) 🔥 Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2466,16 +3244,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> UniswapV2GetPairV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2GetPairsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = await UniswapV2GetPairV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, token0, token1, cancellationToken);
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = await UniswapV2GetPairsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, token0, token1, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PairV2s (historical) 🔥 Gets pairv2s.
+        /// Pairs (historical) 🔥 Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2486,11 +3264,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> UniswapV2GetPairV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2GetPairsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/pairv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/pairs/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2531,13 +3309,13 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetPairV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetPairsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
         }
 
         /// <summary>
@@ -2545,10 +3323,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
-        /// <returns>List<UniswapV2PairV2DTO></returns>
-        public List<UniswapV2PairV2DTO> UniswapV2GetPoolsCurrent (string filterPoolId = default(string))
+        /// <returns>List<UniswapV2PairDTO></returns>
+        public List<UniswapV2PairDTO> UniswapV2GetPoolsCurrent (string filterPoolId = default(string))
         {
-             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = UniswapV2GetPoolsCurrentWithHttpInfo(filterPoolId);
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = UniswapV2GetPoolsCurrentWithHttpInfo(filterPoolId);
              return localVarResponse.Data;
         }
 
@@ -2557,8 +3335,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2PairV2DTO></returns>
-        public ApiResponse<List<UniswapV2PairV2DTO>> UniswapV2GetPoolsCurrentWithHttpInfo (string filterPoolId = default(string))
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        public ApiResponse<List<UniswapV2PairDTO>> UniswapV2GetPoolsCurrentWithHttpInfo (string filterPoolId = default(string))
         {
 
             var localVarPath = "/dapps/uniswapv2/pools/current";
@@ -2600,9 +3378,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
         }
 
         /// <summary>
@@ -2611,10 +3389,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2PairV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2PairV2DTO>> UniswapV2GetPoolsCurrentAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2GetPoolsCurrentAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2PairV2DTO>> localVarResponse = await UniswapV2GetPoolsCurrentWithHttpInfoAsync(filterPoolId, cancellationToken);
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = await UniswapV2GetPoolsCurrentWithHttpInfoAsync(filterPoolId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2625,8 +3403,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterPoolId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairV2DTO>>> UniswapV2GetPoolsCurrentWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2GetPoolsCurrentWithHttpInfoAsync (string filterPoolId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/pools/current";
@@ -2668,182 +3446,19 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2PairV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2PairV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairV2DTO>)));
-        }
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥 Gets swapv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>List<UniswapV2SwapV2DTO></returns>
-        public List<UniswapV2SwapV2DTO> UniswapV2GetSwapV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
-        {
-             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = UniswapV2GetSwapV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥 Gets swapv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
-        public ApiResponse<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
-        {
-
-            var localVarPath = "/dapps/uniswapv2/swapv2s/historical";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
-            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UniswapV2GetSwapV2sHistorical", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
-        }
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥 Gets swapv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = await UniswapV2GetSwapV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// SwapV2s (historical) 🔥 Gets swapv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
-        /// <param name="pair">Reference to pair. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> UniswapV2GetSwapV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            var localVarPath = "/dapps/uniswapv2/swapv2s/historical";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
-            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UniswapV2GetSwapV2sHistorical", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
         }
 
         /// <summary>
         /// Swaps (current) 🔥 Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<UniswapV2SwapV2DTO></returns>
-        public List<UniswapV2SwapV2DTO> UniswapV2GetSwapsCurrent ()
+        /// <returns>List<UniswapV2SwapDTO></returns>
+        public List<UniswapV2SwapDTO> UniswapV2GetSwapsCurrent ()
         {
-             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = UniswapV2GetSwapsCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV2SwapDTO>> localVarResponse = UniswapV2GetSwapsCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -2851,8 +3466,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Swaps (current) 🔥 Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<UniswapV2SwapV2DTO></returns>
-        public ApiResponse<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapsCurrentWithHttpInfo ()
+        /// <returns>ApiResponse of List<UniswapV2SwapDTO></returns>
+        public ApiResponse<List<UniswapV2SwapDTO>> UniswapV2GetSwapsCurrentWithHttpInfo ()
         {
 
             var localVarPath = "/dapps/uniswapv2/swaps/current";
@@ -2893,9 +3508,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2SwapDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
+                (List<UniswapV2SwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapDTO>)));
         }
 
         /// <summary>
@@ -2903,10 +3518,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2SwapV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2SwapV2DTO>> UniswapV2GetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2SwapDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2SwapDTO>> UniswapV2GetSwapsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2SwapV2DTO>> localVarResponse = await UniswapV2GetSwapsCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV2SwapDTO>> localVarResponse = await UniswapV2GetSwapsCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2916,8 +3531,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapV2DTO>>> UniswapV2GetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapDTO>>> UniswapV2GetSwapsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/swaps/current";
@@ -2958,29 +3573,176 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2SwapV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2SwapDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2SwapV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapV2DTO>)));
+                (List<UniswapV2SwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapDTO>)));
         }
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥 Gets tokendaydatav2s.
+        /// Swaps (historical) 🔥 Gets swaps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
-        /// <returns>List<UniswapV2TokenDayDataV2DTO></returns>
-        public List<UniswapV2TokenDayDataV2DTO> UniswapV2GetTokenDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>List<UniswapV2SwapDTO></returns>
+        public List<UniswapV2SwapDTO> UniswapV2GetSwapsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
         {
-             ApiResponse<List<UniswapV2TokenDayDataV2DTO>> localVarResponse = UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2SwapDTO>> localVarResponse = UniswapV2GetSwapsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥 Gets tokendaydatav2s.
+        /// Swaps (historical) 🔥 Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2SwapDTO></returns>
+        public ApiResponse<List<UniswapV2SwapDTO>> UniswapV2GetSwapsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/swaps/historical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
+            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2GetSwapsHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2SwapDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2SwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapDTO>)));
+        }
+
+        /// <summary>
+        /// Swaps (historical) 🔥 Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2SwapDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2SwapDTO>> UniswapV2GetSwapsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2SwapDTO>> localVarResponse = await UniswapV2GetSwapsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pair, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Swaps (historical) 🔥 Gets swaps.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Transaction hash plus index in Transaction swap array. (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2SwapDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2SwapDTO>>> UniswapV2GetSwapsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/swaps/historical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
+            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            if (pair != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pair", pair)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2GetSwapsHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2SwapDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2SwapDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2SwapDTO>)));
+        }
+
+        /// <summary>
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2988,11 +3750,27 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TokenDayDataV2DTO></returns>
-        public ApiResponse<List<UniswapV2TokenDayDataV2DTO>> UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2TokenDayDataDTO></returns>
+        public List<UniswapV2TokenDayDataDTO> UniswapV2GetTokenDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        {
+             ApiResponse<List<UniswapV2TokenDayDataDTO>> localVarResponse = UniswapV2GetTokenDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2TokenDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2TokenDayDataDTO>> UniswapV2GetTokenDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/tokendaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/tokenDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3031,17 +3809,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetTokenDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetTokenDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TokenDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataV2DTO>)));
+                (List<UniswapV2TokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataDTO>)));
         }
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥 Gets tokendaydatav2s.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3050,16 +3828,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenDayDataV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2TokenDayDataV2DTO>> UniswapV2GetTokenDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2TokenDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TokenDayDataDTO>> UniswapV2GetTokenDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2TokenDayDataV2DTO>> localVarResponse = await UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2TokenDayDataDTO>> localVarResponse = await UniswapV2GetTokenDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TokenDayDataV2s (historical) 🔥 Gets tokendaydatav2s.
+        /// TokenDayDatas (historical) 🔥 Gets tokenDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3068,11 +3846,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataV2DTO>>> UniswapV2GetTokenDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataDTO>>> UniswapV2GetTokenDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/tokendaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/tokenDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3111,192 +3889,23 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetTokenDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetTokenDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TokenDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataV2DTO>)));
-        }
-
-        /// <summary>
-        /// TokenV2s (historical) 🔥 Gets tokenv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address. (optional)</param>
-        /// <param name="symbol">Token symbol. (optional)</param>
-        /// <param name="name">Token name. (optional)</param>
-        /// <returns>List<UniswapV2TokenV2DTO></returns>
-        public List<UniswapV2TokenV2DTO> UniswapV2GetTokenV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string))
-        {
-             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = UniswapV2GetTokenV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, symbol, name);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// TokenV2s (historical) 🔥 Gets tokenv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address. (optional)</param>
-        /// <param name="symbol">Token symbol. (optional)</param>
-        /// <param name="name">Token name. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
-        public ApiResponse<List<UniswapV2TokenV2DTO>> UniswapV2GetTokenV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string))
-        {
-
-            var localVarPath = "/dapps/uniswapv2/tokenv2s/historical";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
-            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            if (symbol != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "symbol", symbol)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UniswapV2GetTokenV2sHistorical", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
-        }
-
-        /// <summary>
-        /// TokenV2s (historical) 🔥 Gets tokenv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address. (optional)</param>
-        /// <param name="symbol">Token symbol. (optional)</param>
-        /// <param name="name">Token name. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> UniswapV2GetTokenV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = await UniswapV2GetTokenV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, symbol, name, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// TokenV2s (historical) 🔥 Gets tokenv2s.
-        /// </summary>
-        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
-        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
-        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
-        /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Token address. (optional)</param>
-        /// <param name="symbol">Token symbol. (optional)</param>
-        /// <param name="name">Token name. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> UniswapV2GetTokenV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            var localVarPath = "/dapps/uniswapv2/tokenv2s/historical";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
-            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
-            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            if (symbol != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "symbol", symbol)); // query parameter
-            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UniswapV2GetTokenV2sHistorical", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
+                (List<UniswapV2TokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataDTO>)));
         }
 
         /// <summary>
         /// Tokens (current) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List<UniswapV2TokenV2DTO></returns>
-        public List<UniswapV2TokenV2DTO> UniswapV2GetTokensCurrent ()
+        /// <returns>List<UniswapV2TokenDTO></returns>
+        public List<UniswapV2TokenDTO> UniswapV2GetTokensCurrent ()
         {
-             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = UniswapV2GetTokensCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV2TokenDTO>> localVarResponse = UniswapV2GetTokensCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -3304,8 +3913,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Tokens (current) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List<UniswapV2TokenV2DTO></returns>
-        public ApiResponse<List<UniswapV2TokenV2DTO>> UniswapV2GetTokensCurrentWithHttpInfo ()
+        /// <returns>ApiResponse of List<UniswapV2TokenDTO></returns>
+        public ApiResponse<List<UniswapV2TokenDTO>> UniswapV2GetTokensCurrentWithHttpInfo ()
         {
 
             var localVarPath = "/dapps/uniswapv2/tokens/current";
@@ -3346,9 +3955,9 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
+                (List<UniswapV2TokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDTO>)));
         }
 
         /// <summary>
@@ -3356,10 +3965,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TokenV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2TokenV2DTO>> UniswapV2GetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2TokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TokenDTO>> UniswapV2GetTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2TokenV2DTO>> localVarResponse = await UniswapV2GetTokensCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV2TokenDTO>> localVarResponse = await UniswapV2GetTokensCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3369,8 +3978,8 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenV2DTO>>> UniswapV2GetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDTO>>> UniswapV2GetTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/dapps/uniswapv2/tokens/current";
@@ -3411,29 +4020,182 @@ namespace CoinAPI.EMS.REST.V1.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TokenV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TokenDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TokenV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenV2DTO>)));
+                (List<UniswapV2TokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDTO>)));
         }
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥 Gets transactionv2s.
+        /// Tokens (historical) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Ethereum transaction hash. (optional)</param>
-        /// <returns>List<UniswapV2TransactionV2DTO></returns>
-        public List<UniswapV2TransactionV2DTO> UniswapV2GetTransactionV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <param name="id">Token address. (optional)</param>
+        /// <param name="symbol">Token symbol. (optional)</param>
+        /// <param name="name">Token name. (optional)</param>
+        /// <returns>List<UniswapV2TokenDTO></returns>
+        public List<UniswapV2TokenDTO> UniswapV2GetTokensHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string))
         {
-             ApiResponse<List<UniswapV2TransactionV2DTO>> localVarResponse = UniswapV2GetTransactionV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2TokenDTO>> localVarResponse = UniswapV2GetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, symbol, name);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥 Gets transactionv2s.
+        /// Tokens (historical) 🔥 Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address. (optional)</param>
+        /// <param name="symbol">Token symbol. (optional)</param>
+        /// <param name="name">Token name. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2TokenDTO></returns>
+        public ApiResponse<List<UniswapV2TokenDTO>> UniswapV2GetTokensHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/tokens/historical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
+            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            if (symbol != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "symbol", symbol)); // query parameter
+            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2GetTokensHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (historical) 🔥 Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address. (optional)</param>
+        /// <param name="symbol">Token symbol. (optional)</param>
+        /// <param name="name">Token name. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TokenDTO>> UniswapV2GetTokensHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2TokenDTO>> localVarResponse = await UniswapV2GetTokensHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, symbol, name, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tokens (historical) 🔥 Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Token address. (optional)</param>
+        /// <param name="symbol">Token symbol. (optional)</param>
+        /// <param name="name">Token name. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDTO>>> UniswapV2GetTokensHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string symbol = default(string), string name = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/tokens/historical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startBlock", startBlock)); // query parameter
+            if (endBlock != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endBlock", endBlock)); // query parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "startDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "endDate", endDate)); // query parameter
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            if (symbol != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "symbol", symbol)); // query parameter
+            if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2GetTokensHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDTO>)));
+        }
+
+        /// <summary>
+        /// Transactions (historical) 🔥 Gets transactions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3441,11 +4203,27 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2TransactionV2DTO></returns>
-        public ApiResponse<List<UniswapV2TransactionV2DTO>> UniswapV2GetTransactionV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2TransactionDTO></returns>
+        public List<UniswapV2TransactionDTO> UniswapV2GetTransactionsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        {
+             ApiResponse<List<UniswapV2TransactionDTO>> localVarResponse = UniswapV2GetTransactionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transactions (historical) 🔥 Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Ethereum transaction hash. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2TransactionDTO></returns>
+        public ApiResponse<List<UniswapV2TransactionDTO>> UniswapV2GetTransactionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/transactionv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/transactions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3484,17 +4262,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetTransactionV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetTransactionsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TransactionV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TransactionDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TransactionV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionV2DTO>)));
+                (List<UniswapV2TransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionDTO>)));
         }
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥 Gets transactionv2s.
+        /// Transactions (historical) 🔥 Gets transactions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3503,16 +4281,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2TransactionV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2TransactionV2DTO>> UniswapV2GetTransactionV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2TransactionDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TransactionDTO>> UniswapV2GetTransactionsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2TransactionV2DTO>> localVarResponse = await UniswapV2GetTransactionV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2TransactionDTO>> localVarResponse = await UniswapV2GetTransactionsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TransactionV2s (historical) 🔥 Gets transactionv2s.
+        /// Transactions (historical) 🔥 Gets transactions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3521,11 +4299,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Ethereum transaction hash. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionV2DTO>>> UniswapV2GetTransactionV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionDTO>>> UniswapV2GetTransactionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/transactionv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/transactions/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3564,17 +4342,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetTransactionV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetTransactionsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2TransactionV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2TransactionDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2TransactionV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionV2DTO>)));
+                (List<UniswapV2TransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionDTO>)));
         }
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥 Gets uniswapdaydatav2s.
+        /// UniswapDayDatas (historical) 🔥 Gets uniswapDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3582,15 +4360,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
-        /// <returns>List<UniswapV2UniswapDayDataV2DTO></returns>
-        public List<UniswapV2UniswapDayDataV2DTO> UniswapV2GetUniswapDayDataV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2UniswapDayDataDTO></returns>
+        public List<UniswapV2UniswapDayDataDTO> UniswapV2GetUniswapDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV2UniswapDayDataV2DTO>> localVarResponse = UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2UniswapDayDataDTO>> localVarResponse = UniswapV2GetUniswapDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥 Gets uniswapdaydatav2s.
+        /// UniswapDayDatas (historical) 🔥 Gets uniswapDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3598,11 +4376,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataV2DTO></returns>
-        public ApiResponse<List<UniswapV2UniswapDayDataV2DTO>> UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2UniswapDayDataDTO>> UniswapV2GetUniswapDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/uniswapdaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/uniswapDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3641,17 +4419,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUniswapDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUniswapDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UniswapDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UniswapDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UniswapDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataV2DTO>)));
+                (List<UniswapV2UniswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataDTO>)));
         }
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥 Gets uniswapdaydatav2s.
+        /// UniswapDayDatas (historical) 🔥 Gets uniswapDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3660,16 +4438,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UniswapDayDataV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataV2DTO>> UniswapV2GetUniswapDayDataV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2UniswapDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataDTO>> UniswapV2GetUniswapDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2UniswapDayDataV2DTO>> localVarResponse = await UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2UniswapDayDataDTO>> localVarResponse = await UniswapV2GetUniswapDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// UniswapDayDataV2s (historical) 🔥 Gets uniswapdaydatav2s.
+        /// UniswapDayDatas (historical) 🔥 Gets uniswapDayDatas.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3678,11 +4456,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataV2DTO>>> UniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataDTO>>> UniswapV2GetUniswapDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/uniswapdaydatav2s/historical";
+            var localVarPath = "/dapps/uniswapv2/uniswapDayDatas/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3721,17 +4499,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUniswapDayDataV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUniswapDayDatasHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UniswapDayDataV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UniswapDayDataDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UniswapDayDataV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataV2DTO>)));
+                (List<UniswapV2UniswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataDTO>)));
         }
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥 Gets uniswapfactoryv2s.
+        /// UniswapFactorys (historical) 🔥 Gets uniswapFactorys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3739,15 +4517,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
-        /// <returns>List<UniswapV2UniswapFactoryV2DTO></returns>
-        public List<UniswapV2UniswapFactoryV2DTO> UniswapV2GetUniswapFactoryV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2UniswapFactoryDTO></returns>
+        public List<UniswapV2UniswapFactoryDTO> UniswapV2GetUniswapFactorysHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV2UniswapFactoryV2DTO>> localVarResponse = UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2UniswapFactoryDTO>> localVarResponse = UniswapV2GetUniswapFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥 Gets uniswapfactoryv2s.
+        /// UniswapFactorys (historical) 🔥 Gets uniswapFactorys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3755,11 +4533,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryV2DTO></returns>
-        public ApiResponse<List<UniswapV2UniswapFactoryV2DTO>> UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryDTO></returns>
+        public ApiResponse<List<UniswapV2UniswapFactoryDTO>> UniswapV2GetUniswapFactorysHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/uniswapfactoryv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/uniswapFactorys/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3798,17 +4576,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUniswapFactoryV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUniswapFactorysHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UniswapFactoryV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UniswapFactoryDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UniswapFactoryV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryV2DTO>)));
+                (List<UniswapV2UniswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryDTO>)));
         }
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥 Gets uniswapfactoryv2s.
+        /// UniswapFactorys (historical) 🔥 Gets uniswapFactorys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3817,16 +4595,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UniswapFactoryV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryV2DTO>> UniswapV2GetUniswapFactoryV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2UniswapFactoryDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryDTO>> UniswapV2GetUniswapFactorysHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2UniswapFactoryV2DTO>> localVarResponse = await UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2UniswapFactoryDTO>> localVarResponse = await UniswapV2GetUniswapFactorysHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// UniswapFactoryV2s (historical) 🔥 Gets uniswapfactoryv2s.
+        /// UniswapFactorys (historical) 🔥 Gets uniswapFactorys.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3835,11 +4613,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryV2DTO>>> UniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryDTO>>> UniswapV2GetUniswapFactorysHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/uniswapfactoryv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/uniswapFactorys/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3878,17 +4656,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUniswapFactoryV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUniswapFactorysHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UniswapFactoryV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UniswapFactoryDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UniswapFactoryV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryV2DTO>)));
+                (List<UniswapV2UniswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryDTO>)));
         }
 
         /// <summary>
-        /// UserV2s (historical) 🔥 Gets userv2s.
+        /// Users (historical) 🔥 Gets users.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3896,15 +4674,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
-        /// <returns>List<UniswapV2UserV2DTO></returns>
-        public List<UniswapV2UserV2DTO> UniswapV2GetUserV2sHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>List<UniswapV2UserDTO></returns>
+        public List<UniswapV2UserDTO> UniswapV2GetUsersHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV2UserV2DTO>> localVarResponse = UniswapV2GetUserV2sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV2UserDTO>> localVarResponse = UniswapV2GetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// UserV2s (historical) 🔥 Gets userv2s.
+        /// Users (historical) 🔥 Gets users.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3912,11 +4690,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
-        /// <returns>ApiResponse of List<UniswapV2UserV2DTO></returns>
-        public ApiResponse<List<UniswapV2UserV2DTO>> UniswapV2GetUserV2sHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        /// <returns>ApiResponse of List<UniswapV2UserDTO></returns>
+        public ApiResponse<List<UniswapV2UserDTO>> UniswapV2GetUsersHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv2/userv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/users/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3955,17 +4733,17 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUserV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUsersHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UserV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UserDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UserV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserV2DTO>)));
+                (List<UniswapV2UserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserDTO>)));
         }
 
         /// <summary>
-        /// UserV2s (historical) 🔥 Gets userv2s.
+        /// Users (historical) 🔥 Gets users.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3974,16 +4752,16 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of List<UniswapV2UserV2DTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV2UserV2DTO>> UniswapV2GetUserV2sHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of List<UniswapV2UserDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UserDTO>> UniswapV2GetUsersHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV2UserV2DTO>> localVarResponse = await UniswapV2GetUserV2sHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV2UserDTO>> localVarResponse = await UniswapV2GetUsersHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// UserV2s (historical) 🔥 Gets userv2s.
+        /// Users (historical) 🔥 Gets users.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -3992,11 +4770,11 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">User address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserV2DTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserV2DTO>>> UniswapV2GetUserV2sHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserDTO>>> UniswapV2GetUsersHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv2/userv2s/historical";
+            var localVarPath = "/dapps/uniswapv2/users/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4035,13 +4813,1416 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV2GetUserV2sHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV2GetUsersHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UniswapV2UserV2DTO>>(localVarStatusCode,
+            return new ApiResponse<List<UniswapV2UserDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UniswapV2UserV2DTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserV2DTO>)));
+                (List<UniswapV2UserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2LiquidityPositionSnapshotsCurrent ()
+        {
+             ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> localVarResponse = UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/liquidityPositionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2LiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2LiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2LiquidityPositionSnapshotsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> localVarResponse = await UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPositionSnapshots (current) Gets liquidityPositionSnapshots.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2LiquidityPositionSnapshotsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/liquidityPositionSnapshots/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2LiquidityPositionSnapshotsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2LiquidityPositionSnapshotDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionSnapshotDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2LiquidityPositionDTO></returns>
+        public List<UniswapV2LiquidityPositionDTO> UniswapV2LiquidityPositionsCurrent ()
+        {
+             ApiResponse<List<UniswapV2LiquidityPositionDTO>> localVarResponse = UniswapV2LiquidityPositionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2LiquidityPositionDTO></returns>
+        public ApiResponse<List<UniswapV2LiquidityPositionDTO>> UniswapV2LiquidityPositionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/liquidityPositions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2LiquidityPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2LiquidityPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2LiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionDTO>)));
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2LiquidityPositionDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionDTO>> UniswapV2LiquidityPositionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2LiquidityPositionDTO>> localVarResponse = await UniswapV2LiquidityPositionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// LiquidityPositions (current) Gets liquidityPositions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionDTO>>> UniswapV2LiquidityPositionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/liquidityPositions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2LiquidityPositionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2LiquidityPositionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2LiquidityPositionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2LiquidityPositionDTO>)));
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2MintDTO></returns>
+        public List<UniswapV2MintDTO> UniswapV2MintsCurrent ()
+        {
+             ApiResponse<List<UniswapV2MintDTO>> localVarResponse = UniswapV2MintsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2MintDTO></returns>
+        public ApiResponse<List<UniswapV2MintDTO>> UniswapV2MintsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/mints/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2MintsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2MintDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2MintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintDTO>)));
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2MintDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2MintDTO>> UniswapV2MintsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2MintDTO>> localVarResponse = await UniswapV2MintsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mints (current) Gets mints.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2MintDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2MintDTO>>> UniswapV2MintsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/mints/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2MintsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2MintDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2MintDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2MintDTO>)));
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2PairDayDataDTO></returns>
+        public List<UniswapV2PairDayDataDTO> UniswapV2PairDayDatasCurrent ()
+        {
+             ApiResponse<List<UniswapV2PairDayDataDTO>> localVarResponse = UniswapV2PairDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2PairDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2PairDayDataDTO>> UniswapV2PairDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairDayDataDTO>> UniswapV2PairDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2PairDayDataDTO>> localVarResponse = await UniswapV2PairDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PairDayDatas (current) Gets pairDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDayDataDTO>>> UniswapV2PairDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2PairHourDataDTO></returns>
+        public List<UniswapV2PairHourDataDTO> UniswapV2PairHourDatasCurrent ()
+        {
+             ApiResponse<List<UniswapV2PairHourDataDTO>> localVarResponse = UniswapV2PairHourDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2PairHourDataDTO></returns>
+        public ApiResponse<List<UniswapV2PairHourDataDTO>> UniswapV2PairHourDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairHourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairHourDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairHourDataDTO>> UniswapV2PairHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2PairHourDataDTO>> localVarResponse = await UniswapV2PairHourDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PairHourDatas (current) Gets pairHourDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairHourDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairHourDataDTO>>> UniswapV2PairHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairHourDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairHourDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairHourDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairHourDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairHourDataDTO>)));
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>List<UniswapV2PairDTO></returns>
+        public List<UniswapV2PairDTO> UniswapV2PairsCurrent (string id = default(string))
+        {
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = UniswapV2PairsCurrentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <returns>ApiResponse of List<UniswapV2PairDTO></returns>
+        public ApiResponse<List<UniswapV2PairDTO>> UniswapV2PairsCurrentWithHttpInfo (string id = default(string))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2PairDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2PairDTO>> UniswapV2PairsCurrentAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2PairDTO>> localVarResponse = await UniswapV2PairsCurrentWithHttpInfoAsync(id, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Pairs (current) Gets pairs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2PairDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2PairDTO>>> UniswapV2PairsCurrentWithHttpInfoAsync (string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/pairs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2PairsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2PairDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2PairDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2PairDTO>)));
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2TokenDayDataDTO></returns>
+        public List<UniswapV2TokenDayDataDTO> UniswapV2TokenDayDatasCurrent ()
+        {
+             ApiResponse<List<UniswapV2TokenDayDataDTO>> localVarResponse = UniswapV2TokenDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2TokenDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2TokenDayDataDTO>> UniswapV2TokenDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/tokenDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2TokenDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TokenDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TokenDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TokenDayDataDTO>> UniswapV2TokenDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2TokenDayDataDTO>> localVarResponse = await UniswapV2TokenDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// TokenDayDatas (current) Gets tokenDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TokenDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TokenDayDataDTO>>> UniswapV2TokenDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/tokenDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2TokenDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TokenDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TokenDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TokenDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2TransactionDTO></returns>
+        public List<UniswapV2TransactionDTO> UniswapV2TransactionsCurrent ()
+        {
+             ApiResponse<List<UniswapV2TransactionDTO>> localVarResponse = UniswapV2TransactionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2TransactionDTO></returns>
+        public ApiResponse<List<UniswapV2TransactionDTO>> UniswapV2TransactionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/transactions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2TransactionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TransactionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionDTO>)));
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2TransactionDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2TransactionDTO>> UniswapV2TransactionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2TransactionDTO>> localVarResponse = await UniswapV2TransactionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Transactions (current) Gets transactions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2TransactionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2TransactionDTO>>> UniswapV2TransactionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/transactions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2TransactionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2TransactionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2TransactionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2TransactionDTO>)));
+        }
+
+        /// <summary>
+        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UniswapDayDataDTO></returns>
+        public List<UniswapV2UniswapDayDataDTO> UniswapV2UniswapDayDatasCurrent ()
+        {
+             ApiResponse<List<UniswapV2UniswapDayDataDTO>> localVarResponse = UniswapV2UniswapDayDatasCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UniswapDayDataDTO></returns>
+        public ApiResponse<List<UniswapV2UniswapDayDataDTO>> UniswapV2UniswapDayDatasCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/uniswapDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UniswapDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UniswapDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UniswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UniswapDayDataDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UniswapDayDataDTO>> UniswapV2UniswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2UniswapDayDataDTO>> localVarResponse = await UniswapV2UniswapDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapDayDataDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapDayDataDTO>>> UniswapV2UniswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/uniswapDayDatas/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UniswapDayDatasCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UniswapDayDataDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UniswapDayDataDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapDayDataDTO>)));
+        }
+
+        /// <summary>
+        /// UniswapFactorys (current) Gets uniswapFactorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UniswapFactoryDTO></returns>
+        public List<UniswapV2UniswapFactoryDTO> UniswapV2UniswapFactorysCurrent ()
+        {
+             ApiResponse<List<UniswapV2UniswapFactoryDTO>> localVarResponse = UniswapV2UniswapFactorysCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UniswapFactorys (current) Gets uniswapFactorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UniswapFactoryDTO></returns>
+        public ApiResponse<List<UniswapV2UniswapFactoryDTO>> UniswapV2UniswapFactorysCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/uniswapFactorys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UniswapFactorysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UniswapFactoryDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UniswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryDTO>)));
+        }
+
+        /// <summary>
+        /// UniswapFactorys (current) Gets uniswapFactorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UniswapFactoryDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UniswapFactoryDTO>> UniswapV2UniswapFactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2UniswapFactoryDTO>> localVarResponse = await UniswapV2UniswapFactorysCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UniswapFactorys (current) Gets uniswapFactorys.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UniswapFactoryDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UniswapFactoryDTO>>> UniswapV2UniswapFactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/uniswapFactorys/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UniswapFactorysCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UniswapFactoryDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UniswapFactoryDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UniswapFactoryDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<UniswapV2UserDTO></returns>
+        public List<UniswapV2UserDTO> UniswapV2UsersCurrent ()
+        {
+             ApiResponse<List<UniswapV2UserDTO>> localVarResponse = UniswapV2UsersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<UniswapV2UserDTO></returns>
+        public ApiResponse<List<UniswapV2UserDTO>> UniswapV2UsersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/uniswapv2/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<UniswapV2UserDTO></returns>
+        public async System.Threading.Tasks.Task<List<UniswapV2UserDTO>> UniswapV2UsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<UniswapV2UserDTO>> localVarResponse = await UniswapV2UsersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;UniswapV2UserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2UserDTO>>> UniswapV2UsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/uniswapv2/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UniswapV2UsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UniswapV2UserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UniswapV2UserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UniswapV2UserDTO>)));
         }
 
     }

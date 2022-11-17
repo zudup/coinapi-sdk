@@ -73,6 +73,30 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexBatchsCurrent
+     *
+     * Batchs (current).
+     *
+     */
+    public function testDexBatchsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexDepositsCurrent
+     *
+     * Deposits (current).
+     *
+     */
+    public function testDexDepositsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetBatchsHistorical
      *
      * Batchs (historical) 🔥.
@@ -199,6 +223,114 @@ class DexApiTest extends TestCase
      *
      */
     public function testDexGetWithdrawsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexOrdersCurrent
+     *
+     * Orders (current).
+     *
+     */
+    public function testDexOrdersCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexPricesCurrent
+     *
+     * Prices (current).
+     *
+     */
+    public function testDexPricesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexSolutionsCurrent
+     *
+     * Solutions (current).
+     *
+     */
+    public function testDexSolutionsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexStatssCurrent
+     *
+     * Statss (current).
+     *
+     */
+    public function testDexStatssCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexTokensCurrent
+     *
+     * Tokens (current).
+     *
+     */
+    public function testDexTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexTradesCurrent
+     *
+     * Trades (current).
+     *
+     */
+    public function testDexTradesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexUsersCurrent
+     *
+     * Users (current).
+     *
+     */
+    public function testDexUsersCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexWithdrawRequestsCurrent
+     *
+     * WithdrawRequests (current).
+     *
+     */
+    public function testDexWithdrawRequestsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexWithdrawsCurrent
+     *
+     * Withdraws (current).
+     *
+     */
+    public function testDexWithdrawsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

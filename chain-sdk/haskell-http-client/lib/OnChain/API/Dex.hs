@@ -58,6 +58,52 @@ import qualified Prelude as P
 
 -- ** Dex
 
+-- *** dexBatchsCurrent
+
+-- | @GET \/dapps\/dex\/batchs\/current@
+-- 
+-- Batchs (current)
+-- 
+-- Gets batchs.
+-- 
+dexBatchsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexBatchsCurrent MimeNoContent [DexBatchDTO] accept
+dexBatchsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/batchs/current"]
+
+data DexBatchsCurrent  
+-- | @application/json@
+instance Produces DexBatchsCurrent MimeJSON
+-- | @text/json@
+instance Produces DexBatchsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexBatchsCurrent MimePlainText
+
+
+-- *** dexDepositsCurrent
+
+-- | @GET \/dapps\/dex\/deposits\/current@
+-- 
+-- Deposits (current)
+-- 
+-- Gets deposits.
+-- 
+dexDepositsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexDepositsCurrent MimeNoContent [DexDepositDTO] accept
+dexDepositsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/deposits/current"]
+
+data DexDepositsCurrent  
+-- | @application/json@
+instance Produces DexDepositsCurrent MimeJSON
+-- | @text/json@
+instance Produces DexDepositsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexDepositsCurrent MimePlainText
+
+
 -- *** dexGetBatchsHistorical
 
 -- | @GET \/dapps\/dex\/batchs\/historical@
@@ -496,17 +542,17 @@ instance Produces DexGetUsersHistorical MimePlainText
 
 -- *** dexGetWithdrawRequestsHistorical
 
--- | @GET \/dapps\/dex\/withdrawrequests\/historical@
+-- | @GET \/dapps\/dex\/withdrawRequests\/historical@
 -- 
 -- WithdrawRequests (historical) 🔥
 -- 
--- Gets withdrawrequests.
+-- Gets withdrawRequests.
 -- 
 dexGetWithdrawRequestsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetWithdrawRequestsHistorical MimeNoContent [DexWithdrawRequestDTO] accept
 dexGetWithdrawRequestsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/withdrawrequests/historical"]
+  _mkRequest "GET" ["/dapps/dex/withdrawRequests/historical"]
 
 data DexGetWithdrawRequestsHistorical  
 instance HasOptionalParam DexGetWithdrawRequestsHistorical StartBlock where
@@ -574,4 +620,211 @@ instance Produces DexGetWithdrawsHistorical MimeJSON
 instance Produces DexGetWithdrawsHistorical MimeTextJson
 -- | @text/plain@
 instance Produces DexGetWithdrawsHistorical MimePlainText
+
+
+-- *** dexOrdersCurrent
+
+-- | @GET \/dapps\/dex\/orders\/current@
+-- 
+-- Orders (current)
+-- 
+-- Gets orders.
+-- 
+dexOrdersCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexOrdersCurrent MimeNoContent [DexOrderDTO] accept
+dexOrdersCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/orders/current"]
+
+data DexOrdersCurrent  
+-- | @application/json@
+instance Produces DexOrdersCurrent MimeJSON
+-- | @text/json@
+instance Produces DexOrdersCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexOrdersCurrent MimePlainText
+
+
+-- *** dexPricesCurrent
+
+-- | @GET \/dapps\/dex\/prices\/current@
+-- 
+-- Prices (current)
+-- 
+-- Gets prices.
+-- 
+dexPricesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexPricesCurrent MimeNoContent [DexPriceDTO] accept
+dexPricesCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/prices/current"]
+
+data DexPricesCurrent  
+-- | @application/json@
+instance Produces DexPricesCurrent MimeJSON
+-- | @text/json@
+instance Produces DexPricesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexPricesCurrent MimePlainText
+
+
+-- *** dexSolutionsCurrent
+
+-- | @GET \/dapps\/dex\/solutions\/current@
+-- 
+-- Solutions (current)
+-- 
+-- Gets solutions.
+-- 
+dexSolutionsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexSolutionsCurrent MimeNoContent [DexSolutionDTO] accept
+dexSolutionsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/solutions/current"]
+
+data DexSolutionsCurrent  
+-- | @application/json@
+instance Produces DexSolutionsCurrent MimeJSON
+-- | @text/json@
+instance Produces DexSolutionsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexSolutionsCurrent MimePlainText
+
+
+-- *** dexStatssCurrent
+
+-- | @GET \/dapps\/dex\/statss\/current@
+-- 
+-- Statss (current)
+-- 
+-- Gets statss.
+-- 
+dexStatssCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexStatssCurrent MimeNoContent [DexStatsDTO] accept
+dexStatssCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/statss/current"]
+
+data DexStatssCurrent  
+-- | @application/json@
+instance Produces DexStatssCurrent MimeJSON
+-- | @text/json@
+instance Produces DexStatssCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexStatssCurrent MimePlainText
+
+
+-- *** dexTokensCurrent
+
+-- | @GET \/dapps\/dex\/tokens\/current@
+-- 
+-- Tokens (current)
+-- 
+-- Gets tokens.
+-- 
+dexTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexTokensCurrent MimeNoContent [DexTokenDTO] accept
+dexTokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/tokens/current"]
+
+data DexTokensCurrent  
+-- | @application/json@
+instance Produces DexTokensCurrent MimeJSON
+-- | @text/json@
+instance Produces DexTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexTokensCurrent MimePlainText
+
+
+-- *** dexTradesCurrent
+
+-- | @GET \/dapps\/dex\/trades\/current@
+-- 
+-- Trades (current)
+-- 
+-- Gets trades.
+-- 
+dexTradesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexTradesCurrent MimeNoContent [DexTradeDTO] accept
+dexTradesCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/trades/current"]
+
+data DexTradesCurrent  
+-- | @application/json@
+instance Produces DexTradesCurrent MimeJSON
+-- | @text/json@
+instance Produces DexTradesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexTradesCurrent MimePlainText
+
+
+-- *** dexUsersCurrent
+
+-- | @GET \/dapps\/dex\/users\/current@
+-- 
+-- Users (current)
+-- 
+-- Gets users.
+-- 
+dexUsersCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexUsersCurrent MimeNoContent [DexUserDTO] accept
+dexUsersCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/users/current"]
+
+data DexUsersCurrent  
+-- | @application/json@
+instance Produces DexUsersCurrent MimeJSON
+-- | @text/json@
+instance Produces DexUsersCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexUsersCurrent MimePlainText
+
+
+-- *** dexWithdrawRequestsCurrent
+
+-- | @GET \/dapps\/dex\/withdrawRequests\/current@
+-- 
+-- WithdrawRequests (current)
+-- 
+-- Gets withdrawRequests.
+-- 
+dexWithdrawRequestsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexWithdrawRequestsCurrent MimeNoContent [DexWithdrawRequestDTO] accept
+dexWithdrawRequestsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/withdrawRequests/current"]
+
+data DexWithdrawRequestsCurrent  
+-- | @application/json@
+instance Produces DexWithdrawRequestsCurrent MimeJSON
+-- | @text/json@
+instance Produces DexWithdrawRequestsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexWithdrawRequestsCurrent MimePlainText
+
+
+-- *** dexWithdrawsCurrent
+
+-- | @GET \/dapps\/dex\/withdraws\/current@
+-- 
+-- Withdraws (current)
+-- 
+-- Gets withdraws.
+-- 
+dexWithdrawsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest DexWithdrawsCurrent MimeNoContent [DexWithdrawDTO] accept
+dexWithdrawsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/withdraws/current"]
+
+data DexWithdrawsCurrent  
+-- | @application/json@
+instance Produces DexWithdrawsCurrent MimeJSON
+-- | @text/json@
+instance Produces DexWithdrawsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces DexWithdrawsCurrent MimePlainText
 

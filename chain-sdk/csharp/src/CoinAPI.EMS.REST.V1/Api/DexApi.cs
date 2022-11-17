@@ -26,6 +26,44 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Batchs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets batchs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexBatchDTO></returns>
+        List<DexBatchDTO> DexBatchsCurrent ();
+
+        /// <summary>
+        /// Batchs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets batchs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexBatchDTO></returns>
+        ApiResponse<List<DexBatchDTO>> DexBatchsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexDepositDTO></returns>
+        List<DexDepositDTO> DexDepositsCurrent ();
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexDepositDTO></returns>
+        ApiResponse<List<DexDepositDTO>> DexDepositsCurrentWithHttpInfo ();
+        /// <summary>
         /// Batchs (historical) 🔥
         /// </summary>
         /// <remarks>
@@ -306,7 +344,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WithdrawRequests (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets withdrawrequests.
+        /// Gets withdrawRequests.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -322,7 +360,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WithdrawRequests (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets withdrawrequests.
+        /// Gets withdrawRequests.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -364,8 +402,221 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <returns>ApiResponse of List<DexWithdrawDTO></returns>
         ApiResponse<List<DexWithdrawDTO>> DexGetWithdrawsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string));
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexOrderDTO></returns>
+        List<DexOrderDTO> DexOrdersCurrent ();
+
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexOrderDTO></returns>
+        ApiResponse<List<DexOrderDTO>> DexOrdersCurrentWithHttpInfo ();
+        /// <summary>
+        /// Prices (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets prices.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexPriceDTO></returns>
+        List<DexPriceDTO> DexPricesCurrent ();
+
+        /// <summary>
+        /// Prices (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets prices.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexPriceDTO></returns>
+        ApiResponse<List<DexPriceDTO>> DexPricesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Solutions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets solutions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexSolutionDTO></returns>
+        List<DexSolutionDTO> DexSolutionsCurrent ();
+
+        /// <summary>
+        /// Solutions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets solutions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexSolutionDTO></returns>
+        ApiResponse<List<DexSolutionDTO>> DexSolutionsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Statss (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets statss.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexStatsDTO></returns>
+        List<DexStatsDTO> DexStatssCurrent ();
+
+        /// <summary>
+        /// Statss (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets statss.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexStatsDTO></returns>
+        ApiResponse<List<DexStatsDTO>> DexStatssCurrentWithHttpInfo ();
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexTokenDTO></returns>
+        List<DexTokenDTO> DexTokensCurrent ();
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexTokenDTO></returns>
+        ApiResponse<List<DexTokenDTO>> DexTokensCurrentWithHttpInfo ();
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexTradeDTO></returns>
+        List<DexTradeDTO> DexTradesCurrent ();
+
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexTradeDTO></returns>
+        ApiResponse<List<DexTradeDTO>> DexTradesCurrentWithHttpInfo ();
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexUserDTO></returns>
+        List<DexUserDTO> DexUsersCurrent ();
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexUserDTO></returns>
+        ApiResponse<List<DexUserDTO>> DexUsersCurrentWithHttpInfo ();
+        /// <summary>
+        /// WithdrawRequests (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdrawRequests.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexWithdrawRequestDTO></returns>
+        List<DexWithdrawRequestDTO> DexWithdrawRequestsCurrent ();
+
+        /// <summary>
+        /// WithdrawRequests (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdrawRequests.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexWithdrawRequestDTO></returns>
+        ApiResponse<List<DexWithdrawRequestDTO>> DexWithdrawRequestsCurrentWithHttpInfo ();
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexWithdrawDTO></returns>
+        List<DexWithdrawDTO> DexWithdrawsCurrent ();
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexWithdrawDTO></returns>
+        ApiResponse<List<DexWithdrawDTO>> DexWithdrawsCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Batchs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets batchs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexBatchDTO></returns>
+        System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Batchs (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets batchs.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexDepositDTO></returns>
+        System.Threading.Tasks.Task<List<DexDepositDTO>> DexDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Deposits (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets deposits.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexDepositDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexDepositDTO>>> DexDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Batchs (historical) 🔥
         /// </summary>
@@ -665,7 +916,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WithdrawRequests (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets withdrawrequests.
+        /// Gets withdrawRequests.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -682,7 +933,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// WithdrawRequests (historical) 🔥
         /// </summary>
         /// <remarks>
-        /// Gets withdrawrequests.
+        /// Gets withdrawRequests.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -727,6 +978,195 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexWithdrawDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawDTO>>> DexGetWithdrawsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexOrderDTO></returns>
+        System.Threading.Tasks.Task<List<DexOrderDTO>> DexOrdersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Orders (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets orders.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexOrderDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexOrderDTO>>> DexOrdersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Prices (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets prices.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexPriceDTO></returns>
+        System.Threading.Tasks.Task<List<DexPriceDTO>> DexPricesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Prices (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets prices.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexPriceDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexPriceDTO>>> DexPricesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Solutions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets solutions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexSolutionDTO></returns>
+        System.Threading.Tasks.Task<List<DexSolutionDTO>> DexSolutionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Solutions (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets solutions.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexSolutionDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexSolutionDTO>>> DexSolutionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Statss (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets statss.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexStatsDTO></returns>
+        System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatssCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Statss (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets statss.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatssCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexTokenDTO></returns>
+        System.Threading.Tasks.Task<List<DexTokenDTO>> DexTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Tokens (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets tokens.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexTokenDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexTokenDTO>>> DexTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexTradeDTO></returns>
+        System.Threading.Tasks.Task<List<DexTradeDTO>> DexTradesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Trades (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets trades.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexTradeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexTradeDTO>>> DexTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexUserDTO></returns>
+        System.Threading.Tasks.Task<List<DexUserDTO>> DexUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Users (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets users.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexUserDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexUserDTO>>> DexUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// WithdrawRequests (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdrawRequests.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexWithdrawRequestDTO></returns>
+        System.Threading.Tasks.Task<List<DexWithdrawRequestDTO>> DexWithdrawRequestsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// WithdrawRequests (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdrawRequests.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexWithdrawRequestDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawRequestDTO>>> DexWithdrawRequestsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexWithdrawDTO></returns>
+        System.Threading.Tasks.Task<List<DexWithdrawDTO>> DexWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Withdraws (current)
+        /// </summary>
+        /// <remarks>
+        /// Gets withdraws.
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexWithdrawDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawDTO>>> DexWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -836,6 +1276,260 @@ namespace CoinAPI.EMS.REST.V1.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Batchs (current) Gets batchs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexBatchDTO></returns>
+        public List<DexBatchDTO> DexBatchsCurrent ()
+        {
+             ApiResponse<List<DexBatchDTO>> localVarResponse = DexBatchsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Batchs (current) Gets batchs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexBatchDTO></returns>
+        public ApiResponse<List<DexBatchDTO>> DexBatchsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/batchs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexBatchsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexBatchDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexBatchDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexBatchDTO>)));
+        }
+
+        /// <summary>
+        /// Batchs (current) Gets batchs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexBatchDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexBatchDTO>> localVarResponse = await DexBatchsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Batchs (current) Gets batchs.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/batchs/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexBatchsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexBatchDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexBatchDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexBatchDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexDepositDTO></returns>
+        public List<DexDepositDTO> DexDepositsCurrent ()
+        {
+             ApiResponse<List<DexDepositDTO>> localVarResponse = DexDepositsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexDepositDTO></returns>
+        public ApiResponse<List<DexDepositDTO>> DexDepositsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexDepositDTO>)));
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexDepositDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexDepositDTO>> DexDepositsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexDepositDTO>> localVarResponse = await DexDepositsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deposits (current) Gets deposits.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexDepositDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexDepositDTO>>> DexDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/deposits/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexDepositsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexDepositDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexDepositDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexDepositDTO>)));
         }
 
         /// <summary>
@@ -2300,7 +2994,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WithdrawRequests (historical) 🔥 Gets withdrawrequests.
+        /// WithdrawRequests (historical) 🔥 Gets withdrawRequests.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2317,7 +3011,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WithdrawRequests (historical) 🔥 Gets withdrawrequests.
+        /// WithdrawRequests (historical) 🔥 Gets withdrawRequests.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2330,7 +3024,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public ApiResponse<List<DexWithdrawRequestDTO>> DexGetWithdrawRequestsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string))
         {
 
-            var localVarPath = "/dapps/dex/withdrawrequests/historical";
+            var localVarPath = "/dapps/dex/withdrawRequests/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2380,7 +3074,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WithdrawRequests (historical) 🔥 Gets withdrawrequests.
+        /// WithdrawRequests (historical) 🔥 Gets withdrawRequests.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2399,7 +3093,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// WithdrawRequests (historical) 🔥 Gets withdrawrequests.
+        /// WithdrawRequests (historical) 🔥 Gets withdrawRequests.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2413,7 +3107,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawRequestDTO>>> DexGetWithdrawRequestsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/dex/withdrawrequests/historical";
+            var localVarPath = "/dapps/dex/withdrawRequests/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2617,6 +3311,1149 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DexGetWithdrawsHistorical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexOrderDTO></returns>
+        public List<DexOrderDTO> DexOrdersCurrent ()
+        {
+             ApiResponse<List<DexOrderDTO>> localVarResponse = DexOrdersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexOrderDTO></returns>
+        public ApiResponse<List<DexOrderDTO>> DexOrdersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/orders/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexOrdersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexOrderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexOrderDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexOrderDTO>)));
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexOrderDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexOrderDTO>> DexOrdersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexOrderDTO>> localVarResponse = await DexOrdersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Orders (current) Gets orders.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexOrderDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexOrderDTO>>> DexOrdersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/orders/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexOrdersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexOrderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexOrderDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexOrderDTO>)));
+        }
+
+        /// <summary>
+        /// Prices (current) Gets prices.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexPriceDTO></returns>
+        public List<DexPriceDTO> DexPricesCurrent ()
+        {
+             ApiResponse<List<DexPriceDTO>> localVarResponse = DexPricesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Prices (current) Gets prices.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexPriceDTO></returns>
+        public ApiResponse<List<DexPriceDTO>> DexPricesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/prices/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexPricesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexPriceDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexPriceDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexPriceDTO>)));
+        }
+
+        /// <summary>
+        /// Prices (current) Gets prices.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexPriceDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexPriceDTO>> DexPricesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexPriceDTO>> localVarResponse = await DexPricesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Prices (current) Gets prices.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexPriceDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexPriceDTO>>> DexPricesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/prices/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexPricesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexPriceDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexPriceDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexPriceDTO>)));
+        }
+
+        /// <summary>
+        /// Solutions (current) Gets solutions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexSolutionDTO></returns>
+        public List<DexSolutionDTO> DexSolutionsCurrent ()
+        {
+             ApiResponse<List<DexSolutionDTO>> localVarResponse = DexSolutionsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Solutions (current) Gets solutions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexSolutionDTO></returns>
+        public ApiResponse<List<DexSolutionDTO>> DexSolutionsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/solutions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexSolutionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexSolutionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexSolutionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexSolutionDTO>)));
+        }
+
+        /// <summary>
+        /// Solutions (current) Gets solutions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexSolutionDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexSolutionDTO>> DexSolutionsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexSolutionDTO>> localVarResponse = await DexSolutionsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Solutions (current) Gets solutions.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexSolutionDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexSolutionDTO>>> DexSolutionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/solutions/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexSolutionsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexSolutionDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexSolutionDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexSolutionDTO>)));
+        }
+
+        /// <summary>
+        /// Statss (current) Gets statss.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexStatsDTO></returns>
+        public List<DexStatsDTO> DexStatssCurrent ()
+        {
+             ApiResponse<List<DexStatsDTO>> localVarResponse = DexStatssCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Statss (current) Gets statss.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexStatsDTO></returns>
+        public ApiResponse<List<DexStatsDTO>> DexStatssCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/statss/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexStatssCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexStatsDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexStatsDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexStatsDTO>)));
+        }
+
+        /// <summary>
+        /// Statss (current) Gets statss.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexStatsDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatssCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexStatsDTO>> localVarResponse = await DexStatssCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Statss (current) Gets statss.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatssCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/statss/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexStatssCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexStatsDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexStatsDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexStatsDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexTokenDTO></returns>
+        public List<DexTokenDTO> DexTokensCurrent ()
+        {
+             ApiResponse<List<DexTokenDTO>> localVarResponse = DexTokensCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexTokenDTO></returns>
+        public ApiResponse<List<DexTokenDTO>> DexTokensCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexTokenDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexTokenDTO>> DexTokensCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexTokenDTO>> localVarResponse = await DexTokensCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tokens (current) Gets tokens.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexTokenDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexTokenDTO>>> DexTokensCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/tokens/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexTokensCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexTokenDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexTokenDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexTokenDTO>)));
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexTradeDTO></returns>
+        public List<DexTradeDTO> DexTradesCurrent ()
+        {
+             ApiResponse<List<DexTradeDTO>> localVarResponse = DexTradesCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexTradeDTO></returns>
+        public ApiResponse<List<DexTradeDTO>> DexTradesCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/trades/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexTradesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexTradeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexTradeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexTradeDTO>)));
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexTradeDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexTradeDTO>> DexTradesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexTradeDTO>> localVarResponse = await DexTradesCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Trades (current) Gets trades.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexTradeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexTradeDTO>>> DexTradesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/trades/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexTradesCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexTradeDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexTradeDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexTradeDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexUserDTO></returns>
+        public List<DexUserDTO> DexUsersCurrent ()
+        {
+             ApiResponse<List<DexUserDTO>> localVarResponse = DexUsersCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexUserDTO></returns>
+        public ApiResponse<List<DexUserDTO>> DexUsersCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexUsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexUserDTO>)));
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexUserDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexUserDTO>> DexUsersCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexUserDTO>> localVarResponse = await DexUsersCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Users (current) Gets users.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexUserDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexUserDTO>>> DexUsersCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/users/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexUsersCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexUserDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexUserDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexUserDTO>)));
+        }
+
+        /// <summary>
+        /// WithdrawRequests (current) Gets withdrawRequests.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexWithdrawRequestDTO></returns>
+        public List<DexWithdrawRequestDTO> DexWithdrawRequestsCurrent ()
+        {
+             ApiResponse<List<DexWithdrawRequestDTO>> localVarResponse = DexWithdrawRequestsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// WithdrawRequests (current) Gets withdrawRequests.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexWithdrawRequestDTO></returns>
+        public ApiResponse<List<DexWithdrawRequestDTO>> DexWithdrawRequestsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/withdrawRequests/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexWithdrawRequestsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexWithdrawRequestDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexWithdrawRequestDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexWithdrawRequestDTO>)));
+        }
+
+        /// <summary>
+        /// WithdrawRequests (current) Gets withdrawRequests.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexWithdrawRequestDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexWithdrawRequestDTO>> DexWithdrawRequestsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexWithdrawRequestDTO>> localVarResponse = await DexWithdrawRequestsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// WithdrawRequests (current) Gets withdrawRequests.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexWithdrawRequestDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawRequestDTO>>> DexWithdrawRequestsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/withdrawRequests/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexWithdrawRequestsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexWithdrawRequestDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexWithdrawRequestDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexWithdrawRequestDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List<DexWithdrawDTO></returns>
+        public List<DexWithdrawDTO> DexWithdrawsCurrent ()
+        {
+             ApiResponse<List<DexWithdrawDTO>> localVarResponse = DexWithdrawsCurrentWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List<DexWithdrawDTO></returns>
+        public ApiResponse<List<DexWithdrawDTO>> DexWithdrawsCurrentWithHttpInfo ()
+        {
+
+            var localVarPath = "/dapps/dex/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexWithdrawsCurrent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DexWithdrawDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<DexWithdrawDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DexWithdrawDTO>)));
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of List<DexWithdrawDTO></returns>
+        public async System.Threading.Tasks.Task<List<DexWithdrawDTO>> DexWithdrawsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<List<DexWithdrawDTO>> localVarResponse = await DexWithdrawsCurrentWithHttpInfoAsync(cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Withdraws (current) Gets withdraws.
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (List&lt;DexWithdrawDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexWithdrawDTO>>> DexWithdrawsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/dapps/dex/withdraws/current";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DexWithdrawsCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -106,6 +106,2199 @@ public class CurveApi {
     }
 
     /**
+     * Build call for curveAccountsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAccountsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/accounts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveAccountsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveAccountsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return List&lt;CurveAccountDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveAccountDTO> curveAccountsCurrent() throws ApiException {
+        ApiResponse<List<CurveAccountDTO>> localVarResp = curveAccountsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse&lt;List&lt;CurveAccountDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveAccountDTO>> curveAccountsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveAccountsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveAccountDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Accounts (current) (asynchronously)
+     * Gets accounts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAccountsCurrentAsync(final ApiCallback<List<CurveAccountDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveAccountsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveAccountDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveAddLiquidityEventsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAddLiquidityEventsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/addLiquidityEvents/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveAddLiquidityEventsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveAddLiquidityEventsCurrentCall(_callback);
+
+    }
+
+    /**
+     * AddLiquidityEvents (current)
+     * Gets addLiquidityEvents.
+     * @return List&lt;CurveAddLiquidityEventDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveAddLiquidityEventDTO> curveAddLiquidityEventsCurrent() throws ApiException {
+        ApiResponse<List<CurveAddLiquidityEventDTO>> localVarResp = curveAddLiquidityEventsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * AddLiquidityEvents (current)
+     * Gets addLiquidityEvents.
+     * @return ApiResponse&lt;List&lt;CurveAddLiquidityEventDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveAddLiquidityEventDTO>> curveAddLiquidityEventsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveAddLiquidityEventsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveAddLiquidityEventDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * AddLiquidityEvents (current) (asynchronously)
+     * Gets addLiquidityEvents.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAddLiquidityEventsCurrentAsync(final ApiCallback<List<CurveAddLiquidityEventDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveAddLiquidityEventsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveAddLiquidityEventDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveAdminFeeChangeLogsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAdminFeeChangeLogsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/adminFeeChangeLogs/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveAdminFeeChangeLogsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveAdminFeeChangeLogsCurrentCall(_callback);
+
+    }
+
+    /**
+     * AdminFeeChangeLogs (current)
+     * Gets adminFeeChangeLogs.
+     * @return List&lt;CurveAdminFeeChangeLogDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveAdminFeeChangeLogDTO> curveAdminFeeChangeLogsCurrent() throws ApiException {
+        ApiResponse<List<CurveAdminFeeChangeLogDTO>> localVarResp = curveAdminFeeChangeLogsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * AdminFeeChangeLogs (current)
+     * Gets adminFeeChangeLogs.
+     * @return ApiResponse&lt;List&lt;CurveAdminFeeChangeLogDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveAdminFeeChangeLogDTO>> curveAdminFeeChangeLogsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveAdminFeeChangeLogsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveAdminFeeChangeLogDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * AdminFeeChangeLogs (current) (asynchronously)
+     * Gets adminFeeChangeLogs.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAdminFeeChangeLogsCurrentAsync(final ApiCallback<List<CurveAdminFeeChangeLogDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveAdminFeeChangeLogsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveAdminFeeChangeLogDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveAmplificationCoeffChangeLogsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAmplificationCoeffChangeLogsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveAmplificationCoeffChangeLogsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveAmplificationCoeffChangeLogsCurrentCall(_callback);
+
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     * Gets amplificationCoeffChangeLogs.
+     * @return List&lt;CurveAmplificationCoeffChangeLogDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveAmplificationCoeffChangeLogDTO> curveAmplificationCoeffChangeLogsCurrent() throws ApiException {
+        ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> localVarResp = curveAmplificationCoeffChangeLogsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     * Gets amplificationCoeffChangeLogs.
+     * @return ApiResponse&lt;List&lt;CurveAmplificationCoeffChangeLogDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> curveAmplificationCoeffChangeLogsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveAmplificationCoeffChangeLogsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveAmplificationCoeffChangeLogDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current) (asynchronously)
+     * Gets amplificationCoeffChangeLogs.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveAmplificationCoeffChangeLogsCurrentAsync(final ApiCallback<List<CurveAmplificationCoeffChangeLogDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveAmplificationCoeffChangeLogsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveAmplificationCoeffChangeLogDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveCoinsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveCoinsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/coins/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveCoinsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveCoinsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Coins (current)
+     * Gets coins.
+     * @return List&lt;CurveCoinDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveCoinDTO> curveCoinsCurrent() throws ApiException {
+        ApiResponse<List<CurveCoinDTO>> localVarResp = curveCoinsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Coins (current)
+     * Gets coins.
+     * @return ApiResponse&lt;List&lt;CurveCoinDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveCoinDTO>> curveCoinsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveCoinsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveCoinDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Coins (current) (asynchronously)
+     * Gets coins.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveCoinsCurrentAsync(final ApiCallback<List<CurveCoinDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveCoinsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveCoinDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveContractVersionsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveContractVersionsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/contractVersions/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveContractVersionsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveContractVersionsCurrentCall(_callback);
+
+    }
+
+    /**
+     * ContractVersions (current)
+     * Gets contractVersions.
+     * @return List&lt;CurveContractVersionDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveContractVersionDTO> curveContractVersionsCurrent() throws ApiException {
+        ApiResponse<List<CurveContractVersionDTO>> localVarResp = curveContractVersionsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * ContractVersions (current)
+     * Gets contractVersions.
+     * @return ApiResponse&lt;List&lt;CurveContractVersionDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveContractVersionDTO>> curveContractVersionsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveContractVersionsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveContractVersionDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ContractVersions (current) (asynchronously)
+     * Gets contractVersions.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveContractVersionsCurrentAsync(final ApiCallback<List<CurveContractVersionDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveContractVersionsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveContractVersionDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveContractsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveContractsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/contracts/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveContractsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveContractsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Contracts (current)
+     * Gets contracts.
+     * @return List&lt;CurveContractDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveContractDTO> curveContractsCurrent() throws ApiException {
+        ApiResponse<List<CurveContractDTO>> localVarResp = curveContractsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Contracts (current)
+     * Gets contracts.
+     * @return ApiResponse&lt;List&lt;CurveContractDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveContractDTO>> curveContractsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveContractsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveContractDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Contracts (current) (asynchronously)
+     * Gets contracts.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveContractsCurrentAsync(final ApiCallback<List<CurveContractDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveContractsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveContractDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveDailyVolumesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveDailyVolumesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/dailyVolumes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveDailyVolumesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveDailyVolumesCurrentCall(_callback);
+
+    }
+
+    /**
+     * DailyVolumes (current)
+     * Gets dailyVolumes.
+     * @return List&lt;CurveDailyVolumeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveDailyVolumeDTO> curveDailyVolumesCurrent() throws ApiException {
+        ApiResponse<List<CurveDailyVolumeDTO>> localVarResp = curveDailyVolumesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * DailyVolumes (current)
+     * Gets dailyVolumes.
+     * @return ApiResponse&lt;List&lt;CurveDailyVolumeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveDailyVolumeDTO>> curveDailyVolumesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveDailyVolumesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveDailyVolumeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * DailyVolumes (current) (asynchronously)
+     * Gets dailyVolumes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveDailyVolumesCurrentAsync(final ApiCallback<List<CurveDailyVolumeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveDailyVolumesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveDailyVolumeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveExchangesCurrent
+     * @param pool  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveExchangesCurrentCall(String pool, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/exchanges/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pool != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pool", pool));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveExchangesCurrentValidateBeforeCall(String pool, final ApiCallback _callback) throws ApiException {
+        return curveExchangesCurrentCall(pool, _callback);
+
+    }
+
+    /**
+     * Exchanges (current)
+     * Gets exchanges.
+     * @param pool  (optional)
+     * @return List&lt;CurveExchangeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveExchangeDTO> curveExchangesCurrent(String pool) throws ApiException {
+        ApiResponse<List<CurveExchangeDTO>> localVarResp = curveExchangesCurrentWithHttpInfo(pool);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Exchanges (current)
+     * Gets exchanges.
+     * @param pool  (optional)
+     * @return ApiResponse&lt;List&lt;CurveExchangeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveExchangeDTO>> curveExchangesCurrentWithHttpInfo(String pool) throws ApiException {
+        okhttp3.Call localVarCall = curveExchangesCurrentValidateBeforeCall(pool, null);
+        Type localVarReturnType = new TypeToken<List<CurveExchangeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Exchanges (current) (asynchronously)
+     * Gets exchanges.
+     * @param pool  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveExchangesCurrentAsync(String pool, final ApiCallback<List<CurveExchangeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveExchangesCurrentValidateBeforeCall(pool, _callback);
+        Type localVarReturnType = new TypeToken<List<CurveExchangeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveFeeChangeLogsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveFeeChangeLogsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/feeChangeLogs/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveFeeChangeLogsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveFeeChangeLogsCurrentCall(_callback);
+
+    }
+
+    /**
+     * FeeChangeLogs (current)
+     * Gets feeChangeLogs.
+     * @return List&lt;CurveFeeChangeLogDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveFeeChangeLogDTO> curveFeeChangeLogsCurrent() throws ApiException {
+        ApiResponse<List<CurveFeeChangeLogDTO>> localVarResp = curveFeeChangeLogsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * FeeChangeLogs (current)
+     * Gets feeChangeLogs.
+     * @return ApiResponse&lt;List&lt;CurveFeeChangeLogDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveFeeChangeLogDTO>> curveFeeChangeLogsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveFeeChangeLogsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveFeeChangeLogDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * FeeChangeLogs (current) (asynchronously)
+     * Gets feeChangeLogs.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveFeeChangeLogsCurrentAsync(final ApiCallback<List<CurveFeeChangeLogDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveFeeChangeLogsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveFeeChangeLogDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeDepositsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeDepositsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeDeposits/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeDepositsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeDepositsCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeDeposits (current)
+     * Gets gaugeDeposits.
+     * @return List&lt;CurveGaugeDepositDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeDepositDTO> curveGaugeDepositsCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeDepositDTO>> localVarResp = curveGaugeDepositsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeDeposits (current)
+     * Gets gaugeDeposits.
+     * @return ApiResponse&lt;List&lt;CurveGaugeDepositDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeDepositDTO>> curveGaugeDepositsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeDepositsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeDepositDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeDeposits (current) (asynchronously)
+     * Gets gaugeDeposits.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeDepositsCurrentAsync(final ApiCallback<List<CurveGaugeDepositDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeDepositsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeDepositDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeLiquiditysCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeLiquiditysCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeLiquiditys/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeLiquiditysCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeLiquiditysCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeLiquiditys (current)
+     * Gets gaugeLiquiditys.
+     * @return List&lt;CurveGaugeLiquidityDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResp = curveGaugeLiquiditysCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeLiquiditys (current)
+     * Gets gaugeLiquiditys.
+     * @return ApiResponse&lt;List&lt;CurveGaugeLiquidityDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeLiquidityDTO>> curveGaugeLiquiditysCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeLiquiditysCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeLiquiditys (current) (asynchronously)
+     * Gets gaugeLiquiditys.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeLiquiditysCurrentAsync(final ApiCallback<List<CurveGaugeLiquidityDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeLiquiditysCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeTotalWeightsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTotalWeightsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeTotalWeights/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeTotalWeightsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeTotalWeightsCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeTotalWeights (current)
+     * Gets gaugeTotalWeights.
+     * @return List&lt;CurveGaugeTotalWeightDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeTotalWeightDTO> curveGaugeTotalWeightsCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeTotalWeightDTO>> localVarResp = curveGaugeTotalWeightsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeTotalWeights (current)
+     * Gets gaugeTotalWeights.
+     * @return ApiResponse&lt;List&lt;CurveGaugeTotalWeightDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeTotalWeightDTO>> curveGaugeTotalWeightsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeTotalWeightsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTotalWeightDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeTotalWeights (current) (asynchronously)
+     * Gets gaugeTotalWeights.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTotalWeightsCurrentAsync(final ApiCallback<List<CurveGaugeTotalWeightDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeTotalWeightsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTotalWeightDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeTypeWeightsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTypeWeightsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeTypeWeights/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeTypeWeightsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeTypeWeightsCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeTypeWeights (current)
+     * Gets gaugeTypeWeights.
+     * @return List&lt;CurveGaugeTypeWeightDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeTypeWeightDTO> curveGaugeTypeWeightsCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeTypeWeightDTO>> localVarResp = curveGaugeTypeWeightsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeTypeWeights (current)
+     * Gets gaugeTypeWeights.
+     * @return ApiResponse&lt;List&lt;CurveGaugeTypeWeightDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeTypeWeightDTO>> curveGaugeTypeWeightsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeTypeWeightsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTypeWeightDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeTypeWeights (current) (asynchronously)
+     * Gets gaugeTypeWeights.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTypeWeightsCurrentAsync(final ApiCallback<List<CurveGaugeTypeWeightDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeTypeWeightsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTypeWeightDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeTypesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTypesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeTypes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeTypesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeTypesCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeTypes (current)
+     * Gets gaugeTypes.
+     * @return List&lt;CurveGaugeTypeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeTypeDTO> curveGaugeTypesCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeTypeDTO>> localVarResp = curveGaugeTypesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeTypes (current)
+     * Gets gaugeTypes.
+     * @return ApiResponse&lt;List&lt;CurveGaugeTypeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeTypeDTO>> curveGaugeTypesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeTypesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTypeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeTypes (current) (asynchronously)
+     * Gets gaugeTypes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeTypesCurrentAsync(final ApiCallback<List<CurveGaugeTypeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeTypesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeTypeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeWeightVotesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWeightVotesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeWeightVotes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeWeightVotesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeWeightVotesCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeWeightVotes (current)
+     * Gets gaugeWeightVotes.
+     * @return List&lt;CurveGaugeWeightVoteDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeWeightVoteDTO> curveGaugeWeightVotesCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeWeightVoteDTO>> localVarResp = curveGaugeWeightVotesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeWeightVotes (current)
+     * Gets gaugeWeightVotes.
+     * @return ApiResponse&lt;List&lt;CurveGaugeWeightVoteDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeWeightVoteDTO>> curveGaugeWeightVotesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeWeightVotesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWeightVoteDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeWeightVotes (current) (asynchronously)
+     * Gets gaugeWeightVotes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWeightVotesCurrentAsync(final ApiCallback<List<CurveGaugeWeightVoteDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeWeightVotesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWeightVoteDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeWeightsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWeightsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeWeights/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeWeightsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeWeightsCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeWeights (current)
+     * Gets gaugeWeights.
+     * @return List&lt;CurveGaugeWeightDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeWeightDTO> curveGaugeWeightsCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeWeightDTO>> localVarResp = curveGaugeWeightsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeWeights (current)
+     * Gets gaugeWeights.
+     * @return ApiResponse&lt;List&lt;CurveGaugeWeightDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeWeightDTO>> curveGaugeWeightsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeWeightsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWeightDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeWeights (current) (asynchronously)
+     * Gets gaugeWeights.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWeightsCurrentAsync(final ApiCallback<List<CurveGaugeWeightDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeWeightsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWeightDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugeWithdrawsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWithdrawsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gaugeWithdraws/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugeWithdrawsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeWithdrawsCurrentCall(_callback);
+
+    }
+
+    /**
+     * GaugeWithdraws (current)
+     * Gets gaugeWithdraws.
+     * @return List&lt;CurveGaugeWithdrawDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeWithdrawDTO> curveGaugeWithdrawsCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeWithdrawDTO>> localVarResp = curveGaugeWithdrawsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GaugeWithdraws (current)
+     * Gets gaugeWithdraws.
+     * @return ApiResponse&lt;List&lt;CurveGaugeWithdrawDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeWithdrawDTO>> curveGaugeWithdrawsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeWithdrawsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWithdrawDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GaugeWithdraws (current) (asynchronously)
+     * Gets gaugeWithdraws.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugeWithdrawsCurrentAsync(final ApiCallback<List<CurveGaugeWithdrawDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugeWithdrawsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeWithdrawDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveGaugesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/gauges/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGaugesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugesCurrentCall(_callback);
+
+    }
+
+    /**
+     * Gauges (current)
+     * Gets gauges.
+     * @return List&lt;CurveGaugeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveGaugeDTO> curveGaugesCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeDTO>> localVarResp = curveGaugesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Gauges (current)
+     * Gets gauges.
+     * @return ApiResponse&lt;List&lt;CurveGaugeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveGaugeDTO>> curveGaugesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Gauges (current) (asynchronously)
+     * Gets gauges.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGaugesCurrentAsync(final ApiCallback<List<CurveGaugeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGaugesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveGaugeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for curveGetAccountsHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -302,7 +2495,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/addliquidityevents/historical";
+        String localVarPath = "/dapps/curve/addLiquidityEvents/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -363,7 +2556,7 @@ public class CurveApi {
 
     /**
      * AddLiquidityEvents (historical) 🔥
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -385,7 +2578,7 @@ public class CurveApi {
 
     /**
      * AddLiquidityEvents (historical) 🔥
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -408,7 +2601,7 @@ public class CurveApi {
 
     /**
      * AddLiquidityEvents (historical) 🔥 (asynchronously)
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -465,7 +2658,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/adminfeechangelogs/historical";
+        String localVarPath = "/dapps/curve/adminFeeChangeLogs/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -526,7 +2719,7 @@ public class CurveApi {
 
     /**
      * AdminFeeChangeLogs (historical) 🔥
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -548,7 +2741,7 @@ public class CurveApi {
 
     /**
      * AdminFeeChangeLogs (historical) 🔥
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -571,7 +2764,7 @@ public class CurveApi {
 
     /**
      * AdminFeeChangeLogs (historical) 🔥 (asynchronously)
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -628,7 +2821,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/amplificationcoeffchangelogs/historical";
+        String localVarPath = "/dapps/curve/amplificationCoeffChangeLogs/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -689,7 +2882,7 @@ public class CurveApi {
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -711,7 +2904,7 @@ public class CurveApi {
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -734,7 +2927,7 @@ public class CurveApi {
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥 (asynchronously)
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -954,7 +3147,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/contractversions/historical";
+        String localVarPath = "/dapps/curve/contractVersions/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1015,7 +3208,7 @@ public class CurveApi {
 
     /**
      * ContractVersions (historical) 🔥
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1037,7 +3230,7 @@ public class CurveApi {
 
     /**
      * ContractVersions (historical) 🔥
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1060,7 +3253,7 @@ public class CurveApi {
 
     /**
      * ContractVersions (historical) 🔥 (asynchronously)
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1272,7 +3465,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/dailyvolumes/historical";
+        String localVarPath = "/dapps/curve/dailyVolumes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1333,7 +3526,7 @@ public class CurveApi {
 
     /**
      * DailyVolumes (historical) 🔥
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1355,7 +3548,7 @@ public class CurveApi {
 
     /**
      * DailyVolumes (historical) 🔥
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1378,7 +3571,7 @@ public class CurveApi {
 
     /**
      * DailyVolumes (historical) 🔥 (asynchronously)
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1598,7 +3791,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/feechangelogs/historical";
+        String localVarPath = "/dapps/curve/feeChangeLogs/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1659,7 +3852,7 @@ public class CurveApi {
 
     /**
      * FeeChangeLogs (historical) 🔥
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1681,7 +3874,7 @@ public class CurveApi {
 
     /**
      * FeeChangeLogs (historical) 🔥
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1704,7 +3897,7 @@ public class CurveApi {
 
     /**
      * FeeChangeLogs (historical) 🔥 (asynchronously)
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1760,7 +3953,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugedeposits/historical";
+        String localVarPath = "/dapps/curve/gaugeDeposits/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1817,7 +4010,7 @@ public class CurveApi {
 
     /**
      * GaugeDeposits (historical) 🔥
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1838,7 +4031,7 @@ public class CurveApi {
 
     /**
      * GaugeDeposits (historical) 🔥
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1860,7 +4053,7 @@ public class CurveApi {
 
     /**
      * GaugeDeposits (historical) 🔥 (asynchronously)
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1916,7 +4109,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugeliquiditys/historical";
+        String localVarPath = "/dapps/curve/gaugeLiquiditys/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1977,7 +4170,7 @@ public class CurveApi {
 
     /**
      * GaugeLiquiditys (historical) 🔥
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1999,7 +4192,7 @@ public class CurveApi {
 
     /**
      * GaugeLiquiditys (historical) 🔥
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2022,7 +4215,7 @@ public class CurveApi {
 
     /**
      * GaugeLiquiditys (historical) 🔥 (asynchronously)
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2078,7 +4271,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugetotalweights/historical";
+        String localVarPath = "/dapps/curve/gaugeTotalWeights/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2135,7 +4328,7 @@ public class CurveApi {
 
     /**
      * GaugeTotalWeights (historical) 🔥
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2156,7 +4349,7 @@ public class CurveApi {
 
     /**
      * GaugeTotalWeights (historical) 🔥
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2178,7 +4371,7 @@ public class CurveApi {
 
     /**
      * GaugeTotalWeights (historical) 🔥 (asynchronously)
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2233,7 +4426,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugetypeweights/historical";
+        String localVarPath = "/dapps/curve/gaugeTypeWeights/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2290,7 +4483,7 @@ public class CurveApi {
 
     /**
      * GaugeTypeWeights (historical) 🔥
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2311,7 +4504,7 @@ public class CurveApi {
 
     /**
      * GaugeTypeWeights (historical) 🔥
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2333,7 +4526,7 @@ public class CurveApi {
 
     /**
      * GaugeTypeWeights (historical) 🔥 (asynchronously)
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2389,7 +4582,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugetypes/historical";
+        String localVarPath = "/dapps/curve/gaugeTypes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2450,7 +4643,7 @@ public class CurveApi {
 
     /**
      * GaugeTypes (historical) 🔥
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2472,7 +4665,7 @@ public class CurveApi {
 
     /**
      * GaugeTypes (historical) 🔥
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2495,7 +4688,7 @@ public class CurveApi {
 
     /**
      * GaugeTypes (historical) 🔥 (asynchronously)
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2552,7 +4745,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugeweightvotes/historical";
+        String localVarPath = "/dapps/curve/gaugeWeightVotes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2613,7 +4806,7 @@ public class CurveApi {
 
     /**
      * GaugeWeightVotes (historical) 🔥
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2635,7 +4828,7 @@ public class CurveApi {
 
     /**
      * GaugeWeightVotes (historical) 🔥
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2658,7 +4851,7 @@ public class CurveApi {
 
     /**
      * GaugeWeightVotes (historical) 🔥 (asynchronously)
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2714,7 +4907,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugeweights/historical";
+        String localVarPath = "/dapps/curve/gaugeWeights/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2771,7 +4964,7 @@ public class CurveApi {
 
     /**
      * GaugeWeights (historical) 🔥
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2792,7 +4985,7 @@ public class CurveApi {
 
     /**
      * GaugeWeights (historical) 🔥
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2814,7 +5007,7 @@ public class CurveApi {
 
     /**
      * GaugeWeights (historical) 🔥 (asynchronously)
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2869,7 +5062,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugewithdraws/historical";
+        String localVarPath = "/dapps/curve/gaugeWithdraws/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2926,7 +5119,7 @@ public class CurveApi {
 
     /**
      * GaugeWithdraws (historical) 🔥
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2947,7 +5140,7 @@ public class CurveApi {
 
     /**
      * GaugeWithdraws (historical) 🔥
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2969,7 +5162,7 @@ public class CurveApi {
 
     /**
      * GaugeWithdraws (historical) 🔥 (asynchronously)
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3196,7 +5389,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/hourlyvolumes/historical";
+        String localVarPath = "/dapps/curve/hourlyVolumes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3257,7 +5450,7 @@ public class CurveApi {
 
     /**
      * HourlyVolumes (historical) 🔥
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3279,7 +5472,7 @@ public class CurveApi {
 
     /**
      * HourlyVolumes (historical) 🔥
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3302,7 +5495,7 @@ public class CurveApi {
 
     /**
      * HourlyVolumes (historical) 🔥 (asynchronously)
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3362,7 +5555,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/lptokens/historical";
+        String localVarPath = "/dapps/curve/lpTokens/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3435,7 +5628,7 @@ public class CurveApi {
 
     /**
      * LpTokens (historical) 🔥
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3460,7 +5653,7 @@ public class CurveApi {
 
     /**
      * LpTokens (historical) 🔥
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3486,7 +5679,7 @@ public class CurveApi {
 
     /**
      * LpTokens (historical) 🔥 (asynchronously)
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3708,7 +5901,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/proposalvotes/historical";
+        String localVarPath = "/dapps/curve/proposalVotes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3765,7 +5958,7 @@ public class CurveApi {
 
     /**
      * ProposalVotes (historical) 🔥
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3786,7 +5979,7 @@ public class CurveApi {
 
     /**
      * ProposalVotes (historical) 🔥
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3808,7 +6001,7 @@ public class CurveApi {
 
     /**
      * ProposalVotes (historical) 🔥 (asynchronously)
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4019,7 +6212,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/removeliquidityevents/historical";
+        String localVarPath = "/dapps/curve/removeLiquidityEvents/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4080,7 +6273,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityEvents (historical) 🔥
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4102,7 +6295,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityEvents (historical) 🔥
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4125,7 +6318,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityEvents (historical) 🔥 (asynchronously)
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4182,7 +6375,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/removeliquidityoneevents/historical";
+        String localVarPath = "/dapps/curve/removeLiquidityOneEvents/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4243,7 +6436,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4265,7 +6458,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4288,7 +6481,7 @@ public class CurveApi {
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥 (asynchronously)
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4344,7 +6537,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/systemstates/historical";
+        String localVarPath = "/dapps/curve/systemStates/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4401,7 +6594,7 @@ public class CurveApi {
 
     /**
      * SystemStates (historical) 🔥
-     * Gets systemstates.
+     * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4422,7 +6615,7 @@ public class CurveApi {
 
     /**
      * SystemStates (historical) 🔥
-     * Gets systemstates.
+     * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4444,7 +6637,7 @@ public class CurveApi {
 
     /**
      * SystemStates (historical) 🔥 (asynchronously)
-     * Gets systemstates.
+     * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4679,7 +6872,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/transferownershipevents/historical";
+        String localVarPath = "/dapps/curve/transferOwnershipEvents/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4740,7 +6933,7 @@ public class CurveApi {
 
     /**
      * TransferOwnershipEvents (historical) 🔥
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4762,7 +6955,7 @@ public class CurveApi {
 
     /**
      * TransferOwnershipEvents (historical) 🔥
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4785,7 +6978,7 @@ public class CurveApi {
 
     /**
      * TransferOwnershipEvents (historical) 🔥 (asynchronously)
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4842,7 +7035,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/underlyingcoins/historical";
+        String localVarPath = "/dapps/curve/underlyingCoins/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4903,7 +7096,7 @@ public class CurveApi {
 
     /**
      * UnderlyingCoins (historical) 🔥
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -4925,7 +7118,7 @@ public class CurveApi {
 
     /**
      * UnderlyingCoins (historical) 🔥
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -4948,7 +7141,7 @@ public class CurveApi {
 
     /**
      * UnderlyingCoins (historical) 🔥 (asynchronously)
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -5005,7 +7198,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/votingapps/historical";
+        String localVarPath = "/dapps/curve/votingApps/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5066,7 +7259,7 @@ public class CurveApi {
 
     /**
      * VotingApps (historical) 🔥
-     * Gets votingapps.
+     * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5088,7 +7281,7 @@ public class CurveApi {
 
     /**
      * VotingApps (historical) 🔥
-     * Gets votingapps.
+     * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5111,7 +7304,7 @@ public class CurveApi {
 
     /**
      * VotingApps (historical) 🔥 (asynchronously)
-     * Gets votingapps.
+     * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5168,7 +7361,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/weeklyvolumes/historical";
+        String localVarPath = "/dapps/curve/weeklyVolumes/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5229,7 +7422,7 @@ public class CurveApi {
 
     /**
      * WeeklyVolumes (historical) 🔥
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5251,7 +7444,7 @@ public class CurveApi {
 
     /**
      * WeeklyVolumes (historical) 🔥
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5274,7 +7467,7 @@ public class CurveApi {
 
     /**
      * WeeklyVolumes (historical) 🔥 (asynchronously)
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -5293,6 +7486,1509 @@ public class CurveApi {
     public okhttp3.Call curveGetWeeklyVolumesHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<CurveWeeklyVolumeDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = curveGetWeeklyVolumesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+        Type localVarReturnType = new TypeToken<List<CurveWeeklyVolumeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveHourlyVolumesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveHourlyVolumesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/hourlyVolumes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveHourlyVolumesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveHourlyVolumesCurrentCall(_callback);
+
+    }
+
+    /**
+     * HourlyVolumes (current)
+     * Gets hourlyVolumes.
+     * @return List&lt;CurveHourlyVolumeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveHourlyVolumeDTO> curveHourlyVolumesCurrent() throws ApiException {
+        ApiResponse<List<CurveHourlyVolumeDTO>> localVarResp = curveHourlyVolumesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * HourlyVolumes (current)
+     * Gets hourlyVolumes.
+     * @return ApiResponse&lt;List&lt;CurveHourlyVolumeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveHourlyVolumeDTO>> curveHourlyVolumesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveHourlyVolumesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveHourlyVolumeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * HourlyVolumes (current) (asynchronously)
+     * Gets hourlyVolumes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveHourlyVolumesCurrentAsync(final ApiCallback<List<CurveHourlyVolumeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveHourlyVolumesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveHourlyVolumeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveLpTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveLpTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/lpTokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveLpTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveLpTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return List&lt;CurveLpTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveLpTokenDTO> curveLpTokensCurrent() throws ApiException {
+        ApiResponse<List<CurveLpTokenDTO>> localVarResp = curveLpTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return ApiResponse&lt;List&lt;CurveLpTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveLpTokenDTO>> curveLpTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveLpTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveLpTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * LpTokens (current) (asynchronously)
+     * Gets lpTokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveLpTokensCurrentAsync(final ApiCallback<List<CurveLpTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveLpTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveLpTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curvePoolsCurrent
+     * @param id Pool address. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curvePoolsCurrentCall(String id, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/pools/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (id != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("id", id));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curvePoolsCurrentValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+        return curvePoolsCurrentCall(id, _callback);
+
+    }
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @return List&lt;CurvePoolDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurvePoolDTO> curvePoolsCurrent(String id) throws ApiException {
+        ApiResponse<List<CurvePoolDTO>> localVarResp = curvePoolsCurrentWithHttpInfo(id);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @return ApiResponse&lt;List&lt;CurvePoolDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurvePoolDTO>> curvePoolsCurrentWithHttpInfo(String id) throws ApiException {
+        okhttp3.Call localVarCall = curvePoolsCurrentValidateBeforeCall(id, null);
+        Type localVarReturnType = new TypeToken<List<CurvePoolDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Pools (current) (asynchronously)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curvePoolsCurrentAsync(String id, final ApiCallback<List<CurvePoolDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curvePoolsCurrentValidateBeforeCall(id, _callback);
+        Type localVarReturnType = new TypeToken<List<CurvePoolDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveProposalVotesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveProposalVotesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/proposalVotes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveProposalVotesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveProposalVotesCurrentCall(_callback);
+
+    }
+
+    /**
+     * ProposalVotes (current)
+     * Gets proposalVotes.
+     * @return List&lt;CurveProposalVoteDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveProposalVoteDTO> curveProposalVotesCurrent() throws ApiException {
+        ApiResponse<List<CurveProposalVoteDTO>> localVarResp = curveProposalVotesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * ProposalVotes (current)
+     * Gets proposalVotes.
+     * @return ApiResponse&lt;List&lt;CurveProposalVoteDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveProposalVoteDTO>> curveProposalVotesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveProposalVotesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveProposalVoteDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ProposalVotes (current) (asynchronously)
+     * Gets proposalVotes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveProposalVotesCurrentAsync(final ApiCallback<List<CurveProposalVoteDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveProposalVotesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveProposalVoteDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveProposalsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveProposalsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/proposals/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveProposalsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveProposalsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Proposals (current)
+     * Gets proposals.
+     * @return List&lt;CurveProposalDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveProposalDTO> curveProposalsCurrent() throws ApiException {
+        ApiResponse<List<CurveProposalDTO>> localVarResp = curveProposalsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Proposals (current)
+     * Gets proposals.
+     * @return ApiResponse&lt;List&lt;CurveProposalDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveProposalDTO>> curveProposalsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveProposalsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveProposalDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Proposals (current) (asynchronously)
+     * Gets proposals.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveProposalsCurrentAsync(final ApiCallback<List<CurveProposalDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveProposalsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveProposalDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveRemoveLiquidityEventsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveRemoveLiquidityEventsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/removeLiquidityEvents/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveRemoveLiquidityEventsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveRemoveLiquidityEventsCurrentCall(_callback);
+
+    }
+
+    /**
+     * RemoveLiquidityEvents (current)
+     * Gets removeLiquidityEvents.
+     * @return List&lt;CurveRemoveLiquidityEventDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveRemoveLiquidityEventDTO> curveRemoveLiquidityEventsCurrent() throws ApiException {
+        ApiResponse<List<CurveRemoveLiquidityEventDTO>> localVarResp = curveRemoveLiquidityEventsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * RemoveLiquidityEvents (current)
+     * Gets removeLiquidityEvents.
+     * @return ApiResponse&lt;List&lt;CurveRemoveLiquidityEventDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveRemoveLiquidityEventDTO>> curveRemoveLiquidityEventsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveRemoveLiquidityEventsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveRemoveLiquidityEventDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * RemoveLiquidityEvents (current) (asynchronously)
+     * Gets removeLiquidityEvents.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveRemoveLiquidityEventsCurrentAsync(final ApiCallback<List<CurveRemoveLiquidityEventDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveRemoveLiquidityEventsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveRemoveLiquidityEventDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveRemoveLiquidityOneEventsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveRemoveLiquidityOneEventsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/removeLiquidityOneEvents/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveRemoveLiquidityOneEventsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveRemoveLiquidityOneEventsCurrentCall(_callback);
+
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     * Gets removeLiquidityOneEvents.
+     * @return List&lt;CurveRemoveLiquidityOneEventDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveRemoveLiquidityOneEventDTO> curveRemoveLiquidityOneEventsCurrent() throws ApiException {
+        ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> localVarResp = curveRemoveLiquidityOneEventsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     * Gets removeLiquidityOneEvents.
+     * @return ApiResponse&lt;List&lt;CurveRemoveLiquidityOneEventDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> curveRemoveLiquidityOneEventsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveRemoveLiquidityOneEventsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveRemoveLiquidityOneEventDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current) (asynchronously)
+     * Gets removeLiquidityOneEvents.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveRemoveLiquidityOneEventsCurrentAsync(final ApiCallback<List<CurveRemoveLiquidityOneEventDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveRemoveLiquidityOneEventsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveRemoveLiquidityOneEventDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveSystemStatesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveSystemStatesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/systemStates/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveSystemStatesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveSystemStatesCurrentCall(_callback);
+
+    }
+
+    /**
+     * SystemStates (current)
+     * Gets systemStates.
+     * @return List&lt;CurveSystemStateDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveSystemStateDTO> curveSystemStatesCurrent() throws ApiException {
+        ApiResponse<List<CurveSystemStateDTO>> localVarResp = curveSystemStatesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * SystemStates (current)
+     * Gets systemStates.
+     * @return ApiResponse&lt;List&lt;CurveSystemStateDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveSystemStateDTO>> curveSystemStatesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveSystemStatesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveSystemStateDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * SystemStates (current) (asynchronously)
+     * Gets systemStates.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveSystemStatesCurrentAsync(final ApiCallback<List<CurveSystemStateDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveSystemStatesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveSystemStateDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/tokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List&lt;CurveTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveTokenDTO> curveTokensCurrent() throws ApiException {
+        ApiResponse<List<CurveTokenDTO>> localVarResp = curveTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse&lt;List&lt;CurveTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveTokenDTO>> curveTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Tokens (current) (asynchronously)
+     * Gets tokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveTokensCurrentAsync(final ApiCallback<List<CurveTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveTransferOwnershipEventsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveTransferOwnershipEventsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/transferOwnershipEvents/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveTransferOwnershipEventsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveTransferOwnershipEventsCurrentCall(_callback);
+
+    }
+
+    /**
+     * TransferOwnershipEvents (current)
+     * Gets transferOwnershipEvents.
+     * @return List&lt;CurveTransferOwnershipEventDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveTransferOwnershipEventDTO> curveTransferOwnershipEventsCurrent() throws ApiException {
+        ApiResponse<List<CurveTransferOwnershipEventDTO>> localVarResp = curveTransferOwnershipEventsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * TransferOwnershipEvents (current)
+     * Gets transferOwnershipEvents.
+     * @return ApiResponse&lt;List&lt;CurveTransferOwnershipEventDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveTransferOwnershipEventDTO>> curveTransferOwnershipEventsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveTransferOwnershipEventsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveTransferOwnershipEventDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * TransferOwnershipEvents (current) (asynchronously)
+     * Gets transferOwnershipEvents.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveTransferOwnershipEventsCurrentAsync(final ApiCallback<List<CurveTransferOwnershipEventDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveTransferOwnershipEventsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveTransferOwnershipEventDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveUnderlyingCoinsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveUnderlyingCoinsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/underlyingCoins/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveUnderlyingCoinsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveUnderlyingCoinsCurrentCall(_callback);
+
+    }
+
+    /**
+     * UnderlyingCoins (current)
+     * Gets underlyingCoins.
+     * @return List&lt;CurveUnderlyingCoinDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveUnderlyingCoinDTO> curveUnderlyingCoinsCurrent() throws ApiException {
+        ApiResponse<List<CurveUnderlyingCoinDTO>> localVarResp = curveUnderlyingCoinsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * UnderlyingCoins (current)
+     * Gets underlyingCoins.
+     * @return ApiResponse&lt;List&lt;CurveUnderlyingCoinDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveUnderlyingCoinDTO>> curveUnderlyingCoinsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveUnderlyingCoinsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveUnderlyingCoinDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * UnderlyingCoins (current) (asynchronously)
+     * Gets underlyingCoins.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveUnderlyingCoinsCurrentAsync(final ApiCallback<List<CurveUnderlyingCoinDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveUnderlyingCoinsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveUnderlyingCoinDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveVotingAppsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveVotingAppsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/votingApps/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveVotingAppsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveVotingAppsCurrentCall(_callback);
+
+    }
+
+    /**
+     * VotingApps (current)
+     * Gets votingApps.
+     * @return List&lt;CurveVotingAppDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveVotingAppDTO> curveVotingAppsCurrent() throws ApiException {
+        ApiResponse<List<CurveVotingAppDTO>> localVarResp = curveVotingAppsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * VotingApps (current)
+     * Gets votingApps.
+     * @return ApiResponse&lt;List&lt;CurveVotingAppDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveVotingAppDTO>> curveVotingAppsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveVotingAppsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveVotingAppDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * VotingApps (current) (asynchronously)
+     * Gets votingApps.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveVotingAppsCurrentAsync(final ApiCallback<List<CurveVotingAppDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveVotingAppsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveVotingAppDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for curveWeeklyVolumesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveWeeklyVolumesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/curve/weeklyVolumes/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveWeeklyVolumesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveWeeklyVolumesCurrentCall(_callback);
+
+    }
+
+    /**
+     * WeeklyVolumes (current)
+     * Gets weeklyVolumes.
+     * @return List&lt;CurveWeeklyVolumeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveWeeklyVolumeDTO> curveWeeklyVolumesCurrent() throws ApiException {
+        ApiResponse<List<CurveWeeklyVolumeDTO>> localVarResp = curveWeeklyVolumesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * WeeklyVolumes (current)
+     * Gets weeklyVolumes.
+     * @return ApiResponse&lt;List&lt;CurveWeeklyVolumeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveWeeklyVolumeDTO>> curveWeeklyVolumesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveWeeklyVolumesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveWeeklyVolumeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * WeeklyVolumes (current) (asynchronously)
+     * Gets weeklyVolumes.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveWeeklyVolumesCurrentAsync(final ApiCallback<List<CurveWeeklyVolumeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveWeeklyVolumesCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<CurveWeeklyVolumeDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

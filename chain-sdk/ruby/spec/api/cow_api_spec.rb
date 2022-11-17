@@ -118,4 +118,59 @@ describe 'CowApi' do
     end
   end
 
+  # unit tests for cow_orders__current
+  # Orders (current)
+  # Gets orders.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CowOrderDTO>]
+  describe 'cow_orders__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_settlements__current
+  # Settlements (current)
+  # Gets settlements.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CowSettlementDTO>]
+  describe 'cow_settlements__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_tokens__current
+  # Tokens (current)
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CowTokenDTO>]
+  describe 'cow_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_trades__current
+  # Trades (current)
+  # Gets trades.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CowTradeDTO>]
+  describe 'cow_trades__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_users__current
+  # Users (current)
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CowUserDTO>]
+  describe 'cow_users__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
 end

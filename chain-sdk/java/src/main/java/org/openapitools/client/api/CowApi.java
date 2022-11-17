@@ -901,4 +901,579 @@ public class CowApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
+    /**
+     * Build call for cowOrdersCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowOrdersCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/cow/orders/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cowOrdersCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cowOrdersCurrentCall(_callback);
+
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return List&lt;CowOrderDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CowOrderDTO> cowOrdersCurrent() throws ApiException {
+        ApiResponse<List<CowOrderDTO>> localVarResp = cowOrdersCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return ApiResponse&lt;List&lt;CowOrderDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CowOrderDTO>> cowOrdersCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cowOrdersCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CowOrderDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Orders (current) (asynchronously)
+     * Gets orders.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowOrdersCurrentAsync(final ApiCallback<List<CowOrderDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cowOrdersCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CowOrderDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cowSettlementsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowSettlementsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/cow/settlements/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cowSettlementsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cowSettlementsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Settlements (current)
+     * Gets settlements.
+     * @return List&lt;CowSettlementDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CowSettlementDTO> cowSettlementsCurrent() throws ApiException {
+        ApiResponse<List<CowSettlementDTO>> localVarResp = cowSettlementsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Settlements (current)
+     * Gets settlements.
+     * @return ApiResponse&lt;List&lt;CowSettlementDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CowSettlementDTO>> cowSettlementsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cowSettlementsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CowSettlementDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Settlements (current) (asynchronously)
+     * Gets settlements.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowSettlementsCurrentAsync(final ApiCallback<List<CowSettlementDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cowSettlementsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CowSettlementDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cowTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/cow/tokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cowTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cowTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List&lt;CowTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CowTokenDTO> cowTokensCurrent() throws ApiException {
+        ApiResponse<List<CowTokenDTO>> localVarResp = cowTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse&lt;List&lt;CowTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CowTokenDTO>> cowTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cowTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CowTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Tokens (current) (asynchronously)
+     * Gets tokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowTokensCurrentAsync(final ApiCallback<List<CowTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cowTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CowTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cowTradesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowTradesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/cow/trades/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cowTradesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cowTradesCurrentCall(_callback);
+
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return List&lt;CowTradeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CowTradeDTO> cowTradesCurrent() throws ApiException {
+        ApiResponse<List<CowTradeDTO>> localVarResp = cowTradesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return ApiResponse&lt;List&lt;CowTradeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CowTradeDTO>> cowTradesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cowTradesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CowTradeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Trades (current) (asynchronously)
+     * Gets trades.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowTradesCurrentAsync(final ApiCallback<List<CowTradeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cowTradesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CowTradeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for cowUsersCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowUsersCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/cow/users/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call cowUsersCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return cowUsersCurrentCall(_callback);
+
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return List&lt;CowUserDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CowUserDTO> cowUsersCurrent() throws ApiException {
+        ApiResponse<List<CowUserDTO>> localVarResp = cowUsersCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return ApiResponse&lt;List&lt;CowUserDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CowUserDTO>> cowUsersCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = cowUsersCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CowUserDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Users (current) (asynchronously)
+     * Gets users.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call cowUsersCurrentAsync(final ApiCallback<List<CowUserDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = cowUsersCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CowUserDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
 }

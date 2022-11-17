@@ -42,6 +42,30 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $dex_get_trades__current_result = $api->dex_get_trades__current();
 
 #
+# sushiswap_bundles__current test
+#
+# uncomment below and update the test
+#my $sushiswap_bundles__current_result = $api->sushiswap_bundles__current();
+
+#
+# sushiswap_burns__current test
+#
+# uncomment below and update the test
+#my $sushiswap_burns__current_result = $api->sushiswap_burns__current();
+
+#
+# sushiswap_day_datas__current test
+#
+# uncomment below and update the test
+#my $sushiswap_day_datas__current_result = $api->sushiswap_day_datas__current();
+
+#
+# sushiswap_factorys__current test
+#
+# uncomment below and update the test
+#my $sushiswap_factorys__current_result = $api->sushiswap_factorys__current();
+
+#
 # sushiswap_get_bundles__historical test
 #
 # uncomment below and update the test
@@ -182,12 +206,6 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_pools__current_result = $api->sushiswap_get_pools__current();
 
 #
-# sushiswap_get_swaps__current test
-#
-# uncomment below and update the test
-#my $sushiswap_get_swaps__current_result = $api->sushiswap_get_swaps__current();
-
-#
 # sushiswap_get_swaps__historical test
 #
 # uncomment below and update the test
@@ -209,12 +227,6 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_token_day_datas__historical_end_date = undef; # replace NULL with a proper value
 #my $sushiswap_get_token_day_datas__historical_id = undef; # replace NULL with a proper value
 #my $sushiswap_get_token_day_datas__historical_result = $api->sushiswap_get_token_day_datas__historical(start_block => $sushiswap_get_token_day_datas__historical_start_block, end_block => $sushiswap_get_token_day_datas__historical_end_block, start_date => $sushiswap_get_token_day_datas__historical_start_date, end_date => $sushiswap_get_token_day_datas__historical_end_date, id => $sushiswap_get_token_day_datas__historical_id);
-
-#
-# sushiswap_get_tokens__current test
-#
-# uncomment below and update the test
-#my $sushiswap_get_tokens__current_result = $api->sushiswap_get_tokens__current();
 
 #
 # sushiswap_get_tokens__historical test
@@ -250,4 +262,78 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_users__historical_end_date = undef; # replace NULL with a proper value
 #my $sushiswap_get_users__historical_id = undef; # replace NULL with a proper value
 #my $sushiswap_get_users__historical_result = $api->sushiswap_get_users__historical(start_block => $sushiswap_get_users__historical_start_block, end_block => $sushiswap_get_users__historical_end_block, start_date => $sushiswap_get_users__historical_start_date, end_date => $sushiswap_get_users__historical_end_date, id => $sushiswap_get_users__historical_id);
+
+#
+# sushiswap_hour_datas__current test
+#
+# uncomment below and update the test
+#my $sushiswap_hour_datas__current_result = $api->sushiswap_hour_datas__current();
+
+#
+# sushiswap_liquidity_position_snapshots__current test
+#
+# uncomment below and update the test
+#my $sushiswap_liquidity_position_snapshots__current_result = $api->sushiswap_liquidity_position_snapshots__current();
+
+#
+# sushiswap_liquidity_positions__current test
+#
+# uncomment below and update the test
+#my $sushiswap_liquidity_positions__current_result = $api->sushiswap_liquidity_positions__current();
+
+#
+# sushiswap_mints__current test
+#
+# uncomment below and update the test
+#my $sushiswap_mints__current_result = $api->sushiswap_mints__current();
+
+#
+# sushiswap_pair_day_datas__current test
+#
+# uncomment below and update the test
+#my $sushiswap_pair_day_datas__current_result = $api->sushiswap_pair_day_datas__current();
+
+#
+# sushiswap_pair_hour_datas__current test
+#
+# uncomment below and update the test
+#my $sushiswap_pair_hour_datas__current_result = $api->sushiswap_pair_hour_datas__current();
+
+#
+# sushiswap_pairs__current test
+#
+# uncomment below and update the test
+#my $sushiswap_pairs__current_id = undef; # replace NULL with a proper value
+#my $sushiswap_pairs__current_result = $api->sushiswap_pairs__current(id => $sushiswap_pairs__current_id);
+
+#
+# sushiswap_swaps__current test
+#
+# uncomment below and update the test
+#my $sushiswap_swaps__current_pair = undef; # replace NULL with a proper value
+#my $sushiswap_swaps__current_result = $api->sushiswap_swaps__current(pair => $sushiswap_swaps__current_pair);
+
+#
+# sushiswap_token_day_datas__current test
+#
+# uncomment below and update the test
+#my $sushiswap_token_day_datas__current_result = $api->sushiswap_token_day_datas__current();
+
+#
+# sushiswap_tokens__current test
+#
+# uncomment below and update the test
+#my $sushiswap_tokens__current_result = $api->sushiswap_tokens__current();
+
+#
+# sushiswap_transactions__current test
+#
+# uncomment below and update the test
+#my $sushiswap_transactions__current_result = $api->sushiswap_transactions__current();
+
+#
+# sushiswap_users__current test
+#
+# uncomment below and update the test
+#my $sushiswap_users__current_result = $api->sushiswap_users__current();
 

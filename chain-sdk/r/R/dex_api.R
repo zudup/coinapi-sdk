@@ -14,6 +14,38 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ DexBatchsCurrent } \emph{ Batchs (current) }
+#' Gets batchs.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.BatchDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexBatchDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexDepositsCurrent } \emph{ Deposits (current) }
+#' Gets deposits.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.DepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ DexGetBatchsHistorical } \emph{ Batchs (historical) 🔥 }
 #' Gets batchs.
 #'
@@ -212,7 +244,7 @@
 #' }
 #'
 #' \strong{ DexGetWithdrawRequestsHistorical } \emph{ WithdrawRequests (historical) 🔥 }
-#' Gets withdrawrequests.
+#' Gets withdrawRequests.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -255,11 +287,181 @@
 #' }
 #' }
 #'
+#' \strong{ DexOrdersCurrent } \emph{ Orders (current) }
+#' Gets orders.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.OrderDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexOrderDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexPricesCurrent } \emph{ Prices (current) }
+#' Gets prices.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.PriceDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexPriceDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexSolutionsCurrent } \emph{ Solutions (current) }
+#' Gets solutions.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.SolutionDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexSolutionDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexStatssCurrent } \emph{ Statss (current) }
+#' Gets statss.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.StatsDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexStatsDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexTokensCurrent } \emph{ Tokens (current) }
+#' Gets tokens.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.TokenDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexTradesCurrent } \emph{ Trades (current) }
+#' Gets trades.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.TradeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexTradeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexUsersCurrent } \emph{ Users (current) }
+#' Gets users.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.UserDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexUserDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexWithdrawRequestsCurrent } \emph{ WithdrawRequests (current) }
+#' Gets withdrawRequests.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.WithdrawRequestDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexWithdrawRequestDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexWithdrawsCurrent } \emph{ Withdraws (current) }
+#' Gets withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.WithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
+#' ####################  DexBatchsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Batchs (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexBatchsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexBatchsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexDepositsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Deposits (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexDepositsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexDepositsCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  DexGetBatchsHistorical  ####################
 #'
 #' library(openapi)
@@ -468,6 +670,123 @@
 #' dput(result)
 #'
 #'
+#' ####################  DexOrdersCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Orders (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexOrdersCurrent(data_file = "result.txt")
+#' result <- api_instance$DexOrdersCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexPricesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Prices (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexPricesCurrent(data_file = "result.txt")
+#' result <- api_instance$DexPricesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexSolutionsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Solutions (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexSolutionsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexSolutionsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexStatssCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Statss (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexStatssCurrent(data_file = "result.txt")
+#' result <- api_instance$DexStatssCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexTokensCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Tokens (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexTokensCurrent(data_file = "result.txt")
+#' result <- api_instance$DexTokensCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexTradesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Trades (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexTradesCurrent(data_file = "result.txt")
+#' result <- api_instance$DexTradesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexUsersCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Users (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexUsersCurrent(data_file = "result.txt")
+#' result <- api_instance$DexUsersCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexWithdrawRequestsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #WithdrawRequests (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexWithdrawRequestsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexWithdrawRequestsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexWithdrawsCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #Withdraws (current)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexWithdrawsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexWithdrawsCurrent()
+#' dput(result)
+#'
+#'
 #' }
 #' @importFrom R6 R6Class
 #' @importFrom base64enc base64encode
@@ -488,6 +807,178 @@ DexApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
+      }
+    },
+    #' Batchs (current)
+    #'
+    #' @description
+    #' Batchs (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexBatchDTO]
+    #' @export
+    DexBatchsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexBatchsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Batchs (current)
+    #'
+    #' @description
+    #' Batchs (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexBatchDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexBatchsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/batchs/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexBatchDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexDepositDTO]
+    #' @export
+    DexDepositsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexDepositsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Deposits (current)
+    #'
+    #' @description
+    #' Deposits (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexDepositDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexDepositsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/deposits/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
       }
     },
     #' Batchs (historical) 🔥
@@ -1599,7 +2090,7 @@ DexApi <- R6::R6Class(
 
       query_params[["user"]] <- `user`
 
-      local_var_url_path <- "/dapps/dex/withdrawrequests/historical"
+      local_var_url_path <- "/dapps/dex/withdrawRequests/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -1716,6 +2207,780 @@ DexApi <- R6::R6Class(
       query_params[["user"]] <- `user`
 
       local_var_url_path <- "/dapps/dex/withdraws/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexWithdrawDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Orders (current)
+    #'
+    #' @description
+    #' Orders (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexOrderDTO]
+    #' @export
+    DexOrdersCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexOrdersCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Orders (current)
+    #'
+    #' @description
+    #' Orders (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexOrderDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexOrdersCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/orders/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexOrderDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Prices (current)
+    #'
+    #' @description
+    #' Prices (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexPriceDTO]
+    #' @export
+    DexPricesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexPricesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Prices (current)
+    #'
+    #' @description
+    #' Prices (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexPriceDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexPricesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/prices/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexPriceDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Solutions (current)
+    #'
+    #' @description
+    #' Solutions (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexSolutionDTO]
+    #' @export
+    DexSolutionsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexSolutionsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Solutions (current)
+    #'
+    #' @description
+    #' Solutions (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexSolutionDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexSolutionsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/solutions/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexSolutionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Statss (current)
+    #'
+    #' @description
+    #' Statss (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexStatsDTO]
+    #' @export
+    DexStatssCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexStatssCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Statss (current)
+    #'
+    #' @description
+    #' Statss (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexStatsDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexStatssCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/statss/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexStatsDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Tokens (current)
+    #'
+    #' @description
+    #' Tokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexTokenDTO]
+    #' @export
+    DexTokensCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexTokensCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Tokens (current)
+    #'
+    #' @description
+    #' Tokens (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexTokenDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/tokens/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Trades (current)
+    #'
+    #' @description
+    #' Trades (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexTradeDTO]
+    #' @export
+    DexTradesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexTradesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Trades (current)
+    #'
+    #' @description
+    #' Trades (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexTradeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexTradesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/trades/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexTradeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Users (current)
+    #'
+    #' @description
+    #' Users (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexUserDTO]
+    #' @export
+    DexUsersCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexUsersCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Users (current)
+    #'
+    #' @description
+    #' Users (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexUserDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexUsersCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/users/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexUserDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' WithdrawRequests (current)
+    #'
+    #' @description
+    #' WithdrawRequests (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexWithdrawRequestDTO]
+    #' @export
+    DexWithdrawRequestsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexWithdrawRequestsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' WithdrawRequests (current)
+    #'
+    #' @description
+    #' WithdrawRequests (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexWithdrawRequestDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexWithdrawRequestsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/withdrawRequests/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexWithdrawRequestDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexWithdrawDTO]
+    #' @export
+    DexWithdrawsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexWithdrawsCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Withdraws (current)
+    #'
+    #' @description
+    #' Withdraws (current)
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexWithdrawsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/dex/withdraws/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")

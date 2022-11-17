@@ -6,25 +6,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curveGetExchangesCurrent**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dexGetTradesCurrent**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 
@@ -99,6 +113,170 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**[DexTradeDTO]**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapBundlesCurrent
+
+> [SushiswapBundleDTO] sushiswapBundlesCurrent()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapBundlesCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapBurnsCurrent
+
+> [SushiswapBurnDTO] sushiswapBurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapBurnsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapBurnDTO]**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapDayDatasCurrent
+
+> [SushiswapDayDataDTO] sushiswapDayDatasCurrent()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapDayDataDTO]**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapFactorysCurrent
+
+> [SushiswapFactoryDTO] sushiswapFactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapFactorysCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapFactoryDTO]**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -228,7 +406,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 
@@ -338,7 +516,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 
@@ -393,7 +571,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
@@ -452,7 +630,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 
@@ -568,7 +746,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 
@@ -629,7 +807,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 
@@ -782,47 +960,6 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetSwapsCurrent
-
-> [SushiswapSwapDTO] sushiswapGetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapGetSwapsCurrent((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## sushiswapGetSwapsHistorical
 
 > [SushiswapSwapDTO] sushiswapGetSwapsHistorical(opts)
@@ -886,7 +1023,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 
@@ -924,47 +1061,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## sushiswapGetTokensCurrent
-
-> [SushiswapTokenDTO] sushiswapGetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapGetTokensCurrent((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1130,6 +1226,510 @@ Name | Type | Description  | Notes
  **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **endDate** | **Date**| The end date of timeframe. | [optional] 
  **id** | **String**| User address. | [optional] 
+
+### Return type
+
+[**[SushiswapUserDTO]**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapHourDatasCurrent
+
+> [SushiswapHourDataDTO] sushiswapHourDatasCurrent()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapHourDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapHourDataDTO]**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapLiquidityPositionSnapshotsCurrent
+
+> [SushiswapLiquidityPositionSnapshotDTO] sushiswapLiquidityPositionSnapshotsCurrent()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapLiquidityPositionSnapshotsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapLiquidityPositionSnapshotDTO]**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapLiquidityPositionsCurrent
+
+> [SushiswapLiquidityPositionDTO] sushiswapLiquidityPositionsCurrent()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapLiquidityPositionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapLiquidityPositionDTO]**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapMintsCurrent
+
+> [SushiswapMintDTO] sushiswapMintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapMintsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapMintDTO]**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapPairDayDatasCurrent
+
+> [SushiswapPairDayDataDTO] sushiswapPairDayDatasCurrent()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapPairDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapPairDayDataDTO]**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapPairHourDatasCurrent
+
+> [SushiswapPairHourDataDTO] sushiswapPairHourDatasCurrent()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapPairHourDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapPairHourDataDTO]**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapPairsCurrent
+
+> [SushiswapPairDTO] sushiswapPairsCurrent(opts)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'id': "id_example" // String | Pair contract address.
+};
+apiInstance.sushiswapPairsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pair contract address. | [optional] 
+
+### Return type
+
+[**[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapSwapsCurrent
+
+> [SushiswapSwapDTO] sushiswapSwapsCurrent(opts)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'pair': "pair_example" // String | Reference to pair.
+};
+apiInstance.sushiswapSwapsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapTokenDayDatasCurrent
+
+> [SushiswapTokenDayDataDTO] sushiswapTokenDayDatasCurrent()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapTokenDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapTokensCurrent
+
+> [SushiswapTokenDTO] sushiswapTokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapTokensCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapTransactionsCurrent
+
+> [SushiswapTransactionDTO] sushiswapTransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapTransactionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapUsersCurrent
+
+> [SushiswapUserDTO] sushiswapUsersCurrent()
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+apiInstance.sushiswapUsersCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

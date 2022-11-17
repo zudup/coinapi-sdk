@@ -75,6 +75,600 @@ API.Client.CurveApi = function($http, $httpParamSerializer, $injector) {
 API.Client.CurveApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
+ * Accounts (current)
+ * Gets accounts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.AccountDTO>>}
+ */
+API.Client.CurveApi.prototype.curveAccountsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/accounts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * AddLiquidityEvents (current)
+ * Gets addLiquidityEvents.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.AddLiquidityEventDTO>>}
+ */
+API.Client.CurveApi.prototype.curveAddLiquidityEventsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/addLiquidityEvents/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * AdminFeeChangeLogs (current)
+ * Gets adminFeeChangeLogs.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.AdminFeeChangeLogDTO>>}
+ */
+API.Client.CurveApi.prototype.curveAdminFeeChangeLogsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/adminFeeChangeLogs/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * AmplificationCoeffChangeLogs (current)
+ * Gets amplificationCoeffChangeLogs.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.AmplificationCoeffChangeLogDTO>>}
+ */
+API.Client.CurveApi.prototype.curveAmplificationCoeffChangeLogsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/amplificationCoeffChangeLogs/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Coins (current)
+ * Gets coins.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.CoinDTO>>}
+ */
+API.Client.CurveApi.prototype.curveCoinsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/coins/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * ContractVersions (current)
+ * Gets contractVersions.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ContractVersionDTO>>}
+ */
+API.Client.CurveApi.prototype.curveContractVersionsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/contractVersions/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Contracts (current)
+ * Gets contracts.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ContractDTO>>}
+ */
+API.Client.CurveApi.prototype.curveContractsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/contracts/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * DailyVolumes (current)
+ * Gets dailyVolumes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.DailyVolumeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveDailyVolumesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/dailyVolumes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Exchanges (current)
+ * Gets exchanges.
+ * @param {!string=} opt_pool 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ExchangeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveExchangesCurrent = function(opt_pool, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/exchanges/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_pool !== undefined) {
+    queryParameters['pool'] = opt_pool;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * FeeChangeLogs (current)
+ * Gets feeChangeLogs.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.FeeChangeLogDTO>>}
+ */
+API.Client.CurveApi.prototype.curveFeeChangeLogsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/feeChangeLogs/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeDeposits (current)
+ * Gets gaugeDeposits.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeDepositDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeDepositsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeDeposits/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeLiquiditys (current)
+ * Gets gaugeLiquiditys.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeLiquidityDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeLiquiditysCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeLiquiditys/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeTotalWeights (current)
+ * Gets gaugeTotalWeights.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeTotalWeightDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeTotalWeightsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeTotalWeights/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeTypeWeights (current)
+ * Gets gaugeTypeWeights.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeTypeWeightDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeTypeWeightsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeTypeWeights/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeTypes (current)
+ * Gets gaugeTypes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeTypeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeTypesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeTypes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeWeightVotes (current)
+ * Gets gaugeWeightVotes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeWeightVoteDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeWeightVotesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeWeightVotes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeWeights (current)
+ * Gets gaugeWeights.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeWeightDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeWeightsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeWeights/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GaugeWithdraws (current)
+ * Gets gaugeWithdraws.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeWithdrawDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugeWithdrawsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gaugeWithdraws/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Gauges (current)
+ * Gets gauges.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveGaugesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/gauges/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * Accounts (historical) 🔥
  * Gets accounts.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -137,7 +731,7 @@ API.Client.CurveApi.prototype.curveGetAccountsHistorical = function(opt_startBlo
 
 /**
  * AddLiquidityEvents (historical) 🔥
- * Gets addliquidityevents.
+ * Gets addLiquidityEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -149,7 +743,7 @@ API.Client.CurveApi.prototype.curveGetAccountsHistorical = function(opt_startBlo
  */
 API.Client.CurveApi.prototype.curveGetAddLiquidityEventsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/addliquidityevents/historical';
+  var path = this.basePath_ + '/dapps/curve/addLiquidityEvents/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -198,7 +792,7 @@ API.Client.CurveApi.prototype.curveGetAddLiquidityEventsHistorical = function(op
 
 /**
  * AdminFeeChangeLogs (historical) 🔥
- * Gets adminfeechangelogs.
+ * Gets adminFeeChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -210,7 +804,7 @@ API.Client.CurveApi.prototype.curveGetAddLiquidityEventsHistorical = function(op
  */
 API.Client.CurveApi.prototype.curveGetAdminFeeChangeLogsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/adminfeechangelogs/historical';
+  var path = this.basePath_ + '/dapps/curve/adminFeeChangeLogs/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -259,7 +853,7 @@ API.Client.CurveApi.prototype.curveGetAdminFeeChangeLogsHistorical = function(op
 
 /**
  * AmplificationCoeffChangeLogs (historical) 🔥
- * Gets amplificationcoeffchangelogs.
+ * Gets amplificationCoeffChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -271,7 +865,7 @@ API.Client.CurveApi.prototype.curveGetAdminFeeChangeLogsHistorical = function(op
  */
 API.Client.CurveApi.prototype.curveGetAmplificationCoeffChangeLogsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/amplificationcoeffchangelogs/historical';
+  var path = this.basePath_ + '/dapps/curve/amplificationCoeffChangeLogs/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -381,7 +975,7 @@ API.Client.CurveApi.prototype.curveGetCoinsHistorical = function(opt_startBlock,
 
 /**
  * ContractVersions (historical) 🔥
- * Gets contractversions.
+ * Gets contractVersions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -393,7 +987,7 @@ API.Client.CurveApi.prototype.curveGetCoinsHistorical = function(opt_startBlock,
  */
 API.Client.CurveApi.prototype.curveGetContractVersionsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_address, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/contractversions/historical';
+  var path = this.basePath_ + '/dapps/curve/contractVersions/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -498,7 +1092,7 @@ API.Client.CurveApi.prototype.curveGetContractsHistorical = function(opt_startBl
 
 /**
  * DailyVolumes (historical) 🔥
- * Gets dailyvolumes.
+ * Gets dailyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -510,7 +1104,7 @@ API.Client.CurveApi.prototype.curveGetContractsHistorical = function(opt_startBl
  */
 API.Client.CurveApi.prototype.curveGetDailyVolumesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/dailyvolumes/historical';
+  var path = this.basePath_ + '/dapps/curve/dailyVolumes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -620,7 +1214,7 @@ API.Client.CurveApi.prototype.curveGetExchangesHistorical = function(opt_startBl
 
 /**
  * FeeChangeLogs (historical) 🔥
- * Gets feechangelogs.
+ * Gets feeChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -632,7 +1226,7 @@ API.Client.CurveApi.prototype.curveGetExchangesHistorical = function(opt_startBl
  */
 API.Client.CurveApi.prototype.curveGetFeeChangeLogsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/feechangelogs/historical';
+  var path = this.basePath_ + '/dapps/curve/feeChangeLogs/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -681,7 +1275,7 @@ API.Client.CurveApi.prototype.curveGetFeeChangeLogsHistorical = function(opt_sta
 
 /**
  * GaugeDeposits (historical) 🔥
- * Gets gaugedeposits.
+ * Gets gaugeDeposits.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -692,7 +1286,7 @@ API.Client.CurveApi.prototype.curveGetFeeChangeLogsHistorical = function(opt_sta
  */
 API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugedeposits/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeDeposits/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -737,7 +1331,7 @@ API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_sta
 
 /**
  * GaugeLiquiditys (historical) 🔥
- * Gets gaugeliquiditys.
+ * Gets gaugeLiquiditys.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -749,7 +1343,7 @@ API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_sta
  */
 API.Client.CurveApi.prototype.curveGetGaugeLiquiditysHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugeliquiditys/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeLiquiditys/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -798,7 +1392,7 @@ API.Client.CurveApi.prototype.curveGetGaugeLiquiditysHistorical = function(opt_s
 
 /**
  * GaugeTotalWeights (historical) 🔥
- * Gets gaugetotalweights.
+ * Gets gaugeTotalWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -809,7 +1403,7 @@ API.Client.CurveApi.prototype.curveGetGaugeLiquiditysHistorical = function(opt_s
  */
 API.Client.CurveApi.prototype.curveGetGaugeTotalWeightsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugetotalweights/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeTotalWeights/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -854,7 +1448,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTotalWeightsHistorical = function(opt
 
 /**
  * GaugeTypeWeights (historical) 🔥
- * Gets gaugetypeweights.
+ * Gets gaugeTypeWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -865,7 +1459,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTotalWeightsHistorical = function(opt
  */
 API.Client.CurveApi.prototype.curveGetGaugeTypeWeightsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugetypeweights/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeTypeWeights/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -910,7 +1504,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypeWeightsHistorical = function(opt_
 
 /**
  * GaugeTypes (historical) 🔥
- * Gets gaugetypes.
+ * Gets gaugeTypes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -922,7 +1516,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypeWeightsHistorical = function(opt_
  */
 API.Client.CurveApi.prototype.curveGetGaugeTypesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_name, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugetypes/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeTypes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -971,7 +1565,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypesHistorical = function(opt_startB
 
 /**
  * GaugeWeightVotes (historical) 🔥
- * Gets gaugeweightvotes.
+ * Gets gaugeWeightVotes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -983,7 +1577,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypesHistorical = function(opt_startB
  */
 API.Client.CurveApi.prototype.curveGetGaugeWeightVotesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugeweightvotes/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeWeightVotes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1032,7 +1626,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightVotesHistorical = function(opt_
 
 /**
  * GaugeWeights (historical) 🔥
- * Gets gaugeweights.
+ * Gets gaugeWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1043,7 +1637,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightVotesHistorical = function(opt_
  */
 API.Client.CurveApi.prototype.curveGetGaugeWeightsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugeweights/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeWeights/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1088,7 +1682,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightsHistorical = function(opt_star
 
 /**
  * GaugeWithdraws (historical) 🔥
- * Gets gaugewithdraws.
+ * Gets gaugeWithdraws.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1099,7 +1693,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightsHistorical = function(opt_star
  */
 API.Client.CurveApi.prototype.curveGetGaugeWithdrawsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugewithdraws/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeWithdraws/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1210,7 +1804,7 @@ API.Client.CurveApi.prototype.curveGetGaugesHistorical = function(opt_startBlock
 
 /**
  * HourlyVolumes (historical) 🔥
- * Gets hourlyvolumes.
+ * Gets hourlyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1222,7 +1816,7 @@ API.Client.CurveApi.prototype.curveGetGaugesHistorical = function(opt_startBlock
  */
 API.Client.CurveApi.prototype.curveGetHourlyVolumesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/hourlyvolumes/historical';
+  var path = this.basePath_ + '/dapps/curve/hourlyVolumes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1271,7 +1865,7 @@ API.Client.CurveApi.prototype.curveGetHourlyVolumesHistorical = function(opt_sta
 
 /**
  * LpTokens (historical) 🔥
- * Gets lptokens.
+ * Gets lpTokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1286,7 +1880,7 @@ API.Client.CurveApi.prototype.curveGetHourlyVolumesHistorical = function(opt_sta
  */
 API.Client.CurveApi.prototype.curveGetLpTokensHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_address, opt_name, opt_symbol, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/lptokens/historical';
+  var path = this.basePath_ + '/dapps/curve/lpTokens/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1408,7 +2002,7 @@ API.Client.CurveApi.prototype.curveGetPoolsHistorical = function(opt_startBlock,
 
 /**
  * ProposalVotes (historical) 🔥
- * Gets proposalvotes.
+ * Gets proposalVotes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1419,7 +2013,7 @@ API.Client.CurveApi.prototype.curveGetPoolsHistorical = function(opt_startBlock,
  */
 API.Client.CurveApi.prototype.curveGetProposalVotesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/proposalvotes/historical';
+  var path = this.basePath_ + '/dapps/curve/proposalVotes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1520,7 +2114,7 @@ API.Client.CurveApi.prototype.curveGetProposalsHistorical = function(opt_startBl
 
 /**
  * RemoveLiquidityEvents (historical) 🔥
- * Gets removeliquidityevents.
+ * Gets removeLiquidityEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1532,7 +2126,7 @@ API.Client.CurveApi.prototype.curveGetProposalsHistorical = function(opt_startBl
  */
 API.Client.CurveApi.prototype.curveGetRemoveLiquidityEventsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/removeliquidityevents/historical';
+  var path = this.basePath_ + '/dapps/curve/removeLiquidityEvents/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1581,7 +2175,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityEventsHistorical = function
 
 /**
  * RemoveLiquidityOneEvents (historical) 🔥
- * Gets removeliquidityoneevents.
+ * Gets removeLiquidityOneEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1593,7 +2187,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityEventsHistorical = function
  */
 API.Client.CurveApi.prototype.curveGetRemoveLiquidityOneEventsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/removeliquidityoneevents/historical';
+  var path = this.basePath_ + '/dapps/curve/removeLiquidityOneEvents/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1642,7 +2236,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityOneEventsHistorical = funct
 
 /**
  * SystemStates (historical) 🔥
- * Gets systemstates.
+ * Gets systemStates.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1653,7 +2247,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityOneEventsHistorical = funct
  */
 API.Client.CurveApi.prototype.curveGetSystemStatesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/systemstates/historical';
+  var path = this.basePath_ + '/dapps/curve/systemStates/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1769,7 +2363,7 @@ API.Client.CurveApi.prototype.curveGetTokensHistorical = function(opt_startBlock
 
 /**
  * TransferOwnershipEvents (historical) 🔥
- * Gets transferownershipevents.
+ * Gets transferOwnershipEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1781,7 +2375,7 @@ API.Client.CurveApi.prototype.curveGetTokensHistorical = function(opt_startBlock
  */
 API.Client.CurveApi.prototype.curveGetTransferOwnershipEventsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/transferownershipevents/historical';
+  var path = this.basePath_ + '/dapps/curve/transferOwnershipEvents/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1830,7 +2424,7 @@ API.Client.CurveApi.prototype.curveGetTransferOwnershipEventsHistorical = functi
 
 /**
  * UnderlyingCoins (historical) 🔥
- * Gets underlyingcoins.
+ * Gets underlyingCoins.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
@@ -1842,7 +2436,7 @@ API.Client.CurveApi.prototype.curveGetTransferOwnershipEventsHistorical = functi
  */
 API.Client.CurveApi.prototype.curveGetUnderlyingCoinsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/underlyingcoins/historical';
+  var path = this.basePath_ + '/dapps/curve/underlyingCoins/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1891,7 +2485,7 @@ API.Client.CurveApi.prototype.curveGetUnderlyingCoinsHistorical = function(opt_s
 
 /**
  * VotingApps (historical) 🔥
- * Gets votingapps.
+ * Gets votingApps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1903,7 +2497,7 @@ API.Client.CurveApi.prototype.curveGetUnderlyingCoinsHistorical = function(opt_s
  */
 API.Client.CurveApi.prototype.curveGetVotingAppsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_address, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/votingapps/historical';
+  var path = this.basePath_ + '/dapps/curve/votingApps/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1952,7 +2546,7 @@ API.Client.CurveApi.prototype.curveGetVotingAppsHistorical = function(opt_startB
 
 /**
  * WeeklyVolumes (historical) 🔥
- * Gets weeklyvolumes.
+ * Gets weeklyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1964,7 +2558,7 @@ API.Client.CurveApi.prototype.curveGetVotingAppsHistorical = function(opt_startB
  */
 API.Client.CurveApi.prototype.curveGetWeeklyVolumesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pool, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/weeklyvolumes/historical';
+  var path = this.basePath_ + '/dapps/curve/weeklyVolumes/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1995,6 +2589,414 @@ API.Client.CurveApi.prototype.curveGetWeeklyVolumesHistorical = function(opt_sta
     queryParameters['pool'] = opt_pool;
   }
 
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * HourlyVolumes (current)
+ * Gets hourlyVolumes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.HourlyVolumeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveHourlyVolumesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/hourlyVolumes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * LpTokens (current)
+ * Gets lpTokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.LpTokenDTO>>}
+ */
+API.Client.CurveApi.prototype.curveLpTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/lpTokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Pools (current)
+ * Gets pools.
+ * @param {!string=} opt_id Pool address.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.PoolDTO>>}
+ */
+API.Client.CurveApi.prototype.curvePoolsCurrent = function(opt_id, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/pools/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_id !== undefined) {
+    queryParameters['id'] = opt_id;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * ProposalVotes (current)
+ * Gets proposalVotes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ProposalVoteDTO>>}
+ */
+API.Client.CurveApi.prototype.curveProposalVotesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/proposalVotes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Proposals (current)
+ * Gets proposals.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ProposalDTO>>}
+ */
+API.Client.CurveApi.prototype.curveProposalsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/proposals/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * RemoveLiquidityEvents (current)
+ * Gets removeLiquidityEvents.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.RemoveLiquidityEventDTO>>}
+ */
+API.Client.CurveApi.prototype.curveRemoveLiquidityEventsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/removeLiquidityEvents/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * RemoveLiquidityOneEvents (current)
+ * Gets removeLiquidityOneEvents.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.RemoveLiquidityOneEventDTO>>}
+ */
+API.Client.CurveApi.prototype.curveRemoveLiquidityOneEventsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/removeLiquidityOneEvents/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * SystemStates (current)
+ * Gets systemStates.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.SystemStateDTO>>}
+ */
+API.Client.CurveApi.prototype.curveSystemStatesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/systemStates/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Tokens (current)
+ * Gets tokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.TokenDTO>>}
+ */
+API.Client.CurveApi.prototype.curveTokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/tokens/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * TransferOwnershipEvents (current)
+ * Gets transferOwnershipEvents.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.TransferOwnershipEventDTO>>}
+ */
+API.Client.CurveApi.prototype.curveTransferOwnershipEventsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/transferOwnershipEvents/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * UnderlyingCoins (current)
+ * Gets underlyingCoins.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.UnderlyingCoinDTO>>}
+ */
+API.Client.CurveApi.prototype.curveUnderlyingCoinsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/underlyingCoins/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * VotingApps (current)
+ * Gets votingApps.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.VotingAppDTO>>}
+ */
+API.Client.CurveApi.prototype.curveVotingAppsCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/votingApps/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * WeeklyVolumes (current)
+ * Gets weeklyVolumes.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.WeeklyVolumeDTO>>}
+ */
+API.Client.CurveApi.prototype.curveWeeklyVolumesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/curve/weeklyVolumes/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',

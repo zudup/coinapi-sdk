@@ -4,82 +4,309 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapV3GetBundleV3sHistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
-[**uniswapV3GetBundleV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBundleV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
-[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-[**uniswapV3GetBundlesCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBundlesCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-[**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapV3GetBurnV3sHistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
-[**uniswapV3GetBurnV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBurnV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
-[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3GetBurnsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBurnsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-[**uniswapV3GetDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-[**uniswapV3GetFactoryCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetFactoryCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-[**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
-[**uniswapV3GetFactoryV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
-[**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapV3GetMintV3sHistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
-[**uniswapV3GetMintV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetMintV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
-[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3GetMintsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetMintsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
-[**uniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
-[**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
-[**uniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
-[**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolV3sHistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
-[**uniswapV3GetPoolV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
-[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
-[**uniswapV3GetPoolsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
-[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-[**uniswapV3GetPoolsDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-[**uniswapV3GetPoolsHourDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-[**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
-[**uniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
-[**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionV3sHistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
-[**uniswapV3GetPositionV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
-[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-[**uniswapV3GetPositionsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-[**uniswapV3GetPositionsSnapshotsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-[**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapV3GetSwapV3sHistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
-[**uniswapV3GetSwapV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetSwapV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
-[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-[**uniswapV3GetSwapsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetSwapsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-[**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
-[**uniswapV3GetTickDayDataV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
-[**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickV3sHistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
-[**uniswapV3GetTickV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTickV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
-[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3GetTicksCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTicksCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-[**uniswapV3GetTicksDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-[**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
-[**uniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3sHistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
-[**uniswapV3GetTokenV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
-[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
-[**uniswapV3GetTokensCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokensCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
-[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-[**uniswapV3GetTokensDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-[**uniswapV3GetTokensHourDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-[**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
-[**uniswapV3GetTransactionV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
-[**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
-[**uniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
+[**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3BundlesCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3BundlesCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3BurnsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3BurnsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3FactorysCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3FactorysCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
+[**uniswapV3GetBundlesHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBundlesHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
+[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
+[**uniswapV3GetBurnsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBurnsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
+[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
+[**uniswapV3GetFactorysHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetFactorysHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
+[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
+[**uniswapV3GetMintsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetMintsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
+[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
+[**uniswapV3GetPoolDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
+[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
+[**uniswapV3GetPoolHourDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
+[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPoolsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
+[**uniswapV3GetPositionSnapshotsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
+[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
+[**uniswapV3GetPositionsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
+[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetSwapsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetSwapsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
+[**uniswapV3GetTickDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
+[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
+[**uniswapV3GetTicksHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTicksHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
+[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
+[**uniswapV3GetTokenHourDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTokensHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokensHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
+[**uniswapV3GetTransactionsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTransactionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
+[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3MintsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3MintsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
+[**uniswapV3PoolDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
+[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolHourDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
+[**uniswapV3PoolsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
+[**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
+[**uniswapV3PositionSnapshotsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
+[**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3PositionsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PositionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
+[**uniswapV3SwapsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3SwapsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
+[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TickDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TickDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3TicksCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TicksCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
+[**uniswapV3TokenHourDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
+[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokenV3DayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
+[**uniswapV3TokensCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokensCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
+[**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
+[**uniswapV3TransactionsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TransactionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
+[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV3UniswapDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
 
 
 
-## uniswapV3GetBundleV3sHistorical
+## uniswapV3BundlesCurrent
 
-> uniswapV3GetBundleV3sHistorical(uniswapV3GetBundleV3sHistoricalRequest): ApiRequest[Seq[BundleV3DTO]]
+> uniswapV3BundlesCurrent(): ApiRequest[Seq[BundleDTO]]
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3BundlesCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3BundlesCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3BundlesCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[BundleDTO]**](BundleDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3BurnsCurrent
+
+> uniswapV3BurnsCurrent(): ApiRequest[Seq[BurnDTO]]
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3BurnsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3BurnsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3BurnsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[BurnDTO]**](BurnDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3FactorysCurrent
+
+> uniswapV3FactorysCurrent(): ApiRequest[Seq[FactoryDTO]]
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3FactorysCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[FactoryDTO]**](FactoryDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3GetBundlesHistorical
+
+> uniswapV3GetBundlesHistorical(uniswapV3GetBundlesHistoricalRequest): ApiRequest[Seq[BundleDTO]]
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 
@@ -112,7 +339,7 @@ object Example extends App {
 
     val id: String = id_example // String | 
     
-    val request = apiInstance.uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -122,14 +349,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundleV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundleV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesHistorical")
             exception.printStackTrace();
     }
 }
@@ -148,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[BundleV3DTO]**](BundleV3DTO.md)]
+ApiRequest[[**Seq[BundleDTO]**](BundleDTO.md)]
 
 
 ### Authorization
@@ -166,88 +393,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetBundlesCurrent
+## uniswapV3GetBurnsHistorical
 
-> uniswapV3GetBundlesCurrent(): ApiRequest[Seq[BundleV3DTO]]
+> uniswapV3GetBurnsHistorical(uniswapV3GetBurnsHistoricalRequest): ApiRequest[Seq[BurnDTO]]
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3GetBundlesCurrent()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundlesCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[BundleV3DTO]**](BundleV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetBurnV3sHistorical
-
-> uniswapV3GetBurnV3sHistorical(uniswapV3GetBurnV3sHistoricalRequest): ApiRequest[Seq[BurnV3DTO]]
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 
@@ -286,7 +438,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1 as stored in pool contract.
     
-    val request = apiInstance.uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+    val request = apiInstance.uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -296,14 +448,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsHistorical")
             exception.printStackTrace();
     }
 }
@@ -325,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[BurnV3DTO]**](BurnV3DTO.md)]
+ApiRequest[[**Seq[BurnDTO]**](BurnDTO.md)]
 
 
 ### Authorization
@@ -343,243 +495,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetBurnsCurrent
+## uniswapV3GetFactorysHistorical
 
-> uniswapV3GetBurnsCurrent(uniswapV3GetBurnsCurrentRequest): ApiRequest[Seq[BurnV3DTO]]
+> uniswapV3GetFactorysHistorical(uniswapV3GetFactorysHistoricalRequest): ApiRequest[Seq[FactoryDTO]]
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetBurnsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[BurnV3DTO]**](BurnV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetDayDataCurrent
-
-> uniswapV3GetDayDataCurrent(): ApiRequest[Seq[UniswapDayDataV3DTO]]
-
-DayData (current)
-
-Gets uniswapv3 day data.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3GetDayDataCurrent()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetDayDataCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetDayDataCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetFactoryCurrent
-
-> uniswapV3GetFactoryCurrent(): ApiRequest[Seq[FactoryV3DTO]]
-
-Factory (current)
-
-Gets factory.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3GetFactoryCurrent()
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-ApiRequest[[**Seq[FactoryV3DTO]**](FactoryV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetFactoryV3sHistorical
-
-> uniswapV3GetFactoryV3sHistorical(uniswapV3GetFactoryV3sHistoricalRequest): ApiRequest[Seq[FactoryV3DTO]]
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
+Gets factorys.
 
 ### Example
 
@@ -612,7 +534,7 @@ object Example extends App {
 
     val id: String = id_example // String | Factory address.
     
-    val request = apiInstance.uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -622,14 +544,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical")
             exception.printStackTrace();
     }
 }
@@ -648,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[FactoryV3DTO]**](FactoryV3DTO.md)]
+ApiRequest[[**Seq[FactoryDTO]**](FactoryDTO.md)]
 
 
 ### Authorization
@@ -666,13 +588,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetMintV3sHistorical
+## uniswapV3GetMintsHistorical
 
-> uniswapV3GetMintV3sHistorical(uniswapV3GetMintV3sHistoricalRequest): ApiRequest[Seq[MintV3DTO]]
+> uniswapV3GetMintsHistorical(uniswapV3GetMintsHistoricalRequest): ApiRequest[Seq[MintDTO]]
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 
@@ -711,7 +633,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1 as stored in pool contract.
     
-    val request = apiInstance.uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+    val request = apiInstance.uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -721,14 +643,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsHistorical")
             exception.printStackTrace();
     }
 }
@@ -750,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[MintV3DTO]**](MintV3DTO.md)]
+ApiRequest[[**Seq[MintDTO]**](MintDTO.md)]
 
 
 ### Authorization
@@ -768,93 +690,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetMintsCurrent
+## uniswapV3GetPoolDayDatasHistorical
 
-> uniswapV3GetMintsCurrent(uniswapV3GetMintsCurrentRequest): ApiRequest[Seq[MintV3DTO]]
+> uniswapV3GetPoolDayDatasHistorical(uniswapV3GetPoolDayDatasHistoricalRequest): ApiRequest[Seq[PoolDayDataDTO]]
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetMintsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[MintV3DTO]**](MintV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetPoolDayDataV3sHistorical
-
-> uniswapV3GetPoolDayDataV3sHistorical(uniswapV3GetPoolDayDataV3sHistoricalRequest): ApiRequest[Seq[PoolDayDataV3DTO]]
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 
@@ -889,7 +731,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -899,14 +741,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical")
             exception.printStackTrace();
     }
 }
@@ -926,7 +768,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)]
+ApiRequest[[**Seq[PoolDayDataDTO]**](PoolDayDataDTO.md)]
 
 
 ### Authorization
@@ -944,13 +786,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPoolHourDataV3sHistorical
+## uniswapV3GetPoolHourDatasHistorical
 
-> uniswapV3GetPoolHourDataV3sHistorical(uniswapV3GetPoolHourDataV3sHistoricalRequest): ApiRequest[Seq[PoolHourDataV3DTO]]
+> uniswapV3GetPoolHourDatasHistorical(uniswapV3GetPoolHourDatasHistoricalRequest): ApiRequest[Seq[PoolHourDataDTO]]
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 
@@ -985,7 +827,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -995,14 +837,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical")
             exception.printStackTrace();
     }
 }
@@ -1022,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)]
+ApiRequest[[**Seq[PoolHourDataDTO]**](PoolHourDataDTO.md)]
 
 
 ### Authorization
@@ -1040,13 +882,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPoolV3sHistorical
+## uniswapV3GetPoolsHistorical
 
-> uniswapV3GetPoolV3sHistorical(uniswapV3GetPoolV3sHistoricalRequest): ApiRequest[Seq[PoolV3DTO]]
+> uniswapV3GetPoolsHistorical(uniswapV3GetPoolsHistoricalRequest): ApiRequest[Seq[PoolDTO]]
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 
@@ -1083,7 +925,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1 as stored in pool contract.
     
-    val request = apiInstance.uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+    val request = apiInstance.uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1093,14 +935,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1121,7 +963,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PoolV3DTO]**](PoolV3DTO.md)]
+ApiRequest[[**Seq[PoolDTO]**](PoolDTO.md)]
 
 
 ### Authorization
@@ -1139,253 +981,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPoolsCurrent
+## uniswapV3GetPositionSnapshotsHistorical
 
-> uniswapV3GetPoolsCurrent(uniswapV3GetPoolsCurrentRequest): ApiRequest[Seq[PoolV3DTO]]
+> uniswapV3GetPositionSnapshotsHistorical(uniswapV3GetPositionSnapshotsHistoricalRequest): ApiRequest[Seq[PositionSnapshotDTO]]
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetPoolsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PoolV3DTO]**](PoolV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetPoolsDayDataCurrent
-
-> uniswapV3GetPoolsDayDataCurrent(uniswapV3GetPoolsDayDataCurrentRequest): ApiRequest[Seq[PoolDayDataV3DTO]]
-
-PoolsDayData (current)
-
-Gets pools day data.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetPoolsDayDataCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsDayDataCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsDayDataCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PoolDayDataV3DTO]**](PoolDayDataV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetPoolsHourDataCurrent
-
-> uniswapV3GetPoolsHourDataCurrent(uniswapV3GetPoolsHourDataCurrentRequest): ApiRequest[Seq[PoolHourDataV3DTO]]
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetPoolsHourDataCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHourDataCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolsHourDataCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PoolHourDataV3DTO]**](PoolHourDataV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetPositionSnapshotV3sHistorical
-
-> uniswapV3GetPositionSnapshotV3sHistorical(uniswapV3GetPositionSnapshotV3sHistoricalRequest): ApiRequest[Seq[PositionSnapshotV3DTO]]
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
+Gets positionSnapshots.
 
 ### Example
 
@@ -1420,7 +1022,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1430,14 +1032,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1457,7 +1059,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)]
+ApiRequest[[**Seq[PositionSnapshotDTO]**](PositionSnapshotDTO.md)]
 
 
 ### Authorization
@@ -1475,13 +1077,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPositionV3sHistorical
+## uniswapV3GetPositionsHistorical
 
-> uniswapV3GetPositionV3sHistorical(uniswapV3GetPositionV3sHistoricalRequest): ApiRequest[Seq[PositionV3DTO]]
+> uniswapV3GetPositionsHistorical(uniswapV3GetPositionsHistoricalRequest): ApiRequest[Seq[PositionDTO]]
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 
@@ -1520,7 +1122,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1 as stored in pair contract.
     
-    val request = apiInstance.uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+    val request = apiInstance.uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1530,14 +1132,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1559,7 +1161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[PositionV3DTO]**](PositionV3DTO.md)]
+ApiRequest[[**Seq[PositionDTO]**](PositionDTO.md)]
 
 
 ### Authorization
@@ -1577,173 +1179,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPositionsCurrent
+## uniswapV3GetSwapsHistorical
 
-> uniswapV3GetPositionsCurrent(uniswapV3GetPositionsCurrentRequest): ApiRequest[Seq[PositionV3DTO]]
+> uniswapV3GetSwapsHistorical(uniswapV3GetSwapsHistoricalRequest): ApiRequest[Seq[SwapDTO]]
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetPositionsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PositionV3DTO]**](PositionV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetPositionsSnapshotsCurrent
-
-> uniswapV3GetPositionsSnapshotsCurrent(uniswapV3GetPositionsSnapshotsCurrentRequest): ApiRequest[Seq[PositionSnapshotV3DTO]]
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetPositionsSnapshotsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsSnapshotsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionsSnapshotsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[PositionSnapshotV3DTO]**](PositionSnapshotV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetSwapV3sHistorical
-
-> uniswapV3GetSwapV3sHistorical(uniswapV3GetSwapV3sHistoricalRequest): ApiRequest[Seq[SwapV3DTO]]
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
+Gets swaps.
 
 ### Example
 
@@ -1782,7 +1224,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1 as stored in pair contract.
     
-    val request = apiInstance.uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+    val request = apiInstance.uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1792,14 +1234,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1821,7 +1263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[SwapV3DTO]**](SwapV3DTO.md)]
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
 
 
 ### Authorization
@@ -1839,93 +1281,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetSwapsCurrent
+## uniswapV3GetTickDayDatasHistorical
 
-> uniswapV3GetSwapsCurrent(uniswapV3GetSwapsCurrentRequest): ApiRequest[Seq[SwapV3DTO]]
+> uniswapV3GetTickDayDatasHistorical(uniswapV3GetTickDayDatasHistoricalRequest): ApiRequest[Seq[TickDayDataDTO]]
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetSwapsCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapsCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[SwapV3DTO]**](SwapV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTickDayDataV3sHistorical
-
-> uniswapV3GetTickDayDataV3sHistorical(uniswapV3GetTickDayDataV3sHistoricalRequest): ApiRequest[Seq[TickDayDataV3DTO]]
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 
@@ -1960,7 +1322,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1970,14 +1332,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical")
             exception.printStackTrace();
     }
 }
@@ -1997,7 +1359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TickDayDataV3DTO]**](TickDayDataV3DTO.md)]
+ApiRequest[[**Seq[TickDayDataDTO]**](TickDayDataDTO.md)]
 
 
 ### Authorization
@@ -2015,107 +1377,11 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTickV3sHistorical
+## uniswapV3GetTicksHistorical
 
-> uniswapV3GetTickV3sHistorical(uniswapV3GetTickV3sHistoricalRequest): ApiRequest[Seq[TickV3DTO]]
+> uniswapV3GetTicksHistorical(uniswapV3GetTicksHistoricalRequest): ApiRequest[Seq[TickDTO]]
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val id: String = id_example // String | 
-
-    val pool: String = pool_example // String | 
-    
-    val request = apiInstance.uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickV3sHistorical")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickV3sHistorical")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TickV3DTO]**](TickV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTicksCurrent
-
-> uniswapV3GetTicksCurrent(uniswapV3GetTicksCurrentRequest): ApiRequest[Seq[TickV3DTO]]
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
@@ -2124,85 +1390,6 @@ Gets ticks.
 ```scala
 // Import classes:
 import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetTicksCurrent(filterPoolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TickV3DTO]**](TickV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTicksDayDataCurrent
-
-> uniswapV3GetTicksDayDataCurrent(uniswapV3GetTicksDayDataCurrentRequest): ApiRequest[Seq[TickDayDataV3DTO]]
-
-TicksDayData (current)
-
-Gets ticks day data.
-
-### Example
-
-```scala
-// Import classes:
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2219,9 +1406,19 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterPoolId: String = filterPoolId_example // String | 
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val id: String = id_example // String | 
+
+    val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetTicksDayDataCurrent(filterPoolId)
+    val request = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2231,14 +1428,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksDayDataCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksDayDataCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTicksHistorical")
             exception.printStackTrace();
     }
 }
@@ -2249,11 +1446,16 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional]
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+ **id** | **String**|  | [optional]
+ **pool** | **String**|  | [optional]
 
 ### Return type
 
-ApiRequest[[**Seq[TickDayDataV3DTO]**](TickDayDataV3DTO.md)]
+ApiRequest[[**Seq[TickDTO]**](TickDTO.md)]
 
 
 ### Authorization
@@ -2271,13 +1473,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTokenHourDataV3sHistorical
+## uniswapV3GetTokenHourDatasHistorical
 
-> uniswapV3GetTokenHourDataV3sHistorical(uniswapV3GetTokenHourDataV3sHistoricalRequest): ApiRequest[Seq[TokenHourDataV3DTO]]
+> uniswapV3GetTokenHourDatasHistorical(uniswapV3GetTokenHourDatasHistoricalRequest): ApiRequest[Seq[TokenHourDataDTO]]
 
-TokenHourDataV3s (historical) 🔥
+TokenHourDatas (historical) 🔥
 
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 
@@ -2310,7 +1512,7 @@ object Example extends App {
 
     val id: String = id_example // String | Token address concatendated with date.
     
-    val request = apiInstance.uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2320,14 +1522,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical")
             exception.printStackTrace();
     }
 }
@@ -2346,7 +1548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)]
+ApiRequest[[**Seq[TokenHourDataDTO]**](TokenHourDataDTO.md)]
 
 
 ### Authorization
@@ -2370,7 +1572,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 
@@ -2457,13 +1659,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTokenV3sHistorical
+## uniswapV3GetTokensHistorical
 
-> uniswapV3GetTokenV3sHistorical(uniswapV3GetTokenV3sHistoricalRequest): ApiRequest[Seq[TokenV3DTO]]
+> uniswapV3GetTokensHistorical(uniswapV3GetTokensHistoricalRequest): ApiRequest[Seq[TokenDTO]]
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 
@@ -2500,7 +1702,7 @@ object Example extends App {
 
     val name: String = name_example // String | Token name.
     
-    val request = apiInstance.uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
+    val request = apiInstance.uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2510,14 +1712,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHistorical")
             exception.printStackTrace();
     }
 }
@@ -2538,7 +1740,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TokenV3DTO]**](TokenV3DTO.md)]
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
 
 
 ### Authorization
@@ -2556,253 +1758,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTokensCurrent
+## uniswapV3GetTransactionsHistorical
 
-> uniswapV3GetTokensCurrent(uniswapV3GetTokensCurrentRequest): ApiRequest[Seq[TokenV3DTO]]
+> uniswapV3GetTransactionsHistorical(uniswapV3GetTransactionsHistoricalRequest): ApiRequest[Seq[TransactionDTO]]
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterTokenId: String = filterTokenId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetTokensCurrent(filterTokenId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TokenV3DTO]**](TokenV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTokensDayDataCurrent
-
-> uniswapV3GetTokensDayDataCurrent(uniswapV3GetTokensDayDataCurrentRequest): ApiRequest[Seq[TokenV3DayDataDTO]]
-
-TokensDayData (current)
-
-Gets tokens day data.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterTokenId: String = filterTokenId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetTokensDayDataCurrent(filterTokenId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensDayDataCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensDayDataCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTokensHourDataCurrent
-
-> uniswapV3GetTokensHourDataCurrent(uniswapV3GetTokensHourDataCurrentRequest): ApiRequest[Seq[TokenHourDataV3DTO]]
-
-TokensHourData (current)
-
-Gets tokens hour data.
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val filterTokenId: String = filterTokenId_example // String | 
-    
-    val request = apiInstance.uniswapV3GetTokensHourDataCurrent(filterTokenId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-            System.out.println(s"Response body: $content")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHourDataCurrent")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokensHourDataCurrent")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional]
-
-### Return type
-
-ApiRequest[[**Seq[TokenHourDataV3DTO]**](TokenHourDataV3DTO.md)]
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-
-## uniswapV3GetTransactionV3sHistorical
-
-> uniswapV3GetTransactionV3sHistorical(uniswapV3GetTransactionV3sHistoricalRequest): ApiRequest[Seq[TransactionV3DTO]]
-
-TransactionV3s (historical) 🔥
-
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 
@@ -2835,7 +1797,7 @@ object Example extends App {
 
     val id: String = id_example // String | Transaction hash.
     
-    val request = apiInstance.uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2845,14 +1807,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2871,7 +1833,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[TransactionV3DTO]**](TransactionV3DTO.md)]
+ApiRequest[[**Seq[TransactionDTO]**](TransactionDTO.md)]
 
 
 ### Authorization
@@ -2889,13 +1851,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetUniswapDayDataV3sHistorical
+## uniswapV3GetUniswapDayDatasHistorical
 
-> uniswapV3GetUniswapDayDataV3sHistorical(uniswapV3GetUniswapDayDataV3sHistoricalRequest): ApiRequest[Seq[UniswapDayDataV3DTO]]
+> uniswapV3GetUniswapDayDatasHistorical(uniswapV3GetUniswapDayDatasHistoricalRequest): ApiRequest[Seq[UniswapDayDataDTO]]
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 
@@ -2928,7 +1890,7 @@ object Example extends App {
 
     val id: String = id_example // String | Timestamp rounded to current day by dividing by 86400.
     
-    val request = apiInstance.uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2938,14 +1900,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataV3sHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical")
             exception.printStackTrace();
     }
 }
@@ -2964,7 +1926,1067 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[UniswapDayDataV3DTO]**](UniswapDayDataV3DTO.md)]
+ApiRequest[[**Seq[UniswapDayDataDTO]**](UniswapDayDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3MintsCurrent
+
+> uniswapV3MintsCurrent(): ApiRequest[Seq[MintDTO]]
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3MintsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3MintsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3MintsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[MintDTO]**](MintDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3PoolDayDatasCurrent
+
+> uniswapV3PoolDayDatasCurrent(): ApiRequest[Seq[PoolDayDataDTO]]
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3PoolDayDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[PoolDayDataDTO]**](PoolDayDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3PoolHourDatasCurrent
+
+> uniswapV3PoolHourDatasCurrent(): ApiRequest[Seq[PoolHourDataDTO]]
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3PoolHourDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[PoolHourDataDTO]**](PoolHourDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3PoolsCurrent
+
+> uniswapV3PoolsCurrent(uniswapV3PoolsCurrentRequest): ApiRequest[Seq[PoolDTO]]
+
+Pools (current)
+
+Gets pools.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
+    val id: String = id_example // String | Pool address.
+    
+    val request = apiInstance.uniswapV3PoolsCurrent(id)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pool address. | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[PoolDTO]**](PoolDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3PositionSnapshotsCurrent
+
+> uniswapV3PositionSnapshotsCurrent(): ApiRequest[Seq[PositionSnapshotDTO]]
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3PositionSnapshotsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionSnapshotsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionSnapshotsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[PositionSnapshotDTO]**](PositionSnapshotDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3PositionsCurrent
+
+> uniswapV3PositionsCurrent(): ApiRequest[Seq[PositionDTO]]
+
+Positions (current)
+
+Gets positions.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3PositionsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PositionsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[PositionDTO]**](PositionDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3SwapsCurrent
+
+> uniswapV3SwapsCurrent(uniswapV3SwapsCurrentRequest): ApiRequest[Seq[SwapDTO]]
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
+    val pool: String = pool_example // String | Pool swap occured within.
+    
+    val request = apiInstance.uniswapV3SwapsCurrent(pool)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3SwapsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3SwapsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool swap occured within. | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TickDayDatasCurrent
+
+> uniswapV3TickDayDatasCurrent(): ApiRequest[Seq[TickDayDataDTO]]
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TickDayDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TickDayDataDTO]**](TickDayDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TicksCurrent
+
+> uniswapV3TicksCurrent(): ApiRequest[Seq[TickDTO]]
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TicksCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TicksCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TicksCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TickDTO]**](TickDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TokenHourDatasCurrent
+
+> uniswapV3TokenHourDatasCurrent(): ApiRequest[Seq[TokenHourDataDTO]]
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TokenHourDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TokenHourDataDTO]**](TokenHourDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TokenV3DayDatasCurrent
+
+> uniswapV3TokenV3DayDatasCurrent(): ApiRequest[Seq[TokenV3DayDataDTO]]
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TokenV3DayDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TokenV3DayDataDTO]**](TokenV3DayDataDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TokensCurrent
+
+> uniswapV3TokensCurrent(): ApiRequest[Seq[TokenDTO]]
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TokensCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokensCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokensCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3TransactionsCurrent
+
+> uniswapV3TransactionsCurrent(): ApiRequest[Seq[TransactionDTO]]
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3TransactionsCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TransactionsCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TransactionsCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[TransactionDTO]**](TransactionDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## uniswapV3UniswapDayDatasCurrent
+
+> uniswapV3UniswapDayDatasCurrent(): ApiRequest[Seq[UniswapDayDataDTO]]
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
+    val request = apiInstance.uniswapV3UniswapDayDatasCurrent()
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+ApiRequest[[**Seq[UniswapDayDataDTO]**](UniswapDayDataDTO.md)]
 
 
 ### Authorization

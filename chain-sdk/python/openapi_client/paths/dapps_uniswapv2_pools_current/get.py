@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.uniswap_v2_pair_v2_dto import UniswapV2PairV2DTO
+from openapi_client.model.uniswap_v2_pair_dto import UniswapV2PairDTO
 
 from . import path
 
@@ -65,12 +65,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV2PairV2DTO']:
-            return UniswapV2PairV2DTO
+        def items() -> typing.Type['UniswapV2PairDTO']:
+            return UniswapV2PairDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2PairV2DTO'], typing.List['UniswapV2PairV2DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV2PairDTO'], typing.List['UniswapV2PairDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -79,7 +79,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV2PairV2DTO':
+    def __getitem__(self, i: int) -> 'UniswapV2PairDTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +91,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV2PairV2DTO']:
-            return UniswapV2PairV2DTO
+        def items() -> typing.Type['UniswapV2PairDTO']:
+            return UniswapV2PairDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2PairV2DTO'], typing.List['UniswapV2PairV2DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV2PairDTO'], typing.List['UniswapV2PairDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -105,7 +105,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV2PairV2DTO':
+    def __getitem__(self, i: int) -> 'UniswapV2PairDTO':
         return super().__getitem__(i)
 
 
@@ -117,12 +117,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV2PairV2DTO']:
-            return UniswapV2PairV2DTO
+        def items() -> typing.Type['UniswapV2PairDTO']:
+            return UniswapV2PairDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2PairV2DTO'], typing.List['UniswapV2PairV2DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV2PairDTO'], typing.List['UniswapV2PairDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -131,7 +131,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV2PairV2DTO':
+    def __getitem__(self, i: int) -> 'UniswapV2PairDTO':
         return super().__getitem__(i)
 
 

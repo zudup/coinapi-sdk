@@ -15,7 +15,9 @@
 
 
 module Api.Request.Dex exposing
-    ( dexGetBatchsHistorical
+    ( dexBatchsCurrent
+    , dexDepositsCurrent
+    , dexGetBatchsHistorical
     , dexGetDepositsHistorical
     , dexGetOrdersHistorical
     , dexGetPricesHistorical
@@ -26,6 +28,15 @@ module Api.Request.Dex exposing
     , dexGetUsersHistorical
     , dexGetWithdrawRequestsHistorical
     , dexGetWithdrawsHistorical
+    , dexOrdersCurrent
+    , dexPricesCurrent
+    , dexSolutionsCurrent
+    , dexStatssCurrent
+    , dexTokensCurrent
+    , dexTradesCurrent
+    , dexUsersCurrent
+    , dexWithdrawRequestsCurrent
+    , dexWithdrawsCurrent
     )
 
 import Api
@@ -35,6 +46,36 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+
+
+{-| Gets batchs.
+-}
+dexBatchsCurrent : Api.Request (List Api.Data.DexBatchDTO)
+dexBatchsCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/batchs/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexBatchDTODecoder)
+
+
+
+{-| Gets deposits.
+-}
+dexDepositsCurrent : Api.Request (List Api.Data.DexDepositDTO)
+dexDepositsCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/deposits/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexDepositDTODecoder)
 
 
 
@@ -173,13 +214,13 @@ dexGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_qu
 
 
 
-{-| Gets withdrawrequests.
+{-| Gets withdrawRequests.
 -}
 dexGetWithdrawRequestsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.DexWithdrawRequestDTO)
 dexGetWithdrawRequestsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query user_query =
     Api.request
         "GET"
-        "/dapps/dex/withdrawrequests/historical"
+        "/dapps/dex/withdrawRequests/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "user", Maybe.map identity user_query ) ]
         []
@@ -197,6 +238,141 @@ dexGetWithdrawsHistorical startBlock_query endBlock_query startDate_query endDat
         "/dapps/dex/withdraws/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "user", Maybe.map identity user_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexWithdrawDTODecoder)
+
+
+
+{-| Gets orders.
+-}
+dexOrdersCurrent : Api.Request (List Api.Data.DexOrderDTO)
+dexOrdersCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/orders/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexOrderDTODecoder)
+
+
+
+{-| Gets prices.
+-}
+dexPricesCurrent : Api.Request (List Api.Data.DexPriceDTO)
+dexPricesCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/prices/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexPriceDTODecoder)
+
+
+
+{-| Gets solutions.
+-}
+dexSolutionsCurrent : Api.Request (List Api.Data.DexSolutionDTO)
+dexSolutionsCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/solutions/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexSolutionDTODecoder)
+
+
+
+{-| Gets statss.
+-}
+dexStatssCurrent : Api.Request (List Api.Data.DexStatsDTO)
+dexStatssCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/statss/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexStatsDTODecoder)
+
+
+
+{-| Gets tokens.
+-}
+dexTokensCurrent : Api.Request (List Api.Data.DexTokenDTO)
+dexTokensCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/tokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexTokenDTODecoder)
+
+
+
+{-| Gets trades.
+-}
+dexTradesCurrent : Api.Request (List Api.Data.DexTradeDTO)
+dexTradesCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/trades/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexTradeDTODecoder)
+
+
+
+{-| Gets users.
+-}
+dexUsersCurrent : Api.Request (List Api.Data.DexUserDTO)
+dexUsersCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/users/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexUserDTODecoder)
+
+
+
+{-| Gets withdrawRequests.
+-}
+dexWithdrawRequestsCurrent : Api.Request (List Api.Data.DexWithdrawRequestDTO)
+dexWithdrawRequestsCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/withdrawRequests/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexWithdrawRequestDTODecoder)
+
+
+
+{-| Gets withdraws.
+-}
+dexWithdrawsCurrent : Api.Request (List Api.Data.DexWithdrawDTO)
+dexWithdrawsCurrent =
+    Api.request
+        "GET"
+        "/dapps/dex/withdraws/current"
+        []
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.dexWithdrawDTODecoder)

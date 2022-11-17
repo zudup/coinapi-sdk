@@ -19,16 +19,14 @@ case class TransactionDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Ethereum transaction hash. */
+  /* Transaction hash. */
   id: Option[String] = None,
-  /* Timestamp. */
+  /* Timestamp txn was confirmed. */
   timestamp: Option[String] = None,
-  /* Array of Mint events within the transaction, 0 or greater. */
-  mints: Option[Seq[String]] = None,
-  /* Array of Burn events within transaction, 0 or greater. */
-  burns: Option[Seq[String]] = None,
-  /* Array of Swap events within transaction, 0 or greater. */
-  swaps: Option[Seq[String]] = None,
+  /* Gas used during txn execution. */
+  gasUsed: Option[String] = None,
+  /*  */
+  gasPrice: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

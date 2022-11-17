@@ -150,6 +150,61 @@ class CowApi(baseUrl: String) {
       .withSuccessResponse[Seq[UserDTO]](200)
       
 
+  /**
+   * Gets orders.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[OrderDTO] (successful operation)
+   */
+  def cowOrdersCurrent(): ApiRequest[Seq[OrderDTO]] =
+    ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/orders/current", "application/json")
+      .withSuccessResponse[Seq[OrderDTO]](200)
+      
+
+  /**
+   * Gets settlements.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SettlementDTO] (successful operation)
+   */
+  def cowSettlementsCurrent(): ApiRequest[Seq[SettlementDTO]] =
+    ApiRequest[Seq[SettlementDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/settlements/current", "application/json")
+      .withSuccessResponse[Seq[SettlementDTO]](200)
+      
+
+  /**
+   * Gets tokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   */
+  def cowTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/tokens/current", "application/json")
+      .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets trades.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TradeDTO] (successful operation)
+   */
+  def cowTradesCurrent(): ApiRequest[Seq[TradeDTO]] =
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/trades/current", "application/json")
+      .withSuccessResponse[Seq[TradeDTO]](200)
+      
+
+  /**
+   * Gets users.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserDTO] (successful operation)
+   */
+  def cowUsersCurrent(): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/users/current", "application/json")
+      .withSuccessResponse[Seq[UserDTO]](200)
+      
+
 
 
 }

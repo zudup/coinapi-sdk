@@ -19,35 +19,35 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { UniswapV2BundleV2DTO } from '../model/uniswapV2BundleV2DTO';
+import { UniswapV2BundleDTO } from '../model/uniswapV2BundleDTO';
 // @ts-ignore
-import { UniswapV2BurnV2DTO } from '../model/uniswapV2BurnV2DTO';
+import { UniswapV2BurnDTO } from '../model/uniswapV2BurnDTO';
 // @ts-ignore
-import { UniswapV2LiquidityPositionSnapshotV2DTO } from '../model/uniswapV2LiquidityPositionSnapshotV2DTO';
+import { UniswapV2LiquidityPositionDTO } from '../model/uniswapV2LiquidityPositionDTO';
 // @ts-ignore
-import { UniswapV2LiquidityPositionV2DTO } from '../model/uniswapV2LiquidityPositionV2DTO';
+import { UniswapV2LiquidityPositionSnapshotDTO } from '../model/uniswapV2LiquidityPositionSnapshotDTO';
 // @ts-ignore
-import { UniswapV2MintV2DTO } from '../model/uniswapV2MintV2DTO';
+import { UniswapV2MintDTO } from '../model/uniswapV2MintDTO';
 // @ts-ignore
-import { UniswapV2PairDayDataV2DTO } from '../model/uniswapV2PairDayDataV2DTO';
+import { UniswapV2PairDTO } from '../model/uniswapV2PairDTO';
 // @ts-ignore
-import { UniswapV2PairHourDataV2DTO } from '../model/uniswapV2PairHourDataV2DTO';
+import { UniswapV2PairDayDataDTO } from '../model/uniswapV2PairDayDataDTO';
 // @ts-ignore
-import { UniswapV2PairV2DTO } from '../model/uniswapV2PairV2DTO';
+import { UniswapV2PairHourDataDTO } from '../model/uniswapV2PairHourDataDTO';
 // @ts-ignore
-import { UniswapV2SwapV2DTO } from '../model/uniswapV2SwapV2DTO';
+import { UniswapV2SwapDTO } from '../model/uniswapV2SwapDTO';
 // @ts-ignore
-import { UniswapV2TokenDayDataV2DTO } from '../model/uniswapV2TokenDayDataV2DTO';
+import { UniswapV2TokenDTO } from '../model/uniswapV2TokenDTO';
 // @ts-ignore
-import { UniswapV2TokenV2DTO } from '../model/uniswapV2TokenV2DTO';
+import { UniswapV2TokenDayDataDTO } from '../model/uniswapV2TokenDayDataDTO';
 // @ts-ignore
-import { UniswapV2TransactionV2DTO } from '../model/uniswapV2TransactionV2DTO';
+import { UniswapV2TransactionDTO } from '../model/uniswapV2TransactionDTO';
 // @ts-ignore
-import { UniswapV2UniswapDayDataV2DTO } from '../model/uniswapV2UniswapDayDataV2DTO';
+import { UniswapV2UniswapDayDataDTO } from '../model/uniswapV2UniswapDayDataDTO';
 // @ts-ignore
-import { UniswapV2UniswapFactoryV2DTO } from '../model/uniswapV2UniswapFactoryV2DTO';
+import { UniswapV2UniswapFactoryDTO } from '../model/uniswapV2UniswapFactoryDTO';
 // @ts-ignore
-import { UniswapV2UserV2DTO } from '../model/uniswapV2UserV2DTO';
+import { UniswapV2UserDTO } from '../model/uniswapV2UserDTO';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -120,8 +120,122 @@ export class UniswapV2Service {
     }
 
     /**
-     * BundleV2s (historical) 🔥
-     * Gets bundlev2s.
+     * Bundles (current)
+     * Gets bundles.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2BundlesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BundleDTO>>;
+    public uniswapV2BundlesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BundleDTO>>>;
+    public uniswapV2BundlesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BundleDTO>>>;
+    public uniswapV2BundlesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/bundles/current`;
+        return this.httpClient.request<Array<UniswapV2BundleDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Burns (current)
+     * Gets burns.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2BurnsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BurnDTO>>;
+    public uniswapV2BurnsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BurnDTO>>>;
+    public uniswapV2BurnsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BurnDTO>>>;
+    public uniswapV2BurnsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/burns/current`;
+        return this.httpClient.request<Array<UniswapV2BurnDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Bundles (historical) 🔥
+     * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -130,10 +244,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BundleV2DTO>>;
-    public uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BundleV2DTO>>>;
-    public uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BundleV2DTO>>>;
-    public uniswapV2GetBundleV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BundleDTO>>;
+    public uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BundleDTO>>>;
+    public uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BundleDTO>>>;
+    public uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -190,8 +304,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/bundlev2s/historical`;
-        return this.httpClient.request<Array<UniswapV2BundleV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/bundles/historical`;
+        return this.httpClient.request<Array<UniswapV2BundleDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -205,8 +319,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * BurnV2s (historical) 🔥
-     * Gets burnv2s.
+     * Burns (historical) 🔥
+     * Gets burns.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -216,10 +330,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BurnV2DTO>>;
-    public uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BurnV2DTO>>>;
-    public uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BurnV2DTO>>>;
-    public uniswapV2GetBurnV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2BurnDTO>>;
+    public uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2BurnDTO>>>;
+    public uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2BurnDTO>>>;
+    public uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -280,8 +394,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/burnv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2BurnV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/burns/historical`;
+        return this.httpClient.request<Array<UniswapV2BurnDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -295,8 +409,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * LiquidityPositionSnapshotV2s (historical) 🔥
-     * Gets liquiditypositionsnapshotv2s.
+     * LiquidityPositionSnapshots (historical) 🔥
+     * Gets liquidityPositionSnapshots.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -307,10 +421,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>;
-    public uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>>;
-    public uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>>;
-    public uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionSnapshotDTO>>;
+    public uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionSnapshotDTO>>>;
+    public uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionSnapshotDTO>>>;
+    public uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -375,8 +489,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/liquidityPositionSnapshots/historical`;
+        return this.httpClient.request<Array<UniswapV2LiquidityPositionSnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -390,8 +504,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * LiquidityPositionV2s (historical) 🔥
-     * Gets liquiditypositionv2s.
+     * LiquidityPositions (historical) 🔥
+     * Gets liquidityPositions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -402,10 +516,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionV2DTO>>;
-    public uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionV2DTO>>>;
-    public uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionV2DTO>>>;
-    public uniswapV2GetLiquidityPositionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionDTO>>;
+    public uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionDTO>>>;
+    public uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionDTO>>>;
+    public uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -470,8 +584,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/liquiditypositionv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2LiquidityPositionV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/liquidityPositions/historical`;
+        return this.httpClient.request<Array<UniswapV2LiquidityPositionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -485,8 +599,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * MintV2s (historical) 🔥
-     * Gets mintv2s.
+     * Mints (historical) 🔥
+     * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -496,10 +610,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2MintV2DTO>>;
-    public uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2MintV2DTO>>>;
-    public uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2MintV2DTO>>>;
-    public uniswapV2GetMintV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2MintDTO>>;
+    public uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2MintDTO>>>;
+    public uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2MintDTO>>>;
+    public uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -560,8 +674,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/mintv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2MintV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/mints/historical`;
+        return this.httpClient.request<Array<UniswapV2MintDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -575,8 +689,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * PairDayDataV2s (historical) 🔥
-     * Gets pairdaydatav2s.
+     * PairDayDatas (historical) 🔥
+     * Gets pairDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -587,10 +701,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDayDataV2DTO>>;
-    public uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDayDataV2DTO>>>;
-    public uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDayDataV2DTO>>>;
-    public uniswapV2GetPairDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDayDataDTO>>;
+    public uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDayDataDTO>>>;
+    public uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDayDataDTO>>>;
+    public uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -655,8 +769,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/pairdaydatav2s/historical`;
-        return this.httpClient.request<Array<UniswapV2PairDayDataV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/pairDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV2PairDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -670,8 +784,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * PairHourDataV2s (historical) 🔥
-     * Gets pairhourdatav2s.
+     * PairHourDatas (historical) 🔥
+     * Gets pairHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -681,10 +795,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairHourDataV2DTO>>;
-    public uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairHourDataV2DTO>>>;
-    public uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairHourDataV2DTO>>>;
-    public uniswapV2GetPairHourDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairHourDataDTO>>;
+    public uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairHourDataDTO>>>;
+    public uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairHourDataDTO>>>;
+    public uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -745,8 +859,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/pairhourdatav2s/historical`;
-        return this.httpClient.request<Array<UniswapV2PairHourDataV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/pairHourDatas/historical`;
+        return this.httpClient.request<Array<UniswapV2PairHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -760,8 +874,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * PairV2s (historical) 🔥
-     * Gets pairv2s.
+     * Pairs (historical) 🔥
+     * Gets pairs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -772,10 +886,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairV2DTO>>;
-    public uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairV2DTO>>>;
-    public uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairV2DTO>>>;
-    public uniswapV2GetPairV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDTO>>;
+    public uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDTO>>>;
+    public uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDTO>>>;
+    public uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -840,8 +954,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/pairv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2PairV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/pairs/historical`;
+        return this.httpClient.request<Array<UniswapV2PairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -861,9 +975,9 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairV2DTO>>;
-    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairV2DTO>>>;
-    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairV2DTO>>>;
+    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDTO>>;
+    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDTO>>>;
+    public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDTO>>>;
     public uniswapV2GetPoolsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -906,7 +1020,7 @@ export class UniswapV2Service {
         }
 
         let localVarPath = `/dapps/uniswapv2/pools/current`;
-        return this.httpClient.request<Array<UniswapV2PairV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV2PairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -920,8 +1034,65 @@ export class UniswapV2Service {
     }
 
     /**
-     * SwapV2s (historical) 🔥
-     * Gets swapv2s.
+     * Swaps (current) 🔥
+     * Gets swaps.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2GetSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2SwapDTO>>;
+    public uniswapV2GetSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2SwapDTO>>>;
+    public uniswapV2GetSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2SwapDTO>>>;
+    public uniswapV2GetSwapsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/swaps/current`;
+        return this.httpClient.request<Array<UniswapV2SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Swaps (historical) 🔥
+     * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -931,10 +1102,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2SwapV2DTO>>;
-    public uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2SwapV2DTO>>>;
-    public uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2SwapV2DTO>>>;
-    public uniswapV2GetSwapV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2SwapDTO>>;
+    public uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2SwapDTO>>>;
+    public uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2SwapDTO>>>;
+    public uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -995,8 +1166,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/swapv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2SwapV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/swaps/historical`;
+        return this.httpClient.request<Array<UniswapV2SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1010,65 +1181,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV2GetSwapsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2SwapV2DTO>>;
-    public uniswapV2GetSwapsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2SwapV2DTO>>>;
-    public uniswapV2GetSwapsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2SwapV2DTO>>>;
-    public uniswapV2GetSwapsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv2/swaps/current`;
-        return this.httpClient.request<Array<UniswapV2SwapV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * TokenDayDataV2s (historical) 🔥
-     * Gets tokendaydatav2s.
+     * TokenDayDatas (historical) 🔥
+     * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1077,10 +1191,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenDayDataV2DTO>>;
-    public uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenDayDataV2DTO>>>;
-    public uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenDayDataV2DTO>>>;
-    public uniswapV2GetTokenDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenDayDataDTO>>;
+    public uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenDayDataDTO>>>;
+    public uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenDayDataDTO>>>;
+    public uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1137,8 +1251,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/tokendaydatav2s/historical`;
-        return this.httpClient.request<Array<UniswapV2TokenDayDataV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/tokenDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV2TokenDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1152,8 +1266,65 @@ export class UniswapV2Service {
     }
 
     /**
-     * TokenV2s (historical) 🔥
-     * Gets tokenv2s.
+     * Tokens (current) 🔥
+     * Gets tokens.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2GetTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenDTO>>;
+    public uniswapV2GetTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenDTO>>>;
+    public uniswapV2GetTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenDTO>>>;
+    public uniswapV2GetTokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/tokens/current`;
+        return this.httpClient.request<Array<UniswapV2TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Tokens (historical) 🔥
+     * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1164,10 +1335,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenV2DTO>>;
-    public uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenV2DTO>>>;
-    public uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenV2DTO>>>;
-    public uniswapV2GetTokenV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenDTO>>;
+    public uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenDTO>>>;
+    public uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenDTO>>>;
+    public uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1232,8 +1403,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/tokenv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2TokenV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/tokens/historical`;
+        return this.httpClient.request<Array<UniswapV2TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1247,65 +1418,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV2GetTokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenV2DTO>>;
-    public uniswapV2GetTokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenV2DTO>>>;
-    public uniswapV2GetTokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenV2DTO>>>;
-    public uniswapV2GetTokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv2/tokens/current`;
-        return this.httpClient.request<Array<UniswapV2TokenV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * TransactionV2s (historical) 🔥
-     * Gets transactionv2s.
+     * Transactions (historical) 🔥
+     * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1314,10 +1428,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TransactionV2DTO>>;
-    public uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TransactionV2DTO>>>;
-    public uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TransactionV2DTO>>>;
-    public uniswapV2GetTransactionV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TransactionDTO>>;
+    public uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TransactionDTO>>>;
+    public uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TransactionDTO>>>;
+    public uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1374,8 +1488,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/transactionv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2TransactionV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/transactions/historical`;
+        return this.httpClient.request<Array<UniswapV2TransactionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1389,8 +1503,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * UniswapDayDataV2s (historical) 🔥
-     * Gets uniswapdaydatav2s.
+     * UniswapDayDatas (historical) 🔥
+     * Gets uniswapDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1399,10 +1513,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapDayDataV2DTO>>;
-    public uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapDayDataV2DTO>>>;
-    public uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapDayDataV2DTO>>>;
-    public uniswapV2GetUniswapDayDataV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapDayDataDTO>>;
+    public uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapDayDataDTO>>>;
+    public uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapDayDataDTO>>>;
+    public uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1459,8 +1573,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/uniswapdaydatav2s/historical`;
-        return this.httpClient.request<Array<UniswapV2UniswapDayDataV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/uniswapDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV2UniswapDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1474,8 +1588,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * UniswapFactoryV2s (historical) 🔥
-     * Gets uniswapfactoryv2s.
+     * UniswapFactorys (historical) 🔥
+     * Gets uniswapFactorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1484,10 +1598,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapFactoryV2DTO>>;
-    public uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapFactoryV2DTO>>>;
-    public uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapFactoryV2DTO>>>;
-    public uniswapV2GetUniswapFactoryV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapFactoryDTO>>;
+    public uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapFactoryDTO>>>;
+    public uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapFactoryDTO>>>;
+    public uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1544,8 +1658,8 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/uniswapfactoryv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2UniswapFactoryV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/uniswapFactorys/historical`;
+        return this.httpClient.request<Array<UniswapV2UniswapFactoryDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1559,8 +1673,8 @@ export class UniswapV2Service {
     }
 
     /**
-     * UserV2s (historical) 🔥
-     * Gets userv2s.
+     * Users (historical) 🔥
+     * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1569,10 +1683,10 @@ export class UniswapV2Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UserV2DTO>>;
-    public uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UserV2DTO>>>;
-    public uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UserV2DTO>>>;
-    public uniswapV2GetUserV2sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UserDTO>>;
+    public uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UserDTO>>>;
+    public uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UserDTO>>>;
+    public uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1629,11 +1743,646 @@ export class UniswapV2Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv2/userv2s/historical`;
-        return this.httpClient.request<Array<UniswapV2UserV2DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv2/users/historical`;
+        return this.httpClient.request<Array<UniswapV2UserDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * LiquidityPositionSnapshots (current)
+     * Gets liquidityPositionSnapshots.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2LiquidityPositionSnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionSnapshotDTO>>;
+    public uniswapV2LiquidityPositionSnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionSnapshotDTO>>>;
+    public uniswapV2LiquidityPositionSnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionSnapshotDTO>>>;
+    public uniswapV2LiquidityPositionSnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/liquidityPositionSnapshots/current`;
+        return this.httpClient.request<Array<UniswapV2LiquidityPositionSnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * LiquidityPositions (current)
+     * Gets liquidityPositions.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2LiquidityPositionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2LiquidityPositionDTO>>;
+    public uniswapV2LiquidityPositionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2LiquidityPositionDTO>>>;
+    public uniswapV2LiquidityPositionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2LiquidityPositionDTO>>>;
+    public uniswapV2LiquidityPositionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/liquidityPositions/current`;
+        return this.httpClient.request<Array<UniswapV2LiquidityPositionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2MintsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2MintDTO>>;
+    public uniswapV2MintsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2MintDTO>>>;
+    public uniswapV2MintsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2MintDTO>>>;
+    public uniswapV2MintsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/mints/current`;
+        return this.httpClient.request<Array<UniswapV2MintDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * PairDayDatas (current)
+     * Gets pairDayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2PairDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDayDataDTO>>;
+    public uniswapV2PairDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDayDataDTO>>>;
+    public uniswapV2PairDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDayDataDTO>>>;
+    public uniswapV2PairDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/pairDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV2PairDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * PairHourDatas (current)
+     * Gets pairHourDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2PairHourDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairHourDataDTO>>;
+    public uniswapV2PairHourDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairHourDataDTO>>>;
+    public uniswapV2PairHourDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairHourDataDTO>>>;
+    public uniswapV2PairHourDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/pairHourDatas/current`;
+        return this.httpClient.request<Array<UniswapV2PairHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Pairs (current)
+     * Gets pairs.
+     * @param id Pair contract address.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2PairsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2PairDTO>>;
+    public uniswapV2PairsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2PairDTO>>>;
+    public uniswapV2PairsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2PairDTO>>>;
+    public uniswapV2PairsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/pairs/current`;
+        return this.httpClient.request<Array<UniswapV2PairDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * TokenDayDatas (current)
+     * Gets tokenDayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2TokenDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TokenDayDataDTO>>;
+    public uniswapV2TokenDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TokenDayDataDTO>>>;
+    public uniswapV2TokenDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TokenDayDataDTO>>>;
+    public uniswapV2TokenDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/tokenDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV2TokenDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Transactions (current)
+     * Gets transactions.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2TransactionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2TransactionDTO>>;
+    public uniswapV2TransactionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2TransactionDTO>>>;
+    public uniswapV2TransactionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2TransactionDTO>>>;
+    public uniswapV2TransactionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/transactions/current`;
+        return this.httpClient.request<Array<UniswapV2TransactionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * UniswapDayDatas (current)
+     * Gets uniswapDayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2UniswapDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapDayDataDTO>>;
+    public uniswapV2UniswapDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapDayDataDTO>>>;
+    public uniswapV2UniswapDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapDayDataDTO>>>;
+    public uniswapV2UniswapDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/uniswapDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV2UniswapDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * UniswapFactorys (current)
+     * Gets uniswapFactorys.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2UniswapFactorysCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UniswapFactoryDTO>>;
+    public uniswapV2UniswapFactorysCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UniswapFactoryDTO>>>;
+    public uniswapV2UniswapFactorysCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UniswapFactoryDTO>>>;
+    public uniswapV2UniswapFactorysCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/uniswapFactorys/current`;
+        return this.httpClient.request<Array<UniswapV2UniswapFactoryDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV2UsersCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV2UserDTO>>;
+    public uniswapV2UsersCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV2UserDTO>>>;
+    public uniswapV2UsersCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV2UserDTO>>>;
+    public uniswapV2UsersCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv2/users/current`;
+        return this.httpClient.request<Array<UniswapV2UserDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

@@ -27,6 +27,50 @@ test_that("DexGetTradesCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapBundlesCurrent", {
+  # tests for SushiswapBundlesCurrent
+  # base path: https://onchain.coinapi.io
+  # Bundles (current)
+  # Gets bundles.
+  # @return [array[SushiswapBundleDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapBurnsCurrent", {
+  # tests for SushiswapBurnsCurrent
+  # base path: https://onchain.coinapi.io
+  # Burns (current)
+  # Gets burns.
+  # @return [array[SushiswapBurnDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapDayDatasCurrent", {
+  # tests for SushiswapDayDatasCurrent
+  # base path: https://onchain.coinapi.io
+  # DayDatas (current)
+  # Gets dayDatas.
+  # @return [array[SushiswapDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapFactorysCurrent", {
+  # tests for SushiswapFactorysCurrent
+  # base path: https://onchain.coinapi.io
+  # Factorys (current)
+  # Gets factorys.
+  # @return [array[SushiswapFactoryDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetBundlesHistorical", {
   # tests for SushiswapGetBundlesHistorical
   # base path: https://onchain.coinapi.io
@@ -64,7 +108,7 @@ test_that("SushiswapGetDayDatasHistorical", {
   # tests for SushiswapGetDayDatasHistorical
   # base path: https://onchain.coinapi.io
   # DayDatas (historical) 🔥
-  # Gets daydatas.
+  # Gets dayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -96,7 +140,7 @@ test_that("SushiswapGetHourDatasHistorical", {
   # tests for SushiswapGetHourDatasHistorical
   # base path: https://onchain.coinapi.io
   # HourDatas (historical) 🔥
-  # Gets hourdatas.
+  # Gets hourDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -112,7 +156,7 @@ test_that("SushiswapGetLiquidityPositionSnapshotsHistorical", {
   # tests for SushiswapGetLiquidityPositionSnapshotsHistorical
   # base path: https://onchain.coinapi.io
   # LiquidityPositionSnapshots (historical) 🔥
-  # Gets liquiditypositionsnapshots.
+  # Gets liquidityPositionSnapshots.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -130,7 +174,7 @@ test_that("SushiswapGetLiquidityPositionsHistorical", {
   # tests for SushiswapGetLiquidityPositionsHistorical
   # base path: https://onchain.coinapi.io
   # LiquidityPositions (historical) 🔥
-  # Gets liquiditypositions.
+  # Gets liquidityPositions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -165,7 +209,7 @@ test_that("SushiswapGetPairDayDatasHistorical", {
   # tests for SushiswapGetPairDayDatasHistorical
   # base path: https://onchain.coinapi.io
   # PairDayDatas (historical) 🔥
-  # Gets pairdaydatas.
+  # Gets pairDayDatas.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -184,7 +228,7 @@ test_that("SushiswapGetPairHourDatasHistorical", {
   # tests for SushiswapGetPairHourDatasHistorical
   # base path: https://onchain.coinapi.io
   # PairHourDatas (historical) 🔥
-  # Gets pairhourdatas.
+  # Gets pairHourDatas.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -227,17 +271,6 @@ test_that("SushiswapGetPoolsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetSwapsCurrent", {
-  # tests for SushiswapGetSwapsCurrent
-  # base path: https://onchain.coinapi.io
-  # Swaps (current) 🔥
-  # Gets swaps.
-  # @return [array[SushiswapSwapDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("SushiswapGetSwapsHistorical", {
   # tests for SushiswapGetSwapsHistorical
   # base path: https://onchain.coinapi.io
@@ -259,24 +292,13 @@ test_that("SushiswapGetTokenDayDatasHistorical", {
   # tests for SushiswapGetTokenDayDatasHistorical
   # base path: https://onchain.coinapi.io
   # TokenDayDatas (historical) 🔥
-  # Gets tokendaydatas.
+  # Gets tokenDayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
   # @param end_date character The end date of timeframe. (optional)
   # @param id character Identifier, day start timestamp in unix / 86400. (optional)
   # @return [array[SushiswapTokenDayDataDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("SushiswapGetTokensCurrent", {
-  # tests for SushiswapGetTokensCurrent
-  # base path: https://onchain.coinapi.io
-  # Tokens (current) 🔥
-  # Gets tokens.
-  # @return [array[SushiswapTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -326,6 +348,140 @@ test_that("SushiswapGetUsersHistorical", {
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
   # @param end_date character The end date of timeframe. (optional)
   # @param id character User address. (optional)
+  # @return [array[SushiswapUserDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapHourDatasCurrent", {
+  # tests for SushiswapHourDatasCurrent
+  # base path: https://onchain.coinapi.io
+  # HourDatas (current)
+  # Gets hourDatas.
+  # @return [array[SushiswapHourDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapLiquidityPositionSnapshotsCurrent", {
+  # tests for SushiswapLiquidityPositionSnapshotsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositionSnapshots (current)
+  # Gets liquidityPositionSnapshots.
+  # @return [array[SushiswapLiquidityPositionSnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapLiquidityPositionsCurrent", {
+  # tests for SushiswapLiquidityPositionsCurrent
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositions (current)
+  # Gets liquidityPositions.
+  # @return [array[SushiswapLiquidityPositionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapMintsCurrent", {
+  # tests for SushiswapMintsCurrent
+  # base path: https://onchain.coinapi.io
+  # Mints (current)
+  # Gets mints.
+  # @return [array[SushiswapMintDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapPairDayDatasCurrent", {
+  # tests for SushiswapPairDayDatasCurrent
+  # base path: https://onchain.coinapi.io
+  # PairDayDatas (current)
+  # Gets pairDayDatas.
+  # @return [array[SushiswapPairDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapPairHourDatasCurrent", {
+  # tests for SushiswapPairHourDatasCurrent
+  # base path: https://onchain.coinapi.io
+  # PairHourDatas (current)
+  # Gets pairHourDatas.
+  # @return [array[SushiswapPairHourDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapPairsCurrent", {
+  # tests for SushiswapPairsCurrent
+  # base path: https://onchain.coinapi.io
+  # Pairs (current)
+  # Gets pairs.
+  # @param id character Pair contract address. (optional)
+  # @return [array[SushiswapPairDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapSwapsCurrent", {
+  # tests for SushiswapSwapsCurrent
+  # base path: https://onchain.coinapi.io
+  # Swaps (current)
+  # Gets swaps.
+  # @param pair character Reference to pair. (optional)
+  # @return [array[SushiswapSwapDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapTokenDayDatasCurrent", {
+  # tests for SushiswapTokenDayDatasCurrent
+  # base path: https://onchain.coinapi.io
+  # TokenDayDatas (current)
+  # Gets tokenDayDatas.
+  # @return [array[SushiswapTokenDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapTokensCurrent", {
+  # tests for SushiswapTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # Tokens (current)
+  # Gets tokens.
+  # @return [array[SushiswapTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapTransactionsCurrent", {
+  # tests for SushiswapTransactionsCurrent
+  # base path: https://onchain.coinapi.io
+  # Transactions (current)
+  # Gets transactions.
+  # @return [array[SushiswapTransactionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapUsersCurrent", {
+  # tests for SushiswapUsersCurrent
+  # base path: https://onchain.coinapi.io
+  # Users (current)
+  # Gets users.
   # @return [array[SushiswapUserDTO]]
 
   # uncomment below to test the operation

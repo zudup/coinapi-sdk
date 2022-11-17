@@ -460,4 +460,294 @@ export class CowApi {
         return dfd.promise();
     }
 
+    /**
+     * Gets orders.
+     * @summary Orders (current)
+     */
+    public cowOrdersCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.CowOrderDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/cow/orders/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.CowOrderDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.CowOrderDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets settlements.
+     * @summary Settlements (current)
+     */
+    public cowSettlementsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.CowSettlementDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/cow/settlements/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.CowSettlementDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.CowSettlementDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets tokens.
+     * @summary Tokens (current)
+     */
+    public cowTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.CowTokenDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/cow/tokens/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.CowTokenDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.CowTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets trades.
+     * @summary Trades (current)
+     */
+    public cowTradesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.CowTradeDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/cow/trades/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.CowTradeDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.CowTradeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Gets users.
+     * @summary Users (current)
+     */
+    public cowUsersCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.CowUserDTO>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/dapps/cow/users/current';
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json'
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.CowUserDTO>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.CowUserDTO>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
 }

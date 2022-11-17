@@ -48,80 +48,100 @@
   }
 
   describe('UniswapV2Api', function() {
-    describe('uniswapV2GetBundleV2sHistorical', function() {
-      it('should call uniswapV2GetBundleV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetBundleV2sHistorical
-        //instance.uniswapV2GetBundleV2sHistorical(function(error) {
+    describe('uniswapV2BundlesCurrent', function() {
+      it('should call uniswapV2BundlesCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2BundlesCurrent
+        //instance.uniswapV2BundlesCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetBurnV2sHistorical', function() {
-      it('should call uniswapV2GetBurnV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetBurnV2sHistorical
-        //instance.uniswapV2GetBurnV2sHistorical(function(error) {
+    describe('uniswapV2BurnsCurrent', function() {
+      it('should call uniswapV2BurnsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2BurnsCurrent
+        //instance.uniswapV2BurnsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetLiquidityPositionSnapshotV2sHistorical', function() {
-      it('should call uniswapV2GetLiquidityPositionSnapshotV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetLiquidityPositionSnapshotV2sHistorical
-        //instance.uniswapV2GetLiquidityPositionSnapshotV2sHistorical(function(error) {
+    describe('uniswapV2GetBundlesHistorical', function() {
+      it('should call uniswapV2GetBundlesHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetBundlesHistorical
+        //instance.uniswapV2GetBundlesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetLiquidityPositionV2sHistorical', function() {
-      it('should call uniswapV2GetLiquidityPositionV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetLiquidityPositionV2sHistorical
-        //instance.uniswapV2GetLiquidityPositionV2sHistorical(function(error) {
+    describe('uniswapV2GetBurnsHistorical', function() {
+      it('should call uniswapV2GetBurnsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetBurnsHistorical
+        //instance.uniswapV2GetBurnsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetMintV2sHistorical', function() {
-      it('should call uniswapV2GetMintV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetMintV2sHistorical
-        //instance.uniswapV2GetMintV2sHistorical(function(error) {
+    describe('uniswapV2GetLiquidityPositionSnapshotsHistorical', function() {
+      it('should call uniswapV2GetLiquidityPositionSnapshotsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetLiquidityPositionSnapshotsHistorical
+        //instance.uniswapV2GetLiquidityPositionSnapshotsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetPairDayDataV2sHistorical', function() {
-      it('should call uniswapV2GetPairDayDataV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetPairDayDataV2sHistorical
-        //instance.uniswapV2GetPairDayDataV2sHistorical(function(error) {
+    describe('uniswapV2GetLiquidityPositionsHistorical', function() {
+      it('should call uniswapV2GetLiquidityPositionsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetLiquidityPositionsHistorical
+        //instance.uniswapV2GetLiquidityPositionsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetPairHourDataV2sHistorical', function() {
-      it('should call uniswapV2GetPairHourDataV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetPairHourDataV2sHistorical
-        //instance.uniswapV2GetPairHourDataV2sHistorical(function(error) {
+    describe('uniswapV2GetMintsHistorical', function() {
+      it('should call uniswapV2GetMintsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetMintsHistorical
+        //instance.uniswapV2GetMintsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetPairV2sHistorical', function() {
-      it('should call uniswapV2GetPairV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetPairV2sHistorical
-        //instance.uniswapV2GetPairV2sHistorical(function(error) {
+    describe('uniswapV2GetPairDayDatasHistorical', function() {
+      it('should call uniswapV2GetPairDayDatasHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetPairDayDatasHistorical
+        //instance.uniswapV2GetPairDayDatasHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2GetPairHourDatasHistorical', function() {
+      it('should call uniswapV2GetPairHourDatasHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetPairHourDatasHistorical
+        //instance.uniswapV2GetPairHourDatasHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2GetPairsHistorical', function() {
+      it('should call uniswapV2GetPairsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetPairsHistorical
+        //instance.uniswapV2GetPairsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -138,16 +158,6 @@
         done();
       });
     });
-    describe('uniswapV2GetSwapV2sHistorical', function() {
-      it('should call uniswapV2GetSwapV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetSwapV2sHistorical
-        //instance.uniswapV2GetSwapV2sHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('uniswapV2GetSwapsCurrent', function() {
       it('should call uniswapV2GetSwapsCurrent successfully', function(done) {
         //uncomment below and update the code to test uniswapV2GetSwapsCurrent
@@ -158,20 +168,20 @@
         done();
       });
     });
-    describe('uniswapV2GetTokenDayDataV2sHistorical', function() {
-      it('should call uniswapV2GetTokenDayDataV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetTokenDayDataV2sHistorical
-        //instance.uniswapV2GetTokenDayDataV2sHistorical(function(error) {
+    describe('uniswapV2GetSwapsHistorical', function() {
+      it('should call uniswapV2GetSwapsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetSwapsHistorical
+        //instance.uniswapV2GetSwapsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetTokenV2sHistorical', function() {
-      it('should call uniswapV2GetTokenV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetTokenV2sHistorical
-        //instance.uniswapV2GetTokenV2sHistorical(function(error) {
+    describe('uniswapV2GetTokenDayDatasHistorical', function() {
+      it('should call uniswapV2GetTokenDayDatasHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetTokenDayDatasHistorical
+        //instance.uniswapV2GetTokenDayDatasHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -188,40 +198,160 @@
         done();
       });
     });
-    describe('uniswapV2GetTransactionV2sHistorical', function() {
-      it('should call uniswapV2GetTransactionV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetTransactionV2sHistorical
-        //instance.uniswapV2GetTransactionV2sHistorical(function(error) {
+    describe('uniswapV2GetTokensHistorical', function() {
+      it('should call uniswapV2GetTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetTokensHistorical
+        //instance.uniswapV2GetTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetUniswapDayDataV2sHistorical', function() {
-      it('should call uniswapV2GetUniswapDayDataV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetUniswapDayDataV2sHistorical
-        //instance.uniswapV2GetUniswapDayDataV2sHistorical(function(error) {
+    describe('uniswapV2GetTransactionsHistorical', function() {
+      it('should call uniswapV2GetTransactionsHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetTransactionsHistorical
+        //instance.uniswapV2GetTransactionsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetUniswapFactoryV2sHistorical', function() {
-      it('should call uniswapV2GetUniswapFactoryV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetUniswapFactoryV2sHistorical
-        //instance.uniswapV2GetUniswapFactoryV2sHistorical(function(error) {
+    describe('uniswapV2GetUniswapDayDatasHistorical', function() {
+      it('should call uniswapV2GetUniswapDayDatasHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetUniswapDayDatasHistorical
+        //instance.uniswapV2GetUniswapDayDatasHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('uniswapV2GetUserV2sHistorical', function() {
-      it('should call uniswapV2GetUserV2sHistorical successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetUserV2sHistorical
-        //instance.uniswapV2GetUserV2sHistorical(function(error) {
+    describe('uniswapV2GetUniswapFactorysHistorical', function() {
+      it('should call uniswapV2GetUniswapFactorysHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetUniswapFactorysHistorical
+        //instance.uniswapV2GetUniswapFactorysHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2GetUsersHistorical', function() {
+      it('should call uniswapV2GetUsersHistorical successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2GetUsersHistorical
+        //instance.uniswapV2GetUsersHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2LiquidityPositionSnapshotsCurrent', function() {
+      it('should call uniswapV2LiquidityPositionSnapshotsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2LiquidityPositionSnapshotsCurrent
+        //instance.uniswapV2LiquidityPositionSnapshotsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2LiquidityPositionsCurrent', function() {
+      it('should call uniswapV2LiquidityPositionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2LiquidityPositionsCurrent
+        //instance.uniswapV2LiquidityPositionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2MintsCurrent', function() {
+      it('should call uniswapV2MintsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2MintsCurrent
+        //instance.uniswapV2MintsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2PairDayDatasCurrent', function() {
+      it('should call uniswapV2PairDayDatasCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2PairDayDatasCurrent
+        //instance.uniswapV2PairDayDatasCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2PairHourDatasCurrent', function() {
+      it('should call uniswapV2PairHourDatasCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2PairHourDatasCurrent
+        //instance.uniswapV2PairHourDatasCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2PairsCurrent', function() {
+      it('should call uniswapV2PairsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2PairsCurrent
+        //instance.uniswapV2PairsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2TokenDayDatasCurrent', function() {
+      it('should call uniswapV2TokenDayDatasCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2TokenDayDatasCurrent
+        //instance.uniswapV2TokenDayDatasCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2TransactionsCurrent', function() {
+      it('should call uniswapV2TransactionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2TransactionsCurrent
+        //instance.uniswapV2TransactionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2UniswapDayDatasCurrent', function() {
+      it('should call uniswapV2UniswapDayDatasCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2UniswapDayDatasCurrent
+        //instance.uniswapV2UniswapDayDatasCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2UniswapFactorysCurrent', function() {
+      it('should call uniswapV2UniswapFactorysCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2UniswapFactorysCurrent
+        //instance.uniswapV2UniswapFactorysCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2UsersCurrent', function() {
+      it('should call uniswapV2UsersCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2UsersCurrent
+        //instance.uniswapV2UsersCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

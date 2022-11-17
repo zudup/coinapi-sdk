@@ -321,132 +321,132 @@ public class JsonUtil {
       return new TypeToken<List<TransactionsETradeAggressiveSide>>(){}.getType();
     }
     
-    if ("UniswapV2BundleV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2BundleV2DTO>>(){}.getType();
+    if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2BundleDTO>>(){}.getType();
     }
     
-    if ("UniswapV2BurnV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2BurnV2DTO>>(){}.getType();
+    if ("UniswapV2BurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2BurnDTO>>(){}.getType();
     }
     
-    if ("UniswapV2LiquidityPositionSnapshotV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2LiquidityPositionSnapshotV2DTO>>(){}.getType();
+    if ("UniswapV2LiquidityPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2LiquidityPositionDTO>>(){}.getType();
     }
     
-    if ("UniswapV2LiquidityPositionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2LiquidityPositionV2DTO>>(){}.getType();
+    if ("UniswapV2LiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2LiquidityPositionSnapshotDTO>>(){}.getType();
     }
     
-    if ("UniswapV2MintV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2MintV2DTO>>(){}.getType();
+    if ("UniswapV2MintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2MintDTO>>(){}.getType();
     }
     
-    if ("UniswapV2PairDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2PairDayDataV2DTO>>(){}.getType();
+    if ("UniswapV2PairDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2PairDTO>>(){}.getType();
     }
     
-    if ("UniswapV2PairHourDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2PairHourDataV2DTO>>(){}.getType();
+    if ("UniswapV2PairDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2PairDayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV2PairV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2PairV2DTO>>(){}.getType();
+    if ("UniswapV2PairHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2PairHourDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV2SwapV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2SwapV2DTO>>(){}.getType();
+    if ("UniswapV2SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2SwapDTO>>(){}.getType();
     }
     
-    if ("UniswapV2TokenDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2TokenDayDataV2DTO>>(){}.getType();
+    if ("UniswapV2TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2TokenDTO>>(){}.getType();
     }
     
-    if ("UniswapV2TokenV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2TokenV2DTO>>(){}.getType();
+    if ("UniswapV2TokenDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2TokenDayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV2TransactionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2TransactionV2DTO>>(){}.getType();
+    if ("UniswapV2TransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2TransactionDTO>>(){}.getType();
     }
     
-    if ("UniswapV2UniswapDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UniswapDayDataV2DTO>>(){}.getType();
+    if ("UniswapV2UniswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2UniswapDayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV2UniswapFactoryV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UniswapFactoryV2DTO>>(){}.getType();
+    if ("UniswapV2UniswapFactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2UniswapFactoryDTO>>(){}.getType();
     }
     
-    if ("UniswapV2UserV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UserV2DTO>>(){}.getType();
+    if ("UniswapV2UserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV2UserDTO>>(){}.getType();
     }
     
-    if ("UniswapV3BundleV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3BundleV3DTO>>(){}.getType();
+    if ("UniswapV3BundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3BundleDTO>>(){}.getType();
     }
     
-    if ("UniswapV3BurnV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3BurnV3DTO>>(){}.getType();
+    if ("UniswapV3BurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3BurnDTO>>(){}.getType();
     }
     
-    if ("UniswapV3FactoryV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3FactoryV3DTO>>(){}.getType();
+    if ("UniswapV3FactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3FactoryDTO>>(){}.getType();
     }
     
-    if ("UniswapV3MintV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3MintV3DTO>>(){}.getType();
+    if ("UniswapV3MintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3MintDTO>>(){}.getType();
     }
     
-    if ("UniswapV3PoolDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3PoolDayDataV3DTO>>(){}.getType();
+    if ("UniswapV3PoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3PoolDTO>>(){}.getType();
     }
     
-    if ("UniswapV3PoolHourDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3PoolHourDataV3DTO>>(){}.getType();
+    if ("UniswapV3PoolDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3PoolDayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV3PoolV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3PoolV3DTO>>(){}.getType();
+    if ("UniswapV3PoolHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3PoolHourDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV3PositionSnapshotV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3PositionSnapshotV3DTO>>(){}.getType();
+    if ("UniswapV3PositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3PositionDTO>>(){}.getType();
     }
     
-    if ("UniswapV3PositionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3PositionV3DTO>>(){}.getType();
+    if ("UniswapV3PositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3PositionSnapshotDTO>>(){}.getType();
     }
     
-    if ("UniswapV3SwapV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3SwapV3DTO>>(){}.getType();
+    if ("UniswapV3SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3SwapDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TickDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TickDayDataV3DTO>>(){}.getType();
+    if ("UniswapV3TickDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3TickDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TickV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TickV3DTO>>(){}.getType();
+    if ("UniswapV3TickDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3TickDayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TokenHourDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TokenHourDataV3DTO>>(){}.getType();
+    if ("UniswapV3TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3TokenDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TokenV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TokenV3DTO>>(){}.getType();
+    if ("UniswapV3TokenHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3TokenHourDataDTO>>(){}.getType();
     }
     
     if ("UniswapV3TokenV3DayDataDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TransactionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TransactionV3DTO>>(){}.getType();
+    if ("UniswapV3TransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3TransactionDTO>>(){}.getType();
     }
     
-    if ("UniswapV3UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3UniswapDayDataV3DTO>>(){}.getType();
+    if ("UniswapV3UniswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<UniswapV3UniswapDayDataDTO>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -719,132 +719,132 @@ public class JsonUtil {
       return new TypeToken<TransactionsETradeAggressiveSide>(){}.getType();
     }
     
-    if ("UniswapV2BundleV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2BundleV2DTO>(){}.getType();
+    if ("UniswapV2BundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2BundleDTO>(){}.getType();
     }
     
-    if ("UniswapV2BurnV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2BurnV2DTO>(){}.getType();
+    if ("UniswapV2BurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2BurnDTO>(){}.getType();
     }
     
-    if ("UniswapV2LiquidityPositionSnapshotV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2LiquidityPositionSnapshotV2DTO>(){}.getType();
+    if ("UniswapV2LiquidityPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2LiquidityPositionDTO>(){}.getType();
     }
     
-    if ("UniswapV2LiquidityPositionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2LiquidityPositionV2DTO>(){}.getType();
+    if ("UniswapV2LiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2LiquidityPositionSnapshotDTO>(){}.getType();
     }
     
-    if ("UniswapV2MintV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2MintV2DTO>(){}.getType();
+    if ("UniswapV2MintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2MintDTO>(){}.getType();
     }
     
-    if ("UniswapV2PairDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2PairDayDataV2DTO>(){}.getType();
+    if ("UniswapV2PairDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2PairDTO>(){}.getType();
     }
     
-    if ("UniswapV2PairHourDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2PairHourDataV2DTO>(){}.getType();
+    if ("UniswapV2PairDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2PairDayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV2PairV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2PairV2DTO>(){}.getType();
+    if ("UniswapV2PairHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2PairHourDataDTO>(){}.getType();
     }
     
-    if ("UniswapV2SwapV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2SwapV2DTO>(){}.getType();
+    if ("UniswapV2SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2SwapDTO>(){}.getType();
     }
     
-    if ("UniswapV2TokenDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2TokenDayDataV2DTO>(){}.getType();
+    if ("UniswapV2TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2TokenDTO>(){}.getType();
     }
     
-    if ("UniswapV2TokenV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2TokenV2DTO>(){}.getType();
+    if ("UniswapV2TokenDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2TokenDayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV2TransactionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2TransactionV2DTO>(){}.getType();
+    if ("UniswapV2TransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2TransactionDTO>(){}.getType();
     }
     
-    if ("UniswapV2UniswapDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UniswapDayDataV2DTO>(){}.getType();
+    if ("UniswapV2UniswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2UniswapDayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV2UniswapFactoryV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UniswapFactoryV2DTO>(){}.getType();
+    if ("UniswapV2UniswapFactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2UniswapFactoryDTO>(){}.getType();
     }
     
-    if ("UniswapV2UserV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UserV2DTO>(){}.getType();
+    if ("UniswapV2UserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV2UserDTO>(){}.getType();
     }
     
-    if ("UniswapV3BundleV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3BundleV3DTO>(){}.getType();
+    if ("UniswapV3BundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3BundleDTO>(){}.getType();
     }
     
-    if ("UniswapV3BurnV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3BurnV3DTO>(){}.getType();
+    if ("UniswapV3BurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3BurnDTO>(){}.getType();
     }
     
-    if ("UniswapV3FactoryV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3FactoryV3DTO>(){}.getType();
+    if ("UniswapV3FactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3FactoryDTO>(){}.getType();
     }
     
-    if ("UniswapV3MintV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3MintV3DTO>(){}.getType();
+    if ("UniswapV3MintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3MintDTO>(){}.getType();
     }
     
-    if ("UniswapV3PoolDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3PoolDayDataV3DTO>(){}.getType();
+    if ("UniswapV3PoolDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3PoolDTO>(){}.getType();
     }
     
-    if ("UniswapV3PoolHourDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3PoolHourDataV3DTO>(){}.getType();
+    if ("UniswapV3PoolDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3PoolDayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV3PoolV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3PoolV3DTO>(){}.getType();
+    if ("UniswapV3PoolHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3PoolHourDataDTO>(){}.getType();
     }
     
-    if ("UniswapV3PositionSnapshotV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3PositionSnapshotV3DTO>(){}.getType();
+    if ("UniswapV3PositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3PositionDTO>(){}.getType();
     }
     
-    if ("UniswapV3PositionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3PositionV3DTO>(){}.getType();
+    if ("UniswapV3PositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3PositionSnapshotDTO>(){}.getType();
     }
     
-    if ("UniswapV3SwapV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3SwapV3DTO>(){}.getType();
+    if ("UniswapV3SwapDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3SwapDTO>(){}.getType();
     }
     
-    if ("UniswapV3TickDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TickDayDataV3DTO>(){}.getType();
+    if ("UniswapV3TickDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3TickDTO>(){}.getType();
     }
     
-    if ("UniswapV3TickV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TickV3DTO>(){}.getType();
+    if ("UniswapV3TickDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3TickDayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV3TokenHourDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TokenHourDataV3DTO>(){}.getType();
+    if ("UniswapV3TokenDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3TokenDTO>(){}.getType();
     }
     
-    if ("UniswapV3TokenV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TokenV3DTO>(){}.getType();
+    if ("UniswapV3TokenHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3TokenHourDataDTO>(){}.getType();
     }
     
     if ("UniswapV3TokenV3DayDataDTO".equalsIgnoreCase(className)) {
       return new TypeToken<UniswapV3TokenV3DayDataDTO>(){}.getType();
     }
     
-    if ("UniswapV3TransactionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TransactionV3DTO>(){}.getType();
+    if ("UniswapV3TransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3TransactionDTO>(){}.getType();
     }
     
-    if ("UniswapV3UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3UniswapDayDataV3DTO>(){}.getType();
+    if ("UniswapV3UniswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<UniswapV3UniswapDayDataDTO>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

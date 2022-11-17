@@ -49,6 +49,104 @@ sub new {
 
 
 #
+# dex_batchs__current
+#
+# Batchs (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_batchs__current' } = {
+        summary => 'Batchs (current)',
+        params => $params,
+        returns => 'ARRAY[DexBatchDTO]',
+        };
+}
+# @return ARRAY[DexBatchDTO]
+#
+sub dex_batchs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/batchs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexBatchDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_deposits__current
+#
+# Deposits (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_deposits__current' } = {
+        summary => 'Deposits (current)',
+        params => $params,
+        returns => 'ARRAY[DexDepositDTO]',
+        };
+}
+# @return ARRAY[DexDepositDTO]
+#
+sub dex_deposits__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/deposits/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
 # dex_get_batchs__historical
 #
 # Batchs (historical) 🔥
@@ -1128,7 +1226,7 @@ sub dex_get_withdraw_requests__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/withdrawrequests/historical';
+    my $_resource_path = '/dapps/dex/withdrawRequests/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1286,6 +1384,447 @@ sub dex_get_withdraws__historical {
     if ( exists $args{'user'}) {
         $query_params->{'user'} = $self->{api_client}->to_query_value($args{'user'});
     }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_orders__current
+#
+# Orders (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_orders__current' } = {
+        summary => 'Orders (current)',
+        params => $params,
+        returns => 'ARRAY[DexOrderDTO]',
+        };
+}
+# @return ARRAY[DexOrderDTO]
+#
+sub dex_orders__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/orders/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexOrderDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_prices__current
+#
+# Prices (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_prices__current' } = {
+        summary => 'Prices (current)',
+        params => $params,
+        returns => 'ARRAY[DexPriceDTO]',
+        };
+}
+# @return ARRAY[DexPriceDTO]
+#
+sub dex_prices__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/prices/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexPriceDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_solutions__current
+#
+# Solutions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_solutions__current' } = {
+        summary => 'Solutions (current)',
+        params => $params,
+        returns => 'ARRAY[DexSolutionDTO]',
+        };
+}
+# @return ARRAY[DexSolutionDTO]
+#
+sub dex_solutions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/solutions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexSolutionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_statss__current
+#
+# Statss (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_statss__current' } = {
+        summary => 'Statss (current)',
+        params => $params,
+        returns => 'ARRAY[DexStatsDTO]',
+        };
+}
+# @return ARRAY[DexStatsDTO]
+#
+sub dex_statss__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/statss/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexStatsDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_tokens__current
+#
+# Tokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_tokens__current' } = {
+        summary => 'Tokens (current)',
+        params => $params,
+        returns => 'ARRAY[DexTokenDTO]',
+        };
+}
+# @return ARRAY[DexTokenDTO]
+#
+sub dex_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_trades__current
+#
+# Trades (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_trades__current' } = {
+        summary => 'Trades (current)',
+        params => $params,
+        returns => 'ARRAY[DexTradeDTO]',
+        };
+}
+# @return ARRAY[DexTradeDTO]
+#
+sub dex_trades__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/trades/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTradeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_users__current
+#
+# Users (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_users__current' } = {
+        summary => 'Users (current)',
+        params => $params,
+        returns => 'ARRAY[DexUserDTO]',
+        };
+}
+# @return ARRAY[DexUserDTO]
+#
+sub dex_users__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/users/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexUserDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_withdraw_requests__current
+#
+# WithdrawRequests (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_withdraw_requests__current' } = {
+        summary => 'WithdrawRequests (current)',
+        params => $params,
+        returns => 'ARRAY[DexWithdrawRequestDTO]',
+        };
+}
+# @return ARRAY[DexWithdrawRequestDTO]
+#
+sub dex_withdraw_requests__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/withdrawRequests/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawRequestDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_withdraws__current
+#
+# Withdraws (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_withdraws__current' } = {
+        summary => 'Withdraws (current)',
+        params => $params,
+        returns => 'ARRAY[DexWithdrawDTO]',
+        };
+}
+# @return ARRAY[DexWithdrawDTO]
+#
+sub dex_withdraws__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/withdraws/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
     my $_body_data;
     # authentication setting, if any

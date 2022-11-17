@@ -88,6 +88,2213 @@ public class CurveApi {
   }
 
   /**
+  * Accounts (current)
+  * Gets accounts.
+   * @return List<CurveAccountDTO>
+  */
+  public List<CurveAccountDTO> curveAccountsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/accounts/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveAccountDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveAccountDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Accounts (current)
+   * Gets accounts.
+
+  */
+  public void curveAccountsCurrent (final Response.Listener<List<CurveAccountDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/accounts/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveAccountDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveAccountDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * AddLiquidityEvents (current)
+  * Gets addLiquidityEvents.
+   * @return List<CurveAddLiquidityEventDTO>
+  */
+  public List<CurveAddLiquidityEventDTO> curveAddLiquidityEventsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/addLiquidityEvents/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveAddLiquidityEventDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveAddLiquidityEventDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * AddLiquidityEvents (current)
+   * Gets addLiquidityEvents.
+
+  */
+  public void curveAddLiquidityEventsCurrent (final Response.Listener<List<CurveAddLiquidityEventDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/addLiquidityEvents/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveAddLiquidityEventDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveAddLiquidityEventDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * AdminFeeChangeLogs (current)
+  * Gets adminFeeChangeLogs.
+   * @return List<CurveAdminFeeChangeLogDTO>
+  */
+  public List<CurveAdminFeeChangeLogDTO> curveAdminFeeChangeLogsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/adminFeeChangeLogs/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveAdminFeeChangeLogDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveAdminFeeChangeLogDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * AdminFeeChangeLogs (current)
+   * Gets adminFeeChangeLogs.
+
+  */
+  public void curveAdminFeeChangeLogsCurrent (final Response.Listener<List<CurveAdminFeeChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/adminFeeChangeLogs/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveAdminFeeChangeLogDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveAdminFeeChangeLogDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * AmplificationCoeffChangeLogs (current)
+  * Gets amplificationCoeffChangeLogs.
+   * @return List<CurveAmplificationCoeffChangeLogDTO>
+  */
+  public List<CurveAmplificationCoeffChangeLogDTO> curveAmplificationCoeffChangeLogsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/amplificationCoeffChangeLogs/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveAmplificationCoeffChangeLogDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveAmplificationCoeffChangeLogDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * AmplificationCoeffChangeLogs (current)
+   * Gets amplificationCoeffChangeLogs.
+
+  */
+  public void curveAmplificationCoeffChangeLogsCurrent (final Response.Listener<List<CurveAmplificationCoeffChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/amplificationCoeffChangeLogs/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveAmplificationCoeffChangeLogDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveAmplificationCoeffChangeLogDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Coins (current)
+  * Gets coins.
+   * @return List<CurveCoinDTO>
+  */
+  public List<CurveCoinDTO> curveCoinsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/coins/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveCoinDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveCoinDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Coins (current)
+   * Gets coins.
+
+  */
+  public void curveCoinsCurrent (final Response.Listener<List<CurveCoinDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/coins/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveCoinDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveCoinDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * ContractVersions (current)
+  * Gets contractVersions.
+   * @return List<CurveContractVersionDTO>
+  */
+  public List<CurveContractVersionDTO> curveContractVersionsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/contractVersions/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveContractVersionDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveContractVersionDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * ContractVersions (current)
+   * Gets contractVersions.
+
+  */
+  public void curveContractVersionsCurrent (final Response.Listener<List<CurveContractVersionDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/contractVersions/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveContractVersionDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveContractVersionDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Contracts (current)
+  * Gets contracts.
+   * @return List<CurveContractDTO>
+  */
+  public List<CurveContractDTO> curveContractsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/contracts/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveContractDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveContractDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Contracts (current)
+   * Gets contracts.
+
+  */
+  public void curveContractsCurrent (final Response.Listener<List<CurveContractDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/contracts/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveContractDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveContractDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * DailyVolumes (current)
+  * Gets dailyVolumes.
+   * @return List<CurveDailyVolumeDTO>
+  */
+  public List<CurveDailyVolumeDTO> curveDailyVolumesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/dailyVolumes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveDailyVolumeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveDailyVolumeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * DailyVolumes (current)
+   * Gets dailyVolumes.
+
+  */
+  public void curveDailyVolumesCurrent (final Response.Listener<List<CurveDailyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/dailyVolumes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveDailyVolumeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveDailyVolumeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Exchanges (current)
+  * Gets exchanges.
+   * @param pool 
+   * @return List<CurveExchangeDTO>
+  */
+  public List<CurveExchangeDTO> curveExchangesCurrent (String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/exchanges/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveExchangeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveExchangeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Exchanges (current)
+   * Gets exchanges.
+   * @param pool 
+  */
+  public void curveExchangesCurrent (String pool, final Response.Listener<List<CurveExchangeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/exchanges/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveExchangeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveExchangeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * FeeChangeLogs (current)
+  * Gets feeChangeLogs.
+   * @return List<CurveFeeChangeLogDTO>
+  */
+  public List<CurveFeeChangeLogDTO> curveFeeChangeLogsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/feeChangeLogs/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveFeeChangeLogDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveFeeChangeLogDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * FeeChangeLogs (current)
+   * Gets feeChangeLogs.
+
+  */
+  public void curveFeeChangeLogsCurrent (final Response.Listener<List<CurveFeeChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/feeChangeLogs/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveFeeChangeLogDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveFeeChangeLogDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeDeposits (current)
+  * Gets gaugeDeposits.
+   * @return List<CurveGaugeDepositDTO>
+  */
+  public List<CurveGaugeDepositDTO> curveGaugeDepositsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeDeposits/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeDepositDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeDepositDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeDeposits (current)
+   * Gets gaugeDeposits.
+
+  */
+  public void curveGaugeDepositsCurrent (final Response.Listener<List<CurveGaugeDepositDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeDeposits/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeDepositDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeDepositDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeLiquiditys (current)
+  * Gets gaugeLiquiditys.
+   * @return List<CurveGaugeLiquidityDTO>
+  */
+  public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeLiquiditys/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeLiquidityDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeLiquidityDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeLiquiditys (current)
+   * Gets gaugeLiquiditys.
+
+  */
+  public void curveGaugeLiquiditysCurrent (final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeLiquiditys/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeLiquidityDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeLiquidityDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeTotalWeights (current)
+  * Gets gaugeTotalWeights.
+   * @return List<CurveGaugeTotalWeightDTO>
+  */
+  public List<CurveGaugeTotalWeightDTO> curveGaugeTotalWeightsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTotalWeights/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeTotalWeightDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeTotalWeightDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeTotalWeights (current)
+   * Gets gaugeTotalWeights.
+
+  */
+  public void curveGaugeTotalWeightsCurrent (final Response.Listener<List<CurveGaugeTotalWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTotalWeights/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeTotalWeightDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeTotalWeightDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeTypeWeights (current)
+  * Gets gaugeTypeWeights.
+   * @return List<CurveGaugeTypeWeightDTO>
+  */
+  public List<CurveGaugeTypeWeightDTO> curveGaugeTypeWeightsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTypeWeights/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeTypeWeightDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeTypeWeightDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeTypeWeights (current)
+   * Gets gaugeTypeWeights.
+
+  */
+  public void curveGaugeTypeWeightsCurrent (final Response.Listener<List<CurveGaugeTypeWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTypeWeights/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeTypeWeightDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeTypeWeightDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeTypes (current)
+  * Gets gaugeTypes.
+   * @return List<CurveGaugeTypeDTO>
+  */
+  public List<CurveGaugeTypeDTO> curveGaugeTypesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTypes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeTypeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeTypeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeTypes (current)
+   * Gets gaugeTypes.
+
+  */
+  public void curveGaugeTypesCurrent (final Response.Listener<List<CurveGaugeTypeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeTypes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeTypeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeTypeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeWeightVotes (current)
+  * Gets gaugeWeightVotes.
+   * @return List<CurveGaugeWeightVoteDTO>
+  */
+  public List<CurveGaugeWeightVoteDTO> curveGaugeWeightVotesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWeightVotes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeWeightVoteDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeWeightVoteDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeWeightVotes (current)
+   * Gets gaugeWeightVotes.
+
+  */
+  public void curveGaugeWeightVotesCurrent (final Response.Listener<List<CurveGaugeWeightVoteDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWeightVotes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeWeightVoteDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeWeightVoteDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeWeights (current)
+  * Gets gaugeWeights.
+   * @return List<CurveGaugeWeightDTO>
+  */
+  public List<CurveGaugeWeightDTO> curveGaugeWeightsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWeights/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeWeightDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeWeightDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeWeights (current)
+   * Gets gaugeWeights.
+
+  */
+  public void curveGaugeWeightsCurrent (final Response.Listener<List<CurveGaugeWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWeights/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeWeightDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeWeightDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GaugeWithdraws (current)
+  * Gets gaugeWithdraws.
+   * @return List<CurveGaugeWithdrawDTO>
+  */
+  public List<CurveGaugeWithdrawDTO> curveGaugeWithdrawsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWithdraws/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeWithdrawDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeWithdrawDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GaugeWithdraws (current)
+   * Gets gaugeWithdraws.
+
+  */
+  public void curveGaugeWithdrawsCurrent (final Response.Listener<List<CurveGaugeWithdrawDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gaugeWithdraws/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeWithdrawDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeWithdrawDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Gauges (current)
+  * Gets gauges.
+   * @return List<CurveGaugeDTO>
+  */
+  public List<CurveGaugeDTO> curveGaugesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/gauges/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveGaugeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveGaugeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Gauges (current)
+   * Gets gauges.
+
+  */
+  public void curveGaugesCurrent (final Response.Listener<List<CurveGaugeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/gauges/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveGaugeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveGaugeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Accounts (historical) 🔥
   * Gets accounts.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -223,7 +2430,7 @@ public class CurveApi {
   }
   /**
   * AddLiquidityEvents (historical) 🔥
-  * Gets addliquidityevents.
+  * Gets addLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -236,7 +2443,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/addliquidityevents/historical";
+    String path = "/dapps/curve/addLiquidityEvents/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -291,7 +2498,7 @@ public class CurveApi {
 
       /**
    * AddLiquidityEvents (historical) 🔥
-   * Gets addliquidityevents.
+   * Gets addLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetAddLiquidityEventsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveAddLiquidityEventDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -299,7 +2506,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/addliquidityevents/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/addLiquidityEvents/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -357,7 +2564,7 @@ public class CurveApi {
   }
   /**
   * AdminFeeChangeLogs (historical) 🔥
-  * Gets adminfeechangelogs.
+  * Gets adminFeeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -370,7 +2577,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/adminfeechangelogs/historical";
+    String path = "/dapps/curve/adminFeeChangeLogs/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -425,7 +2632,7 @@ public class CurveApi {
 
       /**
    * AdminFeeChangeLogs (historical) 🔥
-   * Gets adminfeechangelogs.
+   * Gets adminFeeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetAdminFeeChangeLogsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveAdminFeeChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -433,7 +2640,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/adminfeechangelogs/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/adminFeeChangeLogs/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -491,7 +2698,7 @@ public class CurveApi {
   }
   /**
   * AmplificationCoeffChangeLogs (historical) 🔥
-  * Gets amplificationcoeffchangelogs.
+  * Gets amplificationCoeffChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -504,7 +2711,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/amplificationcoeffchangelogs/historical";
+    String path = "/dapps/curve/amplificationCoeffChangeLogs/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -559,7 +2766,7 @@ public class CurveApi {
 
       /**
    * AmplificationCoeffChangeLogs (historical) 🔥
-   * Gets amplificationcoeffchangelogs.
+   * Gets amplificationCoeffChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetAmplificationCoeffChangeLogsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveAmplificationCoeffChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -567,7 +2774,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/amplificationcoeffchangelogs/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/amplificationCoeffChangeLogs/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -759,7 +2966,7 @@ public class CurveApi {
   }
   /**
   * ContractVersions (historical) 🔥
-  * Gets contractversions.
+  * Gets contractVersions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -772,7 +2979,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/contractversions/historical";
+    String path = "/dapps/curve/contractVersions/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -827,7 +3034,7 @@ public class CurveApi {
 
       /**
    * ContractVersions (historical) 🔥
-   * Gets contractversions.
+   * Gets contractVersions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address 
   */
   public void curveGetContractVersionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String address, final Response.Listener<List<CurveContractVersionDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -835,7 +3042,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/contractversions/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/contractVersions/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1024,7 +3231,7 @@ public class CurveApi {
   }
   /**
   * DailyVolumes (historical) 🔥
-  * Gets dailyvolumes.
+  * Gets dailyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1037,7 +3244,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/dailyvolumes/historical";
+    String path = "/dapps/curve/dailyVolumes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1092,7 +3299,7 @@ public class CurveApi {
 
       /**
    * DailyVolumes (historical) 🔥
-   * Gets dailyvolumes.
+   * Gets dailyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetDailyVolumesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveDailyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1100,7 +3307,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/dailyvolumes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/dailyVolumes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1292,7 +3499,7 @@ public class CurveApi {
   }
   /**
   * FeeChangeLogs (historical) 🔥
-  * Gets feechangelogs.
+  * Gets feeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1305,7 +3512,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/feechangelogs/historical";
+    String path = "/dapps/curve/feeChangeLogs/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1360,7 +3567,7 @@ public class CurveApi {
 
       /**
    * FeeChangeLogs (historical) 🔥
-   * Gets feechangelogs.
+   * Gets feeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetFeeChangeLogsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveFeeChangeLogDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1368,7 +3575,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/feechangelogs/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/feeChangeLogs/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1426,7 +3633,7 @@ public class CurveApi {
   }
   /**
   * GaugeDeposits (historical) 🔥
-  * Gets gaugedeposits.
+  * Gets gaugeDeposits.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1438,7 +3645,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugedeposits/historical";
+    String path = "/dapps/curve/gaugeDeposits/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1492,7 +3699,7 @@ public class CurveApi {
 
       /**
    * GaugeDeposits (historical) 🔥
-   * Gets gaugedeposits.
+   * Gets gaugeDeposits.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetGaugeDepositsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveGaugeDepositDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1500,7 +3707,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugedeposits/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeDeposits/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1557,7 +3764,7 @@ public class CurveApi {
   }
   /**
   * GaugeLiquiditys (historical) 🔥
-  * Gets gaugeliquiditys.
+  * Gets gaugeLiquiditys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1570,7 +3777,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeliquiditys/historical";
+    String path = "/dapps/curve/gaugeLiquiditys/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1625,7 +3832,7 @@ public class CurveApi {
 
       /**
    * GaugeLiquiditys (historical) 🔥
-   * Gets gaugeliquiditys.
+   * Gets gaugeLiquiditys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param user 
   */
   public void curveGetGaugeLiquiditysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1633,7 +3840,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeliquiditys/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeLiquiditys/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1691,7 +3898,7 @@ public class CurveApi {
   }
   /**
   * GaugeTotalWeights (historical) 🔥
-  * Gets gaugetotalweights.
+  * Gets gaugeTotalWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1703,7 +3910,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetotalweights/historical";
+    String path = "/dapps/curve/gaugeTotalWeights/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1757,7 +3964,7 @@ public class CurveApi {
 
       /**
    * GaugeTotalWeights (historical) 🔥
-   * Gets gaugetotalweights.
+   * Gets gaugeTotalWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetGaugeTotalWeightsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveGaugeTotalWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1765,7 +3972,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetotalweights/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeTotalWeights/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1822,7 +4029,7 @@ public class CurveApi {
   }
   /**
   * GaugeTypeWeights (historical) 🔥
-  * Gets gaugetypeweights.
+  * Gets gaugeTypeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1834,7 +4041,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetypeweights/historical";
+    String path = "/dapps/curve/gaugeTypeWeights/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1888,7 +4095,7 @@ public class CurveApi {
 
       /**
    * GaugeTypeWeights (historical) 🔥
-   * Gets gaugetypeweights.
+   * Gets gaugeTypeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetGaugeTypeWeightsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveGaugeTypeWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -1896,7 +4103,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetypeweights/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeTypeWeights/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1953,7 +4160,7 @@ public class CurveApi {
   }
   /**
   * GaugeTypes (historical) 🔥
-  * Gets gaugetypes.
+  * Gets gaugeTypes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1966,7 +4173,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetypes/historical";
+    String path = "/dapps/curve/gaugeTypes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2021,7 +4228,7 @@ public class CurveApi {
 
       /**
    * GaugeTypes (historical) 🔥
-   * Gets gaugetypes.
+   * Gets gaugeTypes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param name 
   */
   public void curveGetGaugeTypesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String name, final Response.Listener<List<CurveGaugeTypeDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2029,7 +4236,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugetypes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeTypes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2087,7 +4294,7 @@ public class CurveApi {
   }
   /**
   * GaugeWeightVotes (historical) 🔥
-  * Gets gaugeweightvotes.
+  * Gets gaugeWeightVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2100,7 +4307,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeweightvotes/historical";
+    String path = "/dapps/curve/gaugeWeightVotes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2155,7 +4362,7 @@ public class CurveApi {
 
       /**
    * GaugeWeightVotes (historical) 🔥
-   * Gets gaugeweightvotes.
+   * Gets gaugeWeightVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param user 
   */
   public void curveGetGaugeWeightVotesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<CurveGaugeWeightVoteDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2163,7 +4370,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeweightvotes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeWeightVotes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2221,7 +4428,7 @@ public class CurveApi {
   }
   /**
   * GaugeWeights (historical) 🔥
-  * Gets gaugeweights.
+  * Gets gaugeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2233,7 +4440,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeweights/historical";
+    String path = "/dapps/curve/gaugeWeights/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2287,7 +4494,7 @@ public class CurveApi {
 
       /**
    * GaugeWeights (historical) 🔥
-   * Gets gaugeweights.
+   * Gets gaugeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetGaugeWeightsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveGaugeWeightDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2295,7 +4502,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeweights/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeWeights/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2352,7 +4559,7 @@ public class CurveApi {
   }
   /**
   * GaugeWithdraws (historical) 🔥
-  * Gets gaugewithdraws.
+  * Gets gaugeWithdraws.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2364,7 +4571,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugewithdraws/historical";
+    String path = "/dapps/curve/gaugeWithdraws/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2418,7 +4625,7 @@ public class CurveApi {
 
       /**
    * GaugeWithdraws (historical) 🔥
-   * Gets gaugewithdraws.
+   * Gets gaugeWithdraws.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetGaugeWithdrawsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveGaugeWithdrawDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2426,7 +4633,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugewithdraws/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeWithdraws/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2620,7 +4827,7 @@ public class CurveApi {
   }
   /**
   * HourlyVolumes (historical) 🔥
-  * Gets hourlyvolumes.
+  * Gets hourlyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2633,7 +4840,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/hourlyvolumes/historical";
+    String path = "/dapps/curve/hourlyVolumes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2688,7 +4895,7 @@ public class CurveApi {
 
       /**
    * HourlyVolumes (historical) 🔥
-   * Gets hourlyvolumes.
+   * Gets hourlyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetHourlyVolumesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveHourlyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2696,7 +4903,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/hourlyvolumes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/hourlyVolumes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2754,7 +4961,7 @@ public class CurveApi {
   }
   /**
   * LpTokens (historical) 🔥
-  * Gets lptokens.
+  * Gets lpTokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2770,7 +4977,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/lptokens/historical";
+    String path = "/dapps/curve/lpTokens/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2828,7 +5035,7 @@ public class CurveApi {
 
       /**
    * LpTokens (historical) 🔥
-   * Gets lptokens.
+   * Gets lpTokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address    * @param name    * @param symbol    * @param pool 
   */
   public void curveGetLpTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String address, String name, String symbol, String pool, final Response.Listener<List<CurveLpTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -2836,7 +5043,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/lptokens/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/lpTokens/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3031,7 +5238,7 @@ public class CurveApi {
   }
   /**
   * ProposalVotes (historical) 🔥
-  * Gets proposalvotes.
+  * Gets proposalVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3043,7 +5250,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/proposalvotes/historical";
+    String path = "/dapps/curve/proposalVotes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3097,7 +5304,7 @@ public class CurveApi {
 
       /**
    * ProposalVotes (historical) 🔥
-   * Gets proposalvotes.
+   * Gets proposalVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
   public void curveGetProposalVotesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveProposalVoteDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -3105,7 +5312,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/proposalvotes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/proposalVotes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3293,7 +5500,7 @@ public class CurveApi {
   }
   /**
   * RemoveLiquidityEvents (historical) 🔥
-  * Gets removeliquidityevents.
+  * Gets removeLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3306,7 +5513,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/removeliquidityevents/historical";
+    String path = "/dapps/curve/removeLiquidityEvents/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3361,7 +5568,7 @@ public class CurveApi {
 
       /**
    * RemoveLiquidityEvents (historical) 🔥
-   * Gets removeliquidityevents.
+   * Gets removeLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetRemoveLiquidityEventsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveRemoveLiquidityEventDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -3369,7 +5576,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/removeliquidityevents/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/removeLiquidityEvents/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3427,7 +5634,7 @@ public class CurveApi {
   }
   /**
   * RemoveLiquidityOneEvents (historical) 🔥
-  * Gets removeliquidityoneevents.
+  * Gets removeLiquidityOneEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3440,7 +5647,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/removeliquidityoneevents/historical";
+    String path = "/dapps/curve/removeLiquidityOneEvents/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3495,7 +5702,7 @@ public class CurveApi {
 
       /**
    * RemoveLiquidityOneEvents (historical) 🔥
-   * Gets removeliquidityoneevents.
+   * Gets removeLiquidityOneEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetRemoveLiquidityOneEventsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveRemoveLiquidityOneEventDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -3503,7 +5710,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/removeliquidityoneevents/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/removeLiquidityOneEvents/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3561,7 +5768,7 @@ public class CurveApi {
   }
   /**
   * SystemStates (historical) 🔥
-  * Gets systemstates.
+  * Gets systemStates.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3573,7 +5780,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/systemstates/historical";
+    String path = "/dapps/curve/systemStates/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3627,7 +5834,7 @@ public class CurveApi {
 
       /**
    * SystemStates (historical) 🔥
-   * Gets systemstates.
+   * Gets systemStates.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Singleton ID, equals to &#39;current&#39;.
   */
   public void curveGetSystemStatesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<CurveSystemStateDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -3635,7 +5842,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/systemstates/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/systemStates/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3832,7 +6039,7 @@ public class CurveApi {
   }
   /**
   * TransferOwnershipEvents (historical) 🔥
-  * Gets transferownershipevents.
+  * Gets transferOwnershipEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3845,7 +6052,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/transferownershipevents/historical";
+    String path = "/dapps/curve/transferOwnershipEvents/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3900,7 +6107,7 @@ public class CurveApi {
 
       /**
    * TransferOwnershipEvents (historical) 🔥
-   * Gets transferownershipevents.
+   * Gets transferOwnershipEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetTransferOwnershipEventsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveTransferOwnershipEventDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -3908,7 +6115,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/transferownershipevents/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/transferOwnershipEvents/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3966,7 +6173,7 @@ public class CurveApi {
   }
   /**
   * UnderlyingCoins (historical) 🔥
-  * Gets underlyingcoins.
+  * Gets underlyingCoins.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -3979,7 +6186,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/underlyingcoins/historical";
+    String path = "/dapps/curve/underlyingCoins/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4034,7 +6241,7 @@ public class CurveApi {
 
       /**
    * UnderlyingCoins (historical) 🔥
-   * Gets underlyingcoins.
+   * Gets underlyingCoins.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
   public void curveGetUnderlyingCoinsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveUnderlyingCoinDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -4042,7 +6249,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/underlyingcoins/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/underlyingCoins/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4100,7 +6307,7 @@ public class CurveApi {
   }
   /**
   * VotingApps (historical) 🔥
-  * Gets votingapps.
+  * Gets votingApps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -4113,7 +6320,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/votingapps/historical";
+    String path = "/dapps/curve/votingApps/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4168,7 +6375,7 @@ public class CurveApi {
 
       /**
    * VotingApps (historical) 🔥
-   * Gets votingapps.
+   * Gets votingApps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id App address.   * @param address 
   */
   public void curveGetVotingAppsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String address, final Response.Listener<List<CurveVotingAppDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -4176,7 +6383,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/votingapps/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/votingApps/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4234,7 +6441,7 @@ public class CurveApi {
   }
   /**
   * WeeklyVolumes (historical) 🔥
-  * Gets weeklyvolumes.
+  * Gets weeklyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -4247,7 +6454,7 @@ public class CurveApi {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/weeklyvolumes/historical";
+    String path = "/dapps/curve/weeklyVolumes/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4302,7 +6509,7 @@ public class CurveApi {
 
       /**
    * WeeklyVolumes (historical) 🔥
-   * Gets weeklyvolumes.
+   * Gets weeklyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
   public void curveGetWeeklyVolumesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<CurveWeeklyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
@@ -4310,7 +6517,7 @@ public class CurveApi {
 
 
     // create path and map variables
-    String path = "/dapps/curve/weeklyvolumes/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/weeklyVolumes/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4325,6 +6532,1517 @@ public class CurveApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "pool", pool));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveWeeklyVolumeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveWeeklyVolumeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * HourlyVolumes (current)
+  * Gets hourlyVolumes.
+   * @return List<CurveHourlyVolumeDTO>
+  */
+  public List<CurveHourlyVolumeDTO> curveHourlyVolumesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/hourlyVolumes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveHourlyVolumeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveHourlyVolumeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * HourlyVolumes (current)
+   * Gets hourlyVolumes.
+
+  */
+  public void curveHourlyVolumesCurrent (final Response.Listener<List<CurveHourlyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/hourlyVolumes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveHourlyVolumeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveHourlyVolumeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * LpTokens (current)
+  * Gets lpTokens.
+   * @return List<CurveLpTokenDTO>
+  */
+  public List<CurveLpTokenDTO> curveLpTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/lpTokens/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveLpTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveLpTokenDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * LpTokens (current)
+   * Gets lpTokens.
+
+  */
+  public void curveLpTokensCurrent (final Response.Listener<List<CurveLpTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/lpTokens/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveLpTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveLpTokenDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Pools (current)
+  * Gets pools.
+   * @param id Pool address.
+   * @return List<CurvePoolDTO>
+  */
+  public List<CurvePoolDTO> curvePoolsCurrent (String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/pools/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurvePoolDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurvePoolDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Pools (current)
+   * Gets pools.
+   * @param id Pool address.
+  */
+  public void curvePoolsCurrent (String id, final Response.Listener<List<CurvePoolDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/pools/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurvePoolDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurvePoolDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * ProposalVotes (current)
+  * Gets proposalVotes.
+   * @return List<CurveProposalVoteDTO>
+  */
+  public List<CurveProposalVoteDTO> curveProposalVotesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/proposalVotes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveProposalVoteDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveProposalVoteDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * ProposalVotes (current)
+   * Gets proposalVotes.
+
+  */
+  public void curveProposalVotesCurrent (final Response.Listener<List<CurveProposalVoteDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/proposalVotes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveProposalVoteDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveProposalVoteDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Proposals (current)
+  * Gets proposals.
+   * @return List<CurveProposalDTO>
+  */
+  public List<CurveProposalDTO> curveProposalsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/proposals/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveProposalDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveProposalDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Proposals (current)
+   * Gets proposals.
+
+  */
+  public void curveProposalsCurrent (final Response.Listener<List<CurveProposalDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/proposals/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveProposalDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveProposalDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * RemoveLiquidityEvents (current)
+  * Gets removeLiquidityEvents.
+   * @return List<CurveRemoveLiquidityEventDTO>
+  */
+  public List<CurveRemoveLiquidityEventDTO> curveRemoveLiquidityEventsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/removeLiquidityEvents/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveRemoveLiquidityEventDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveRemoveLiquidityEventDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * RemoveLiquidityEvents (current)
+   * Gets removeLiquidityEvents.
+
+  */
+  public void curveRemoveLiquidityEventsCurrent (final Response.Listener<List<CurveRemoveLiquidityEventDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/removeLiquidityEvents/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveRemoveLiquidityEventDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveRemoveLiquidityEventDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * RemoveLiquidityOneEvents (current)
+  * Gets removeLiquidityOneEvents.
+   * @return List<CurveRemoveLiquidityOneEventDTO>
+  */
+  public List<CurveRemoveLiquidityOneEventDTO> curveRemoveLiquidityOneEventsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/removeLiquidityOneEvents/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveRemoveLiquidityOneEventDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveRemoveLiquidityOneEventDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * RemoveLiquidityOneEvents (current)
+   * Gets removeLiquidityOneEvents.
+
+  */
+  public void curveRemoveLiquidityOneEventsCurrent (final Response.Listener<List<CurveRemoveLiquidityOneEventDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/removeLiquidityOneEvents/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveRemoveLiquidityOneEventDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveRemoveLiquidityOneEventDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * SystemStates (current)
+  * Gets systemStates.
+   * @return List<CurveSystemStateDTO>
+  */
+  public List<CurveSystemStateDTO> curveSystemStatesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/systemStates/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveSystemStateDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveSystemStateDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * SystemStates (current)
+   * Gets systemStates.
+
+  */
+  public void curveSystemStatesCurrent (final Response.Listener<List<CurveSystemStateDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/systemStates/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveSystemStateDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveSystemStateDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Tokens (current)
+  * Gets tokens.
+   * @return List<CurveTokenDTO>
+  */
+  public List<CurveTokenDTO> curveTokensCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/tokens/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveTokenDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Tokens (current)
+   * Gets tokens.
+
+  */
+  public void curveTokensCurrent (final Response.Listener<List<CurveTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/tokens/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveTokenDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * TransferOwnershipEvents (current)
+  * Gets transferOwnershipEvents.
+   * @return List<CurveTransferOwnershipEventDTO>
+  */
+  public List<CurveTransferOwnershipEventDTO> curveTransferOwnershipEventsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/transferOwnershipEvents/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveTransferOwnershipEventDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveTransferOwnershipEventDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * TransferOwnershipEvents (current)
+   * Gets transferOwnershipEvents.
+
+  */
+  public void curveTransferOwnershipEventsCurrent (final Response.Listener<List<CurveTransferOwnershipEventDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/transferOwnershipEvents/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveTransferOwnershipEventDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveTransferOwnershipEventDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * UnderlyingCoins (current)
+  * Gets underlyingCoins.
+   * @return List<CurveUnderlyingCoinDTO>
+  */
+  public List<CurveUnderlyingCoinDTO> curveUnderlyingCoinsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/underlyingCoins/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveUnderlyingCoinDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveUnderlyingCoinDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * UnderlyingCoins (current)
+   * Gets underlyingCoins.
+
+  */
+  public void curveUnderlyingCoinsCurrent (final Response.Listener<List<CurveUnderlyingCoinDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/underlyingCoins/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveUnderlyingCoinDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveUnderlyingCoinDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * VotingApps (current)
+  * Gets votingApps.
+   * @return List<CurveVotingAppDTO>
+  */
+  public List<CurveVotingAppDTO> curveVotingAppsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/votingApps/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveVotingAppDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveVotingAppDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * VotingApps (current)
+   * Gets votingApps.
+
+  */
+  public void curveVotingAppsCurrent (final Response.Listener<List<CurveVotingAppDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/votingApps/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveVotingAppDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveVotingAppDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * WeeklyVolumes (current)
+  * Gets weeklyVolumes.
+   * @return List<CurveWeeklyVolumeDTO>
+  */
+  public List<CurveWeeklyVolumeDTO> curveWeeklyVolumesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/curve/weeklyVolumes/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveWeeklyVolumeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveWeeklyVolumeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * WeeklyVolumes (current)
+   * Gets weeklyVolumes.
+
+  */
+  public void curveWeeklyVolumesCurrent (final Response.Listener<List<CurveWeeklyVolumeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/curve/weeklyVolumes/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
 
 
     String[] contentTypes = {

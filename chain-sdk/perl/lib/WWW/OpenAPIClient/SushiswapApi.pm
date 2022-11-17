@@ -147,6 +147,202 @@ sub dex_get_trades__current {
 }
 
 #
+# sushiswap_bundles__current
+#
+# Bundles (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_bundles__current' } = {
+        summary => 'Bundles (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapBundleDTO]',
+        };
+}
+# @return ARRAY[SushiswapBundleDTO]
+#
+sub sushiswap_bundles__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/bundles/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapBundleDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_burns__current
+#
+# Burns (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_burns__current' } = {
+        summary => 'Burns (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapBurnDTO]',
+        };
+}
+# @return ARRAY[SushiswapBurnDTO]
+#
+sub sushiswap_burns__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/burns/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapBurnDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_day_datas__current
+#
+# DayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_day_datas__current' } = {
+        summary => 'DayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapDayDataDTO]
+#
+sub sushiswap_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/dayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_factorys__current
+#
+# Factorys (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_factorys__current' } = {
+        summary => 'Factorys (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapFactoryDTO]',
+        };
+}
+# @return ARRAY[SushiswapFactoryDTO]
+#
+sub sushiswap_factorys__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/factorys/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapFactoryDTO]', $response);
+    return $_response_object;
+}
+
+#
 # sushiswap_get_bundles__historical
 #
 # Bundles (historical) 🔥
@@ -415,7 +611,7 @@ sub sushiswap_get_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/daydatas/historical';
+    my $_resource_path = '/dapps/sushiswap/dayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -623,7 +819,7 @@ sub sushiswap_get_hour_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/hourdatas/historical';
+    my $_resource_path = '/dapps/sushiswap/hourDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -739,7 +935,7 @@ sub sushiswap_get_liquidity_position_snapshots__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/liquiditypositionsnapshots/historical';
+    my $_resource_path = '/dapps/sushiswap/liquidityPositionSnapshots/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -865,7 +1061,7 @@ sub sushiswap_get_liquidity_positions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/liquiditypositions/historical';
+    my $_resource_path = '/dapps/sushiswap/liquidityPositions/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1112,7 +1308,7 @@ sub sushiswap_get_pair_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairdaydatas/historical';
+    my $_resource_path = '/dapps/sushiswap/pairDayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1237,7 +1433,7 @@ sub sushiswap_get_pair_hour_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairhourdatas/historical';
+    my $_resource_path = '/dapps/sushiswap/pairHourDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1483,55 +1679,6 @@ sub sushiswap_get_pools__current {
 }
 
 #
-# sushiswap_get_swaps__current
-#
-# Swaps (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__current' } = {
-        summary => 'Swaps (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[SushiswapSwapDTO]',
-        };
-}
-# @return ARRAY[SushiswapSwapDTO]
-#
-sub sushiswap_get_swaps__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/swaps/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
-    return $_response_object;
-}
-
-#
 # sushiswap_get_swaps__historical
 #
 # Swaps (historical) 🔥
@@ -1696,7 +1843,7 @@ sub sushiswap_get_token_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokendaydatas/historical';
+    my $_resource_path = '/dapps/sushiswap/tokenDayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1747,55 +1894,6 @@ sub sushiswap_get_token_day_datas__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDayDataDTO]', $response);
-    return $_response_object;
-}
-
-#
-# sushiswap_get_tokens__current
-#
-# Tokens (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__current' } = {
-        summary => 'Tokens (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[SushiswapTokenDTO]',
-        };
-}
-# @return ARRAY[SushiswapTokenDTO]
-#
-sub sushiswap_get_tokens__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokens/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
     return $_response_object;
 }
 
@@ -2117,6 +2215,616 @@ sub sushiswap_get_users__historical {
     if ( exists $args{'id'}) {
         $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
     }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapUserDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_hour_datas__current
+#
+# HourDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_hour_datas__current' } = {
+        summary => 'HourDatas (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapHourDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapHourDataDTO]
+#
+sub sushiswap_hour_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/hourDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapHourDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_liquidity_position_snapshots__current
+#
+# LiquidityPositionSnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_liquidity_position_snapshots__current' } = {
+        summary => 'LiquidityPositionSnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapLiquidityPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[SushiswapLiquidityPositionSnapshotDTO]
+#
+sub sushiswap_liquidity_position_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/liquidityPositionSnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapLiquidityPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_liquidity_positions__current
+#
+# LiquidityPositions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_liquidity_positions__current' } = {
+        summary => 'LiquidityPositions (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapLiquidityPositionDTO]',
+        };
+}
+# @return ARRAY[SushiswapLiquidityPositionDTO]
+#
+sub sushiswap_liquidity_positions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/liquidityPositions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapLiquidityPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_mints__current
+#
+# Mints (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_mints__current' } = {
+        summary => 'Mints (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapMintDTO]',
+        };
+}
+# @return ARRAY[SushiswapMintDTO]
+#
+sub sushiswap_mints__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/mints/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapMintDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_pair_day_datas__current
+#
+# PairDayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_pair_day_datas__current' } = {
+        summary => 'PairDayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDayDataDTO]
+#
+sub sushiswap_pair_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairDayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_pair_hour_datas__current
+#
+# PairHourDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_pair_hour_datas__current' } = {
+        summary => 'PairHourDatas (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairHourDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairHourDataDTO]
+#
+sub sushiswap_pair_hour_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairHourDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairHourDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_pairs__current
+#
+# Pairs (current)
+#
+# @param string $id Pair contract address. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Pair contract address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_pairs__current' } = {
+        summary => 'Pairs (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDTO]
+#
+sub sushiswap_pairs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_swaps__current
+#
+# Swaps (current)
+#
+# @param string $pair Reference to pair. (optional)
+{
+    my $params = {
+    'pair' => {
+        data_type => 'string',
+        description => 'Reference to pair.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_swaps__current' } = {
+        summary => 'Swaps (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapSwapDTO]',
+        };
+}
+# @return ARRAY[SushiswapSwapDTO]
+#
+sub sushiswap_swaps__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/swaps/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_token_day_datas__current
+#
+# TokenDayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_token_day_datas__current' } = {
+        summary => 'TokenDayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDayDataDTO]
+#
+sub sushiswap_token_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokenDayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_tokens__current
+#
+# Tokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_tokens__current' } = {
+        summary => 'Tokens (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDTO]
+#
+sub sushiswap_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_transactions__current
+#
+# Transactions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_transactions__current' } = {
+        summary => 'Transactions (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapTransactionDTO]',
+        };
+}
+# @return ARRAY[SushiswapTransactionDTO]
+#
+sub sushiswap_transactions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/transactions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTransactionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_users__current
+#
+# Users (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_users__current' } = {
+        summary => 'Users (current)',
+        params => $params,
+        returns => 'ARRAY[SushiswapUserDTO]',
+        };
+}
+# @return ARRAY[SushiswapUserDTO]
+#
+sub sushiswap_users__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/users/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
 
     my $_body_data;
     # authentication setting, if any

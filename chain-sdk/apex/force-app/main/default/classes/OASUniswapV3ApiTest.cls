@@ -1,62 +1,12 @@
 @isTest
 private class OASUniswapV3ApiTest {
     /**
-     * BundleV3s (historical) 🔥
-     *
-     * Gets bundlev3s.
-     */
-    @isTest
-    private static void uniswapV3GetBundleV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3BundleV3DTO> response;
-        List<OASUniswapV3BundleV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundleV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundleV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundleV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Bundles (current)
      *
      * Gets bundles.
      */
     @isTest
-    private static void uniswapV3GetBundlesCurrentTest() {
+    private static void uniswapV3BundlesCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -64,84 +14,31 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3BundleV3DTO> response;
-        List<OASUniswapV3BundleV3DTO> expectedResponse;
+        List<OASUniswapV3BundleDTO> response;
+        List<OASUniswapV3BundleDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundlesCurrent();
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3BundlesCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundlesCurrent();
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3BundlesCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BundleV3DTO>{OASUniswapV3BundleV3DTO.getExample()};
-        response = (List<OASUniswapV3BundleV3DTO>) api.uniswapV3GetBundlesCurrent();
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * BurnV3s (historical) 🔥
-     *
-     * Gets burnv3s.
-     */
-    @isTest
-    private static void uniswapV3GetBurnV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null',
-            'pool' => 'null',
-            'token0' => 'null',
-            'token1' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3BurnV3DTO> response;
-        List<OASUniswapV3BurnV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3BundlesCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -151,53 +48,7 @@ private class OASUniswapV3ApiTest {
      * Gets burns.
      */
     @isTest
-    private static void uniswapV3GetBurnsCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3BurnV3DTO> response;
-        List<OASUniswapV3BurnV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3BurnV3DTO>{OASUniswapV3BurnV3DTO.getExample()};
-        response = (List<OASUniswapV3BurnV3DTO>) api.uniswapV3GetBurnsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * DayData (current)
-     *
-     * Gets uniswapv3 day data.
-     */
-    @isTest
-    private static void uniswapV3GetDayDataCurrentTest() {
+    private static void uniswapV3BurnsCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -205,41 +56,41 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3UniswapDayDataV3DTO> response;
-        List<OASUniswapV3UniswapDayDataV3DTO> expectedResponse;
+        List<OASUniswapV3BurnDTO> response;
+        List<OASUniswapV3BurnDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetDayDataCurrent();
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3BurnsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetDayDataCurrent();
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3BurnsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetDayDataCurrent();
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3BurnsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * Factory (current)
+     * Factorys (current)
      *
-     * Gets factory.
+     * Gets factorys.
      */
     @isTest
-    private static void uniswapV3GetFactoryCurrentTest() {
+    private static void uniswapV3FactorysCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -247,41 +98,41 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3FactoryV3DTO> response;
-        List<OASUniswapV3FactoryV3DTO> expectedResponse;
+        List<OASUniswapV3FactoryDTO> response;
+        List<OASUniswapV3FactoryDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryCurrent();
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3FactorysCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryCurrent();
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3FactorysCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryCurrent();
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3FactorysCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * FactoryV3s (historical) 🔥
+     * Bundles (historical) 🔥
      *
-     * Gets factoryv3s.
+     * Gets bundles.
      */
     @isTest
-    private static void uniswapV3GetFactoryV3sHistoricalTest() {
+    private static void uniswapV3GetBundlesHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -297,41 +148,41 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3FactoryV3DTO> response;
-        List<OASUniswapV3FactoryV3DTO> expectedResponse;
+        List<OASUniswapV3BundleDTO> response;
+        List<OASUniswapV3BundleDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3GetBundlesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3GetBundlesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3FactoryV3DTO>{OASUniswapV3FactoryV3DTO.getExample()};
-        response = (List<OASUniswapV3FactoryV3DTO>) api.uniswapV3GetFactoryV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BundleDTO>{OASUniswapV3BundleDTO.getExample()};
+        response = (List<OASUniswapV3BundleDTO>) api.uniswapV3GetBundlesHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * MintV3s (historical) 🔥
+     * Burns (historical) 🔥
      *
-     * Gets mintv3s.
+     * Gets burns.
      */
     @isTest
-    private static void uniswapV3GetMintV3sHistoricalTest() {
+    private static void uniswapV3GetBurnsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -350,87 +201,91 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3MintV3DTO> response;
-        List<OASUniswapV3MintV3DTO> expectedResponse;
+        List<OASUniswapV3BurnDTO> response;
+        List<OASUniswapV3BurnDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3GetBurnsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3GetBurnsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3BurnDTO>{OASUniswapV3BurnDTO.getExample()};
+        response = (List<OASUniswapV3BurnDTO>) api.uniswapV3GetBurnsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * Mints (current)
+     * Factorys (historical) 🔥
+     *
+     * Gets factorys.
+     */
+    @isTest
+    private static void uniswapV3GetFactorysHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null'
+        };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3FactoryDTO> response;
+        List<OASUniswapV3FactoryDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3GetFactorysHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3GetFactorysHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3FactoryDTO>{OASUniswapV3FactoryDTO.getExample()};
+        response = (List<OASUniswapV3FactoryDTO>) api.uniswapV3GetFactorysHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Mints (historical) 🔥
      *
      * Gets mints.
      */
     @isTest
-    private static void uniswapV3GetMintsCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3MintV3DTO> response;
-        List<OASUniswapV3MintV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3MintV3DTO>{OASUniswapV3MintV3DTO.getExample()};
-        response = (List<OASUniswapV3MintV3DTO>) api.uniswapV3GetMintsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PoolDayDataV3s (historical) 🔥
-     *
-     * Gets pooldaydatav3s.
-     */
-    @isTest
-    private static void uniswapV3GetPoolDayDataV3sHistoricalTest() {
+    private static void uniswapV3GetMintsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -442,287 +297,202 @@ private class OASUniswapV3ApiTest {
             'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
             'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
             'id' => 'null',
-            'pool' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PoolDayDataV3DTO> response;
-        List<OASUniswapV3PoolDayDataV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolDayDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolDayDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolDayDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PoolHourDataV3s (historical) 🔥
-     *
-     * Gets poolhourdatav3s.
-     */
-    @isTest
-    private static void uniswapV3GetPoolHourDataV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null',
-            'pool' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PoolHourDataV3DTO> response;
-        List<OASUniswapV3PoolHourDataV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolHourDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolHourDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolHourDataV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PoolV3s (historical) 🔥
-     *
-     * Gets poolv3s.
-     */
-    @isTest
-    private static void uniswapV3GetPoolV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null',
+            'pool' => 'null',
             'token0' => 'null',
             'token1' => 'null'
         };
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3PoolV3DTO> response;
-        List<OASUniswapV3PoolV3DTO> expectedResponse;
+        List<OASUniswapV3MintDTO> response;
+        List<OASUniswapV3MintDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3GetMintsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3GetMintsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3GetMintsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * Pools (current) 🔥
+     * PoolDayDatas (historical) 🔥
+     *
+     * Gets poolDayDatas.
+     */
+    @isTest
+    private static void uniswapV3GetPoolDayDatasHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null',
+            'pool' => 'null'
+        };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PoolDayDataDTO> response;
+        List<OASUniswapV3PoolDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3GetPoolDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3GetPoolDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3GetPoolDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PoolHourDatas (historical) 🔥
+     *
+     * Gets poolHourDatas.
+     */
+    @isTest
+    private static void uniswapV3GetPoolHourDatasHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null',
+            'pool' => 'null'
+        };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PoolHourDataDTO> response;
+        List<OASUniswapV3PoolHourDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3GetPoolHourDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3GetPoolHourDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3GetPoolHourDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Pools (historical) 🔥
      *
      * Gets pools.
      */
     @isTest
-    private static void uniswapV3GetPoolsCurrentTest() {
+    private static void uniswapV3GetPoolsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null',
+            'token0' => 'null',
+            'token1' => 'null'
         };
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3PoolV3DTO> response;
-        List<OASUniswapV3PoolV3DTO> expectedResponse;
+        List<OASUniswapV3PoolDTO> response;
+        List<OASUniswapV3PoolDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolsCurrent(params);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3GetPoolsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolsCurrent(params);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3GetPoolsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolV3DTO>{OASUniswapV3PoolV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolV3DTO>) api.uniswapV3GetPoolsCurrent(params);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3GetPoolsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * PoolsDayData (current)
+     * PositionSnapshots (historical) 🔥
      *
-     * Gets pools day data.
+     * Gets positionSnapshots.
      */
     @isTest
-    private static void uniswapV3GetPoolsDayDataCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PoolDayDataV3DTO> response;
-        List<OASUniswapV3PoolDayDataV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolsDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolsDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolDayDataV3DTO>{OASUniswapV3PoolDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolDayDataV3DTO>) api.uniswapV3GetPoolsDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PoolsHourData (current)
-     *
-     * Gets pools hour data.
-     */
-    @isTest
-    private static void uniswapV3GetPoolsHourDataCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PoolHourDataV3DTO> response;
-        List<OASUniswapV3PoolHourDataV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolsHourDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolsHourDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PoolHourDataV3DTO>{OASUniswapV3PoolHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3PoolHourDataV3DTO>) api.uniswapV3GetPoolsHourDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PositionSnapshotV3s (historical) 🔥
-     *
-     * Gets positionsnapshotv3s.
-     */
-    @isTest
-    private static void uniswapV3GetPositionSnapshotV3sHistoricalTest() {
+    private static void uniswapV3GetPositionSnapshotsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -739,186 +509,41 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3PositionSnapshotV3DTO> response;
-        List<OASUniswapV3PositionSnapshotV3DTO> expectedResponse;
+        List<OASUniswapV3PositionSnapshotDTO> response;
+        List<OASUniswapV3PositionSnapshotDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionSnapshotV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3GetPositionSnapshotsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionSnapshotV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3GetPositionSnapshotsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionSnapshotV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3GetPositionSnapshotsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * PositionV3s (historical) 🔥
-     *
-     * Gets positionv3s.
-     */
-    @isTest
-    private static void uniswapV3GetPositionV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null',
-            'pool' => 'null',
-            'token0' => 'null',
-            'token1' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PositionV3DTO> response;
-        List<OASUniswapV3PositionV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Positions (current)
+     * Positions (historical) 🔥
      *
      * Gets positions.
      */
     @isTest
-    private static void uniswapV3GetPositionsCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PositionV3DTO> response;
-        List<OASUniswapV3PositionV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionV3DTO>{OASUniswapV3PositionV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionV3DTO>) api.uniswapV3GetPositionsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * PositionsSnapshots (current)
-     *
-     * Gets positions snapshots.
-     */
-    @isTest
-    private static void uniswapV3GetPositionsSnapshotsCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3PositionSnapshotV3DTO> response;
-        List<OASUniswapV3PositionSnapshotV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionsSnapshotsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionsSnapshotsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3PositionSnapshotV3DTO>{OASUniswapV3PositionSnapshotV3DTO.getExample()};
-        response = (List<OASUniswapV3PositionSnapshotV3DTO>) api.uniswapV3GetPositionsSnapshotsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * SwapV3s (historical) 🔥
-     *
-     * Gets swapv3s.
-     */
-    @isTest
-    private static void uniswapV3GetSwapV3sHistoricalTest() {
+    private static void uniswapV3GetPositionsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -937,87 +562,94 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3SwapV3DTO> response;
-        List<OASUniswapV3SwapV3DTO> expectedResponse;
+        List<OASUniswapV3PositionDTO> response;
+        List<OASUniswapV3PositionDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3GetPositionsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3GetPositionsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3GetPositionsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * Swaps (current) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets swaps.
      */
     @isTest
-    private static void uniswapV3GetSwapsCurrentTest() {
+    private static void uniswapV3GetSwapsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null',
+            'pool' => 'null',
+            'token0' => 'null',
+            'token1' => 'null'
         };
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3SwapV3DTO> response;
-        List<OASUniswapV3SwapV3DTO> expectedResponse;
+        List<OASUniswapV3SwapDTO> response;
+        List<OASUniswapV3SwapDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapsCurrent(params);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3GetSwapsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapsCurrent(params);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3GetSwapsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3SwapV3DTO>{OASUniswapV3SwapV3DTO.getExample()};
-        response = (List<OASUniswapV3SwapV3DTO>) api.uniswapV3GetSwapsCurrent(params);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3GetSwapsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TickDayDataV3s (historical) 🔥
+     * TickDayDatas (historical) 🔥
      *
-     * Gets tickdaydatav3s.
+     * Gets tickDayDatas.
      */
     @isTest
-    private static void uniswapV3GetTickDayDataV3sHistoricalTest() {
+    private static void uniswapV3GetTickDayDatasHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1034,184 +666,92 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TickDayDataV3DTO> response;
-        List<OASUniswapV3TickDayDataV3DTO> expectedResponse;
+        List<OASUniswapV3TickDayDataDTO> response;
+        List<OASUniswapV3TickDayDataDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTickDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3GetTickDayDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTickDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3GetTickDayDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTickDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3GetTickDayDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TickV3s (historical) 🔥
-     *
-     * Gets tickv3s.
-     */
-    @isTest
-    private static void uniswapV3GetTickV3sHistoricalTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null',
-            'pool' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3TickV3DTO> response;
-        List<OASUniswapV3TickV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTickV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTickV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTickV3sHistorical(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Ticks (current)
+     * Ticks (historical) 🔥
      *
      * Gets ticks.
      */
     @isTest
-    private static void uniswapV3GetTicksCurrentTest() {
+    private static void uniswapV3GetTicksHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null',
+            'pool' => 'null'
         };
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TickV3DTO> response;
-        List<OASUniswapV3TickV3DTO> expectedResponse;
+        List<OASUniswapV3TickDTO> response;
+        List<OASUniswapV3TickDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTicksCurrent(params);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3GetTicksHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTicksCurrent(params);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3GetTicksHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickV3DTO>{OASUniswapV3TickV3DTO.getExample()};
-        response = (List<OASUniswapV3TickV3DTO>) api.uniswapV3GetTicksCurrent(params);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3GetTicksHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TicksDayData (current)
+     * TokenHourDatas (historical) 🔥
      *
-     * Gets ticks day data.
+     * Gets tokenHourDatas.
      */
     @isTest
-    private static void uniswapV3GetTicksDayDataCurrentTest() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'filterPoolId' => 'null'
-        };
-
-        OASClient client;
-        OASUniswapV3Api api;
-        List<OASUniswapV3TickDayDataV3DTO> response;
-        List<OASUniswapV3TickDayDataV3DTO> expectedResponse;
-        String js = '';
-
-        api = new OASUniswapV3Api(new OASClient());
-
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTicksDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTicksDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TickDayDataV3DTO>{OASUniswapV3TickDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TickDayDataV3DTO>) api.uniswapV3GetTicksDayDataCurrent(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * TokenHourDataV3s (historical) 🔥
-     *
-     * Gets tokenhourdatav3s.
-     */
-    @isTest
-    private static void uniswapV3GetTokenHourDataV3sHistoricalTest() {
+    private static void uniswapV3GetTokenHourDatasHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1227,38 +767,38 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TokenHourDataV3DTO> response;
-        List<OASUniswapV3TokenHourDataV3DTO> expectedResponse;
+        List<OASUniswapV3TokenHourDataDTO> response;
+        List<OASUniswapV3TokenHourDataDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokenHourDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3GetTokenHourDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokenHourDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3GetTokenHourDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokenHourDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3GetTokenHourDatasHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
      * TokenV3DayDatas (historical) 🔥
      *
-     * Gets tokenv3daydatas.
+     * Gets tokenV3DayDatas.
      */
     @isTest
     private static void uniswapV3GetTokenV3DayDatasHistoricalTest() {
@@ -1306,12 +846,12 @@ private class OASUniswapV3ApiTest {
     }
 
     /**
-     * TokenV3s (historical) 🔥
+     * Tokens (historical) 🔥
      *
-     * Gets tokenv3s.
+     * Gets tokens.
      */
     @isTest
-    private static void uniswapV3GetTokenV3sHistoricalTest() {
+    private static void uniswapV3GetTokensHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1329,95 +869,573 @@ private class OASUniswapV3ApiTest {
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TokenV3DTO> response;
-        List<OASUniswapV3TokenV3DTO> expectedResponse;
+        List<OASUniswapV3TokenDTO> response;
+        List<OASUniswapV3TokenDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokenV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3GetTokensHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokenV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3GetTokensHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokenV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3GetTokensHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * Tokens (current) 🔥
+     * Transactions (historical) 🔥
      *
-     * Gets tokens.
+     * Gets transactions.
      */
     @isTest
-    private static void uniswapV3GetTokensCurrentTest() {
+    private static void uniswapV3GetTransactionsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'filterTokenId' => 'null'
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null'
         };
 
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TokenV3DTO> response;
-        List<OASUniswapV3TokenV3DTO> expectedResponse;
+        List<OASUniswapV3TransactionDTO> response;
+        List<OASUniswapV3TransactionDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokensCurrent(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3GetTransactionsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokensCurrent(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3GetTransactionsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenV3DTO>{OASUniswapV3TokenV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DTO>) api.uniswapV3GetTokensCurrent(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3GetTransactionsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TokensDayData (current)
+     * UniswapDayDatas (historical) 🔥
      *
-     * Gets tokens day data.
+     * Gets uniswapDayDatas.
      */
     @isTest
-    private static void uniswapV3GetTokensDayDataCurrentTest() {
+    private static void uniswapV3GetUniswapDayDatasHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'filterTokenId' => 'null'
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'id' => 'null'
         };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3UniswapDayDataDTO> response;
+        List<OASUniswapV3UniswapDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3GetUniswapDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3GetUniswapDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3GetUniswapDayDatasHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Mints (current)
+     *
+     * Gets mints.
+     */
+    @isTest
+    private static void uniswapV3MintsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3MintDTO> response;
+        List<OASUniswapV3MintDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3MintsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3MintsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3MintDTO>{OASUniswapV3MintDTO.getExample()};
+        response = (List<OASUniswapV3MintDTO>) api.uniswapV3MintsCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PoolDayDatas (current)
+     *
+     * Gets poolDayDatas.
+     */
+    @isTest
+    private static void uniswapV3PoolDayDatasCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PoolDayDataDTO> response;
+        List<OASUniswapV3PoolDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3PoolDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3PoolDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDayDataDTO>{OASUniswapV3PoolDayDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolDayDataDTO>) api.uniswapV3PoolDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PoolHourDatas (current)
+     *
+     * Gets poolHourDatas.
+     */
+    @isTest
+    private static void uniswapV3PoolHourDatasCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PoolHourDataDTO> response;
+        List<OASUniswapV3PoolHourDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3PoolHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3PoolHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolHourDataDTO>{OASUniswapV3PoolHourDataDTO.getExample()};
+        response = (List<OASUniswapV3PoolHourDataDTO>) api.uniswapV3PoolHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Pools (current)
+     *
+     * Gets pools.
+     */
+    @isTest
+    private static void uniswapV3PoolsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'id' => 'null'
+        };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PoolDTO> response;
+        List<OASUniswapV3PoolDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3PoolsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3PoolsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PoolDTO>{OASUniswapV3PoolDTO.getExample()};
+        response = (List<OASUniswapV3PoolDTO>) api.uniswapV3PoolsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PositionSnapshots (current)
+     *
+     * Gets positionSnapshots.
+     */
+    @isTest
+    private static void uniswapV3PositionSnapshotsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PositionSnapshotDTO> response;
+        List<OASUniswapV3PositionSnapshotDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3PositionSnapshotsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3PositionSnapshotsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionSnapshotDTO>{OASUniswapV3PositionSnapshotDTO.getExample()};
+        response = (List<OASUniswapV3PositionSnapshotDTO>) api.uniswapV3PositionSnapshotsCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Positions (current)
+     *
+     * Gets positions.
+     */
+    @isTest
+    private static void uniswapV3PositionsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3PositionDTO> response;
+        List<OASUniswapV3PositionDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3PositionsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3PositionsCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3PositionDTO>{OASUniswapV3PositionDTO.getExample()};
+        response = (List<OASUniswapV3PositionDTO>) api.uniswapV3PositionsCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Swaps (current)
+     *
+     * Gets swaps.
+     */
+    @isTest
+    private static void uniswapV3SwapsCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pool' => 'null'
+        };
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3SwapDTO> response;
+        List<OASUniswapV3SwapDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3SwapsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3SwapsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3SwapDTO>{OASUniswapV3SwapDTO.getExample()};
+        response = (List<OASUniswapV3SwapDTO>) api.uniswapV3SwapsCurrent(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TickDayDatas (current)
+     *
+     * Gets tickDayDatas.
+     */
+    @isTest
+    private static void uniswapV3TickDayDatasCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3TickDayDataDTO> response;
+        List<OASUniswapV3TickDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3TickDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3TickDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDayDataDTO>{OASUniswapV3TickDayDataDTO.getExample()};
+        response = (List<OASUniswapV3TickDayDataDTO>) api.uniswapV3TickDayDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Ticks (current)
+     *
+     * Gets ticks.
+     */
+    @isTest
+    private static void uniswapV3TicksCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3TickDTO> response;
+        List<OASUniswapV3TickDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3TicksCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3TicksCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TickDTO>{OASUniswapV3TickDTO.getExample()};
+        response = (List<OASUniswapV3TickDTO>) api.uniswapV3TicksCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TokenHourDatas (current)
+     *
+     * Gets tokenHourDatas.
+     */
+    @isTest
+    private static void uniswapV3TokenHourDatasCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASUniswapV3Api api;
+        List<OASUniswapV3TokenHourDataDTO> response;
+        List<OASUniswapV3TokenHourDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASUniswapV3Api(new OASClient());
+
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3TokenHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3TokenHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASUniswapV3TokenHourDataDTO>{OASUniswapV3TokenHourDataDTO.getExample()};
+        response = (List<OASUniswapV3TokenHourDataDTO>) api.uniswapV3TokenHourDatasCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TokenV3DayDatas (current)
+     *
+     * Gets tokenV3DayDatas.
+     */
+    @isTest
+    private static void uniswapV3TokenV3DayDatasCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         OASClient client;
         OASUniswapV3Api api;
@@ -1431,167 +1449,147 @@ private class OASUniswapV3ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV3TokenV3DayDataDTO>{OASUniswapV3TokenV3DayDataDTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3GetTokensDayDataCurrent(params);
+        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3TokenV3DayDatasCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV3TokenV3DayDataDTO>{OASUniswapV3TokenV3DayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV3TokenV3DayDataDTO>{OASUniswapV3TokenV3DayDataDTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3GetTokensDayDataCurrent(params);
+        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3TokenV3DayDatasCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV3TokenV3DayDataDTO>{OASUniswapV3TokenV3DayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV3TokenV3DayDataDTO>{OASUniswapV3TokenV3DayDataDTO.getExample()};
-        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3GetTokensDayDataCurrent(params);
+        response = (List<OASUniswapV3TokenV3DayDataDTO>) api.uniswapV3TokenV3DayDatasCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TokensHourData (current)
+     * Tokens (current)
      *
-     * Gets tokens hour data.
+     * Gets tokens.
      */
     @isTest
-    private static void uniswapV3GetTokensHourDataCurrentTest() {
+    private static void uniswapV3TokensCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'filterTokenId' => 'null'
-        };
-
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TokenHourDataV3DTO> response;
-        List<OASUniswapV3TokenHourDataV3DTO> expectedResponse;
+        List<OASUniswapV3TokenDTO> response;
+        List<OASUniswapV3TokenDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokensHourDataCurrent(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3TokensCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokensHourDataCurrent(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3TokensCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TokenHourDataV3DTO>{OASUniswapV3TokenHourDataV3DTO.getExample()};
-        response = (List<OASUniswapV3TokenHourDataV3DTO>) api.uniswapV3GetTokensHourDataCurrent(params);
+        expectedResponse = new List<OASUniswapV3TokenDTO>{OASUniswapV3TokenDTO.getExample()};
+        response = (List<OASUniswapV3TokenDTO>) api.uniswapV3TokensCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * TransactionV3s (historical) 🔥
+     * Transactions (current)
      *
-     * Gets transactionv3s.
+     * Gets transactions.
      */
     @isTest
-    private static void uniswapV3GetTransactionV3sHistoricalTest() {
+    private static void uniswapV3TransactionsCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null'
-        };
-
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3TransactionV3DTO> response;
-        List<OASUniswapV3TransactionV3DTO> expectedResponse;
+        List<OASUniswapV3TransactionDTO> response;
+        List<OASUniswapV3TransactionDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()};
-        response = (List<OASUniswapV3TransactionV3DTO>) api.uniswapV3GetTransactionV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3TransactionsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()};
-        response = (List<OASUniswapV3TransactionV3DTO>) api.uniswapV3GetTransactionV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3TransactionsCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3TransactionV3DTO>{OASUniswapV3TransactionV3DTO.getExample()};
-        response = (List<OASUniswapV3TransactionV3DTO>) api.uniswapV3GetTransactionV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3TransactionDTO>{OASUniswapV3TransactionDTO.getExample()};
+        response = (List<OASUniswapV3TransactionDTO>) api.uniswapV3TransactionsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * UniswapDayDataV3s (historical) 🔥
+     * UniswapDayDatas (current)
      *
-     * Gets uniswapdaydatav3s.
+     * Gets uniswapDayDatas.
      */
     @isTest
-    private static void uniswapV3GetUniswapDayDataV3sHistoricalTest() {
+    private static void uniswapV3UniswapDayDatasCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
-        Map<String, Object> params = new Map<String, Object>{
-            'startBlock' => 2147483648L,
-            'endBlock' => 2147483648L,
-            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-            'id' => 'null'
-        };
-
         OASClient client;
         OASUniswapV3Api api;
-        List<OASUniswapV3UniswapDayDataV3DTO> response;
-        List<OASUniswapV3UniswapDayDataV3DTO> expectedResponse;
+        List<OASUniswapV3UniswapDayDataDTO> response;
+        List<OASUniswapV3UniswapDayDataDTO> expectedResponse;
         String js = '';
 
         api = new OASUniswapV3Api(new OASClient());
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetUniswapDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3UniswapDayDatasCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetUniswapDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3UniswapDayDatasCurrent();
         System.assertEquals(expectedResponse, response);
 
-        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()});
+        js = JSON.serialize(new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
-        expectedResponse = new List<OASUniswapV3UniswapDayDataV3DTO>{OASUniswapV3UniswapDayDataV3DTO.getExample()};
-        response = (List<OASUniswapV3UniswapDayDataV3DTO>) api.uniswapV3GetUniswapDayDataV3sHistorical(params);
+        expectedResponse = new List<OASUniswapV3UniswapDayDataDTO>{OASUniswapV3UniswapDayDataDTO.getExample()};
+        response = (List<OASUniswapV3UniswapDayDataDTO>) api.uniswapV3UniswapDayDatasCurrent();
         System.assertEquals(expectedResponse, response);
     }
 }

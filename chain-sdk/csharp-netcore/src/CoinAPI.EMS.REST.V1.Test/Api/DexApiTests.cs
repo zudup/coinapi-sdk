@@ -56,6 +56,28 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test DexBatchsCurrent
+        /// </summary>
+        [Fact]
+        public void DexBatchsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexBatchsCurrent();
+            //Assert.IsType<List<DexBatchDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void DexDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexDepositsCurrent();
+            //Assert.IsType<List<DexDepositDTO>>(response);
+        }
+
+        /// <summary>
         /// Test DexGetBatchsHistorical
         /// </summary>
         [Fact]
@@ -238,6 +260,105 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string user = null;
             //var response = instance.DexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user);
+            //Assert.IsType<List<DexWithdrawDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexOrdersCurrent
+        /// </summary>
+        [Fact]
+        public void DexOrdersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexOrdersCurrent();
+            //Assert.IsType<List<DexOrderDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexPricesCurrent
+        /// </summary>
+        [Fact]
+        public void DexPricesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexPricesCurrent();
+            //Assert.IsType<List<DexPriceDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexSolutionsCurrent
+        /// </summary>
+        [Fact]
+        public void DexSolutionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexSolutionsCurrent();
+            //Assert.IsType<List<DexSolutionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexStatssCurrent
+        /// </summary>
+        [Fact]
+        public void DexStatssCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexStatssCurrent();
+            //Assert.IsType<List<DexStatsDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexTokensCurrent
+        /// </summary>
+        [Fact]
+        public void DexTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexTokensCurrent();
+            //Assert.IsType<List<DexTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexTradesCurrent
+        /// </summary>
+        [Fact]
+        public void DexTradesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexTradesCurrent();
+            //Assert.IsType<List<DexTradeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexUsersCurrent
+        /// </summary>
+        [Fact]
+        public void DexUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexUsersCurrent();
+            //Assert.IsType<List<DexUserDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexWithdrawRequestsCurrent
+        /// </summary>
+        [Fact]
+        public void DexWithdrawRequestsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexWithdrawRequestsCurrent();
+            //Assert.IsType<List<DexWithdrawRequestDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void DexWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexWithdrawsCurrent();
             //Assert.IsType<List<DexWithdrawDTO>>(response);
         }
     }

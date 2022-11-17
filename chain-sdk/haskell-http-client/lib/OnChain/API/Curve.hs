@@ -58,6 +58,448 @@ import qualified Prelude as P
 
 -- ** Curve
 
+-- *** curveAccountsCurrent
+
+-- | @GET \/dapps\/curve\/accounts\/current@
+-- 
+-- Accounts (current)
+-- 
+-- Gets accounts.
+-- 
+curveAccountsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveAccountsCurrent MimeNoContent [CurveAccountDTO] accept
+curveAccountsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/accounts/current"]
+
+data CurveAccountsCurrent  
+-- | @application/json@
+instance Produces CurveAccountsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveAccountsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveAccountsCurrent MimePlainText
+
+
+-- *** curveAddLiquidityEventsCurrent
+
+-- | @GET \/dapps\/curve\/addLiquidityEvents\/current@
+-- 
+-- AddLiquidityEvents (current)
+-- 
+-- Gets addLiquidityEvents.
+-- 
+curveAddLiquidityEventsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveAddLiquidityEventsCurrent MimeNoContent [CurveAddLiquidityEventDTO] accept
+curveAddLiquidityEventsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/addLiquidityEvents/current"]
+
+data CurveAddLiquidityEventsCurrent  
+-- | @application/json@
+instance Produces CurveAddLiquidityEventsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveAddLiquidityEventsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveAddLiquidityEventsCurrent MimePlainText
+
+
+-- *** curveAdminFeeChangeLogsCurrent
+
+-- | @GET \/dapps\/curve\/adminFeeChangeLogs\/current@
+-- 
+-- AdminFeeChangeLogs (current)
+-- 
+-- Gets adminFeeChangeLogs.
+-- 
+curveAdminFeeChangeLogsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveAdminFeeChangeLogsCurrent MimeNoContent [CurveAdminFeeChangeLogDTO] accept
+curveAdminFeeChangeLogsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/adminFeeChangeLogs/current"]
+
+data CurveAdminFeeChangeLogsCurrent  
+-- | @application/json@
+instance Produces CurveAdminFeeChangeLogsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveAdminFeeChangeLogsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveAdminFeeChangeLogsCurrent MimePlainText
+
+
+-- *** curveAmplificationCoeffChangeLogsCurrent
+
+-- | @GET \/dapps\/curve\/amplificationCoeffChangeLogs\/current@
+-- 
+-- AmplificationCoeffChangeLogs (current)
+-- 
+-- Gets amplificationCoeffChangeLogs.
+-- 
+curveAmplificationCoeffChangeLogsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveAmplificationCoeffChangeLogsCurrent MimeNoContent [CurveAmplificationCoeffChangeLogDTO] accept
+curveAmplificationCoeffChangeLogsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/amplificationCoeffChangeLogs/current"]
+
+data CurveAmplificationCoeffChangeLogsCurrent  
+-- | @application/json@
+instance Produces CurveAmplificationCoeffChangeLogsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveAmplificationCoeffChangeLogsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveAmplificationCoeffChangeLogsCurrent MimePlainText
+
+
+-- *** curveCoinsCurrent
+
+-- | @GET \/dapps\/curve\/coins\/current@
+-- 
+-- Coins (current)
+-- 
+-- Gets coins.
+-- 
+curveCoinsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveCoinsCurrent MimeNoContent [CurveCoinDTO] accept
+curveCoinsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/coins/current"]
+
+data CurveCoinsCurrent  
+-- | @application/json@
+instance Produces CurveCoinsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveCoinsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveCoinsCurrent MimePlainText
+
+
+-- *** curveContractVersionsCurrent
+
+-- | @GET \/dapps\/curve\/contractVersions\/current@
+-- 
+-- ContractVersions (current)
+-- 
+-- Gets contractVersions.
+-- 
+curveContractVersionsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveContractVersionsCurrent MimeNoContent [CurveContractVersionDTO] accept
+curveContractVersionsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/contractVersions/current"]
+
+data CurveContractVersionsCurrent  
+-- | @application/json@
+instance Produces CurveContractVersionsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveContractVersionsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveContractVersionsCurrent MimePlainText
+
+
+-- *** curveContractsCurrent
+
+-- | @GET \/dapps\/curve\/contracts\/current@
+-- 
+-- Contracts (current)
+-- 
+-- Gets contracts.
+-- 
+curveContractsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveContractsCurrent MimeNoContent [CurveContractDTO] accept
+curveContractsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/contracts/current"]
+
+data CurveContractsCurrent  
+-- | @application/json@
+instance Produces CurveContractsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveContractsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveContractsCurrent MimePlainText
+
+
+-- *** curveDailyVolumesCurrent
+
+-- | @GET \/dapps\/curve\/dailyVolumes\/current@
+-- 
+-- DailyVolumes (current)
+-- 
+-- Gets dailyVolumes.
+-- 
+curveDailyVolumesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveDailyVolumesCurrent MimeNoContent [CurveDailyVolumeDTO] accept
+curveDailyVolumesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/dailyVolumes/current"]
+
+data CurveDailyVolumesCurrent  
+-- | @application/json@
+instance Produces CurveDailyVolumesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveDailyVolumesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveDailyVolumesCurrent MimePlainText
+
+
+-- *** curveExchangesCurrent
+
+-- | @GET \/dapps\/curve\/exchanges\/current@
+-- 
+-- Exchanges (current)
+-- 
+-- Gets exchanges.
+-- 
+curveExchangesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveExchangesCurrent MimeNoContent [CurveExchangeDTO] accept
+curveExchangesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/exchanges/current"]
+
+data CurveExchangesCurrent  
+
+-- | /Optional Param/ "pool" - 
+instance HasOptionalParam CurveExchangesCurrent Pool where
+  applyOptionalParam req (Pool xs) =
+    req `addQuery` toQuery ("pool", Just xs)
+-- | @application/json@
+instance Produces CurveExchangesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveExchangesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveExchangesCurrent MimePlainText
+
+
+-- *** curveFeeChangeLogsCurrent
+
+-- | @GET \/dapps\/curve\/feeChangeLogs\/current@
+-- 
+-- FeeChangeLogs (current)
+-- 
+-- Gets feeChangeLogs.
+-- 
+curveFeeChangeLogsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveFeeChangeLogsCurrent MimeNoContent [CurveFeeChangeLogDTO] accept
+curveFeeChangeLogsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/feeChangeLogs/current"]
+
+data CurveFeeChangeLogsCurrent  
+-- | @application/json@
+instance Produces CurveFeeChangeLogsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveFeeChangeLogsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveFeeChangeLogsCurrent MimePlainText
+
+
+-- *** curveGaugeDepositsCurrent
+
+-- | @GET \/dapps\/curve\/gaugeDeposits\/current@
+-- 
+-- GaugeDeposits (current)
+-- 
+-- Gets gaugeDeposits.
+-- 
+curveGaugeDepositsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeDepositsCurrent MimeNoContent [CurveGaugeDepositDTO] accept
+curveGaugeDepositsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeDeposits/current"]
+
+data CurveGaugeDepositsCurrent  
+-- | @application/json@
+instance Produces CurveGaugeDepositsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeDepositsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeDepositsCurrent MimePlainText
+
+
+-- *** curveGaugeLiquiditysCurrent
+
+-- | @GET \/dapps\/curve\/gaugeLiquiditys\/current@
+-- 
+-- GaugeLiquiditys (current)
+-- 
+-- Gets gaugeLiquiditys.
+-- 
+curveGaugeLiquiditysCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeLiquiditysCurrent MimeNoContent [CurveGaugeLiquidityDTO] accept
+curveGaugeLiquiditysCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeLiquiditys/current"]
+
+data CurveGaugeLiquiditysCurrent  
+-- | @application/json@
+instance Produces CurveGaugeLiquiditysCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeLiquiditysCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeLiquiditysCurrent MimePlainText
+
+
+-- *** curveGaugeTotalWeightsCurrent
+
+-- | @GET \/dapps\/curve\/gaugeTotalWeights\/current@
+-- 
+-- GaugeTotalWeights (current)
+-- 
+-- Gets gaugeTotalWeights.
+-- 
+curveGaugeTotalWeightsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeTotalWeightsCurrent MimeNoContent [CurveGaugeTotalWeightDTO] accept
+curveGaugeTotalWeightsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeTotalWeights/current"]
+
+data CurveGaugeTotalWeightsCurrent  
+-- | @application/json@
+instance Produces CurveGaugeTotalWeightsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeTotalWeightsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeTotalWeightsCurrent MimePlainText
+
+
+-- *** curveGaugeTypeWeightsCurrent
+
+-- | @GET \/dapps\/curve\/gaugeTypeWeights\/current@
+-- 
+-- GaugeTypeWeights (current)
+-- 
+-- Gets gaugeTypeWeights.
+-- 
+curveGaugeTypeWeightsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeTypeWeightsCurrent MimeNoContent [CurveGaugeTypeWeightDTO] accept
+curveGaugeTypeWeightsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeTypeWeights/current"]
+
+data CurveGaugeTypeWeightsCurrent  
+-- | @application/json@
+instance Produces CurveGaugeTypeWeightsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeTypeWeightsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeTypeWeightsCurrent MimePlainText
+
+
+-- *** curveGaugeTypesCurrent
+
+-- | @GET \/dapps\/curve\/gaugeTypes\/current@
+-- 
+-- GaugeTypes (current)
+-- 
+-- Gets gaugeTypes.
+-- 
+curveGaugeTypesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeTypesCurrent MimeNoContent [CurveGaugeTypeDTO] accept
+curveGaugeTypesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeTypes/current"]
+
+data CurveGaugeTypesCurrent  
+-- | @application/json@
+instance Produces CurveGaugeTypesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeTypesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeTypesCurrent MimePlainText
+
+
+-- *** curveGaugeWeightVotesCurrent
+
+-- | @GET \/dapps\/curve\/gaugeWeightVotes\/current@
+-- 
+-- GaugeWeightVotes (current)
+-- 
+-- Gets gaugeWeightVotes.
+-- 
+curveGaugeWeightVotesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeWeightVotesCurrent MimeNoContent [CurveGaugeWeightVoteDTO] accept
+curveGaugeWeightVotesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeWeightVotes/current"]
+
+data CurveGaugeWeightVotesCurrent  
+-- | @application/json@
+instance Produces CurveGaugeWeightVotesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeWeightVotesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeWeightVotesCurrent MimePlainText
+
+
+-- *** curveGaugeWeightsCurrent
+
+-- | @GET \/dapps\/curve\/gaugeWeights\/current@
+-- 
+-- GaugeWeights (current)
+-- 
+-- Gets gaugeWeights.
+-- 
+curveGaugeWeightsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeWeightsCurrent MimeNoContent [CurveGaugeWeightDTO] accept
+curveGaugeWeightsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeWeights/current"]
+
+data CurveGaugeWeightsCurrent  
+-- | @application/json@
+instance Produces CurveGaugeWeightsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeWeightsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeWeightsCurrent MimePlainText
+
+
+-- *** curveGaugeWithdrawsCurrent
+
+-- | @GET \/dapps\/curve\/gaugeWithdraws\/current@
+-- 
+-- GaugeWithdraws (current)
+-- 
+-- Gets gaugeWithdraws.
+-- 
+curveGaugeWithdrawsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugeWithdrawsCurrent MimeNoContent [CurveGaugeWithdrawDTO] accept
+curveGaugeWithdrawsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeWithdraws/current"]
+
+data CurveGaugeWithdrawsCurrent  
+-- | @application/json@
+instance Produces CurveGaugeWithdrawsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugeWithdrawsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugeWithdrawsCurrent MimePlainText
+
+
+-- *** curveGaugesCurrent
+
+-- | @GET \/dapps\/curve\/gauges\/current@
+-- 
+-- Gauges (current)
+-- 
+-- Gets gauges.
+-- 
+curveGaugesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGaugesCurrent MimeNoContent [CurveGaugeDTO] accept
+curveGaugesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gauges/current"]
+
+data CurveGaugesCurrent  
+-- | @application/json@
+instance Produces CurveGaugesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveGaugesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveGaugesCurrent MimePlainText
+
+
 -- *** curveGetAccountsHistorical
 
 -- | @GET \/dapps\/curve\/accounts\/historical@
@@ -113,17 +555,17 @@ instance Produces CurveGetAccountsHistorical MimePlainText
 
 -- *** curveGetAddLiquidityEventsHistorical
 
--- | @GET \/dapps\/curve\/addliquidityevents\/historical@
+-- | @GET \/dapps\/curve\/addLiquidityEvents\/historical@
 -- 
 -- AddLiquidityEvents (historical) 🔥
 -- 
--- Gets addliquidityevents.
+-- Gets addLiquidityEvents.
 -- 
 curveGetAddLiquidityEventsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetAddLiquidityEventsHistorical MimeNoContent [CurveAddLiquidityEventDTO] accept
 curveGetAddLiquidityEventsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/addliquidityevents/historical"]
+  _mkRequest "GET" ["/dapps/curve/addLiquidityEvents/historical"]
 
 data CurveGetAddLiquidityEventsHistorical  
 
@@ -166,17 +608,17 @@ instance Produces CurveGetAddLiquidityEventsHistorical MimePlainText
 
 -- *** curveGetAdminFeeChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/adminfeechangelogs\/historical@
+-- | @GET \/dapps\/curve\/adminFeeChangeLogs\/historical@
 -- 
 -- AdminFeeChangeLogs (historical) 🔥
 -- 
--- Gets adminfeechangelogs.
+-- Gets adminFeeChangeLogs.
 -- 
 curveGetAdminFeeChangeLogsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetAdminFeeChangeLogsHistorical MimeNoContent [CurveAdminFeeChangeLogDTO] accept
 curveGetAdminFeeChangeLogsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/adminfeechangelogs/historical"]
+  _mkRequest "GET" ["/dapps/curve/adminFeeChangeLogs/historical"]
 
 data CurveGetAdminFeeChangeLogsHistorical  
 
@@ -219,17 +661,17 @@ instance Produces CurveGetAdminFeeChangeLogsHistorical MimePlainText
 
 -- *** curveGetAmplificationCoeffChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/amplificationcoeffchangelogs\/historical@
+-- | @GET \/dapps\/curve\/amplificationCoeffChangeLogs\/historical@
 -- 
 -- AmplificationCoeffChangeLogs (historical) 🔥
 -- 
--- Gets amplificationcoeffchangelogs.
+-- Gets amplificationCoeffChangeLogs.
 -- 
 curveGetAmplificationCoeffChangeLogsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetAmplificationCoeffChangeLogsHistorical MimeNoContent [CurveAmplificationCoeffChangeLogDTO] accept
 curveGetAmplificationCoeffChangeLogsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/amplificationcoeffchangelogs/historical"]
+  _mkRequest "GET" ["/dapps/curve/amplificationCoeffChangeLogs/historical"]
 
 data CurveGetAmplificationCoeffChangeLogsHistorical  
 
@@ -313,17 +755,17 @@ instance Produces CurveGetCoinsHistorical MimePlainText
 
 -- *** curveGetContractVersionsHistorical
 
--- | @GET \/dapps\/curve\/contractversions\/historical@
+-- | @GET \/dapps\/curve\/contractVersions\/historical@
 -- 
 -- ContractVersions (historical) 🔥
 -- 
--- Gets contractversions.
+-- Gets contractVersions.
 -- 
 curveGetContractVersionsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetContractVersionsHistorical MimeNoContent [CurveContractVersionDTO] accept
 curveGetContractVersionsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/contractversions/historical"]
+  _mkRequest "GET" ["/dapps/curve/contractVersions/historical"]
 
 data CurveGetContractVersionsHistorical  
 
@@ -414,17 +856,17 @@ instance Produces CurveGetContractsHistorical MimePlainText
 
 -- *** curveGetDailyVolumesHistorical
 
--- | @GET \/dapps\/curve\/dailyvolumes\/historical@
+-- | @GET \/dapps\/curve\/dailyVolumes\/historical@
 -- 
 -- DailyVolumes (historical) 🔥
 -- 
--- Gets dailyvolumes.
+-- Gets dailyVolumes.
 -- 
 curveGetDailyVolumesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetDailyVolumesHistorical MimeNoContent [CurveDailyVolumeDTO] accept
 curveGetDailyVolumesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/dailyvolumes/historical"]
+  _mkRequest "GET" ["/dapps/curve/dailyVolumes/historical"]
 
 data CurveGetDailyVolumesHistorical  
 
@@ -520,17 +962,17 @@ instance Produces CurveGetExchangesHistorical MimePlainText
 
 -- *** curveGetFeeChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/feechangelogs\/historical@
+-- | @GET \/dapps\/curve\/feeChangeLogs\/historical@
 -- 
 -- FeeChangeLogs (historical) 🔥
 -- 
--- Gets feechangelogs.
+-- Gets feeChangeLogs.
 -- 
 curveGetFeeChangeLogsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetFeeChangeLogsHistorical MimeNoContent [CurveFeeChangeLogDTO] accept
 curveGetFeeChangeLogsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/feechangelogs/historical"]
+  _mkRequest "GET" ["/dapps/curve/feeChangeLogs/historical"]
 
 data CurveGetFeeChangeLogsHistorical  
 
@@ -573,17 +1015,17 @@ instance Produces CurveGetFeeChangeLogsHistorical MimePlainText
 
 -- *** curveGetGaugeDepositsHistorical
 
--- | @GET \/dapps\/curve\/gaugedeposits\/historical@
+-- | @GET \/dapps\/curve\/gaugeDeposits\/historical@
 -- 
 -- GaugeDeposits (historical) 🔥
 -- 
--- Gets gaugedeposits.
+-- Gets gaugeDeposits.
 -- 
 curveGetGaugeDepositsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeDepositsHistorical MimeNoContent [CurveGaugeDepositDTO] accept
 curveGetGaugeDepositsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugedeposits/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeDeposits/historical"]
 
 data CurveGetGaugeDepositsHistorical  
 
@@ -621,17 +1063,17 @@ instance Produces CurveGetGaugeDepositsHistorical MimePlainText
 
 -- *** curveGetGaugeLiquiditysHistorical
 
--- | @GET \/dapps\/curve\/gaugeliquiditys\/historical@
+-- | @GET \/dapps\/curve\/gaugeLiquiditys\/historical@
 -- 
 -- GaugeLiquiditys (historical) 🔥
 -- 
--- Gets gaugeliquiditys.
+-- Gets gaugeLiquiditys.
 -- 
 curveGetGaugeLiquiditysHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeLiquiditysHistorical MimeNoContent [CurveGaugeLiquidityDTO] accept
 curveGetGaugeLiquiditysHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugeliquiditys/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeLiquiditys/historical"]
 
 data CurveGetGaugeLiquiditysHistorical  
 
@@ -674,17 +1116,17 @@ instance Produces CurveGetGaugeLiquiditysHistorical MimePlainText
 
 -- *** curveGetGaugeTotalWeightsHistorical
 
--- | @GET \/dapps\/curve\/gaugetotalweights\/historical@
+-- | @GET \/dapps\/curve\/gaugeTotalWeights\/historical@
 -- 
 -- GaugeTotalWeights (historical) 🔥
 -- 
--- Gets gaugetotalweights.
+-- Gets gaugeTotalWeights.
 -- 
 curveGetGaugeTotalWeightsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeTotalWeightsHistorical MimeNoContent [CurveGaugeTotalWeightDTO] accept
 curveGetGaugeTotalWeightsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugetotalweights/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeTotalWeights/historical"]
 
 data CurveGetGaugeTotalWeightsHistorical  
 
@@ -722,17 +1164,17 @@ instance Produces CurveGetGaugeTotalWeightsHistorical MimePlainText
 
 -- *** curveGetGaugeTypeWeightsHistorical
 
--- | @GET \/dapps\/curve\/gaugetypeweights\/historical@
+-- | @GET \/dapps\/curve\/gaugeTypeWeights\/historical@
 -- 
 -- GaugeTypeWeights (historical) 🔥
 -- 
--- Gets gaugetypeweights.
+-- Gets gaugeTypeWeights.
 -- 
 curveGetGaugeTypeWeightsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeTypeWeightsHistorical MimeNoContent [CurveGaugeTypeWeightDTO] accept
 curveGetGaugeTypeWeightsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugetypeweights/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeTypeWeights/historical"]
 
 data CurveGetGaugeTypeWeightsHistorical  
 
@@ -770,17 +1212,17 @@ instance Produces CurveGetGaugeTypeWeightsHistorical MimePlainText
 
 -- *** curveGetGaugeTypesHistorical
 
--- | @GET \/dapps\/curve\/gaugetypes\/historical@
+-- | @GET \/dapps\/curve\/gaugeTypes\/historical@
 -- 
 -- GaugeTypes (historical) 🔥
 -- 
--- Gets gaugetypes.
+-- Gets gaugeTypes.
 -- 
 curveGetGaugeTypesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeTypesHistorical MimeNoContent [CurveGaugeTypeDTO] accept
 curveGetGaugeTypesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugetypes/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeTypes/historical"]
 
 data CurveGetGaugeTypesHistorical  
 
@@ -823,17 +1265,17 @@ instance Produces CurveGetGaugeTypesHistorical MimePlainText
 
 -- *** curveGetGaugeWeightVotesHistorical
 
--- | @GET \/dapps\/curve\/gaugeweightvotes\/historical@
+-- | @GET \/dapps\/curve\/gaugeWeightVotes\/historical@
 -- 
 -- GaugeWeightVotes (historical) 🔥
 -- 
--- Gets gaugeweightvotes.
+-- Gets gaugeWeightVotes.
 -- 
 curveGetGaugeWeightVotesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeWeightVotesHistorical MimeNoContent [CurveGaugeWeightVoteDTO] accept
 curveGetGaugeWeightVotesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugeweightvotes/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeWeightVotes/historical"]
 
 data CurveGetGaugeWeightVotesHistorical  
 
@@ -876,17 +1318,17 @@ instance Produces CurveGetGaugeWeightVotesHistorical MimePlainText
 
 -- *** curveGetGaugeWeightsHistorical
 
--- | @GET \/dapps\/curve\/gaugeweights\/historical@
+-- | @GET \/dapps\/curve\/gaugeWeights\/historical@
 -- 
 -- GaugeWeights (historical) 🔥
 -- 
--- Gets gaugeweights.
+-- Gets gaugeWeights.
 -- 
 curveGetGaugeWeightsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeWeightsHistorical MimeNoContent [CurveGaugeWeightDTO] accept
 curveGetGaugeWeightsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugeweights/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeWeights/historical"]
 
 data CurveGetGaugeWeightsHistorical  
 
@@ -924,17 +1366,17 @@ instance Produces CurveGetGaugeWeightsHistorical MimePlainText
 
 -- *** curveGetGaugeWithdrawsHistorical
 
--- | @GET \/dapps\/curve\/gaugewithdraws\/historical@
+-- | @GET \/dapps\/curve\/gaugeWithdraws\/historical@
 -- 
 -- GaugeWithdraws (historical) 🔥
 -- 
--- Gets gaugewithdraws.
+-- Gets gaugeWithdraws.
 -- 
 curveGetGaugeWithdrawsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetGaugeWithdrawsHistorical MimeNoContent [CurveGaugeWithdrawDTO] accept
 curveGetGaugeWithdrawsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugewithdraws/historical"]
+  _mkRequest "GET" ["/dapps/curve/gaugeWithdraws/historical"]
 
 data CurveGetGaugeWithdrawsHistorical  
 
@@ -1030,17 +1472,17 @@ instance Produces CurveGetGaugesHistorical MimePlainText
 
 -- *** curveGetHourlyVolumesHistorical
 
--- | @GET \/dapps\/curve\/hourlyvolumes\/historical@
+-- | @GET \/dapps\/curve\/hourlyVolumes\/historical@
 -- 
 -- HourlyVolumes (historical) 🔥
 -- 
--- Gets hourlyvolumes.
+-- Gets hourlyVolumes.
 -- 
 curveGetHourlyVolumesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetHourlyVolumesHistorical MimeNoContent [CurveHourlyVolumeDTO] accept
 curveGetHourlyVolumesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/hourlyvolumes/historical"]
+  _mkRequest "GET" ["/dapps/curve/hourlyVolumes/historical"]
 
 data CurveGetHourlyVolumesHistorical  
 
@@ -1083,17 +1525,17 @@ instance Produces CurveGetHourlyVolumesHistorical MimePlainText
 
 -- *** curveGetLpTokensHistorical
 
--- | @GET \/dapps\/curve\/lptokens\/historical@
+-- | @GET \/dapps\/curve\/lpTokens\/historical@
 -- 
 -- LpTokens (historical) 🔥
 -- 
--- Gets lptokens.
+-- Gets lpTokens.
 -- 
 curveGetLpTokensHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetLpTokensHistorical MimeNoContent [CurveLpTokenDTO] accept
 curveGetLpTokensHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/lptokens/historical"]
+  _mkRequest "GET" ["/dapps/curve/lpTokens/historical"]
 
 data CurveGetLpTokensHistorical  
 
@@ -1204,17 +1646,17 @@ instance Produces CurveGetPoolsHistorical MimePlainText
 
 -- *** curveGetProposalVotesHistorical
 
--- | @GET \/dapps\/curve\/proposalvotes\/historical@
+-- | @GET \/dapps\/curve\/proposalVotes\/historical@
 -- 
 -- ProposalVotes (historical) 🔥
 -- 
--- Gets proposalvotes.
+-- Gets proposalVotes.
 -- 
 curveGetProposalVotesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetProposalVotesHistorical MimeNoContent [CurveProposalVoteDTO] accept
 curveGetProposalVotesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/proposalvotes/historical"]
+  _mkRequest "GET" ["/dapps/curve/proposalVotes/historical"]
 
 data CurveGetProposalVotesHistorical  
 
@@ -1300,17 +1742,17 @@ instance Produces CurveGetProposalsHistorical MimePlainText
 
 -- *** curveGetRemoveLiquidityEventsHistorical
 
--- | @GET \/dapps\/curve\/removeliquidityevents\/historical@
+-- | @GET \/dapps\/curve\/removeLiquidityEvents\/historical@
 -- 
 -- RemoveLiquidityEvents (historical) 🔥
 -- 
--- Gets removeliquidityevents.
+-- Gets removeLiquidityEvents.
 -- 
 curveGetRemoveLiquidityEventsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetRemoveLiquidityEventsHistorical MimeNoContent [CurveRemoveLiquidityEventDTO] accept
 curveGetRemoveLiquidityEventsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/removeliquidityevents/historical"]
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityEvents/historical"]
 
 data CurveGetRemoveLiquidityEventsHistorical  
 
@@ -1353,17 +1795,17 @@ instance Produces CurveGetRemoveLiquidityEventsHistorical MimePlainText
 
 -- *** curveGetRemoveLiquidityOneEventsHistorical
 
--- | @GET \/dapps\/curve\/removeliquidityoneevents\/historical@
+-- | @GET \/dapps\/curve\/removeLiquidityOneEvents\/historical@
 -- 
 -- RemoveLiquidityOneEvents (historical) 🔥
 -- 
--- Gets removeliquidityoneevents.
+-- Gets removeLiquidityOneEvents.
 -- 
 curveGetRemoveLiquidityOneEventsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetRemoveLiquidityOneEventsHistorical MimeNoContent [CurveRemoveLiquidityOneEventDTO] accept
 curveGetRemoveLiquidityOneEventsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/removeliquidityoneevents/historical"]
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityOneEvents/historical"]
 
 data CurveGetRemoveLiquidityOneEventsHistorical  
 
@@ -1406,17 +1848,17 @@ instance Produces CurveGetRemoveLiquidityOneEventsHistorical MimePlainText
 
 -- *** curveGetSystemStatesHistorical
 
--- | @GET \/dapps\/curve\/systemstates\/historical@
+-- | @GET \/dapps\/curve\/systemStates\/historical@
 -- 
 -- SystemStates (historical) 🔥
 -- 
--- Gets systemstates.
+-- Gets systemStates.
 -- 
 curveGetSystemStatesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetSystemStatesHistorical MimeNoContent [CurveSystemStateDTO] accept
 curveGetSystemStatesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/systemstates/historical"]
+  _mkRequest "GET" ["/dapps/curve/systemStates/historical"]
 
 data CurveGetSystemStatesHistorical  
 
@@ -1517,17 +1959,17 @@ instance Produces CurveGetTokensHistorical MimePlainText
 
 -- *** curveGetTransferOwnershipEventsHistorical
 
--- | @GET \/dapps\/curve\/transferownershipevents\/historical@
+-- | @GET \/dapps\/curve\/transferOwnershipEvents\/historical@
 -- 
 -- TransferOwnershipEvents (historical) 🔥
 -- 
--- Gets transferownershipevents.
+-- Gets transferOwnershipEvents.
 -- 
 curveGetTransferOwnershipEventsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetTransferOwnershipEventsHistorical MimeNoContent [CurveTransferOwnershipEventDTO] accept
 curveGetTransferOwnershipEventsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/transferownershipevents/historical"]
+  _mkRequest "GET" ["/dapps/curve/transferOwnershipEvents/historical"]
 
 data CurveGetTransferOwnershipEventsHistorical  
 
@@ -1570,17 +2012,17 @@ instance Produces CurveGetTransferOwnershipEventsHistorical MimePlainText
 
 -- *** curveGetUnderlyingCoinsHistorical
 
--- | @GET \/dapps\/curve\/underlyingcoins\/historical@
+-- | @GET \/dapps\/curve\/underlyingCoins\/historical@
 -- 
 -- UnderlyingCoins (historical) 🔥
 -- 
--- Gets underlyingcoins.
+-- Gets underlyingCoins.
 -- 
 curveGetUnderlyingCoinsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetUnderlyingCoinsHistorical MimeNoContent [CurveUnderlyingCoinDTO] accept
 curveGetUnderlyingCoinsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/underlyingcoins/historical"]
+  _mkRequest "GET" ["/dapps/curve/underlyingCoins/historical"]
 
 data CurveGetUnderlyingCoinsHistorical  
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical StartBlock where
@@ -1611,17 +2053,17 @@ instance Produces CurveGetUnderlyingCoinsHistorical MimePlainText
 
 -- *** curveGetVotingAppsHistorical
 
--- | @GET \/dapps\/curve\/votingapps\/historical@
+-- | @GET \/dapps\/curve\/votingApps\/historical@
 -- 
 -- VotingApps (historical) 🔥
 -- 
--- Gets votingapps.
+-- Gets votingApps.
 -- 
 curveGetVotingAppsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetVotingAppsHistorical MimeNoContent [CurveVotingAppDTO] accept
 curveGetVotingAppsHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/votingapps/historical"]
+  _mkRequest "GET" ["/dapps/curve/votingApps/historical"]
 
 data CurveGetVotingAppsHistorical  
 
@@ -1664,17 +2106,17 @@ instance Produces CurveGetVotingAppsHistorical MimePlainText
 
 -- *** curveGetWeeklyVolumesHistorical
 
--- | @GET \/dapps\/curve\/weeklyvolumes\/historical@
+-- | @GET \/dapps\/curve\/weeklyVolumes\/historical@
 -- 
 -- WeeklyVolumes (historical) 🔥
 -- 
--- Gets weeklyvolumes.
+-- Gets weeklyVolumes.
 -- 
 curveGetWeeklyVolumesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest CurveGetWeeklyVolumesHistorical MimeNoContent [CurveWeeklyVolumeDTO] accept
 curveGetWeeklyVolumesHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/weeklyvolumes/historical"]
+  _mkRequest "GET" ["/dapps/curve/weeklyVolumes/historical"]
 
 data CurveGetWeeklyVolumesHistorical  
 
@@ -1713,4 +2155,308 @@ instance Produces CurveGetWeeklyVolumesHistorical MimeJSON
 instance Produces CurveGetWeeklyVolumesHistorical MimeTextJson
 -- | @text/plain@
 instance Produces CurveGetWeeklyVolumesHistorical MimePlainText
+
+
+-- *** curveHourlyVolumesCurrent
+
+-- | @GET \/dapps\/curve\/hourlyVolumes\/current@
+-- 
+-- HourlyVolumes (current)
+-- 
+-- Gets hourlyVolumes.
+-- 
+curveHourlyVolumesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveHourlyVolumesCurrent MimeNoContent [CurveHourlyVolumeDTO] accept
+curveHourlyVolumesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/hourlyVolumes/current"]
+
+data CurveHourlyVolumesCurrent  
+-- | @application/json@
+instance Produces CurveHourlyVolumesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveHourlyVolumesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveHourlyVolumesCurrent MimePlainText
+
+
+-- *** curveLpTokensCurrent
+
+-- | @GET \/dapps\/curve\/lpTokens\/current@
+-- 
+-- LpTokens (current)
+-- 
+-- Gets lpTokens.
+-- 
+curveLpTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveLpTokensCurrent MimeNoContent [CurveLpTokenDTO] accept
+curveLpTokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/lpTokens/current"]
+
+data CurveLpTokensCurrent  
+-- | @application/json@
+instance Produces CurveLpTokensCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveLpTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveLpTokensCurrent MimePlainText
+
+
+-- *** curvePoolsCurrent
+
+-- | @GET \/dapps\/curve\/pools\/current@
+-- 
+-- Pools (current)
+-- 
+-- Gets pools.
+-- 
+curvePoolsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurvePoolsCurrent MimeNoContent [CurvePoolDTO] accept
+curvePoolsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/pools/current"]
+
+data CurvePoolsCurrent  
+
+-- | /Optional Param/ "id" - Pool address.
+instance HasOptionalParam CurvePoolsCurrent Id where
+  applyOptionalParam req (Id xs) =
+    req `addQuery` toQuery ("id", Just xs)
+-- | @application/json@
+instance Produces CurvePoolsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurvePoolsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurvePoolsCurrent MimePlainText
+
+
+-- *** curveProposalVotesCurrent
+
+-- | @GET \/dapps\/curve\/proposalVotes\/current@
+-- 
+-- ProposalVotes (current)
+-- 
+-- Gets proposalVotes.
+-- 
+curveProposalVotesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveProposalVotesCurrent MimeNoContent [CurveProposalVoteDTO] accept
+curveProposalVotesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/proposalVotes/current"]
+
+data CurveProposalVotesCurrent  
+-- | @application/json@
+instance Produces CurveProposalVotesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveProposalVotesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveProposalVotesCurrent MimePlainText
+
+
+-- *** curveProposalsCurrent
+
+-- | @GET \/dapps\/curve\/proposals\/current@
+-- 
+-- Proposals (current)
+-- 
+-- Gets proposals.
+-- 
+curveProposalsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveProposalsCurrent MimeNoContent [CurveProposalDTO] accept
+curveProposalsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/proposals/current"]
+
+data CurveProposalsCurrent  
+-- | @application/json@
+instance Produces CurveProposalsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveProposalsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveProposalsCurrent MimePlainText
+
+
+-- *** curveRemoveLiquidityEventsCurrent
+
+-- | @GET \/dapps\/curve\/removeLiquidityEvents\/current@
+-- 
+-- RemoveLiquidityEvents (current)
+-- 
+-- Gets removeLiquidityEvents.
+-- 
+curveRemoveLiquidityEventsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveRemoveLiquidityEventsCurrent MimeNoContent [CurveRemoveLiquidityEventDTO] accept
+curveRemoveLiquidityEventsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityEvents/current"]
+
+data CurveRemoveLiquidityEventsCurrent  
+-- | @application/json@
+instance Produces CurveRemoveLiquidityEventsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveRemoveLiquidityEventsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveRemoveLiquidityEventsCurrent MimePlainText
+
+
+-- *** curveRemoveLiquidityOneEventsCurrent
+
+-- | @GET \/dapps\/curve\/removeLiquidityOneEvents\/current@
+-- 
+-- RemoveLiquidityOneEvents (current)
+-- 
+-- Gets removeLiquidityOneEvents.
+-- 
+curveRemoveLiquidityOneEventsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveRemoveLiquidityOneEventsCurrent MimeNoContent [CurveRemoveLiquidityOneEventDTO] accept
+curveRemoveLiquidityOneEventsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityOneEvents/current"]
+
+data CurveRemoveLiquidityOneEventsCurrent  
+-- | @application/json@
+instance Produces CurveRemoveLiquidityOneEventsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveRemoveLiquidityOneEventsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveRemoveLiquidityOneEventsCurrent MimePlainText
+
+
+-- *** curveSystemStatesCurrent
+
+-- | @GET \/dapps\/curve\/systemStates\/current@
+-- 
+-- SystemStates (current)
+-- 
+-- Gets systemStates.
+-- 
+curveSystemStatesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveSystemStatesCurrent MimeNoContent [CurveSystemStateDTO] accept
+curveSystemStatesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/systemStates/current"]
+
+data CurveSystemStatesCurrent  
+-- | @application/json@
+instance Produces CurveSystemStatesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveSystemStatesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveSystemStatesCurrent MimePlainText
+
+
+-- *** curveTokensCurrent
+
+-- | @GET \/dapps\/curve\/tokens\/current@
+-- 
+-- Tokens (current)
+-- 
+-- Gets tokens.
+-- 
+curveTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveTokensCurrent MimeNoContent [CurveTokenDTO] accept
+curveTokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/tokens/current"]
+
+data CurveTokensCurrent  
+-- | @application/json@
+instance Produces CurveTokensCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveTokensCurrent MimePlainText
+
+
+-- *** curveTransferOwnershipEventsCurrent
+
+-- | @GET \/dapps\/curve\/transferOwnershipEvents\/current@
+-- 
+-- TransferOwnershipEvents (current)
+-- 
+-- Gets transferOwnershipEvents.
+-- 
+curveTransferOwnershipEventsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveTransferOwnershipEventsCurrent MimeNoContent [CurveTransferOwnershipEventDTO] accept
+curveTransferOwnershipEventsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/transferOwnershipEvents/current"]
+
+data CurveTransferOwnershipEventsCurrent  
+-- | @application/json@
+instance Produces CurveTransferOwnershipEventsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveTransferOwnershipEventsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveTransferOwnershipEventsCurrent MimePlainText
+
+
+-- *** curveUnderlyingCoinsCurrent
+
+-- | @GET \/dapps\/curve\/underlyingCoins\/current@
+-- 
+-- UnderlyingCoins (current)
+-- 
+-- Gets underlyingCoins.
+-- 
+curveUnderlyingCoinsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveUnderlyingCoinsCurrent MimeNoContent [CurveUnderlyingCoinDTO] accept
+curveUnderlyingCoinsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/underlyingCoins/current"]
+
+data CurveUnderlyingCoinsCurrent  
+-- | @application/json@
+instance Produces CurveUnderlyingCoinsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveUnderlyingCoinsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveUnderlyingCoinsCurrent MimePlainText
+
+
+-- *** curveVotingAppsCurrent
+
+-- | @GET \/dapps\/curve\/votingApps\/current@
+-- 
+-- VotingApps (current)
+-- 
+-- Gets votingApps.
+-- 
+curveVotingAppsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveVotingAppsCurrent MimeNoContent [CurveVotingAppDTO] accept
+curveVotingAppsCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/votingApps/current"]
+
+data CurveVotingAppsCurrent  
+-- | @application/json@
+instance Produces CurveVotingAppsCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveVotingAppsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveVotingAppsCurrent MimePlainText
+
+
+-- *** curveWeeklyVolumesCurrent
+
+-- | @GET \/dapps\/curve\/weeklyVolumes\/current@
+-- 
+-- WeeklyVolumes (current)
+-- 
+-- Gets weeklyVolumes.
+-- 
+curveWeeklyVolumesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveWeeklyVolumesCurrent MimeNoContent [CurveWeeklyVolumeDTO] accept
+curveWeeklyVolumesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/weeklyVolumes/current"]
+
+data CurveWeeklyVolumesCurrent  
+-- | @application/json@
+instance Produces CurveWeeklyVolumesCurrent MimeJSON
+-- | @text/json@
+instance Produces CurveWeeklyVolumesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CurveWeeklyVolumesCurrent MimePlainText
 

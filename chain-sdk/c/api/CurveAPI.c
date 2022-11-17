@@ -12,6 +12,1455 @@
 }while(0)
 
 
+// Accounts (current)
+//
+// Gets accounts.
+//
+list_t*
+CurveAPI_curveAccountsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/accounts/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/accounts/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// AddLiquidityEvents (current)
+//
+// Gets addLiquidityEvents.
+//
+list_t*
+CurveAPI_curveAddLiquidityEventsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/addLiquidityEvents/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/addLiquidityEvents/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// AdminFeeChangeLogs (current)
+//
+// Gets adminFeeChangeLogs.
+//
+list_t*
+CurveAPI_curveAdminFeeChangeLogsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/adminFeeChangeLogs/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/adminFeeChangeLogs/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// AmplificationCoeffChangeLogs (current)
+//
+// Gets amplificationCoeffChangeLogs.
+//
+list_t*
+CurveAPI_curveAmplificationCoeffChangeLogsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/amplificationCoeffChangeLogs/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/amplificationCoeffChangeLogs/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Coins (current)
+//
+// Gets coins.
+//
+list_t*
+CurveAPI_curveCoinsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/coins/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/coins/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// ContractVersions (current)
+//
+// Gets contractVersions.
+//
+list_t*
+CurveAPI_curveContractVersionsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/contractVersions/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contractVersions/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Contracts (current)
+//
+// Gets contracts.
+//
+list_t*
+CurveAPI_curveContractsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/contracts/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contracts/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// DailyVolumes (current)
+//
+// Gets dailyVolumes.
+//
+list_t*
+CurveAPI_curveDailyVolumesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/dailyVolumes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/dailyVolumes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Exchanges (current)
+//
+// Gets exchanges.
+//
+list_t*
+CurveAPI_curveExchangesCurrent(apiClient_t *apiClient, char * pool )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/exchanges/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/exchanges/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// FeeChangeLogs (current)
+//
+// Gets feeChangeLogs.
+//
+list_t*
+CurveAPI_curveFeeChangeLogsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/feeChangeLogs/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/feeChangeLogs/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeDeposits (current)
+//
+// Gets gaugeDeposits.
+//
+list_t*
+CurveAPI_curveGaugeDepositsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeDeposits/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeDeposits/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeLiquiditys (current)
+//
+// Gets gaugeLiquiditys.
+//
+list_t*
+CurveAPI_curveGaugeLiquiditysCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeLiquiditys/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquiditys/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeTotalWeights (current)
+//
+// Gets gaugeTotalWeights.
+//
+list_t*
+CurveAPI_curveGaugeTotalWeightsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeTotalWeights/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTotalWeights/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeTypeWeights (current)
+//
+// Gets gaugeTypeWeights.
+//
+list_t*
+CurveAPI_curveGaugeTypeWeightsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeTypeWeights/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTypeWeights/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeTypes (current)
+//
+// Gets gaugeTypes.
+//
+list_t*
+CurveAPI_curveGaugeTypesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeTypes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTypes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeWeightVotes (current)
+//
+// Gets gaugeWeightVotes.
+//
+list_t*
+CurveAPI_curveGaugeWeightVotesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeWeightVotes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeightVotes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeWeights (current)
+//
+// Gets gaugeWeights.
+//
+list_t*
+CurveAPI_curveGaugeWeightsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeWeights/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeights/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GaugeWithdraws (current)
+//
+// Gets gaugeWithdraws.
+//
+list_t*
+CurveAPI_curveGaugeWithdrawsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugeWithdraws/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWithdraws/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Gauges (current)
+//
+// Gets gauges.
+//
+list_t*
+CurveAPI_curveGaugesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gauges/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gauges/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Accounts (historical) 🔥
 //
 // Gets accounts.
@@ -217,7 +1666,7 @@ end:
 
 // AddLiquidityEvents (historical) 🔥
 //
-// Gets addliquidityevents.
+// Gets addLiquidityEvents.
 //
 list_t*
 CurveAPI_curveGetAddLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -230,9 +1679,9 @@ CurveAPI_curveGetAddLiquidityEventsHistorical(apiClient_t *apiClient, long start
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/addliquidityevents/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/addLiquidityEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/addliquidityevents/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/addLiquidityEvents/historical");
 
 
 
@@ -420,7 +1869,7 @@ end:
 
 // AdminFeeChangeLogs (historical) 🔥
 //
-// Gets adminfeechangelogs.
+// Gets adminFeeChangeLogs.
 //
 list_t*
 CurveAPI_curveGetAdminFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -433,9 +1882,9 @@ CurveAPI_curveGetAdminFeeChangeLogsHistorical(apiClient_t *apiClient, long start
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/adminfeechangelogs/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/adminFeeChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/adminfeechangelogs/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/adminFeeChangeLogs/historical");
 
 
 
@@ -623,7 +2072,7 @@ end:
 
 // AmplificationCoeffChangeLogs (historical) 🔥
 //
-// Gets amplificationcoeffchangelogs.
+// Gets amplificationCoeffChangeLogs.
 //
 list_t*
 CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -636,9 +2085,9 @@ CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical(apiClient_t *apiClient, 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/amplificationcoeffchangelogs/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/amplificationCoeffChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/amplificationcoeffchangelogs/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/amplificationCoeffChangeLogs/historical");
 
 
 
@@ -1029,7 +2478,7 @@ end:
 
 // ContractVersions (historical) 🔥
 //
-// Gets contractversions.
+// Gets contractVersions.
 //
 list_t*
 CurveAPI_curveGetContractVersionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * address )
@@ -1042,9 +2491,9 @@ CurveAPI_curveGetContractVersionsHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/contractversions/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/contractVersions/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contractversions/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contractVersions/historical");
 
 
 
@@ -1411,7 +2860,7 @@ end:
 
 // DailyVolumes (historical) 🔥
 //
-// Gets dailyvolumes.
+// Gets dailyVolumes.
 //
 list_t*
 CurveAPI_curveGetDailyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -1424,9 +2873,9 @@ CurveAPI_curveGetDailyVolumesHistorical(apiClient_t *apiClient, long startBlock 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/dailyvolumes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/dailyVolumes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/dailyvolumes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/dailyVolumes/historical");
 
 
 
@@ -1817,7 +3266,7 @@ end:
 
 // FeeChangeLogs (historical) 🔥
 //
-// Gets feechangelogs.
+// Gets feeChangeLogs.
 //
 list_t*
 CurveAPI_curveGetFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -1830,9 +3279,9 @@ CurveAPI_curveGetFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/feechangelogs/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/feeChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/feechangelogs/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/feeChangeLogs/historical");
 
 
 
@@ -2020,7 +3469,7 @@ end:
 
 // GaugeDeposits (historical) 🔥
 //
-// Gets gaugedeposits.
+// Gets gaugeDeposits.
 //
 list_t*
 CurveAPI_curveGetGaugeDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -2033,9 +3482,9 @@ CurveAPI_curveGetGaugeDepositsHistorical(apiClient_t *apiClient, long startBlock
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugedeposits/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeDeposits/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugedeposits/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeDeposits/historical");
 
 
 
@@ -2199,7 +3648,7 @@ end:
 
 // GaugeLiquiditys (historical) 🔥
 //
-// Gets gaugeliquiditys.
+// Gets gaugeLiquiditys.
 //
 list_t*
 CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user )
@@ -2212,9 +3661,9 @@ CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeliquiditys/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeLiquiditys/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeliquiditys/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquiditys/historical");
 
 
 
@@ -2402,7 +3851,7 @@ end:
 
 // GaugeTotalWeights (historical) 🔥
 //
-// Gets gaugetotalweights.
+// Gets gaugeTotalWeights.
 //
 list_t*
 CurveAPI_curveGetGaugeTotalWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -2415,9 +3864,9 @@ CurveAPI_curveGetGaugeTotalWeightsHistorical(apiClient_t *apiClient, long startB
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugetotalweights/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeTotalWeights/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugetotalweights/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTotalWeights/historical");
 
 
 
@@ -2581,7 +4030,7 @@ end:
 
 // GaugeTypeWeights (historical) 🔥
 //
-// Gets gaugetypeweights.
+// Gets gaugeTypeWeights.
 //
 list_t*
 CurveAPI_curveGetGaugeTypeWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -2594,9 +4043,9 @@ CurveAPI_curveGetGaugeTypeWeightsHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugetypeweights/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeTypeWeights/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugetypeweights/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTypeWeights/historical");
 
 
 
@@ -2760,7 +4209,7 @@ end:
 
 // GaugeTypes (historical) 🔥
 //
-// Gets gaugetypes.
+// Gets gaugeTypes.
 //
 list_t*
 CurveAPI_curveGetGaugeTypesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * name )
@@ -2773,9 +4222,9 @@ CurveAPI_curveGetGaugeTypesHistorical(apiClient_t *apiClient, long startBlock , 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugetypes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeTypes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugetypes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTypes/historical");
 
 
 
@@ -2963,7 +4412,7 @@ end:
 
 // GaugeWeightVotes (historical) 🔥
 //
-// Gets gaugeweightvotes.
+// Gets gaugeWeightVotes.
 //
 list_t*
 CurveAPI_curveGetGaugeWeightVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user )
@@ -2976,9 +4425,9 @@ CurveAPI_curveGetGaugeWeightVotesHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeweightvotes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeWeightVotes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeweightvotes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeightVotes/historical");
 
 
 
@@ -3166,7 +4615,7 @@ end:
 
 // GaugeWeights (historical) 🔥
 //
-// Gets gaugeweights.
+// Gets gaugeWeights.
 //
 list_t*
 CurveAPI_curveGetGaugeWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -3179,9 +4628,9 @@ CurveAPI_curveGetGaugeWeightsHistorical(apiClient_t *apiClient, long startBlock 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeweights/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeWeights/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeweights/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeights/historical");
 
 
 
@@ -3345,7 +4794,7 @@ end:
 
 // GaugeWithdraws (historical) 🔥
 //
-// Gets gaugewithdraws.
+// Gets gaugeWithdraws.
 //
 list_t*
 CurveAPI_curveGetGaugeWithdrawsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -3358,9 +4807,9 @@ CurveAPI_curveGetGaugeWithdrawsHistorical(apiClient_t *apiClient, long startBloc
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugewithdraws/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeWithdraws/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugewithdraws/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWithdraws/historical");
 
 
 
@@ -3751,7 +5200,7 @@ end:
 
 // HourlyVolumes (historical) 🔥
 //
-// Gets hourlyvolumes.
+// Gets hourlyVolumes.
 //
 list_t*
 CurveAPI_curveGetHourlyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -3764,9 +5213,9 @@ CurveAPI_curveGetHourlyVolumesHistorical(apiClient_t *apiClient, long startBlock
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/hourlyvolumes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/hourlyVolumes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/hourlyvolumes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/hourlyVolumes/historical");
 
 
 
@@ -3954,7 +5403,7 @@ end:
 
 // LpTokens (historical) 🔥
 //
-// Gets lptokens.
+// Gets lpTokens.
 //
 list_t*
 CurveAPI_curveGetLpTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * address , char * name , char * symbol , char * pool )
@@ -3967,9 +5416,9 @@ CurveAPI_curveGetLpTokensHistorical(apiClient_t *apiClient, long startBlock , lo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/lptokens/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/lpTokens/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/lptokens/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/lpTokens/historical");
 
 
 
@@ -4432,7 +5881,7 @@ end:
 
 // ProposalVotes (historical) 🔥
 //
-// Gets proposalvotes.
+// Gets proposalVotes.
 //
 list_t*
 CurveAPI_curveGetProposalVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -4445,9 +5894,9 @@ CurveAPI_curveGetProposalVotesHistorical(apiClient_t *apiClient, long startBlock
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/proposalvotes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/proposalVotes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposalvotes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposalVotes/historical");
 
 
 
@@ -4790,7 +6239,7 @@ end:
 
 // RemoveLiquidityEvents (historical) 🔥
 //
-// Gets removeliquidityevents.
+// Gets removeLiquidityEvents.
 //
 list_t*
 CurveAPI_curveGetRemoveLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -4803,9 +6252,9 @@ CurveAPI_curveGetRemoveLiquidityEventsHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/removeliquidityevents/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeliquidityevents/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityEvents/historical");
 
 
 
@@ -4993,7 +6442,7 @@ end:
 
 // RemoveLiquidityOneEvents (historical) 🔥
 //
-// Gets removeliquidityoneevents.
+// Gets removeLiquidityOneEvents.
 //
 list_t*
 CurveAPI_curveGetRemoveLiquidityOneEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -5006,9 +6455,9 @@ CurveAPI_curveGetRemoveLiquidityOneEventsHistorical(apiClient_t *apiClient, long
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/removeliquidityoneevents/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityOneEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeliquidityoneevents/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityOneEvents/historical");
 
 
 
@@ -5196,7 +6645,7 @@ end:
 
 // SystemStates (historical) 🔥
 //
-// Gets systemstates.
+// Gets systemStates.
 //
 list_t*
 CurveAPI_curveGetSystemStatesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -5209,9 +6658,9 @@ CurveAPI_curveGetSystemStatesHistorical(apiClient_t *apiClient, long startBlock 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/systemstates/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/systemStates/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/systemstates/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/systemStates/historical");
 
 
 
@@ -5626,7 +7075,7 @@ end:
 
 // TransferOwnershipEvents (historical) 🔥
 //
-// Gets transferownershipevents.
+// Gets transferOwnershipEvents.
 //
 list_t*
 CurveAPI_curveGetTransferOwnershipEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -5639,9 +7088,9 @@ CurveAPI_curveGetTransferOwnershipEventsHistorical(apiClient_t *apiClient, long 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/transferownershipevents/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/transferOwnershipEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/transferownershipevents/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/transferOwnershipEvents/historical");
 
 
 
@@ -5829,7 +7278,7 @@ end:
 
 // UnderlyingCoins (historical) 🔥
 //
-// Gets underlyingcoins.
+// Gets underlyingCoins.
 //
 list_t*
 CurveAPI_curveGetUnderlyingCoinsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -5842,9 +7291,9 @@ CurveAPI_curveGetUnderlyingCoinsHistorical(apiClient_t *apiClient, long startBlo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/underlyingcoins/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/underlyingCoins/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/underlyingcoins/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/underlyingCoins/historical");
 
 
 
@@ -6032,7 +7481,7 @@ end:
 
 // VotingApps (historical) 🔥
 //
-// Gets votingapps.
+// Gets votingApps.
 //
 list_t*
 CurveAPI_curveGetVotingAppsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * address )
@@ -6045,9 +7494,9 @@ CurveAPI_curveGetVotingAppsHistorical(apiClient_t *apiClient, long startBlock , 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/votingapps/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/votingApps/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/votingapps/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/votingApps/historical");
 
 
 
@@ -6235,7 +7684,7 @@ end:
 
 // WeeklyVolumes (historical) 🔥
 //
-// Gets weeklyvolumes.
+// Gets weeklyVolumes.
 //
 list_t*
 CurveAPI_curveGetWeeklyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
@@ -6248,9 +7697,9 @@ CurveAPI_curveGetWeeklyVolumesHistorical(apiClient_t *apiClient, long startBlock
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/weeklyvolumes/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/weeklyVolumes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/weeklyvolumes/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/weeklyVolumes/historical");
 
 
 
@@ -6429,6 +7878,1005 @@ CurveAPI_curveGetWeeklyVolumesHistorical(apiClient_t *apiClient, long startBlock
         keyValuePair_free(keyPairQuery_pool);
         keyPairQuery_pool = NULL;
     }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// HourlyVolumes (current)
+//
+// Gets hourlyVolumes.
+//
+list_t*
+CurveAPI_curveHourlyVolumesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/hourlyVolumes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/hourlyVolumes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// LpTokens (current)
+//
+// Gets lpTokens.
+//
+list_t*
+CurveAPI_curveLpTokensCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/lpTokens/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/lpTokens/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Pools (current)
+//
+// Gets pools.
+//
+list_t*
+CurveAPI_curvePoolsCurrent(apiClient_t *apiClient, char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/pools/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/pools/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// ProposalVotes (current)
+//
+// Gets proposalVotes.
+//
+list_t*
+CurveAPI_curveProposalVotesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/proposalVotes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposalVotes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Proposals (current)
+//
+// Gets proposals.
+//
+list_t*
+CurveAPI_curveProposalsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/proposals/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposals/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// RemoveLiquidityEvents (current)
+//
+// Gets removeLiquidityEvents.
+//
+list_t*
+CurveAPI_curveRemoveLiquidityEventsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityEvents/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityEvents/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// RemoveLiquidityOneEvents (current)
+//
+// Gets removeLiquidityOneEvents.
+//
+list_t*
+CurveAPI_curveRemoveLiquidityOneEventsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityOneEvents/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityOneEvents/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// SystemStates (current)
+//
+// Gets systemStates.
+//
+list_t*
+CurveAPI_curveSystemStatesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/systemStates/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/systemStates/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+CurveAPI_curveTokensCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/tokens/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/tokens/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TransferOwnershipEvents (current)
+//
+// Gets transferOwnershipEvents.
+//
+list_t*
+CurveAPI_curveTransferOwnershipEventsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/transferOwnershipEvents/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/transferOwnershipEvents/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// UnderlyingCoins (current)
+//
+// Gets underlyingCoins.
+//
+list_t*
+CurveAPI_curveUnderlyingCoinsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/underlyingCoins/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/underlyingCoins/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// VotingApps (current)
+//
+// Gets votingApps.
+//
+list_t*
+CurveAPI_curveVotingAppsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/votingApps/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/votingApps/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// WeeklyVolumes (current)
+//
+// Gets weeklyVolumes.
+//
+list_t*
+CurveAPI_curveWeeklyVolumesCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/weeklyVolumes/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/weeklyVolumes/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
     return elementToReturn;
 end:
     free(localVarPath);

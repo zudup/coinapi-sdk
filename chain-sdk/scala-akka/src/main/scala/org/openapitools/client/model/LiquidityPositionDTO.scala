@@ -19,18 +19,14 @@ case class LiquidityPositionDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pair address>-<user address> */
+  /* User address and pair address concatenated with a dash. */
   id: Option[String] = None,
-  /* User address. */
+  /* Reference to user. */
   user: Option[String] = None,
-  /* Pair address. */
+  /* Reference to the pair liquidity is being provided on. */
   pair: Option[String] = None,
   /* Amount of LP tokens minted for this position. */
   liquidityTokenBalance: Option[String] = None,
-  /* Block number at which position was created. */
-  block: Option[Int] = None,
-  /* Creation time. */
-  timestamp: Option[Int] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

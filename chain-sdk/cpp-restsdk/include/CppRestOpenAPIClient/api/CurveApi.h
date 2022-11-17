@@ -76,6 +76,160 @@ public:
     virtual ~CurveApi();
 
     /// <summary>
+    /// Accounts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets accounts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_AccountDTO>>> curve_Accounts__current(
+    ) const;
+    /// <summary>
+    /// AddLiquidityEvents (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets addLiquidityEvents.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_AddLiquidityEventDTO>>> curve_AddLiquidityEvents__current(
+    ) const;
+    /// <summary>
+    /// AdminFeeChangeLogs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets adminFeeChangeLogs.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_AdminFeeChangeLogDTO>>> curve_AdminFeeChangeLogs__current(
+    ) const;
+    /// <summary>
+    /// AmplificationCoeffChangeLogs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets amplificationCoeffChangeLogs.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_AmplificationCoeffChangeLogDTO>>> curve_AmplificationCoeffChangeLogs__current(
+    ) const;
+    /// <summary>
+    /// Coins (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets coins.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_CoinDTO>>> curve_Coins__current(
+    ) const;
+    /// <summary>
+    /// ContractVersions (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets contractVersions.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_ContractVersionDTO>>> curve_ContractVersions__current(
+    ) const;
+    /// <summary>
+    /// Contracts (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets contracts.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_ContractDTO>>> curve_Contracts__current(
+    ) const;
+    /// <summary>
+    /// DailyVolumes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets dailyVolumes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_DailyVolumeDTO>>> curve_DailyVolumes__current(
+    ) const;
+    /// <summary>
+    /// Exchanges (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets exchanges.
+    /// </remarks>
+    /// <param name="pool"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Curve_ExchangeDTO>>> curve_Exchanges__current(
+        boost::optional<utility::string_t> pool
+    ) const;
+    /// <summary>
+    /// FeeChangeLogs (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets feeChangeLogs.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_FeeChangeLogDTO>>> curve_FeeChangeLogs__current(
+    ) const;
+    /// <summary>
+    /// GaugeDeposits (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeDeposits.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> curve_GaugeDeposits__current(
+    ) const;
+    /// <summary>
+    /// GaugeLiquiditys (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeLiquiditys.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GaugeLiquiditys__current(
+    ) const;
+    /// <summary>
+    /// GaugeTotalWeights (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeTotalWeights.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTotalWeightDTO>>> curve_GaugeTotalWeights__current(
+    ) const;
+    /// <summary>
+    /// GaugeTypeWeights (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeTypeWeights.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeWeightDTO>>> curve_GaugeTypeWeights__current(
+    ) const;
+    /// <summary>
+    /// GaugeTypes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeTypes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeDTO>>> curve_GaugeTypes__current(
+    ) const;
+    /// <summary>
+    /// GaugeWeightVotes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeWeightVotes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightVoteDTO>>> curve_GaugeWeightVotes__current(
+    ) const;
+    /// <summary>
+    /// GaugeWeights (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeWeights.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightDTO>>> curve_GaugeWeights__current(
+    ) const;
+    /// <summary>
+    /// GaugeWithdraws (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gaugeWithdraws.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWithdrawDTO>>> curve_GaugeWithdraws__current(
+    ) const;
+    /// <summary>
+    /// Gauges (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets gauges.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeDTO>>> curve_Gauges__current(
+    ) const;
+    /// <summary>
     /// Accounts (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -99,7 +253,7 @@ public:
     /// AddLiquidityEvents (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets addliquidityevents.
+    /// Gets addLiquidityEvents.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -119,7 +273,7 @@ public:
     /// AdminFeeChangeLogs (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets adminfeechangelogs.
+    /// Gets adminFeeChangeLogs.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -139,7 +293,7 @@ public:
     /// AmplificationCoeffChangeLogs (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets amplificationcoeffchangelogs.
+    /// Gets amplificationCoeffChangeLogs.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -179,7 +333,7 @@ public:
     /// ContractVersions (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets contractversions.
+    /// Gets contractVersions.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -217,7 +371,7 @@ public:
     /// DailyVolumes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets dailyvolumes.
+    /// Gets dailyVolumes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -257,7 +411,7 @@ public:
     /// FeeChangeLogs (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets feechangelogs.
+    /// Gets feeChangeLogs.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -277,7 +431,7 @@ public:
     /// GaugeDeposits (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugedeposits.
+    /// Gets gaugeDeposits.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -295,7 +449,7 @@ public:
     /// GaugeLiquiditys (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugeliquiditys.
+    /// Gets gaugeLiquiditys.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -315,7 +469,7 @@ public:
     /// GaugeTotalWeights (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugetotalweights.
+    /// Gets gaugeTotalWeights.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -333,7 +487,7 @@ public:
     /// GaugeTypeWeights (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugetypeweights.
+    /// Gets gaugeTypeWeights.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -351,7 +505,7 @@ public:
     /// GaugeTypes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugetypes.
+    /// Gets gaugeTypes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -371,7 +525,7 @@ public:
     /// GaugeWeightVotes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugeweightvotes.
+    /// Gets gaugeWeightVotes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -391,7 +545,7 @@ public:
     /// GaugeWeights (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugeweights.
+    /// Gets gaugeWeights.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -409,7 +563,7 @@ public:
     /// GaugeWithdraws (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets gaugewithdraws.
+    /// Gets gaugeWithdraws.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -449,7 +603,7 @@ public:
     /// HourlyVolumes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets hourlyvolumes.
+    /// Gets hourlyVolumes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -469,7 +623,7 @@ public:
     /// LpTokens (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets lptokens.
+    /// Gets lpTokens.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -515,7 +669,7 @@ public:
     /// ProposalVotes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets proposalvotes.
+    /// Gets proposalVotes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -551,7 +705,7 @@ public:
     /// RemoveLiquidityEvents (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets removeliquidityevents.
+    /// Gets removeLiquidityEvents.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -571,7 +725,7 @@ public:
     /// RemoveLiquidityOneEvents (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets removeliquidityoneevents.
+    /// Gets removeLiquidityOneEvents.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -591,7 +745,7 @@ public:
     /// SystemStates (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets systemstates.
+    /// Gets systemStates.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -633,7 +787,7 @@ public:
     /// TransferOwnershipEvents (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets transferownershipevents.
+    /// Gets transferOwnershipEvents.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -653,7 +807,7 @@ public:
     /// UnderlyingCoins (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets underlyingcoins.
+    /// Gets underlyingCoins.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -673,7 +827,7 @@ public:
     /// VotingApps (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets votingapps.
+    /// Gets votingApps.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -693,7 +847,7 @@ public:
     /// WeeklyVolumes (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// Gets weeklyvolumes.
+    /// Gets weeklyVolumes.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -708,6 +862,112 @@ public:
         boost::optional<utility::datetime> endDate,
         boost::optional<utility::string_t> id,
         boost::optional<utility::string_t> pool
+    ) const;
+    /// <summary>
+    /// HourlyVolumes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets hourlyVolumes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_HourlyVolumeDTO>>> curve_HourlyVolumes__current(
+    ) const;
+    /// <summary>
+    /// LpTokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets lpTokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_LpTokenDTO>>> curve_LpTokens__current(
+    ) const;
+    /// <summary>
+    /// Pools (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets pools.
+    /// </remarks>
+    /// <param name="id">Pool address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Curve_PoolDTO>>> curve_Pools__current(
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// ProposalVotes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets proposalVotes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_ProposalVoteDTO>>> curve_ProposalVotes__current(
+    ) const;
+    /// <summary>
+    /// Proposals (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets proposals.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_ProposalDTO>>> curve_Proposals__current(
+    ) const;
+    /// <summary>
+    /// RemoveLiquidityEvents (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets removeLiquidityEvents.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityEventDTO>>> curve_RemoveLiquidityEvents__current(
+    ) const;
+    /// <summary>
+    /// RemoveLiquidityOneEvents (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets removeLiquidityOneEvents.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityOneEventDTO>>> curve_RemoveLiquidityOneEvents__current(
+    ) const;
+    /// <summary>
+    /// SystemStates (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets systemStates.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_SystemStateDTO>>> curve_SystemStates__current(
+    ) const;
+    /// <summary>
+    /// Tokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_TokenDTO>>> curve_Tokens__current(
+    ) const;
+    /// <summary>
+    /// TransferOwnershipEvents (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets transferOwnershipEvents.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_TransferOwnershipEventDTO>>> curve_TransferOwnershipEvents__current(
+    ) const;
+    /// <summary>
+    /// UnderlyingCoins (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets underlyingCoins.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_UnderlyingCoinDTO>>> curve_UnderlyingCoins__current(
+    ) const;
+    /// <summary>
+    /// VotingApps (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets votingApps.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_VotingAppDTO>>> curve_VotingApps__current(
+    ) const;
+    /// <summary>
+    /// WeeklyVolumes (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets weeklyVolumes.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<Curve_WeeklyVolumeDTO>>> curve_WeeklyVolumes__current(
     ) const;
 
 protected:

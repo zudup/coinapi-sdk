@@ -19,36 +19,39 @@ case class SwapDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Transaction hash plus index in Transaction swap array. */
-  id: Option[String] = None,
-  /* Reference to transaction swap was included in. */
-  transaction: Option[String] = None,
-  /* Timestamp of swap, used for sorted lookups. */
-  timestamp: Option[String] = None,
-  /* Reference to pair. */
-  pair: Option[String] = None,
-  /* Address that initiated the swap. */
-  sender: Option[String] = None,
-  /* Amount of token0 sold. */
-  amount0In: Option[String] = None,
-  /* Amount of token1 sold. */
-  amount1In: Option[String] = None,
-  /* Amount of token0 received. */
-  amount0Out: Option[String] = None,
-  /* Amount of token1 received. */
-  amount1Out: Option[String] = None,
-  /* Recipient of output tokens. */
-  to: Option[String] = None,
-  /* Event index within transaction. */
-  logIndex: Option[String] = None,
-  /* Derived amount of tokens sold in USD. */
-  amountUsd: Option[String] = None,
   /*  */
   vid: Option[Long] = None,
-  poolId: Option[String] = None,
-  transactionId: Option[String] = None,
+  /* Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. */
+  id: Option[String] = None,
+  /* Pointer to transaction. */
+  transaction: Option[String] = None,
+  /* Timestamp of transaction. */
+  timestamp: Option[OffsetDateTime] = None,
+  /* Pool swap occured within. */
+  pool: Option[String] = None,
+  /* Reference to token0 as stored in pair contract. */
+  token0: Option[String] = None,
+  /* Reference to token1 as stored in pair contract. */
+  token1: Option[String] = None,
+  /* Sender of the swap. */
+  sender: Option[String] = None,
+  /* Recipient of the swap. */
+  recipient: Option[String] = None,
+  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction */
+  origin: Option[String] = None,
+  /* Delta of token0 swapped. */
+  amount0: Option[String] = None,
+  /* Delta of token1 swapped. */
+  amount1: Option[String] = None,
+  /* Derived amount of tokens sold in USD. */
+  amountUsd: Option[String] = None,
+  sqrtPriceX96: Option[BigInteger] = None,
+  tick: Option[BigInteger] = None,
+  logIndex: Option[BigInteger] = None,
   evaluatedPrice: Option[Double] = None,
   evaluatedAmount: Option[Double] = None,
-  evaluatedAggressor: Option[ETradeAggressiveSide] = None
+  evaluatedAggressor: Option[ETradeAggressiveSide] = None,
+  poolId: Option[String] = None,
+  transactionId: Option[String] = None
 ) extends ApiModel
 

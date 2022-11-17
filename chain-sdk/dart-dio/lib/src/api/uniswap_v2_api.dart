@@ -9,21 +9,21 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/uniswap_v2_bundle_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_burn_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_liquidity_position_snapshot_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_liquidity_position_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_mint_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_hour_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_swap_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_token_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_token_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_transaction_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_uniswap_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_uniswap_factory_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_user_v2_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_bundle_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_burn_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_liquidity_position_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_liquidity_position_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_mint_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_hour_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_swap_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_token_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_token_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_transaction_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_uniswap_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_uniswap_factory_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_user_dto.dart';
 
 class UniswapV2Api {
 
@@ -33,8 +33,152 @@ class UniswapV2Api {
 
   const UniswapV2Api(this._dio, this._serializers);
 
-  /// BundleV2s (historical) 🔥
-  /// Gets bundlev2s.
+  /// Bundles (current)
+  /// Gets bundles.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BundleDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2BundleDTO>>> uniswapV2BundlesCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/bundles/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2BundleDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2BundleDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2BundleDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2BundleDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Burns (current)
+  /// Gets burns.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BurnDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2BurnDTO>>> uniswapV2BurnsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/burns/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2BurnDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2BurnDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2BurnDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2BurnDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Bundles (historical) 🔥
+  /// Gets bundles.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -49,9 +193,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BundleV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BundleDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2BundleV2DTO>>> uniswapV2GetBundleV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2BundleDTO>>> uniswapV2GetBundlesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -64,7 +208,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/bundlev2s/historical';
+    final _path = r'/dapps/uniswapv2/bundles/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -94,14 +238,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BundleV2DTO> _responseData;
+    BuiltList<UniswapV2BundleDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BundleV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2BundleDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2BundleV2DTO>;
+      ) as BuiltList<UniswapV2BundleDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -112,7 +256,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2BundleV2DTO>>(
+    return Response<BuiltList<UniswapV2BundleDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -124,8 +268,8 @@ class UniswapV2Api {
     );
   }
 
-  /// BurnV2s (historical) 🔥
-  /// Gets burnv2s.
+  /// Burns (historical) 🔥
+  /// Gets burns.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -141,9 +285,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BurnV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2BurnDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2BurnV2DTO>>> uniswapV2GetBurnV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2BurnDTO>>> uniswapV2GetBurnsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -157,7 +301,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/burnv2s/historical';
+    final _path = r'/dapps/uniswapv2/burns/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -188,14 +332,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BurnV2DTO> _responseData;
+    BuiltList<UniswapV2BurnDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BurnV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2BurnDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2BurnV2DTO>;
+      ) as BuiltList<UniswapV2BurnDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -206,7 +350,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2BurnV2DTO>>(
+    return Response<BuiltList<UniswapV2BurnDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -218,8 +362,8 @@ class UniswapV2Api {
     );
   }
 
-  /// LiquidityPositionSnapshotV2s (historical) 🔥
-  /// Gets liquiditypositionsnapshotv2s.
+  /// LiquidityPositionSnapshots (historical) 🔥
+  /// Gets liquidityPositionSnapshots.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -236,9 +380,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionSnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO>>> uniswapV2GetLiquidityPositionSnapshotV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2LiquidityPositionSnapshotDTO>>> uniswapV2GetLiquidityPositionSnapshotsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -253,7 +397,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical';
+    final _path = r'/dapps/uniswapv2/liquidityPositionSnapshots/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -285,14 +429,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionSnapshotDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO>;
+      ) as BuiltList<UniswapV2LiquidityPositionSnapshotDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -303,7 +447,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO>>(
+    return Response<BuiltList<UniswapV2LiquidityPositionSnapshotDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -315,8 +459,8 @@ class UniswapV2Api {
     );
   }
 
-  /// LiquidityPositionV2s (historical) 🔥
-  /// Gets liquiditypositionv2s.
+  /// LiquidityPositions (historical) 🔥
+  /// Gets liquidityPositions.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -333,9 +477,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2LiquidityPositionV2DTO>>> uniswapV2GetLiquidityPositionV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2LiquidityPositionDTO>>> uniswapV2GetLiquidityPositionsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -350,7 +494,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/liquiditypositionv2s/historical';
+    final _path = r'/dapps/uniswapv2/liquidityPositions/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -382,14 +526,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionV2DTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2LiquidityPositionV2DTO>;
+      ) as BuiltList<UniswapV2LiquidityPositionDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -400,7 +544,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2LiquidityPositionV2DTO>>(
+    return Response<BuiltList<UniswapV2LiquidityPositionDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -412,8 +556,8 @@ class UniswapV2Api {
     );
   }
 
-  /// MintV2s (historical) 🔥
-  /// Gets mintv2s.
+  /// Mints (historical) 🔥
+  /// Gets mints.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -429,9 +573,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2MintV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2MintDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2MintV2DTO>>> uniswapV2GetMintV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2MintDTO>>> uniswapV2GetMintsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -445,7 +589,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/mintv2s/historical';
+    final _path = r'/dapps/uniswapv2/mints/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -476,14 +620,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2MintV2DTO> _responseData;
+    BuiltList<UniswapV2MintDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2MintV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2MintDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2MintV2DTO>;
+      ) as BuiltList<UniswapV2MintDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -494,7 +638,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2MintV2DTO>>(
+    return Response<BuiltList<UniswapV2MintDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -506,8 +650,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDataV2s (historical) 🔥
-  /// Gets pairdaydatav2s.
+  /// PairDayDatas (historical) 🔥
+  /// Gets pairDayDatas.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -524,9 +668,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDayDataV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairDayDataV2DTO>>> uniswapV2GetPairDayDataV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2GetPairDayDatasHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -541,7 +685,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairdaydatav2s/historical';
+    final _path = r'/dapps/uniswapv2/pairDayDatas/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -573,14 +717,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairDayDataV2DTO> _responseData;
+    BuiltList<UniswapV2PairDayDataDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDayDataV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2PairDayDataV2DTO>;
+      ) as BuiltList<UniswapV2PairDayDataDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -591,7 +735,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2PairDayDataV2DTO>>(
+    return Response<BuiltList<UniswapV2PairDayDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -603,8 +747,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDataV2s (historical) 🔥
-  /// Gets pairhourdatav2s.
+  /// PairHourDatas (historical) 🔥
+  /// Gets pairHourDatas.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -620,9 +764,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairHourDataV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairHourDataV2DTO>>> uniswapV2GetPairHourDataV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2GetPairHourDatasHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -636,7 +780,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairhourdatav2s/historical';
+    final _path = r'/dapps/uniswapv2/pairHourDatas/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -667,14 +811,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairHourDataV2DTO> _responseData;
+    BuiltList<UniswapV2PairHourDataDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairHourDataV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2PairHourDataV2DTO>;
+      ) as BuiltList<UniswapV2PairHourDataDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -685,7 +829,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2PairHourDataV2DTO>>(
+    return Response<BuiltList<UniswapV2PairHourDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -697,8 +841,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairV2s (historical) 🔥
-  /// Gets pairv2s.
+  /// Pairs (historical) 🔥
+  /// Gets pairs.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -715,9 +859,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairV2DTO>>> uniswapV2GetPairV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2PairDTO>>> uniswapV2GetPairsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -732,7 +876,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairv2s/historical';
+    final _path = r'/dapps/uniswapv2/pairs/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -764,14 +908,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairV2DTO> _responseData;
+    BuiltList<UniswapV2PairDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2PairV2DTO>;
+      ) as BuiltList<UniswapV2PairDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -782,7 +926,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2PairV2DTO>>(
+    return Response<BuiltList<UniswapV2PairDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -806,9 +950,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairV2DTO>>> uniswapV2GetPoolsCurrent({ 
+  Future<Response<BuiltList<UniswapV2PairDTO>>> uniswapV2GetPoolsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -843,14 +987,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairV2DTO> _responseData;
+    BuiltList<UniswapV2PairDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2PairV2DTO>;
+      ) as BuiltList<UniswapV2PairDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -861,7 +1005,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2PairV2DTO>>(
+    return Response<BuiltList<UniswapV2PairDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -873,8 +1017,80 @@ class UniswapV2Api {
     );
   }
 
-  /// SwapV2s (historical) 🔥
-  /// Gets swapv2s.
+  /// Swaps (current) 🔥
+  /// Gets swaps.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2SwapDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2SwapDTO>>> uniswapV2GetSwapsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/swaps/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2SwapDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2SwapDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2SwapDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Swaps (historical) 🔥
+  /// Gets swaps.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -890,9 +1106,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2SwapV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2SwapDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2SwapV2DTO>>> uniswapV2GetSwapV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2SwapDTO>>> uniswapV2GetSwapsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -906,7 +1122,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/swapv2s/historical';
+    final _path = r'/dapps/uniswapv2/swaps/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -937,14 +1153,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2SwapV2DTO> _responseData;
+    BuiltList<UniswapV2SwapDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2SwapV2DTO>;
+      ) as BuiltList<UniswapV2SwapDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -955,7 +1171,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2SwapV2DTO>>(
+    return Response<BuiltList<UniswapV2SwapDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -967,80 +1183,8 @@ class UniswapV2Api {
     );
   }
 
-  /// Swaps (current) 🔥
-  /// Gets swaps.
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2SwapV2DTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2SwapV2DTO>>> uniswapV2GetSwapsCurrent({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv2/swaps/current';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<UniswapV2SwapV2DTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapV2DTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<UniswapV2SwapV2DTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<UniswapV2SwapV2DTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// TokenDayDataV2s (historical) 🔥
-  /// Gets tokendaydatav2s.
+  /// TokenDayDatas (historical) 🔥
+  /// Gets tokenDayDatas.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1055,9 +1199,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDayDataV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TokenDayDataV2DTO>>> uniswapV2GetTokenDayDataV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2GetTokenDayDatasHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1070,7 +1214,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/tokendaydatav2s/historical';
+    final _path = r'/dapps/uniswapv2/tokenDayDatas/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1100,14 +1244,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenDayDataV2DTO> _responseData;
+    BuiltList<UniswapV2TokenDayDataDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDayDataV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2TokenDayDataV2DTO>;
+      ) as BuiltList<UniswapV2TokenDayDataDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1118,7 +1262,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2TokenDayDataV2DTO>>(
+    return Response<BuiltList<UniswapV2TokenDayDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1130,8 +1274,80 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenV2s (historical) 🔥
-  /// Gets tokenv2s.
+  /// Tokens (current) 🔥
+  /// Gets tokens.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2TokenDTO>>> uniswapV2GetTokensCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/tokens/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2TokenDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2TokenDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2TokenDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Tokens (historical) 🔥
+  /// Gets tokens.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1148,9 +1364,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TokenV2DTO>>> uniswapV2GetTokenV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2TokenDTO>>> uniswapV2GetTokensHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1165,7 +1381,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/tokenv2s/historical';
+    final _path = r'/dapps/uniswapv2/tokens/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1197,14 +1413,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenV2DTO> _responseData;
+    BuiltList<UniswapV2TokenDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2TokenV2DTO>;
+      ) as BuiltList<UniswapV2TokenDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1215,7 +1431,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2TokenV2DTO>>(
+    return Response<BuiltList<UniswapV2TokenDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1227,80 +1443,8 @@ class UniswapV2Api {
     );
   }
 
-  /// Tokens (current) 🔥
-  /// Gets tokens.
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenV2DTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TokenV2DTO>>> uniswapV2GetTokensCurrent({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv2/tokens/current';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<UniswapV2TokenV2DTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenV2DTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<UniswapV2TokenV2DTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<UniswapV2TokenV2DTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// TransactionV2s (historical) 🔥
-  /// Gets transactionv2s.
+  /// Transactions (historical) 🔥
+  /// Gets transactions.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1315,9 +1459,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TransactionV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TransactionDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TransactionV2DTO>>> uniswapV2GetTransactionV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2TransactionDTO>>> uniswapV2GetTransactionsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1330,7 +1474,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/transactionv2s/historical';
+    final _path = r'/dapps/uniswapv2/transactions/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1360,14 +1504,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TransactionV2DTO> _responseData;
+    BuiltList<UniswapV2TransactionDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TransactionV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2TransactionV2DTO>;
+      ) as BuiltList<UniswapV2TransactionDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1378,7 +1522,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2TransactionV2DTO>>(
+    return Response<BuiltList<UniswapV2TransactionDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1390,8 +1534,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDataV2s (historical) 🔥
-  /// Gets uniswapdaydatav2s.
+  /// UniswapDayDatas (historical) 🔥
+  /// Gets uniswapDayDatas.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1406,9 +1550,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapDayDataV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapDayDataV2DTO>>> uniswapV2GetUniswapDayDataV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2GetUniswapDayDatasHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1421,7 +1565,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapdaydatav2s/historical';
+    final _path = r'/dapps/uniswapv2/uniswapDayDatas/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1451,14 +1595,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapDayDataV2DTO> _responseData;
+    BuiltList<UniswapV2UniswapDayDataDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapDayDataV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2UniswapDayDataV2DTO>;
+      ) as BuiltList<UniswapV2UniswapDayDataDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1469,7 +1613,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2UniswapDayDataV2DTO>>(
+    return Response<BuiltList<UniswapV2UniswapDayDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1481,8 +1625,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactoryV2s (historical) 🔥
-  /// Gets uniswapfactoryv2s.
+  /// UniswapFactorys (historical) 🔥
+  /// Gets uniswapFactorys.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1497,9 +1641,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapFactoryV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapFactoryV2DTO>>> uniswapV2GetUniswapFactoryV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2GetUniswapFactorysHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1512,7 +1656,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapfactoryv2s/historical';
+    final _path = r'/dapps/uniswapv2/uniswapFactorys/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1542,14 +1686,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapFactoryV2DTO> _responseData;
+    BuiltList<UniswapV2UniswapFactoryDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapFactoryV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2UniswapFactoryV2DTO>;
+      ) as BuiltList<UniswapV2UniswapFactoryDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1560,7 +1704,7 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2UniswapFactoryV2DTO>>(
+    return Response<BuiltList<UniswapV2UniswapFactoryDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1572,8 +1716,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UserV2s (historical) 🔥
-  /// Gets userv2s.
+  /// Users (historical) 🔥
+  /// Gets users.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1588,9 +1732,9 @@ class UniswapV2Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UserV2DTO>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UserDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UserV2DTO>>> uniswapV2GetUserV2sHistorical({ 
+  Future<Response<BuiltList<UniswapV2UserDTO>>> uniswapV2GetUsersHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1603,7 +1747,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/userv2s/historical';
+    final _path = r'/dapps/uniswapv2/users/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1633,14 +1777,14 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UserV2DTO> _responseData;
+    BuiltList<UniswapV2UserDTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UserV2DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UserDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV2UserV2DTO>;
+      ) as BuiltList<UniswapV2UserDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1651,7 +1795,806 @@ class UniswapV2Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV2UserV2DTO>>(
+    return Response<BuiltList<UniswapV2UserDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// LiquidityPositionSnapshots (current)
+  /// Gets liquidityPositionSnapshots.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionSnapshotDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2LiquidityPositionSnapshotDTO>>> uniswapV2LiquidityPositionSnapshotsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/liquidityPositionSnapshots/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2LiquidityPositionSnapshotDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2LiquidityPositionSnapshotDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2LiquidityPositionSnapshotDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// LiquidityPositions (current)
+  /// Gets liquidityPositions.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2LiquidityPositionDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2LiquidityPositionDTO>>> uniswapV2LiquidityPositionsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/liquidityPositions/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2LiquidityPositionDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2LiquidityPositionDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2LiquidityPositionDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Mints (current)
+  /// Gets mints.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2MintDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2MintDTO>>> uniswapV2MintsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/mints/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2MintDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2MintDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2MintDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2MintDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// PairDayDatas (current)
+  /// Gets pairDayDatas.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDayDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2PairDayDatasCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/pairDayDatas/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2PairDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2PairDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2PairDayDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// PairHourDatas (current)
+  /// Gets pairHourDatas.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairHourDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2PairHourDatasCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/pairHourDatas/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2PairHourDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2PairHourDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2PairHourDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Pairs (current)
+  /// Gets pairs.
+  ///
+  /// Parameters:
+  /// * [id] - Pair contract address.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2PairDTO>>> uniswapV2PairsCurrent({ 
+    String? id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/pairs/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (id != null) r'id': encodeQueryParameter(_serializers, id, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2PairDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2PairDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2PairDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// TokenDayDatas (current)
+  /// Gets tokenDayDatas.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDayDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2TokenDayDatasCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/tokenDayDatas/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2TokenDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2TokenDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2TokenDayDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Transactions (current)
+  /// Gets transactions.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TransactionDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2TransactionDTO>>> uniswapV2TransactionsCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/transactions/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2TransactionDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2TransactionDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2TransactionDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// UniswapDayDatas (current)
+  /// Gets uniswapDayDatas.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapDayDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2UniswapDayDatasCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/uniswapDayDatas/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2UniswapDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2UniswapDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2UniswapDayDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// UniswapFactorys (current)
+  /// Gets uniswapFactorys.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapFactoryDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2UniswapFactorysCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/uniswapFactorys/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2UniswapFactoryDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2UniswapFactoryDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2UniswapFactoryDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Users (current)
+  /// Gets users.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UserDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV2UserDTO>>> uniswapV2UsersCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv2/users/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV2UserDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV2UserDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV2UserDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV2UserDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -85,6 +85,236 @@ public class DexApi {
     }
 
     /**
+     * Build call for dexBatchsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexBatchsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/batchs/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexBatchsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexBatchsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Batchs (current)
+     * Gets batchs.
+     * @return List&lt;DexBatchDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexBatchDTO> dexBatchsCurrent() throws ApiException {
+        ApiResponse<List<DexBatchDTO>> localVarResp = dexBatchsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Batchs (current)
+     * Gets batchs.
+     * @return ApiResponse&lt;List&lt;DexBatchDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexBatchDTO>> dexBatchsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexBatchsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Batchs (current) (asynchronously)
+     * Gets batchs.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexBatchsCurrentAsync(final ApiCallback<List<DexBatchDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexBatchsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexDepositsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexDepositsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/deposits/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexDepositsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexDepositsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return List&lt;DexDepositDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexDepositDTO> dexDepositsCurrent() throws ApiException {
+        ApiResponse<List<DexDepositDTO>> localVarResp = dexDepositsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Deposits (current)
+     * Gets deposits.
+     * @return ApiResponse&lt;List&lt;DexDepositDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexDepositDTO>> dexDepositsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexDepositsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexDepositDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Deposits (current) (asynchronously)
+     * Gets deposits.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexDepositsCurrentAsync(final ApiCallback<List<DexDepositDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexDepositsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexDepositDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for dexGetBatchsHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1577,7 +1807,7 @@ public class DexApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/dex/withdrawrequests/historical";
+        String localVarPath = "/dapps/dex/withdrawRequests/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1638,7 +1868,7 @@ public class DexApi {
 
     /**
      * WithdrawRequests (historical) 🔥
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1660,7 +1890,7 @@ public class DexApi {
 
     /**
      * WithdrawRequests (historical) 🔥
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1683,7 +1913,7 @@ public class DexApi {
 
     /**
      * WithdrawRequests (historical) 🔥 (asynchronously)
-     * Gets withdrawrequests.
+     * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1865,6 +2095,1041 @@ public class DexApi {
     public okhttp3.Call dexGetWithdrawsHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback<List<DexWithdrawDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dexGetWithdrawsHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, user, _callback);
+        Type localVarReturnType = new TypeToken<List<DexWithdrawDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexOrdersCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexOrdersCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/orders/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexOrdersCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexOrdersCurrentCall(_callback);
+
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return List&lt;DexOrderDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexOrderDTO> dexOrdersCurrent() throws ApiException {
+        ApiResponse<List<DexOrderDTO>> localVarResp = dexOrdersCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return ApiResponse&lt;List&lt;DexOrderDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexOrderDTO>> dexOrdersCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexOrdersCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexOrderDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Orders (current) (asynchronously)
+     * Gets orders.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexOrdersCurrentAsync(final ApiCallback<List<DexOrderDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexOrdersCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexOrderDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexPricesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexPricesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/prices/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexPricesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexPricesCurrentCall(_callback);
+
+    }
+
+    /**
+     * Prices (current)
+     * Gets prices.
+     * @return List&lt;DexPriceDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexPriceDTO> dexPricesCurrent() throws ApiException {
+        ApiResponse<List<DexPriceDTO>> localVarResp = dexPricesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Prices (current)
+     * Gets prices.
+     * @return ApiResponse&lt;List&lt;DexPriceDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexPriceDTO>> dexPricesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexPricesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexPriceDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Prices (current) (asynchronously)
+     * Gets prices.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexPricesCurrentAsync(final ApiCallback<List<DexPriceDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexPricesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexPriceDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexSolutionsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexSolutionsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/solutions/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexSolutionsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexSolutionsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Solutions (current)
+     * Gets solutions.
+     * @return List&lt;DexSolutionDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexSolutionDTO> dexSolutionsCurrent() throws ApiException {
+        ApiResponse<List<DexSolutionDTO>> localVarResp = dexSolutionsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Solutions (current)
+     * Gets solutions.
+     * @return ApiResponse&lt;List&lt;DexSolutionDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexSolutionDTO>> dexSolutionsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexSolutionsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexSolutionDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Solutions (current) (asynchronously)
+     * Gets solutions.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexSolutionsCurrentAsync(final ApiCallback<List<DexSolutionDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexSolutionsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexSolutionDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexStatssCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexStatssCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/statss/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexStatssCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexStatssCurrentCall(_callback);
+
+    }
+
+    /**
+     * Statss (current)
+     * Gets statss.
+     * @return List&lt;DexStatsDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexStatsDTO> dexStatssCurrent() throws ApiException {
+        ApiResponse<List<DexStatsDTO>> localVarResp = dexStatssCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Statss (current)
+     * Gets statss.
+     * @return ApiResponse&lt;List&lt;DexStatsDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexStatsDTO>> dexStatssCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexStatssCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Statss (current) (asynchronously)
+     * Gets statss.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexStatssCurrentAsync(final ApiCallback<List<DexStatsDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexStatssCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexTokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexTokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/tokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexTokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List&lt;DexTokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexTokenDTO> dexTokensCurrent() throws ApiException {
+        ApiResponse<List<DexTokenDTO>> localVarResp = dexTokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse&lt;List&lt;DexTokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexTokenDTO>> dexTokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexTokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexTokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Tokens (current) (asynchronously)
+     * Gets tokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexTokensCurrentAsync(final ApiCallback<List<DexTokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexTokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexTokenDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexTradesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexTradesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/trades/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexTradesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexTradesCurrentCall(_callback);
+
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return List&lt;DexTradeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexTradeDTO> dexTradesCurrent() throws ApiException {
+        ApiResponse<List<DexTradeDTO>> localVarResp = dexTradesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return ApiResponse&lt;List&lt;DexTradeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexTradeDTO>> dexTradesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexTradesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexTradeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Trades (current) (asynchronously)
+     * Gets trades.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexTradesCurrentAsync(final ApiCallback<List<DexTradeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexTradesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexTradeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexUsersCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexUsersCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/users/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexUsersCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexUsersCurrentCall(_callback);
+
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return List&lt;DexUserDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexUserDTO> dexUsersCurrent() throws ApiException {
+        ApiResponse<List<DexUserDTO>> localVarResp = dexUsersCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Users (current)
+     * Gets users.
+     * @return ApiResponse&lt;List&lt;DexUserDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexUserDTO>> dexUsersCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexUsersCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexUserDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Users (current) (asynchronously)
+     * Gets users.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexUsersCurrentAsync(final ApiCallback<List<DexUserDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexUsersCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexUserDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexWithdrawRequestsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexWithdrawRequestsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/withdrawRequests/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexWithdrawRequestsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexWithdrawRequestsCurrentCall(_callback);
+
+    }
+
+    /**
+     * WithdrawRequests (current)
+     * Gets withdrawRequests.
+     * @return List&lt;DexWithdrawRequestDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexWithdrawRequestDTO> dexWithdrawRequestsCurrent() throws ApiException {
+        ApiResponse<List<DexWithdrawRequestDTO>> localVarResp = dexWithdrawRequestsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * WithdrawRequests (current)
+     * Gets withdrawRequests.
+     * @return ApiResponse&lt;List&lt;DexWithdrawRequestDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexWithdrawRequestDTO>> dexWithdrawRequestsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexWithdrawRequestsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexWithdrawRequestDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * WithdrawRequests (current) (asynchronously)
+     * Gets withdrawRequests.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexWithdrawRequestsCurrentAsync(final ApiCallback<List<DexWithdrawRequestDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexWithdrawRequestsCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexWithdrawRequestDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexWithdrawsCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexWithdrawsCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/dex/withdraws/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexWithdrawsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexWithdrawsCurrentCall(_callback);
+
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return List&lt;DexWithdrawDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexWithdrawDTO> dexWithdrawsCurrent() throws ApiException {
+        ApiResponse<List<DexWithdrawDTO>> localVarResp = dexWithdrawsCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Withdraws (current)
+     * Gets withdraws.
+     * @return ApiResponse&lt;List&lt;DexWithdrawDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexWithdrawDTO>> dexWithdrawsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexWithdrawsCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexWithdrawDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Withdraws (current) (asynchronously)
+     * Gets withdraws.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexWithdrawsCurrentAsync(final ApiCallback<List<DexWithdrawDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexWithdrawsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<DexWithdrawDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -82,4 +82,64 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
+    t.Run("Test CowApiService CowOrdersCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.CowApi.CowOrdersCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test CowApiService CowSettlementsCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.CowApi.CowSettlementsCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test CowApiService CowTokensCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.CowApi.CowTokensCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test CowApiService CowTradesCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.CowApi.CowTradesCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test CowApiService CowUsersCurrent", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.CowApi.CowUsersCurrent(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
 }

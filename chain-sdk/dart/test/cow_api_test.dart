@@ -62,5 +62,50 @@ void main() {
       // TODO
     });
 
+    // Orders (current)
+    //
+    // Gets orders.
+    //
+    //Future<List<CowOrderDTO>> cowOrdersCurrent() async
+    test('test cowOrdersCurrent', () async {
+      // TODO
+    });
+
+    // Settlements (current)
+    //
+    // Gets settlements.
+    //
+    //Future<List<CowSettlementDTO>> cowSettlementsCurrent() async
+    test('test cowSettlementsCurrent', () async {
+      // TODO
+    });
+
+    // Tokens (current)
+    //
+    // Gets tokens.
+    //
+    //Future<List<CowTokenDTO>> cowTokensCurrent() async
+    test('test cowTokensCurrent', () async {
+      // TODO
+    });
+
+    // Trades (current)
+    //
+    // Gets trades.
+    //
+    //Future<List<CowTradeDTO>> cowTradesCurrent() async
+    test('test cowTradesCurrent', () async {
+      // TODO
+    });
+
+    // Users (current)
+    //
+    // Gets users.
+    //
+    //Future<List<CowUserDTO>> cowUsersCurrent() async
+    test('test cowUsersCurrent', () async {
+      // TODO
+    });
+
   });
 }

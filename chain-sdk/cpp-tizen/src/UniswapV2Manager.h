@@ -5,21 +5,21 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "UniswapV2.BundleV2DTO.h"
-#include "UniswapV2.BurnV2DTO.h"
-#include "UniswapV2.LiquidityPositionSnapshotV2DTO.h"
-#include "UniswapV2.LiquidityPositionV2DTO.h"
-#include "UniswapV2.MintV2DTO.h"
-#include "UniswapV2.PairDayDataV2DTO.h"
-#include "UniswapV2.PairHourDataV2DTO.h"
-#include "UniswapV2.PairV2DTO.h"
-#include "UniswapV2.SwapV2DTO.h"
-#include "UniswapV2.TokenDayDataV2DTO.h"
-#include "UniswapV2.TokenV2DTO.h"
-#include "UniswapV2.TransactionV2DTO.h"
-#include "UniswapV2.UniswapDayDataV2DTO.h"
-#include "UniswapV2.UniswapFactoryV2DTO.h"
-#include "UniswapV2.UserV2DTO.h"
+#include "UniswapV2.BundleDTO.h"
+#include "UniswapV2.BurnDTO.h"
+#include "UniswapV2.LiquidityPositionDTO.h"
+#include "UniswapV2.LiquidityPositionSnapshotDTO.h"
+#include "UniswapV2.MintDTO.h"
+#include "UniswapV2.PairDTO.h"
+#include "UniswapV2.PairDayDataDTO.h"
+#include "UniswapV2.PairHourDataDTO.h"
+#include "UniswapV2.SwapDTO.h"
+#include "UniswapV2.TokenDTO.h"
+#include "UniswapV2.TokenDayDataDTO.h"
+#include "UniswapV2.TransactionDTO.h"
+#include "UniswapV2.UniswapDayDataDTO.h"
+#include "UniswapV2.UniswapFactoryDTO.h"
+#include "UniswapV2.UserDTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -38,9 +38,59 @@ public:
 	UniswapV2Manager();
 	virtual ~UniswapV2Manager();
 
-/*! \brief BundleV2s (historical) 🔥. *Synchronous*
+/*! \brief Bundles (current). *Synchronous*
  *
- * Gets bundlev2s.
+ * Gets bundles.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Bundles (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.BundleDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Bundles (current). *Asynchronous*
+ *
+ * Gets bundles.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Bundles (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.BundleDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Burns (current). *Synchronous*
+ *
+ * Gets burns.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Burns (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.BurnDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Burns (current). *Asynchronous*
+ *
+ * Gets burns.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Burns (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.BurnDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Bundles (historical) 🔥. *Synchronous*
+ *
+ * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -50,14 +100,14 @@ public:
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetBundleV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetBundles (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.BundleV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.BundleDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief BundleV2s (historical) 🔥. *Asynchronous*
+/*! \brief Bundles (historical) 🔥. *Asynchronous*
  *
- * Gets bundlev2s.
+ * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -67,15 +117,15 @@ bool uniswapV2GetBundleV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetBundleV2s (historical)Async(char * accessToken,
+bool uniswapV2GetBundles (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.BundleV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.BundleDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief BurnV2s (historical) 🔥. *Synchronous*
+/*! \brief Burns (historical) 🔥. *Synchronous*
  *
- * Gets burnv2s.
+ * Gets burns.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -86,14 +136,14 @@ bool uniswapV2GetBundleV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetBurnV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetBurns (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.BurnV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.BurnDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief BurnV2s (historical) 🔥. *Asynchronous*
+/*! \brief Burns (historical) 🔥. *Asynchronous*
  *
- * Gets burnv2s.
+ * Gets burns.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -104,15 +154,15 @@ bool uniswapV2GetBurnV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetBurnV2s (historical)Async(char * accessToken,
+bool uniswapV2GetBurns (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.BurnV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.BurnDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief LiquidityPositionSnapshotV2s (historical) 🔥. *Synchronous*
+/*! \brief LiquidityPositionSnapshots (historical) 🔥. *Synchronous*
  *
- * Gets liquiditypositionsnapshotv2s.
+ * Gets liquidityPositionSnapshots.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -124,14 +174,14 @@ bool uniswapV2GetBurnV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetLiquidityPositionSnapshotV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetLiquidityPositionSnapshots (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, std::string pair, 
-	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief LiquidityPositionSnapshotV2s (historical) 🔥. *Asynchronous*
+/*! \brief LiquidityPositionSnapshots (historical) 🔥. *Asynchronous*
  *
- * Gets liquiditypositionsnapshotv2s.
+ * Gets liquidityPositionSnapshots.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -143,15 +193,15 @@ bool uniswapV2GetLiquidityPositionSnapshotV2s (historical)Sync(char * accessToke
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetLiquidityPositionSnapshotV2s (historical)Async(char * accessToken,
+bool uniswapV2GetLiquidityPositionSnapshots (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, std::string pair, 
-	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief LiquidityPositionV2s (historical) 🔥. *Synchronous*
+/*! \brief LiquidityPositions (historical) 🔥. *Synchronous*
  *
- * Gets liquiditypositionv2s.
+ * Gets liquidityPositions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -163,14 +213,14 @@ bool uniswapV2GetLiquidityPositionSnapshotV2s (historical)Async(char * accessTok
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetLiquidityPositionV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetLiquidityPositions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, std::string pair, 
-	void(* handler)(std::list<UniswapV2.LiquidityPositionV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.LiquidityPositionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief LiquidityPositionV2s (historical) 🔥. *Asynchronous*
+/*! \brief LiquidityPositions (historical) 🔥. *Asynchronous*
  *
- * Gets liquiditypositionv2s.
+ * Gets liquidityPositions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -182,15 +232,15 @@ bool uniswapV2GetLiquidityPositionV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetLiquidityPositionV2s (historical)Async(char * accessToken,
+bool uniswapV2GetLiquidityPositions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, std::string pair, 
-	void(* handler)(std::list<UniswapV2.LiquidityPositionV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.LiquidityPositionDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief MintV2s (historical) 🔥. *Synchronous*
+/*! \brief Mints (historical) 🔥. *Synchronous*
  *
- * Gets mintv2s.
+ * Gets mints.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -201,14 +251,14 @@ bool uniswapV2GetLiquidityPositionV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetMintV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetMints (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.MintV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.MintDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief MintV2s (historical) 🔥. *Asynchronous*
+/*! \brief Mints (historical) 🔥. *Asynchronous*
  *
- * Gets mintv2s.
+ * Gets mints.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -219,15 +269,15 @@ bool uniswapV2GetMintV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetMintV2s (historical)Async(char * accessToken,
+bool uniswapV2GetMints (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.MintV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.MintDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief PairDayDataV2s (historical) 🔥. *Synchronous*
+/*! \brief PairDayDatas (historical) 🔥. *Synchronous*
  *
- * Gets pairdaydatav2s.
+ * Gets pairDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -239,14 +289,14 @@ bool uniswapV2GetMintV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairDayDataV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetPairDayDatas (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
-	void(* handler)(std::list<UniswapV2.PairDayDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairDayDataV2s (historical) 🔥. *Asynchronous*
+/*! \brief PairDayDatas (historical) 🔥. *Asynchronous*
  *
- * Gets pairdaydatav2s.
+ * Gets pairDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -258,15 +308,15 @@ bool uniswapV2GetPairDayDataV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairDayDataV2s (historical)Async(char * accessToken,
+bool uniswapV2GetPairDayDatas (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
-	void(* handler)(std::list<UniswapV2.PairDayDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief PairHourDataV2s (historical) 🔥. *Synchronous*
+/*! \brief PairHourDatas (historical) 🔥. *Synchronous*
  *
- * Gets pairhourdatav2s.
+ * Gets pairHourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -277,14 +327,14 @@ bool uniswapV2GetPairDayDataV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairHourDataV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetPairHourDatas (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.PairHourDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairHourDataV2s (historical) 🔥. *Asynchronous*
+/*! \brief PairHourDatas (historical) 🔥. *Asynchronous*
  *
- * Gets pairhourdatav2s.
+ * Gets pairHourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -295,15 +345,15 @@ bool uniswapV2GetPairHourDataV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairHourDataV2s (historical)Async(char * accessToken,
+bool uniswapV2GetPairHourDatas (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.PairHourDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief PairV2s (historical) 🔥. *Synchronous*
+/*! \brief Pairs (historical) 🔥. *Synchronous*
  *
- * Gets pairv2s.
+ * Gets pairs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -315,14 +365,14 @@ bool uniswapV2GetPairHourDataV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetPairs (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
-	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairV2s (historical) 🔥. *Asynchronous*
+/*! \brief Pairs (historical) 🔥. *Asynchronous*
  *
- * Gets pairv2s.
+ * Gets pairs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -334,9 +384,9 @@ bool uniswapV2GetPairV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetPairV2s (historical)Async(char * accessToken,
+bool uniswapV2GetPairs (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
-	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
 	, void* userData);
 
 
@@ -350,7 +400,7 @@ bool uniswapV2GetPairV2s (historical)Async(char * accessToken,
  */
 bool uniswapV2GetPools (current)Sync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief Pools (current) 🔥. *Asynchronous*
@@ -363,44 +413,7 @@ bool uniswapV2GetPools (current)Sync(char * accessToken,
  */
 bool uniswapV2GetPools (current)Async(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief SwapV2s (historical) 🔥. *Synchronous*
- *
- * Gets swapv2s.
- * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
- * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
- * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
- * \param endDate The end date of timeframe.
- * \param id Transaction hash plus index in Transaction swap array.
- * \param pair Reference to pair.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetSwapV2s (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief SwapV2s (historical) 🔥. *Asynchronous*
- *
- * Gets swapv2s.
- * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
- * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
- * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
- * \param endDate The end date of timeframe.
- * \param id Transaction hash plus index in Transaction swap array.
- * \param pair Reference to pair.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetSwapV2s (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
-	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
 	, void* userData);
 
 
@@ -413,7 +426,7 @@ bool uniswapV2GetSwapV2s (historical)Async(char * accessToken,
  */
 bool uniswapV2GetSwaps (current)Sync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief Swaps (current) 🔥. *Asynchronous*
@@ -425,13 +438,50 @@ bool uniswapV2GetSwaps (current)Sync(char * accessToken,
  */
 bool uniswapV2GetSwaps (current)Async(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief TokenDayDataV2s (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical) 🔥. *Synchronous*
  *
- * Gets tokendaydatav2s.
+ * Gets swaps.
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Transaction hash plus index in Transaction swap array.
+ * \param pair Reference to pair.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2GetSwaps (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Swaps (historical) 🔥. *Asynchronous*
+ *
+ * Gets swaps.
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Transaction hash plus index in Transaction swap array.
+ * \param pair Reference to pair.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2GetSwaps (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief TokenDayDatas (historical) 🔥. *Synchronous*
+ *
+ * Gets tokenDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -441,14 +491,14 @@ bool uniswapV2GetSwaps (current)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetTokenDayDataV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetTokenDayDatas (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.TokenDayDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenDayDataV2s (historical) 🔥. *Asynchronous*
+/*! \brief TokenDayDatas (historical) 🔥. *Asynchronous*
  *
- * Gets tokendaydatav2s.
+ * Gets tokenDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -458,48 +508,9 @@ bool uniswapV2GetTokenDayDataV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetTokenDayDataV2s (historical)Async(char * accessToken,
+bool uniswapV2GetTokenDayDatas (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.TokenDayDataV2DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TokenV2s (historical) 🔥. *Synchronous*
- *
- * Gets tokenv2s.
- * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
- * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
- * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
- * \param endDate The end date of timeframe.
- * \param id Token address.
- * \param symbol Token symbol.
- * \param name Token name.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetTokenV2s (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string symbol, std::string name, 
-	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TokenV2s (historical) 🔥. *Asynchronous*
- *
- * Gets tokenv2s.
- * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
- * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
- * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
- * \param endDate The end date of timeframe.
- * \param id Token address.
- * \param symbol Token symbol.
- * \param name Token name.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetTokenV2s (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string symbol, std::string name, 
-	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
 
@@ -512,7 +523,7 @@ bool uniswapV2GetTokenV2s (historical)Async(char * accessToken,
  */
 bool uniswapV2GetTokens (current)Sync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief Tokens (current) 🔥. *Asynchronous*
@@ -524,13 +535,52 @@ bool uniswapV2GetTokens (current)Sync(char * accessToken,
  */
 bool uniswapV2GetTokens (current)Async(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief TransactionV2s (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
- * Gets transactionv2s.
+ * Gets tokens.
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Token address.
+ * \param symbol Token symbol.
+ * \param name Token name.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2GetTokens (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string symbol, std::string name, 
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
+ *
+ * Gets tokens.
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Token address.
+ * \param symbol Token symbol.
+ * \param name Token name.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2GetTokens (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string symbol, std::string name, 
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Transactions (historical) 🔥. *Synchronous*
+ *
+ * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -540,14 +590,14 @@ bool uniswapV2GetTokens (current)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetTransactionV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetTransactions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.TransactionV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TransactionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TransactionV2s (historical) 🔥. *Asynchronous*
+/*! \brief Transactions (historical) 🔥. *Asynchronous*
  *
- * Gets transactionv2s.
+ * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -557,15 +607,15 @@ bool uniswapV2GetTransactionV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetTransactionV2s (historical)Async(char * accessToken,
+bool uniswapV2GetTransactions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.TransactionV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TransactionDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief UniswapDayDataV2s (historical) 🔥. *Synchronous*
+/*! \brief UniswapDayDatas (historical) 🔥. *Synchronous*
  *
- * Gets uniswapdaydatav2s.
+ * Gets uniswapDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -575,14 +625,14 @@ bool uniswapV2GetTransactionV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUniswapDayDataV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetUniswapDayDatas (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UniswapDayDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief UniswapDayDataV2s (historical) 🔥. *Asynchronous*
+/*! \brief UniswapDayDatas (historical) 🔥. *Asynchronous*
  *
- * Gets uniswapdaydatav2s.
+ * Gets uniswapDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -592,15 +642,15 @@ bool uniswapV2GetUniswapDayDataV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUniswapDayDataV2s (historical)Async(char * accessToken,
+bool uniswapV2GetUniswapDayDatas (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UniswapDayDataV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief UniswapFactoryV2s (historical) 🔥. *Synchronous*
+/*! \brief UniswapFactorys (historical) 🔥. *Synchronous*
  *
- * Gets uniswapfactoryv2s.
+ * Gets uniswapFactorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -610,14 +660,14 @@ bool uniswapV2GetUniswapDayDataV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUniswapFactoryV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetUniswapFactorys (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UniswapFactoryV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief UniswapFactoryV2s (historical) 🔥. *Asynchronous*
+/*! \brief UniswapFactorys (historical) 🔥. *Asynchronous*
  *
- * Gets uniswapfactoryv2s.
+ * Gets uniswapFactorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -627,15 +677,15 @@ bool uniswapV2GetUniswapFactoryV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUniswapFactoryV2s (historical)Async(char * accessToken,
+bool uniswapV2GetUniswapFactorys (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UniswapFactoryV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief UserV2s (historical) 🔥. *Synchronous*
+/*! \brief Users (historical) 🔥. *Synchronous*
  *
- * Gets userv2s.
+ * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -645,14 +695,14 @@ bool uniswapV2GetUniswapFactoryV2s (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUserV2s (historical)Sync(char * accessToken,
+bool uniswapV2GetUsers (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UserV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief UserV2s (historical) 🔥. *Asynchronous*
+/*! \brief Users (historical) 🔥. *Asynchronous*
  *
- * Gets userv2s.
+ * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -662,9 +712,286 @@ bool uniswapV2GetUserV2s (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool uniswapV2GetUserV2s (historical)Async(char * accessToken,
+bool uniswapV2GetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
-	void(* handler)(std::list<UniswapV2.UserV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.UserDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief LiquidityPositionSnapshots (current). *Synchronous*
+ *
+ * Gets liquidityPositionSnapshots.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2LiquidityPositionSnapshots (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief LiquidityPositionSnapshots (current). *Asynchronous*
+ *
+ * Gets liquidityPositionSnapshots.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2LiquidityPositionSnapshots (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief LiquidityPositions (current). *Synchronous*
+ *
+ * Gets liquidityPositions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2LiquidityPositions (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.LiquidityPositionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief LiquidityPositions (current). *Asynchronous*
+ *
+ * Gets liquidityPositions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2LiquidityPositions (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.LiquidityPositionDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Mints (current). *Synchronous*
+ *
+ * Gets mints.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Mints (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.MintDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Mints (current). *Asynchronous*
+ *
+ * Gets mints.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Mints (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.MintDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief PairDayDatas (current). *Synchronous*
+ *
+ * Gets pairDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2PairDayDatas (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief PairDayDatas (current). *Asynchronous*
+ *
+ * Gets pairDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2PairDayDatas (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief PairHourDatas (current). *Synchronous*
+ *
+ * Gets pairHourDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2PairHourDatas (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief PairHourDatas (current). *Asynchronous*
+ *
+ * Gets pairHourDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2PairHourDatas (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Pairs (current). *Synchronous*
+ *
+ * Gets pairs.
+ * \param id Pair contract address.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Pairs (current)Sync(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Pairs (current). *Asynchronous*
+ *
+ * Gets pairs.
+ * \param id Pair contract address.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Pairs (current)Async(char * accessToken,
+	std::string id, 
+	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief TokenDayDatas (current). *Synchronous*
+ *
+ * Gets tokenDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2TokenDayDatas (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief TokenDayDatas (current). *Asynchronous*
+ *
+ * Gets tokenDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2TokenDayDatas (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Transactions (current). *Synchronous*
+ *
+ * Gets transactions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Transactions (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TransactionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Transactions (current). *Asynchronous*
+ *
+ * Gets transactions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Transactions (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TransactionDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief UniswapDayDatas (current). *Synchronous*
+ *
+ * Gets uniswapDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2UniswapDayDatas (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief UniswapDayDatas (current). *Asynchronous*
+ *
+ * Gets uniswapDayDatas.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2UniswapDayDatas (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief UniswapFactorys (current). *Synchronous*
+ *
+ * Gets uniswapFactorys.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2UniswapFactorys (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief UniswapFactorys (current). *Asynchronous*
+ *
+ * Gets uniswapFactorys.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2UniswapFactorys (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Users (current). *Synchronous*
+ *
+ * Gets users.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Users (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UserDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Users (current). *Asynchronous*
+ *
+ * Gets users.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Users (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.UserDTO>, Error, void* )
 	, void* userData);
 
 

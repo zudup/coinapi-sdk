@@ -76,6 +76,151 @@ package .Clients is
        Address : in Swagger.Nullable_UString;
        Result : out .Models.CowUserDTO_Type_Vectors.Vector);
 
+   --  Orders (current)
+   --  Gets orders.
+   procedure Cow_Orders__current
+      (Client : in out Client_Type;
+       Result : out .Models.CowOrderDTO_Type_Vectors.Vector);
+
+   --  Settlements (current)
+   --  Gets settlements.
+   procedure Cow_Settlements__current
+      (Client : in out Client_Type;
+       Result : out .Models.CowSettlementDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Cow_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.CowTokenDTO_Type_Vectors.Vector);
+
+   --  Trades (current)
+   --  Gets trades.
+   procedure Cow_Trades__current
+      (Client : in out Client_Type;
+       Result : out .Models.CowTradeDTO_Type_Vectors.Vector);
+
+   --  Users (current)
+   --  Gets users.
+   procedure Cow_Users__current
+      (Client : in out Client_Type;
+       Result : out .Models.CowUserDTO_Type_Vectors.Vector);
+
+   --  Accounts (current)
+   --  Gets accounts.
+   procedure Curve_Accounts__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveAccountDTO_Type_Vectors.Vector);
+
+   --  AddLiquidityEvents (current)
+   --  Gets addLiquidityEvents.
+   procedure Curve_Add_Liquidity_Events__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveAddLiquidityEventDTO_Type_Vectors.Vector);
+
+   --  AdminFeeChangeLogs (current)
+   --  Gets adminFeeChangeLogs.
+   procedure Curve_Admin_Fee_Change_Logs__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveAdminFeeChangeLogDTO_Type_Vectors.Vector);
+
+   --  AmplificationCoeffChangeLogs (current)
+   --  Gets amplificationCoeffChangeLogs.
+   procedure Curve_Amplification_Coeff_Change_Logs__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveAmplificationCoeffChangeLogDTO_Type_Vectors.Vector);
+
+   --  Coins (current)
+   --  Gets coins.
+   procedure Curve_Coins__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveCoinDTO_Type_Vectors.Vector);
+
+   --  ContractVersions (current)
+   --  Gets contractVersions.
+   procedure Curve_Contract_Versions__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveContractVersionDTO_Type_Vectors.Vector);
+
+   --  Contracts (current)
+   --  Gets contracts.
+   procedure Curve_Contracts__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveContractDTO_Type_Vectors.Vector);
+
+   --  DailyVolumes (current)
+   --  Gets dailyVolumes.
+   procedure Curve_Daily_Volumes__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveDailyVolumeDTO_Type_Vectors.Vector);
+
+   --  Exchanges (current)
+   --  Gets exchanges.
+   procedure Curve_Exchanges__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.CurveExchangeDTO_Type_Vectors.Vector);
+
+   --  FeeChangeLogs (current)
+   --  Gets feeChangeLogs.
+   procedure Curve_Fee_Change_Logs__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveFeeChangeLogDTO_Type_Vectors.Vector);
+
+   --  GaugeDeposits (current)
+   --  Gets gaugeDeposits.
+   procedure Curve_Gauge_Deposits__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeDepositDTO_Type_Vectors.Vector);
+
+   --  GaugeLiquiditys (current)
+   --  Gets gaugeLiquiditys.
+   procedure Curve_Gauge_Liquiditys__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeLiquidityDTO_Type_Vectors.Vector);
+
+   --  GaugeTotalWeights (current)
+   --  Gets gaugeTotalWeights.
+   procedure Curve_Gauge_Total_Weights__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeTotalWeightDTO_Type_Vectors.Vector);
+
+   --  GaugeTypeWeights (current)
+   --  Gets gaugeTypeWeights.
+   procedure Curve_Gauge_Type_Weights__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeTypeWeightDTO_Type_Vectors.Vector);
+
+   --  GaugeTypes (current)
+   --  Gets gaugeTypes.
+   procedure Curve_Gauge_Types__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeTypeDTO_Type_Vectors.Vector);
+
+   --  GaugeWeightVotes (current)
+   --  Gets gaugeWeightVotes.
+   procedure Curve_Gauge_Weight_Votes__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeWeightVoteDTO_Type_Vectors.Vector);
+
+   --  GaugeWeights (current)
+   --  Gets gaugeWeights.
+   procedure Curve_Gauge_Weights__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeWeightDTO_Type_Vectors.Vector);
+
+   --  GaugeWithdraws (current)
+   --  Gets gaugeWithdraws.
+   procedure Curve_Gauge_Withdraws__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeWithdrawDTO_Type_Vectors.Vector);
+
+   --  Gauges (current)
+   --  Gets gauges.
+   procedure Curve_Gauges__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveGaugeDTO_Type_Vectors.Vector);
+
    --  Accounts (historical) 🔥
    --  Gets accounts.
    procedure Curve_Get_Accounts__historical
@@ -89,7 +234,7 @@ package .Clients is
        Result : out .Models.CurveAccountDTO_Type_Vectors.Vector);
 
    --  AddLiquidityEvents (historical) 🔥
-   --  Gets addliquidityevents.
+   --  Gets addLiquidityEvents.
    procedure Curve_Get_Add_Liquidity_Events__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -101,7 +246,7 @@ package .Clients is
        Result : out .Models.CurveAddLiquidityEventDTO_Type_Vectors.Vector);
 
    --  AdminFeeChangeLogs (historical) 🔥
-   --  Gets adminfeechangelogs.
+   --  Gets adminFeeChangeLogs.
    procedure Curve_Get_Admin_Fee_Change_Logs__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -113,7 +258,7 @@ package .Clients is
        Result : out .Models.CurveAdminFeeChangeLogDTO_Type_Vectors.Vector);
 
    --  AmplificationCoeffChangeLogs (historical) 🔥
-   --  Gets amplificationcoeffchangelogs.
+   --  Gets amplificationCoeffChangeLogs.
    procedure Curve_Get_Amplification_Coeff_Change_Logs__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -137,7 +282,7 @@ package .Clients is
        Result : out .Models.CurveCoinDTO_Type_Vectors.Vector);
 
    --  ContractVersions (historical) 🔥
-   --  Gets contractversions.
+   --  Gets contractVersions.
    procedure Curve_Get_Contract_Versions__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -160,7 +305,7 @@ package .Clients is
        Result : out .Models.CurveContractDTO_Type_Vectors.Vector);
 
    --  DailyVolumes (historical) 🔥
-   --  Gets dailyvolumes.
+   --  Gets dailyVolumes.
    procedure Curve_Get_Daily_Volumes__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -184,7 +329,7 @@ package .Clients is
        Result : out .Models.CurveExchangeDTO_Type_Vectors.Vector);
 
    --  FeeChangeLogs (historical) 🔥
-   --  Gets feechangelogs.
+   --  Gets feeChangeLogs.
    procedure Curve_Get_Fee_Change_Logs__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -196,7 +341,7 @@ package .Clients is
        Result : out .Models.CurveFeeChangeLogDTO_Type_Vectors.Vector);
 
    --  GaugeDeposits (historical) 🔥
-   --  Gets gaugedeposits.
+   --  Gets gaugeDeposits.
    procedure Curve_Get_Gauge_Deposits__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -207,7 +352,7 @@ package .Clients is
        Result : out .Models.CurveGaugeDepositDTO_Type_Vectors.Vector);
 
    --  GaugeLiquiditys (historical) 🔥
-   --  Gets gaugeliquiditys.
+   --  Gets gaugeLiquiditys.
    procedure Curve_Get_Gauge_Liquiditys__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -219,7 +364,7 @@ package .Clients is
        Result : out .Models.CurveGaugeLiquidityDTO_Type_Vectors.Vector);
 
    --  GaugeTotalWeights (historical) 🔥
-   --  Gets gaugetotalweights.
+   --  Gets gaugeTotalWeights.
    procedure Curve_Get_Gauge_Total_Weights__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -230,7 +375,7 @@ package .Clients is
        Result : out .Models.CurveGaugeTotalWeightDTO_Type_Vectors.Vector);
 
    --  GaugeTypeWeights (historical) 🔥
-   --  Gets gaugetypeweights.
+   --  Gets gaugeTypeWeights.
    procedure Curve_Get_Gauge_Type_Weights__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -241,7 +386,7 @@ package .Clients is
        Result : out .Models.CurveGaugeTypeWeightDTO_Type_Vectors.Vector);
 
    --  GaugeTypes (historical) 🔥
-   --  Gets gaugetypes.
+   --  Gets gaugeTypes.
    procedure Curve_Get_Gauge_Types__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -253,7 +398,7 @@ package .Clients is
        Result : out .Models.CurveGaugeTypeDTO_Type_Vectors.Vector);
 
    --  GaugeWeightVotes (historical) 🔥
-   --  Gets gaugeweightvotes.
+   --  Gets gaugeWeightVotes.
    procedure Curve_Get_Gauge_Weight_Votes__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -265,7 +410,7 @@ package .Clients is
        Result : out .Models.CurveGaugeWeightVoteDTO_Type_Vectors.Vector);
 
    --  GaugeWeights (historical) 🔥
-   --  Gets gaugeweights.
+   --  Gets gaugeWeights.
    procedure Curve_Get_Gauge_Weights__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -276,7 +421,7 @@ package .Clients is
        Result : out .Models.CurveGaugeWeightDTO_Type_Vectors.Vector);
 
    --  GaugeWithdraws (historical) 🔥
-   --  Gets gaugewithdraws.
+   --  Gets gaugeWithdraws.
    procedure Curve_Get_Gauge_Withdraws__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -300,7 +445,7 @@ package .Clients is
        Result : out .Models.CurveGaugeDTO_Type_Vectors.Vector);
 
    --  HourlyVolumes (historical) 🔥
-   --  Gets hourlyvolumes.
+   --  Gets hourlyVolumes.
    procedure Curve_Get_Hourly_Volumes__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -312,7 +457,7 @@ package .Clients is
        Result : out .Models.CurveHourlyVolumeDTO_Type_Vectors.Vector);
 
    --  LpTokens (historical) 🔥
-   --  Gets lptokens.
+   --  Gets lpTokens.
    procedure Curve_Get_Lp_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -339,7 +484,7 @@ package .Clients is
        Result : out .Models.CurvePoolDTO_Type_Vectors.Vector);
 
    --  ProposalVotes (historical) 🔥
-   --  Gets proposalvotes.
+   --  Gets proposalVotes.
    procedure Curve_Get_Proposal_Votes__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -361,7 +506,7 @@ package .Clients is
        Result : out .Models.CurveProposalDTO_Type_Vectors.Vector);
 
    --  RemoveLiquidityEvents (historical) 🔥
-   --  Gets removeliquidityevents.
+   --  Gets removeLiquidityEvents.
    procedure Curve_Get_Remove_Liquidity_Events__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -373,7 +518,7 @@ package .Clients is
        Result : out .Models.CurveRemoveLiquidityEventDTO_Type_Vectors.Vector);
 
    --  RemoveLiquidityOneEvents (historical) 🔥
-   --  Gets removeliquidityoneevents.
+   --  Gets removeLiquidityOneEvents.
    procedure Curve_Get_Remove_Liquidity_One_Events__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -385,7 +530,7 @@ package .Clients is
        Result : out .Models.CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector);
 
    --  SystemStates (historical) 🔥
-   --  Gets systemstates.
+   --  Gets systemStates.
    procedure Curve_Get_System_States__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -410,7 +555,7 @@ package .Clients is
        Result : out .Models.CurveTokenDTO_Type_Vectors.Vector);
 
    --  TransferOwnershipEvents (historical) 🔥
-   --  Gets transferownershipevents.
+   --  Gets transferOwnershipEvents.
    procedure Curve_Get_Transfer_Ownership_Events__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -422,7 +567,7 @@ package .Clients is
        Result : out .Models.CurveTransferOwnershipEventDTO_Type_Vectors.Vector);
 
    --  UnderlyingCoins (historical) 🔥
-   --  Gets underlyingcoins.
+   --  Gets underlyingCoins.
    procedure Curve_Get_Underlying_Coins__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -434,7 +579,7 @@ package .Clients is
        Result : out .Models.CurveUnderlyingCoinDTO_Type_Vectors.Vector);
 
    --  VotingApps (historical) 🔥
-   --  Gets votingapps.
+   --  Gets votingApps.
    procedure Curve_Get_Voting_Apps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -446,7 +591,7 @@ package .Clients is
        Result : out .Models.CurveVotingAppDTO_Type_Vectors.Vector);
 
    --  WeeklyVolumes (historical) 🔥
-   --  Gets weeklyvolumes.
+   --  Gets weeklyVolumes.
    procedure Curve_Get_Weekly_Volumes__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -456,6 +601,97 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Pool : in Swagger.Nullable_UString;
        Result : out .Models.CurveWeeklyVolumeDTO_Type_Vectors.Vector);
+
+   --  HourlyVolumes (current)
+   --  Gets hourlyVolumes.
+   procedure Curve_Hourly_Volumes__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveHourlyVolumeDTO_Type_Vectors.Vector);
+
+   --  LpTokens (current)
+   --  Gets lpTokens.
+   procedure Curve_Lp_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveLpTokenDTO_Type_Vectors.Vector);
+
+   --  Pools (current)
+   --  Gets pools.
+   procedure Curve_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.CurvePoolDTO_Type_Vectors.Vector);
+
+   --  ProposalVotes (current)
+   --  Gets proposalVotes.
+   procedure Curve_Proposal_Votes__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveProposalVoteDTO_Type_Vectors.Vector);
+
+   --  Proposals (current)
+   --  Gets proposals.
+   procedure Curve_Proposals__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveProposalDTO_Type_Vectors.Vector);
+
+   --  RemoveLiquidityEvents (current)
+   --  Gets removeLiquidityEvents.
+   procedure Curve_Remove_Liquidity_Events__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveRemoveLiquidityEventDTO_Type_Vectors.Vector);
+
+   --  RemoveLiquidityOneEvents (current)
+   --  Gets removeLiquidityOneEvents.
+   procedure Curve_Remove_Liquidity_One_Events__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveRemoveLiquidityOneEventDTO_Type_Vectors.Vector);
+
+   --  SystemStates (current)
+   --  Gets systemStates.
+   procedure Curve_System_States__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveSystemStateDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Curve_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveTokenDTO_Type_Vectors.Vector);
+
+   --  TransferOwnershipEvents (current)
+   --  Gets transferOwnershipEvents.
+   procedure Curve_Transfer_Ownership_Events__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveTransferOwnershipEventDTO_Type_Vectors.Vector);
+
+   --  UnderlyingCoins (current)
+   --  Gets underlyingCoins.
+   procedure Curve_Underlying_Coins__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveUnderlyingCoinDTO_Type_Vectors.Vector);
+
+   --  VotingApps (current)
+   --  Gets votingApps.
+   procedure Curve_Voting_Apps__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveVotingAppDTO_Type_Vectors.Vector);
+
+   --  WeeklyVolumes (current)
+   --  Gets weeklyVolumes.
+   procedure Curve_Weekly_Volumes__current
+      (Client : in out Client_Type;
+       Result : out .Models.CurveWeeklyVolumeDTO_Type_Vectors.Vector);
+
+   --  Batchs (current)
+   --  Gets batchs.
+   procedure Dex_Batchs__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexBatchDTO_Type_Vectors.Vector);
+
+   --  Deposits (current)
+   --  Gets deposits.
+   procedure Dex_Deposits__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexDepositDTO_Type_Vectors.Vector);
 
    --  Batchs (historical) 🔥
    --  Gets batchs.
@@ -565,7 +801,7 @@ package .Clients is
        Result : out .Models.DexUserDTO_Type_Vectors.Vector);
 
    --  WithdrawRequests (historical) 🔥
-   --  Gets withdrawrequests.
+   --  Gets withdrawRequests.
    procedure Dex_Get_Withdraw_Requests__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -588,6 +824,60 @@ package .Clients is
        User : in Swagger.Nullable_UString;
        Result : out .Models.DexWithdrawDTO_Type_Vectors.Vector);
 
+   --  Orders (current)
+   --  Gets orders.
+   procedure Dex_Orders__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexOrderDTO_Type_Vectors.Vector);
+
+   --  Prices (current)
+   --  Gets prices.
+   procedure Dex_Prices__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexPriceDTO_Type_Vectors.Vector);
+
+   --  Solutions (current)
+   --  Gets solutions.
+   procedure Dex_Solutions__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexSolutionDTO_Type_Vectors.Vector);
+
+   --  Statss (current)
+   --  Gets statss.
+   procedure Dex_Statss__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexStatsDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Dex_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexTokenDTO_Type_Vectors.Vector);
+
+   --  Trades (current)
+   --  Gets trades.
+   procedure Dex_Trades__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexTradeDTO_Type_Vectors.Vector);
+
+   --  Users (current)
+   --  Gets users.
+   procedure Dex_Users__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexUserDTO_Type_Vectors.Vector);
+
+   --  WithdrawRequests (current)
+   --  Gets withdrawRequests.
+   procedure Dex_Withdraw_Requests__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexWithdrawRequestDTO_Type_Vectors.Vector);
+
+   --  Withdraws (current)
+   --  Gets withdraws.
+   procedure Dex_Withdraws__current
+      (Client : in out Client_Type;
+       Result : out .Models.DexWithdrawDTO_Type_Vectors.Vector);
+
    --  Exchanges (current) 🔥
    --  Gets exchanges.
    procedure Curve_Get_Exchanges__current
@@ -599,6 +889,30 @@ package .Clients is
    procedure Dex_Get_Trades__current
       (Client : in out Client_Type;
        Result : out .Models.DexTradeDTO_Type_Vectors.Vector);
+
+   --  Bundles (current)
+   --  Gets bundles.
+   procedure Sushiswap_Bundles__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapBundleDTO_Type_Vectors.Vector);
+
+   --  Burns (current)
+   --  Gets burns.
+   procedure Sushiswap_Burns__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapBurnDTO_Type_Vectors.Vector);
+
+   --  DayDatas (current)
+   --  Gets dayDatas.
+   procedure Sushiswap_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapDayDataDTO_Type_Vectors.Vector);
+
+   --  Factorys (current)
+   --  Gets factorys.
+   procedure Sushiswap_Factorys__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapFactoryDTO_Type_Vectors.Vector);
 
    --  Bundles (historical) 🔥
    --  Gets bundles.
@@ -624,7 +938,7 @@ package .Clients is
        Result : out .Models.SushiswapBurnDTO_Type_Vectors.Vector);
 
    --  DayDatas (historical) 🔥
-   --  Gets daydatas.
+   --  Gets dayDatas.
    procedure Sushiswap_Get_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -646,7 +960,7 @@ package .Clients is
        Result : out .Models.SushiswapFactoryDTO_Type_Vectors.Vector);
 
    --  HourDatas (historical) 🔥
-   --  Gets hourdatas.
+   --  Gets hourDatas.
    procedure Sushiswap_Get_Hour_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -657,7 +971,7 @@ package .Clients is
        Result : out .Models.SushiswapHourDataDTO_Type_Vectors.Vector);
 
    --  LiquidityPositionSnapshots (historical) 🔥
-   --  Gets liquiditypositionsnapshots.
+   --  Gets liquidityPositionSnapshots.
    procedure Sushiswap_Get_Liquidity_Position_Snapshots__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -670,7 +984,7 @@ package .Clients is
        Result : out .Models.SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector);
 
    --  LiquidityPositions (historical) 🔥
-   --  Gets liquiditypositions.
+   --  Gets liquidityPositions.
    procedure Sushiswap_Get_Liquidity_Positions__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -695,7 +1009,7 @@ package .Clients is
        Result : out .Models.SushiswapMintDTO_Type_Vectors.Vector);
 
    --  PairDayDatas (historical) 🔥
-   --  Gets pairdaydatas.
+   --  Gets pairDayDatas.
    procedure Sushiswap_Get_Pair_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -709,7 +1023,7 @@ package .Clients is
        Result : out .Models.SushiswapPairDayDataDTO_Type_Vectors.Vector);
 
    --  PairHourDatas (historical) 🔥
-   --  Gets pairhourdatas.
+   --  Gets pairHourDatas.
    procedure Sushiswap_Get_Pair_Hour_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -740,12 +1054,6 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
-   --  Swaps (current) 🔥
-   --  Gets swaps.
-   procedure Sushiswap_Get_Swaps__current
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
-
    --  Swaps (historical) 🔥
    --  Gets swaps.
    procedure Sushiswap_Get_Swaps__historical
@@ -759,7 +1067,7 @@ package .Clients is
        Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
 
    --  TokenDayDatas (historical) 🔥
-   --  Gets tokendaydatas.
+   --  Gets tokenDayDatas.
    procedure Sushiswap_Get_Token_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -768,12 +1076,6 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapTokenDayDataDTO_Type_Vectors.Vector);
-
-   --  Tokens (current) 🔥
-   --  Gets tokens.
-   procedure Sushiswap_Get_Tokens__current
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
 
    --  Tokens (historical) 🔥
    --  Gets tokens.
@@ -810,20 +1112,106 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Result : out .Models.SushiswapUserDTO_Type_Vectors.Vector);
 
-   --  BundleV2s (historical) 🔥
-   --  Gets bundlev2s.
-   procedure Uniswap_V2_Get_Bundle_V2s__historical
+   --  HourDatas (current)
+   --  Gets hourDatas.
+   procedure Sushiswap_Hour_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapHourDataDTO_Type_Vectors.Vector);
+
+   --  LiquidityPositionSnapshots (current)
+   --  Gets liquidityPositionSnapshots.
+   procedure Sushiswap_Liquidity_Position_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector);
+
+   --  LiquidityPositions (current)
+   --  Gets liquidityPositions.
+   procedure Sushiswap_Liquidity_Positions__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapLiquidityPositionDTO_Type_Vectors.Vector);
+
+   --  Mints (current)
+   --  Gets mints.
+   procedure Sushiswap_Mints__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapMintDTO_Type_Vectors.Vector);
+
+   --  PairDayDatas (current)
+   --  Gets pairDayDatas.
+   procedure Sushiswap_Pair_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapPairDayDataDTO_Type_Vectors.Vector);
+
+   --  PairHourDatas (current)
+   --  Gets pairHourDatas.
+   procedure Sushiswap_Pair_Hour_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapPairHourDataDTO_Type_Vectors.Vector);
+
+   --  Pairs (current)
+   --  Gets pairs.
+   procedure Sushiswap_Pairs__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure Sushiswap_Swaps__current
+      (Client : in out Client_Type;
+       Pair : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector);
+
+   --  TokenDayDatas (current)
+   --  Gets tokenDayDatas.
+   procedure Sushiswap_Token_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapTokenDayDataDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Sushiswap_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector);
+
+   --  Transactions (current)
+   --  Gets transactions.
+   procedure Sushiswap_Transactions__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapTransactionDTO_Type_Vectors.Vector);
+
+   --  Users (current)
+   --  Gets users.
+   procedure Sushiswap_Users__current
+      (Client : in out Client_Type;
+       Result : out .Models.SushiswapUserDTO_Type_Vectors.Vector);
+
+   --  Bundles (current)
+   --  Gets bundles.
+   procedure Uniswap_V2_Bundles__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2BundleDTO_Type_Vectors.Vector);
+
+   --  Burns (current)
+   --  Gets burns.
+   procedure Uniswap_V2_Burns__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2BurnDTO_Type_Vectors.Vector);
+
+   --  Bundles (historical) 🔥
+   --  Gets bundles.
+   procedure Uniswap_V2_Get_Bundles__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2BundleV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2BundleDTO_Type_Vectors.Vector);
 
-   --  BurnV2s (historical) 🔥
-   --  Gets burnv2s.
-   procedure Uniswap_V2_Get_Burn_V2s__historical
+   --  Burns (historical) 🔥
+   --  Gets burns.
+   procedure Uniswap_V2_Get_Burns__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -831,11 +1219,11 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2BurnV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2BurnDTO_Type_Vectors.Vector);
 
-   --  LiquidityPositionSnapshotV2s (historical) 🔥
-   --  Gets liquiditypositionsnapshotv2s.
-   procedure Uniswap_V2_Get_Liquidity_Position_Snapshot_V2s__historical
+   --  LiquidityPositionSnapshots (historical) 🔥
+   --  Gets liquidityPositionSnapshots.
+   procedure Uniswap_V2_Get_Liquidity_Position_Snapshots__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -844,11 +1232,11 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        User : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2LiquidityPositionSnapshotV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2LiquidityPositionSnapshotDTO_Type_Vectors.Vector);
 
-   --  LiquidityPositionV2s (historical) 🔥
-   --  Gets liquiditypositionv2s.
-   procedure Uniswap_V2_Get_Liquidity_Position_V2s__historical
+   --  LiquidityPositions (historical) 🔥
+   --  Gets liquidityPositions.
+   procedure Uniswap_V2_Get_Liquidity_Positions__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -857,11 +1245,11 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        User : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2LiquidityPositionV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2LiquidityPositionDTO_Type_Vectors.Vector);
 
-   --  MintV2s (historical) 🔥
-   --  Gets mintv2s.
-   procedure Uniswap_V2_Get_Mint_V2s__historical
+   --  Mints (historical) 🔥
+   --  Gets mints.
+   procedure Uniswap_V2_Get_Mints__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -869,11 +1257,11 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2MintV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2MintDTO_Type_Vectors.Vector);
 
-   --  PairDayDataV2s (historical) 🔥
-   --  Gets pairdaydatav2s.
-   procedure Uniswap_V2_Get_Pair_Day_Data_V2s__historical
+   --  PairDayDatas (historical) 🔥
+   --  Gets pairDayDatas.
+   procedure Uniswap_V2_Get_Pair_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -882,11 +1270,11 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairDayDataV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2PairDayDataDTO_Type_Vectors.Vector);
 
-   --  PairHourDataV2s (historical) 🔥
-   --  Gets pairhourdatav2s.
-   procedure Uniswap_V2_Get_Pair_Hour_Data_V2s__historical
+   --  PairHourDatas (historical) 🔥
+   --  Gets pairHourDatas.
+   procedure Uniswap_V2_Get_Pair_Hour_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -894,11 +1282,11 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairHourDataV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2PairHourDataDTO_Type_Vectors.Vector);
 
-   --  PairV2s (historical) 🔥
-   --  Gets pairv2s.
-   procedure Uniswap_V2_Get_Pair_V2s__historical
+   --  Pairs (historical) 🔥
+   --  Gets pairs.
+   procedure Uniswap_V2_Get_Pairs__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -907,18 +1295,24 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
 
    --  Pools (current) 🔥
    --  Gets pools.
    procedure Uniswap_V2_Get_Pools__current
       (Client : in out Client_Type;
        Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
 
-   --  SwapV2s (historical) 🔥
-   --  Gets swapv2s.
-   procedure Uniswap_V2_Get_Swap_V2s__historical
+   --  Swaps (current) 🔥
+   --  Gets swaps.
+   procedure Uniswap_V2_Get_Swaps__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector);
+
+   --  Swaps (historical) 🔥
+   --  Gets swaps.
+   procedure Uniswap_V2_Get_Swaps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -926,28 +1320,28 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pair : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2SwapV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector);
 
-   --  Swaps (current) 🔥
-   --  Gets swaps.
-   procedure Uniswap_V2_Get_Swaps__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2SwapV2DTO_Type_Vectors.Vector);
-
-   --  TokenDayDataV2s (historical) 🔥
-   --  Gets tokendaydatav2s.
-   procedure Uniswap_V2_Get_Token_Day_Data_V2s__historical
+   --  TokenDayDatas (historical) 🔥
+   --  Gets tokenDayDatas.
+   procedure Uniswap_V2_Get_Token_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2TokenDayDataV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
 
-   --  TokenV2s (historical) 🔥
-   --  Gets tokenv2s.
-   procedure Uniswap_V2_Get_Token_V2s__historical
+   --  Tokens (current) 🔥
+   --  Gets tokens.
+   procedure Uniswap_V2_Get_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector);
+
+   --  Tokens (historical) 🔥
+   --  Gets tokens.
+   procedure Uniswap_V2_Get_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -956,143 +1350,151 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Symbol : in Swagger.Nullable_UString;
        Name : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2TokenV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector);
 
-   --  Tokens (current) 🔥
-   --  Gets tokens.
-   procedure Uniswap_V2_Get_Tokens__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2TokenV2DTO_Type_Vectors.Vector);
-
-   --  TransactionV2s (historical) 🔥
-   --  Gets transactionv2s.
-   procedure Uniswap_V2_Get_Transaction_V2s__historical
+   --  Transactions (historical) 🔥
+   --  Gets transactions.
+   procedure Uniswap_V2_Get_Transactions__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2TransactionV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2TransactionDTO_Type_Vectors.Vector);
 
-   --  UniswapDayDataV2s (historical) 🔥
-   --  Gets uniswapdaydatav2s.
-   procedure Uniswap_V2_Get_Uniswap_Day_Data_V2s__historical
+   --  UniswapDayDatas (historical) 🔥
+   --  Gets uniswapDayDatas.
+   procedure Uniswap_V2_Get_Uniswap_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2UniswapDayDataV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2UniswapDayDataDTO_Type_Vectors.Vector);
 
-   --  UniswapFactoryV2s (historical) 🔥
-   --  Gets uniswapfactoryv2s.
-   procedure Uniswap_V2_Get_Uniswap_Factory_V2s__historical
+   --  UniswapFactorys (historical) 🔥
+   --  Gets uniswapFactorys.
+   procedure Uniswap_V2_Get_Uniswap_Factorys__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2UniswapFactoryV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2UniswapFactoryDTO_Type_Vectors.Vector);
 
-   --  UserV2s (historical) 🔥
-   --  Gets userv2s.
-   procedure Uniswap_V2_Get_User_V2s__historical
+   --  Users (historical) 🔥
+   --  Gets users.
+   procedure Uniswap_V2_Get_Users__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2UserV2DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2UserDTO_Type_Vectors.Vector);
 
-   --  BundleV3s (historical) 🔥
-   --  Gets bundlev3s.
-   procedure Uniswap_V3_Get_Bundle_V3s__historical
+   --  LiquidityPositionSnapshots (current)
+   --  Gets liquidityPositionSnapshots.
+   procedure Uniswap_V2_Liquidity_Position_Snapshots__current
       (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3BundleV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2LiquidityPositionSnapshotDTO_Type_Vectors.Vector);
 
-   --  Bundles (current)
-   --  Gets bundles.
-   procedure Uniswap_V3_Get_Bundles__current
+   --  LiquidityPositions (current)
+   --  Gets liquidityPositions.
+   procedure Uniswap_V2_Liquidity_Positions__current
       (Client : in out Client_Type;
-       Result : out .Models.UniswapV3BundleV3DTO_Type_Vectors.Vector);
-
-   --  BurnV3s (historical) 🔥
-   --  Gets burnv3s.
-   procedure Uniswap_V3_Get_Burn_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Pool : in Swagger.Nullable_UString;
-       Token_0 : in Swagger.Nullable_UString;
-       Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3BurnV3DTO_Type_Vectors.Vector);
-
-   --  Burns (current)
-   --  Gets burns.
-   procedure Uniswap_V3_Get_Burns__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3BurnV3DTO_Type_Vectors.Vector);
-
-   --  DayData (current)
-   --  Gets uniswapv3 day data.
-   procedure Uniswap_V3_Get_Day_Data__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV3UniswapDayDataV3DTO_Type_Vectors.Vector);
-
-   --  FactoryV3s (historical) 🔥
-   --  Gets factoryv3s.
-   procedure Uniswap_V3_Get_Factory_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3FactoryV3DTO_Type_Vectors.Vector);
-
-   --  Factory (current)
-   --  Gets factory.
-   procedure Uniswap_V3_Get_Factory__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV3FactoryV3DTO_Type_Vectors.Vector);
-
-   --  MintV3s (historical) 🔥
-   --  Gets mintv3s.
-   procedure Uniswap_V3_Get_Mint_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Pool : in Swagger.Nullable_UString;
-       Token_0 : in Swagger.Nullable_UString;
-       Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3MintV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2LiquidityPositionDTO_Type_Vectors.Vector);
 
    --  Mints (current)
    --  Gets mints.
-   procedure Uniswap_V3_Get_Mints__current
+   procedure Uniswap_V2_Mints__current
       (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3MintV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV2MintDTO_Type_Vectors.Vector);
 
-   --  PoolDayDataV3s (historical) 🔥
-   --  Gets pooldaydatav3s.
-   procedure Uniswap_V3_Get_Pool_Day_Data_V3s__historical
+   --  PairDayDatas (current)
+   --  Gets pairDayDatas.
+   procedure Uniswap_V2_Pair_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2PairDayDataDTO_Type_Vectors.Vector);
+
+   --  PairHourDatas (current)
+   --  Gets pairHourDatas.
+   procedure Uniswap_V2_Pair_Hour_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2PairHourDataDTO_Type_Vectors.Vector);
+
+   --  Pairs (current)
+   --  Gets pairs.
+   procedure Uniswap_V2_Pairs__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
+
+   --  TokenDayDatas (current)
+   --  Gets tokenDayDatas.
+   procedure Uniswap_V2_Token_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
+
+   --  Transactions (current)
+   --  Gets transactions.
+   procedure Uniswap_V2_Transactions__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2TransactionDTO_Type_Vectors.Vector);
+
+   --  UniswapDayDatas (current)
+   --  Gets uniswapDayDatas.
+   procedure Uniswap_V2_Uniswap_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2UniswapDayDataDTO_Type_Vectors.Vector);
+
+   --  UniswapFactorys (current)
+   --  Gets uniswapFactorys.
+   procedure Uniswap_V2_Uniswap_Factorys__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2UniswapFactoryDTO_Type_Vectors.Vector);
+
+   --  Users (current)
+   --  Gets users.
+   procedure Uniswap_V2_Users__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2UserDTO_Type_Vectors.Vector);
+
+   --  Bundles (current)
+   --  Gets bundles.
+   procedure Uniswap_V3_Bundles__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3BundleDTO_Type_Vectors.Vector);
+
+   --  Burns (current)
+   --  Gets burns.
+   procedure Uniswap_V3_Burns__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3BurnDTO_Type_Vectors.Vector);
+
+   --  Factorys (current)
+   --  Gets factorys.
+   procedure Uniswap_V3_Factorys__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3FactoryDTO_Type_Vectors.Vector);
+
+   --  Bundles (historical) 🔥
+   --  Gets bundles.
+   procedure Uniswap_V3_Get_Bundles__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3BundleDTO_Type_Vectors.Vector);
+
+   --  Burns (historical) 🔥
+   --  Gets burns.
+   procedure Uniswap_V3_Get_Burns__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1100,97 +1502,87 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pool : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolDayDataV3DTO_Type_Vectors.Vector);
-
-   --  PoolHourDataV3s (historical) 🔥
-   --  Gets poolhourdatav3s.
-   procedure Uniswap_V3_Get_Pool_Hour_Data_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Pool : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolHourDataV3DTO_Type_Vectors.Vector);
-
-   --  PoolV3s (historical) 🔥
-   --  Gets poolv3s.
-   procedure Uniswap_V3_Get_Pool_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3BurnDTO_Type_Vectors.Vector);
 
-   --  PoolsDayData (current)
-   --  Gets pools day data.
-   procedure Uniswap_V3_Get_Pools_Day_Data__current
+   --  Factorys (historical) 🔥
+   --  Gets factorys.
+   procedure Uniswap_V3_Get_Factorys__historical
       (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolDayDataV3DTO_Type_Vectors.Vector);
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3FactoryDTO_Type_Vectors.Vector);
 
-   --  PoolsHourData (current)
-   --  Gets pools hour data.
-   procedure Uniswap_V3_Get_Pools_Hour_Data__current
+   --  Mints (historical) 🔥
+   --  Gets mints.
+   procedure Uniswap_V3_Get_Mints__historical
       (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolHourDataV3DTO_Type_Vectors.Vector);
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Pool : in Swagger.Nullable_UString;
+       Token_0 : in Swagger.Nullable_UString;
+       Token_1 : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3MintDTO_Type_Vectors.Vector);
 
-   --  Pools (current) 🔥
+   --  PoolDayDatas (historical) 🔥
+   --  Gets poolDayDatas.
+   procedure Uniswap_V3_Get_Pool_Day_Datas__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3PoolDayDataDTO_Type_Vectors.Vector);
+
+   --  PoolHourDatas (historical) 🔥
+   --  Gets poolHourDatas.
+   procedure Uniswap_V3_Get_Pool_Hour_Datas__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3PoolHourDataDTO_Type_Vectors.Vector);
+
+   --  Pools (historical) 🔥
    --  Gets pools.
-   procedure Uniswap_V3_Get_Pools__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PoolV3DTO_Type_Vectors.Vector);
-
-   --  PositionSnapshotV3s (historical) 🔥
-   --  Gets positionsnapshotv3s.
-   procedure Uniswap_V3_Get_Position_Snapshot_V3s__historical
+   procedure Uniswap_V3_Get_Pools__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Pool : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PositionSnapshotV3DTO_Type_Vectors.Vector);
-
-   --  PositionV3s (historical) 🔥
-   --  Gets positionv3s.
-   procedure Uniswap_V3_Get_Position_V3s__historical
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Pool : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PositionV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3PoolDTO_Type_Vectors.Vector);
 
-   --  PositionsSnapshots (current)
-   --  Gets positions snapshots.
-   procedure Uniswap_V3_Get_Positions_Snapshots__current
+   --  PositionSnapshots (historical) 🔥
+   --  Gets positionSnapshots.
+   procedure Uniswap_V3_Get_Position_Snapshots__historical
       (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PositionSnapshotV3DTO_Type_Vectors.Vector);
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3PositionSnapshotDTO_Type_Vectors.Vector);
 
-   --  Positions (current)
+   --  Positions (historical) 🔥
    --  Gets positions.
-   procedure Uniswap_V3_Get_Positions__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3PositionV3DTO_Type_Vectors.Vector);
-
-   --  SwapV3s (historical) 🔥
-   --  Gets swapv3s.
-   procedure Uniswap_V3_Get_Swap_V3s__historical
+   procedure Uniswap_V3_Get_Positions__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1200,18 +1592,11 @@ package .Clients is
        Pool : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3SwapV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3PositionDTO_Type_Vectors.Vector);
 
-   --  Swaps (current) 🔥
+   --  Swaps (historical) 🔥
    --  Gets swaps.
-   procedure Uniswap_V3_Get_Swaps__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3SwapV3DTO_Type_Vectors.Vector);
-
-   --  TickDayDataV3s (historical) 🔥
-   --  Gets tickdaydatav3s.
-   procedure Uniswap_V3_Get_Tick_Day_Data_V3s__historical
+   procedure Uniswap_V3_Get_Swaps__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1219,11 +1604,13 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pool : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TickDayDataV3DTO_Type_Vectors.Vector);
+       Token_0 : in Swagger.Nullable_UString;
+       Token_1 : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3SwapDTO_Type_Vectors.Vector);
 
-   --  TickV3s (historical) 🔥
-   --  Gets tickv3s.
-   procedure Uniswap_V3_Get_Tick_V3s__historical
+   --  TickDayDatas (historical) 🔥
+   --  Gets tickDayDatas.
+   procedure Uniswap_V3_Get_Tick_Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1231,35 +1618,33 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Pool : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TickV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3TickDayDataDTO_Type_Vectors.Vector);
 
-   --  TicksDayData (current)
-   --  Gets ticks day data.
-   procedure Uniswap_V3_Get_Ticks_Day_Data__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TickDayDataV3DTO_Type_Vectors.Vector);
-
-   --  Ticks (current)
+   --  Ticks (historical) 🔥
    --  Gets ticks.
-   procedure Uniswap_V3_Get_Ticks__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TickV3DTO_Type_Vectors.Vector);
-
-   --  TokenHourDataV3s (historical) 🔥
-   --  Gets tokenhourdatav3s.
-   procedure Uniswap_V3_Get_Token_Hour_Data_V3s__historical
+   procedure Uniswap_V3_Get_Ticks__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TokenHourDataV3DTO_Type_Vectors.Vector);
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3TickDTO_Type_Vectors.Vector);
+
+   --  TokenHourDatas (historical) 🔥
+   --  Gets tokenHourDatas.
+   procedure Uniswap_V3_Get_Token_Hour_Datas__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3TokenHourDataDTO_Type_Vectors.Vector);
 
    --  TokenV3DayDatas (historical) 🔥
-   --  Gets tokenv3daydatas.
+   --  Gets tokenV3DayDatas.
    procedure Uniswap_V3_Get_Token_V3Day_Datas__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
@@ -1269,9 +1654,9 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Result : out .Models.UniswapV3TokenV3DayDataDTO_Type_Vectors.Vector);
 
-   --  TokenV3s (historical) 🔥
-   --  Gets tokenv3s.
-   procedure Uniswap_V3_Get_Token_V3s__historical
+   --  Tokens (historical) 🔥
+   --  Gets tokens.
+   procedure Uniswap_V3_Get_Tokens__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1280,49 +1665,114 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Symbol : in Swagger.Nullable_UString;
        Name : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TokenV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3TokenDTO_Type_Vectors.Vector);
 
-   --  TokensDayData (current)
-   --  Gets tokens day data.
-   procedure Uniswap_V3_Get_Tokens_Day_Data__current
+   --  Transactions (historical) 🔥
+   --  Gets transactions.
+   procedure Uniswap_V3_Get_Transactions__historical
       (Client : in out Client_Type;
-       Filter_Token_Id : in Swagger.Nullable_UString;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3TransactionDTO_Type_Vectors.Vector);
+
+   --  UniswapDayDatas (historical) 🔥
+   --  Gets uniswapDayDatas.
+   procedure Uniswap_V3_Get_Uniswap_Day_Datas__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3UniswapDayDataDTO_Type_Vectors.Vector);
+
+   --  Mints (current)
+   --  Gets mints.
+   procedure Uniswap_V3_Mints__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3MintDTO_Type_Vectors.Vector);
+
+   --  PoolDayDatas (current)
+   --  Gets poolDayDatas.
+   procedure Uniswap_V3_Pool_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3PoolDayDataDTO_Type_Vectors.Vector);
+
+   --  PoolHourDatas (current)
+   --  Gets poolHourDatas.
+   procedure Uniswap_V3_Pool_Hour_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3PoolHourDataDTO_Type_Vectors.Vector);
+
+   --  Pools (current)
+   --  Gets pools.
+   procedure Uniswap_V3_Pools__current
+      (Client : in out Client_Type;
+       Id : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3PoolDTO_Type_Vectors.Vector);
+
+   --  PositionSnapshots (current)
+   --  Gets positionSnapshots.
+   procedure Uniswap_V3_Position_Snapshots__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3PositionSnapshotDTO_Type_Vectors.Vector);
+
+   --  Positions (current)
+   --  Gets positions.
+   procedure Uniswap_V3_Positions__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3PositionDTO_Type_Vectors.Vector);
+
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure Uniswap_V3_Swaps__current
+      (Client : in out Client_Type;
+       Pool : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV3SwapDTO_Type_Vectors.Vector);
+
+   --  TickDayDatas (current)
+   --  Gets tickDayDatas.
+   procedure Uniswap_V3_Tick_Day_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3TickDayDataDTO_Type_Vectors.Vector);
+
+   --  Ticks (current)
+   --  Gets ticks.
+   procedure Uniswap_V3_Ticks__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3TickDTO_Type_Vectors.Vector);
+
+   --  TokenHourDatas (current)
+   --  Gets tokenHourDatas.
+   procedure Uniswap_V3_Token_Hour_Datas__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV3TokenHourDataDTO_Type_Vectors.Vector);
+
+   --  TokenV3DayDatas (current)
+   --  Gets tokenV3DayDatas.
+   procedure Uniswap_V3_Token_V3Day_Datas__current
+      (Client : in out Client_Type;
        Result : out .Models.UniswapV3TokenV3DayDataDTO_Type_Vectors.Vector);
 
-   --  TokensHourData (current)
-   --  Gets tokens hour data.
-   procedure Uniswap_V3_Get_Tokens_Hour_Data__current
-      (Client : in out Client_Type;
-       Filter_Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TokenHourDataV3DTO_Type_Vectors.Vector);
-
-   --  Tokens (current) 🔥
+   --  Tokens (current)
    --  Gets tokens.
-   procedure Uniswap_V3_Get_Tokens__current
+   procedure Uniswap_V3_Tokens__current
       (Client : in out Client_Type;
-       Filter_Token_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TokenV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3TokenDTO_Type_Vectors.Vector);
 
-   --  TransactionV3s (historical) 🔥
-   --  Gets transactionv3s.
-   procedure Uniswap_V3_Get_Transaction_V3s__historical
+   --  Transactions (current)
+   --  Gets transactions.
+   procedure Uniswap_V3_Transactions__current
       (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3TransactionV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3TransactionDTO_Type_Vectors.Vector);
 
-   --  UniswapDayDataV3s (historical) 🔥
-   --  Gets uniswapdaydatav3s.
-   procedure Uniswap_V3_Get_Uniswap_Day_Data_V3s__historical
+   --  UniswapDayDatas (current)
+   --  Gets uniswapDayDatas.
+   procedure Uniswap_V3_Uniswap_Day_Datas__current
       (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV3UniswapDayDataV3DTO_Type_Vectors.Vector);
+       Result : out .Models.UniswapV3UniswapDayDataDTO_Type_Vectors.Vector);
 
 end .Clients;

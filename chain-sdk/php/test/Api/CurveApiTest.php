@@ -73,6 +73,234 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveAccountsCurrent
+     *
+     * Accounts (current).
+     *
+     */
+    public function testCurveAccountsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveAddLiquidityEventsCurrent
+     *
+     * AddLiquidityEvents (current).
+     *
+     */
+    public function testCurveAddLiquidityEventsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveAdminFeeChangeLogsCurrent
+     *
+     * AdminFeeChangeLogs (current).
+     *
+     */
+    public function testCurveAdminFeeChangeLogsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveAmplificationCoeffChangeLogsCurrent
+     *
+     * AmplificationCoeffChangeLogs (current).
+     *
+     */
+    public function testCurveAmplificationCoeffChangeLogsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveCoinsCurrent
+     *
+     * Coins (current).
+     *
+     */
+    public function testCurveCoinsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveContractVersionsCurrent
+     *
+     * ContractVersions (current).
+     *
+     */
+    public function testCurveContractVersionsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveContractsCurrent
+     *
+     * Contracts (current).
+     *
+     */
+    public function testCurveContractsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveDailyVolumesCurrent
+     *
+     * DailyVolumes (current).
+     *
+     */
+    public function testCurveDailyVolumesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveExchangesCurrent
+     *
+     * Exchanges (current).
+     *
+     */
+    public function testCurveExchangesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveFeeChangeLogsCurrent
+     *
+     * FeeChangeLogs (current).
+     *
+     */
+    public function testCurveFeeChangeLogsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeDepositsCurrent
+     *
+     * GaugeDeposits (current).
+     *
+     */
+    public function testCurveGaugeDepositsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeLiquiditysCurrent
+     *
+     * GaugeLiquiditys (current).
+     *
+     */
+    public function testCurveGaugeLiquiditysCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeTotalWeightsCurrent
+     *
+     * GaugeTotalWeights (current).
+     *
+     */
+    public function testCurveGaugeTotalWeightsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeTypeWeightsCurrent
+     *
+     * GaugeTypeWeights (current).
+     *
+     */
+    public function testCurveGaugeTypeWeightsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeTypesCurrent
+     *
+     * GaugeTypes (current).
+     *
+     */
+    public function testCurveGaugeTypesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeWeightVotesCurrent
+     *
+     * GaugeWeightVotes (current).
+     *
+     */
+    public function testCurveGaugeWeightVotesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeWeightsCurrent
+     *
+     * GaugeWeights (current).
+     *
+     */
+    public function testCurveGaugeWeightsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugeWithdrawsCurrent
+     *
+     * GaugeWithdraws (current).
+     *
+     */
+    public function testCurveGaugeWithdrawsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGaugesCurrent
+     *
+     * Gauges (current).
+     *
+     */
+    public function testCurveGaugesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetAccountsHistorical
      *
      * Accounts (historical) 🔥.
@@ -451,6 +679,162 @@ class CurveApiTest extends TestCase
      *
      */
     public function testCurveGetWeeklyVolumesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveHourlyVolumesCurrent
+     *
+     * HourlyVolumes (current).
+     *
+     */
+    public function testCurveHourlyVolumesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveLpTokensCurrent
+     *
+     * LpTokens (current).
+     *
+     */
+    public function testCurveLpTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curvePoolsCurrent
+     *
+     * Pools (current).
+     *
+     */
+    public function testCurvePoolsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveProposalVotesCurrent
+     *
+     * ProposalVotes (current).
+     *
+     */
+    public function testCurveProposalVotesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveProposalsCurrent
+     *
+     * Proposals (current).
+     *
+     */
+    public function testCurveProposalsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveRemoveLiquidityEventsCurrent
+     *
+     * RemoveLiquidityEvents (current).
+     *
+     */
+    public function testCurveRemoveLiquidityEventsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveRemoveLiquidityOneEventsCurrent
+     *
+     * RemoveLiquidityOneEvents (current).
+     *
+     */
+    public function testCurveRemoveLiquidityOneEventsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveSystemStatesCurrent
+     *
+     * SystemStates (current).
+     *
+     */
+    public function testCurveSystemStatesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveTokensCurrent
+     *
+     * Tokens (current).
+     *
+     */
+    public function testCurveTokensCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveTransferOwnershipEventsCurrent
+     *
+     * TransferOwnershipEvents (current).
+     *
+     */
+    public function testCurveTransferOwnershipEventsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveUnderlyingCoinsCurrent
+     *
+     * UnderlyingCoins (current).
+     *
+     */
+    public function testCurveUnderlyingCoinsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveVotingAppsCurrent
+     *
+     * VotingApps (current).
+     *
+     */
+    public function testCurveVotingAppsCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveWeeklyVolumesCurrent
+     *
+     * WeeklyVolumes (current).
+     *
+     */
+    public function testCurveWeeklyVolumesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -19,26 +19,28 @@ case class PairHourDataDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pair id>-<hour start timestamp>. */
+  /*  */
   id: Option[String] = None,
-  /* Hour start timestamp. */
-  date: Option[Int] = None,
-  /* Reference to pair. */
+  /* Unix timestamp for start of hour. */
+  hourStartUnix: Option[Int] = None,
+  /* Address for pair contract. */
   pair: Option[String] = None,
   /* Reserve of token0 (updated during each transaction on pair). */
   reserve0: Option[String] = None,
   /* Reserve of token1 (updated during each transaction on pair). */
   reserve1: Option[String] = None,
+  /* Total supply of liquidity token distributed to LPs. */
+  totalSupply: Option[String] = None,
   /* Reserve of token0 plus token1 stored as a derived USD amount. */
   reserveUsd: Option[String] = None,
   /* Total amount of token0 swapped throughout hour. */
-  volumeToken0: Option[String] = None,
+  hourlyVolumeToken0: Option[String] = None,
   /* Total amount of token1 swapped throughout hour. */
-  volumeToken1: Option[String] = None,
+  hourlyVolumeToken1: Option[String] = None,
   /* Total volume within pair throughout hour. */
-  volumeUsd: Option[String] = None,
+  hourlyVolumeUsd: Option[String] = None,
   /* Amount of transactions on pair throughout hour. */
-  txCount: Option[String] = None,
+  hourlyTxns: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

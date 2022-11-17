@@ -64,6 +64,254 @@ public class CurveApiTest {
     private final CurveApi api = new CurveApi();
 
     /**
+     * Accounts (current)
+     *
+     * Gets accounts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveAccountsCurrentTest() throws ApiException {
+        List<CurveAccountDTO> response = api.curveAccountsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * AddLiquidityEvents (current)
+     *
+     * Gets addLiquidityEvents.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveAddLiquidityEventsCurrentTest() throws ApiException {
+        List<CurveAddLiquidityEventDTO> response = api.curveAddLiquidityEventsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * AdminFeeChangeLogs (current)
+     *
+     * Gets adminFeeChangeLogs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveAdminFeeChangeLogsCurrentTest() throws ApiException {
+        List<CurveAdminFeeChangeLogDTO> response = api.curveAdminFeeChangeLogsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     *
+     * Gets amplificationCoeffChangeLogs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveAmplificationCoeffChangeLogsCurrentTest() throws ApiException {
+        List<CurveAmplificationCoeffChangeLogDTO> response = api.curveAmplificationCoeffChangeLogsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Coins (current)
+     *
+     * Gets coins.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveCoinsCurrentTest() throws ApiException {
+        List<CurveCoinDTO> response = api.curveCoinsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * ContractVersions (current)
+     *
+     * Gets contractVersions.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveContractVersionsCurrentTest() throws ApiException {
+        List<CurveContractVersionDTO> response = api.curveContractVersionsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Contracts (current)
+     *
+     * Gets contracts.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveContractsCurrentTest() throws ApiException {
+        List<CurveContractDTO> response = api.curveContractsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * DailyVolumes (current)
+     *
+     * Gets dailyVolumes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveDailyVolumesCurrentTest() throws ApiException {
+        List<CurveDailyVolumeDTO> response = api.curveDailyVolumesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Exchanges (current)
+     *
+     * Gets exchanges.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveExchangesCurrentTest() throws ApiException {
+        String pool = null;
+        List<CurveExchangeDTO> response = api.curveExchangesCurrent(pool);
+        // TODO: test validations
+    }
+
+    /**
+     * FeeChangeLogs (current)
+     *
+     * Gets feeChangeLogs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveFeeChangeLogsCurrentTest() throws ApiException {
+        List<CurveFeeChangeLogDTO> response = api.curveFeeChangeLogsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeDeposits (current)
+     *
+     * Gets gaugeDeposits.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeDepositsCurrentTest() throws ApiException {
+        List<CurveGaugeDepositDTO> response = api.curveGaugeDepositsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeLiquiditys (current)
+     *
+     * Gets gaugeLiquiditys.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeLiquiditysCurrentTest() throws ApiException {
+        List<CurveGaugeLiquidityDTO> response = api.curveGaugeLiquiditysCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeTotalWeights (current)
+     *
+     * Gets gaugeTotalWeights.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeTotalWeightsCurrentTest() throws ApiException {
+        List<CurveGaugeTotalWeightDTO> response = api.curveGaugeTotalWeightsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeTypeWeights (current)
+     *
+     * Gets gaugeTypeWeights.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeTypeWeightsCurrentTest() throws ApiException {
+        List<CurveGaugeTypeWeightDTO> response = api.curveGaugeTypeWeightsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeTypes (current)
+     *
+     * Gets gaugeTypes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeTypesCurrentTest() throws ApiException {
+        List<CurveGaugeTypeDTO> response = api.curveGaugeTypesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeWeightVotes (current)
+     *
+     * Gets gaugeWeightVotes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeWeightVotesCurrentTest() throws ApiException {
+        List<CurveGaugeWeightVoteDTO> response = api.curveGaugeWeightVotesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeWeights (current)
+     *
+     * Gets gaugeWeights.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeWeightsCurrentTest() throws ApiException {
+        List<CurveGaugeWeightDTO> response = api.curveGaugeWeightsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GaugeWithdraws (current)
+     *
+     * Gets gaugeWithdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugeWithdrawsCurrentTest() throws ApiException {
+        List<CurveGaugeWithdrawDTO> response = api.curveGaugeWithdrawsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Gauges (current)
+     *
+     * Gets gauges.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGaugesCurrentTest() throws ApiException {
+        List<CurveGaugeDTO> response = api.curveGaugesCurrent();
+        // TODO: test validations
+    }
+
+    /**
      * Accounts (historical) 🔥
      *
      * Gets accounts.
@@ -85,7 +333,7 @@ public class CurveApiTest {
     /**
      * AddLiquidityEvents (historical) 🔥
      *
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      *
      * @throws ApiException if the Api call fails
      */
@@ -104,7 +352,7 @@ public class CurveApiTest {
     /**
      * AdminFeeChangeLogs (historical) 🔥
      *
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      *
      * @throws ApiException if the Api call fails
      */
@@ -123,7 +371,7 @@ public class CurveApiTest {
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
      *
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      *
      * @throws ApiException if the Api call fails
      */
@@ -161,7 +409,7 @@ public class CurveApiTest {
     /**
      * ContractVersions (historical) 🔥
      *
-     * Gets contractversions.
+     * Gets contractVersions.
      *
      * @throws ApiException if the Api call fails
      */
@@ -198,7 +446,7 @@ public class CurveApiTest {
     /**
      * DailyVolumes (historical) 🔥
      *
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -236,7 +484,7 @@ public class CurveApiTest {
     /**
      * FeeChangeLogs (historical) 🔥
      *
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      *
      * @throws ApiException if the Api call fails
      */
@@ -255,7 +503,7 @@ public class CurveApiTest {
     /**
      * GaugeDeposits (historical) 🔥
      *
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      *
      * @throws ApiException if the Api call fails
      */
@@ -273,7 +521,7 @@ public class CurveApiTest {
     /**
      * GaugeLiquiditys (historical) 🔥
      *
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      *
      * @throws ApiException if the Api call fails
      */
@@ -292,7 +540,7 @@ public class CurveApiTest {
     /**
      * GaugeTotalWeights (historical) 🔥
      *
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      *
      * @throws ApiException if the Api call fails
      */
@@ -310,7 +558,7 @@ public class CurveApiTest {
     /**
      * GaugeTypeWeights (historical) 🔥
      *
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      *
      * @throws ApiException if the Api call fails
      */
@@ -328,7 +576,7 @@ public class CurveApiTest {
     /**
      * GaugeTypes (historical) 🔥
      *
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -347,7 +595,7 @@ public class CurveApiTest {
     /**
      * GaugeWeightVotes (historical) 🔥
      *
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -366,7 +614,7 @@ public class CurveApiTest {
     /**
      * GaugeWeights (historical) 🔥
      *
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      *
      * @throws ApiException if the Api call fails
      */
@@ -384,7 +632,7 @@ public class CurveApiTest {
     /**
      * GaugeWithdraws (historical) 🔥
      *
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      *
      * @throws ApiException if the Api call fails
      */
@@ -422,7 +670,7 @@ public class CurveApiTest {
     /**
      * HourlyVolumes (historical) 🔥
      *
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -441,7 +689,7 @@ public class CurveApiTest {
     /**
      * LpTokens (historical) 🔥
      *
-     * Gets lptokens.
+     * Gets lpTokens.
      *
      * @throws ApiException if the Api call fails
      */
@@ -482,7 +730,7 @@ public class CurveApiTest {
     /**
      * ProposalVotes (historical) 🔥
      *
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -518,7 +766,7 @@ public class CurveApiTest {
     /**
      * RemoveLiquidityEvents (historical) 🔥
      *
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      *
      * @throws ApiException if the Api call fails
      */
@@ -537,7 +785,7 @@ public class CurveApiTest {
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
      *
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      *
      * @throws ApiException if the Api call fails
      */
@@ -556,7 +804,7 @@ public class CurveApiTest {
     /**
      * SystemStates (historical) 🔥
      *
-     * Gets systemstates.
+     * Gets systemStates.
      *
      * @throws ApiException if the Api call fails
      */
@@ -595,7 +843,7 @@ public class CurveApiTest {
     /**
      * TransferOwnershipEvents (historical) 🔥
      *
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      *
      * @throws ApiException if the Api call fails
      */
@@ -614,7 +862,7 @@ public class CurveApiTest {
     /**
      * UnderlyingCoins (historical) 🔥
      *
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      *
      * @throws ApiException if the Api call fails
      */
@@ -633,7 +881,7 @@ public class CurveApiTest {
     /**
      * VotingApps (historical) 🔥
      *
-     * Gets votingapps.
+     * Gets votingApps.
      *
      * @throws ApiException if the Api call fails
      */
@@ -652,7 +900,7 @@ public class CurveApiTest {
     /**
      * WeeklyVolumes (historical) 🔥
      *
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      *
      * @throws ApiException if the Api call fails
      */
@@ -665,6 +913,176 @@ public class CurveApiTest {
         String id = null;
         String pool = null;
         List<CurveWeeklyVolumeDTO> response = api.curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+        // TODO: test validations
+    }
+
+    /**
+     * HourlyVolumes (current)
+     *
+     * Gets hourlyVolumes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveHourlyVolumesCurrentTest() throws ApiException {
+        List<CurveHourlyVolumeDTO> response = api.curveHourlyVolumesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * LpTokens (current)
+     *
+     * Gets lpTokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveLpTokensCurrentTest() throws ApiException {
+        List<CurveLpTokenDTO> response = api.curveLpTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Pools (current)
+     *
+     * Gets pools.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curvePoolsCurrentTest() throws ApiException {
+        String id = null;
+        List<CurvePoolDTO> response = api.curvePoolsCurrent(id);
+        // TODO: test validations
+    }
+
+    /**
+     * ProposalVotes (current)
+     *
+     * Gets proposalVotes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveProposalVotesCurrentTest() throws ApiException {
+        List<CurveProposalVoteDTO> response = api.curveProposalVotesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Proposals (current)
+     *
+     * Gets proposals.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveProposalsCurrentTest() throws ApiException {
+        List<CurveProposalDTO> response = api.curveProposalsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * RemoveLiquidityEvents (current)
+     *
+     * Gets removeLiquidityEvents.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveRemoveLiquidityEventsCurrentTest() throws ApiException {
+        List<CurveRemoveLiquidityEventDTO> response = api.curveRemoveLiquidityEventsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     *
+     * Gets removeLiquidityOneEvents.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveRemoveLiquidityOneEventsCurrentTest() throws ApiException {
+        List<CurveRemoveLiquidityOneEventDTO> response = api.curveRemoveLiquidityOneEventsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * SystemStates (current)
+     *
+     * Gets systemStates.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveSystemStatesCurrentTest() throws ApiException {
+        List<CurveSystemStateDTO> response = api.curveSystemStatesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
+     *
+     * Gets tokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveTokensCurrentTest() throws ApiException {
+        List<CurveTokenDTO> response = api.curveTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TransferOwnershipEvents (current)
+     *
+     * Gets transferOwnershipEvents.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveTransferOwnershipEventsCurrentTest() throws ApiException {
+        List<CurveTransferOwnershipEventDTO> response = api.curveTransferOwnershipEventsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * UnderlyingCoins (current)
+     *
+     * Gets underlyingCoins.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveUnderlyingCoinsCurrentTest() throws ApiException {
+        List<CurveUnderlyingCoinDTO> response = api.curveUnderlyingCoinsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * VotingApps (current)
+     *
+     * Gets votingApps.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveVotingAppsCurrentTest() throws ApiException {
+        List<CurveVotingAppDTO> response = api.curveVotingAppsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * WeeklyVolumes (current)
+     *
+     * Gets weeklyVolumes.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveWeeklyVolumesCurrentTest() throws ApiException {
+        List<CurveWeeklyVolumeDTO> response = api.curveWeeklyVolumesCurrent();
         // TODO: test validations
     }
 

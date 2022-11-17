@@ -34,6 +34,56 @@ public:
 	DexManager();
 	virtual ~DexManager();
 
+/*! \brief Batchs (current). *Synchronous*
+ *
+ * Gets batchs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexBatchs (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Batchs (current). *Asynchronous*
+ *
+ * Gets batchs.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexBatchs (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Deposits (current). *Synchronous*
+ *
+ * Gets deposits.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexDeposits (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Deposits (current). *Asynchronous*
+ *
+ * Gets deposits.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexDeposits (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Batchs (historical) 🔥. *Synchronous*
  *
  * Gets batchs.
@@ -367,7 +417,7 @@ bool dexGetUsers (historical)Async(char * accessToken,
 
 /*! \brief WithdrawRequests (historical) 🔥. *Synchronous*
  *
- * Gets withdrawrequests.
+ * Gets withdrawRequests.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -385,7 +435,7 @@ bool dexGetWithdrawRequests (historical)Sync(char * accessToken,
 
 /*! \brief WithdrawRequests (historical) 🔥. *Asynchronous*
  *
- * Gets withdrawrequests.
+ * Gets withdrawRequests.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -435,6 +485,231 @@ bool dexGetWithdraws (historical)Sync(char * accessToken,
  */
 bool dexGetWithdraws (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, 
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Orders (current). *Synchronous*
+ *
+ * Gets orders.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexOrders (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Orders (current). *Asynchronous*
+ *
+ * Gets orders.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexOrders (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Prices (current). *Synchronous*
+ *
+ * Gets prices.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexPrices (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Prices (current). *Asynchronous*
+ *
+ * Gets prices.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexPrices (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Solutions (current). *Synchronous*
+ *
+ * Gets solutions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexSolutions (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Solutions (current). *Asynchronous*
+ *
+ * Gets solutions.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexSolutions (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Statss (current). *Synchronous*
+ *
+ * Gets statss.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexStatss (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Statss (current). *Asynchronous*
+ *
+ * Gets statss.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexStatss (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Tokens (current). *Synchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexTokens (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Tokens (current). *Asynchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexTokens (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Trades (current). *Synchronous*
+ *
+ * Gets trades.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexTrades (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Trades (current). *Asynchronous*
+ *
+ * Gets trades.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexTrades (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Users (current). *Synchronous*
+ *
+ * Gets users.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexUsers (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Users (current). *Asynchronous*
+ *
+ * Gets users.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexUsers (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief WithdrawRequests (current). *Synchronous*
+ *
+ * Gets withdrawRequests.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexWithdrawRequests (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief WithdrawRequests (current). *Asynchronous*
+ *
+ * Gets withdrawRequests.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexWithdrawRequests (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Withdraws (current). *Synchronous*
+ *
+ * Gets withdraws.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexWithdraws (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Withdraws (current). *Asynchronous*
+ *
+ * Gets withdraws.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexWithdraws (current)Async(char * accessToken,
+	
 	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
 	, void* userData);
 

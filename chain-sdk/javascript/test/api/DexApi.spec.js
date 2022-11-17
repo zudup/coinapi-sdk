@@ -48,6 +48,26 @@
   }
 
   describe('DexApi', function() {
+    describe('dexBatchsCurrent', function() {
+      it('should call dexBatchsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexBatchsCurrent
+        //instance.dexBatchsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexDepositsCurrent', function() {
+      it('should call dexDepositsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexDepositsCurrent
+        //instance.dexDepositsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('dexGetBatchsHistorical', function() {
       it('should call dexGetBatchsHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetBatchsHistorical
@@ -152,6 +172,96 @@
       it('should call dexGetWithdrawsHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetWithdrawsHistorical
         //instance.dexGetWithdrawsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexOrdersCurrent', function() {
+      it('should call dexOrdersCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexOrdersCurrent
+        //instance.dexOrdersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexPricesCurrent', function() {
+      it('should call dexPricesCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexPricesCurrent
+        //instance.dexPricesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexSolutionsCurrent', function() {
+      it('should call dexSolutionsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexSolutionsCurrent
+        //instance.dexSolutionsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexStatssCurrent', function() {
+      it('should call dexStatssCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexStatssCurrent
+        //instance.dexStatssCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexTokensCurrent', function() {
+      it('should call dexTokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexTokensCurrent
+        //instance.dexTokensCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexTradesCurrent', function() {
+      it('should call dexTradesCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexTradesCurrent
+        //instance.dexTradesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexUsersCurrent', function() {
+      it('should call dexUsersCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexUsersCurrent
+        //instance.dexUsersCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexWithdrawRequestsCurrent', function() {
+      it('should call dexWithdrawRequestsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexWithdrawRequestsCurrent
+        //instance.dexWithdrawRequestsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexWithdrawsCurrent', function() {
+      it('should call dexWithdrawsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexWithdrawsCurrent
+        //instance.dexWithdrawsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

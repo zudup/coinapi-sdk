@@ -19,15 +19,13 @@ case class PairDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
+  /*  */
+  vid: Option[Long] = None,
   /* Pair contract address. */
   id: Option[String] = None,
-  /* Factory contract address. */
-  factory: Option[String] = None,
-  /* Friendly name, format: <token0 name>-<token1 name> */
-  name: Option[String] = None,
   /* Reference to token0 as stored in pair contract. */
   token0: Option[String] = None,
-  /* Reference to token0 as stored in pair contract. */
+  /* Reference to token1 as stored in pair contract. */
   token1: Option[String] = None,
   /* Reserve of token0. */
   reserve0: Option[String] = None,
@@ -53,16 +51,11 @@ case class PairDTO (
   volumeUsd: Option[String] = None,
   /* Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. */
   untrackedVolumeUsd: Option[String] = None,
-  /* All time amount of transactions on this pair. */
-  txCount: Option[String] = None,
+  txCount: Option[BigInteger] = None,
+  /* Timestamp contract was created. */
+  createdAtTimestamp: Option[OffsetDateTime] = None,
   /* Total number of LPs. */
   liquidityProviderCount: Option[String] = None,
-  /* Timestamp. */
-  timestamp: Option[String] = None,
-  /* Block number in which pair information was created in. */
-  block: Option[String] = None,
-  /*  */
-  vid: Option[Long] = None,
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel
 

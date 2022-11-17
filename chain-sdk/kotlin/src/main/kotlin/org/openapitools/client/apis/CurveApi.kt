@@ -77,6 +77,1287 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return kotlin.collections.List<CurveAccountDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveAccountsCurrent() : kotlin.collections.List<CurveAccountDTO> {
+        val localVarResponse = curveAccountsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveAccountDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Accounts (current)
+     * Gets accounts.
+     * @return ApiResponse<kotlin.collections.List<CurveAccountDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveAccountsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveAccountDTO>?> {
+        val localVariableConfig = curveAccountsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveAccountDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveAccountsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveAccountsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/accounts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * AddLiquidityEvents (current)
+     * Gets addLiquidityEvents.
+     * @return kotlin.collections.List<CurveAddLiquidityEventDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveAddLiquidityEventsCurrent() : kotlin.collections.List<CurveAddLiquidityEventDTO> {
+        val localVarResponse = curveAddLiquidityEventsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveAddLiquidityEventDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * AddLiquidityEvents (current)
+     * Gets addLiquidityEvents.
+     * @return ApiResponse<kotlin.collections.List<CurveAddLiquidityEventDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveAddLiquidityEventsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveAddLiquidityEventDTO>?> {
+        val localVariableConfig = curveAddLiquidityEventsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveAddLiquidityEventDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveAddLiquidityEventsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveAddLiquidityEventsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/addLiquidityEvents/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * AdminFeeChangeLogs (current)
+     * Gets adminFeeChangeLogs.
+     * @return kotlin.collections.List<CurveAdminFeeChangeLogDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveAdminFeeChangeLogsCurrent() : kotlin.collections.List<CurveAdminFeeChangeLogDTO> {
+        val localVarResponse = curveAdminFeeChangeLogsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveAdminFeeChangeLogDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * AdminFeeChangeLogs (current)
+     * Gets adminFeeChangeLogs.
+     * @return ApiResponse<kotlin.collections.List<CurveAdminFeeChangeLogDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveAdminFeeChangeLogsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveAdminFeeChangeLogDTO>?> {
+        val localVariableConfig = curveAdminFeeChangeLogsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveAdminFeeChangeLogDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveAdminFeeChangeLogsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveAdminFeeChangeLogsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/adminFeeChangeLogs/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     * Gets amplificationCoeffChangeLogs.
+     * @return kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveAmplificationCoeffChangeLogsCurrent() : kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO> {
+        val localVarResponse = curveAmplificationCoeffChangeLogsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * AmplificationCoeffChangeLogs (current)
+     * Gets amplificationCoeffChangeLogs.
+     * @return ApiResponse<kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveAmplificationCoeffChangeLogsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO>?> {
+        val localVariableConfig = curveAmplificationCoeffChangeLogsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveAmplificationCoeffChangeLogsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveAmplificationCoeffChangeLogsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/amplificationCoeffChangeLogs/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Coins (current)
+     * Gets coins.
+     * @return kotlin.collections.List<CurveCoinDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveCoinsCurrent() : kotlin.collections.List<CurveCoinDTO> {
+        val localVarResponse = curveCoinsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveCoinDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Coins (current)
+     * Gets coins.
+     * @return ApiResponse<kotlin.collections.List<CurveCoinDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveCoinsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveCoinDTO>?> {
+        val localVariableConfig = curveCoinsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveCoinDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveCoinsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveCoinsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/coins/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * ContractVersions (current)
+     * Gets contractVersions.
+     * @return kotlin.collections.List<CurveContractVersionDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveContractVersionsCurrent() : kotlin.collections.List<CurveContractVersionDTO> {
+        val localVarResponse = curveContractVersionsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveContractVersionDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * ContractVersions (current)
+     * Gets contractVersions.
+     * @return ApiResponse<kotlin.collections.List<CurveContractVersionDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveContractVersionsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveContractVersionDTO>?> {
+        val localVariableConfig = curveContractVersionsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveContractVersionDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveContractVersionsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveContractVersionsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/contractVersions/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Contracts (current)
+     * Gets contracts.
+     * @return kotlin.collections.List<CurveContractDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveContractsCurrent() : kotlin.collections.List<CurveContractDTO> {
+        val localVarResponse = curveContractsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveContractDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Contracts (current)
+     * Gets contracts.
+     * @return ApiResponse<kotlin.collections.List<CurveContractDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveContractsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveContractDTO>?> {
+        val localVariableConfig = curveContractsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveContractDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveContractsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveContractsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/contracts/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * DailyVolumes (current)
+     * Gets dailyVolumes.
+     * @return kotlin.collections.List<CurveDailyVolumeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveDailyVolumesCurrent() : kotlin.collections.List<CurveDailyVolumeDTO> {
+        val localVarResponse = curveDailyVolumesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveDailyVolumeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * DailyVolumes (current)
+     * Gets dailyVolumes.
+     * @return ApiResponse<kotlin.collections.List<CurveDailyVolumeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveDailyVolumesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveDailyVolumeDTO>?> {
+        val localVariableConfig = curveDailyVolumesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveDailyVolumeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveDailyVolumesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveDailyVolumesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/dailyVolumes/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Exchanges (current)
+     * Gets exchanges.
+     * @param pool  (optional)
+     * @return kotlin.collections.List<CurveExchangeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveExchangesCurrent(pool: kotlin.String? = null) : kotlin.collections.List<CurveExchangeDTO> {
+        val localVarResponse = curveExchangesCurrentWithHttpInfo(pool = pool)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveExchangeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Exchanges (current)
+     * Gets exchanges.
+     * @param pool  (optional)
+     * @return ApiResponse<kotlin.collections.List<CurveExchangeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveExchangesCurrentWithHttpInfo(pool: kotlin.String?) : ApiResponse<kotlin.collections.List<CurveExchangeDTO>?> {
+        val localVariableConfig = curveExchangesCurrentRequestConfig(pool = pool)
+
+        return request<Unit, kotlin.collections.List<CurveExchangeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveExchangesCurrent
+     *
+     * @param pool  (optional)
+     * @return RequestConfig
+     */
+    fun curveExchangesCurrentRequestConfig(pool: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (pool != null) {
+                    put("pool", listOf(pool.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/exchanges/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * FeeChangeLogs (current)
+     * Gets feeChangeLogs.
+     * @return kotlin.collections.List<CurveFeeChangeLogDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveFeeChangeLogsCurrent() : kotlin.collections.List<CurveFeeChangeLogDTO> {
+        val localVarResponse = curveFeeChangeLogsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveFeeChangeLogDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * FeeChangeLogs (current)
+     * Gets feeChangeLogs.
+     * @return ApiResponse<kotlin.collections.List<CurveFeeChangeLogDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveFeeChangeLogsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveFeeChangeLogDTO>?> {
+        val localVariableConfig = curveFeeChangeLogsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveFeeChangeLogDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveFeeChangeLogsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveFeeChangeLogsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/feeChangeLogs/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeDeposits (current)
+     * Gets gaugeDeposits.
+     * @return kotlin.collections.List<CurveGaugeDepositDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeDepositsCurrent() : kotlin.collections.List<CurveGaugeDepositDTO> {
+        val localVarResponse = curveGaugeDepositsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeDepositDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeDeposits (current)
+     * Gets gaugeDeposits.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeDepositDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeDepositsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeDepositDTO>?> {
+        val localVariableConfig = curveGaugeDepositsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeDepositDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeDepositsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeDepositsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeDeposits/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeLiquiditys (current)
+     * Gets gaugeLiquiditys.
+     * @return kotlin.collections.List<CurveGaugeLiquidityDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeLiquiditysCurrent() : kotlin.collections.List<CurveGaugeLiquidityDTO> {
+        val localVarResponse = curveGaugeLiquiditysCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeLiquidityDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeLiquiditys (current)
+     * Gets gaugeLiquiditys.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeLiquiditysCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?> {
+        val localVariableConfig = curveGaugeLiquiditysCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeLiquidityDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeLiquiditysCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeLiquiditysCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeLiquiditys/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeTotalWeights (current)
+     * Gets gaugeTotalWeights.
+     * @return kotlin.collections.List<CurveGaugeTotalWeightDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeTotalWeightsCurrent() : kotlin.collections.List<CurveGaugeTotalWeightDTO> {
+        val localVarResponse = curveGaugeTotalWeightsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeTotalWeightDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeTotalWeights (current)
+     * Gets gaugeTotalWeights.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeTotalWeightDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeTotalWeightsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeTotalWeightDTO>?> {
+        val localVariableConfig = curveGaugeTotalWeightsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeTotalWeightDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeTotalWeightsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeTotalWeightsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeTotalWeights/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeTypeWeights (current)
+     * Gets gaugeTypeWeights.
+     * @return kotlin.collections.List<CurveGaugeTypeWeightDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeTypeWeightsCurrent() : kotlin.collections.List<CurveGaugeTypeWeightDTO> {
+        val localVarResponse = curveGaugeTypeWeightsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeTypeWeightDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeTypeWeights (current)
+     * Gets gaugeTypeWeights.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeTypeWeightDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeTypeWeightsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeTypeWeightDTO>?> {
+        val localVariableConfig = curveGaugeTypeWeightsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeTypeWeightDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeTypeWeightsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeTypeWeightsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeTypeWeights/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeTypes (current)
+     * Gets gaugeTypes.
+     * @return kotlin.collections.List<CurveGaugeTypeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeTypesCurrent() : kotlin.collections.List<CurveGaugeTypeDTO> {
+        val localVarResponse = curveGaugeTypesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeTypeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeTypes (current)
+     * Gets gaugeTypes.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeTypeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeTypesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeTypeDTO>?> {
+        val localVariableConfig = curveGaugeTypesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeTypeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeTypesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeTypesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeTypes/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeWeightVotes (current)
+     * Gets gaugeWeightVotes.
+     * @return kotlin.collections.List<CurveGaugeWeightVoteDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeWeightVotesCurrent() : kotlin.collections.List<CurveGaugeWeightVoteDTO> {
+        val localVarResponse = curveGaugeWeightVotesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeWeightVoteDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeWeightVotes (current)
+     * Gets gaugeWeightVotes.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeWeightVoteDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeWeightVotesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeWeightVoteDTO>?> {
+        val localVariableConfig = curveGaugeWeightVotesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeWeightVoteDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeWeightVotesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeWeightVotesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeWeightVotes/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeWeights (current)
+     * Gets gaugeWeights.
+     * @return kotlin.collections.List<CurveGaugeWeightDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeWeightsCurrent() : kotlin.collections.List<CurveGaugeWeightDTO> {
+        val localVarResponse = curveGaugeWeightsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeWeightDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeWeights (current)
+     * Gets gaugeWeights.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeWeightDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeWeightsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeWeightDTO>?> {
+        val localVariableConfig = curveGaugeWeightsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeWeightDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeWeightsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeWeightsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeWeights/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GaugeWithdraws (current)
+     * Gets gaugeWithdraws.
+     * @return kotlin.collections.List<CurveGaugeWithdrawDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugeWithdrawsCurrent() : kotlin.collections.List<CurveGaugeWithdrawDTO> {
+        val localVarResponse = curveGaugeWithdrawsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeWithdrawDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GaugeWithdraws (current)
+     * Gets gaugeWithdraws.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeWithdrawDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugeWithdrawsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeWithdrawDTO>?> {
+        val localVariableConfig = curveGaugeWithdrawsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeWithdrawDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugeWithdrawsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugeWithdrawsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gaugeWithdraws/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Gauges (current)
+     * Gets gauges.
+     * @return kotlin.collections.List<CurveGaugeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveGaugesCurrent() : kotlin.collections.List<CurveGaugeDTO> {
+        val localVarResponse = curveGaugesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Gauges (current)
+     * Gets gauges.
+     * @return ApiResponse<kotlin.collections.List<CurveGaugeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveGaugesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeDTO>?> {
+        val localVariableConfig = curveGaugesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveGaugeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveGaugesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveGaugesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/gauges/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Accounts (historical) 🔥
      * Gets accounts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
@@ -183,7 +1464,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AddLiquidityEvents (historical) 🔥
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -219,7 +1500,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AddLiquidityEvents (historical) 🔥
-     * Gets addliquidityevents.
+     * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -279,7 +1560,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/addliquidityevents/historical",
+            path = "/dapps/curve/addLiquidityEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -288,7 +1569,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AdminFeeChangeLogs (historical) 🔥
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -324,7 +1605,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AdminFeeChangeLogs (historical) 🔥
-     * Gets adminfeechangelogs.
+     * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -384,7 +1665,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/adminfeechangelogs/historical",
+            path = "/dapps/curve/adminFeeChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -393,7 +1674,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -429,7 +1710,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * AmplificationCoeffChangeLogs (historical) 🔥
-     * Gets amplificationcoeffchangelogs.
+     * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -489,7 +1770,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/amplificationcoeffchangelogs/historical",
+            path = "/dapps/curve/amplificationCoeffChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -603,7 +1884,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * ContractVersions (historical) 🔥
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -639,7 +1920,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * ContractVersions (historical) 🔥
-     * Gets contractversions.
+     * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -699,7 +1980,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/contractversions/historical",
+            path = "/dapps/curve/contractVersions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -807,7 +2088,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * DailyVolumes (historical) 🔥
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -843,7 +2124,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * DailyVolumes (historical) 🔥
-     * Gets dailyvolumes.
+     * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -903,7 +2184,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/dailyvolumes/historical",
+            path = "/dapps/curve/dailyVolumes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1017,7 +2298,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * FeeChangeLogs (historical) 🔥
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1053,7 +2334,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * FeeChangeLogs (historical) 🔥
-     * Gets feechangelogs.
+     * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1113,7 +2394,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/feechangelogs/historical",
+            path = "/dapps/curve/feeChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1122,7 +2403,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeDeposits (historical) 🔥
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1157,7 +2438,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeDeposits (historical) 🔥
-     * Gets gaugedeposits.
+     * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1212,7 +2493,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugedeposits/historical",
+            path = "/dapps/curve/gaugeDeposits/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1221,7 +2502,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeLiquiditys (historical) 🔥
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1257,7 +2538,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeLiquiditys (historical) 🔥
-     * Gets gaugeliquiditys.
+     * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1317,7 +2598,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugeliquiditys/historical",
+            path = "/dapps/curve/gaugeLiquiditys/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1326,7 +2607,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTotalWeights (historical) 🔥
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1361,7 +2642,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTotalWeights (historical) 🔥
-     * Gets gaugetotalweights.
+     * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1416,7 +2697,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugetotalweights/historical",
+            path = "/dapps/curve/gaugeTotalWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1425,7 +2706,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTypeWeights (historical) 🔥
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1460,7 +2741,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTypeWeights (historical) 🔥
-     * Gets gaugetypeweights.
+     * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1515,7 +2796,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugetypeweights/historical",
+            path = "/dapps/curve/gaugeTypeWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1524,7 +2805,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTypes (historical) 🔥
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1560,7 +2841,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeTypes (historical) 🔥
-     * Gets gaugetypes.
+     * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1620,7 +2901,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugetypes/historical",
+            path = "/dapps/curve/gaugeTypes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1629,7 +2910,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWeightVotes (historical) 🔥
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1665,7 +2946,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWeightVotes (historical) 🔥
-     * Gets gaugeweightvotes.
+     * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1725,7 +3006,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugeweightvotes/historical",
+            path = "/dapps/curve/gaugeWeightVotes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1734,7 +3015,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWeights (historical) 🔥
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1769,7 +3050,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWeights (historical) 🔥
-     * Gets gaugeweights.
+     * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1824,7 +3105,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugeweights/historical",
+            path = "/dapps/curve/gaugeWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1833,7 +3114,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWithdraws (historical) 🔥
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1868,7 +3149,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * GaugeWithdraws (historical) 🔥
-     * Gets gaugewithdraws.
+     * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1923,7 +3204,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugewithdraws/historical",
+            path = "/dapps/curve/gaugeWithdraws/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2043,7 +3324,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * HourlyVolumes (historical) 🔥
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2079,7 +3360,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * HourlyVolumes (historical) 🔥
-     * Gets hourlyvolumes.
+     * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2139,7 +3420,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/hourlyvolumes/historical",
+            path = "/dapps/curve/hourlyVolumes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2148,7 +3429,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * LpTokens (historical) 🔥
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2187,7 +3468,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * LpTokens (historical) 🔥
-     * Gets lptokens.
+     * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2262,7 +3543,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/lptokens/historical",
+            path = "/dapps/curve/lpTokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2376,7 +3657,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * ProposalVotes (historical) 🔥
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2411,7 +3692,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * ProposalVotes (historical) 🔥
-     * Gets proposalvotes.
+     * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2466,7 +3747,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/proposalvotes/historical",
+            path = "/dapps/curve/proposalVotes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2574,7 +3855,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * RemoveLiquidityEvents (historical) 🔥
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2610,7 +3891,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * RemoveLiquidityEvents (historical) 🔥
-     * Gets removeliquidityevents.
+     * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2670,7 +3951,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/removeliquidityevents/historical",
+            path = "/dapps/curve/removeLiquidityEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2679,7 +3960,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2715,7 +3996,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * RemoveLiquidityOneEvents (historical) 🔥
-     * Gets removeliquidityoneevents.
+     * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2775,7 +4056,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/removeliquidityoneevents/historical",
+            path = "/dapps/curve/removeLiquidityOneEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2784,7 +4065,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * SystemStates (historical) 🔥
-     * Gets systemstates.
+     * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2819,7 +4100,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * SystemStates (historical) 🔥
-     * Gets systemstates.
+     * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2874,7 +4155,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/systemstates/historical",
+            path = "/dapps/curve/systemStates/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -3000,7 +4281,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * TransferOwnershipEvents (historical) 🔥
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3036,7 +4317,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * TransferOwnershipEvents (historical) 🔥
-     * Gets transferownershipevents.
+     * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3096,7 +4377,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/transferownershipevents/historical",
+            path = "/dapps/curve/transferOwnershipEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -3105,7 +4386,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * UnderlyingCoins (historical) 🔥
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -3141,7 +4422,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * UnderlyingCoins (historical) 🔥
-     * Gets underlyingcoins.
+     * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -3201,7 +4482,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/underlyingcoins/historical",
+            path = "/dapps/curve/underlyingCoins/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -3210,7 +4491,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * VotingApps (historical) 🔥
-     * Gets votingapps.
+     * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3246,7 +4527,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * VotingApps (historical) 🔥
-     * Gets votingapps.
+     * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3306,7 +4587,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/votingapps/historical",
+            path = "/dapps/curve/votingApps/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -3315,7 +4596,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * WeeklyVolumes (historical) 🔥
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3351,7 +4632,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
     /**
      * WeeklyVolumes (historical) 🔥
-     * Gets weeklyvolumes.
+     * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3411,7 +4692,886 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/weeklyvolumes/historical",
+            path = "/dapps/curve/weeklyVolumes/historical",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * HourlyVolumes (current)
+     * Gets hourlyVolumes.
+     * @return kotlin.collections.List<CurveHourlyVolumeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveHourlyVolumesCurrent() : kotlin.collections.List<CurveHourlyVolumeDTO> {
+        val localVarResponse = curveHourlyVolumesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveHourlyVolumeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * HourlyVolumes (current)
+     * Gets hourlyVolumes.
+     * @return ApiResponse<kotlin.collections.List<CurveHourlyVolumeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveHourlyVolumesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveHourlyVolumeDTO>?> {
+        val localVariableConfig = curveHourlyVolumesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveHourlyVolumeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveHourlyVolumesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveHourlyVolumesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/hourlyVolumes/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return kotlin.collections.List<CurveLpTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveLpTokensCurrent() : kotlin.collections.List<CurveLpTokenDTO> {
+        val localVarResponse = curveLpTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveLpTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * LpTokens (current)
+     * Gets lpTokens.
+     * @return ApiResponse<kotlin.collections.List<CurveLpTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveLpTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveLpTokenDTO>?> {
+        val localVariableConfig = curveLpTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveLpTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveLpTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveLpTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/lpTokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @return kotlin.collections.List<CurvePoolDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curvePoolsCurrent(id: kotlin.String? = null) : kotlin.collections.List<CurvePoolDTO> {
+        val localVarResponse = curvePoolsCurrentWithHttpInfo(id = id)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurvePoolDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @return ApiResponse<kotlin.collections.List<CurvePoolDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curvePoolsCurrentWithHttpInfo(id: kotlin.String?) : ApiResponse<kotlin.collections.List<CurvePoolDTO>?> {
+        val localVariableConfig = curvePoolsCurrentRequestConfig(id = id)
+
+        return request<Unit, kotlin.collections.List<CurvePoolDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curvePoolsCurrent
+     *
+     * @param id Pool address. (optional)
+     * @return RequestConfig
+     */
+    fun curvePoolsCurrentRequestConfig(id: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (id != null) {
+                    put("id", listOf(id.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/pools/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * ProposalVotes (current)
+     * Gets proposalVotes.
+     * @return kotlin.collections.List<CurveProposalVoteDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveProposalVotesCurrent() : kotlin.collections.List<CurveProposalVoteDTO> {
+        val localVarResponse = curveProposalVotesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveProposalVoteDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * ProposalVotes (current)
+     * Gets proposalVotes.
+     * @return ApiResponse<kotlin.collections.List<CurveProposalVoteDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveProposalVotesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveProposalVoteDTO>?> {
+        val localVariableConfig = curveProposalVotesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveProposalVoteDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveProposalVotesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveProposalVotesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/proposalVotes/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Proposals (current)
+     * Gets proposals.
+     * @return kotlin.collections.List<CurveProposalDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveProposalsCurrent() : kotlin.collections.List<CurveProposalDTO> {
+        val localVarResponse = curveProposalsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveProposalDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Proposals (current)
+     * Gets proposals.
+     * @return ApiResponse<kotlin.collections.List<CurveProposalDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveProposalsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveProposalDTO>?> {
+        val localVariableConfig = curveProposalsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveProposalDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveProposalsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveProposalsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/proposals/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * RemoveLiquidityEvents (current)
+     * Gets removeLiquidityEvents.
+     * @return kotlin.collections.List<CurveRemoveLiquidityEventDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveRemoveLiquidityEventsCurrent() : kotlin.collections.List<CurveRemoveLiquidityEventDTO> {
+        val localVarResponse = curveRemoveLiquidityEventsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveRemoveLiquidityEventDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * RemoveLiquidityEvents (current)
+     * Gets removeLiquidityEvents.
+     * @return ApiResponse<kotlin.collections.List<CurveRemoveLiquidityEventDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveRemoveLiquidityEventsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveRemoveLiquidityEventDTO>?> {
+        val localVariableConfig = curveRemoveLiquidityEventsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveRemoveLiquidityEventDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveRemoveLiquidityEventsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveRemoveLiquidityEventsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/removeLiquidityEvents/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     * Gets removeLiquidityOneEvents.
+     * @return kotlin.collections.List<CurveRemoveLiquidityOneEventDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveRemoveLiquidityOneEventsCurrent() : kotlin.collections.List<CurveRemoveLiquidityOneEventDTO> {
+        val localVarResponse = curveRemoveLiquidityOneEventsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveRemoveLiquidityOneEventDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * RemoveLiquidityOneEvents (current)
+     * Gets removeLiquidityOneEvents.
+     * @return ApiResponse<kotlin.collections.List<CurveRemoveLiquidityOneEventDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveRemoveLiquidityOneEventsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveRemoveLiquidityOneEventDTO>?> {
+        val localVariableConfig = curveRemoveLiquidityOneEventsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveRemoveLiquidityOneEventDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveRemoveLiquidityOneEventsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveRemoveLiquidityOneEventsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/removeLiquidityOneEvents/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * SystemStates (current)
+     * Gets systemStates.
+     * @return kotlin.collections.List<CurveSystemStateDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveSystemStatesCurrent() : kotlin.collections.List<CurveSystemStateDTO> {
+        val localVarResponse = curveSystemStatesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveSystemStateDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * SystemStates (current)
+     * Gets systemStates.
+     * @return ApiResponse<kotlin.collections.List<CurveSystemStateDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveSystemStatesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveSystemStateDTO>?> {
+        val localVariableConfig = curveSystemStatesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveSystemStateDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveSystemStatesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveSystemStatesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/systemStates/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return kotlin.collections.List<CurveTokenDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveTokensCurrent() : kotlin.collections.List<CurveTokenDTO> {
+        val localVarResponse = curveTokensCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveTokenDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse<kotlin.collections.List<CurveTokenDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveTokensCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveTokenDTO>?> {
+        val localVariableConfig = curveTokensCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveTokenDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveTokensCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveTokensCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/tokens/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * TransferOwnershipEvents (current)
+     * Gets transferOwnershipEvents.
+     * @return kotlin.collections.List<CurveTransferOwnershipEventDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveTransferOwnershipEventsCurrent() : kotlin.collections.List<CurveTransferOwnershipEventDTO> {
+        val localVarResponse = curveTransferOwnershipEventsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveTransferOwnershipEventDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * TransferOwnershipEvents (current)
+     * Gets transferOwnershipEvents.
+     * @return ApiResponse<kotlin.collections.List<CurveTransferOwnershipEventDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveTransferOwnershipEventsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveTransferOwnershipEventDTO>?> {
+        val localVariableConfig = curveTransferOwnershipEventsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveTransferOwnershipEventDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveTransferOwnershipEventsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveTransferOwnershipEventsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/transferOwnershipEvents/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * UnderlyingCoins (current)
+     * Gets underlyingCoins.
+     * @return kotlin.collections.List<CurveUnderlyingCoinDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveUnderlyingCoinsCurrent() : kotlin.collections.List<CurveUnderlyingCoinDTO> {
+        val localVarResponse = curveUnderlyingCoinsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveUnderlyingCoinDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * UnderlyingCoins (current)
+     * Gets underlyingCoins.
+     * @return ApiResponse<kotlin.collections.List<CurveUnderlyingCoinDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveUnderlyingCoinsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveUnderlyingCoinDTO>?> {
+        val localVariableConfig = curveUnderlyingCoinsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveUnderlyingCoinDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveUnderlyingCoinsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveUnderlyingCoinsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/underlyingCoins/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * VotingApps (current)
+     * Gets votingApps.
+     * @return kotlin.collections.List<CurveVotingAppDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveVotingAppsCurrent() : kotlin.collections.List<CurveVotingAppDTO> {
+        val localVarResponse = curveVotingAppsCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveVotingAppDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * VotingApps (current)
+     * Gets votingApps.
+     * @return ApiResponse<kotlin.collections.List<CurveVotingAppDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveVotingAppsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveVotingAppDTO>?> {
+        val localVariableConfig = curveVotingAppsCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveVotingAppDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveVotingAppsCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveVotingAppsCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/votingApps/current",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * WeeklyVolumes (current)
+     * Gets weeklyVolumes.
+     * @return kotlin.collections.List<CurveWeeklyVolumeDTO>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun curveWeeklyVolumesCurrent() : kotlin.collections.List<CurveWeeklyVolumeDTO> {
+        val localVarResponse = curveWeeklyVolumesCurrentWithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveWeeklyVolumeDTO>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * WeeklyVolumes (current)
+     * Gets weeklyVolumes.
+     * @return ApiResponse<kotlin.collections.List<CurveWeeklyVolumeDTO>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun curveWeeklyVolumesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveWeeklyVolumeDTO>?> {
+        val localVariableConfig = curveWeeklyVolumesCurrentRequestConfig()
+
+        return request<Unit, kotlin.collections.List<CurveWeeklyVolumeDTO>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation curveWeeklyVolumesCurrent
+     *
+     * @return RequestConfig
+     */
+    fun curveWeeklyVolumesCurrentRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/dapps/curve/weeklyVolumes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

@@ -19,39 +19,39 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { UniswapV3BundleV3DTO } from '../model/uniswapV3BundleV3DTO';
+import { UniswapV3BundleDTO } from '../model/uniswapV3BundleDTO';
 // @ts-ignore
-import { UniswapV3BurnV3DTO } from '../model/uniswapV3BurnV3DTO';
+import { UniswapV3BurnDTO } from '../model/uniswapV3BurnDTO';
 // @ts-ignore
-import { UniswapV3FactoryV3DTO } from '../model/uniswapV3FactoryV3DTO';
+import { UniswapV3FactoryDTO } from '../model/uniswapV3FactoryDTO';
 // @ts-ignore
-import { UniswapV3MintV3DTO } from '../model/uniswapV3MintV3DTO';
+import { UniswapV3MintDTO } from '../model/uniswapV3MintDTO';
 // @ts-ignore
-import { UniswapV3PoolDayDataV3DTO } from '../model/uniswapV3PoolDayDataV3DTO';
+import { UniswapV3PoolDTO } from '../model/uniswapV3PoolDTO';
 // @ts-ignore
-import { UniswapV3PoolHourDataV3DTO } from '../model/uniswapV3PoolHourDataV3DTO';
+import { UniswapV3PoolDayDataDTO } from '../model/uniswapV3PoolDayDataDTO';
 // @ts-ignore
-import { UniswapV3PoolV3DTO } from '../model/uniswapV3PoolV3DTO';
+import { UniswapV3PoolHourDataDTO } from '../model/uniswapV3PoolHourDataDTO';
 // @ts-ignore
-import { UniswapV3PositionSnapshotV3DTO } from '../model/uniswapV3PositionSnapshotV3DTO';
+import { UniswapV3PositionDTO } from '../model/uniswapV3PositionDTO';
 // @ts-ignore
-import { UniswapV3PositionV3DTO } from '../model/uniswapV3PositionV3DTO';
+import { UniswapV3PositionSnapshotDTO } from '../model/uniswapV3PositionSnapshotDTO';
 // @ts-ignore
-import { UniswapV3SwapV3DTO } from '../model/uniswapV3SwapV3DTO';
+import { UniswapV3SwapDTO } from '../model/uniswapV3SwapDTO';
 // @ts-ignore
-import { UniswapV3TickDayDataV3DTO } from '../model/uniswapV3TickDayDataV3DTO';
+import { UniswapV3TickDTO } from '../model/uniswapV3TickDTO';
 // @ts-ignore
-import { UniswapV3TickV3DTO } from '../model/uniswapV3TickV3DTO';
+import { UniswapV3TickDayDataDTO } from '../model/uniswapV3TickDayDataDTO';
 // @ts-ignore
-import { UniswapV3TokenHourDataV3DTO } from '../model/uniswapV3TokenHourDataV3DTO';
+import { UniswapV3TokenDTO } from '../model/uniswapV3TokenDTO';
 // @ts-ignore
-import { UniswapV3TokenV3DTO } from '../model/uniswapV3TokenV3DTO';
+import { UniswapV3TokenHourDataDTO } from '../model/uniswapV3TokenHourDataDTO';
 // @ts-ignore
 import { UniswapV3TokenV3DayDataDTO } from '../model/uniswapV3TokenV3DayDataDTO';
 // @ts-ignore
-import { UniswapV3TransactionV3DTO } from '../model/uniswapV3TransactionV3DTO';
+import { UniswapV3TransactionDTO } from '../model/uniswapV3TransactionDTO';
 // @ts-ignore
-import { UniswapV3UniswapDayDataV3DTO } from '../model/uniswapV3UniswapDayDataV3DTO';
+import { UniswapV3UniswapDayDataDTO } from '../model/uniswapV3UniswapDayDataDTO';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -124,100 +124,15 @@ export class UniswapV3Service {
     }
 
     /**
-     * BundleV3s (historical) 🔥
-     * Gets bundlev3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BundleV3DTO>>;
-    public uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BundleV3DTO>>>;
-    public uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BundleV3DTO>>>;
-    public uniswapV3GetBundleV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (startBlock !== undefined && startBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startBlock, 'startBlock');
-        }
-        if (endBlock !== undefined && endBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endBlock, 'endBlock');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (id !== undefined && id !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>id, 'id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/bundlev3s/historical`;
-        return this.httpClient.request<Array<UniswapV3BundleV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
      * Bundles (current)
      * Gets bundles.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetBundlesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BundleV3DTO>>;
-    public uniswapV3GetBundlesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BundleV3DTO>>>;
-    public uniswapV3GetBundlesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BundleV3DTO>>>;
-    public uniswapV3GetBundlesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3BundlesCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BundleDTO>>;
+    public uniswapV3BundlesCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BundleDTO>>>;
+    public uniswapV3BundlesCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BundleDTO>>>;
+    public uniswapV3BundlesCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -253,109 +168,9 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/bundles/current`;
-        return this.httpClient.request<Array<UniswapV3BundleV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3BundleDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * BurnV3s (historical) 🔥
-     * Gets burnv3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Transaction hash + \&#39;#\&#39; + index in mints Transaction array.
-     * @param pool Pool position is within.
-     * @param token0 Reference to token0 as stored in pool contract.
-     * @param token1 Reference to token1 as stored in pool contract.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BurnV3DTO>>;
-    public uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BurnV3DTO>>>;
-    public uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BurnV3DTO>>>;
-    public uniswapV3GetBurnV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (startBlock !== undefined && startBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startBlock, 'startBlock');
-        }
-        if (endBlock !== undefined && endBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endBlock, 'endBlock');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (id !== undefined && id !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>id, 'id');
-        }
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
-        if (token0 !== undefined && token0 !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>token0, 'token_0');
-        }
-        if (token1 !== undefined && token1 !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>token1, 'token_1');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/burnv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3BurnV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -368,20 +183,13 @@ export class UniswapV3Service {
     /**
      * Burns (current)
      * Gets burns.
-     * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetBurnsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BurnV3DTO>>;
-    public uniswapV3GetBurnsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BurnV3DTO>>>;
-    public uniswapV3GetBurnsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BurnV3DTO>>>;
-    public uniswapV3GetBurnsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
+    public uniswapV3BurnsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BurnDTO>>;
+    public uniswapV3BurnsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BurnDTO>>>;
+    public uniswapV3BurnsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BurnDTO>>>;
+    public uniswapV3BurnsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -417,10 +225,9 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/burns/current`;
-        return this.httpClient.request<Array<UniswapV3BurnV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3BurnDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -431,15 +238,15 @@ export class UniswapV3Service {
     }
 
     /**
-     * DayData (current)
-     * Gets uniswapv3 day data.
+     * Factorys (current)
+     * Gets factorys.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetDayDataCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3UniswapDayDataV3DTO>>;
-    public uniswapV3GetDayDataCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3UniswapDayDataV3DTO>>>;
-    public uniswapV3GetDayDataCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3UniswapDayDataV3DTO>>>;
-    public uniswapV3GetDayDataCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3FactorysCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3FactoryDTO>>;
+    public uniswapV3FactorysCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3FactoryDTO>>>;
+    public uniswapV3FactorysCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3FactoryDTO>>>;
+    public uniswapV3FactorysCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -474,8 +281,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/dayData/current`;
-        return this.httpClient.request<Array<UniswapV3UniswapDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/factorys/current`;
+        return this.httpClient.request<Array<UniswapV3FactoryDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,
@@ -488,77 +295,20 @@ export class UniswapV3Service {
     }
 
     /**
-     * Factory (current)
-     * Gets factory.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetFactoryCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3FactoryV3DTO>>;
-    public uniswapV3GetFactoryCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3FactoryV3DTO>>>;
-    public uniswapV3GetFactoryCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3FactoryV3DTO>>>;
-    public uniswapV3GetFactoryCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/factory/current`;
-        return this.httpClient.request<Array<UniswapV3FactoryV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * FactoryV3s (historical) 🔥
-     * Gets factoryv3s.
+     * Bundles (historical) 🔥
+     * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Factory address.
+     * @param id 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3FactoryV3DTO>>;
-    public uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3FactoryV3DTO>>>;
-    public uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3FactoryV3DTO>>>;
-    public uniswapV3GetFactoryV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BundleDTO>>;
+    public uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BundleDTO>>>;
+    public uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BundleDTO>>>;
+    public uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -615,8 +365,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/factoryv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3FactoryV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/bundles/historical`;
+        return this.httpClient.request<Array<UniswapV3BundleDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -630,8 +380,193 @@ export class UniswapV3Service {
     }
 
     /**
-     * MintV3s (historical) 🔥
-     * Gets mintv3s.
+     * Burns (historical) 🔥
+     * Gets burns.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Transaction hash + \&#39;#\&#39; + index in mints Transaction array.
+     * @param pool Pool position is within.
+     * @param token0 Reference to token0 as stored in pool contract.
+     * @param token1 Reference to token1 as stored in pool contract.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3BurnDTO>>;
+    public uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3BurnDTO>>>;
+    public uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3BurnDTO>>>;
+    public uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (startBlock !== undefined && startBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startBlock, 'startBlock');
+        }
+        if (endBlock !== undefined && endBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endBlock, 'endBlock');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+        if (pool !== undefined && pool !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>pool, 'pool');
+        }
+        if (token0 !== undefined && token0 !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>token0, 'token_0');
+        }
+        if (token1 !== undefined && token1 !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>token1, 'token_1');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/burns/historical`;
+        return this.httpClient.request<Array<UniswapV3BurnDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Factorys (historical) 🔥
+     * Gets factorys.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Factory address.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3FactoryDTO>>;
+    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3FactoryDTO>>>;
+    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3FactoryDTO>>>;
+    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (startBlock !== undefined && startBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startBlock, 'startBlock');
+        }
+        if (endBlock !== undefined && endBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endBlock, 'endBlock');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/factorys/historical`;
+        return this.httpClient.request<Array<UniswapV3FactoryDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Mints (historical) 🔥
+     * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -643,10 +578,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3MintV3DTO>>;
-    public uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3MintV3DTO>>>;
-    public uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3MintV3DTO>>>;
-    public uniswapV3GetMintV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3MintDTO>>;
+    public uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3MintDTO>>>;
+    public uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3MintDTO>>>;
+    public uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -715,8 +650,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/mintv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3MintV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/mints/historical`;
+        return this.httpClient.request<Array<UniswapV3MintDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -730,73 +665,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * Mints (current)
-     * Gets mints.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetMintsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3MintV3DTO>>;
-    public uniswapV3GetMintsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3MintV3DTO>>>;
-    public uniswapV3GetMintsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3MintV3DTO>>>;
-    public uniswapV3GetMintsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/mints/current`;
-        return this.httpClient.request<Array<UniswapV3MintV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * PoolDayDataV3s (historical) 🔥
-     * Gets pooldaydatav3s.
+     * PoolDayDatas (historical) 🔥
+     * Gets poolDayDatas.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -806,10 +676,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDayDataV3DTO>>;
-    public uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDayDataV3DTO>>>;
-    public uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDayDataV3DTO>>>;
-    public uniswapV3GetPoolDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDayDataDTO>>;
+    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDayDataDTO>>>;
+    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDayDataDTO>>>;
+    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -870,8 +740,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/pooldaydatav3s/historical`;
-        return this.httpClient.request<Array<UniswapV3PoolDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/poolDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV3PoolDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -885,8 +755,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * PoolHourDataV3s (historical) 🔥
-     * Gets poolhourdatav3s.
+     * PoolHourDatas (historical) 🔥
+     * Gets poolHourDatas.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -896,10 +766,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolHourDataV3DTO>>;
-    public uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolHourDataV3DTO>>>;
-    public uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolHourDataV3DTO>>>;
-    public uniswapV3GetPoolHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolHourDataDTO>>;
+    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolHourDataDTO>>>;
+    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolHourDataDTO>>>;
+    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -960,8 +830,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/poolhourdatav3s/historical`;
-        return this.httpClient.request<Array<UniswapV3PoolHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/poolHourDatas/historical`;
+        return this.httpClient.request<Array<UniswapV3PoolHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -975,8 +845,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * PoolV3s (historical) 🔥
-     * Gets poolv3s.
+     * Pools (historical) 🔥
+     * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -987,10 +857,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolV3DTO>>;
-    public uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolV3DTO>>>;
-    public uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolV3DTO>>>;
-    public uniswapV3GetPoolV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDTO>>;
+    public uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDTO>>>;
+    public uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDTO>>>;
+    public uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1055,8 +925,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/poolv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3PoolV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/pools/historical`;
+        return this.httpClient.request<Array<UniswapV3PoolDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1070,203 +940,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetPoolsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolV3DTO>>;
-    public uniswapV3GetPoolsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolV3DTO>>>;
-    public uniswapV3GetPoolsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolV3DTO>>>;
-    public uniswapV3GetPoolsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/pools/current`;
-        return this.httpClient.request<Array<UniswapV3PoolV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * PoolsDayData (current)
-     * Gets pools day data.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDayDataV3DTO>>;
-    public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDayDataV3DTO>>>;
-    public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDayDataV3DTO>>>;
-    public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/poolsDayData/current`;
-        return this.httpClient.request<Array<UniswapV3PoolDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * PoolsHourData (current)
-     * Gets pools hour data.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolHourDataV3DTO>>;
-    public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolHourDataV3DTO>>>;
-    public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolHourDataV3DTO>>>;
-    public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/poolsHourData/current`;
-        return this.httpClient.request<Array<UniswapV3PoolHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * PositionSnapshotV3s (historical) 🔥
-     * Gets positionsnapshotv3s.
+     * PositionSnapshots (historical) 🔥
+     * Gets positionSnapshots.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1276,10 +951,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionSnapshotV3DTO>>;
-    public uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionSnapshotV3DTO>>>;
-    public uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionSnapshotV3DTO>>>;
-    public uniswapV3GetPositionSnapshotV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionSnapshotDTO>>;
+    public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionSnapshotDTO>>>;
+    public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionSnapshotDTO>>>;
+    public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1340,8 +1015,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/positionsnapshotv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3PositionSnapshotV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/positionSnapshots/historical`;
+        return this.httpClient.request<Array<UniswapV3PositionSnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1355,8 +1030,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * PositionV3s (historical) 🔥
-     * Gets positionv3s.
+     * Positions (historical) 🔥
+     * Gets positions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1368,10 +1043,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionV3DTO>>;
-    public uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionV3DTO>>>;
-    public uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionV3DTO>>>;
-    public uniswapV3GetPositionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionDTO>>;
+    public uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionDTO>>>;
+    public uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionDTO>>>;
+    public uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1440,8 +1115,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/positionv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3PositionV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/positions/historical`;
+        return this.httpClient.request<Array<UniswapV3PositionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1455,138 +1130,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * Positions (current)
-     * Gets positions.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetPositionsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionV3DTO>>;
-    public uniswapV3GetPositionsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionV3DTO>>>;
-    public uniswapV3GetPositionsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionV3DTO>>>;
-    public uniswapV3GetPositionsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/positions/current`;
-        return this.httpClient.request<Array<UniswapV3PositionV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * PositionsSnapshots (current)
-     * Gets positions snapshots.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionSnapshotV3DTO>>;
-    public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionSnapshotV3DTO>>>;
-    public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionSnapshotV3DTO>>>;
-    public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/positionSnapshots/current`;
-        return this.httpClient.request<Array<UniswapV3PositionSnapshotV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * SwapV3s (historical) 🔥
-     * Gets swapv3s.
+     * Swaps (historical) 🔥
+     * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1598,10 +1143,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3SwapV3DTO>>;
-    public uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3SwapV3DTO>>>;
-    public uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3SwapV3DTO>>>;
-    public uniswapV3GetSwapV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3SwapDTO>>;
+    public uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3SwapDTO>>>;
+    public uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3SwapDTO>>>;
+    public uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, token0?: string, token1?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1670,8 +1215,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/swapv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3SwapV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/swaps/historical`;
+        return this.httpClient.request<Array<UniswapV3SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1685,73 +1230,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetSwapsCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3SwapV3DTO>>;
-    public uniswapV3GetSwapsCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3SwapV3DTO>>>;
-    public uniswapV3GetSwapsCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3SwapV3DTO>>>;
-    public uniswapV3GetSwapsCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/swaps/current`;
-        return this.httpClient.request<Array<UniswapV3SwapV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * TickDayDataV3s (historical) 🔥
-     * Gets tickdaydatav3s.
+     * TickDayDatas (historical) 🔥
+     * Gets tickDayDatas.
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1761,10 +1241,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDayDataV3DTO>>;
-    public uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDayDataV3DTO>>>;
-    public uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDayDataV3DTO>>>;
-    public uniswapV3GetTickDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDayDataDTO>>;
+    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDayDataDTO>>>;
+    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDayDataDTO>>>;
+    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -1825,8 +1305,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tickdaydatav3s/historical`;
-        return this.httpClient.request<Array<UniswapV3TickDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/tickDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV3TickDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1840,111 +1320,46 @@ export class UniswapV3Service {
     }
 
     /**
-     * TickV3s (historical) 🔥
-     * Gets tickv3s.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickV3DTO>>;
-    public uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickV3DTO>>>;
-    public uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickV3DTO>>>;
-    public uniswapV3GetTickV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (startBlock !== undefined && startBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startBlock, 'startBlock');
-        }
-        if (endBlock !== undefined && endBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endBlock, 'endBlock');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (id !== undefined && id !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>id, 'id');
-        }
-        if (pool !== undefined && pool !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>pool, 'pool');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/tickv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3TickV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * Ticks (current)
+     * Ticks (historical) 🔥
      * Gets ticks.
-     * @param filterPoolId 
+     * @param startBlock 
+     * @param endBlock 
+     * @param startDate 
+     * @param endDate 
+     * @param id 
+     * @param pool 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTicksCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickV3DTO>>;
-    public uniswapV3GetTicksCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickV3DTO>>>;
-    public uniswapV3GetTicksCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickV3DTO>>>;
-    public uniswapV3GetTicksCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDTO>>;
+    public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDTO>>>;
+    public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDTO>>>;
+    public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
+        if (startBlock !== undefined && startBlock !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
+            <any>startBlock, 'startBlock');
+        }
+        if (endBlock !== undefined && endBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endBlock, 'endBlock');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+        if (pool !== undefined && pool !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>pool, 'pool');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -1980,8 +1395,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/ticks/current`;
-        return this.httpClient.request<Array<UniswapV3TickV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/ticks/historical`;
+        return this.httpClient.request<Array<UniswapV3TickDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -1995,73 +1410,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * TicksDayData (current)
-     * Gets ticks day data.
-     * @param filterPoolId 
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDayDataV3DTO>>;
-    public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDayDataV3DTO>>>;
-    public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDayDataV3DTO>>>;
-    public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterPoolId !== undefined && filterPoolId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterPoolId, 'filter_pool_id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/ticksDayData/current`;
-        return this.httpClient.request<Array<UniswapV3TickDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * TokenHourDataV3s (historical) 🔥
-     * Gets tokenhourdatav3s.
+     * TokenHourDatas (historical) 🔥
+     * Gets tokenHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2070,10 +1420,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenHourDataV3DTO>>;
-    public uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenHourDataV3DTO>>>;
-    public uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenHourDataV3DTO>>>;
-    public uniswapV3GetTokenHourDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenHourDataDTO>>;
+    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenHourDataDTO>>>;
+    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenHourDataDTO>>>;
+    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -2130,8 +1480,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tokenhourdatav3s/historical`;
-        return this.httpClient.request<Array<UniswapV3TokenHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/tokenHourDatas/historical`;
+        return this.httpClient.request<Array<UniswapV3TokenHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2146,7 +1496,7 @@ export class UniswapV3Service {
 
     /**
      * TokenV3DayDatas (historical) 🔥
-     * Gets tokenv3daydatas.
+     * Gets tokenV3DayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2215,7 +1565,7 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tokenv3daydatas/historical`;
+        let localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/historical`;
         return this.httpClient.request<Array<UniswapV3TokenV3DayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
@@ -2230,8 +1580,8 @@ export class UniswapV3Service {
     }
 
     /**
-     * TokenV3s (historical) 🔥
-     * Gets tokenv3s.
+     * Tokens (historical) 🔥
+     * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2242,10 +1592,10 @@ export class UniswapV3Service {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DTO>>;
-    public uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DTO>>>;
-    public uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DTO>>>;
-    public uniswapV3GetTokenV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenDTO>>;
+    public uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenDTO>>>;
+    public uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenDTO>>>;
+    public uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, symbol?: string, name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (startBlock !== undefined && startBlock !== null) {
@@ -2310,8 +1660,8 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tokenv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3TokenV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/tokens/historical`;
+        return this.httpClient.request<Array<UniswapV3TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
@@ -2325,22 +1675,828 @@ export class UniswapV3Service {
     }
 
     /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @param filterTokenId 
+     * Transactions (historical) 🔥
+     * Gets transactions.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Transaction hash.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTokensCurrent(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DTO>>;
-    public uniswapV3GetTokensCurrent(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DTO>>>;
-    public uniswapV3GetTokensCurrent(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DTO>>>;
-    public uniswapV3GetTokensCurrent(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+    public uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TransactionDTO>>;
+    public uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TransactionDTO>>>;
+    public uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TransactionDTO>>>;
+    public uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterTokenId !== undefined && filterTokenId !== null) {
+        if (startBlock !== undefined && startBlock !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterTokenId, 'filter_token_id');
+            <any>startBlock, 'startBlock');
         }
+        if (endBlock !== undefined && endBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endBlock, 'endBlock');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/transactions/historical`;
+        return this.httpClient.request<Array<UniswapV3TransactionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * UniswapDayDatas (historical) 🔥
+     * Gets uniswapDayDatas.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Timestamp rounded to current day by dividing by 86400.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3UniswapDayDataDTO>>;
+    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3UniswapDayDataDTO>>>;
+    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3UniswapDayDataDTO>>>;
+    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (startBlock !== undefined && startBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startBlock, 'startBlock');
+        }
+        if (endBlock !== undefined && endBlock !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endBlock, 'endBlock');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/uniswapDayDatas/historical`;
+        return this.httpClient.request<Array<UniswapV3UniswapDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3MintsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3MintDTO>>;
+    public uniswapV3MintsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3MintDTO>>>;
+    public uniswapV3MintsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3MintDTO>>>;
+    public uniswapV3MintsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/mints/current`;
+        return this.httpClient.request<Array<UniswapV3MintDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * PoolDayDatas (current)
+     * Gets poolDayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3PoolDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDayDataDTO>>;
+    public uniswapV3PoolDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDayDataDTO>>>;
+    public uniswapV3PoolDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDayDataDTO>>>;
+    public uniswapV3PoolDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/poolDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV3PoolDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * PoolHourDatas (current)
+     * Gets poolHourDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3PoolHourDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolHourDataDTO>>;
+    public uniswapV3PoolHourDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolHourDataDTO>>>;
+    public uniswapV3PoolHourDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolHourDataDTO>>>;
+    public uniswapV3PoolHourDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/poolHourDatas/current`;
+        return this.httpClient.request<Array<UniswapV3PoolHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3PoolsCurrent(id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PoolDTO>>;
+    public uniswapV3PoolsCurrent(id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PoolDTO>>>;
+    public uniswapV3PoolsCurrent(id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PoolDTO>>>;
+    public uniswapV3PoolsCurrent(id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (id !== undefined && id !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>id, 'id');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/pools/current`;
+        return this.httpClient.request<Array<UniswapV3PoolDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3PositionSnapshotsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionSnapshotDTO>>;
+    public uniswapV3PositionSnapshotsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionSnapshotDTO>>>;
+    public uniswapV3PositionSnapshotsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionSnapshotDTO>>>;
+    public uniswapV3PositionSnapshotsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/positionSnapshots/current`;
+        return this.httpClient.request<Array<UniswapV3PositionSnapshotDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3PositionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3PositionDTO>>;
+    public uniswapV3PositionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3PositionDTO>>>;
+    public uniswapV3PositionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3PositionDTO>>>;
+    public uniswapV3PositionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/positions/current`;
+        return this.httpClient.request<Array<UniswapV3PositionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pool Pool swap occured within.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3SwapsCurrent(pool?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3SwapDTO>>;
+    public uniswapV3SwapsCurrent(pool?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3SwapDTO>>>;
+    public uniswapV3SwapsCurrent(pool?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3SwapDTO>>>;
+    public uniswapV3SwapsCurrent(pool?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (pool !== undefined && pool !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>pool, 'pool');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/swaps/current`;
+        return this.httpClient.request<Array<UniswapV3SwapDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * TickDayDatas (current)
+     * Gets tickDayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3TickDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDayDataDTO>>;
+    public uniswapV3TickDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDayDataDTO>>>;
+    public uniswapV3TickDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDayDataDTO>>>;
+    public uniswapV3TickDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/tickDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV3TickDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3TicksCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TickDTO>>;
+    public uniswapV3TicksCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TickDTO>>>;
+    public uniswapV3TicksCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TickDTO>>>;
+    public uniswapV3TicksCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/ticks/current`;
+        return this.httpClient.request<Array<UniswapV3TickDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * TokenHourDatas (current)
+     * Gets tokenHourDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3TokenHourDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenHourDataDTO>>;
+    public uniswapV3TokenHourDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenHourDataDTO>>>;
+    public uniswapV3TokenHourDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenHourDataDTO>>>;
+    public uniswapV3TokenHourDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/tokenHourDatas/current`;
+        return this.httpClient.request<Array<UniswapV3TokenHourDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * TokenV3DayDatas (current)
+     * Gets tokenV3DayDatas.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3TokenV3DayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DayDataDTO>>;
+    public uniswapV3TokenV3DayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DayDataDTO>>>;
+    public uniswapV3TokenV3DayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DayDataDTO>>>;
+    public uniswapV3TokenV3DayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                'text/plain',
+                'application/json',
+                'text/json'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/current`;
+        return this.httpClient.request<Array<UniswapV3TokenV3DayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public uniswapV3TokensCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenDTO>>;
+    public uniswapV3TokensCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenDTO>>>;
+    public uniswapV3TokensCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenDTO>>>;
+    public uniswapV3TokensCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -2376,10 +2532,9 @@ export class UniswapV3Service {
         }
 
         let localVarPath = `/dapps/uniswapv3/tokens/current`;
-        return this.httpClient.request<Array<UniswapV3TokenV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Array<UniswapV3TokenDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -2390,22 +2545,15 @@ export class UniswapV3Service {
     }
 
     /**
-     * TokensDayData (current)
-     * Gets tokens day data.
-     * @param filterTokenId 
+     * Transactions (current)
+     * Gets transactions.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenV3DayDataDTO>>;
-    public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenV3DayDataDTO>>>;
-    public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenV3DayDataDTO>>>;
-    public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterTokenId !== undefined && filterTokenId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterTokenId, 'filter_token_id');
-        }
+    public uniswapV3TransactionsCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TransactionDTO>>;
+    public uniswapV3TransactionsCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TransactionDTO>>>;
+    public uniswapV3TransactionsCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TransactionDTO>>>;
+    public uniswapV3TransactionsCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -2440,11 +2588,10 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tokensDayData/current`;
-        return this.httpClient.request<Array<UniswapV3TokenV3DayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/transactions/current`;
+        return this.httpClient.request<Array<UniswapV3TransactionDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -2455,22 +2602,15 @@ export class UniswapV3Service {
     }
 
     /**
-     * TokensHourData (current)
-     * Gets tokens hour data.
-     * @param filterTokenId 
+     * UniswapDayDatas (current)
+     * Gets uniswapDayDatas.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TokenHourDataV3DTO>>;
-    public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TokenHourDataV3DTO>>>;
-    public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TokenHourDataV3DTO>>>;
-    public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (filterTokenId !== undefined && filterTokenId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>filterTokenId, 'filter_token_id');
-        }
+    public uniswapV3UniswapDayDatasCurrent(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3UniswapDayDataDTO>>;
+    public uniswapV3UniswapDayDatasCurrent(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3UniswapDayDataDTO>>>;
+    public uniswapV3UniswapDayDatasCurrent(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3UniswapDayDataDTO>>>;
+    public uniswapV3UniswapDayDatasCurrent(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
 
@@ -2505,181 +2645,10 @@ export class UniswapV3Service {
             }
         }
 
-        let localVarPath = `/dapps/uniswapv3/tokensHourData/current`;
-        return this.httpClient.request<Array<UniswapV3TokenHourDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
+        let localVarPath = `/dapps/uniswapv3/uniswapDayDatas/current`;
+        return this.httpClient.request<Array<UniswapV3UniswapDayDataDTO>>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * TransactionV3s (historical) 🔥
-     * Gets transactionv3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Transaction hash.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3TransactionV3DTO>>;
-    public uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3TransactionV3DTO>>>;
-    public uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3TransactionV3DTO>>>;
-    public uniswapV3GetTransactionV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (startBlock !== undefined && startBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startBlock, 'startBlock');
-        }
-        if (endBlock !== undefined && endBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endBlock, 'endBlock');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (id !== undefined && id !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>id, 'id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/transactionv3s/historical`;
-        return this.httpClient.request<Array<UniswapV3TransactionV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * UniswapDayDataV3s (historical) 🔥
-     * Gets uniswapdaydatav3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param endDate The end date of timeframe.
-     * @param id Timestamp rounded to current day by dividing by 86400.
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<Array<UniswapV3UniswapDayDataV3DTO>>;
-    public uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpResponse<Array<UniswapV3UniswapDayDataV3DTO>>>;
-    public uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<HttpEvent<Array<UniswapV3UniswapDayDataV3DTO>>>;
-    public uniswapV3GetUniswapDayDataV3sHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json', context?: HttpContext}): Observable<any> {
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (startBlock !== undefined && startBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startBlock, 'startBlock');
-        }
-        if (endBlock !== undefined && endBlock !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endBlock, 'endBlock');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (id !== undefined && id !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>id, 'id');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'text/plain',
-                'application/json',
-                'text/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/dapps/uniswapv3/uniswapdaydatav3s/historical`;
-        return this.httpClient.request<Array<UniswapV3UniswapDayDataV3DTO>>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

@@ -86,6 +86,50 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
+        /// Test SushiswapBundlesCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapBundlesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapBundlesCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapBundleDTO>), response, "response is List<SushiswapBundleDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapBurnsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapBurnsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapBurnsCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapBurnDTO>), response, "response is List<SushiswapBurnDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapDayDatasCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapDayDatasCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapDayDataDTO>), response, "response is List<SushiswapDayDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapFactorysCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapFactorysCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapFactorysCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapFactoryDTO>), response, "response is List<SushiswapFactoryDTO>");
+        }
+        
+        /// <summary>
         /// Test SushiswapGetBundlesHistorical
         /// </summary>
         [Test]
@@ -286,17 +330,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test SushiswapGetSwapsCurrent
-        /// </summary>
-        [Test]
-        public void SushiswapGetSwapsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetSwapsCurrent();
-            //Assert.IsInstanceOf(typeof(List<SushiswapSwapDTO>), response, "response is List<SushiswapSwapDTO>");
-        }
-        
-        /// <summary>
         /// Test SushiswapGetSwapsHistorical
         /// </summary>
         [Test]
@@ -327,17 +360,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string id = null;
             //var response = instance.SushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<SushiswapTokenDayDataDTO>), response, "response is List<SushiswapTokenDayDataDTO>");
-        }
-        
-        /// <summary>
-        /// Test SushiswapGetTokensCurrent
-        /// </summary>
-        [Test]
-        public void SushiswapGetTokensCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetTokensCurrent();
-            //Assert.IsInstanceOf(typeof(List<SushiswapTokenDTO>), response, "response is List<SushiswapTokenDTO>");
         }
         
         /// <summary>
@@ -387,6 +409,140 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //string id = null;
             //var response = instance.SushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsInstanceOf(typeof(List<SushiswapUserDTO>), response, "response is List<SushiswapUserDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapHourDatasCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapHourDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapHourDatasCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapHourDataDTO>), response, "response is List<SushiswapHourDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapLiquidityPositionSnapshotsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapLiquidityPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapLiquidityPositionSnapshotsCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapLiquidityPositionSnapshotDTO>), response, "response is List<SushiswapLiquidityPositionSnapshotDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapLiquidityPositionsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapLiquidityPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapLiquidityPositionsCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapLiquidityPositionDTO>), response, "response is List<SushiswapLiquidityPositionDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapMintsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapMintsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapMintsCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapMintDTO>), response, "response is List<SushiswapMintDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapPairDayDatasCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapPairDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapPairDayDatasCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapPairDayDataDTO>), response, "response is List<SushiswapPairDayDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapPairHourDatasCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapPairHourDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapPairHourDatasCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapPairHourDataDTO>), response, "response is List<SushiswapPairHourDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapPairsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapPairsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.SushiswapPairsCurrent(id);
+            //Assert.IsInstanceOf(typeof(List<SushiswapPairDTO>), response, "response is List<SushiswapPairDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapSwapsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapSwapsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pair = null;
+            //var response = instance.SushiswapSwapsCurrent(pair);
+            //Assert.IsInstanceOf(typeof(List<SushiswapSwapDTO>), response, "response is List<SushiswapSwapDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapTokenDayDatasCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapTokenDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTokenDayDatasCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapTokenDayDataDTO>), response, "response is List<SushiswapTokenDayDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapTokensCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapTokenDTO>), response, "response is List<SushiswapTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapTransactionsCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapTransactionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTransactionsCurrent();
+            //Assert.IsInstanceOf(typeof(List<SushiswapTransactionDTO>), response, "response is List<SushiswapTransactionDTO>");
+        }
+        
+        /// <summary>
+        /// Test SushiswapUsersCurrent
+        /// </summary>
+        [Test]
+        public void SushiswapUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapUsersCurrent();
             //Assert.IsInstanceOf(typeof(List<SushiswapUserDTO>), response, "response is List<SushiswapUserDTO>");
         }
         

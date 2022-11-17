@@ -15,39 +15,40 @@
 
 
 module Api.Request.UniswapV3 exposing
-    ( uniswapV3GetBundleV3sHistorical
-    , uniswapV3GetBundlesCurrent
-    , uniswapV3GetBurnV3sHistorical
-    , uniswapV3GetBurnsCurrent
-    , uniswapV3GetDayDataCurrent
-    , uniswapV3GetFactoryCurrent
-    , uniswapV3GetFactoryV3sHistorical
-    , uniswapV3GetMintV3sHistorical
-    , uniswapV3GetMintsCurrent
-    , uniswapV3GetPoolDayDataV3sHistorical
-    , uniswapV3GetPoolHourDataV3sHistorical
-    , uniswapV3GetPoolV3sHistorical
-    , uniswapV3GetPoolsCurrent
-    , uniswapV3GetPoolsDayDataCurrent
-    , uniswapV3GetPoolsHourDataCurrent
-    , uniswapV3GetPositionSnapshotV3sHistorical
-    , uniswapV3GetPositionV3sHistorical
-    , uniswapV3GetPositionsCurrent
-    , uniswapV3GetPositionsSnapshotsCurrent
-    , uniswapV3GetSwapV3sHistorical
-    , uniswapV3GetSwapsCurrent
-    , uniswapV3GetTickDayDataV3sHistorical
-    , uniswapV3GetTickV3sHistorical
-    , uniswapV3GetTicksCurrent
-    , uniswapV3GetTicksDayDataCurrent
-    , uniswapV3GetTokenHourDataV3sHistorical
+    ( uniswapV3BundlesCurrent
+    , uniswapV3BurnsCurrent
+    , uniswapV3FactorysCurrent
+    , uniswapV3GetBundlesHistorical
+    , uniswapV3GetBurnsHistorical
+    , uniswapV3GetFactorysHistorical
+    , uniswapV3GetMintsHistorical
+    , uniswapV3GetPoolDayDatasHistorical
+    , uniswapV3GetPoolHourDatasHistorical
+    , uniswapV3GetPoolsHistorical
+    , uniswapV3GetPositionSnapshotsHistorical
+    , uniswapV3GetPositionsHistorical
+    , uniswapV3GetSwapsHistorical
+    , uniswapV3GetTickDayDatasHistorical
+    , uniswapV3GetTicksHistorical
+    , uniswapV3GetTokenHourDatasHistorical
     , uniswapV3GetTokenV3DayDatasHistorical
-    , uniswapV3GetTokenV3sHistorical
-    , uniswapV3GetTokensCurrent
-    , uniswapV3GetTokensDayDataCurrent
-    , uniswapV3GetTokensHourDataCurrent
-    , uniswapV3GetTransactionV3sHistorical
-    , uniswapV3GetUniswapDayDataV3sHistorical
+    , uniswapV3GetTokensHistorical
+    , uniswapV3GetTransactionsHistorical
+    , uniswapV3GetUniswapDayDatasHistorical
+    , uniswapV3MintsCurrent
+    , uniswapV3PoolDayDatasCurrent
+    , uniswapV3PoolHourDatasCurrent
+    , uniswapV3PoolsCurrent
+    , uniswapV3PositionSnapshotsCurrent
+    , uniswapV3PositionsCurrent
+    , uniswapV3SwapsCurrent
+    , uniswapV3TickDayDatasCurrent
+    , uniswapV3TicksCurrent
+    , uniswapV3TokenHourDatasCurrent
+    , uniswapV3TokenV3DayDatasCurrent
+    , uniswapV3TokensCurrent
+    , uniswapV3TransactionsCurrent
+    , uniswapV3UniswapDayDatasCurrent
     )
 
 import Api
@@ -60,25 +61,10 @@ import Json.Encode
 
 
 
-{-| Gets bundlev3s.
--}
-uniswapV3GetBundleV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3BundleV3DTO)
-uniswapV3GetBundleV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/bundlev3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3BundleV3DTODecoder)
-
-
-
 {-| Gets bundles.
 -}
-uniswapV3GetBundlesCurrent : Api.Request (List Api.Data.UniswapV3BundleV3DTO)
-uniswapV3GetBundlesCurrent =
+uniswapV3BundlesCurrent : Api.Request (List Api.Data.UniswapV3BundleDTO)
+uniswapV3BundlesCurrent =
     Api.request
         "GET"
         "/dapps/uniswapv3/bundles/current"
@@ -86,469 +72,499 @@ uniswapV3GetBundlesCurrent =
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3BundleV3DTODecoder)
-
-
-
-{-| Gets burnv3s.
--}
-uniswapV3GetBurnV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3BurnV3DTO)
-uniswapV3GetBurnV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/burnv3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3BurnV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BundleDTODecoder)
 
 
 
 {-| Gets burns.
 -}
-uniswapV3GetBurnsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3BurnV3DTO)
-uniswapV3GetBurnsCurrent filterPoolId_query =
+uniswapV3BurnsCurrent : Api.Request (List Api.Data.UniswapV3BurnDTO)
+uniswapV3BurnsCurrent =
     Api.request
         "GET"
         "/dapps/uniswapv3/burns/current"
         []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3BurnV3DTODecoder)
-
-
-
-{-| Gets uniswapv3 day data.
--}
-uniswapV3GetDayDataCurrent : Api.Request (List Api.Data.UniswapV3UniswapDayDataV3DTO)
-uniswapV3GetDayDataCurrent =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/dayData/current"
-        []
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3UniswapDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BurnDTODecoder)
 
 
 
-{-| Gets factory.
+{-| Gets factorys.
 -}
-uniswapV3GetFactoryCurrent : Api.Request (List Api.Data.UniswapV3FactoryV3DTO)
-uniswapV3GetFactoryCurrent =
+uniswapV3FactorysCurrent : Api.Request (List Api.Data.UniswapV3FactoryDTO)
+uniswapV3FactorysCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/factory/current"
+        "/dapps/uniswapv3/factorys/current"
         []
         []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3FactoryV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3FactoryDTODecoder)
 
 
 
-{-| Gets factoryv3s.
+{-| Gets bundles.
 -}
-uniswapV3GetFactoryV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3FactoryV3DTO)
-uniswapV3GetFactoryV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3GetBundlesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3BundleDTO)
+uniswapV3GetBundlesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/factoryv3s/historical"
+        "/dapps/uniswapv3/bundles/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3FactoryV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BundleDTODecoder)
 
 
 
-{-| Gets mintv3s.
+{-| Gets burns.
 -}
-uniswapV3GetMintV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3MintV3DTO)
-uniswapV3GetMintV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
+uniswapV3GetBurnsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3BurnDTO)
+uniswapV3GetBurnsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/mintv3s/historical"
+        "/dapps/uniswapv3/burns/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3MintV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3BurnDTODecoder)
+
+
+
+{-| Gets factorys.
+-}
+uniswapV3GetFactorysHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3FactoryDTO)
+uniswapV3GetFactorysHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/factorys/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3FactoryDTODecoder)
 
 
 
 {-| Gets mints.
 -}
-uniswapV3GetMintsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3MintV3DTO)
-uniswapV3GetMintsCurrent filterPoolId_query =
+uniswapV3GetMintsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3MintDTO)
+uniswapV3GetMintsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/mints/current"
+        "/dapps/uniswapv3/mints/historical"
         []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3MintV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3MintDTODecoder)
 
 
 
-{-| Gets pooldaydatav3s.
+{-| Gets poolDayDatas.
 -}
-uniswapV3GetPoolDayDataV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataV3DTO)
-uniswapV3GetPoolDayDataV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetPoolDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
+uniswapV3GetPoolDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/pooldaydatav3s/historical"
+        "/dapps/uniswapv3/poolDayDatas/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolDayDataDTODecoder)
 
 
 
-{-| Gets poolhourdatav3s.
+{-| Gets poolHourDatas.
 -}
-uniswapV3GetPoolHourDataV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataV3DTO)
-uniswapV3GetPoolHourDataV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetPoolHourDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
+uniswapV3GetPoolHourDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolhourdatav3s/historical"
+        "/dapps/uniswapv3/poolHourDatas/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolHourDataV3DTODecoder)
-
-
-
-{-| Gets poolv3s.
--}
-uniswapV3GetPoolV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolV3DTO)
-uniswapV3GetPoolV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query token0_query token1_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/poolv3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolHourDataDTODecoder)
 
 
 
 {-| Gets pools.
 -}
-uniswapV3GetPoolsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolV3DTO)
-uniswapV3GetPoolsCurrent filterPoolId_query =
+uniswapV3GetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDTO)
+uniswapV3GetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query token0_query token1_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/pools/current"
+        "/dapps/uniswapv3/pools/historical"
         []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PoolDTODecoder)
 
 
 
-{-| Gets pools day data.
+{-| Gets positionSnapshots.
 -}
-uniswapV3GetPoolsDayDataCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataV3DTO)
-uniswapV3GetPoolsDayDataCurrent filterPoolId_query =
+uniswapV3GetPositionSnapshotsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PositionSnapshotDTO)
+uniswapV3GetPositionSnapshotsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolsDayData/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolDayDataV3DTODecoder)
-
-
-
-{-| Gets pools hour data.
--}
-uniswapV3GetPoolsHourDataCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataV3DTO)
-uniswapV3GetPoolsHourDataCurrent filterPoolId_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/poolsHourData/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PoolHourDataV3DTODecoder)
-
-
-
-{-| Gets positionsnapshotv3s.
--}
-uniswapV3GetPositionSnapshotV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PositionSnapshotV3DTO)
-uniswapV3GetPositionSnapshotV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/positionsnapshotv3s/historical"
+        "/dapps/uniswapv3/positionSnapshots/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3PositionSnapshotV3DTODecoder)
-
-
-
-{-| Gets positionv3s.
--}
-uniswapV3GetPositionV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PositionV3DTO)
-uniswapV3GetPositionV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/positionv3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PositionV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PositionSnapshotDTODecoder)
 
 
 
 {-| Gets positions.
 -}
-uniswapV3GetPositionsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PositionV3DTO)
-uniswapV3GetPositionsCurrent filterPoolId_query =
+uniswapV3GetPositionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PositionDTO)
+uniswapV3GetPositionsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/positions/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PositionV3DTODecoder)
-
-
-
-{-| Gets positions snapshots.
--}
-uniswapV3GetPositionsSnapshotsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PositionSnapshotV3DTO)
-uniswapV3GetPositionsSnapshotsCurrent filterPoolId_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/positionSnapshots/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3PositionSnapshotV3DTODecoder)
-
-
-
-{-| Gets swapv3s.
--}
-uniswapV3GetSwapV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3SwapV3DTO)
-uniswapV3GetSwapV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/swapv3s/historical"
+        "/dapps/uniswapv3/positions/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3SwapV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3PositionDTODecoder)
 
 
 
 {-| Gets swaps.
 -}
-uniswapV3GetSwapsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3SwapV3DTO)
-uniswapV3GetSwapsCurrent filterPoolId_query =
+uniswapV3GetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3SwapDTO)
+uniswapV3GetSwapsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query token0_query token1_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/swaps/current"
+        "/dapps/uniswapv3/swaps/historical"
         []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3SwapV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3SwapDTODecoder)
 
 
 
-{-| Gets tickdaydatav3s.
+{-| Gets tickDayDatas.
 -}
-uniswapV3GetTickDayDataV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataV3DTO)
-uniswapV3GetTickDayDataV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetTickDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
+uniswapV3GetTickDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tickdaydatav3s/historical"
+        "/dapps/uniswapv3/tickDayDatas/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TickDayDataV3DTODecoder)
-
-
-
-{-| Gets tickv3s.
--}
-uniswapV3GetTickV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickV3DTO)
-uniswapV3GetTickV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/tickv3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3TickV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TickDayDataDTODecoder)
 
 
 
 {-| Gets ticks.
 -}
-uniswapV3GetTicksCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3TickV3DTO)
-uniswapV3GetTicksCurrent filterPoolId_query =
+uniswapV3GetTicksHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickDTO)
+uniswapV3GetTicksHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/ticks/current"
+        "/dapps/uniswapv3/ticks/historical"
         []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TickV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TickDTODecoder)
 
 
 
-{-| Gets ticks day data.
+{-| Gets tokenHourDatas.
 -}
-uniswapV3GetTicksDayDataCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataV3DTO)
-uniswapV3GetTicksDayDataCurrent filterPoolId_query =
+uniswapV3GetTokenHourDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
+uniswapV3GetTokenHourDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/ticksDayData/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3TickDayDataV3DTODecoder)
-
-
-
-{-| Gets tokenhourdatav3s.
--}
-uniswapV3GetTokenHourDataV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataV3DTO)
-uniswapV3GetTokenHourDataV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/tokenhourdatav3s/historical"
+        "/dapps/uniswapv3/tokenHourDatas/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TokenHourDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenHourDataDTODecoder)
 
 
 
-{-| Gets tokenv3daydatas.
+{-| Gets tokenV3DayDatas.
 -}
 uniswapV3GetTokenV3DayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
 uniswapV3GetTokenV3DayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokenv3daydatas/historical"
+        "/dapps/uniswapv3/tokenV3DayDatas/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV3TokenV3DayDataDTODecoder)
-
-
-
-{-| Gets tokenv3s.
--}
-uniswapV3GetTokenV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DTO)
-uniswapV3GetTokenV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query symbol_query name_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv3/tokenv3s/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "symbol", Maybe.map identity symbol_query ), ( "name", Maybe.map identity name_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV3TokenV3DTODecoder)
 
 
 
 {-| Gets tokens.
 -}
-uniswapV3GetTokensCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DTO)
-uniswapV3GetTokensCurrent filterTokenId_query =
+uniswapV3GetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenDTO)
+uniswapV3GetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query id_query symbol_query name_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokens/current"
+        "/dapps/uniswapv3/tokens/historical"
         []
-        [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "symbol", Maybe.map identity symbol_query ), ( "name", Maybe.map identity name_query ) ]
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TokenV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenDTODecoder)
 
 
 
-{-| Gets tokens day data.
+{-| Gets transactions.
 -}
-uniswapV3GetTokensDayDataCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
-uniswapV3GetTokensDayDataCurrent filterTokenId_query =
+uniswapV3GetTransactionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TransactionDTO)
+uniswapV3GetTransactionsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokensDayData/current"
+        "/dapps/uniswapv3/transactions/historical"
         []
-        [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3TransactionDTODecoder)
+
+
+
+{-| Gets uniswapDayDatas.
+-}
+uniswapV3GetUniswapDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
+uniswapV3GetUniswapDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/uniswapDayDatas/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3UniswapDayDataDTODecoder)
+
+
+
+{-| Gets mints.
+-}
+uniswapV3MintsCurrent : Api.Request (List Api.Data.UniswapV3MintDTO)
+uniswapV3MintsCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/mints/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3MintDTODecoder)
+
+
+
+{-| Gets poolDayDatas.
+-}
+uniswapV3PoolDayDatasCurrent : Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
+uniswapV3PoolDayDatasCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/poolDayDatas/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3PoolDayDataDTODecoder)
+
+
+
+{-| Gets poolHourDatas.
+-}
+uniswapV3PoolHourDatasCurrent : Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
+uniswapV3PoolHourDatasCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/poolHourDatas/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3PoolHourDataDTODecoder)
+
+
+
+{-| Gets pools.
+-}
+uniswapV3PoolsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDTO)
+uniswapV3PoolsCurrent id_query =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/pools/current"
+        []
+        [ ( "id", Maybe.map identity id_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3PoolDTODecoder)
+
+
+
+{-| Gets positionSnapshots.
+-}
+uniswapV3PositionSnapshotsCurrent : Api.Request (List Api.Data.UniswapV3PositionSnapshotDTO)
+uniswapV3PositionSnapshotsCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/positionSnapshots/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3PositionSnapshotDTODecoder)
+
+
+
+{-| Gets positions.
+-}
+uniswapV3PositionsCurrent : Api.Request (List Api.Data.UniswapV3PositionDTO)
+uniswapV3PositionsCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/positions/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3PositionDTODecoder)
+
+
+
+{-| Gets swaps.
+-}
+uniswapV3SwapsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3SwapDTO)
+uniswapV3SwapsCurrent pool_query =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/swaps/current"
+        []
+        [ ( "pool", Maybe.map identity pool_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3SwapDTODecoder)
+
+
+
+{-| Gets tickDayDatas.
+-}
+uniswapV3TickDayDatasCurrent : Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
+uniswapV3TickDayDatasCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/tickDayDatas/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3TickDayDataDTODecoder)
+
+
+
+{-| Gets ticks.
+-}
+uniswapV3TicksCurrent : Api.Request (List Api.Data.UniswapV3TickDTO)
+uniswapV3TicksCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/ticks/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3TickDTODecoder)
+
+
+
+{-| Gets tokenHourDatas.
+-}
+uniswapV3TokenHourDatasCurrent : Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
+uniswapV3TokenHourDatasCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/tokenHourDatas/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV3TokenHourDataDTODecoder)
+
+
+
+{-| Gets tokenV3DayDatas.
+-}
+uniswapV3TokenV3DayDatasCurrent : Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
+uniswapV3TokenV3DayDatasCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv3/tokenV3DayDatas/current"
+        []
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV3TokenV3DayDataDTODecoder)
 
 
 
-{-| Gets tokens hour data.
+{-| Gets tokens.
 -}
-uniswapV3GetTokensHourDataCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataV3DTO)
-uniswapV3GetTokensHourDataCurrent filterTokenId_query =
+uniswapV3TokensCurrent : Api.Request (List Api.Data.UniswapV3TokenDTO)
+uniswapV3TokensCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokensHourData/current"
+        "/dapps/uniswapv3/tokens/current"
         []
-        [ ( "filter_token_id", Maybe.map identity filterTokenId_query ) ]
+        []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TokenHourDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TokenDTODecoder)
 
 
 
-{-| Gets transactionv3s.
+{-| Gets transactions.
 -}
-uniswapV3GetTransactionV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TransactionV3DTO)
-uniswapV3GetTransactionV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3TransactionsCurrent : Api.Request (List Api.Data.UniswapV3TransactionDTO)
+uniswapV3TransactionsCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/transactionv3s/historical"
+        "/dapps/uniswapv3/transactions/current"
         []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
+        []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3TransactionV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3TransactionDTODecoder)
 
 
 
-{-| Gets uniswapdaydatav3s.
+{-| Gets uniswapDayDatas.
 -}
-uniswapV3GetUniswapDayDataV3sHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3UniswapDayDataV3DTO)
-uniswapV3GetUniswapDayDataV3sHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3UniswapDayDatasCurrent : Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
+uniswapV3UniswapDayDatasCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/uniswapdaydatav3s/historical"
+        "/dapps/uniswapv3/uniswapDayDatas/current"
         []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
+        []
         []
         Nothing
-        (Json.Decode.list Api.Data.uniswapV3UniswapDayDataV3DTODecoder)
+        (Json.Decode.list Api.Data.uniswapV3UniswapDayDataDTODecoder)

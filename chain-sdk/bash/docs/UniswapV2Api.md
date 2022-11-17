@@ -4,37 +4,114 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV2GetBundleV2sHistorical**](UniswapV2Api.md#uniswapV2GetBundleV2sHistorical) | **GET** /dapps/uniswapv2/bundlev2s/historical | BundleV2s (historical) 🔥
-[**uniswapV2GetBurnV2sHistorical**](UniswapV2Api.md#uniswapV2GetBurnV2sHistorical) | **GET** /dapps/uniswapv2/burnv2s/historical | BurnV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionSnapshotV2sHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionsnapshotv2s/historical | LiquidityPositionSnapshotV2s (historical) 🔥
-[**uniswapV2GetLiquidityPositionV2sHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionV2sHistorical) | **GET** /dapps/uniswapv2/liquiditypositionv2s/historical | LiquidityPositionV2s (historical) 🔥
-[**uniswapV2GetMintV2sHistorical**](UniswapV2Api.md#uniswapV2GetMintV2sHistorical) | **GET** /dapps/uniswapv2/mintv2s/historical | MintV2s (historical) 🔥
-[**uniswapV2GetPairDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDataV2sHistorical) | **GET** /dapps/uniswapv2/pairdaydatav2s/historical | PairDayDataV2s (historical) 🔥
-[**uniswapV2GetPairHourDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDataV2sHistorical) | **GET** /dapps/uniswapv2/pairhourdatav2s/historical | PairHourDataV2s (historical) 🔥
-[**uniswapV2GetPairV2sHistorical**](UniswapV2Api.md#uniswapV2GetPairV2sHistorical) | **GET** /dapps/uniswapv2/pairv2s/historical | PairV2s (historical) 🔥
+[**uniswapV2BundlesCurrent**](UniswapV2Api.md#uniswapV2BundlesCurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
+[**uniswapV2BurnsCurrent**](UniswapV2Api.md#uniswapV2BurnsCurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
+[**uniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
+[**uniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
+[**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
+[**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
+[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
+[**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
 [**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapV2sHistorical**](UniswapV2Api.md#uniswapV2GetSwapV2sHistorical) | **GET** /dapps/uniswapv2/swapv2s/historical | SwapV2s (historical) 🔥
 [**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-[**uniswapV2GetTokenDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDataV2sHistorical) | **GET** /dapps/uniswapv2/tokendaydatav2s/historical | TokenDayDataV2s (historical) 🔥
-[**uniswapV2GetTokenV2sHistorical**](UniswapV2Api.md#uniswapV2GetTokenV2sHistorical) | **GET** /dapps/uniswapv2/tokenv2s/historical | TokenV2s (historical) 🔥
+[**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-[**uniswapV2GetTransactionV2sHistorical**](UniswapV2Api.md#uniswapV2GetTransactionV2sHistorical) | **GET** /dapps/uniswapv2/transactionv2s/historical | TransactionV2s (historical) 🔥
-[**uniswapV2GetUniswapDayDataV2sHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDataV2sHistorical) | **GET** /dapps/uniswapv2/uniswapdaydatav2s/historical | UniswapDayDataV2s (historical) 🔥
-[**uniswapV2GetUniswapFactoryV2sHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactoryV2sHistorical) | **GET** /dapps/uniswapv2/uniswapfactoryv2s/historical | UniswapFactoryV2s (historical) 🔥
-[**uniswapV2GetUserV2sHistorical**](UniswapV2Api.md#uniswapV2GetUserV2sHistorical) | **GET** /dapps/uniswapv2/userv2s/historical | UserV2s (historical) 🔥
+[**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+[**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
+[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
+[**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
+[**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
+[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
+[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
+[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
 
-## uniswapV2GetBundleV2sHistorical
+## uniswapV2BundlesCurrent
 
-BundleV2s (historical) 🔥
+Bundles (current)
 
-Gets bundlev2s.
+Gets bundles.
 
 ### Example
 
 ```bash
- uniswapV2GetBundleV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2BundlesCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2BundleDTO]**](UniswapV2BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2BurnsCurrent
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```bash
+ uniswapV2BurnsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2BurnDTO]**](UniswapV2BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetBundlesHistorical
+
+Bundles (historical) 🔥
+
+Gets bundles.
+
+### Example
+
+```bash
+ uniswapV2GetBundlesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -50,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2BundleV2DTO]**](UniswapV2BundleV2DTO.md)
+[**array[UniswapV2BundleDTO]**](UniswapV2BundleDTO.md)
 
 ### Authorization
 
@@ -64,16 +141,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetBurnV2sHistorical
+## uniswapV2GetBurnsHistorical
 
-BurnV2s (historical) 🔥
+Burns (historical) 🔥
 
-Gets burnv2s.
+Gets burns.
 
 ### Example
 
 ```bash
- uniswapV2GetBurnV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
+ uniswapV2GetBurnsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
 ```
 
 ### Parameters
@@ -90,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2BurnV2DTO]**](UniswapV2BurnV2DTO.md)
+[**array[UniswapV2BurnDTO]**](UniswapV2BurnDTO.md)
 
 ### Authorization
 
@@ -104,16 +181,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetLiquidityPositionSnapshotV2sHistorical
+## uniswapV2GetLiquidityPositionSnapshotsHistorical
 
-LiquidityPositionSnapshotV2s (historical) 🔥
+LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshotv2s.
+Gets liquidityPositionSnapshots.
 
 ### Example
 
 ```bash
- uniswapV2GetLiquidityPositionSnapshotV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  user=value  pair=value
+ uniswapV2GetLiquidityPositionSnapshotsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  user=value  pair=value
 ```
 
 ### Parameters
@@ -131,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2LiquidityPositionSnapshotV2DTO]**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
+[**array[UniswapV2LiquidityPositionSnapshotDTO]**](UniswapV2LiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -145,16 +222,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetLiquidityPositionV2sHistorical
+## uniswapV2GetLiquidityPositionsHistorical
 
-LiquidityPositionV2s (historical) 🔥
+LiquidityPositions (historical) 🔥
 
-Gets liquiditypositionv2s.
+Gets liquidityPositions.
 
 ### Example
 
 ```bash
- uniswapV2GetLiquidityPositionV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  user=value  pair=value
+ uniswapV2GetLiquidityPositionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  user=value  pair=value
 ```
 
 ### Parameters
@@ -172,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2LiquidityPositionV2DTO]**](UniswapV2LiquidityPositionV2DTO.md)
+[**array[UniswapV2LiquidityPositionDTO]**](UniswapV2LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -186,16 +263,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetMintV2sHistorical
+## uniswapV2GetMintsHistorical
 
-MintV2s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv2s.
+Gets mints.
 
 ### Example
 
 ```bash
- uniswapV2GetMintV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
+ uniswapV2GetMintsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
 ```
 
 ### Parameters
@@ -212,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2MintV2DTO]**](UniswapV2MintV2DTO.md)
+[**array[UniswapV2MintDTO]**](UniswapV2MintDTO.md)
 
 ### Authorization
 
@@ -226,16 +303,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetPairDayDataV2sHistorical
+## uniswapV2GetPairDayDatasHistorical
 
-PairDayDataV2s (historical) 🔥
+PairDayDatas (historical) 🔥
 
-Gets pairdaydatav2s.
+Gets pairDayDatas.
 
 ### Example
 
 ```bash
- uniswapV2GetPairDayDataV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
+ uniswapV2GetPairDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -253,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2PairDayDataV2DTO]**](UniswapV2PairDayDataV2DTO.md)
+[**array[UniswapV2PairDayDataDTO]**](UniswapV2PairDayDataDTO.md)
 
 ### Authorization
 
@@ -267,16 +344,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetPairHourDataV2sHistorical
+## uniswapV2GetPairHourDatasHistorical
 
-PairHourDataV2s (historical) 🔥
+PairHourDatas (historical) 🔥
 
-Gets pairhourdatav2s.
+Gets pairHourDatas.
 
 ### Example
 
 ```bash
- uniswapV2GetPairHourDataV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
+ uniswapV2GetPairHourDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
 ```
 
 ### Parameters
@@ -293,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2PairHourDataV2DTO]**](UniswapV2PairHourDataV2DTO.md)
+[**array[UniswapV2PairHourDataDTO]**](UniswapV2PairHourDataDTO.md)
 
 ### Authorization
 
@@ -307,16 +384,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetPairV2sHistorical
+## uniswapV2GetPairsHistorical
 
-PairV2s (historical) 🔥
+Pairs (historical) 🔥
 
-Gets pairv2s.
+Gets pairs.
 
 ### Example
 
 ```bash
- uniswapV2GetPairV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
+ uniswapV2GetPairsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  token_0=value  token_1=value
 ```
 
 ### Parameters
@@ -334,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
+[**array[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -369,47 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV2GetSwapV2sHistorical
-
-SwapV2s (historical) 🔥
-
-Gets swapv2s.
-
-### Example
-
-```bash
- uniswapV2GetSwapV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
- **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
- **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
- **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
- **id** | **string** | Transaction hash plus index in Transaction swap array. | [optional] [default to null]
- **pair** | **string** | Reference to pair. | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
+[**array[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
 
 ### Authorization
 
@@ -441,7 +478,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
+[**array[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
 
 ### Authorization
 
@@ -455,16 +492,56 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetTokenDayDataV2sHistorical
+## uniswapV2GetSwapsHistorical
 
-TokenDayDataV2s (historical) 🔥
+Swaps (historical) 🔥
 
-Gets tokendaydatav2s.
+Gets swaps.
 
 ### Example
 
 ```bash
- uniswapV2GetTokenDayDataV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2GetSwapsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  pair=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Transaction hash plus index in Transaction swap array. | [optional] [default to null]
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetTokenDayDatasHistorical
+
+TokenDayDatas (historical) 🔥
+
+Gets tokenDayDatas.
+
+### Example
+
+```bash
+ uniswapV2GetTokenDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -480,48 +557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2TokenDayDataV2DTO]**](UniswapV2TokenDayDataV2DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV2GetTokenV2sHistorical
-
-TokenV2s (historical) 🔥
-
-Gets tokenv2s.
-
-### Example
-
-```bash
- uniswapV2GetTokenV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  symbol=value  name=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
- **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
- **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
- **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
- **id** | **string** | Token address. | [optional] [default to null]
- **symbol** | **string** | Token symbol. | [optional] [default to null]
- **name** | **string** | Token name. | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+[**array[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -553,7 +589,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+[**array[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -567,16 +603,57 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetTransactionV2sHistorical
+## uniswapV2GetTokensHistorical
 
-TransactionV2s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets transactionv2s.
+Gets tokens.
 
 ### Example
 
 ```bash
- uniswapV2GetTransactionV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2GetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value  symbol=value  name=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Token address. | [optional] [default to null]
+ **symbol** | **string** | Token symbol. | [optional] [default to null]
+ **name** | **string** | Token name. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetTransactionsHistorical
+
+Transactions (historical) 🔥
+
+Gets transactions.
+
+### Example
+
+```bash
+ uniswapV2GetTransactionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -592,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2TransactionV2DTO]**](UniswapV2TransactionV2DTO.md)
+[**array[UniswapV2TransactionDTO]**](UniswapV2TransactionDTO.md)
 
 ### Authorization
 
@@ -606,16 +683,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetUniswapDayDataV2sHistorical
+## uniswapV2GetUniswapDayDatasHistorical
 
-UniswapDayDataV2s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav2s.
+Gets uniswapDayDatas.
 
 ### Example
 
 ```bash
- uniswapV2GetUniswapDayDataV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2GetUniswapDayDatasHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -631,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2UniswapDayDataV2DTO]**](UniswapV2UniswapDayDataV2DTO.md)
+[**array[UniswapV2UniswapDayDataDTO]**](UniswapV2UniswapDayDataDTO.md)
 
 ### Authorization
 
@@ -645,16 +722,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetUniswapFactoryV2sHistorical
+## uniswapV2GetUniswapFactorysHistorical
 
-UniswapFactoryV2s (historical) 🔥
+UniswapFactorys (historical) 🔥
 
-Gets uniswapfactoryv2s.
+Gets uniswapFactorys.
 
 ### Example
 
 ```bash
- uniswapV2GetUniswapFactoryV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2GetUniswapFactorysHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -670,7 +747,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2UniswapFactoryV2DTO]**](UniswapV2UniswapFactoryV2DTO.md)
+[**array[UniswapV2UniswapFactoryDTO]**](UniswapV2UniswapFactoryDTO.md)
 
 ### Authorization
 
@@ -684,16 +761,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetUserV2sHistorical
+## uniswapV2GetUsersHistorical
 
-UserV2s (historical) 🔥
+Users (historical) 🔥
 
-Gets userv2s.
+Gets users.
 
 ### Example
 
 ```bash
- uniswapV2GetUserV2sHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
+ uniswapV2GetUsersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  id=value
 ```
 
 ### Parameters
@@ -709,7 +786,362 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2UserV2DTO]**](UniswapV2UserV2DTO.md)
+[**array[UniswapV2UserDTO]**](UniswapV2UserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2LiquidityPositionSnapshotsCurrent
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+
+```bash
+ uniswapV2LiquidityPositionSnapshotsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2LiquidityPositionSnapshotDTO]**](UniswapV2LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2LiquidityPositionsCurrent
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+
+```bash
+ uniswapV2LiquidityPositionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2LiquidityPositionDTO]**](UniswapV2LiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2MintsCurrent
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```bash
+ uniswapV2MintsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2MintDTO]**](UniswapV2MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2PairDayDatasCurrent
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+
+```bash
+ uniswapV2PairDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2PairDayDataDTO]**](UniswapV2PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2PairHourDatasCurrent
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+
+```bash
+ uniswapV2PairHourDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2PairHourDataDTO]**](UniswapV2PairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2PairsCurrent
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+
+```bash
+ uniswapV2PairsCurrent  id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | Pair contract address. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2TokenDayDatasCurrent
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+
+```bash
+ uniswapV2TokenDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2TransactionsCurrent
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```bash
+ uniswapV2TransactionsCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2TransactionDTO]**](UniswapV2TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2UniswapDayDatasCurrent
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```bash
+ uniswapV2UniswapDayDatasCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2UniswapDayDataDTO]**](UniswapV2UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2UniswapFactorysCurrent
+
+UniswapFactorys (current)
+
+Gets uniswapFactorys.
+
+### Example
+
+```bash
+ uniswapV2UniswapFactorysCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2UniswapFactoryDTO]**](UniswapV2UniswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2UsersCurrent
+
+Users (current)
+
+Gets users.
+
+### Example
+
+```bash
+ uniswapV2UsersCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2UserDTO]**](UniswapV2UserDTO.md)
 
 ### Authorization
 

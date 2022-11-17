@@ -13,104 +13,51 @@ inherit
 feature -- Test routines
 
 
-    test_uniswap_v3_get_bundle_v3s_historical
-            -- BundleV3s (historical) 🔥
-            --
-            -- Gets bundlev3s.
-        local
-            l_response: LIST [UNISWAP_V3_BUNDLE_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_bundle_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_bundles_current
+    test_uniswap_v3_bundles_current
             -- Bundles (current)
             --
             -- Gets bundles.
         local
-            l_response: LIST [UNISWAP_V3_BUNDLE_V3_DTO]
+            l_response: LIST [UNISWAP_V3_BUNDLE_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_bundles_current
+            -- l_response := api.uniswap_v3_bundles_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_burn_v3s_historical
-            -- BurnV3s (historical) 🔥
-            --
-            -- Gets burnv3s.
-        local
-            l_response: LIST [UNISWAP_V3_BURN_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-            l_pool: STRING_32
-            l_token_0: STRING_32
-            l_token_1: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_burn_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_burns_current
+    test_uniswap_v3_burns_current
             -- Burns (current)
             --
             -- Gets burns.
         local
-            l_response: LIST [UNISWAP_V3_BURN_V3_DTO]
-            l_filter_pool_id: STRING_32
+            l_response: LIST [UNISWAP_V3_BURN_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_burns_current(l_filter_pool_id)
+            -- l_response := api.uniswap_v3_burns_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_day_data_current
-            -- DayData (current)
+    test_uniswap_v3_factorys_current
+            -- Factorys (current)
             --
-            -- Gets uniswapv3 day data.
+            -- Gets factorys.
         local
-            l_response: LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_FACTORY_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_day_data_current
+            -- l_response := api.uniswap_v3_factorys_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_factory_current
-            -- Factory (current)
+    test_uniswap_v3_get_bundles_historical
+            -- Bundles (historical) 🔥
             --
-            -- Gets factory.
+            -- Gets bundles.
         local
-            l_response: LIST [UNISWAP_V3_FACTORY_V3_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_factory_current
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_factory_v3s_historical
-            -- FactoryV3s (historical) 🔥
-            --
-            -- Gets factoryv3s.
-        local
-            l_response: LIST [UNISWAP_V3_FACTORY_V3_DTO]
+            l_response: LIST [UNISWAP_V3_BUNDLE_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -119,16 +66,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_factory_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v3_get_bundles_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_mint_v3s_historical
-            -- MintV3s (historical) 🔥
+    test_uniswap_v3_get_burns_historical
+            -- Burns (historical) 🔥
             --
-            -- Gets mintv3s.
+            -- Gets burns.
         local
-            l_response: LIST [UNISWAP_V3_MINT_V3_DTO]
+            l_response: LIST [UNISWAP_V3_BURN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -140,198 +87,132 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_mint_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v3_get_burns_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_mints_current
-            -- Mints (current)
+    test_uniswap_v3_get_factorys_historical
+            -- Factorys (historical) 🔥
+            --
+            -- Gets factorys.
+        local
+            l_response: LIST [UNISWAP_V3_FACTORY_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_factorys_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_get_mints_historical
+            -- Mints (historical) 🔥
             --
             -- Gets mints.
         local
-            l_response: LIST [UNISWAP_V3_MINT_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_mints_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_pool_day_data_v3s_historical
-            -- PoolDayDataV3s (historical) 🔥
-            --
-            -- Gets pooldaydatav3s.
-        local
-            l_response: LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_MINT_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
             l_end_date: DATE_TIME
             l_id: STRING_32
             l_pool: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_pool_day_data_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_pool_hour_data_v3s_historical
-            -- PoolHourDataV3s (historical) 🔥
-            --
-            -- Gets poolhourdatav3s.
-        local
-            l_response: LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-            l_pool: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_pool_hour_data_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_pool_v3s_historical
-            -- PoolV3s (historical) 🔥
-            --
-            -- Gets poolv3s.
-        local
-            l_response: LIST [UNISWAP_V3_POOL_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
             l_token_0: STRING_32
             l_token_1: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_pool_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v3_get_mints_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_pools_current
-            -- Pools (current) 🔥
+    test_uniswap_v3_get_pool_day_datas_historical
+            -- PoolDayDatas (historical) 🔥
+            --
+            -- Gets poolDayDatas.
+        local
+            l_response: LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+            l_pool: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_pool_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_get_pool_hour_datas_historical
+            -- PoolHourDatas (historical) 🔥
+            --
+            -- Gets poolHourDatas.
+        local
+            l_response: LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+            l_pool: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_pool_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_get_pools_historical
+            -- Pools (historical) 🔥
             --
             -- Gets pools.
         local
-            l_response: LIST [UNISWAP_V3_POOL_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_pools_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_pools_day_data_current
-            -- PoolsDayData (current)
-            --
-            -- Gets pools day data.
-        local
-            l_response: LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_pools_day_data_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_pools_hour_data_current
-            -- PoolsHourData (current)
-            --
-            -- Gets pools hour data.
-        local
-            l_response: LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_pools_hour_data_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_position_snapshot_v3s_historical
-            -- PositionSnapshotV3s (historical) 🔥
-            --
-            -- Gets positionsnapshotv3s.
-        local
-            l_response: LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POOL_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
             l_end_date: DATE_TIME
             l_id: STRING_32
-            l_pool: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_position_snapshot_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_position_v3s_historical
-            -- PositionV3s (historical) 🔥
-            --
-            -- Gets positionv3s.
-        local
-            l_response: LIST [UNISWAP_V3_POSITION_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-            l_pool: STRING_32
             l_token_0: STRING_32
             l_token_1: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_position_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v3_get_pools_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_positions_current
-            -- Positions (current)
+    test_uniswap_v3_get_position_snapshots_historical
+            -- PositionSnapshots (historical) 🔥
+            --
+            -- Gets positionSnapshots.
+        local
+            l_response: LIST [UNISWAP_V3_POSITION_SNAPSHOT_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+            l_pool: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_position_snapshots_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_get_positions_historical
+            -- Positions (historical) 🔥
             --
             -- Gets positions.
         local
-            l_response: LIST [UNISWAP_V3_POSITION_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_positions_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_positions_snapshots_current
-            -- PositionsSnapshots (current)
-            --
-            -- Gets positions snapshots.
-        local
-            l_response: LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_positions_snapshots_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_swap_v3s_historical
-            -- SwapV3s (historical) 🔥
-            --
-            -- Gets swapv3s.
-        local
-            l_response: LIST [UNISWAP_V3_SWAP_V3_DTO]
+            l_response: LIST [UNISWAP_V3_POSITION_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -343,30 +224,37 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_swap_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v3_get_positions_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_swaps_current
-            -- Swaps (current) 🔥
+    test_uniswap_v3_get_swaps_historical
+            -- Swaps (historical) 🔥
             --
             -- Gets swaps.
         local
-            l_response: LIST [UNISWAP_V3_SWAP_V3_DTO]
-            l_filter_pool_id: STRING_32
+            l_response: LIST [UNISWAP_V3_SWAP_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+            l_pool: STRING_32
+            l_token_0: STRING_32
+            l_token_1: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_swaps_current(l_filter_pool_id)
+            -- l_response := api.uniswap_v3_get_swaps_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_tick_day_data_v3s_historical
-            -- TickDayDataV3s (historical) 🔥
+    test_uniswap_v3_get_tick_day_datas_historical
+            -- TickDayDatas (historical) 🔥
             --
-            -- Gets tickdaydatav3s.
+            -- Gets tickDayDatas.
         local
-            l_response: LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -376,63 +264,35 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_tick_day_data_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
+            -- l_response := api.uniswap_v3_get_tick_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_tick_v3s_historical
-            -- TickV3s (historical) 🔥
-            --
-            -- Gets tickv3s.
-        local
-            l_response: LIST [UNISWAP_V3_TICK_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-            l_pool: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_tick_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_ticks_current
-            -- Ticks (current)
+    test_uniswap_v3_get_ticks_historical
+            -- Ticks (historical) 🔥
             --
             -- Gets ticks.
         local
-            l_response: LIST [UNISWAP_V3_TICK_V3_DTO]
-            l_filter_pool_id: STRING_32
+            l_response: LIST [UNISWAP_V3_TICK_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+            l_pool: STRING_32
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_ticks_current(l_filter_pool_id)
+            -- l_response := api.uniswap_v3_get_ticks_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pool)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_ticks_day_data_current
-            -- TicksDayData (current)
+    test_uniswap_v3_get_token_hour_datas_historical
+            -- TokenHourDatas (historical) 🔥
             --
-            -- Gets ticks day data.
+            -- Gets tokenHourDatas.
         local
-            l_response: LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_ticks_day_data_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_token_hour_data_v3s_historical
-            -- TokenHourDataV3s (historical) 🔥
-            --
-            -- Gets tokenhourdatav3s.
-        local
-            l_response: LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -441,14 +301,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_token_hour_data_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v3_get_token_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
     test_uniswap_v3_get_token_v3_day_datas_historical
             -- TokenV3DayDatas (historical) 🔥
             --
-            -- Gets tokenv3daydatas.
+            -- Gets tokenV3DayDatas.
         local
             l_response: LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -463,12 +323,12 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_token_v3s_historical
-            -- TokenV3s (historical) 🔥
+    test_uniswap_v3_get_tokens_historical
+            -- Tokens (historical) 🔥
             --
-            -- Gets tokenv3s.
+            -- Gets tokens.
         local
-            l_response: LIST [UNISWAP_V3_TOKEN_V3_DTO]
+            l_response: LIST [UNISWAP_V3_TOKEN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -479,85 +339,227 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_token_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_symbol, l_name)
+            -- l_response := api.uniswap_v3_get_tokens_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_symbol, l_name)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_tokens_current
-            -- Tokens (current) 🔥
+    test_uniswap_v3_get_transactions_historical
+            -- Transactions (historical) 🔥
+            --
+            -- Gets transactions.
+        local
+            l_response: LIST [UNISWAP_V3_TRANSACTION_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_transactions_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_get_uniswap_day_datas_historical
+            -- UniswapDayDatas (historical) 🔥
+            --
+            -- Gets uniswapDayDatas.
+        local
+            l_response: LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_get_uniswap_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_mints_current
+            -- Mints (current)
+            --
+            -- Gets mints.
+        local
+            l_response: LIST [UNISWAP_V3_MINT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_mints_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_pool_day_datas_current
+            -- PoolDayDatas (current)
+            --
+            -- Gets poolDayDatas.
+        local
+            l_response: LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_pool_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_pool_hour_datas_current
+            -- PoolHourDatas (current)
+            --
+            -- Gets poolHourDatas.
+        local
+            l_response: LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_pool_hour_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_pools_current
+            -- Pools (current)
+            --
+            -- Gets pools.
+        local
+            l_response: LIST [UNISWAP_V3_POOL_DTO]
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_pools_current(l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_position_snapshots_current
+            -- PositionSnapshots (current)
+            --
+            -- Gets positionSnapshots.
+        local
+            l_response: LIST [UNISWAP_V3_POSITION_SNAPSHOT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_position_snapshots_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_positions_current
+            -- Positions (current)
+            --
+            -- Gets positions.
+        local
+            l_response: LIST [UNISWAP_V3_POSITION_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_positions_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_swaps_current
+            -- Swaps (current)
+            --
+            -- Gets swaps.
+        local
+            l_response: LIST [UNISWAP_V3_SWAP_DTO]
+            l_pool: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_swaps_current(l_pool)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_tick_day_datas_current
+            -- TickDayDatas (current)
+            --
+            -- Gets tickDayDatas.
+        local
+            l_response: LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_tick_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_ticks_current
+            -- Ticks (current)
+            --
+            -- Gets ticks.
+        local
+            l_response: LIST [UNISWAP_V3_TICK_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_ticks_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_token_hour_datas_current
+            -- TokenHourDatas (current)
+            --
+            -- Gets tokenHourDatas.
+        local
+            l_response: LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_token_hour_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_token_v3_day_datas_current
+            -- TokenV3DayDatas (current)
+            --
+            -- Gets tokenV3DayDatas.
+        local
+            l_response: LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v3_token_v3_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v3_tokens_current
+            -- Tokens (current)
             --
             -- Gets tokens.
         local
-            l_response: LIST [UNISWAP_V3_TOKEN_V3_DTO]
-            l_filter_token_id: STRING_32
+            l_response: LIST [UNISWAP_V3_TOKEN_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_tokens_current(l_filter_token_id)
+            -- l_response := api.uniswap_v3_tokens_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_tokens_day_data_current
-            -- TokensDayData (current)
+    test_uniswap_v3_transactions_current
+            -- Transactions (current)
             --
-            -- Gets tokens day data.
+            -- Gets transactions.
         local
-            l_response: LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-            l_filter_token_id: STRING_32
+            l_response: LIST [UNISWAP_V3_TRANSACTION_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_tokens_day_data_current(l_filter_token_id)
+            -- l_response := api.uniswap_v3_transactions_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v3_get_tokens_hour_data_current
-            -- TokensHourData (current)
+    test_uniswap_v3_uniswap_day_datas_current
+            -- UniswapDayDatas (current)
             --
-            -- Gets tokens hour data.
+            -- Gets uniswapDayDatas.
         local
-            l_response: LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
-            l_filter_token_id: STRING_32
+            l_response: LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v3_get_tokens_hour_data_current(l_filter_token_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_transaction_v3s_historical
-            -- TransactionV3s (historical) 🔥
-            --
-            -- Gets transactionv3s.
-        local
-            l_response: LIST [UNISWAP_V3_TRANSACTION_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_transaction_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v3_get_uniswap_day_data_v3s_historical
-            -- UniswapDayDataV3s (historical) 🔥
-            --
-            -- Gets uniswapdaydatav3s.
-        local
-            l_response: LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v3_get_uniswap_day_data_v3s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v3_uniswap_day_datas_current
             assert ("not_implemented", False)
         end
 

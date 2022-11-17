@@ -4,47 +4,48 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**UniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapv3getbundlev3shistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥 |
-| [**UniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
-| [**UniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapv3getburnv3shistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥 |
-| [**UniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
-| [**UniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current) |
-| [**UniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current) |
-| [**UniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapv3getfactoryv3shistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥 |
-| [**UniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapv3getmintv3shistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥 |
-| [**UniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
-| [**UniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatav3shistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥 |
-| [**UniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatav3shistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥 |
-| [**UniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapv3getpoolv3shistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥 |
-| [**UniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥 |
-| [**UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current) |
-| [**UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current) |
-| [**UniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapv3getpositionsnapshotv3shistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥 |
-| [**UniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapv3getpositionv3shistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥 |
-| [**UniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
-| [**UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current) |
-| [**UniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapv3getswapv3shistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥 |
-| [**UniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥 |
-| [**UniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatav3shistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥 |
-| [**UniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapv3gettickv3shistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥 |
-| [**UniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
-| [**UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current) |
-| [**UniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatav3shistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥 |
-| [**UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatashistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥 |
-| [**UniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapv3gettokenv3shistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥 |
-| [**UniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥 |
-| [**UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current) |
-| [**UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current) |
-| [**UniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapv3gettransactionv3shistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥 |
-| [**UniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatav3shistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥 |
+| [**UniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapv3bundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
+| [**UniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapv3burnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
+| [**UniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapv3factoryscurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current) |
+| [**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥 |
+| [**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥 |
+| [**UniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapv3getfactoryshistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥 |
+| [**UniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥 |
+| [**UniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatashistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥 |
+| [**UniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatashistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥 |
+| [**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥 |
+| [**UniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapv3getpositionsnapshotshistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥 |
+| [**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥 |
+| [**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥 |
+| [**UniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatashistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥 |
+| [**UniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥 |
+| [**UniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatashistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥 |
+| [**UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatashistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥 |
+| [**UniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥 |
+| [**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥 |
+| [**UniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatashistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥 |
+| [**UniswapV3MintsCurrent**](UniswapV3Api.md#uniswapv3mintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
+| [**UniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapv3pooldaydatascurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current) |
+| [**UniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapv3poolhourdatascurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current) |
+| [**UniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapv3poolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) |
+| [**UniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapv3positionsnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current) |
+| [**UniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapv3positionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
+| [**UniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapv3swapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) |
+| [**UniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapv3tickdaydatascurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current) |
+| [**UniswapV3TicksCurrent**](UniswapV3Api.md#uniswapv3tickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
+| [**UniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapv3tokenhourdatascurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current) |
+| [**UniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapv3tokenv3daydatascurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current) |
+| [**UniswapV3TokensCurrent**](UniswapV3Api.md#uniswapv3tokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) |
+| [**UniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapv3transactionscurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
+| [**UniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapv3uniswapdaydatascurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current) |
 
-<a name="uniswapv3getbundlev3shistorical"></a>
-# **UniswapV3GetBundleV3sHistorical**
-> List&lt;UniswapV3BundleV3DTO&gt; UniswapV3GetBundleV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+<a name="uniswapv3bundlescurrent"></a>
+# **UniswapV3BundlesCurrent**
+> List&lt;UniswapV3BundleDTO&gt; UniswapV3BundlesCurrent ()
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
 
 ### Example
 ```csharp
@@ -56,7 +57,265 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetBundleV3sHistoricalExample
+    public class UniswapV3BundlesCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Bundles (current)
+                List<UniswapV3BundleDTO> result = apiInstance.UniswapV3BundlesCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3BundlesCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3BundlesCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Bundles (current)
+    ApiResponse<List<UniswapV3BundleDTO>> response = apiInstance.UniswapV3BundlesCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3BundlesCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3burnscurrent"></a>
+# **UniswapV3BurnsCurrent**
+> List&lt;UniswapV3BurnDTO&gt; UniswapV3BurnsCurrent ()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3BurnsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Burns (current)
+                List<UniswapV3BurnDTO> result = apiInstance.UniswapV3BurnsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3BurnsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3BurnsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Burns (current)
+    ApiResponse<List<UniswapV3BurnDTO>> response = apiInstance.UniswapV3BurnsCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3BurnsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3factoryscurrent"></a>
+# **UniswapV3FactorysCurrent**
+> List&lt;UniswapV3FactoryDTO&gt; UniswapV3FactorysCurrent ()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3FactorysCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Factorys (current)
+                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3FactorysCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3FactorysCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3FactorysCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Factorys (current)
+    ApiResponse<List<UniswapV3FactoryDTO>> response = apiInstance.UniswapV3FactorysCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3FactorysCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3getbundleshistorical"></a>
+# **UniswapV3GetBundlesHistorical**
+> List&lt;UniswapV3BundleDTO&gt; UniswapV3GetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+
+Bundles (historical) 🔥
+
+Gets bundles.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3GetBundlesHistoricalExample
     {
         public static void Main()
         {
@@ -71,13 +330,13 @@ namespace Example
 
             try
             {
-                // BundleV3s (historical) 🔥
-                List<UniswapV3BundleV3DTO> result = apiInstance.UniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Bundles (historical) 🔥
+                List<UniswapV3BundleDTO> result = apiInstance.UniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundleV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundlesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -86,21 +345,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetBundleV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetBundlesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // BundleV3s (historical) 🔥
-    ApiResponse<List<UniswapV3BundleV3DTO>> response = apiInstance.UniswapV3GetBundleV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    // Bundles (historical) 🔥
+    ApiResponse<List<UniswapV3BundleDTO>> response = apiInstance.UniswapV3GetBundlesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundleV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundlesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -118,7 +377,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
+[**List&lt;UniswapV3BundleDTO&gt;**](UniswapV3BundleDTO.md)
 
 ### Authorization
 
@@ -137,99 +396,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getbundlescurrent"></a>
-# **UniswapV3GetBundlesCurrent**
-> List&lt;UniswapV3BundleV3DTO&gt; UniswapV3GetBundlesCurrent ()
+<a name="uniswapv3getburnshistorical"></a>
+# **UniswapV3GetBurnsHistorical**
+> List&lt;UniswapV3BurnDTO&gt; UniswapV3GetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetBundlesCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-
-            try
-            {
-                // Bundles (current)
-                List<UniswapV3BundleV3DTO> result = apiInstance.UniswapV3GetBundlesCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundlesCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetBundlesCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Bundles (current)
-    ApiResponse<List<UniswapV3BundleV3DTO>> response = apiInstance.UniswapV3GetBundlesCurrentWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBundlesCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getburnv3shistorical"></a>
-# **UniswapV3GetBurnV3sHistorical**
-> List&lt;UniswapV3BurnV3DTO&gt; UniswapV3GetBurnV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 ```csharp
@@ -241,7 +414,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetBurnV3sHistoricalExample
+    public class UniswapV3GetBurnsHistoricalExample
     {
         public static void Main()
         {
@@ -259,13 +432,13 @@ namespace Example
 
             try
             {
-                // BurnV3s (historical) 🔥
-                List<UniswapV3BurnV3DTO> result = apiInstance.UniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+                // Burns (historical) 🔥
+                List<UniswapV3BurnDTO> result = apiInstance.UniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -274,21 +447,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetBurnV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetBurnsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // BurnV3s (historical) 🔥
-    ApiResponse<List<UniswapV3BurnV3DTO>> response = apiInstance.UniswapV3GetBurnV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    // Burns (historical) 🔥
+    ApiResponse<List<UniswapV3BurnDTO>> response = apiInstance.UniswapV3GetBurnsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -309,7 +482,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
+[**List&lt;UniswapV3BurnDTO&gt;**](UniswapV3BurnDTO.md)
 
 ### Authorization
 
@@ -328,104 +501,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getburnscurrent"></a>
-# **UniswapV3GetBurnsCurrent**
-> List&lt;UniswapV3BurnV3DTO&gt; UniswapV3GetBurnsCurrent (string filterPoolId = null)
+<a name="uniswapv3getfactoryshistorical"></a>
+# **UniswapV3GetFactorysHistorical**
+> List&lt;UniswapV3FactoryDTO&gt; UniswapV3GetFactorysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetBurnsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Burns (current)
-                List<UniswapV3BurnV3DTO> result = apiInstance.UniswapV3GetBurnsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetBurnsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Burns (current)
-    ApiResponse<List<UniswapV3BurnV3DTO>> response = apiInstance.UniswapV3GetBurnsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetBurnsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getdaydatacurrent"></a>
-# **UniswapV3GetDayDataCurrent**
-> List&lt;UniswapV3UniswapDayDataV3DTO&gt; UniswapV3GetDayDataCurrent ()
-
-DayData (current)
-
-Gets uniswapv3 day data.
+Gets factorys.
 
 ### Example
 ```csharp
@@ -437,179 +519,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetDayDataCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-
-            try
-            {
-                // DayData (current)
-                List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.UniswapV3GetDayDataCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetDayDataCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetDayDataCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // DayData (current)
-    ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> response = apiInstance.UniswapV3GetDayDataCurrentWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetDayDataCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getfactorycurrent"></a>
-# **UniswapV3GetFactoryCurrent**
-> List&lt;UniswapV3FactoryV3DTO&gt; UniswapV3GetFactoryCurrent ()
-
-Factory (current)
-
-Gets factory.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetFactoryCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-
-            try
-            {
-                // Factory (current)
-                List<UniswapV3FactoryV3DTO> result = apiInstance.UniswapV3GetFactoryCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactoryCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetFactoryCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Factory (current)
-    ApiResponse<List<UniswapV3FactoryV3DTO>> response = apiInstance.UniswapV3GetFactoryCurrentWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactoryCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getfactoryv3shistorical"></a>
-# **UniswapV3GetFactoryV3sHistorical**
-> List&lt;UniswapV3FactoryV3DTO&gt; UniswapV3GetFactoryV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetFactoryV3sHistoricalExample
+    public class UniswapV3GetFactorysHistoricalExample
     {
         public static void Main()
         {
@@ -624,13 +534,13 @@ namespace Example
 
             try
             {
-                // FactoryV3s (historical) 🔥
-                List<UniswapV3FactoryV3DTO> result = apiInstance.UniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Factorys (historical) 🔥
+                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactoryV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactorysHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -639,21 +549,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetFactoryV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetFactorysHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // FactoryV3s (historical) 🔥
-    ApiResponse<List<UniswapV3FactoryV3DTO>> response = apiInstance.UniswapV3GetFactoryV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    // Factorys (historical) 🔥
+    ApiResponse<List<UniswapV3FactoryDTO>> response = apiInstance.UniswapV3GetFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactoryV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactorysHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -671,7 +581,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
+[**List&lt;UniswapV3FactoryDTO&gt;**](UniswapV3FactoryDTO.md)
 
 ### Authorization
 
@@ -690,13 +600,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getmintv3shistorical"></a>
-# **UniswapV3GetMintV3sHistorical**
-> List&lt;UniswapV3MintV3DTO&gt; UniswapV3GetMintV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
+<a name="uniswapv3getmintshistorical"></a>
+# **UniswapV3GetMintsHistorical**
+> List&lt;UniswapV3MintDTO&gt; UniswapV3GetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 ```csharp
@@ -708,7 +618,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetMintV3sHistoricalExample
+    public class UniswapV3GetMintsHistoricalExample
     {
         public static void Main()
         {
@@ -726,13 +636,13 @@ namespace Example
 
             try
             {
-                // MintV3s (historical) 🔥
-                List<UniswapV3MintV3DTO> result = apiInstance.UniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+                // Mints (historical) 🔥
+                List<UniswapV3MintDTO> result = apiInstance.UniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -741,21 +651,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetMintV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetMintsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // MintV3s (historical) 🔥
-    ApiResponse<List<UniswapV3MintV3DTO>> response = apiInstance.UniswapV3GetMintV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    // Mints (historical) 🔥
+    ApiResponse<List<UniswapV3MintDTO>> response = apiInstance.UniswapV3GetMintsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -776,7 +686,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
+[**List&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
 
 ### Authorization
 
@@ -795,104 +705,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getmintscurrent"></a>
-# **UniswapV3GetMintsCurrent**
-> List&lt;UniswapV3MintV3DTO&gt; UniswapV3GetMintsCurrent (string filterPoolId = null)
+<a name="uniswapv3getpooldaydatashistorical"></a>
+# **UniswapV3GetPoolDayDatasHistorical**
+> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3GetPoolDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetMintsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Mints (current)
-                List<UniswapV3MintV3DTO> result = apiInstance.UniswapV3GetMintsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetMintsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Mints (current)
-    ApiResponse<List<UniswapV3MintV3DTO>> response = apiInstance.UniswapV3GetMintsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetMintsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getpooldaydatav3shistorical"></a>
-# **UniswapV3GetPoolDayDataV3sHistorical**
-> List&lt;UniswapV3PoolDayDataV3DTO&gt; UniswapV3GetPoolDayDataV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 ```csharp
@@ -904,7 +723,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolDayDataV3sHistoricalExample
+    public class UniswapV3GetPoolDayDatasHistoricalExample
     {
         public static void Main()
         {
@@ -920,13 +739,13 @@ namespace Example
 
             try
             {
-                // PoolDayDataV3s (historical) 🔥
-                List<UniswapV3PoolDayDataV3DTO> result = apiInstance.UniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // PoolDayDatas (historical) 🔥
+                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDataV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDatasHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -935,21 +754,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetPoolDayDatasHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // PoolDayDataV3s (historical) 🔥
-    ApiResponse<List<UniswapV3PoolDayDataV3DTO>> response = apiInstance.UniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    // PoolDayDatas (historical) 🔥
+    ApiResponse<List<UniswapV3PoolDayDataDTO>> response = apiInstance.UniswapV3GetPoolDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDatasHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -968,7 +787,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
+[**List&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
 
 ### Authorization
 
@@ -987,13 +806,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpoolhourdatav3shistorical"></a>
-# **UniswapV3GetPoolHourDataV3sHistorical**
-> List&lt;UniswapV3PoolHourDataV3DTO&gt; UniswapV3GetPoolHourDataV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
+<a name="uniswapv3getpoolhourdatashistorical"></a>
+# **UniswapV3GetPoolHourDatasHistorical**
+> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3GetPoolHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 ```csharp
@@ -1005,7 +824,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolHourDataV3sHistoricalExample
+    public class UniswapV3GetPoolHourDatasHistoricalExample
     {
         public static void Main()
         {
@@ -1021,13 +840,13 @@ namespace Example
 
             try
             {
-                // PoolHourDataV3s (historical) 🔥
-                List<UniswapV3PoolHourDataV3DTO> result = apiInstance.UniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // PoolHourDatas (historical) 🔥
+                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDataV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDatasHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1036,21 +855,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetPoolHourDatasHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // PoolHourDataV3s (historical) 🔥
-    ApiResponse<List<UniswapV3PoolHourDataV3DTO>> response = apiInstance.UniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    // PoolHourDatas (historical) 🔥
+    ApiResponse<List<UniswapV3PoolHourDataDTO>> response = apiInstance.UniswapV3GetPoolHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDatasHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1069,7 +888,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
+[**List&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
 
 ### Authorization
 
@@ -1088,13 +907,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpoolv3shistorical"></a>
-# **UniswapV3GetPoolV3sHistorical**
-> List&lt;UniswapV3PoolV3DTO&gt; UniswapV3GetPoolV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
+<a name="uniswapv3getpoolshistorical"></a>
+# **UniswapV3GetPoolsHistorical**
+> List&lt;UniswapV3PoolDTO&gt; UniswapV3GetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 ```csharp
@@ -1106,7 +925,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolV3sHistoricalExample
+    public class UniswapV3GetPoolsHistoricalExample
     {
         public static void Main()
         {
@@ -1123,13 +942,13 @@ namespace Example
 
             try
             {
-                // PoolV3s (historical) 🔥
-                List<UniswapV3PoolV3DTO> result = apiInstance.UniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+                // Pools (historical) 🔥
+                List<UniswapV3PoolDTO> result = apiInstance.UniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1138,21 +957,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetPoolV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetPoolsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // PoolV3s (historical) 🔥
-    ApiResponse<List<UniswapV3PoolV3DTO>> response = apiInstance.UniswapV3GetPoolV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    // Pools (historical) 🔥
+    ApiResponse<List<UniswapV3PoolDTO>> response = apiInstance.UniswapV3GetPoolsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1172,7 +991,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
+[**List&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
 
 ### Authorization
 
@@ -1191,104 +1010,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpoolscurrent"></a>
-# **UniswapV3GetPoolsCurrent**
-> List&lt;UniswapV3PoolV3DTO&gt; UniswapV3GetPoolsCurrent (string filterPoolId = null)
+<a name="uniswapv3getpositionsnapshotshistorical"></a>
+# **UniswapV3GetPositionSnapshotsHistorical**
+> List&lt;UniswapV3PositionSnapshotDTO&gt; UniswapV3GetPositionSnapshotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetPoolsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Pools (current) 🔥
-                List<UniswapV3PoolV3DTO> result = apiInstance.UniswapV3GetPoolsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetPoolsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Pools (current) 🔥
-    ApiResponse<List<UniswapV3PoolV3DTO>> response = apiInstance.UniswapV3GetPoolsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getpoolsdaydatacurrent"></a>
-# **UniswapV3GetPoolsDayDataCurrent**
-> List&lt;UniswapV3PoolDayDataV3DTO&gt; UniswapV3GetPoolsDayDataCurrent (string filterPoolId = null)
-
-PoolsDayData (current)
-
-Gets pools day data.
+Gets positionSnapshots.
 
 ### Example
 ```csharp
@@ -1300,189 +1028,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolsDayDataCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // PoolsDayData (current)
-                List<UniswapV3PoolDayDataV3DTO> result = apiInstance.UniswapV3GetPoolsDayDataCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsDayDataCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetPoolsDayDataCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // PoolsDayData (current)
-    ApiResponse<List<UniswapV3PoolDayDataV3DTO>> response = apiInstance.UniswapV3GetPoolsDayDataCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsDayDataCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getpoolshourdatacurrent"></a>
-# **UniswapV3GetPoolsHourDataCurrent**
-> List&lt;UniswapV3PoolHourDataV3DTO&gt; UniswapV3GetPoolsHourDataCurrent (string filterPoolId = null)
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetPoolsHourDataCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // PoolsHourData (current)
-                List<UniswapV3PoolHourDataV3DTO> result = apiInstance.UniswapV3GetPoolsHourDataCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsHourDataCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetPoolsHourDataCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // PoolsHourData (current)
-    ApiResponse<List<UniswapV3PoolHourDataV3DTO>> response = apiInstance.UniswapV3GetPoolsHourDataCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolsHourDataCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getpositionsnapshotv3shistorical"></a>
-# **UniswapV3GetPositionSnapshotV3sHistorical**
-> List&lt;UniswapV3PositionSnapshotV3DTO&gt; UniswapV3GetPositionSnapshotV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetPositionSnapshotV3sHistoricalExample
+    public class UniswapV3GetPositionSnapshotsHistoricalExample
     {
         public static void Main()
         {
@@ -1498,13 +1044,13 @@ namespace Example
 
             try
             {
-                // PositionSnapshotV3s (historical) 🔥
-                List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.UniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // PositionSnapshots (historical) 🔥
+                List<UniswapV3PositionSnapshotDTO> result = apiInstance.UniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionSnapshotV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionSnapshotsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1513,21 +1059,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetPositionSnapshotsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // PositionSnapshotV3s (historical) 🔥
-    ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> response = apiInstance.UniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    // PositionSnapshots (historical) 🔥
+    ApiResponse<List<UniswapV3PositionSnapshotDTO>> response = apiInstance.UniswapV3GetPositionSnapshotsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionSnapshotsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1546,7 +1092,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
+[**List&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -1565,13 +1111,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpositionv3shistorical"></a>
-# **UniswapV3GetPositionV3sHistorical**
-> List&lt;UniswapV3PositionV3DTO&gt; UniswapV3GetPositionV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
+<a name="uniswapv3getpositionshistorical"></a>
+# **UniswapV3GetPositionsHistorical**
+> List&lt;UniswapV3PositionDTO&gt; UniswapV3GetPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 ```csharp
@@ -1583,7 +1129,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPositionV3sHistoricalExample
+    public class UniswapV3GetPositionsHistoricalExample
     {
         public static void Main()
         {
@@ -1601,13 +1147,13 @@ namespace Example
 
             try
             {
-                // PositionV3s (historical) 🔥
-                List<UniswapV3PositionV3DTO> result = apiInstance.UniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+                // Positions (historical) 🔥
+                List<UniswapV3PositionDTO> result = apiInstance.UniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1616,21 +1162,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetPositionV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetPositionsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // PositionV3s (historical) 🔥
-    ApiResponse<List<UniswapV3PositionV3DTO>> response = apiInstance.UniswapV3GetPositionV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    // Positions (historical) 🔥
+    ApiResponse<List<UniswapV3PositionDTO>> response = apiInstance.UniswapV3GetPositionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1651,7 +1197,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
+[**List&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
 
 ### Authorization
 
@@ -1670,104 +1216,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpositionscurrent"></a>
-# **UniswapV3GetPositionsCurrent**
-> List&lt;UniswapV3PositionV3DTO&gt; UniswapV3GetPositionsCurrent (string filterPoolId = null)
+<a name="uniswapv3getswapshistorical"></a>
+# **UniswapV3GetSwapsHistorical**
+> List&lt;UniswapV3SwapDTO&gt; UniswapV3GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetPositionsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Positions (current)
-                List<UniswapV3PositionV3DTO> result = apiInstance.UniswapV3GetPositionsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetPositionsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Positions (current)
-    ApiResponse<List<UniswapV3PositionV3DTO>> response = apiInstance.UniswapV3GetPositionsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getpositionssnapshotscurrent"></a>
-# **UniswapV3GetPositionsSnapshotsCurrent**
-> List&lt;UniswapV3PositionSnapshotV3DTO&gt; UniswapV3GetPositionsSnapshotsCurrent (string filterPoolId = null)
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
+Gets swaps.
 
 ### Example
 ```csharp
@@ -1779,98 +1234,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPositionsSnapshotsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // PositionsSnapshots (current)
-                List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.UniswapV3GetPositionsSnapshotsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsSnapshotsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetPositionsSnapshotsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // PositionsSnapshots (current)
-    ApiResponse<List<UniswapV3PositionSnapshotV3DTO>> response = apiInstance.UniswapV3GetPositionsSnapshotsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPositionsSnapshotsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3getswapv3shistorical"></a>
-# **UniswapV3GetSwapV3sHistorical**
-> List&lt;UniswapV3SwapV3DTO&gt; UniswapV3GetSwapV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetSwapV3sHistoricalExample
+    public class UniswapV3GetSwapsHistoricalExample
     {
         public static void Main()
         {
@@ -1888,13 +1252,13 @@ namespace Example
 
             try
             {
-                // SwapV3s (historical) 🔥
-                List<UniswapV3SwapV3DTO> result = apiInstance.UniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+                // Swaps (historical) 🔥
+                List<UniswapV3SwapDTO> result = apiInstance.UniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1903,21 +1267,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetSwapV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetSwapsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // SwapV3s (historical) 🔥
-    ApiResponse<List<UniswapV3SwapV3DTO>> response = apiInstance.UniswapV3GetSwapV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    // Swaps (historical) 🔥
+    ApiResponse<List<UniswapV3SwapDTO>> response = apiInstance.UniswapV3GetSwapsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1938,7 +1302,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
+[**List&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
 
 ### Authorization
 
@@ -1957,104 +1321,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getswapscurrent"></a>
-# **UniswapV3GetSwapsCurrent**
-> List&lt;UniswapV3SwapV3DTO&gt; UniswapV3GetSwapsCurrent (string filterPoolId = null)
+<a name="uniswapv3gettickdaydatashistorical"></a>
+# **UniswapV3GetTickDayDatasHistorical**
+> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3GetTickDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetSwapsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Swaps (current) 🔥
-                List<UniswapV3SwapV3DTO> result = apiInstance.UniswapV3GetSwapsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapsCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetSwapsCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Swaps (current) 🔥
-    ApiResponse<List<UniswapV3SwapV3DTO>> response = apiInstance.UniswapV3GetSwapsCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetSwapsCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3gettickdaydatav3shistorical"></a>
-# **UniswapV3GetTickDayDataV3sHistorical**
-> List&lt;UniswapV3TickDayDataV3DTO&gt; UniswapV3GetTickDayDataV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 ```csharp
@@ -2066,7 +1339,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTickDayDataV3sHistoricalExample
+    public class UniswapV3GetTickDayDatasHistoricalExample
     {
         public static void Main()
         {
@@ -2082,13 +1355,13 @@ namespace Example
 
             try
             {
-                // TickDayDataV3s (historical) 🔥
-                List<UniswapV3TickDayDataV3DTO> result = apiInstance.UniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // TickDayDatas (historical) 🔥
+                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDataV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDatasHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2097,21 +1370,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTickDayDataV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetTickDayDatasHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TickDayDataV3s (historical) 🔥
-    ApiResponse<List<UniswapV3TickDayDataV3DTO>> response = apiInstance.UniswapV3GetTickDayDataV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    // TickDayDatas (historical) 🔥
+    ApiResponse<List<UniswapV3TickDayDataDTO>> response = apiInstance.UniswapV3GetTickDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDataV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDatasHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2130,7 +1403,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
+[**List&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
 
 ### Authorization
 
@@ -2149,112 +1422,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettickv3shistorical"></a>
-# **UniswapV3GetTickV3sHistorical**
-> List&lt;UniswapV3TickV3DTO&gt; UniswapV3GetTickV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
+<a name="uniswapv3gettickshistorical"></a>
+# **UniswapV3GetTicksHistorical**
+> List&lt;UniswapV3TickDTO&gt; UniswapV3GetTicksHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetTickV3sHistoricalExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var pool = "pool_example";  // string |  (optional) 
-
-            try
-            {
-                // TickV3s (historical) 🔥
-                List<UniswapV3TickV3DTO> result = apiInstance.UniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickV3sHistorical: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetTickV3sHistoricalWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // TickV3s (historical) 🔥
-    ApiResponse<List<UniswapV3TickV3DTO>> response = apiInstance.UniswapV3GetTickV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickV3sHistoricalWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **pool** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3gettickscurrent"></a>
-# **UniswapV3GetTicksCurrent**
-> List&lt;UniswapV3TickV3DTO&gt; UniswapV3GetTicksCurrent (string filterPoolId = null)
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
@@ -2268,24 +1440,29 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTicksCurrentExample
+    public class UniswapV3GetTicksHistoricalExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var id = "id_example";  // string |  (optional) 
+            var pool = "pool_example";  // string |  (optional) 
 
             try
             {
-                // Ticks (current)
-                List<UniswapV3TickV3DTO> result = apiInstance.UniswapV3GetTicksCurrent(filterPoolId);
+                // Ticks (historical) 🔥
+                List<UniswapV3TickDTO> result = apiInstance.UniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksCurrent: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2294,21 +1471,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTicksCurrentWithHttpInfo variant
+#### Using the UniswapV3GetTicksHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Ticks (current)
-    ApiResponse<List<UniswapV3TickV3DTO>> response = apiInstance.UniswapV3GetTicksCurrentWithHttpInfo(filterPoolId);
+    // Ticks (historical) 🔥
+    ApiResponse<List<UniswapV3TickDTO>> response = apiInstance.UniswapV3GetTicksHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2318,11 +1495,16 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **id** | **string** |  | [optional]  |
+| **pool** | **string** |  | [optional]  |
 
 ### Return type
 
-[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
+[**List&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
 
 ### Authorization
 
@@ -2341,104 +1523,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getticksdaydatacurrent"></a>
-# **UniswapV3GetTicksDayDataCurrent**
-> List&lt;UniswapV3TickDayDataV3DTO&gt; UniswapV3GetTicksDayDataCurrent (string filterPoolId = null)
+<a name="uniswapv3gettokenhourdatashistorical"></a>
+# **UniswapV3GetTokenHourDatasHistorical**
+> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3GetTokenHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TicksDayData (current)
+TokenHourDatas (historical) 🔥
 
-Gets ticks day data.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV3GetTicksDayDataCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV3Api(config);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // TicksDayData (current)
-                List<UniswapV3TickDayDataV3DTO> result = apiInstance.UniswapV3GetTicksDayDataCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksDayDataCurrent: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the UniswapV3GetTicksDayDataCurrentWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // TicksDayData (current)
-    ApiResponse<List<UniswapV3TickDayDataV3DTO>> response = apiInstance.UniswapV3GetTicksDayDataCurrentWithHttpInfo(filterPoolId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTicksDayDataCurrentWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterPoolId** | **string** |  | [optional]  |
-
-### Return type
-
-[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="uniswapv3gettokenhourdatav3shistorical"></a>
-# **UniswapV3GetTokenHourDataV3sHistorical**
-> List&lt;UniswapV3TokenHourDataV3DTO&gt; UniswapV3GetTokenHourDataV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
-
-TokenHourDataV3s (historical) 🔥
-
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 ```csharp
@@ -2450,7 +1541,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokenHourDataV3sHistoricalExample
+    public class UniswapV3GetTokenHourDatasHistoricalExample
     {
         public static void Main()
         {
@@ -2465,13 +1556,13 @@ namespace Example
 
             try
             {
-                // TokenHourDataV3s (historical) 🔥
-                List<UniswapV3TokenHourDataV3DTO> result = apiInstance.UniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // TokenHourDatas (historical) 🔥
+                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDataV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDatasHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2480,21 +1571,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetTokenHourDatasHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TokenHourDataV3s (historical) 🔥
-    ApiResponse<List<UniswapV3TokenHourDataV3DTO>> response = apiInstance.UniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    // TokenHourDatas (historical) 🔥
+    ApiResponse<List<UniswapV3TokenHourDataDTO>> response = apiInstance.UniswapV3GetTokenHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDatasHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2512,7 +1603,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+[**List&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
 
 ### Authorization
 
@@ -2537,7 +1628,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 ```csharp
@@ -2630,13 +1721,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenv3shistorical"></a>
-# **UniswapV3GetTokenV3sHistorical**
-> List&lt;UniswapV3TokenV3DTO&gt; UniswapV3GetTokenV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
+<a name="uniswapv3gettokenshistorical"></a>
+# **UniswapV3GetTokensHistorical**
+> List&lt;UniswapV3TokenDTO&gt; UniswapV3GetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 ```csharp
@@ -2648,7 +1739,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokenV3sHistoricalExample
+    public class UniswapV3GetTokensHistoricalExample
     {
         public static void Main()
         {
@@ -2665,13 +1756,13 @@ namespace Example
 
             try
             {
-                // TokenV3s (historical) 🔥
-                List<UniswapV3TokenV3DTO> result = apiInstance.UniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+                // Tokens (historical) 🔥
+                List<UniswapV3TokenDTO> result = apiInstance.UniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2680,21 +1771,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTokenV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3GetTokensHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TokenV3s (historical) 🔥
-    ApiResponse<List<UniswapV3TokenV3DTO>> response = apiInstance.UniswapV3GetTokenV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, symbol, name);
+    // Tokens (historical) 🔥
+    ApiResponse<List<UniswapV3TokenDTO>> response = apiInstance.UniswapV3GetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, symbol, name);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2714,7 +1805,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
+[**List&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -2733,13 +1824,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenscurrent"></a>
-# **UniswapV3GetTokensCurrent**
-> List&lt;UniswapV3TokenV3DTO&gt; UniswapV3GetTokensCurrent (string filterTokenId = null)
+<a name="uniswapv3gettransactionshistorical"></a>
+# **UniswapV3GetTransactionsHistorical**
+> List&lt;UniswapV3TransactionDTO&gt; UniswapV3GetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
+Gets transactions.
 
 ### Example
 ```csharp
@@ -2751,24 +1842,28 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokensCurrentExample
+    public class UniswapV3GetTransactionsHistoricalExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var filterTokenId = "filterTokenId_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Transaction hash. (optional) 
 
             try
             {
-                // Tokens (current) 🔥
-                List<UniswapV3TokenV3DTO> result = apiInstance.UniswapV3GetTokensCurrent(filterTokenId);
+                // Transactions (historical) 🔥
+                List<UniswapV3TransactionDTO> result = apiInstance.UniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensCurrent: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTransactionsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2777,21 +1872,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTokensCurrentWithHttpInfo variant
+#### Using the UniswapV3GetTransactionsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Tokens (current) 🔥
-    ApiResponse<List<UniswapV3TokenV3DTO>> response = apiInstance.UniswapV3GetTokensCurrentWithHttpInfo(filterTokenId);
+    // Transactions (historical) 🔥
+    ApiResponse<List<UniswapV3TransactionDTO>> response = apiInstance.UniswapV3GetTransactionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTransactionsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2801,11 +1896,15 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **filterTokenId** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Transaction hash. | [optional]  |
 
 ### Return type
 
-[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
+[**List&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -2824,13 +1923,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokensdaydatacurrent"></a>
-# **UniswapV3GetTokensDayDataCurrent**
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokensDayDataCurrent (string filterTokenId = null)
+<a name="uniswapv3getuniswapdaydatashistorical"></a>
+# **UniswapV3GetUniswapDayDatasHistorical**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3GetUniswapDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TokensDayData (current)
+UniswapDayDatas (historical) 🔥
 
-Gets tokens day data.
+Gets uniswapDayDatas.
 
 ### Example
 ```csharp
@@ -2842,24 +1941,28 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokensDayDataCurrentExample
+    public class UniswapV3GetUniswapDayDatasHistoricalExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var filterTokenId = "filterTokenId_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Timestamp rounded to current day by dividing by 86400. (optional) 
 
             try
             {
-                // TokensDayData (current)
-                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3GetTokensDayDataCurrent(filterTokenId);
+                // UniswapDayDatas (historical) 🔥
+                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensDayDataCurrent: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDatasHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2868,21 +1971,21 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTokensDayDataCurrentWithHttpInfo variant
+#### Using the UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TokensDayData (current)
-    ApiResponse<List<UniswapV3TokenV3DayDataDTO>> response = apiInstance.UniswapV3GetTokensDayDataCurrentWithHttpInfo(filterTokenId);
+    // UniswapDayDatas (historical) 🔥
+    ApiResponse<List<UniswapV3UniswapDayDataDTO>> response = apiInstance.UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensDayDataCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2892,8 +1995,968 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **filterTokenId** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Timestamp rounded to current day by dividing by 86400. | [optional]  |
 
+### Return type
+
+[**List&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3mintscurrent"></a>
+# **UniswapV3MintsCurrent**
+> List&lt;UniswapV3MintDTO&gt; UniswapV3MintsCurrent ()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3MintsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Mints (current)
+                List<UniswapV3MintDTO> result = apiInstance.UniswapV3MintsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3MintsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3MintsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Mints (current)
+    ApiResponse<List<UniswapV3MintDTO>> response = apiInstance.UniswapV3MintsCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3MintsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3MintDTO&gt;**](UniswapV3MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3pooldaydatascurrent"></a>
+# **UniswapV3PoolDayDatasCurrent**
+> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3PoolDayDatasCurrent ()
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3PoolDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // PoolDayDatas (current)
+                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3PoolDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolDayDatasCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3PoolDayDatasCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // PoolDayDatas (current)
+    ApiResponse<List<UniswapV3PoolDayDataDTO>> response = apiInstance.UniswapV3PoolDayDatasCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolDayDatasCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3PoolDayDataDTO&gt;**](UniswapV3PoolDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3poolhourdatascurrent"></a>
+# **UniswapV3PoolHourDatasCurrent**
+> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3PoolHourDatasCurrent ()
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3PoolHourDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // PoolHourDatas (current)
+                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3PoolHourDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolHourDatasCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3PoolHourDatasCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // PoolHourDatas (current)
+    ApiResponse<List<UniswapV3PoolHourDataDTO>> response = apiInstance.UniswapV3PoolHourDatasCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolHourDatasCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3PoolHourDataDTO&gt;**](UniswapV3PoolHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3poolscurrent"></a>
+# **UniswapV3PoolsCurrent**
+> List&lt;UniswapV3PoolDTO&gt; UniswapV3PoolsCurrent (string id = null)
+
+Pools (current)
+
+Gets pools.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3PoolsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+            var id = "id_example";  // string | Pool address. (optional) 
+
+            try
+            {
+                // Pools (current)
+                List<UniswapV3PoolDTO> result = apiInstance.UniswapV3PoolsCurrent(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3PoolsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Pools (current)
+    ApiResponse<List<UniswapV3PoolDTO>> response = apiInstance.UniswapV3PoolsCurrentWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | Pool address. | [optional]  |
+
+### Return type
+
+[**List&lt;UniswapV3PoolDTO&gt;**](UniswapV3PoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3positionsnapshotscurrent"></a>
+# **UniswapV3PositionSnapshotsCurrent**
+> List&lt;UniswapV3PositionSnapshotDTO&gt; UniswapV3PositionSnapshotsCurrent ()
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3PositionSnapshotsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // PositionSnapshots (current)
+                List<UniswapV3PositionSnapshotDTO> result = apiInstance.UniswapV3PositionSnapshotsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PositionSnapshotsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3PositionSnapshotsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // PositionSnapshots (current)
+    ApiResponse<List<UniswapV3PositionSnapshotDTO>> response = apiInstance.UniswapV3PositionSnapshotsCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3PositionSnapshotsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3PositionSnapshotDTO&gt;**](UniswapV3PositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3positionscurrent"></a>
+# **UniswapV3PositionsCurrent**
+> List&lt;UniswapV3PositionDTO&gt; UniswapV3PositionsCurrent ()
+
+Positions (current)
+
+Gets positions.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3PositionsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Positions (current)
+                List<UniswapV3PositionDTO> result = apiInstance.UniswapV3PositionsCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PositionsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3PositionsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Positions (current)
+    ApiResponse<List<UniswapV3PositionDTO>> response = apiInstance.UniswapV3PositionsCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3PositionsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3PositionDTO&gt;**](UniswapV3PositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3swapscurrent"></a>
+# **UniswapV3SwapsCurrent**
+> List&lt;UniswapV3SwapDTO&gt; UniswapV3SwapsCurrent (string pool = null)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3SwapsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+            var pool = "pool_example";  // string | Pool swap occured within. (optional) 
+
+            try
+            {
+                // Swaps (current)
+                List<UniswapV3SwapDTO> result = apiInstance.UniswapV3SwapsCurrent(pool);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3SwapsCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3SwapsCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Swaps (current)
+    ApiResponse<List<UniswapV3SwapDTO>> response = apiInstance.UniswapV3SwapsCurrentWithHttpInfo(pool);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3SwapsCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pool** | **string** | Pool swap occured within. | [optional]  |
+
+### Return type
+
+[**List&lt;UniswapV3SwapDTO&gt;**](UniswapV3SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3tickdaydatascurrent"></a>
+# **UniswapV3TickDayDatasCurrent**
+> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3TickDayDatasCurrent ()
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3TickDayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // TickDayDatas (current)
+                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3TickDayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TickDayDatasCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3TickDayDatasCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // TickDayDatas (current)
+    ApiResponse<List<UniswapV3TickDayDataDTO>> response = apiInstance.UniswapV3TickDayDatasCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TickDayDatasCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3TickDayDataDTO&gt;**](UniswapV3TickDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3tickscurrent"></a>
+# **UniswapV3TicksCurrent**
+> List&lt;UniswapV3TickDTO&gt; UniswapV3TicksCurrent ()
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3TicksCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // Ticks (current)
+                List<UniswapV3TickDTO> result = apiInstance.UniswapV3TicksCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TicksCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3TicksCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Ticks (current)
+    ApiResponse<List<UniswapV3TickDTO>> response = apiInstance.UniswapV3TicksCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TicksCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3TickDTO&gt;**](UniswapV3TickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3tokenhourdatascurrent"></a>
+# **UniswapV3TokenHourDatasCurrent**
+> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3TokenHourDatasCurrent ()
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3TokenHourDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // TokenHourDatas (current)
+                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3TokenHourDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenHourDatasCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3TokenHourDatasCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // TokenHourDatas (current)
+    ApiResponse<List<UniswapV3TokenHourDataDTO>> response = apiInstance.UniswapV3TokenHourDatasCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenHourDatasCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**List&lt;UniswapV3TokenHourDataDTO&gt;**](UniswapV3TokenHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uniswapv3tokenv3daydatascurrent"></a>
+# **UniswapV3TokenV3DayDatasCurrent**
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3TokenV3DayDatasCurrent ()
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV3TokenV3DayDatasCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV3Api(config);
+
+            try
+            {
+                // TokenV3DayDatas (current)
+                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3TokenV3DayDatasCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenV3DayDatasCurrent: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UniswapV3TokenV3DayDatasCurrentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // TokenV3DayDatas (current)
+    ApiResponse<List<UniswapV3TokenV3DayDataDTO>> response = apiInstance.UniswapV3TokenV3DayDatasCurrentWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenV3DayDatasCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
@@ -2915,13 +2978,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenshourdatacurrent"></a>
-# **UniswapV3GetTokensHourDataCurrent**
-> List&lt;UniswapV3TokenHourDataV3DTO&gt; UniswapV3GetTokensHourDataCurrent (string filterTokenId = null)
+<a name="uniswapv3tokenscurrent"></a>
+# **UniswapV3TokensCurrent**
+> List&lt;UniswapV3TokenDTO&gt; UniswapV3TokensCurrent ()
 
-TokensHourData (current)
+Tokens (current)
 
-Gets tokens hour data.
+Gets tokens.
 
 ### Example
 ```csharp
@@ -2933,24 +2996,23 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokensHourDataCurrentExample
+    public class UniswapV3TokensCurrentExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var filterTokenId = "filterTokenId_example";  // string |  (optional) 
 
             try
             {
-                // TokensHourData (current)
-                List<UniswapV3TokenHourDataV3DTO> result = apiInstance.UniswapV3GetTokensHourDataCurrent(filterTokenId);
+                // Tokens (current)
+                List<UniswapV3TokenDTO> result = apiInstance.UniswapV3TokensCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensHourDataCurrent: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokensCurrent: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2959,35 +3021,31 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTokensHourDataCurrentWithHttpInfo variant
+#### Using the UniswapV3TokensCurrentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TokensHourData (current)
-    ApiResponse<List<UniswapV3TokenHourDataV3DTO>> response = apiInstance.UniswapV3GetTokensHourDataCurrentWithHttpInfo(filterTokenId);
+    // Tokens (current)
+    ApiResponse<List<UniswapV3TokenDTO>> response = apiInstance.UniswapV3TokensCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokensHourDataCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokensCurrentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **filterTokenId** | **string** |  | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+[**List&lt;UniswapV3TokenDTO&gt;**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -3006,13 +3064,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettransactionv3shistorical"></a>
-# **UniswapV3GetTransactionV3sHistorical**
-> List&lt;UniswapV3TransactionV3DTO&gt; UniswapV3GetTransactionV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+<a name="uniswapv3transactionscurrent"></a>
+# **UniswapV3TransactionsCurrent**
+> List&lt;UniswapV3TransactionDTO&gt; UniswapV3TransactionsCurrent ()
 
-TransactionV3s (historical) 🔥
+Transactions (current)
 
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 ```csharp
@@ -3024,28 +3082,23 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTransactionV3sHistoricalExample
+    public class UniswapV3TransactionsCurrentExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
-            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
-            var id = "id_example";  // string | Transaction hash. (optional) 
 
             try
             {
-                // TransactionV3s (historical) 🔥
-                List<UniswapV3TransactionV3DTO> result = apiInstance.UniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Transactions (current)
+                List<UniswapV3TransactionDTO> result = apiInstance.UniswapV3TransactionsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTransactionV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TransactionsCurrent: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3054,39 +3107,31 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetTransactionV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3TransactionsCurrentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // TransactionV3s (historical) 🔥
-    ApiResponse<List<UniswapV3TransactionV3DTO>> response = apiInstance.UniswapV3GetTransactionV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    // Transactions (current)
+    ApiResponse<List<UniswapV3TransactionDTO>> response = apiInstance.UniswapV3TransactionsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTransactionV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3TransactionsCurrentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
-| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
-| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
-| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
-| **id** | **string** | Transaction hash. | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;UniswapV3TransactionV3DTO&gt;**](UniswapV3TransactionV3DTO.md)
+[**List&lt;UniswapV3TransactionDTO&gt;**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -3105,13 +3150,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getuniswapdaydatav3shistorical"></a>
-# **UniswapV3GetUniswapDayDataV3sHistorical**
-> List&lt;UniswapV3UniswapDayDataV3DTO&gt; UniswapV3GetUniswapDayDataV3sHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+<a name="uniswapv3uniswapdaydatascurrent"></a>
+# **UniswapV3UniswapDayDatasCurrent**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3UniswapDayDatasCurrent ()
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (current)
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 ```csharp
@@ -3123,28 +3168,23 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetUniswapDayDataV3sHistoricalExample
+    public class UniswapV3UniswapDayDatasCurrentExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new UniswapV3Api(config);
-            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
-            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
-            var id = "id_example";  // string | Timestamp rounded to current day by dividing by 86400. (optional) 
 
             try
             {
-                // UniswapDayDataV3s (historical) 🔥
-                List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.UniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+                // UniswapDayDatas (current)
+                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3UniswapDayDatasCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDataV3sHistorical: " + e.Message);
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3UniswapDayDatasCurrent: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3153,39 +3193,31 @@ namespace Example
 }
 ```
 
-#### Using the UniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo variant
+#### Using the UniswapV3UniswapDayDatasCurrentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // UniswapDayDataV3s (historical) 🔥
-    ApiResponse<List<UniswapV3UniswapDayDataV3DTO>> response = apiInstance.UniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    // UniswapDayDatas (current)
+    ApiResponse<List<UniswapV3UniswapDayDataDTO>> response = apiInstance.UniswapV3UniswapDayDatasCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UniswapV3Api.UniswapV3UniswapDayDatasCurrentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
-| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
-| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
-| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
-| **id** | **string** | Timestamp rounded to current day by dividing by 86400. | [optional]  |
-
+This endpoint does not need any parameter.
 ### Return type
 
-[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
+[**List&lt;UniswapV3UniswapDayDataDTO&gt;**](UniswapV3UniswapDayDataDTO.md)
 
 ### Authorization
 

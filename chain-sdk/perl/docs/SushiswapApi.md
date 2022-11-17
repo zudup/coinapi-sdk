@@ -11,25 +11,39 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curve_get_exchanges__current**](SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dex_get_trades__current**](SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**sushiswap_bundles__current**](SushiswapApi.md#sushiswap_bundles__current) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
+[**sushiswap_burns__current**](SushiswapApi.md#sushiswap_burns__current) | **GET** /dapps/sushiswap/burns/current | Burns (current)
+[**sushiswap_day_datas__current**](SushiswapApi.md#sushiswap_day_datas__current) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
+[**sushiswap_factorys__current**](SushiswapApi.md#sushiswap_factorys__current) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
 [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
 [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswap_get_day_datas__historical**](SushiswapApi.md#sushiswap_get_day_datas__historical) | **GET** /dapps/sushiswap/daydatas/historical | DayDatas (historical) 🔥
+[**sushiswap_get_day_datas__historical**](SushiswapApi.md#sushiswap_get_day_datas__historical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
 [**sushiswap_get_factorys__historical**](SushiswapApi.md#sushiswap_get_factorys__historical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswap_get_hour_datas__historical**](SushiswapApi.md#sushiswap_get_hour_datas__historical) | **GET** /dapps/sushiswap/hourdatas/historical | HourDatas (historical) 🔥
-[**sushiswap_get_liquidity_position_snapshots__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshots__historical) | **GET** /dapps/sushiswap/liquiditypositionsnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswap_get_liquidity_positions__historical**](SushiswapApi.md#sushiswap_get_liquidity_positions__historical) | **GET** /dapps/sushiswap/liquiditypositions/historical | LiquidityPositions (historical) 🔥
+[**sushiswap_get_hour_datas__historical**](SushiswapApi.md#sushiswap_get_hour_datas__historical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
+[**sushiswap_get_liquidity_position_snapshots__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshots__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
+[**sushiswap_get_liquidity_positions__historical**](SushiswapApi.md#sushiswap_get_liquidity_positions__historical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
 [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairdaydatas/historical | PairDayDatas (historical) 🔥
-[**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairhourdatas/historical | PairHourDatas (historical) 🔥
+[**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
+[**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswap_get_pairs__historical**](SushiswapApi.md#sushiswap_get_pairs__historical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
 [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokendaydatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
 [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
 [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswap_hour_datas__current**](SushiswapApi.md#sushiswap_hour_datas__current) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswap_liquidity_position_snapshots__current**](SushiswapApi.md#sushiswap_liquidity_position_snapshots__current) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
+[**sushiswap_liquidity_positions__current**](SushiswapApi.md#sushiswap_liquidity_positions__current) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
+[**sushiswap_mints__current**](SushiswapApi.md#sushiswap_mints__current) | **GET** /dapps/sushiswap/mints/current | Mints (current)
+[**sushiswap_pair_day_datas__current**](SushiswapApi.md#sushiswap_pair_day_datas__current) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
+[**sushiswap_pair_hour_datas__current**](SushiswapApi.md#sushiswap_pair_hour_datas__current) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswap_pairs__current**](SushiswapApi.md#sushiswap_pairs__current) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
+[**sushiswap_swaps__current**](SushiswapApi.md#sushiswap_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
+[**sushiswap_token_day_datas__current**](SushiswapApi.md#sushiswap_token_day_datas__current) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswap_tokens__current**](SushiswapApi.md#sushiswap_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
+[**sushiswap_transactions__current**](SushiswapApi.md#sushiswap_transactions__current) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
+[**sushiswap_users__current**](SushiswapApi.md#sushiswap_users__current) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
 # **curve_get_exchanges__current**
@@ -104,6 +118,174 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ARRAY[DexTradeDTO]**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_bundles__current**
+> ARRAY[SushiswapBundleDTO] sushiswap_bundles__current()
+
+Bundles (current)
+
+Gets bundles.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_bundles__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_bundles__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_burns__current**
+> ARRAY[SushiswapBurnDTO] sushiswap_burns__current()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_burns__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_burns__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapBurnDTO]**](SushiswapBurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_day_datas__current**
+> ARRAY[SushiswapDayDataDTO] sushiswap_day_datas__current()
+
+DayDatas (current)
+
+Gets dayDatas.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_day_datas__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_day_datas__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapDayDataDTO]**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_factorys__current**
+> ARRAY[SushiswapFactoryDTO] sushiswap_factorys__current()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_factorys__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_factorys__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapFactoryDTO]**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -231,7 +413,7 @@ No authorization required
 
 DayDatas (historical) 🔥
 
-Gets daydatas.
+Gets dayDatas.
 
 ### Example
 ```perl
@@ -339,7 +521,7 @@ No authorization required
 
 HourDatas (historical) 🔥
 
-Gets hourdatas.
+Gets hourDatas.
 
 ### Example
 ```perl
@@ -393,7 +575,7 @@ No authorization required
 
 LiquidityPositionSnapshots (historical) 🔥
 
-Gets liquiditypositionsnapshots.
+Gets liquidityPositionSnapshots.
 
 ### Example
 ```perl
@@ -451,7 +633,7 @@ No authorization required
 
 LiquidityPositions (historical) 🔥
 
-Gets liquiditypositions.
+Gets liquidityPositions.
 
 ### Example
 ```perl
@@ -565,7 +747,7 @@ No authorization required
 
 PairDayDatas (historical) 🔥
 
-Gets pairdaydatas.
+Gets pairDayDatas.
 
 ### Example
 ```perl
@@ -625,7 +807,7 @@ No authorization required
 
 PairHourDatas (historical) 🔥
 
-Gets pairhourdatas.
+Gets pairHourDatas.
 
 ### Example
 ```perl
@@ -778,48 +960,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_swaps__current**
-> ARRAY[SushiswapSwapDTO] sushiswap_get_swaps__current()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-
-eval {
-    my $result = $api_instance->sushiswap_get_swaps__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_swaps__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_swaps__historical**
 > ARRAY[SushiswapSwapDTO] sushiswap_get_swaps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
@@ -881,7 +1021,7 @@ No authorization required
 
 TokenDayDatas (historical) 🔥
 
-Gets tokendaydatas.
+Gets tokenDayDatas.
 
 ### Example
 ```perl
@@ -918,48 +1058,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_tokens__current**
-> ARRAY[SushiswapTokenDTO] sushiswap_get_tokens__current()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-
-eval {
-    my $result = $api_instance->sushiswap_get_tokens__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_tokens__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1122,6 +1220,518 @@ Name | Type | Description  | Notes
  **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
  **id** | **string**| User address. | [optional] 
+
+### Return type
+
+[**ARRAY[SushiswapUserDTO]**](SushiswapUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_hour_datas__current**
+> ARRAY[SushiswapHourDataDTO] sushiswap_hour_datas__current()
+
+HourDatas (current)
+
+Gets hourDatas.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_hour_datas__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_hour_datas__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapHourDataDTO]**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_liquidity_position_snapshots__current**
+> ARRAY[SushiswapLiquidityPositionSnapshotDTO] sushiswap_liquidity_position_snapshots__current()
+
+LiquidityPositionSnapshots (current)
+
+Gets liquidityPositionSnapshots.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_liquidity_position_snapshots__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_liquidity_position_snapshots__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapLiquidityPositionSnapshotDTO]**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_liquidity_positions__current**
+> ARRAY[SushiswapLiquidityPositionDTO] sushiswap_liquidity_positions__current()
+
+LiquidityPositions (current)
+
+Gets liquidityPositions.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_liquidity_positions__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_liquidity_positions__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapLiquidityPositionDTO]**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_mints__current**
+> ARRAY[SushiswapMintDTO] sushiswap_mints__current()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_mints__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_mints__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapMintDTO]**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_pair_day_datas__current**
+> ARRAY[SushiswapPairDayDataDTO] sushiswap_pair_day_datas__current()
+
+PairDayDatas (current)
+
+Gets pairDayDatas.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_pair_day_datas__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_pair_day_datas__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapPairDayDataDTO]**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_pair_hour_datas__current**
+> ARRAY[SushiswapPairHourDataDTO] sushiswap_pair_hour_datas__current()
+
+PairHourDatas (current)
+
+Gets pairHourDatas.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_pair_hour_datas__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_pair_hour_datas__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapPairHourDataDTO]**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_pairs__current**
+> ARRAY[SushiswapPairDTO] sushiswap_pairs__current(id => $id)
+
+Pairs (current)
+
+Gets pairs.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+my $id = "id_example"; # string | Pair contract address.
+
+eval {
+    my $result = $api_instance->sushiswap_pairs__current(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_pairs__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Pair contract address. | [optional] 
+
+### Return type
+
+[**ARRAY[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_swaps__current**
+> ARRAY[SushiswapSwapDTO] sushiswap_swaps__current(pair => $pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+my $pair = "pair_example"; # string | Reference to pair.
+
+eval {
+    my $result = $api_instance->sushiswap_swaps__current(pair => $pair);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_swaps__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string**| Reference to pair. | [optional] 
+
+### Return type
+
+[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_token_day_datas__current**
+> ARRAY[SushiswapTokenDayDataDTO] sushiswap_token_day_datas__current()
+
+TokenDayDatas (current)
+
+Gets tokenDayDatas.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_token_day_datas__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_token_day_datas__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_tokens__current**
+> ARRAY[SushiswapTokenDTO] sushiswap_tokens__current()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_tokens__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_tokens__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_transactions__current**
+> ARRAY[SushiswapTransactionDTO] sushiswap_transactions__current()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_transactions__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_transactions__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswap_users__current**
+> ARRAY[SushiswapUserDTO] sushiswap_users__current()
+
+Users (current)
+
+Gets users.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::SushiswapApi;
+my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
+);
+
+
+eval {
+    my $result = $api_instance->sushiswap_users__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SushiswapApi->sushiswap_users__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

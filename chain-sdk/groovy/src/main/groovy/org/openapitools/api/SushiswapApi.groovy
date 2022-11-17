@@ -65,6 +65,86 @@ class SushiswapApi {
 
     }
 
+    def sushiswapBundlesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/bundles/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapBundleDTO.class )
+
+    }
+
+    def sushiswapBurnsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/burns/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapBurnDTO.class )
+
+    }
+
+    def sushiswapDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/dayDatas/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapDayDataDTO.class )
+
+    }
+
+    def sushiswapFactorysCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/factorys/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapFactoryDTO.class )
+
+    }
+
     def sushiswapGetBundlesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/sushiswap/bundles/historical"
 
@@ -139,7 +219,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/daydatas/historical"
+        String resourcePath = "/dapps/sushiswap/dayDatas/historical"
 
         // params
         def queryParams = [:]
@@ -209,7 +289,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/hourdatas/historical"
+        String resourcePath = "/dapps/sushiswap/hourDatas/historical"
 
         // params
         def queryParams = [:]
@@ -244,7 +324,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetLiquidityPositionSnapshotsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/liquiditypositionsnapshots/historical"
+        String resourcePath = "/dapps/sushiswap/liquidityPositionSnapshots/historical"
 
         // params
         def queryParams = [:]
@@ -285,7 +365,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetLiquidityPositionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/liquiditypositions/historical"
+        String resourcePath = "/dapps/sushiswap/liquidityPositions/historical"
 
         // params
         def queryParams = [:]
@@ -364,7 +444,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetPairDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairdaydatas/historical"
+        String resourcePath = "/dapps/sushiswap/pairDayDatas/historical"
 
         // params
         def queryParams = [:]
@@ -408,7 +488,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetPairHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairhourdatas/historical"
+        String resourcePath = "/dapps/sushiswap/pairHourDatas/historical"
 
         // params
         def queryParams = [:]
@@ -509,26 +589,6 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetSwapsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/swaps/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapSwapDTO.class )
-
-    }
-
     def sushiswapGetSwapsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/sushiswap/swaps/historical"
 
@@ -568,7 +628,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetTokenDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokendaydatas/historical"
+        String resourcePath = "/dapps/sushiswap/tokenDayDatas/historical"
 
         // params
         def queryParams = [:]
@@ -599,26 +659,6 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapTokenDayDataDTO.class )
-
-    }
-
-    def sushiswapGetTokensCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokens/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapTokenDTO.class )
 
     }
 
@@ -723,6 +763,252 @@ class SushiswapApi {
         if (id != null) {
             queryParams.put("id", id)
         }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapUserDTO.class )
+
+    }
+
+    def sushiswapHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/hourDatas/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapHourDataDTO.class )
+
+    }
+
+    def sushiswapLiquidityPositionSnapshotsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/liquidityPositionSnapshots/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapLiquidityPositionSnapshotDTO.class )
+
+    }
+
+    def sushiswapLiquidityPositionsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/liquidityPositions/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapLiquidityPositionDTO.class )
+
+    }
+
+    def sushiswapMintsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/mints/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapMintDTO.class )
+
+    }
+
+    def sushiswapPairDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairDayDatas/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapPairDayDataDTO.class )
+
+    }
+
+    def sushiswapPairHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairHourDatas/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapPairHourDataDTO.class )
+
+    }
+
+    def sushiswapPairsCurrent ( String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairs/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (id != null) {
+            queryParams.put("id", id)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapPairDTO.class )
+
+    }
+
+    def sushiswapSwapsCurrent ( String pair, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/swaps/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (pair != null) {
+            queryParams.put("pair", pair)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapSwapDTO.class )
+
+    }
+
+    def sushiswapTokenDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/tokenDayDatas/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapTokenDayDataDTO.class )
+
+    }
+
+    def sushiswapTokensCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/tokens/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapTokenDTO.class )
+
+    }
+
+    def sushiswapTransactionsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/transactions/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    SushiswapTransactionDTO.class )
+
+    }
+
+    def sushiswapUsersCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/users/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
 
 
 

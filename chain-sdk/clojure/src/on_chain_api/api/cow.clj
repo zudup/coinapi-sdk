@@ -8,21 +8,21 @@
             [on-chain-api.specs.curve/gauge-weight-vote-dto :refer :all]
             [on-chain-api.specs.sushiswap/token-day-data-dto :refer :all]
             [on-chain-api.specs.curve/gauge-withdraw-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/burn-dto :refer :all]
             [on-chain-api.specs.dex/deposit-dto :refer :all]
             [on-chain-api.specs.sushiswap/mint-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/mint-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/uniswap-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-dto :refer :all]
             [on-chain-api.specs.curve/proposal-dto :refer :all]
             [on-chain-api.specs.sushiswap/liquidity-position-snapshot-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/burn-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/position-snapshot-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/pool-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/swap-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/position-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/liquidity-position-snapshot-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/pair-day-data-dto :refer :all]
             [on-chain-api.specs.curve/transfer-ownership-event-dto :refer :all]
             [on-chain-api.specs.sushiswap/day-data-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/pair-day-data-v2-dto :refer :all]
             [on-chain-api.specs.curve/proposal-vote-dto :refer :all]
             [on-chain-api.specs.curve/coin-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/position-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/transaction-dto :refer :all]
             [on-chain-api.specs.curve/account-dto :refer :all]
             [on-chain-api.specs.curve/underlying-coin-dto :refer :all]
             [on-chain-api.specs.cow/trade-dto :refer :all]
@@ -32,74 +32,74 @@
             [on-chain-api.specs.dex/trade-dto :refer :all]
             [on-chain-api.specs.dex/withdraw-dto :refer :all]
             [on-chain-api.specs.curve/gauge-liquidity-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/swap-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-day-data-dto :refer :all]
             [on-chain-api.specs.dex/token-dto :refer :all]
             [on-chain-api.specs.cow/settlement-dto :refer :all]
             [on-chain-api.specs.curve/gauge-weight-dto :refer :all]
             [on-chain-api.specs.sushiswap/swap-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/factory-dto :refer :all]
             [on-chain-api.specs.sushiswap/bundle-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/bundle-v3-dto :refer :all]
             [on-chain-api.specs.cow/order-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/uniswap-day-data-v2-dto :refer :all]
             [on-chain-api.specs.curve/gauge-total-weight-dto :refer :all]
             [on-chain-api.specs.sushiswap/pair-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/swap-dto :refer :all]
             [on-chain-api.specs.curve/hourly-volume-dto :refer :all]
             [on-chain-api.specs.dex/price-dto :refer :all]
             [on-chain-api.specs.dex/solution-dto :refer :all]
             [on-chain-api.specs.curve/pool-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/swap-v3-dto :refer :all]
             [on-chain-api.specs.curve/gauge-dto :refer :all]
             [on-chain-api.specs.sushiswap/hour-data-dto :refer :all]
             [on-chain-api.specs.curve/contract-version-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/pair-hour-data-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/tick-day-data-dto :refer :all]
             [on-chain-api.specs.curve/remove-liquidity-one-event-dto :refer :all]
             [on-chain-api.specs.cow/token-dto :refer :all]
             [on-chain-api.specs.dex/batch-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/token-hour-data-dto :refer :all]
             [on-chain-api.specs.dex/order-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/liquidity-position-v2-dto :refer :all]
             [on-chain-api.specs.curve/token-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/pool-hour-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/user-dto :refer :all]
             [on-chain-api.specs.cow/user-dto :refer :all]
             [on-chain-api.specs.dex/user-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/pair-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/transaction-v2-dto :refer :all]
             [on-chain-api.specs.curve/admin-fee-change-log-dto :refer :all]
             [on-chain-api.specs.curve/gauge-type-weight-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/token-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/factory-v3-dto :refer :all]
             [on-chain-api.specs.curve/voting-app-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/burn-v2-dto :refer :all]
             [on-chain-api.specs.curve/system-state-dto :refer :all]
             [on-chain-api.specs.curve/add-liquidity-event-dto :refer :all]
             [on-chain-api.specs.curve/exchange-dto :refer :all]
             [on-chain-api.specs.sushiswap/pair-day-data-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/liquidity-position-snapshot-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/tick-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/bundle-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/mint-dto :refer :all]
             [on-chain-api.specs.curve/amplification-coeff-change-log-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/liquidity-position-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/transaction-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/token-day-data-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/token-dto :refer :all]
             [on-chain-api.specs.transactions/e-trade-aggressive-side :refer :all]
             [on-chain-api.specs.sushiswap/token-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/pair-dto :refer :all]
             [on-chain-api.specs.sushiswap/burn-dto :refer :all]
             [on-chain-api.specs.sushiswap/user-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/uniswap-day-data-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/uniswap-day-data-dto :refer :all]
             [on-chain-api.specs.curve/fee-change-log-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/mint-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/uniswap-factory-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/bundle-dto :refer :all]
             [on-chain-api.specs.curve/weekly-volume-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/transaction-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-hour-data-dto :refer :all]
             [on-chain-api.specs.curve/contract-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/pair-hour-data-v2-dto :refer :all]
             [on-chain-api.specs.numerics/big-integer :refer :all]
             [on-chain-api.specs.dex/withdraw-request-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/pool-v3-dto :refer :all]
             [on-chain-api.specs.curve/lp-token-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/token-v3-dto :refer :all]
             [on-chain-api.specs.sushiswap/pair-hour-data-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/token-day-data-v2-dto :refer :all]
             [on-chain-api.specs.curve/daily-volume-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/tick-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/burn-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/tick-dto :refer :all]
             [on-chain-api.specs.dex/stats-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3/token-hour-data-v3-dto :refer :all]
             [on-chain-api.specs.sushiswap/liquidity-position-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/user-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2/bundle-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/uniswap-factory-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/position-snapshot-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/mint-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/token-dto :refer :all]
             [on-chain-api.specs.curve/remove-liquidity-event-dto :refer :all]
             )
   (:import (java.io File)))
@@ -228,5 +228,120 @@
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of cow/user-dto-spec) res st/string-transformer)
         res))))
+
+
+(defn-spec cow-orders-current-with-http-info any?
+  "Orders (current)
+  Gets orders."
+  []
+  (call-api "/dapps/cow/orders/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec cow-orders-current (s/coll-of cow/order-dto-spec)
+  "Orders (current)
+  Gets orders."
+  []
+  (let [res (:data (cow-orders-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of cow/order-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec cow-settlements-current-with-http-info any?
+  "Settlements (current)
+  Gets settlements."
+  []
+  (call-api "/dapps/cow/settlements/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec cow-settlements-current (s/coll-of cow/settlement-dto-spec)
+  "Settlements (current)
+  Gets settlements."
+  []
+  (let [res (:data (cow-settlements-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of cow/settlement-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec cow-tokens-current-with-http-info any?
+  "Tokens (current)
+  Gets tokens."
+  []
+  (call-api "/dapps/cow/tokens/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec cow-tokens-current (s/coll-of cow/token-dto-spec)
+  "Tokens (current)
+  Gets tokens."
+  []
+  (let [res (:data (cow-tokens-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of cow/token-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec cow-trades-current-with-http-info any?
+  "Trades (current)
+  Gets trades."
+  []
+  (call-api "/dapps/cow/trades/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec cow-trades-current (s/coll-of cow/trade-dto-spec)
+  "Trades (current)
+  Gets trades."
+  []
+  (let [res (:data (cow-trades-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of cow/trade-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec cow-users-current-with-http-info any?
+  "Users (current)
+  Gets users."
+  []
+  (call-api "/dapps/cow/users/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec cow-users-current (s/coll-of cow/user-dto-spec)
+  "Users (current)
+  Gets users."
+  []
+  (let [res (:data (cow-users-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of cow/user-dto-spec) res st/string-transformer)
+       res)))
 
 

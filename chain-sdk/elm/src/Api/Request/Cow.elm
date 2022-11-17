@@ -20,6 +20,11 @@ module Api.Request.Cow exposing
     , cowGetTokensHistorical
     , cowGetTradesHistorical
     , cowGetUsersHistorical
+    , cowOrdersCurrent
+    , cowSettlementsCurrent
+    , cowTokensCurrent
+    , cowTradesCurrent
+    , cowUsersCurrent
     )
 
 import Api
@@ -101,6 +106,81 @@ cowGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_qu
         "/dapps/cow/users/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "address", Maybe.map identity address_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cowUserDTODecoder)
+
+
+
+{-| Gets orders.
+-}
+cowOrdersCurrent : Api.Request (List Api.Data.CowOrderDTO)
+cowOrdersCurrent =
+    Api.request
+        "GET"
+        "/dapps/cow/orders/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cowOrderDTODecoder)
+
+
+
+{-| Gets settlements.
+-}
+cowSettlementsCurrent : Api.Request (List Api.Data.CowSettlementDTO)
+cowSettlementsCurrent =
+    Api.request
+        "GET"
+        "/dapps/cow/settlements/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cowSettlementDTODecoder)
+
+
+
+{-| Gets tokens.
+-}
+cowTokensCurrent : Api.Request (List Api.Data.CowTokenDTO)
+cowTokensCurrent =
+    Api.request
+        "GET"
+        "/dapps/cow/tokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cowTokenDTODecoder)
+
+
+
+{-| Gets trades.
+-}
+cowTradesCurrent : Api.Request (List Api.Data.CowTradeDTO)
+cowTradesCurrent =
+    Api.request
+        "GET"
+        "/dapps/cow/trades/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.cowTradeDTODecoder)
+
+
+
+{-| Gets users.
+-}
+cowUsersCurrent : Api.Request (List Api.Data.CowUserDTO)
+cowUsersCurrent =
+    Api.request
+        "GET"
+        "/dapps/cow/users/current"
+        []
+        []
         []
         Nothing
         (Json.Decode.list Api.Data.cowUserDTODecoder)

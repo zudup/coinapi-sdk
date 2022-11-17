@@ -19,10 +19,10 @@ case class BundleDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Hardcoded to '1'. */
+  /*  */
   id: Option[String] = None,
-  /* Price of native. */
-  ethPrice: Option[String] = None,
+  /* Price of ETH in usd. */
+  ethPriceUsd: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

@@ -78,6 +78,50 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test SushiswapBundlesCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapBundlesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapBundlesCurrent();
+            //Assert.IsType<List<SushiswapBundleDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapBurnsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapBurnsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapBurnsCurrent();
+            //Assert.IsType<List<SushiswapBurnDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapDayDatasCurrent();
+            //Assert.IsType<List<SushiswapDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapFactorysCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapFactorysCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapFactorysCurrent();
+            //Assert.IsType<List<SushiswapFactoryDTO>>(response);
+        }
+
+        /// <summary>
         /// Test SushiswapGetBundlesHistorical
         /// </summary>
         [Fact]
@@ -278,17 +322,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetSwapsCurrent
-        /// </summary>
-        [Fact]
-        public void SushiswapGetSwapsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetSwapsCurrent();
-            //Assert.IsType<List<SushiswapSwapDTO>>(response);
-        }
-
-        /// <summary>
         /// Test SushiswapGetSwapsHistorical
         /// </summary>
         [Fact]
@@ -319,17 +352,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //var response = instance.SushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsType<List<SushiswapTokenDayDataDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetTokensCurrent
-        /// </summary>
-        [Fact]
-        public void SushiswapGetTokensCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetTokensCurrent();
-            //Assert.IsType<List<SushiswapTokenDTO>>(response);
         }
 
         /// <summary>
@@ -379,6 +401,140 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //var response = instance.SushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
+            //Assert.IsType<List<SushiswapUserDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapHourDatasCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapHourDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapHourDatasCurrent();
+            //Assert.IsType<List<SushiswapHourDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapLiquidityPositionSnapshotsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapLiquidityPositionSnapshotsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapLiquidityPositionSnapshotsCurrent();
+            //Assert.IsType<List<SushiswapLiquidityPositionSnapshotDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapLiquidityPositionsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapLiquidityPositionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapLiquidityPositionsCurrent();
+            //Assert.IsType<List<SushiswapLiquidityPositionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapMintsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapMintsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapMintsCurrent();
+            //Assert.IsType<List<SushiswapMintDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapPairDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapPairDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapPairDayDatasCurrent();
+            //Assert.IsType<List<SushiswapPairDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapPairHourDatasCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapPairHourDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapPairHourDatasCurrent();
+            //Assert.IsType<List<SushiswapPairHourDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapPairsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapPairsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.SushiswapPairsCurrent(id);
+            //Assert.IsType<List<SushiswapPairDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapSwapsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapSwapsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pair = null;
+            //var response = instance.SushiswapSwapsCurrent(pair);
+            //Assert.IsType<List<SushiswapSwapDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapTokenDayDatasCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapTokenDayDatasCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTokenDayDatasCurrent();
+            //Assert.IsType<List<SushiswapTokenDayDataDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapTokensCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTokensCurrent();
+            //Assert.IsType<List<SushiswapTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapTransactionsCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapTransactionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapTransactionsCurrent();
+            //Assert.IsType<List<SushiswapTransactionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test SushiswapUsersCurrent
+        /// </summary>
+        [Fact]
+        public void SushiswapUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.SushiswapUsersCurrent();
             //Assert.IsType<List<SushiswapUserDTO>>(response);
         }
     }

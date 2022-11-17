@@ -132,4 +132,69 @@ public class CowApiTest {
         // TODO: test validations
     }
 
+    /**
+     * Orders (current)
+     *
+     * Gets orders.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowOrdersCurrentTest() throws ApiException {
+        List<CowOrderDTO> response = api.cowOrdersCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Settlements (current)
+     *
+     * Gets settlements.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowSettlementsCurrentTest() throws ApiException {
+        List<CowSettlementDTO> response = api.cowSettlementsCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
+     *
+     * Gets tokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowTokensCurrentTest() throws ApiException {
+        List<CowTokenDTO> response = api.cowTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Trades (current)
+     *
+     * Gets trades.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowTradesCurrentTest() throws ApiException {
+        List<CowTradeDTO> response = api.cowTradesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Users (current)
+     *
+     * Gets users.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowUsersCurrentTest() throws ApiException {
+        List<CowUserDTO> response = api.cowUsersCurrent();
+        // TODO: test validations
+    }
+
 }

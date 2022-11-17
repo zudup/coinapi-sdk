@@ -54,6 +54,104 @@ local function new_dex_api(authority, basePath, schemes)
 	}, dex_api_mt)
 end
 
+function dex_api:dex_batchs__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/batchs/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_batch_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_deposits__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/deposits/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_deposit_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
 function dex_api:dex_get_batchs__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
@@ -500,7 +598,7 @@ function dex_api:dex_get_withdraw_requests__historical(start_block, end_block, s
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/withdrawrequests/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s",
+		path = string.format("%s/dapps/dex/withdrawRequests/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user));
 	})
 
@@ -551,6 +649,447 @@ function dex_api:dex_get_withdraws__historical(start_block, end_block, start_dat
 		port = self.port;
 		path = string.format("%s/dapps/dex/withdraws/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_withdraw_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_orders__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/orders/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_order_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_prices__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/prices/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_price_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_solutions__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/solutions/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_solution_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_statss__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/statss/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_stats_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_tokens__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/tokens/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_token_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_trades__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/trades/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_trade_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_users__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/users/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_user_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_withdraw_requests__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/withdrawRequests/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_withdraw_request_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_withdraws__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/withdraws/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb

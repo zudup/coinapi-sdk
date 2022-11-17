@@ -4,49 +4,173 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapV3GetBundleV3sHistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
-[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-[**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapV3GetBurnV3sHistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
-[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-[**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
-[**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapV3GetMintV3sHistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
-[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
-[**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
-[**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolV3sHistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
-[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
-[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-[**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
-[**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionV3sHistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
-[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-[**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapV3GetSwapV3sHistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
-[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-[**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
-[**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickV3sHistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
-[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-[**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3sHistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
-[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
-[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-[**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
-[**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
+[**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
+[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
+[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
+[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
+[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
+[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
+[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
+[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
+[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
+[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
+[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
+[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
+[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
+[**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
+[**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
+[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
+[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
+[**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
+[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
 
 
 
-## uniswapV3GetBundleV3sHistorical
+## uniswapV3BundlesCurrent
 
-> [UniswapV3BundleV3DTO] uniswapV3GetBundleV3sHistorical(opts)
+> [UniswapV3BundleDTO] uniswapV3BundlesCurrent()
 
-BundleV3s (historical) 🔥
+Bundles (current)
 
-Gets bundlev3s.
+Gets bundles.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3BundlesCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3BundleDTO]**](UniswapV3BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3BurnsCurrent
+
+> [UniswapV3BurnDTO] uniswapV3BurnsCurrent()
+
+Burns (current)
+
+Gets burns.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3BurnsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3BurnDTO]**](UniswapV3BurnDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3FactorysCurrent
+
+> [UniswapV3FactoryDTO] uniswapV3FactorysCurrent()
+
+Factorys (current)
+
+Gets factorys.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3FactorysCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3FactoryDTO]**](UniswapV3FactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetBundlesHistorical
+
+> [UniswapV3BundleDTO] uniswapV3GetBundlesHistorical(opts)
+
+Bundles (historical) 🔥
+
+Gets bundles.
 
 ### Example
 
@@ -61,7 +185,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | 
 };
-apiInstance.uniswapV3GetBundleV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetBundlesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -83,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
+[**[UniswapV3BundleDTO]**](UniswapV3BundleDTO.md)
 
 ### Authorization
 
@@ -95,54 +219,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetBundlesCurrent
+## uniswapV3GetBurnsHistorical
 
-> [UniswapV3BundleV3DTO] uniswapV3GetBundlesCurrent()
+> [UniswapV3BurnDTO] uniswapV3GetBurnsHistorical(opts)
 
-Bundles (current)
+Burns (historical) 🔥
 
-Gets bundles.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3GetBundlesCurrent((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetBurnV3sHistorical
-
-> [UniswapV3BurnV3DTO] uniswapV3GetBurnV3sHistorical(opts)
-
-BurnV3s (historical) 🔥
-
-Gets burnv3s.
+Gets burns.
 
 ### Example
 
@@ -160,7 +243,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pool contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pool contract.
 };
-apiInstance.uniswapV3GetBurnV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetBurnsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -185,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
+[**[UniswapV3BurnDTO]**](UniswapV3BurnDTO.md)
 
 ### Authorization
 
@@ -197,142 +280,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetBurnsCurrent
+## uniswapV3GetFactorysHistorical
 
-> [UniswapV3BurnV3DTO] uniswapV3GetBurnsCurrent(opts)
+> [UniswapV3FactoryDTO] uniswapV3GetFactorysHistorical(opts)
 
-Burns (current)
+Factorys (historical) 🔥
 
-Gets burns.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetBurnsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetDayDataCurrent
-
-> [UniswapV3UniswapDayDataV3DTO] uniswapV3GetDayDataCurrent()
-
-DayData (current)
-
-Gets uniswapv3 day data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3GetDayDataCurrent((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetFactoryCurrent
-
-> [UniswapV3FactoryV3DTO] uniswapV3GetFactoryCurrent()
-
-Factory (current)
-
-Gets factory.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3GetFactoryCurrent((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetFactoryV3sHistorical
-
-> [UniswapV3FactoryV3DTO] uniswapV3GetFactoryV3sHistorical(opts)
-
-FactoryV3s (historical) 🔥
-
-Gets factoryv3s.
+Gets factorys.
 
 ### Example
 
@@ -347,7 +301,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Factory address.
 };
-apiInstance.uniswapV3GetFactoryV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetFactorysHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -369,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
+[**[UniswapV3FactoryDTO]**](UniswapV3FactoryDTO.md)
 
 ### Authorization
 
@@ -381,13 +335,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetMintV3sHistorical
+## uniswapV3GetMintsHistorical
 
-> [UniswapV3MintV3DTO] uniswapV3GetMintV3sHistorical(opts)
+> [UniswapV3MintDTO] uniswapV3GetMintsHistorical(opts)
 
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
-Gets mintv3s.
+Gets mints.
 
 ### Example
 
@@ -405,7 +359,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pool contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pool contract.
 };
-apiInstance.uniswapV3GetMintV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetMintsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -430,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
+[**[UniswapV3MintDTO]**](UniswapV3MintDTO.md)
 
 ### Authorization
 
@@ -442,60 +396,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetMintsCurrent
+## uniswapV3GetPoolDayDatasHistorical
 
-> [UniswapV3MintV3DTO] uniswapV3GetMintsCurrent(opts)
+> [UniswapV3PoolDayDataDTO] uniswapV3GetPoolDayDatasHistorical(opts)
 
-Mints (current)
+PoolDayDatas (historical) 🔥
 
-Gets mints.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetMintsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetPoolDayDataV3sHistorical
-
-> [UniswapV3PoolDayDataV3DTO] uniswapV3GetPoolDayDataV3sHistorical(opts)
-
-PoolDayDataV3s (historical) 🔥
-
-Gets pooldaydatav3s.
+Gets poolDayDatas.
 
 ### Example
 
@@ -511,7 +418,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetPoolDayDataV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPoolDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -534,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
+[**[UniswapV3PoolDayDataDTO]**](UniswapV3PoolDayDataDTO.md)
 
 ### Authorization
 
@@ -546,13 +453,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPoolHourDataV3sHistorical
+## uniswapV3GetPoolHourDatasHistorical
 
-> [UniswapV3PoolHourDataV3DTO] uniswapV3GetPoolHourDataV3sHistorical(opts)
+> [UniswapV3PoolHourDataDTO] uniswapV3GetPoolHourDatasHistorical(opts)
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
-Gets poolhourdatav3s.
+Gets poolHourDatas.
 
 ### Example
 
@@ -568,7 +475,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetPoolHourDataV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPoolHourDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -591,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
+[**[UniswapV3PoolHourDataDTO]**](UniswapV3PoolHourDataDTO.md)
 
 ### Authorization
 
@@ -603,13 +510,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPoolV3sHistorical
+## uniswapV3GetPoolsHistorical
 
-> [UniswapV3PoolV3DTO] uniswapV3GetPoolV3sHistorical(opts)
+> [UniswapV3PoolDTO] uniswapV3GetPoolsHistorical(opts)
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
-Gets poolv3s.
+Gets pools.
 
 ### Example
 
@@ -626,7 +533,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pool contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pool contract.
 };
-apiInstance.uniswapV3GetPoolV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPoolsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -650,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
+[**[UniswapV3PoolDTO]**](UniswapV3PoolDTO.md)
 
 ### Authorization
 
@@ -662,154 +569,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPoolsCurrent
+## uniswapV3GetPositionSnapshotsHistorical
 
-> [UniswapV3PoolV3DTO] uniswapV3GetPoolsCurrent(opts)
+> [UniswapV3PositionSnapshotDTO] uniswapV3GetPositionSnapshotsHistorical(opts)
 
-Pools (current) 🔥
+PositionSnapshots (historical) 🔥
 
-Gets pools.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetPoolsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetPoolsDayDataCurrent
-
-> [UniswapV3PoolDayDataV3DTO] uniswapV3GetPoolsDayDataCurrent(opts)
-
-PoolsDayData (current)
-
-Gets pools day data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetPoolsDayDataCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetPoolsHourDataCurrent
-
-> [UniswapV3PoolHourDataV3DTO] uniswapV3GetPoolsHourDataCurrent(opts)
-
-PoolsHourData (current)
-
-Gets pools hour data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetPoolsHourDataCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetPositionSnapshotV3sHistorical
-
-> [UniswapV3PositionSnapshotV3DTO] uniswapV3GetPositionSnapshotV3sHistorical(opts)
-
-PositionSnapshotV3s (historical) 🔥
-
-Gets positionsnapshotv3s.
+Gets positionSnapshots.
 
 ### Example
 
@@ -825,7 +591,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetPositionSnapshotV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPositionSnapshotsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -848,7 +614,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
+[**[UniswapV3PositionSnapshotDTO]**](UniswapV3PositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -860,13 +626,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPositionV3sHistorical
+## uniswapV3GetPositionsHistorical
 
-> [UniswapV3PositionV3DTO] uniswapV3GetPositionV3sHistorical(opts)
+> [UniswapV3PositionDTO] uniswapV3GetPositionsHistorical(opts)
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
-Gets positionv3s.
+Gets positions.
 
 ### Example
 
@@ -884,7 +650,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pair contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pair contract.
 };
-apiInstance.uniswapV3GetPositionV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPositionsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -909,7 +675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
+[**[UniswapV3PositionDTO]**](UniswapV3PositionDTO.md)
 
 ### Authorization
 
@@ -921,107 +687,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPositionsCurrent
+## uniswapV3GetSwapsHistorical
 
-> [UniswapV3PositionV3DTO] uniswapV3GetPositionsCurrent(opts)
+> [UniswapV3SwapDTO] uniswapV3GetSwapsHistorical(opts)
 
-Positions (current)
+Swaps (historical) 🔥
 
-Gets positions.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetPositionsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetPositionsSnapshotsCurrent
-
-> [UniswapV3PositionSnapshotV3DTO] uniswapV3GetPositionsSnapshotsCurrent(opts)
-
-PositionsSnapshots (current)
-
-Gets positions snapshots.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetPositionsSnapshotsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetSwapV3sHistorical
-
-> [UniswapV3SwapV3DTO] uniswapV3GetSwapV3sHistorical(opts)
-
-SwapV3s (historical) 🔥
-
-Gets swapv3s.
+Gets swaps.
 
 ### Example
 
@@ -1039,7 +711,7 @@ let opts = {
   'token0': "token0_example", // String | Reference to token0 as stored in pair contract.
   'token1': "token1_example" // String | Reference to token1 as stored in pair contract.
 };
-apiInstance.uniswapV3GetSwapV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetSwapsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1064,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
+[**[UniswapV3SwapDTO]**](UniswapV3SwapDTO.md)
 
 ### Authorization
 
@@ -1076,60 +748,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetSwapsCurrent
+## uniswapV3GetTickDayDatasHistorical
 
-> [UniswapV3SwapV3DTO] uniswapV3GetSwapsCurrent(opts)
+> [UniswapV3TickDayDataDTO] uniswapV3GetTickDayDatasHistorical(opts)
 
-Swaps (current) 🔥
+TickDayDatas (historical) 🔥
 
-Gets swaps.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetSwapsCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTickDayDataV3sHistorical
-
-> [UniswapV3TickDayDataV3DTO] uniswapV3GetTickDayDataV3sHistorical(opts)
-
-TickDayDataV3s (historical) 🔥
-
-Gets tickdaydatav3s.
+Gets tickDayDatas.
 
 ### Example
 
@@ -1145,7 +770,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetTickDayDataV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTickDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1168,7 +793,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
+[**[UniswapV3TickDayDataDTO]**](UniswapV3TickDayDataDTO.md)
 
 ### Authorization
 
@@ -1180,68 +805,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTickV3sHistorical
+## uniswapV3GetTicksHistorical
 
-> [UniswapV3TickV3DTO] uniswapV3GetTickV3sHistorical(opts)
+> [UniswapV3TickDTO] uniswapV3GetTicksHistorical(opts)
 
-TickV3s (historical) 🔥
-
-Gets tickv3s.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'pool': "pool_example" // String | 
-};
-apiInstance.uniswapV3GetTickV3sHistorical(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTicksCurrent
-
-> [UniswapV3TickV3DTO] uniswapV3GetTicksCurrent(opts)
-
-Ticks (current)
+Ticks (historical) 🔥
 
 Gets ticks.
 
@@ -1252,9 +820,14 @@ import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
 let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'id': "id_example", // String | 
+  'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetTicksCurrent(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTicksHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1268,11 +841,16 @@ apiInstance.uniswapV3GetTicksCurrent(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **id** | **String**|  | [optional] 
+ **pool** | **String**|  | [optional] 
 
 ### Return type
 
-[**[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
+[**[UniswapV3TickDTO]**](UniswapV3TickDTO.md)
 
 ### Authorization
 
@@ -1284,60 +862,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTicksDayDataCurrent
+## uniswapV3GetTokenHourDatasHistorical
 
-> [UniswapV3TickDayDataV3DTO] uniswapV3GetTicksDayDataCurrent(opts)
+> [UniswapV3TokenHourDataDTO] uniswapV3GetTokenHourDatasHistorical(opts)
 
-TicksDayData (current)
+TokenHourDatas (historical) 🔥
 
-Gets ticks day data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterPoolId': "filterPoolId_example" // String | 
-};
-apiInstance.uniswapV3GetTicksDayDataCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTokenHourDataV3sHistorical
-
-> [UniswapV3TokenHourDataV3DTO] uniswapV3GetTokenHourDataV3sHistorical(opts)
-
-TokenHourDataV3s (historical) 🔥
-
-Gets tokenhourdatav3s.
+Gets tokenHourDatas.
 
 ### Example
 
@@ -1352,7 +883,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Token address concatendated with date.
 };
-apiInstance.uniswapV3GetTokenHourDataV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTokenHourDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1374,7 +905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
+[**[UniswapV3TokenHourDataDTO]**](UniswapV3TokenHourDataDTO.md)
 
 ### Authorization
 
@@ -1392,7 +923,7 @@ No authorization required
 
 TokenV3DayDatas (historical) 🔥
 
-Gets tokenv3daydatas.
+Gets tokenV3DayDatas.
 
 ### Example
 
@@ -1441,13 +972,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTokenV3sHistorical
+## uniswapV3GetTokensHistorical
 
-> [UniswapV3TokenV3DTO] uniswapV3GetTokenV3sHistorical(opts)
+> [UniswapV3TokenDTO] uniswapV3GetTokensHistorical(opts)
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
-Gets tokenv3s.
+Gets tokens.
 
 ### Example
 
@@ -1464,7 +995,7 @@ let opts = {
   'symbol': "symbol_example", // String | Token symbol.
   'name': "name_example" // String | Token name.
 };
-apiInstance.uniswapV3GetTokenV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTokensHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1488,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
+[**[UniswapV3TokenDTO]**](UniswapV3TokenDTO.md)
 
 ### Authorization
 
@@ -1500,154 +1031,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTokensCurrent
+## uniswapV3GetTransactionsHistorical
 
-> [UniswapV3TokenV3DTO] uniswapV3GetTokensCurrent(opts)
+> [UniswapV3TransactionDTO] uniswapV3GetTransactionsHistorical(opts)
 
-Tokens (current) 🔥
+Transactions (historical) 🔥
 
-Gets tokens.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterTokenId': "filterTokenId_example" // String | 
-};
-apiInstance.uniswapV3GetTokensCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTokensDayDataCurrent
-
-> [UniswapV3TokenV3DayDataDTO] uniswapV3GetTokensDayDataCurrent(opts)
-
-TokensDayData (current)
-
-Gets tokens day data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterTokenId': "filterTokenId_example" // String | 
-};
-apiInstance.uniswapV3GetTokensDayDataCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTokensHourDataCurrent
-
-> [UniswapV3TokenHourDataV3DTO] uniswapV3GetTokensHourDataCurrent(opts)
-
-TokensHourData (current)
-
-Gets tokens hour data.
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.UniswapV3Api();
-let opts = {
-  'filterTokenId': "filterTokenId_example" // String | 
-};
-apiInstance.uniswapV3GetTokensHourDataCurrent(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterTokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV3GetTransactionV3sHistorical
-
-> [UniswapV3TransactionV3DTO] uniswapV3GetTransactionV3sHistorical(opts)
-
-TransactionV3s (historical) 🔥
-
-Gets transactionv3s.
+Gets transactions.
 
 ### Example
 
@@ -1662,7 +1052,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Transaction hash.
 };
-apiInstance.uniswapV3GetTransactionV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTransactionsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1684,7 +1074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3TransactionV3DTO]**](UniswapV3TransactionV3DTO.md)
+[**[UniswapV3TransactionDTO]**](UniswapV3TransactionDTO.md)
 
 ### Authorization
 
@@ -1696,13 +1086,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetUniswapDayDataV3sHistorical
+## uniswapV3GetUniswapDayDatasHistorical
 
-> [UniswapV3UniswapDayDataV3DTO] uniswapV3GetUniswapDayDataV3sHistorical(opts)
+> [UniswapV3UniswapDayDataDTO] uniswapV3GetUniswapDayDatasHistorical(opts)
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
-Gets uniswapdaydatav3s.
+Gets uniswapDayDatas.
 
 ### Example
 
@@ -1717,7 +1107,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Timestamp rounded to current day by dividing by 86400.
 };
-apiInstance.uniswapV3GetUniswapDayDataV3sHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetUniswapDayDatasHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1739,7 +1129,593 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
+[**[UniswapV3UniswapDayDataDTO]**](UniswapV3UniswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3MintsCurrent
+
+> [UniswapV3MintDTO] uniswapV3MintsCurrent()
+
+Mints (current)
+
+Gets mints.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3MintsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3MintDTO]**](UniswapV3MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3PoolDayDatasCurrent
+
+> [UniswapV3PoolDayDataDTO] uniswapV3PoolDayDatasCurrent()
+
+PoolDayDatas (current)
+
+Gets poolDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3PoolDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3PoolDayDataDTO]**](UniswapV3PoolDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3PoolHourDatasCurrent
+
+> [UniswapV3PoolHourDataDTO] uniswapV3PoolHourDatasCurrent()
+
+PoolHourDatas (current)
+
+Gets poolHourDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3PoolHourDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3PoolHourDataDTO]**](UniswapV3PoolHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3PoolsCurrent
+
+> [UniswapV3PoolDTO] uniswapV3PoolsCurrent(opts)
+
+Pools (current)
+
+Gets pools.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'id': "id_example" // String | Pool address.
+};
+apiInstance.uniswapV3PoolsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Pool address. | [optional] 
+
+### Return type
+
+[**[UniswapV3PoolDTO]**](UniswapV3PoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3PositionSnapshotsCurrent
+
+> [UniswapV3PositionSnapshotDTO] uniswapV3PositionSnapshotsCurrent()
+
+PositionSnapshots (current)
+
+Gets positionSnapshots.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3PositionSnapshotsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3PositionSnapshotDTO]**](UniswapV3PositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3PositionsCurrent
+
+> [UniswapV3PositionDTO] uniswapV3PositionsCurrent()
+
+Positions (current)
+
+Gets positions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3PositionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3PositionDTO]**](UniswapV3PositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3SwapsCurrent
+
+> [UniswapV3SwapDTO] uniswapV3SwapsCurrent(opts)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+let opts = {
+  'pool': "pool_example" // String | Pool swap occured within.
+};
+apiInstance.uniswapV3SwapsCurrent(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pool** | **String**| Pool swap occured within. | [optional] 
+
+### Return type
+
+[**[UniswapV3SwapDTO]**](UniswapV3SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TickDayDatasCurrent
+
+> [UniswapV3TickDayDataDTO] uniswapV3TickDayDatasCurrent()
+
+TickDayDatas (current)
+
+Gets tickDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TickDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TickDayDataDTO]**](UniswapV3TickDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TicksCurrent
+
+> [UniswapV3TickDTO] uniswapV3TicksCurrent()
+
+Ticks (current)
+
+Gets ticks.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TicksCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TickDTO]**](UniswapV3TickDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TokenHourDatasCurrent
+
+> [UniswapV3TokenHourDataDTO] uniswapV3TokenHourDatasCurrent()
+
+TokenHourDatas (current)
+
+Gets tokenHourDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TokenHourDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TokenHourDataDTO]**](UniswapV3TokenHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TokenV3DayDatasCurrent
+
+> [UniswapV3TokenV3DayDataDTO] uniswapV3TokenV3DayDatasCurrent()
+
+TokenV3DayDatas (current)
+
+Gets tokenV3DayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TokenV3DayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TokensCurrent
+
+> [UniswapV3TokenDTO] uniswapV3TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TokensCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TokenDTO]**](UniswapV3TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3TransactionsCurrent
+
+> [UniswapV3TransactionDTO] uniswapV3TransactionsCurrent()
+
+Transactions (current)
+
+Gets transactions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3TransactionsCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3TransactionDTO]**](UniswapV3TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3UniswapDayDatasCurrent
+
+> [UniswapV3UniswapDayDataDTO] uniswapV3UniswapDayDatasCurrent()
+
+UniswapDayDatas (current)
+
+Gets uniswapDayDatas.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.UniswapV3Api();
+apiInstance.uniswapV3UniswapDayDatasCurrent((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[UniswapV3UniswapDayDataDTO]**](UniswapV3UniswapDayDataDTO.md)
 
 ### Authorization
 

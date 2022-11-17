@@ -19,21 +19,21 @@ case class LiquidityPositionSnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pair address>-<user address>-<timestamp> */
+  /* Identifier, format: <pair address>-<user address> */
   id: Option[String] = None,
   /* Reference to LP identifier. */
   liquidityPosition: Option[String] = None,
   /* Creation time. */
   timestamp: Option[Int] = None,
-  /* Block in which snapshot has been created. */
+  /* Number of block in which LP snapshot was recorded. */
   block: Option[Int] = None,
   /* Reference to user. */
   user: Option[String] = None,
   /* Reference to the pair liquidity is being provided on. */
   pair: Option[String] = None,
-  /* Snapshot of token0 price in USD. */
+  /* Snapshot of token0 price. */
   token0PriceUsd: Option[String] = None,
-  /* Snapshot of token0 price in USD. */
+  /* Snapshot of token0 price. */
   token1PriceUsd: Option[String] = None,
   /* Snapshot of pair token0 reserves. */
   reserve0: Option[String] = None,
@@ -46,6 +46,8 @@ case class LiquidityPositionSnapshotDTO (
   /* Snapshot of users pool token balance. */
   liquidityTokenBalance: Option[String] = None,
   /*  */
-  vid: Option[Long] = None
+  vid: Option[Long] = None,
+  /*  */
+  blockRange: Option[String] = None
 ) extends ApiModel
 

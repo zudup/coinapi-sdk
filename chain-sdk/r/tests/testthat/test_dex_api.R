@@ -5,6 +5,28 @@ context("Test DexApi")
 
 api_instance <- DexApi$new()
 
+test_that("DexBatchsCurrent", {
+  # tests for DexBatchsCurrent
+  # base path: https://onchain.coinapi.io
+  # Batchs (current)
+  # Gets batchs.
+  # @return [array[DexBatchDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexDepositsCurrent", {
+  # tests for DexDepositsCurrent
+  # base path: https://onchain.coinapi.io
+  # Deposits (current)
+  # Gets deposits.
+  # @return [array[DexDepositDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("DexGetBatchsHistorical", {
   # tests for DexGetBatchsHistorical
   # base path: https://onchain.coinapi.io
@@ -161,7 +183,7 @@ test_that("DexGetWithdrawRequestsHistorical", {
   # tests for DexGetWithdrawRequestsHistorical
   # base path: https://onchain.coinapi.io
   # WithdrawRequests (historical) 🔥
-  # Gets withdrawrequests.
+  # Gets withdrawRequests.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -185,6 +207,105 @@ test_that("DexGetWithdrawsHistorical", {
   # @param end_date character  (optional)
   # @param id character  (optional)
   # @param user character  (optional)
+  # @return [array[DexWithdrawDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexOrdersCurrent", {
+  # tests for DexOrdersCurrent
+  # base path: https://onchain.coinapi.io
+  # Orders (current)
+  # Gets orders.
+  # @return [array[DexOrderDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexPricesCurrent", {
+  # tests for DexPricesCurrent
+  # base path: https://onchain.coinapi.io
+  # Prices (current)
+  # Gets prices.
+  # @return [array[DexPriceDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexSolutionsCurrent", {
+  # tests for DexSolutionsCurrent
+  # base path: https://onchain.coinapi.io
+  # Solutions (current)
+  # Gets solutions.
+  # @return [array[DexSolutionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexStatssCurrent", {
+  # tests for DexStatssCurrent
+  # base path: https://onchain.coinapi.io
+  # Statss (current)
+  # Gets statss.
+  # @return [array[DexStatsDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexTokensCurrent", {
+  # tests for DexTokensCurrent
+  # base path: https://onchain.coinapi.io
+  # Tokens (current)
+  # Gets tokens.
+  # @return [array[DexTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexTradesCurrent", {
+  # tests for DexTradesCurrent
+  # base path: https://onchain.coinapi.io
+  # Trades (current)
+  # Gets trades.
+  # @return [array[DexTradeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexUsersCurrent", {
+  # tests for DexUsersCurrent
+  # base path: https://onchain.coinapi.io
+  # Users (current)
+  # Gets users.
+  # @return [array[DexUserDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexWithdrawRequestsCurrent", {
+  # tests for DexWithdrawRequestsCurrent
+  # base path: https://onchain.coinapi.io
+  # WithdrawRequests (current)
+  # Gets withdrawRequests.
+  # @return [array[DexWithdrawRequestDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexWithdrawsCurrent", {
+  # tests for DexWithdrawsCurrent
+  # base path: https://onchain.coinapi.io
+  # Withdraws (current)
+  # Gets withdraws.
   # @return [array[DexWithdrawDTO]]
 
   # uncomment below to test the operation

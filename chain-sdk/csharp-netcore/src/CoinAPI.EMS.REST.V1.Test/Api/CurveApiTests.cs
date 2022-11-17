@@ -56,6 +56,216 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test CurveAccountsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveAccountsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveAccountsCurrent();
+            //Assert.IsType<List<CurveAccountDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveAddLiquidityEventsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveAddLiquidityEventsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveAddLiquidityEventsCurrent();
+            //Assert.IsType<List<CurveAddLiquidityEventDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveAdminFeeChangeLogsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveAdminFeeChangeLogsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveAdminFeeChangeLogsCurrent();
+            //Assert.IsType<List<CurveAdminFeeChangeLogDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveAmplificationCoeffChangeLogsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveAmplificationCoeffChangeLogsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveAmplificationCoeffChangeLogsCurrent();
+            //Assert.IsType<List<CurveAmplificationCoeffChangeLogDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveCoinsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveCoinsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveCoinsCurrent();
+            //Assert.IsType<List<CurveCoinDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveContractVersionsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveContractVersionsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveContractVersionsCurrent();
+            //Assert.IsType<List<CurveContractVersionDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveContractsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveContractsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveContractsCurrent();
+            //Assert.IsType<List<CurveContractDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveDailyVolumesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveDailyVolumesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveDailyVolumesCurrent();
+            //Assert.IsType<List<CurveDailyVolumeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveExchangesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveExchangesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pool = null;
+            //var response = instance.CurveExchangesCurrent(pool);
+            //Assert.IsType<List<CurveExchangeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveFeeChangeLogsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveFeeChangeLogsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveFeeChangeLogsCurrent();
+            //Assert.IsType<List<CurveFeeChangeLogDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeDepositsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeDepositsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeDepositsCurrent();
+            //Assert.IsType<List<CurveGaugeDepositDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeLiquiditysCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeLiquiditysCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeLiquiditysCurrent();
+            //Assert.IsType<List<CurveGaugeLiquidityDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeTotalWeightsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeTotalWeightsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeTotalWeightsCurrent();
+            //Assert.IsType<List<CurveGaugeTotalWeightDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeTypeWeightsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeTypeWeightsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeTypeWeightsCurrent();
+            //Assert.IsType<List<CurveGaugeTypeWeightDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeTypesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeTypesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeTypesCurrent();
+            //Assert.IsType<List<CurveGaugeTypeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeWeightVotesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeWeightVotesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeWeightVotesCurrent();
+            //Assert.IsType<List<CurveGaugeWeightVoteDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeWeightsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeWeightsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeWeightsCurrent();
+            //Assert.IsType<List<CurveGaugeWeightDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugeWithdrawsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugeWithdrawsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugeWithdrawsCurrent();
+            //Assert.IsType<List<CurveGaugeWithdrawDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveGaugesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGaugesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGaugesCurrent();
+            //Assert.IsType<List<CurveGaugeDTO>>(response);
+        }
+
+        /// <summary>
         /// Test CurveGetAccountsHistorical
         /// </summary>
         [Fact]
@@ -593,6 +803,150 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string id = null;
             //string pool = null;
             //var response = instance.CurveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+            //Assert.IsType<List<CurveWeeklyVolumeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveHourlyVolumesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveHourlyVolumesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveHourlyVolumesCurrent();
+            //Assert.IsType<List<CurveHourlyVolumeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveLpTokensCurrent
+        /// </summary>
+        [Fact]
+        public void CurveLpTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveLpTokensCurrent();
+            //Assert.IsType<List<CurveLpTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurvePoolsCurrent
+        /// </summary>
+        [Fact]
+        public void CurvePoolsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.CurvePoolsCurrent(id);
+            //Assert.IsType<List<CurvePoolDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveProposalVotesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveProposalVotesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveProposalVotesCurrent();
+            //Assert.IsType<List<CurveProposalVoteDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveProposalsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveProposalsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveProposalsCurrent();
+            //Assert.IsType<List<CurveProposalDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveRemoveLiquidityEventsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveRemoveLiquidityEventsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveRemoveLiquidityEventsCurrent();
+            //Assert.IsType<List<CurveRemoveLiquidityEventDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveRemoveLiquidityOneEventsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveRemoveLiquidityOneEventsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveRemoveLiquidityOneEventsCurrent();
+            //Assert.IsType<List<CurveRemoveLiquidityOneEventDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveSystemStatesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveSystemStatesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveSystemStatesCurrent();
+            //Assert.IsType<List<CurveSystemStateDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveTokensCurrent
+        /// </summary>
+        [Fact]
+        public void CurveTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveTokensCurrent();
+            //Assert.IsType<List<CurveTokenDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveTransferOwnershipEventsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveTransferOwnershipEventsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveTransferOwnershipEventsCurrent();
+            //Assert.IsType<List<CurveTransferOwnershipEventDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveUnderlyingCoinsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveUnderlyingCoinsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveUnderlyingCoinsCurrent();
+            //Assert.IsType<List<CurveUnderlyingCoinDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveVotingAppsCurrent
+        /// </summary>
+        [Fact]
+        public void CurveVotingAppsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveVotingAppsCurrent();
+            //Assert.IsType<List<CurveVotingAppDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test CurveWeeklyVolumesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveWeeklyVolumesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveWeeklyVolumesCurrent();
             //Assert.IsType<List<CurveWeeklyVolumeDTO>>(response);
         }
     }

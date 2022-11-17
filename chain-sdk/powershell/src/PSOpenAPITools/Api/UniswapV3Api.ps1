@@ -9,131 +9,6 @@
 <#
 .SYNOPSIS
 
-BundleV3s (historical) 🔥
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER StartBlock
-The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-
-.PARAMETER EndBlock
-The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-
-.PARAMETER StartDate
-The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-
-.PARAMETER EndDate
-The end date of timeframe.
-
-.PARAMETER Id
-
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3BundleV3DTO[]
-#>
-function Invoke-UniswapV3GetBundleV3sHistorical {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${StartBlock},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${EndBlock},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${StartDate},
-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${EndDate},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${Id},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetBundleV3sHistorical' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/bundlev3s/historical'
-
-        if ($StartBlock) {
-            $LocalVarQueryParameters['startBlock'] = $StartBlock
-        }
-
-        if ($EndBlock) {
-            $LocalVarQueryParameters['endBlock'] = $EndBlock
-        }
-
-        if ($StartDate) {
-            $LocalVarQueryParameters['startDate'] = $StartDate
-        }
-
-        if ($EndDate) {
-            $LocalVarQueryParameters['endDate'] = $EndDate
-        }
-
-        if ($Id) {
-            $LocalVarQueryParameters['id'] = $Id
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3BundleV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
 Bundles (current)
 
 .DESCRIPTION
@@ -150,9 +25,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3BundleV3DTO[]
+UniswapV3BundleDTO[]
 #>
-function Invoke-UniswapV3GetBundlesCurrent {
+function Invoke-UniswapV3BundlesCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -163,7 +38,7 @@ function Invoke-UniswapV3GetBundlesCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetBundlesCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3BundlesCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -195,7 +70,7 @@ function Invoke-UniswapV3GetBundlesCurrent {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3BundleV3DTO[]" `
+                                -ReturnType "UniswapV3BundleDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -209,7 +84,282 @@ function Invoke-UniswapV3GetBundlesCurrent {
 <#
 .SYNOPSIS
 
-BurnV3s (historical) 🔥
+Burns (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3BurnDTO[]
+#>
+function Invoke-UniswapV3BurnsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3BurnsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/burns/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3BurnDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Factorys (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3FactoryDTO[]
+#>
+function Invoke-UniswapV3FactorysCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3FactorysCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/factorys/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3FactoryDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Bundles (historical) 🔥
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER StartBlock
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+
+.PARAMETER EndBlock
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+
+.PARAMETER StartDate
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+
+.PARAMETER EndDate
+The end date of timeframe.
+
+.PARAMETER Id
+
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3BundleDTO[]
+#>
+function Invoke-UniswapV3GetBundlesHistorical {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3GetBundlesHistorical' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/bundles/historical'
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3BundleDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Burns (historical) 🔥
 
 .DESCRIPTION
 
@@ -249,9 +399,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3BurnV3DTO[]
+UniswapV3BurnDTO[]
 #>
-function Invoke-UniswapV3GetBurnV3sHistorical {
+function Invoke-UniswapV3GetBurnsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -286,7 +436,7 @@ function Invoke-UniswapV3GetBurnV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetBurnV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetBurnsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -307,7 +457,7 @@ function Invoke-UniswapV3GetBurnV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/burnv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/burns/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -350,7 +500,7 @@ function Invoke-UniswapV3GetBurnV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3BurnV3DTO[]" `
+                                -ReturnType "UniswapV3BurnDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -364,167 +514,7 @@ function Invoke-UniswapV3GetBurnV3sHistorical {
 <#
 .SYNOPSIS
 
-Burns (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3BurnV3DTO[]
-#>
-function Invoke-UniswapV3GetBurnsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetBurnsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/burns/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3BurnV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-DayData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3UniswapDayDataV3DTO[]
-#>
-function Invoke-UniswapV3GetDayDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetDayDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/dayData/current'
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3UniswapDayDataV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-FactoryV3s (historical) 🔥
+Factorys (historical) 🔥
 
 .DESCRIPTION
 
@@ -555,9 +545,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3FactoryV3DTO[]
+UniswapV3FactoryDTO[]
 #>
-function Invoke-UniswapV3GetFactoryV3sHistorical {
+function Invoke-UniswapV3GetFactorysHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -583,7 +573,7 @@ function Invoke-UniswapV3GetFactoryV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetFactoryV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetFactorysHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -604,7 +594,7 @@ function Invoke-UniswapV3GetFactoryV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/factoryv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/factorys/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -635,7 +625,7 @@ function Invoke-UniswapV3GetFactoryV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3FactoryV3DTO[]" `
+                                -ReturnType "UniswapV3FactoryDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -649,82 +639,7 @@ function Invoke-UniswapV3GetFactoryV3sHistorical {
 <#
 .SYNOPSIS
 
-Factory (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3FactoryV3DTO[]
-#>
-function Invoke-UniswapV3GetFactoryCurrent {
-    [CmdletBinding()]
-    Param (
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetFactoryCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/factory/current'
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3FactoryV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-MintV3s (historical) 🔥
+Mints (historical) 🔥
 
 .DESCRIPTION
 
@@ -764,9 +679,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3MintV3DTO[]
+UniswapV3MintDTO[]
 #>
-function Invoke-UniswapV3GetMintV3sHistorical {
+function Invoke-UniswapV3GetMintsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -801,7 +716,7 @@ function Invoke-UniswapV3GetMintV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetMintV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetMintsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -822,7 +737,7 @@ function Invoke-UniswapV3GetMintV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/mintv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/mints/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -865,7 +780,7 @@ function Invoke-UniswapV3GetMintV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3MintV3DTO[]" `
+                                -ReturnType "UniswapV3MintDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -879,92 +794,7 @@ function Invoke-UniswapV3GetMintV3sHistorical {
 <#
 .SYNOPSIS
 
-Mints (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3MintV3DTO[]
-#>
-function Invoke-UniswapV3GetMintsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetMintsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/mints/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3MintV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-PoolDayDataV3s (historical) 🔥
+PoolDayDatas (historical) 🔥
 
 .DESCRIPTION
 
@@ -998,9 +828,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3PoolDayDataV3DTO[]
+UniswapV3PoolDayDataDTO[]
 #>
-function Invoke-UniswapV3GetPoolDayDataV3sHistorical {
+function Invoke-UniswapV3GetPoolDayDatasHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1029,7 +859,7 @@ function Invoke-UniswapV3GetPoolDayDataV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPoolDayDataV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPoolDayDatasHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1050,7 +880,7 @@ function Invoke-UniswapV3GetPoolDayDataV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/pooldaydatav3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/poolDayDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1085,7 +915,7 @@ function Invoke-UniswapV3GetPoolDayDataV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3PoolDayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1099,7 +929,7 @@ function Invoke-UniswapV3GetPoolDayDataV3sHistorical {
 <#
 .SYNOPSIS
 
-PoolHourDataV3s (historical) 🔥
+PoolHourDatas (historical) 🔥
 
 .DESCRIPTION
 
@@ -1133,9 +963,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3PoolHourDataV3DTO[]
+UniswapV3PoolHourDataDTO[]
 #>
-function Invoke-UniswapV3GetPoolHourDataV3sHistorical {
+function Invoke-UniswapV3GetPoolHourDatasHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1164,7 +994,7 @@ function Invoke-UniswapV3GetPoolHourDataV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPoolHourDataV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPoolHourDatasHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1185,7 +1015,7 @@ function Invoke-UniswapV3GetPoolHourDataV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolhourdatav3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/poolHourDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1220,7 +1050,7 @@ function Invoke-UniswapV3GetPoolHourDataV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolHourDataV3DTO[]" `
+                                -ReturnType "UniswapV3PoolHourDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1234,7 +1064,7 @@ function Invoke-UniswapV3GetPoolHourDataV3sHistorical {
 <#
 .SYNOPSIS
 
-PoolV3s (historical) 🔥
+Pools (historical) 🔥
 
 .DESCRIPTION
 
@@ -1271,9 +1101,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3PoolV3DTO[]
+UniswapV3PoolDTO[]
 #>
-function Invoke-UniswapV3GetPoolV3sHistorical {
+function Invoke-UniswapV3GetPoolsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1305,7 +1135,7 @@ function Invoke-UniswapV3GetPoolV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPoolV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPoolsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1326,7 +1156,7 @@ function Invoke-UniswapV3GetPoolV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/pools/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1365,7 +1195,7 @@ function Invoke-UniswapV3GetPoolV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolV3DTO[]" `
+                                -ReturnType "UniswapV3PoolDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1379,262 +1209,7 @@ function Invoke-UniswapV3GetPoolV3sHistorical {
 <#
 .SYNOPSIS
 
-PoolsDayData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3PoolDayDataV3DTO[]
-#>
-function Invoke-UniswapV3GetPoolsDayDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetPoolsDayDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/poolsDayData/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolDayDataV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-PoolsHourData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3PoolHourDataV3DTO[]
-#>
-function Invoke-UniswapV3GetPoolsHourDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetPoolsHourDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/poolsHourData/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolHourDataV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-Pools (current) 🔥
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3PoolV3DTO[]
-#>
-function Invoke-UniswapV3GetPoolsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetPoolsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/pools/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PoolV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-PositionSnapshotV3s (historical) 🔥
+PositionSnapshots (historical) 🔥
 
 .DESCRIPTION
 
@@ -1668,9 +1243,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3PositionSnapshotV3DTO[]
+UniswapV3PositionSnapshotDTO[]
 #>
-function Invoke-UniswapV3GetPositionSnapshotV3sHistorical {
+function Invoke-UniswapV3GetPositionSnapshotsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1699,7 +1274,7 @@ function Invoke-UniswapV3GetPositionSnapshotV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPositionSnapshotV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPositionSnapshotsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1720,7 +1295,7 @@ function Invoke-UniswapV3GetPositionSnapshotV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/positionsnapshotv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/positionSnapshots/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1755,7 +1330,7 @@ function Invoke-UniswapV3GetPositionSnapshotV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PositionSnapshotV3DTO[]" `
+                                -ReturnType "UniswapV3PositionSnapshotDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1769,7 +1344,7 @@ function Invoke-UniswapV3GetPositionSnapshotV3sHistorical {
 <#
 .SYNOPSIS
 
-PositionV3s (historical) 🔥
+Positions (historical) 🔥
 
 .DESCRIPTION
 
@@ -1809,9 +1384,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3PositionV3DTO[]
+UniswapV3PositionDTO[]
 #>
-function Invoke-UniswapV3GetPositionV3sHistorical {
+function Invoke-UniswapV3GetPositionsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1846,7 +1421,7 @@ function Invoke-UniswapV3GetPositionV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPositionV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPositionsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1867,7 +1442,7 @@ function Invoke-UniswapV3GetPositionV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/positionv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/positions/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1910,7 +1485,7 @@ function Invoke-UniswapV3GetPositionV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PositionV3DTO[]" `
+                                -ReturnType "UniswapV3PositionDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1924,177 +1499,7 @@ function Invoke-UniswapV3GetPositionV3sHistorical {
 <#
 .SYNOPSIS
 
-PositionsSnapshots (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3PositionSnapshotV3DTO[]
-#>
-function Invoke-UniswapV3GetPositionsSnapshotsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetPositionsSnapshotsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/positionSnapshots/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PositionSnapshotV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-Positions (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3PositionV3DTO[]
-#>
-function Invoke-UniswapV3GetPositionsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetPositionsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/positions/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3PositionV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-SwapV3s (historical) 🔥
+Swaps (historical) 🔥
 
 .DESCRIPTION
 
@@ -2134,9 +1539,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3SwapV3DTO[]
+UniswapV3SwapDTO[]
 #>
-function Invoke-UniswapV3GetSwapV3sHistorical {
+function Invoke-UniswapV3GetSwapsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2171,7 +1576,7 @@ function Invoke-UniswapV3GetSwapV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetSwapV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetSwapsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2192,7 +1597,7 @@ function Invoke-UniswapV3GetSwapV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/swapv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/swaps/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2235,7 +1640,7 @@ function Invoke-UniswapV3GetSwapV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3SwapV3DTO[]" `
+                                -ReturnType "UniswapV3SwapDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2249,92 +1654,7 @@ function Invoke-UniswapV3GetSwapV3sHistorical {
 <#
 .SYNOPSIS
 
-Swaps (current) 🔥
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3SwapV3DTO[]
-#>
-function Invoke-UniswapV3GetSwapsCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetSwapsCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/swaps/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3SwapV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-TickDayDataV3s (historical) 🔥
+TickDayDatas (historical) 🔥
 
 .DESCRIPTION
 
@@ -2368,9 +1688,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3TickDayDataV3DTO[]
+UniswapV3TickDayDataDTO[]
 #>
-function Invoke-UniswapV3GetTickDayDataV3sHistorical {
+function Invoke-UniswapV3GetTickDayDatasHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2399,7 +1719,7 @@ function Invoke-UniswapV3GetTickDayDataV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTickDayDataV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTickDayDatasHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2420,7 +1740,7 @@ function Invoke-UniswapV3GetTickDayDataV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tickdaydatav3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tickDayDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2455,7 +1775,7 @@ function Invoke-UniswapV3GetTickDayDataV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TickDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3TickDayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2469,7 +1789,7 @@ function Invoke-UniswapV3GetTickDayDataV3sHistorical {
 <#
 .SYNOPSIS
 
-TickV3s (historical) 🔥
+Ticks (historical) 🔥
 
 .DESCRIPTION
 
@@ -2503,9 +1823,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3TickV3DTO[]
+UniswapV3TickDTO[]
 #>
-function Invoke-UniswapV3GetTickV3sHistorical {
+function Invoke-UniswapV3GetTicksHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2534,7 +1854,7 @@ function Invoke-UniswapV3GetTickV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTickV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTicksHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2555,7 +1875,7 @@ function Invoke-UniswapV3GetTickV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tickv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/ticks/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2590,7 +1910,7 @@ function Invoke-UniswapV3GetTickV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TickV3DTO[]" `
+                                -ReturnType "UniswapV3TickDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2604,177 +1924,7 @@ function Invoke-UniswapV3GetTickV3sHistorical {
 <#
 .SYNOPSIS
 
-TicksDayData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3TickDayDataV3DTO[]
-#>
-function Invoke-UniswapV3GetTicksDayDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetTicksDayDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/ticksDayData/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TickDayDataV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-Ticks (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterPoolId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3TickV3DTO[]
-#>
-function Invoke-UniswapV3GetTicksCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterPoolId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetTicksCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/ticks/current'
-
-        if ($FilterPoolId) {
-            $LocalVarQueryParameters['filter_pool_id'] = $FilterPoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TickV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-TokenHourDataV3s (historical) 🔥
+TokenHourDatas (historical) 🔥
 
 .DESCRIPTION
 
@@ -2805,9 +1955,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3TokenHourDataV3DTO[]
+UniswapV3TokenHourDataDTO[]
 #>
-function Invoke-UniswapV3GetTokenHourDataV3sHistorical {
+function Invoke-UniswapV3GetTokenHourDatasHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2833,7 +1983,7 @@ function Invoke-UniswapV3GetTokenHourDataV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTokenHourDataV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTokenHourDatasHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2854,7 +2004,7 @@ function Invoke-UniswapV3GetTokenHourDataV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenhourdatav3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tokenHourDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2885,7 +2035,7 @@ function Invoke-UniswapV3GetTokenHourDataV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TokenHourDataV3DTO[]" `
+                                -ReturnType "UniswapV3TokenHourDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -2979,7 +2129,7 @@ function Invoke-UniswapV3GetTokenV3DayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenv3daydatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3024,7 +2174,7 @@ function Invoke-UniswapV3GetTokenV3DayDatasHistorical {
 <#
 .SYNOPSIS
 
-TokenV3s (historical) 🔥
+Tokens (historical) 🔥
 
 .DESCRIPTION
 
@@ -3061,9 +2211,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3TokenV3DTO[]
+UniswapV3TokenDTO[]
 #>
-function Invoke-UniswapV3GetTokenV3sHistorical {
+function Invoke-UniswapV3GetTokensHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -3095,7 +2245,7 @@ function Invoke-UniswapV3GetTokenV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTokenV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTokensHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3116,7 +2266,7 @@ function Invoke-UniswapV3GetTokenV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tokens/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3155,7 +2305,7 @@ function Invoke-UniswapV3GetTokenV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TokenV3DTO[]" `
+                                -ReturnType "UniswapV3TokenDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -3169,262 +2319,7 @@ function Invoke-UniswapV3GetTokenV3sHistorical {
 <#
 .SYNOPSIS
 
-TokensDayData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterTokenId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3TokenV3DayDataDTO[]
-#>
-function Invoke-UniswapV3GetTokensDayDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterTokenId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetTokensDayDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/tokensDayData/current'
-
-        if ($FilterTokenId) {
-            $LocalVarQueryParameters['filter_token_id'] = $FilterTokenId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TokenV3DayDataDTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-TokensHourData (current)
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterTokenId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3TokenHourDataV3DTO[]
-#>
-function Invoke-UniswapV3GetTokensHourDataCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterTokenId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetTokensHourDataCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/tokensHourData/current'
-
-        if ($FilterTokenId) {
-            $LocalVarQueryParameters['filter_token_id'] = $FilterTokenId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TokenHourDataV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-Tokens (current) 🔥
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER FilterTokenId
-No description available.
-
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json, text/json
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-UniswapV3TokenV3DTO[]
-#>
-function Invoke-UniswapV3GetTokensCurrent {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${FilterTokenId},
-        [String]
-        [ValidateSet("text/plain", "application/json", "text/json")]
-        $ReturnType,
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-UniswapV3GetTokensCurrent' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
-
-        $LocalVarUri = '/dapps/uniswapv3/tokens/current'
-
-        if ($FilterTokenId) {
-            $LocalVarQueryParameters['filter_token_id'] = $FilterTokenId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TokenV3DTO[]" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-TransactionV3s (historical) 🔥
+Transactions (historical) 🔥
 
 .DESCRIPTION
 
@@ -3455,9 +2350,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3TransactionV3DTO[]
+UniswapV3TransactionDTO[]
 #>
-function Invoke-UniswapV3GetTransactionV3sHistorical {
+function Invoke-UniswapV3GetTransactionsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -3483,7 +2378,7 @@ function Invoke-UniswapV3GetTransactionV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTransactionV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTransactionsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3504,7 +2399,7 @@ function Invoke-UniswapV3GetTransactionV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/transactionv3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/transactions/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3535,7 +2430,7 @@ function Invoke-UniswapV3GetTransactionV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3TransactionV3DTO[]" `
+                                -ReturnType "UniswapV3TransactionDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -3549,7 +2444,7 @@ function Invoke-UniswapV3GetTransactionV3sHistorical {
 <#
 .SYNOPSIS
 
-UniswapDayDataV3s (historical) 🔥
+UniswapDayDatas (historical) 🔥
 
 .DESCRIPTION
 
@@ -3580,9 +2475,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-UniswapV3UniswapDayDataV3DTO[]
+UniswapV3UniswapDayDataDTO[]
 #>
-function Invoke-UniswapV3GetUniswapDayDataV3sHistorical {
+function Invoke-UniswapV3GetUniswapDayDatasHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -3608,7 +2503,7 @@ function Invoke-UniswapV3GetUniswapDayDataV3sHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetUniswapDayDataV3sHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetUniswapDayDatasHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3629,7 +2524,7 @@ function Invoke-UniswapV3GetUniswapDayDataV3sHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/uniswapdaydatav3s/historical'
+        $LocalVarUri = '/dapps/uniswapv3/uniswapDayDatas/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -3660,7 +2555,1077 @@ function Invoke-UniswapV3GetUniswapDayDataV3sHistorical {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "UniswapV3UniswapDayDataV3DTO[]" `
+                                -ReturnType "UniswapV3UniswapDayDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Mints (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3MintDTO[]
+#>
+function Invoke-UniswapV3MintsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3MintsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/mints/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3MintDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+PoolDayDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3PoolDayDataDTO[]
+#>
+function Invoke-UniswapV3PoolDayDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3PoolDayDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/poolDayDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3PoolDayDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+PoolHourDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3PoolHourDataDTO[]
+#>
+function Invoke-UniswapV3PoolHourDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3PoolHourDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/poolHourDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3PoolHourDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Pools (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+Pool address.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3PoolDTO[]
+#>
+function Invoke-UniswapV3PoolsCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3PoolsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/pools/current'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3PoolDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+PositionSnapshots (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3PositionSnapshotDTO[]
+#>
+function Invoke-UniswapV3PositionSnapshotsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3PositionSnapshotsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/positionSnapshots/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3PositionSnapshotDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Positions (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3PositionDTO[]
+#>
+function Invoke-UniswapV3PositionsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3PositionsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/positions/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3PositionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Swaps (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Pool
+Pool swap occured within.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3SwapDTO[]
+#>
+function Invoke-UniswapV3SwapsCurrent {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Pool},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3SwapsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/swaps/current'
+
+        if ($Pool) {
+            $LocalVarQueryParameters['pool'] = $Pool
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3SwapDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+TickDayDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TickDayDataDTO[]
+#>
+function Invoke-UniswapV3TickDayDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TickDayDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/tickDayDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TickDayDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Ticks (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TickDTO[]
+#>
+function Invoke-UniswapV3TicksCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TicksCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/ticks/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TickDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+TokenHourDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TokenHourDataDTO[]
+#>
+function Invoke-UniswapV3TokenHourDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TokenHourDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/tokenHourDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TokenHourDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+TokenV3DayDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TokenV3DayDataDTO[]
+#>
+function Invoke-UniswapV3TokenV3DayDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TokenV3DayDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TokenV3DayDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Tokens (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TokenDTO[]
+#>
+function Invoke-UniswapV3TokensCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TokensCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/tokens/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+Transactions (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3TransactionDTO[]
+#>
+function Invoke-UniswapV3TransactionsCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3TransactionsCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/transactions/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3TransactionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+UniswapDayDatas (current)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+UniswapV3UniswapDayDataDTO[]
+#>
+function Invoke-UniswapV3UniswapDayDatasCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-UniswapV3UniswapDayDatasCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/uniswapv3/uniswapDayDatas/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "UniswapV3UniswapDayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

@@ -30,6 +30,18 @@ my $api = WWW::OpenAPIClient::DexApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 
 #
+# dex_batchs__current test
+#
+# uncomment below and update the test
+#my $dex_batchs__current_result = $api->dex_batchs__current();
+
+#
+# dex_deposits__current test
+#
+# uncomment below and update the test
+#my $dex_deposits__current_result = $api->dex_deposits__current();
+
+#
 # dex_get_batchs__historical test
 #
 # uncomment below and update the test
@@ -159,4 +171,58 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_withdraws__historical_id = undef; # replace NULL with a proper value
 #my $dex_get_withdraws__historical_user = undef; # replace NULL with a proper value
 #my $dex_get_withdraws__historical_result = $api->dex_get_withdraws__historical(start_block => $dex_get_withdraws__historical_start_block, end_block => $dex_get_withdraws__historical_end_block, start_date => $dex_get_withdraws__historical_start_date, end_date => $dex_get_withdraws__historical_end_date, id => $dex_get_withdraws__historical_id, user => $dex_get_withdraws__historical_user);
+
+#
+# dex_orders__current test
+#
+# uncomment below and update the test
+#my $dex_orders__current_result = $api->dex_orders__current();
+
+#
+# dex_prices__current test
+#
+# uncomment below and update the test
+#my $dex_prices__current_result = $api->dex_prices__current();
+
+#
+# dex_solutions__current test
+#
+# uncomment below and update the test
+#my $dex_solutions__current_result = $api->dex_solutions__current();
+
+#
+# dex_statss__current test
+#
+# uncomment below and update the test
+#my $dex_statss__current_result = $api->dex_statss__current();
+
+#
+# dex_tokens__current test
+#
+# uncomment below and update the test
+#my $dex_tokens__current_result = $api->dex_tokens__current();
+
+#
+# dex_trades__current test
+#
+# uncomment below and update the test
+#my $dex_trades__current_result = $api->dex_trades__current();
+
+#
+# dex_users__current test
+#
+# uncomment below and update the test
+#my $dex_users__current_result = $api->dex_users__current();
+
+#
+# dex_withdraw_requests__current test
+#
+# uncomment below and update the test
+#my $dex_withdraw_requests__current_result = $api->dex_withdraw_requests__current();
+
+#
+# dex_withdraws__current test
+#
+# uncomment below and update the test
+#my $dex_withdraws__current_result = $api->dex_withdraws__current();
 

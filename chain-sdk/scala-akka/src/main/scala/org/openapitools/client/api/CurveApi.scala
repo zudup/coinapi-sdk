@@ -60,6 +60,218 @@ class CurveApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[AccountDTO] (successful operation)
+   */
+  def curveAccountsCurrent(): ApiRequest[Seq[AccountDTO]] =
+    ApiRequest[Seq[AccountDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/accounts/current", "application/json")
+      .withSuccessResponse[Seq[AccountDTO]](200)
+      
+
+  /**
+   * Gets addLiquidityEvents.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AddLiquidityEventDTO] (successful operation)
+   */
+  def curveAddLiquidityEventsCurrent(): ApiRequest[Seq[AddLiquidityEventDTO]] =
+    ApiRequest[Seq[AddLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/addLiquidityEvents/current", "application/json")
+      .withSuccessResponse[Seq[AddLiquidityEventDTO]](200)
+      
+
+  /**
+   * Gets adminFeeChangeLogs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AdminFeeChangeLogDTO] (successful operation)
+   */
+  def curveAdminFeeChangeLogsCurrent(): ApiRequest[Seq[AdminFeeChangeLogDTO]] =
+    ApiRequest[Seq[AdminFeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/adminFeeChangeLogs/current", "application/json")
+      .withSuccessResponse[Seq[AdminFeeChangeLogDTO]](200)
+      
+
+  /**
+   * Gets amplificationCoeffChangeLogs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AmplificationCoeffChangeLogDTO] (successful operation)
+   */
+  def curveAmplificationCoeffChangeLogsCurrent(): ApiRequest[Seq[AmplificationCoeffChangeLogDTO]] =
+    ApiRequest[Seq[AmplificationCoeffChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/amplificationCoeffChangeLogs/current", "application/json")
+      .withSuccessResponse[Seq[AmplificationCoeffChangeLogDTO]](200)
+      
+
+  /**
+   * Gets coins.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[CoinDTO] (successful operation)
+   */
+  def curveCoinsCurrent(): ApiRequest[Seq[CoinDTO]] =
+    ApiRequest[Seq[CoinDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/coins/current", "application/json")
+      .withSuccessResponse[Seq[CoinDTO]](200)
+      
+
+  /**
+   * Gets contractVersions.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ContractVersionDTO] (successful operation)
+   */
+  def curveContractVersionsCurrent(): ApiRequest[Seq[ContractVersionDTO]] =
+    ApiRequest[Seq[ContractVersionDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/contractVersions/current", "application/json")
+      .withSuccessResponse[Seq[ContractVersionDTO]](200)
+      
+
+  /**
+   * Gets contracts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ContractDTO] (successful operation)
+   */
+  def curveContractsCurrent(): ApiRequest[Seq[ContractDTO]] =
+    ApiRequest[Seq[ContractDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/contracts/current", "application/json")
+      .withSuccessResponse[Seq[ContractDTO]](200)
+      
+
+  /**
+   * Gets dailyVolumes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DailyVolumeDTO] (successful operation)
+   */
+  def curveDailyVolumesCurrent(): ApiRequest[Seq[DailyVolumeDTO]] =
+    ApiRequest[Seq[DailyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/dailyVolumes/current", "application/json")
+      .withSuccessResponse[Seq[DailyVolumeDTO]](200)
+      
+
+  /**
+   * Gets exchanges.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ExchangeDTO] (successful operation)
+   * 
+   * @param pool 
+   */
+  def curveExchangesCurrent(pool: Option[String] = None): ApiRequest[Seq[ExchangeDTO]] =
+    ApiRequest[Seq[ExchangeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/exchanges/current", "application/json")
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[ExchangeDTO]](200)
+      
+
+  /**
+   * Gets feeChangeLogs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FeeChangeLogDTO] (successful operation)
+   */
+  def curveFeeChangeLogsCurrent(): ApiRequest[Seq[FeeChangeLogDTO]] =
+    ApiRequest[Seq[FeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/feeChangeLogs/current", "application/json")
+      .withSuccessResponse[Seq[FeeChangeLogDTO]](200)
+      
+
+  /**
+   * Gets gaugeDeposits.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeDepositDTO] (successful operation)
+   */
+  def curveGaugeDepositsCurrent(): ApiRequest[Seq[GaugeDepositDTO]] =
+    ApiRequest[Seq[GaugeDepositDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeDeposits/current", "application/json")
+      .withSuccessResponse[Seq[GaugeDepositDTO]](200)
+      
+
+  /**
+   * Gets gaugeLiquiditys.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeLiquidityDTO] (successful operation)
+   */
+  def curveGaugeLiquiditysCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]] =
+    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquiditys/current", "application/json")
+      .withSuccessResponse[Seq[GaugeLiquidityDTO]](200)
+      
+
+  /**
+   * Gets gaugeTotalWeights.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeTotalWeightDTO] (successful operation)
+   */
+  def curveGaugeTotalWeightsCurrent(): ApiRequest[Seq[GaugeTotalWeightDTO]] =
+    ApiRequest[Seq[GaugeTotalWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTotalWeights/current", "application/json")
+      .withSuccessResponse[Seq[GaugeTotalWeightDTO]](200)
+      
+
+  /**
+   * Gets gaugeTypeWeights.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeTypeWeightDTO] (successful operation)
+   */
+  def curveGaugeTypeWeightsCurrent(): ApiRequest[Seq[GaugeTypeWeightDTO]] =
+    ApiRequest[Seq[GaugeTypeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTypeWeights/current", "application/json")
+      .withSuccessResponse[Seq[GaugeTypeWeightDTO]](200)
+      
+
+  /**
+   * Gets gaugeTypes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeTypeDTO] (successful operation)
+   */
+  def curveGaugeTypesCurrent(): ApiRequest[Seq[GaugeTypeDTO]] =
+    ApiRequest[Seq[GaugeTypeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTypes/current", "application/json")
+      .withSuccessResponse[Seq[GaugeTypeDTO]](200)
+      
+
+  /**
+   * Gets gaugeWeightVotes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeWeightVoteDTO] (successful operation)
+   */
+  def curveGaugeWeightVotesCurrent(): ApiRequest[Seq[GaugeWeightVoteDTO]] =
+    ApiRequest[Seq[GaugeWeightVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWeightVotes/current", "application/json")
+      .withSuccessResponse[Seq[GaugeWeightVoteDTO]](200)
+      
+
+  /**
+   * Gets gaugeWeights.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeWeightDTO] (successful operation)
+   */
+  def curveGaugeWeightsCurrent(): ApiRequest[Seq[GaugeWeightDTO]] =
+    ApiRequest[Seq[GaugeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWeights/current", "application/json")
+      .withSuccessResponse[Seq[GaugeWeightDTO]](200)
+      
+
+  /**
+   * Gets gaugeWithdraws.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeWithdrawDTO] (successful operation)
+   */
+  def curveGaugeWithdrawsCurrent(): ApiRequest[Seq[GaugeWithdrawDTO]] =
+    ApiRequest[Seq[GaugeWithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWithdraws/current", "application/json")
+      .withSuccessResponse[Seq[GaugeWithdrawDTO]](200)
+      
+
+  /**
+   * Gets gauges.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[GaugeDTO] (successful operation)
+   */
+  def curveGaugesCurrent(): ApiRequest[Seq[GaugeDTO]] =
+    ApiRequest[Seq[GaugeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gauges/current", "application/json")
+      .withSuccessResponse[Seq[GaugeDTO]](200)
+      
+
+  /**
+   * Gets accounts.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[AccountDTO] (successful operation)
    * 
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -80,7 +292,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets addliquidityevents.
+   * Gets addLiquidityEvents.
    * 
    * Expected answers:
    *   code 200 : Seq[AddLiquidityEventDTO] (successful operation)
@@ -93,7 +305,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetAddLiquidityEventsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[AddLiquidityEventDTO]] =
-    ApiRequest[Seq[AddLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/addliquidityevents/historical", "application/json")
+    ApiRequest[Seq[AddLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/addLiquidityEvents/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -104,7 +316,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets adminfeechangelogs.
+   * Gets adminFeeChangeLogs.
    * 
    * Expected answers:
    *   code 200 : Seq[AdminFeeChangeLogDTO] (successful operation)
@@ -117,7 +329,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetAdminFeeChangeLogsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[AdminFeeChangeLogDTO]] =
-    ApiRequest[Seq[AdminFeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/adminfeechangelogs/historical", "application/json")
+    ApiRequest[Seq[AdminFeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/adminFeeChangeLogs/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -128,7 +340,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets amplificationcoeffchangelogs.
+   * Gets amplificationCoeffChangeLogs.
    * 
    * Expected answers:
    *   code 200 : Seq[AmplificationCoeffChangeLogDTO] (successful operation)
@@ -141,7 +353,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetAmplificationCoeffChangeLogsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[AmplificationCoeffChangeLogDTO]] =
-    ApiRequest[Seq[AmplificationCoeffChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/amplificationcoeffchangelogs/historical", "application/json")
+    ApiRequest[Seq[AmplificationCoeffChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/amplificationCoeffChangeLogs/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -176,7 +388,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets contractversions.
+   * Gets contractVersions.
    * 
    * Expected answers:
    *   code 200 : Seq[ContractVersionDTO] (successful operation)
@@ -189,7 +401,7 @@ class CurveApi(baseUrl: String) {
    * @param address 
    */
   def curveGetContractVersionsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, address: Option[String] = None): ApiRequest[Seq[ContractVersionDTO]] =
-    ApiRequest[Seq[ContractVersionDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/contractversions/historical", "application/json")
+    ApiRequest[Seq[ContractVersionDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/contractVersions/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -222,7 +434,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets dailyvolumes.
+   * Gets dailyVolumes.
    * 
    * Expected answers:
    *   code 200 : Seq[DailyVolumeDTO] (successful operation)
@@ -235,7 +447,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetDailyVolumesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[DailyVolumeDTO]] =
-    ApiRequest[Seq[DailyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/dailyvolumes/historical", "application/json")
+    ApiRequest[Seq[DailyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/dailyVolumes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -270,7 +482,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets feechangelogs.
+   * Gets feeChangeLogs.
    * 
    * Expected answers:
    *   code 200 : Seq[FeeChangeLogDTO] (successful operation)
@@ -283,7 +495,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetFeeChangeLogsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[FeeChangeLogDTO]] =
-    ApiRequest[Seq[FeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/feechangelogs/historical", "application/json")
+    ApiRequest[Seq[FeeChangeLogDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/feeChangeLogs/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -294,7 +506,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugedeposits.
+   * Gets gaugeDeposits.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeDepositDTO] (successful operation)
@@ -306,7 +518,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetGaugeDepositsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[GaugeDepositDTO]] =
-    ApiRequest[Seq[GaugeDepositDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugedeposits/historical", "application/json")
+    ApiRequest[Seq[GaugeDepositDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeDeposits/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -316,7 +528,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugeliquiditys.
+   * Gets gaugeLiquiditys.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeLiquidityDTO] (successful operation)
@@ -329,7 +541,7 @@ class CurveApi(baseUrl: String) {
    * @param user 
    */
   def curveGetGaugeLiquiditysHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[GaugeLiquidityDTO]] =
-    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeliquiditys/historical", "application/json")
+    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquiditys/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -340,7 +552,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugetotalweights.
+   * Gets gaugeTotalWeights.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeTotalWeightDTO] (successful operation)
@@ -352,7 +564,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetGaugeTotalWeightsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[GaugeTotalWeightDTO]] =
-    ApiRequest[Seq[GaugeTotalWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugetotalweights/historical", "application/json")
+    ApiRequest[Seq[GaugeTotalWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTotalWeights/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -362,7 +574,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugetypeweights.
+   * Gets gaugeTypeWeights.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeTypeWeightDTO] (successful operation)
@@ -374,7 +586,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetGaugeTypeWeightsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[GaugeTypeWeightDTO]] =
-    ApiRequest[Seq[GaugeTypeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugetypeweights/historical", "application/json")
+    ApiRequest[Seq[GaugeTypeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTypeWeights/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -384,7 +596,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugetypes.
+   * Gets gaugeTypes.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeTypeDTO] (successful operation)
@@ -397,7 +609,7 @@ class CurveApi(baseUrl: String) {
    * @param name 
    */
   def curveGetGaugeTypesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, name: Option[String] = None): ApiRequest[Seq[GaugeTypeDTO]] =
-    ApiRequest[Seq[GaugeTypeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugetypes/historical", "application/json")
+    ApiRequest[Seq[GaugeTypeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeTypes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -408,7 +620,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugeweightvotes.
+   * Gets gaugeWeightVotes.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeWeightVoteDTO] (successful operation)
@@ -421,7 +633,7 @@ class CurveApi(baseUrl: String) {
    * @param user 
    */
   def curveGetGaugeWeightVotesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[GaugeWeightVoteDTO]] =
-    ApiRequest[Seq[GaugeWeightVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeweightvotes/historical", "application/json")
+    ApiRequest[Seq[GaugeWeightVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWeightVotes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -432,7 +644,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugeweights.
+   * Gets gaugeWeights.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeWeightDTO] (successful operation)
@@ -444,7 +656,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetGaugeWeightsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[GaugeWeightDTO]] =
-    ApiRequest[Seq[GaugeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeweights/historical", "application/json")
+    ApiRequest[Seq[GaugeWeightDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWeights/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -454,7 +666,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugewithdraws.
+   * Gets gaugeWithdraws.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeWithdrawDTO] (successful operation)
@@ -466,7 +678,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetGaugeWithdrawsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[GaugeWithdrawDTO]] =
-    ApiRequest[Seq[GaugeWithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugewithdraws/historical", "application/json")
+    ApiRequest[Seq[GaugeWithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeWithdraws/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -502,7 +714,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets hourlyvolumes.
+   * Gets hourlyVolumes.
    * 
    * Expected answers:
    *   code 200 : Seq[HourlyVolumeDTO] (successful operation)
@@ -515,7 +727,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetHourlyVolumesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[HourlyVolumeDTO]] =
-    ApiRequest[Seq[HourlyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/hourlyvolumes/historical", "application/json")
+    ApiRequest[Seq[HourlyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/hourlyVolumes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -526,7 +738,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets lptokens.
+   * Gets lpTokens.
    * 
    * Expected answers:
    *   code 200 : Seq[LpTokenDTO] (successful operation)
@@ -542,7 +754,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetLpTokensHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, address: Option[String] = None, name: Option[String] = None, symbol: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[LpTokenDTO]] =
-    ApiRequest[Seq[LpTokenDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/lptokens/historical", "application/json")
+    ApiRequest[Seq[LpTokenDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/lpTokens/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -580,7 +792,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets proposalvotes.
+   * Gets proposalVotes.
    * 
    * Expected answers:
    *   code 200 : Seq[ProposalVoteDTO] (successful operation)
@@ -592,7 +804,7 @@ class CurveApi(baseUrl: String) {
    * @param id 
    */
   def curveGetProposalVotesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[ProposalVoteDTO]] =
-    ApiRequest[Seq[ProposalVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/proposalvotes/historical", "application/json")
+    ApiRequest[Seq[ProposalVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/proposalVotes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -624,7 +836,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets removeliquidityevents.
+   * Gets removeLiquidityEvents.
    * 
    * Expected answers:
    *   code 200 : Seq[RemoveLiquidityEventDTO] (successful operation)
@@ -637,7 +849,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetRemoveLiquidityEventsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[RemoveLiquidityEventDTO]] =
-    ApiRequest[Seq[RemoveLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeliquidityevents/historical", "application/json")
+    ApiRequest[Seq[RemoveLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeLiquidityEvents/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -648,7 +860,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets removeliquidityoneevents.
+   * Gets removeLiquidityOneEvents.
    * 
    * Expected answers:
    *   code 200 : Seq[RemoveLiquidityOneEventDTO] (successful operation)
@@ -661,7 +873,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetRemoveLiquidityOneEventsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[RemoveLiquidityOneEventDTO]] =
-    ApiRequest[Seq[RemoveLiquidityOneEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeliquidityoneevents/historical", "application/json")
+    ApiRequest[Seq[RemoveLiquidityOneEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeLiquidityOneEvents/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -672,7 +884,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets systemstates.
+   * Gets systemStates.
    * 
    * Expected answers:
    *   code 200 : Seq[SystemStateDTO] (successful operation)
@@ -684,7 +896,7 @@ class CurveApi(baseUrl: String) {
    * @param id Singleton ID, equals to 'current'.
    */
   def curveGetSystemStatesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[SystemStateDTO]] =
-    ApiRequest[Seq[SystemStateDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/systemstates/historical", "application/json")
+    ApiRequest[Seq[SystemStateDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/systemStates/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -722,7 +934,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets transferownershipevents.
+   * Gets transferOwnershipEvents.
    * 
    * Expected answers:
    *   code 200 : Seq[TransferOwnershipEventDTO] (successful operation)
@@ -735,7 +947,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetTransferOwnershipEventsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[TransferOwnershipEventDTO]] =
-    ApiRequest[Seq[TransferOwnershipEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/transferownershipevents/historical", "application/json")
+    ApiRequest[Seq[TransferOwnershipEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/transferOwnershipEvents/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -746,7 +958,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets underlyingcoins.
+   * Gets underlyingCoins.
    * 
    * Expected answers:
    *   code 200 : Seq[UnderlyingCoinDTO] (successful operation)
@@ -759,7 +971,7 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetUnderlyingCoinsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[UnderlyingCoinDTO]] =
-    ApiRequest[Seq[UnderlyingCoinDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/underlyingcoins/historical", "application/json")
+    ApiRequest[Seq[UnderlyingCoinDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/underlyingCoins/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -770,7 +982,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets votingapps.
+   * Gets votingApps.
    * 
    * Expected answers:
    *   code 200 : Seq[VotingAppDTO] (successful operation)
@@ -783,7 +995,7 @@ class CurveApi(baseUrl: String) {
    * @param address 
    */
   def curveGetVotingAppsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, address: Option[String] = None): ApiRequest[Seq[VotingAppDTO]] =
-    ApiRequest[Seq[VotingAppDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/votingapps/historical", "application/json")
+    ApiRequest[Seq[VotingAppDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/votingApps/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -794,7 +1006,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets weeklyvolumes.
+   * Gets weeklyVolumes.
    * 
    * Expected answers:
    *   code 200 : Seq[WeeklyVolumeDTO] (successful operation)
@@ -807,13 +1019,159 @@ class CurveApi(baseUrl: String) {
    * @param pool 
    */
   def curveGetWeeklyVolumesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[WeeklyVolumeDTO]] =
-    ApiRequest[Seq[WeeklyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/weeklyvolumes/historical", "application/json")
+    ApiRequest[Seq[WeeklyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/weeklyVolumes/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("id", id)
       .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[WeeklyVolumeDTO]](200)
+      
+
+  /**
+   * Gets hourlyVolumes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[HourlyVolumeDTO] (successful operation)
+   */
+  def curveHourlyVolumesCurrent(): ApiRequest[Seq[HourlyVolumeDTO]] =
+    ApiRequest[Seq[HourlyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/hourlyVolumes/current", "application/json")
+      .withSuccessResponse[Seq[HourlyVolumeDTO]](200)
+      
+
+  /**
+   * Gets lpTokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LpTokenDTO] (successful operation)
+   */
+  def curveLpTokensCurrent(): ApiRequest[Seq[LpTokenDTO]] =
+    ApiRequest[Seq[LpTokenDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/lpTokens/current", "application/json")
+      .withSuccessResponse[Seq[LpTokenDTO]](200)
+      
+
+  /**
+   * Gets pools.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PoolDTO] (successful operation)
+   * 
+   * @param id Pool address.
+   */
+  def curvePoolsCurrent(id: Option[String] = None): ApiRequest[Seq[PoolDTO]] =
+    ApiRequest[Seq[PoolDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/pools/current", "application/json")
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[PoolDTO]](200)
+      
+
+  /**
+   * Gets proposalVotes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ProposalVoteDTO] (successful operation)
+   */
+  def curveProposalVotesCurrent(): ApiRequest[Seq[ProposalVoteDTO]] =
+    ApiRequest[Seq[ProposalVoteDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/proposalVotes/current", "application/json")
+      .withSuccessResponse[Seq[ProposalVoteDTO]](200)
+      
+
+  /**
+   * Gets proposals.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[ProposalDTO] (successful operation)
+   */
+  def curveProposalsCurrent(): ApiRequest[Seq[ProposalDTO]] =
+    ApiRequest[Seq[ProposalDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/proposals/current", "application/json")
+      .withSuccessResponse[Seq[ProposalDTO]](200)
+      
+
+  /**
+   * Gets removeLiquidityEvents.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RemoveLiquidityEventDTO] (successful operation)
+   */
+  def curveRemoveLiquidityEventsCurrent(): ApiRequest[Seq[RemoveLiquidityEventDTO]] =
+    ApiRequest[Seq[RemoveLiquidityEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeLiquidityEvents/current", "application/json")
+      .withSuccessResponse[Seq[RemoveLiquidityEventDTO]](200)
+      
+
+  /**
+   * Gets removeLiquidityOneEvents.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[RemoveLiquidityOneEventDTO] (successful operation)
+   */
+  def curveRemoveLiquidityOneEventsCurrent(): ApiRequest[Seq[RemoveLiquidityOneEventDTO]] =
+    ApiRequest[Seq[RemoveLiquidityOneEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/removeLiquidityOneEvents/current", "application/json")
+      .withSuccessResponse[Seq[RemoveLiquidityOneEventDTO]](200)
+      
+
+  /**
+   * Gets systemStates.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SystemStateDTO] (successful operation)
+   */
+  def curveSystemStatesCurrent(): ApiRequest[Seq[SystemStateDTO]] =
+    ApiRequest[Seq[SystemStateDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/systemStates/current", "application/json")
+      .withSuccessResponse[Seq[SystemStateDTO]](200)
+      
+
+  /**
+   * Gets tokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   */
+  def curveTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/tokens/current", "application/json")
+      .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets transferOwnershipEvents.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TransferOwnershipEventDTO] (successful operation)
+   */
+  def curveTransferOwnershipEventsCurrent(): ApiRequest[Seq[TransferOwnershipEventDTO]] =
+    ApiRequest[Seq[TransferOwnershipEventDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/transferOwnershipEvents/current", "application/json")
+      .withSuccessResponse[Seq[TransferOwnershipEventDTO]](200)
+      
+
+  /**
+   * Gets underlyingCoins.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UnderlyingCoinDTO] (successful operation)
+   */
+  def curveUnderlyingCoinsCurrent(): ApiRequest[Seq[UnderlyingCoinDTO]] =
+    ApiRequest[Seq[UnderlyingCoinDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/underlyingCoins/current", "application/json")
+      .withSuccessResponse[Seq[UnderlyingCoinDTO]](200)
+      
+
+  /**
+   * Gets votingApps.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[VotingAppDTO] (successful operation)
+   */
+  def curveVotingAppsCurrent(): ApiRequest[Seq[VotingAppDTO]] =
+    ApiRequest[Seq[VotingAppDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/votingApps/current", "application/json")
+      .withSuccessResponse[Seq[VotingAppDTO]](200)
+      
+
+  /**
+   * Gets weeklyVolumes.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WeeklyVolumeDTO] (successful operation)
+   */
+  def curveWeeklyVolumesCurrent(): ApiRequest[Seq[WeeklyVolumeDTO]] =
+    ApiRequest[Seq[WeeklyVolumeDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/weeklyVolumes/current", "application/json")
       .withSuccessResponse[Seq[WeeklyVolumeDTO]](200)
       
 

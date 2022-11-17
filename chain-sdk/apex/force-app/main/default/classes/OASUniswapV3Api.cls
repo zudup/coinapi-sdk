@@ -26,17 +26,80 @@ public class OASUniswapV3Api {
     }
 
     /**
-     * BundleV3s (historical) 🔥
-     * Gets bundlev3s.
+     * Bundles (current)
+     * Gets bundles.
+     * @return List<OASUniswapV3BundleDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3BundleDTO> uniswapV3BundlesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3BundleDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/bundles/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3BundleDTO>.class
+        );
+    }
+    /**
+     * Burns (current)
+     * Gets burns.
+     * @return List<OASUniswapV3BurnDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3BurnDTO> uniswapV3BurnsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3BurnDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/burns/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3BurnDTO>.class
+        );
+    }
+    /**
+     * Factorys (current)
+     * Gets factorys.
+     * @return List<OASUniswapV3FactoryDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3FactoryDTO> uniswapV3FactorysCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3FactoryDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/factorys/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3FactoryDTO>.class
+        );
+    }
+    /**
+     * Bundles (historical) 🔥
+     * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
      * @param id  (optional)
-     * @return List<OASUniswapV3BundleV3DTO>
+     * @return List<OASUniswapV3BundleDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3BundleV3DTO> uniswapV3GetBundleV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3BundleDTO> uniswapV3GetBundlesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -48,41 +111,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3BundleV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/bundlev3s/historical', '',
+        return (List<OASUniswapV3BundleDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/bundles/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3BundleV3DTO>.class
+            List<OASUniswapV3BundleDTO>.class
         );
     }
     /**
-     * Bundles (current)
-     * Gets bundles.
-     * @return List<OASUniswapV3BundleV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3BundleV3DTO> uniswapV3GetBundlesCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3BundleV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/bundles/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3BundleV3DTO>.class
-        );
-    }
-    /**
-     * BurnV3s (historical) 🔥
-     * Gets burnv3s.
+     * Burns (historical) 🔥
+     * Gets burns.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -91,10 +133,10 @@ public class OASUniswapV3Api {
      * @param pool Pool position is within. (optional)
      * @param token0 Reference to token0 as stored in pool contract. (optional)
      * @param token1 Reference to token1 as stored in pool contract. (optional)
-     * @return List<OASUniswapV3BurnV3DTO>
+     * @return List<OASUniswapV3BurnDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3BurnV3DTO> uniswapV3GetBurnV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3BurnDTO> uniswapV3GetBurnsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -109,97 +151,29 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3BurnV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/burnv3s/historical', '',
+        return (List<OASUniswapV3BurnDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/burns/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3BurnV3DTO>.class
+            List<OASUniswapV3BurnDTO>.class
         );
     }
     /**
-     * Burns (current)
-     * Gets burns.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3BurnV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3BurnV3DTO> uniswapV3GetBurnsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3BurnV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/burns/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3BurnV3DTO>.class
-        );
-    }
-    /**
-     * DayData (current)
-     * Gets uniswapv3 day data.
-     * @return List<OASUniswapV3UniswapDayDataV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3UniswapDayDataV3DTO> uniswapV3GetDayDataCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3UniswapDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/dayData/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3UniswapDayDataV3DTO>.class
-        );
-    }
-    /**
-     * Factory (current)
-     * Gets factory.
-     * @return List<OASUniswapV3FactoryV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3FactoryV3DTO> uniswapV3GetFactoryCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3FactoryV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/factory/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3FactoryV3DTO>.class
-        );
-    }
-    /**
-     * FactoryV3s (historical) 🔥
-     * Gets factoryv3s.
+     * Factorys (historical) 🔥
+     * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
      * @param id Factory address. (optional)
-     * @return List<OASUniswapV3FactoryV3DTO>
+     * @return List<OASUniswapV3FactoryDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3FactoryV3DTO> uniswapV3GetFactoryV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3FactoryDTO> uniswapV3GetFactorysHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -211,20 +185,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3FactoryV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/factoryv3s/historical', '',
+        return (List<OASUniswapV3FactoryDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/factorys/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3FactoryV3DTO>.class
+            List<OASUniswapV3FactoryDTO>.class
         );
     }
     /**
-     * MintV3s (historical) 🔥
-     * Gets mintv3s.
+     * Mints (historical) 🔥
+     * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -233,10 +207,10 @@ public class OASUniswapV3Api {
      * @param pool Pool address. (optional)
      * @param token0 Reference to token0 as stored in pool contract. (optional)
      * @param token1 Reference to token1 as stored in pool contract. (optional)
-     * @return List<OASUniswapV3MintV3DTO>
+     * @return List<OASUniswapV3MintDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3MintV3DTO> uniswapV3GetMintV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3MintDTO> uniswapV3GetMintsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -251,56 +225,30 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3MintV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/mintv3s/historical', '',
+        return (List<OASUniswapV3MintDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/mints/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3MintV3DTO>.class
+            List<OASUniswapV3MintDTO>.class
         );
     }
     /**
-     * Mints (current)
-     * Gets mints.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3MintV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3MintV3DTO> uniswapV3GetMintsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3MintV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/mints/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3MintV3DTO>.class
-        );
-    }
-    /**
-     * PoolDayDataV3s (historical) 🔥
-     * Gets pooldaydatav3s.
+     * PoolDayDatas (historical) 🔥
+     * Gets poolDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param id  (optional)
      * @param pool  (optional)
-     * @return List<OASUniswapV3PoolDayDataV3DTO>
+     * @return List<OASUniswapV3PoolDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3PoolDayDataV3DTO> uniswapV3GetPoolDayDataV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDatasHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -313,30 +261,30 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3PoolDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/pooldaydatav3s/historical', '',
+        return (List<OASUniswapV3PoolDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/poolDayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3PoolDayDataV3DTO>.class
+            List<OASUniswapV3PoolDayDataDTO>.class
         );
     }
     /**
-     * PoolHourDataV3s (historical) 🔥
-     * Gets poolhourdatav3s.
+     * PoolHourDatas (historical) 🔥
+     * Gets poolHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param id  (optional)
      * @param pool  (optional)
-     * @return List<OASUniswapV3PoolHourDataV3DTO>
+     * @return List<OASUniswapV3PoolHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3PoolHourDataV3DTO> uniswapV3GetPoolHourDataV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDatasHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -349,20 +297,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3PoolHourDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/poolhourdatav3s/historical', '',
+        return (List<OASUniswapV3PoolHourDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/poolHourDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3PoolHourDataV3DTO>.class
+            List<OASUniswapV3PoolHourDataDTO>.class
         );
     }
     /**
-     * PoolV3s (historical) 🔥
-     * Gets poolv3s.
+     * Pools (historical) 🔥
+     * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -370,10 +318,10 @@ public class OASUniswapV3Api {
      * @param id Pool address. (optional)
      * @param token0 Reference to token0 as stored in pool contract. (optional)
      * @param token1 Reference to token1 as stored in pool contract. (optional)
-     * @return List<OASUniswapV3PoolV3DTO>
+     * @return List<OASUniswapV3PoolDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3PoolV3DTO> uniswapV3GetPoolV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3PoolDTO> uniswapV3GetPoolsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -387,108 +335,30 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3PoolV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/poolv3s/historical', '',
+        return (List<OASUniswapV3PoolDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/pools/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3PoolV3DTO>.class
+            List<OASUniswapV3PoolDTO>.class
         );
     }
     /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3PoolV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3PoolV3DTO> uniswapV3GetPoolsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3PoolV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/pools/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3PoolV3DTO>.class
-        );
-    }
-    /**
-     * PoolsDayData (current)
-     * Gets pools day data.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3PoolDayDataV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3PoolDayDataV3DTO> uniswapV3GetPoolsDayDataCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3PoolDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/poolsDayData/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3PoolDayDataV3DTO>.class
-        );
-    }
-    /**
-     * PoolsHourData (current)
-     * Gets pools hour data.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3PoolHourDataV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3PoolHourDataV3DTO> uniswapV3GetPoolsHourDataCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3PoolHourDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/poolsHourData/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3PoolHourDataV3DTO>.class
-        );
-    }
-    /**
-     * PositionSnapshotV3s (historical) 🔥
-     * Gets positionsnapshotv3s.
+     * PositionSnapshots (historical) 🔥
+     * Gets positionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param id  (optional)
      * @param pool  (optional)
-     * @return List<OASUniswapV3PositionSnapshotV3DTO>
+     * @return List<OASUniswapV3PositionSnapshotDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionSnapshotV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3PositionSnapshotDTO> uniswapV3GetPositionSnapshotsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -501,20 +371,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3PositionSnapshotV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/positionsnapshotv3s/historical', '',
+        return (List<OASUniswapV3PositionSnapshotDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/positionSnapshots/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3PositionSnapshotV3DTO>.class
+            List<OASUniswapV3PositionSnapshotDTO>.class
         );
     }
     /**
-     * PositionV3s (historical) 🔥
-     * Gets positionv3s.
+     * Positions (historical) 🔥
+     * Gets positions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -523,10 +393,10 @@ public class OASUniswapV3Api {
      * @param pool Pool position is within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
-     * @return List<OASUniswapV3PositionV3DTO>
+     * @return List<OASUniswapV3PositionDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3PositionV3DTO> uniswapV3GetPositionV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3PositionDTO> uniswapV3GetPositionsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -541,72 +411,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3PositionV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/positionv3s/historical', '',
+        return (List<OASUniswapV3PositionDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/positions/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3PositionV3DTO>.class
+            List<OASUniswapV3PositionDTO>.class
         );
     }
     /**
-     * Positions (current)
-     * Gets positions.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3PositionV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3PositionV3DTO> uniswapV3GetPositionsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3PositionV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/positions/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3PositionV3DTO>.class
-        );
-    }
-    /**
-     * PositionsSnapshots (current)
-     * Gets positions snapshots.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3PositionSnapshotV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionsSnapshotsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3PositionSnapshotV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/positionSnapshots/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3PositionSnapshotV3DTO>.class
-        );
-    }
-    /**
-     * SwapV3s (historical) 🔥
-     * Gets swapv3s.
+     * Swaps (historical) 🔥
+     * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -615,10 +433,10 @@ public class OASUniswapV3Api {
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
-     * @return List<OASUniswapV3SwapV3DTO>
+     * @return List<OASUniswapV3SwapDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3SwapV3DTO> uniswapV3GetSwapV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3SwapDTO> uniswapV3GetSwapsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -633,56 +451,30 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3SwapV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/swapv3s/historical', '',
+        return (List<OASUniswapV3SwapDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/swaps/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3SwapV3DTO>.class
+            List<OASUniswapV3SwapDTO>.class
         );
     }
     /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3SwapV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3SwapV3DTO> uniswapV3GetSwapsCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3SwapV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/swaps/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3SwapV3DTO>.class
-        );
-    }
-    /**
-     * TickDayDataV3s (historical) 🔥
-     * Gets tickdaydatav3s.
+     * TickDayDatas (historical) 🔥
+     * Gets tickDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param id  (optional)
      * @param pool  (optional)
-     * @return List<OASUniswapV3TickDayDataV3DTO>
+     * @return List<OASUniswapV3TickDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TickDayDataV3DTO> uniswapV3GetTickDayDataV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3TickDayDataDTO> uniswapV3GetTickDayDatasHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -695,117 +487,65 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TickDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tickdaydatav3s/historical', '',
+        return (List<OASUniswapV3TickDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tickDayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TickDayDataV3DTO>.class
+            List<OASUniswapV3TickDayDataDTO>.class
         );
     }
     /**
-     * TickV3s (historical) 🔥
-     * Gets tickv3s.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
-     * @return List<OASUniswapV3TickV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3TickV3DTO> uniswapV3GetTickV3sHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('id', (String) params.get('id')));
-        query.addAll(client.makeParam('pool', (String) params.get('pool')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3TickV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tickv3s/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3TickV3DTO>.class
-        );
-    }
-    /**
-     * Ticks (current)
+     * Ticks (historical) 🔥
      * Gets ticks.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3TickV3DTO>
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param id  (optional)
+     * @param pool  (optional)
+     * @return List<OASUniswapV3TickDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TickV3DTO> uniswapV3GetTicksCurrent(Map<String, Object> params) {
+    public List<OASUniswapV3TickDTO> uniswapV3GetTicksHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TickV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/ticks/current', '',
+        return (List<OASUniswapV3TickDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/ticks/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TickV3DTO>.class
+            List<OASUniswapV3TickDTO>.class
         );
     }
     /**
-     * TicksDayData (current)
-     * Gets ticks day data.
-     * @param filterPoolId  (optional)
-     * @return List<OASUniswapV3TickDayDataV3DTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASUniswapV3TickDayDataV3DTO> uniswapV3GetTicksDayDataCurrent(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_pool_id', (String) params.get('filterPoolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASUniswapV3TickDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/ticksDayData/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASUniswapV3TickDayDataV3DTO>.class
-        );
-    }
-    /**
-     * TokenHourDataV3s (historical) 🔥
-     * Gets tokenhourdatav3s.
+     * TokenHourDatas (historical) 🔥
+     * Gets tokenHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
      * @param id Token address concatendated with date. (optional)
-     * @return List<OASUniswapV3TokenHourDataV3DTO>
+     * @return List<OASUniswapV3TokenHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TokenHourDataV3DTO> uniswapV3GetTokenHourDataV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDatasHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -817,20 +557,20 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TokenHourDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokenhourdatav3s/historical', '',
+        return (List<OASUniswapV3TokenHourDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tokenHourDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TokenHourDataV3DTO>.class
+            List<OASUniswapV3TokenHourDataDTO>.class
         );
     }
     /**
      * TokenV3DayDatas (historical) 🔥
-     * Gets tokenv3daydatas.
+     * Gets tokenV3DayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -852,7 +592,7 @@ public class OASUniswapV3Api {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUniswapV3TokenV3DayDataDTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokenv3daydatas/historical', '',
+            'GET', '/dapps/uniswapv3/tokenV3DayDatas/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -863,8 +603,8 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * TokenV3s (historical) 🔥
-     * Gets tokenv3s.
+     * Tokens (historical) 🔥
+     * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -872,10 +612,10 @@ public class OASUniswapV3Api {
      * @param id Token address. (optional)
      * @param symbol Token symbol. (optional)
      * @param name Token name. (optional)
-     * @return List<OASUniswapV3TokenV3DTO>
+     * @return List<OASUniswapV3TokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TokenV3DTO> uniswapV3GetTokenV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3TokenDTO> uniswapV3GetTokensHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -889,60 +629,317 @@ public class OASUniswapV3Api {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TokenV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokenv3s/historical', '',
+        return (List<OASUniswapV3TokenDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tokens/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TokenV3DTO>.class
+            List<OASUniswapV3TokenDTO>.class
         );
     }
     /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @param filterTokenId  (optional)
-     * @return List<OASUniswapV3TokenV3DTO>
+     * Transactions (historical) 🔥
+     * Gets transactions.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Transaction hash. (optional)
+     * @return List<OASUniswapV3TransactionDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TokenV3DTO> uniswapV3GetTokensCurrent(Map<String, Object> params) {
+    public List<OASUniswapV3TransactionDTO> uniswapV3GetTransactionsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_token_id', (String) params.get('filterTokenId')));
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('id', (String) params.get('id')));
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TokenV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokens/current', '',
+        return (List<OASUniswapV3TransactionDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/transactions/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TokenV3DTO>.class
+            List<OASUniswapV3TransactionDTO>.class
         );
     }
     /**
-     * TokensDayData (current)
-     * Gets tokens day data.
-     * @param filterTokenId  (optional)
+     * UniswapDayDatas (historical) 🔥
+     * Gets uniswapDayDatas.
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Timestamp rounded to current day by dividing by 86400. (optional)
+     * @return List<OASUniswapV3UniswapDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDatasHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3UniswapDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/uniswapDayDatas/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3UniswapDayDataDTO>.class
+        );
+    }
+    /**
+     * Mints (current)
+     * Gets mints.
+     * @return List<OASUniswapV3MintDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3MintDTO> uniswapV3MintsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3MintDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/mints/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3MintDTO>.class
+        );
+    }
+    /**
+     * PoolDayDatas (current)
+     * Gets poolDayDatas.
+     * @return List<OASUniswapV3PoolDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3PoolDayDataDTO> uniswapV3PoolDayDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3PoolDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/poolDayDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3PoolDayDataDTO>.class
+        );
+    }
+    /**
+     * PoolHourDatas (current)
+     * Gets poolHourDatas.
+     * @return List<OASUniswapV3PoolHourDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3PoolHourDataDTO> uniswapV3PoolHourDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3PoolHourDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/poolHourDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3PoolHourDataDTO>.class
+        );
+    }
+    /**
+     * Pools (current)
+     * Gets pools.
+     * @param id Pool address. (optional)
+     * @return List<OASUniswapV3PoolDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3PoolDTO> uniswapV3PoolsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('id', (String) params.get('id')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3PoolDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/pools/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3PoolDTO>.class
+        );
+    }
+    /**
+     * PositionSnapshots (current)
+     * Gets positionSnapshots.
+     * @return List<OASUniswapV3PositionSnapshotDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3PositionSnapshotDTO> uniswapV3PositionSnapshotsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3PositionSnapshotDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/positionSnapshots/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3PositionSnapshotDTO>.class
+        );
+    }
+    /**
+     * Positions (current)
+     * Gets positions.
+     * @return List<OASUniswapV3PositionDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3PositionDTO> uniswapV3PositionsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3PositionDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/positions/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3PositionDTO>.class
+        );
+    }
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pool Pool swap occured within. (optional)
+     * @return List<OASUniswapV3SwapDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3SwapDTO> uniswapV3SwapsCurrent(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('pool', (String) params.get('pool')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3SwapDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/swaps/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3SwapDTO>.class
+        );
+    }
+    /**
+     * TickDayDatas (current)
+     * Gets tickDayDatas.
+     * @return List<OASUniswapV3TickDayDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3TickDayDataDTO> uniswapV3TickDayDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3TickDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tickDayDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3TickDayDataDTO>.class
+        );
+    }
+    /**
+     * Ticks (current)
+     * Gets ticks.
+     * @return List<OASUniswapV3TickDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3TickDTO> uniswapV3TicksCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3TickDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/ticks/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3TickDTO>.class
+        );
+    }
+    /**
+     * TokenHourDatas (current)
+     * Gets tokenHourDatas.
+     * @return List<OASUniswapV3TokenHourDataDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASUniswapV3TokenHourDataDTO> uniswapV3TokenHourDatasCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASUniswapV3TokenHourDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tokenHourDatas/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASUniswapV3TokenHourDataDTO>.class
+        );
+    }
+    /**
+     * TokenV3DayDatas (current)
+     * Gets tokenV3DayDatas.
      * @return List<OASUniswapV3TokenV3DayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TokenV3DayDataDTO> uniswapV3GetTokensDayDataCurrent(Map<String, Object> params) {
+    public List<OASUniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDatasCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_token_id', (String) params.get('filterTokenId')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASUniswapV3TokenV3DayDataDTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokensDayData/current', '',
+            'GET', '/dapps/uniswapv3/tokenV3DayDatas/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -953,97 +950,66 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * TokensHourData (current)
-     * Gets tokens hour data.
-     * @param filterTokenId  (optional)
-     * @return List<OASUniswapV3TokenHourDataV3DTO>
+     * Tokens (current)
+     * Gets tokens.
+     * @return List<OASUniswapV3TokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TokenHourDataV3DTO> uniswapV3GetTokensHourDataCurrent(Map<String, Object> params) {
+    public List<OASUniswapV3TokenDTO> uniswapV3TokensCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('filter_token_id', (String) params.get('filterTokenId')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TokenHourDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/tokensHourData/current', '',
+        return (List<OASUniswapV3TokenDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/tokens/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TokenHourDataV3DTO>.class
+            List<OASUniswapV3TokenDTO>.class
         );
     }
     /**
-     * TransactionV3s (historical) 🔥
-     * Gets transactionv3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
-     * @param endDate The end date of timeframe. (optional)
-     * @param id Transaction hash. (optional)
-     * @return List<OASUniswapV3TransactionV3DTO>
+     * Transactions (current)
+     * Gets transactions.
+     * @return List<OASUniswapV3TransactionDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3TransactionV3DTO> uniswapV3GetTransactionV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3TransactionDTO> uniswapV3TransactionsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('id', (String) params.get('id')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3TransactionV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/transactionv3s/historical', '',
+        return (List<OASUniswapV3TransactionDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/transactions/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3TransactionV3DTO>.class
+            List<OASUniswapV3TransactionDTO>.class
         );
     }
     /**
-     * UniswapDayDataV3s (historical) 🔥
-     * Gets uniswapdaydatav3s.
-     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
-     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
-     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
-     * @param endDate The end date of timeframe. (optional)
-     * @param id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @return List<OASUniswapV3UniswapDayDataV3DTO>
+     * UniswapDayDatas (current)
+     * Gets uniswapDayDatas.
+     * @return List<OASUniswapV3UniswapDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASUniswapV3UniswapDayDataV3DTO> uniswapV3GetUniswapDayDataV3sHistorical(Map<String, Object> params) {
+    public List<OASUniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDatasCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('id', (String) params.get('id')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASUniswapV3UniswapDayDataV3DTO>) client.invoke(
-            'GET', '/dapps/uniswapv3/uniswapdaydatav3s/historical', '',
+        return (List<OASUniswapV3UniswapDayDataDTO>) client.invoke(
+            'GET', '/dapps/uniswapv3/uniswapDayDatas/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            List<OASUniswapV3UniswapDayDataV3DTO>.class
+            List<OASUniswapV3UniswapDayDataDTO>.class
         );
     }
 }

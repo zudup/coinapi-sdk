@@ -195,4 +195,69 @@ export class CowApi extends BaseAPI {
         }, opts?.responseOpts);
     };
 
+    /**
+     * Gets orders.
+     * Orders (current)
+     */
+    cowOrdersCurrent(): Observable<Array<CowOrderDTO>>
+    cowOrdersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CowOrderDTO>>>
+    cowOrdersCurrent(opts?: OperationOpts): Observable<Array<CowOrderDTO> | AjaxResponse<Array<CowOrderDTO>>> {
+        return this.request<Array<CowOrderDTO>>({
+            url: '/dapps/cow/orders/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets settlements.
+     * Settlements (current)
+     */
+    cowSettlementsCurrent(): Observable<Array<CowSettlementDTO>>
+    cowSettlementsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CowSettlementDTO>>>
+    cowSettlementsCurrent(opts?: OperationOpts): Observable<Array<CowSettlementDTO> | AjaxResponse<Array<CowSettlementDTO>>> {
+        return this.request<Array<CowSettlementDTO>>({
+            url: '/dapps/cow/settlements/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokens.
+     * Tokens (current)
+     */
+    cowTokensCurrent(): Observable<Array<CowTokenDTO>>
+    cowTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CowTokenDTO>>>
+    cowTokensCurrent(opts?: OperationOpts): Observable<Array<CowTokenDTO> | AjaxResponse<Array<CowTokenDTO>>> {
+        return this.request<Array<CowTokenDTO>>({
+            url: '/dapps/cow/tokens/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets trades.
+     * Trades (current)
+     */
+    cowTradesCurrent(): Observable<Array<CowTradeDTO>>
+    cowTradesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CowTradeDTO>>>
+    cowTradesCurrent(opts?: OperationOpts): Observable<Array<CowTradeDTO> | AjaxResponse<Array<CowTradeDTO>>> {
+        return this.request<Array<CowTradeDTO>>({
+            url: '/dapps/cow/trades/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets users.
+     * Users (current)
+     */
+    cowUsersCurrent(): Observable<Array<CowUserDTO>>
+    cowUsersCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CowUserDTO>>>
+    cowUsersCurrent(opts?: OperationOpts): Observable<Array<CowUserDTO> | AjaxResponse<Array<CowUserDTO>>> {
+        return this.request<Array<CowUserDTO>>({
+            url: '/dapps/cow/users/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
 }

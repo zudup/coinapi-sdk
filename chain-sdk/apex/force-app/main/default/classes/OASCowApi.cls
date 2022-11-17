@@ -207,4 +207,109 @@ public class OASCowApi {
             List<OASCowUserDTO>.class
         );
     }
+    /**
+     * Orders (current)
+     * Gets orders.
+     * @return List<OASCowOrderDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowOrderDTO> cowOrdersCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowOrderDTO>) client.invoke(
+            'GET', '/dapps/cow/orders/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowOrderDTO>.class
+        );
+    }
+    /**
+     * Settlements (current)
+     * Gets settlements.
+     * @return List<OASCowSettlementDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowSettlementDTO> cowSettlementsCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowSettlementDTO>) client.invoke(
+            'GET', '/dapps/cow/settlements/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowSettlementDTO>.class
+        );
+    }
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List<OASCowTokenDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowTokenDTO> cowTokensCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowTokenDTO>) client.invoke(
+            'GET', '/dapps/cow/tokens/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowTokenDTO>.class
+        );
+    }
+    /**
+     * Trades (current)
+     * Gets trades.
+     * @return List<OASCowTradeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowTradeDTO> cowTradesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowTradeDTO>) client.invoke(
+            'GET', '/dapps/cow/trades/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowTradeDTO>.class
+        );
+    }
+    /**
+     * Users (current)
+     * Gets users.
+     * @return List<OASCowUserDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowUserDTO> cowUsersCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowUserDTO>) client.invoke(
+            'GET', '/dapps/cow/users/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowUserDTO>.class
+        );
+    }
 }

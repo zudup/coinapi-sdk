@@ -313,3 +313,118 @@ instance Produces CowGetUsersHistorical MimeTextJson
 -- | @text/plain@
 instance Produces CowGetUsersHistorical MimePlainText
 
+
+-- *** cowOrdersCurrent
+
+-- | @GET \/dapps\/cow\/orders\/current@
+-- 
+-- Orders (current)
+-- 
+-- Gets orders.
+-- 
+cowOrdersCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowOrdersCurrent MimeNoContent [CowOrderDTO] accept
+cowOrdersCurrent  _ =
+  _mkRequest "GET" ["/dapps/cow/orders/current"]
+
+data CowOrdersCurrent  
+-- | @application/json@
+instance Produces CowOrdersCurrent MimeJSON
+-- | @text/json@
+instance Produces CowOrdersCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CowOrdersCurrent MimePlainText
+
+
+-- *** cowSettlementsCurrent
+
+-- | @GET \/dapps\/cow\/settlements\/current@
+-- 
+-- Settlements (current)
+-- 
+-- Gets settlements.
+-- 
+cowSettlementsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowSettlementsCurrent MimeNoContent [CowSettlementDTO] accept
+cowSettlementsCurrent  _ =
+  _mkRequest "GET" ["/dapps/cow/settlements/current"]
+
+data CowSettlementsCurrent  
+-- | @application/json@
+instance Produces CowSettlementsCurrent MimeJSON
+-- | @text/json@
+instance Produces CowSettlementsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CowSettlementsCurrent MimePlainText
+
+
+-- *** cowTokensCurrent
+
+-- | @GET \/dapps\/cow\/tokens\/current@
+-- 
+-- Tokens (current)
+-- 
+-- Gets tokens.
+-- 
+cowTokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowTokensCurrent MimeNoContent [CowTokenDTO] accept
+cowTokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/cow/tokens/current"]
+
+data CowTokensCurrent  
+-- | @application/json@
+instance Produces CowTokensCurrent MimeJSON
+-- | @text/json@
+instance Produces CowTokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CowTokensCurrent MimePlainText
+
+
+-- *** cowTradesCurrent
+
+-- | @GET \/dapps\/cow\/trades\/current@
+-- 
+-- Trades (current)
+-- 
+-- Gets trades.
+-- 
+cowTradesCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowTradesCurrent MimeNoContent [CowTradeDTO] accept
+cowTradesCurrent  _ =
+  _mkRequest "GET" ["/dapps/cow/trades/current"]
+
+data CowTradesCurrent  
+-- | @application/json@
+instance Produces CowTradesCurrent MimeJSON
+-- | @text/json@
+instance Produces CowTradesCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CowTradesCurrent MimePlainText
+
+
+-- *** cowUsersCurrent
+
+-- | @GET \/dapps\/cow\/users\/current@
+-- 
+-- Users (current)
+-- 
+-- Gets users.
+-- 
+cowUsersCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowUsersCurrent MimeNoContent [CowUserDTO] accept
+cowUsersCurrent  _ =
+  _mkRequest "GET" ["/dapps/cow/users/current"]
+
+data CowUsersCurrent  
+-- | @application/json@
+instance Produces CowUsersCurrent MimeJSON
+-- | @text/json@
+instance Produces CowUsersCurrent MimeTextJson
+-- | @text/plain@
+instance Produces CowUsersCurrent MimePlainText
+

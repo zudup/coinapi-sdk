@@ -2,7 +2,7 @@
 
 # FactoryDTO
 
-The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 
 ## Properties
 
@@ -12,15 +12,18 @@ Name | Type | Description | Notes
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **String** | Factory address. |  [optional]
-**pairCount** | **String** | Amount of pairs created by the Sushiswap factory. |  [optional]
-**volumeUsd** | **String** | All time USD volume across all pairs (USD is derived). |  [optional]
-**volumeEth** | **String** | All time volume in ETH across all pairs (ETH is derived). |  [optional]
-**untrackedVolumeUsd** | **String** | Untracked volume USD. |  [optional]
-**liquidityUsd** | **String** | Total liquidity across all pairs stored as a derived USD amount. |  [optional]
-**liquidityEth** | **String** | Total liquidity across all pairs stored as a derived ETH amount. |  [optional]
-**txCount** | **String** | All time amount of transactions across all pairs. |  [optional]
-**tokenCount** | **String** | Total count of tokens. |  [optional]
-**userCount** | **String** | Users count. |  [optional]
+**poolCount** | **String** | Amount of pools created. |  [optional]
+**txCount** | **String** | Amount of transactions all time. |  [optional]
+**totalVolumeUsd** | **String** | Total volume all time in derived USD. |  [optional]
+**totalVolumeEth** | **String** | Total volume all time in derived ETH. |  [optional]
+**totalFeesUsd** | **String** | Total swap fees all time in USD. |  [optional]
+**totalFeesEth** | **String** | All volume even through less reliable USD values. |  [optional]
+**untrackedVolumeUsd** | **String** | All volume even through less reliable USD values. |  [optional]
+**totalValueLockedUsd** | **String** | Total value locked derived in USD. |  [optional]
+**totalValueLockedEth** | **String** | Total value locked derived in ETH. |  [optional]
+**totalValueLockedUsdUntracked** | **String** | Total value locked derived in USD untracked. |  [optional]
+**totalValueLockedEthUntracked** | **String** | Total value locked derived in ETH untracked. |  [optional]
+**owner** | **String** | Current owner of the factory. |  [optional]
 **vid** | **Long** |  |  [optional]
 
 

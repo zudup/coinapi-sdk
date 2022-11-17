@@ -12,191 +12,12 @@
 }while(0)
 
 
-// BundleV3s (historical) 🔥
-//
-// Gets bundlev3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetBundleV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/bundlev3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/bundlev3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Bundles (current)
 //
 // Gets bundles.
 //
 list_t*
-UniswapV3API_uniswapV3GetBundlesCurrent(apiClient_t *apiClient)
+UniswapV3API_uniswapV3BundlesCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -266,265 +87,14 @@ end:
 
 }
 
-// BurnV3s (historical) 🔥
-//
-// Gets burnv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetBurnV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/burnv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/burnv3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
-
-    // query parameters
-    char *keyQuery_token_0 = NULL;
-    char * valueQuery_token_0 = NULL;
-    keyValuePair_t *keyPairQuery_token_0 = 0;
-    if (token_0)
-    {
-        keyQuery_token_0 = strdup("token_0");
-        valueQuery_token_0 = strdup((token_0));
-        keyPairQuery_token_0 = keyValuePair_create(keyQuery_token_0, valueQuery_token_0);
-        list_addElement(localVarQueryParameters,keyPairQuery_token_0);
-    }
-
-    // query parameters
-    char *keyQuery_token_1 = NULL;
-    char * valueQuery_token_1 = NULL;
-    keyValuePair_t *keyPairQuery_token_1 = 0;
-    if (token_1)
-    {
-        keyQuery_token_1 = strdup("token_1");
-        valueQuery_token_1 = strdup((token_1));
-        keyPairQuery_token_1 = keyValuePair_create(keyQuery_token_1, valueQuery_token_1);
-        list_addElement(localVarQueryParameters,keyPairQuery_token_1);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
-    if(keyQuery_token_0){
-        free(keyQuery_token_0);
-        keyQuery_token_0 = NULL;
-    }
-    if(valueQuery_token_0){
-        free(valueQuery_token_0);
-        valueQuery_token_0 = NULL;
-    }
-    if(keyPairQuery_token_0){
-        keyValuePair_free(keyPairQuery_token_0);
-        keyPairQuery_token_0 = NULL;
-    }
-    if(keyQuery_token_1){
-        free(keyQuery_token_1);
-        keyQuery_token_1 = NULL;
-    }
-    if(valueQuery_token_1){
-        free(valueQuery_token_1);
-        valueQuery_token_1 = NULL;
-    }
-    if(keyPairQuery_token_1){
-        keyValuePair_free(keyPairQuery_token_1);
-        keyPairQuery_token_1 = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Burns (current)
 //
 // Gets burns.
 //
 list_t*
-UniswapV3API_uniswapV3GetBurnsCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3BurnsCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -538,18 +108,6 @@ UniswapV3API_uniswapV3GetBurnsCurrent(apiClient_t *apiClient, char * filter_pool
 
 
 
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -591,24 +149,12 @@ UniswapV3API_uniswapV3GetBurnsCurrent(apiClient_t *apiClient, char * filter_pool
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);
@@ -616,12 +162,12 @@ end:
 
 }
 
-// DayData (current)
+// Factorys (current)
 //
-// Gets uniswapv3 day data.
+// Gets factorys.
 //
 list_t*
-UniswapV3API_uniswapV3GetDayDataCurrent(apiClient_t *apiClient)
+UniswapV3API_uniswapV3FactorysCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -631,9 +177,9 @@ UniswapV3API_uniswapV3GetDayDataCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/dayData/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/factorys/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/dayData/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/factorys/current");
 
 
 
@@ -691,87 +237,12 @@ end:
 
 }
 
-// Factory (current)
+// Bundles (historical) 🔥
 //
-// Gets factory.
-//
-list_t*
-UniswapV3API_uniswapV3GetFactoryCurrent(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/factory/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/factory/current");
-
-
-
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// FactoryV3s (historical) 🔥
-//
-// Gets factoryv3s.
+// Gets bundles.
 //
 list_t*
-UniswapV3API_uniswapV3GetFactoryV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+UniswapV3API_uniswapV3GetBundlesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -781,9 +252,9 @@ UniswapV3API_uniswapV3GetFactoryV3sHistorical(apiClient_t *apiClient, long start
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/factoryv3s/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/bundles/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/factoryv3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/bundles/historical");
 
 
 
@@ -945,12 +416,12 @@ end:
 
 }
 
-// MintV3s (historical) 🔥
+// Burns (historical) 🔥
 //
-// Gets mintv3s.
+// Gets burns.
 //
 list_t*
-UniswapV3API_uniswapV3GetMintV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
+UniswapV3API_uniswapV3GetBurnsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -960,9 +431,9 @@ UniswapV3API_uniswapV3GetMintV3sHistorical(apiClient_t *apiClient, long startBlo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/mintv3s/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/burns/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/mintv3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/burns/historical");
 
 
 
@@ -1196,12 +667,191 @@ end:
 
 }
 
-// Mints (current)
+// Factorys (historical) 🔥
+//
+// Gets factorys.
+//
+list_t*
+UniswapV3API_uniswapV3GetFactorysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/factorys/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/factorys/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Mints (historical) 🔥
 //
 // Gets mints.
 //
 list_t*
-UniswapV3API_uniswapV3GetMintsCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1211,108 +861,9 @@ UniswapV3API_uniswapV3GetMintsCurrent(apiClient_t *apiClient, char * filter_pool
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/mints/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/mints/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/mints/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PoolDayDataV3s (historical) 🔥
-//
-// Gets pooldaydatav3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolDayDataV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/pooldaydatav3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/pooldaydatav3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/mints/historical");
 
 
 
@@ -1387,400 +938,6 @@ UniswapV3API_uniswapV3GetPoolDayDataV3sHistorical(apiClient_t *apiClient, long s
         valueQuery_pool = strdup((pool));
         keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
         list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PoolHourDataV3s (historical) 🔥
-//
-// Gets poolhourdatav3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolHourDataV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/poolhourdatav3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolhourdatav3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PoolV3s (historical) 🔥
-//
-// Gets poolv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/poolv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolv3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
     }
 
     // query parameters
@@ -1897,6 +1054,18 @@ UniswapV3API_uniswapV3GetPoolV3sHistorical(apiClient_t *apiClient, long startBlo
         keyValuePair_free(keyPairQuery_id);
         keyPairQuery_id = NULL;
     }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
     if(keyQuery_token_0){
         free(keyQuery_token_0);
         keyQuery_token_0 = NULL;
@@ -1928,12 +1097,418 @@ end:
 
 }
 
-// Pools (current) 🔥
+// PoolDayDatas (historical) 🔥
+//
+// Gets poolDayDatas.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/poolDayDatas/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolDayDatas/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolHourDatas (historical) 🔥
+//
+// Gets poolHourDatas.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/poolHourDatas/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolHourDatas/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
 list_t*
-UniswapV3API_uniswapV3GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1943,306 +1518,9 @@ UniswapV3API_uniswapV3GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/pools/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/pools/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/pools/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PoolsDayData (current)
-//
-// Gets pools day data.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolsDayDataCurrent(apiClient_t *apiClient, char * filter_pool_id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/poolsDayData/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolsDayData/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PoolsHourData (current)
-//
-// Gets pools hour data.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolsHourDataCurrent(apiClient_t *apiClient, char * filter_pool_id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/poolsHourData/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolsHourData/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PositionSnapshotV3s (historical) 🔥
-//
-// Gets positionsnapshotv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetPositionSnapshotV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/positionsnapshotv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positionsnapshotv3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/pools/historical");
 
 
 
@@ -2305,221 +1583,6 @@ UniswapV3API_uniswapV3GetPositionSnapshotV3sHistorical(apiClient_t *apiClient, l
         valueQuery_id = strdup((id));
         keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
         list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PositionV3s (historical) 🔥
-//
-// Gets positionv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetPositionV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/positionv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positionv3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
     }
 
     // query parameters
@@ -2636,18 +1699,6 @@ UniswapV3API_uniswapV3GetPositionV3sHistorical(apiClient_t *apiClient, long star
         keyValuePair_free(keyPairQuery_id);
         keyPairQuery_id = NULL;
     }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
     if(keyQuery_token_0){
         free(keyQuery_token_0);
         keyQuery_token_0 = NULL;
@@ -2679,12 +1730,215 @@ end:
 
 }
 
-// Positions (current)
+// PositionSnapshots (historical) 🔥
+//
+// Gets positionSnapshots.
+//
+list_t*
+UniswapV3API_uniswapV3GetPositionSnapshotsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/positionSnapshots/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positionSnapshots/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Positions (historical) 🔥
 //
 // Gets positions.
 //
 list_t*
-UniswapV3API_uniswapV3GetPositionsCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetPositionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2694,207 +1948,9 @@ UniswapV3API_uniswapV3GetPositionsCurrent(apiClient_t *apiClient, char * filter_
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/positions/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/positions/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positions/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// PositionsSnapshots (current)
-//
-// Gets positions snapshots.
-//
-list_t*
-UniswapV3API_uniswapV3GetPositionsSnapshotsCurrent(apiClient_t *apiClient, char * filter_pool_id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/positionSnapshots/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positionSnapshots/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// SwapV3s (historical) 🔥
-//
-// Gets swapv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetSwapV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/swapv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/swapv3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positions/historical");
 
 
 
@@ -3128,12 +2184,12 @@ end:
 
 }
 
-// Swaps (current) 🔥
+// Swaps (historical) 🔥
 //
 // Gets swaps.
 //
 list_t*
-UniswapV3API_uniswapV3GetSwapsCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -3143,23 +2199,107 @@ UniswapV3API_uniswapV3GetSwapsCurrent(apiClient_t *apiClient, char * filter_pool
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/swaps/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/swaps/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/swaps/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/swaps/historical");
 
 
 
 
     // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
     {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+
+    // query parameters
+    char *keyQuery_token_0 = NULL;
+    char * valueQuery_token_0 = NULL;
+    keyValuePair_t *keyPairQuery_token_0 = 0;
+    if (token_0)
+    {
+        keyQuery_token_0 = strdup("token_0");
+        valueQuery_token_0 = strdup((token_0));
+        keyPairQuery_token_0 = keyValuePair_create(keyQuery_token_0, valueQuery_token_0);
+        list_addElement(localVarQueryParameters,keyPairQuery_token_0);
+    }
+
+    // query parameters
+    char *keyQuery_token_1 = NULL;
+    char * valueQuery_token_1 = NULL;
+    keyValuePair_t *keyPairQuery_token_1 = 0;
+    if (token_1)
+    {
+        keyQuery_token_1 = strdup("token_1");
+        valueQuery_token_1 = strdup((token_1));
+        keyPairQuery_token_1 = keyValuePair_create(keyQuery_token_1, valueQuery_token_1);
+        list_addElement(localVarQueryParameters,keyPairQuery_token_1);
     }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
@@ -3208,17 +2348,85 @@ UniswapV3API_uniswapV3GetSwapsCurrent(apiClient_t *apiClient, char * filter_pool
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
     }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
     }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    if(keyQuery_token_0){
+        free(keyQuery_token_0);
+        keyQuery_token_0 = NULL;
+    }
+    if(valueQuery_token_0){
+        free(valueQuery_token_0);
+        valueQuery_token_0 = NULL;
+    }
+    if(keyPairQuery_token_0){
+        keyValuePair_free(keyPairQuery_token_0);
+        keyPairQuery_token_0 = NULL;
+    }
+    if(keyQuery_token_1){
+        free(keyQuery_token_1);
+        keyQuery_token_1 = NULL;
+    }
+    if(valueQuery_token_1){
+        free(valueQuery_token_1);
+        valueQuery_token_1 = NULL;
+    }
+    if(keyPairQuery_token_1){
+        keyValuePair_free(keyPairQuery_token_1);
+        keyPairQuery_token_1 = NULL;
     }
     return elementToReturn;
 end:
@@ -3227,12 +2435,12 @@ end:
 
 }
 
-// TickDayDataV3s (historical) 🔥
+// TickDayDatas (historical) 🔥
 //
-// Gets tickdaydatav3s.
+// Gets tickDayDatas.
 //
 list_t*
-UniswapV3API_uniswapV3GetTickDayDataV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
+UniswapV3API_uniswapV3GetTickDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -3242,9 +2450,9 @@ UniswapV3API_uniswapV3GetTickDayDataV3sHistorical(apiClient_t *apiClient, long s
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tickdaydatav3s/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/tickDayDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tickdaydatav3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tickDayDatas/historical");
 
 
 
@@ -3430,215 +2638,12 @@ end:
 
 }
 
-// TickV3s (historical) 🔥
-//
-// Gets tickv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetTickV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tickv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tickv3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-
-    // query parameters
-    char *keyQuery_pool = NULL;
-    char * valueQuery_pool = NULL;
-    keyValuePair_t *keyPairQuery_pool = 0;
-    if (pool)
-    {
-        keyQuery_pool = strdup("pool");
-        valueQuery_pool = strdup((pool));
-        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
-        list_addElement(localVarQueryParameters,keyPairQuery_pool);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    if(keyQuery_pool){
-        free(keyQuery_pool);
-        keyQuery_pool = NULL;
-    }
-    if(valueQuery_pool){
-        free(valueQuery_pool);
-        valueQuery_pool = NULL;
-    }
-    if(keyPairQuery_pool){
-        keyValuePair_free(keyPairQuery_pool);
-        keyPairQuery_pool = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// Ticks (current)
+// Ticks (historical) 🔥
 //
 // Gets ticks.
 //
 list_t*
-UniswapV3API_uniswapV3GetTicksCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetTicksHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -3648,23 +2653,83 @@ UniswapV3API_uniswapV3GetTicksCurrent(apiClient_t *apiClient, char * filter_pool
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/ticks/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/ticks/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/ticks/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/ticks/historical");
 
 
 
 
     // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
     {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
     }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
@@ -3713,17 +2778,61 @@ UniswapV3API_uniswapV3GetTicksCurrent(apiClient_t *apiClient, char * filter_pool
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
     }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
     }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
     }
     return elementToReturn;
 end:
@@ -3732,12 +2841,12 @@ end:
 
 }
 
-// TicksDayData (current)
+// TokenHourDatas (historical) 🔥
 //
-// Gets ticks day data.
+// Gets tokenHourDatas.
 //
 list_t*
-UniswapV3API_uniswapV3GetTicksDayDataCurrent(apiClient_t *apiClient, char * filter_pool_id )
+UniswapV3API_uniswapV3GetTokenHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -3747,108 +2856,9 @@ UniswapV3API_uniswapV3GetTicksDayDataCurrent(apiClient_t *apiClient, char * filt
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/ticksDayData/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/tokenHourDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/ticksDayData/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// TokenHourDataV3s (historical) 🔥
-//
-// Gets tokenhourdatav3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetTokenHourDataV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tokenhourdatav3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenhourdatav3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenHourDatas/historical");
 
 
 
@@ -4012,7 +3022,7 @@ end:
 
 // TokenV3DayDatas (historical) 🔥
 //
-// Gets tokenv3daydatas.
+// Gets tokenV3DayDatas.
 //
 list_t*
 UniswapV3API_uniswapV3GetTokenV3DayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
@@ -4025,9 +3035,9 @@ UniswapV3API_uniswapV3GetTokenV3DayDatasHistorical(apiClient_t *apiClient, long 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tokenv3daydatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/tokenV3DayDatas/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenv3daydatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenV3DayDatas/historical");
 
 
 
@@ -4189,12 +3199,12 @@ end:
 
 }
 
-// TokenV3s (historical) 🔥
+// Tokens (historical) 🔥
 //
-// Gets tokenv3s.
+// Gets tokens.
 //
 list_t*
-UniswapV3API_uniswapV3GetTokenV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * symbol , char * name )
+UniswapV3API_uniswapV3GetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * symbol , char * name )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -4204,9 +3214,9 @@ UniswapV3API_uniswapV3GetTokenV3sHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tokenv3s/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/tokens/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenv3s/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokens/historical");
 
 
 
@@ -4416,14 +3426,1245 @@ end:
 
 }
 
-// Tokens (current) 🔥
+// Transactions (historical) 🔥
+//
+// Gets transactions.
+//
+list_t*
+UniswapV3API_uniswapV3GetTransactionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/transactions/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/transactions/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// UniswapDayDatas (historical) 🔥
+//
+// Gets uniswapDayDatas.
+//
+list_t*
+UniswapV3API_uniswapV3GetUniswapDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/uniswapDayDatas/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/uniswapDayDatas/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Mints (current)
+//
+// Gets mints.
+//
+list_t*
+UniswapV3API_uniswapV3MintsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/mints/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/mints/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolDayDatas (current)
+//
+// Gets poolDayDatas.
+//
+list_t*
+UniswapV3API_uniswapV3PoolDayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/poolDayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolDayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolHourDatas (current)
+//
+// Gets poolHourDatas.
+//
+list_t*
+UniswapV3API_uniswapV3PoolHourDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/poolHourDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/poolHourDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Pools (current)
+//
+// Gets pools.
+//
+list_t*
+UniswapV3API_uniswapV3PoolsCurrent(apiClient_t *apiClient, char * id )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/pools/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/pools/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_id = NULL;
+    char * valueQuery_id = NULL;
+    keyValuePair_t *keyPairQuery_id = 0;
+    if (id)
+    {
+        keyQuery_id = strdup("id");
+        valueQuery_id = strdup((id));
+        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
+        list_addElement(localVarQueryParameters,keyPairQuery_id);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_id){
+        free(keyQuery_id);
+        keyQuery_id = NULL;
+    }
+    if(valueQuery_id){
+        free(valueQuery_id);
+        valueQuery_id = NULL;
+    }
+    if(keyPairQuery_id){
+        keyValuePair_free(keyPairQuery_id);
+        keyPairQuery_id = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PositionSnapshots (current)
+//
+// Gets positionSnapshots.
+//
+list_t*
+UniswapV3API_uniswapV3PositionSnapshotsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/positionSnapshots/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positionSnapshots/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Positions (current)
+//
+// Gets positions.
+//
+list_t*
+UniswapV3API_uniswapV3PositionsCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/positions/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/positions/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t*
+UniswapV3API_uniswapV3SwapsCurrent(apiClient_t *apiClient, char * pool )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/swaps/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/swaps/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_pool = NULL;
+    char * valueQuery_pool = NULL;
+    keyValuePair_t *keyPairQuery_pool = 0;
+    if (pool)
+    {
+        keyQuery_pool = strdup("pool");
+        valueQuery_pool = strdup((pool));
+        keyPairQuery_pool = keyValuePair_create(keyQuery_pool, valueQuery_pool);
+        list_addElement(localVarQueryParameters,keyPairQuery_pool);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_pool){
+        free(keyQuery_pool);
+        keyQuery_pool = NULL;
+    }
+    if(valueQuery_pool){
+        free(valueQuery_pool);
+        valueQuery_pool = NULL;
+    }
+    if(keyPairQuery_pool){
+        keyValuePair_free(keyPairQuery_pool);
+        keyPairQuery_pool = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TickDayDatas (current)
+//
+// Gets tickDayDatas.
+//
+list_t*
+UniswapV3API_uniswapV3TickDayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/tickDayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tickDayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Ticks (current)
+//
+// Gets ticks.
+//
+list_t*
+UniswapV3API_uniswapV3TicksCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/ticks/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/ticks/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenHourDatas (current)
+//
+// Gets tokenHourDatas.
+//
+list_t*
+UniswapV3API_uniswapV3TokenHourDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/tokenHourDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenHourDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenV3DayDatas (current)
+//
+// Gets tokenV3DayDatas.
+//
+list_t*
+UniswapV3API_uniswapV3TokenV3DayDatasCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/tokenV3DayDatas/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokenV3DayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Tokens (current)
 //
 // Gets tokens.
 //
 list_t*
-UniswapV3API_uniswapV3GetTokensCurrent(apiClient_t *apiClient, char * filter_token_id )
+UniswapV3API_uniswapV3TokensCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -4437,18 +4678,6 @@ UniswapV3API_uniswapV3GetTokensCurrent(apiClient_t *apiClient, char * filter_tok
 
 
 
-
-    // query parameters
-    char *keyQuery_filter_token_id = NULL;
-    char * valueQuery_filter_token_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_token_id = 0;
-    if (filter_token_id)
-    {
-        keyQuery_filter_token_id = strdup("filter_token_id");
-        valueQuery_filter_token_id = strdup((filter_token_id));
-        keyPairQuery_filter_token_id = keyValuePair_create(keyQuery_filter_token_id, valueQuery_filter_token_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_token_id);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -4490,24 +4719,12 @@ UniswapV3API_uniswapV3GetTokensCurrent(apiClient_t *apiClient, char * filter_tok
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_filter_token_id){
-        free(keyQuery_filter_token_id);
-        keyQuery_filter_token_id = NULL;
-    }
-    if(valueQuery_filter_token_id){
-        free(valueQuery_filter_token_id);
-        valueQuery_filter_token_id = NULL;
-    }
-    if(keyPairQuery_filter_token_id){
-        keyValuePair_free(keyPairQuery_filter_token_id);
-        keyPairQuery_filter_token_id = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);
@@ -4515,14 +4732,14 @@ end:
 
 }
 
-// TokensDayData (current)
+// Transactions (current)
 //
-// Gets tokens day data.
+// Gets transactions.
 //
 list_t*
-UniswapV3API_uniswapV3GetTokensDayDataCurrent(apiClient_t *apiClient, char * filter_token_id )
+UniswapV3API_uniswapV3TransactionsCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -4530,24 +4747,12 @@ UniswapV3API_uniswapV3GetTokensDayDataCurrent(apiClient_t *apiClient, char * fil
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tokensDayData/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/transactions/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokensDayData/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/transactions/current");
 
 
 
-
-    // query parameters
-    char *keyQuery_filter_token_id = NULL;
-    char * valueQuery_filter_token_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_token_id = 0;
-    if (filter_token_id)
-    {
-        keyQuery_filter_token_id = strdup("filter_token_id");
-        valueQuery_filter_token_id = strdup((filter_token_id));
-        keyPairQuery_filter_token_id = keyValuePair_create(keyQuery_filter_token_id, valueQuery_filter_token_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_token_id);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -4589,24 +4794,12 @@ UniswapV3API_uniswapV3GetTokensDayDataCurrent(apiClient_t *apiClient, char * fil
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
+    
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_filter_token_id){
-        free(keyQuery_filter_token_id);
-        keyQuery_filter_token_id = NULL;
-    }
-    if(valueQuery_filter_token_id){
-        free(valueQuery_filter_token_id);
-        valueQuery_filter_token_id = NULL;
-    }
-    if(keyPairQuery_filter_token_id){
-        keyValuePair_free(keyPairQuery_filter_token_id);
-        keyPairQuery_filter_token_id = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);
@@ -4614,14 +4807,14 @@ end:
 
 }
 
-// TokensHourData (current)
+// UniswapDayDatas (current)
 //
-// Gets tokens hour data.
+// Gets uniswapDayDatas.
 //
 list_t*
-UniswapV3API_uniswapV3GetTokensHourDataCurrent(apiClient_t *apiClient, char * filter_token_id )
+UniswapV3API_uniswapV3UniswapDayDatasCurrent(apiClient_t *apiClient)
 {
-    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
     list_t *localVarHeaderType = list_createList();
@@ -4629,24 +4822,12 @@ UniswapV3API_uniswapV3GetTokensHourDataCurrent(apiClient_t *apiClient, char * fi
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/tokensHourData/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv3/uniswapDayDatas/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/tokensHourData/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/uniswapDayDatas/current");
 
 
 
-
-    // query parameters
-    char *keyQuery_filter_token_id = NULL;
-    char * valueQuery_filter_token_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_token_id = 0;
-    if (filter_token_id)
-    {
-        keyQuery_filter_token_id = strdup("filter_token_id");
-        valueQuery_filter_token_id = strdup((filter_token_id));
-        keyPairQuery_filter_token_id = keyValuePair_create(keyQuery_filter_token_id, valueQuery_filter_token_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_token_id);
-    }
     list_addElement(localVarHeaderType,"text/plain"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
     list_addElement(localVarHeaderType,"text/json"); //produces
@@ -4688,382 +4869,12 @@ UniswapV3API_uniswapV3GetTokensHourDataCurrent(apiClient_t *apiClient, char * fi
         apiClient->dataReceived = NULL;
         apiClient->dataReceivedLen = 0;
     }
-    list_freeList(localVarQueryParameters);
     
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_token_id){
-        free(keyQuery_filter_token_id);
-        keyQuery_filter_token_id = NULL;
-    }
-    if(valueQuery_filter_token_id){
-        free(valueQuery_filter_token_id);
-        valueQuery_filter_token_id = NULL;
-    }
-    if(keyPairQuery_filter_token_id){
-        keyValuePair_free(keyPairQuery_filter_token_id);
-        keyPairQuery_filter_token_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// TransactionV3s (historical) 🔥
-//
-// Gets transactionv3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetTransactionV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/transactionv3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/transactionv3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
     
     
     list_freeList(localVarHeaderType);
     
     free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// UniswapDayDataV3s (historical) 🔥
-//
-// Gets uniswapdaydatav3s.
-//
-list_t*
-UniswapV3API_uniswapV3GetUniswapDayDataV3sHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv3/uniswapdaydatav3s/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/uniswapdaydatav3s/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_id = NULL;
-    char * valueQuery_id = NULL;
-    keyValuePair_t *keyPairQuery_id = 0;
-    if (id)
-    {
-        keyQuery_id = strdup("id");
-        valueQuery_id = strdup((id));
-        keyPairQuery_id = keyValuePair_create(keyQuery_id, valueQuery_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV3APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_startBlock){
-        free(keyQuery_startBlock);
-        keyQuery_startBlock = NULL;
-    }
-    if(keyPairQuery_startBlock){
-        keyValuePair_free(keyPairQuery_startBlock);
-        keyPairQuery_startBlock = NULL;
-    }
-    if(keyQuery_endBlock){
-        free(keyQuery_endBlock);
-        keyQuery_endBlock = NULL;
-    }
-    if(keyPairQuery_endBlock){
-        keyValuePair_free(keyPairQuery_endBlock);
-        keyPairQuery_endBlock = NULL;
-    }
-    if(keyQuery_startDate){
-        free(keyQuery_startDate);
-        keyQuery_startDate = NULL;
-    }
-    if(keyPairQuery_startDate){
-        keyValuePair_free(keyPairQuery_startDate);
-        keyPairQuery_startDate = NULL;
-    }
-    if(keyQuery_endDate){
-        free(keyQuery_endDate);
-        keyQuery_endDate = NULL;
-    }
-    if(keyPairQuery_endDate){
-        keyValuePair_free(keyPairQuery_endDate);
-        keyPairQuery_endDate = NULL;
-    }
-    if(keyQuery_id){
-        free(keyQuery_id);
-        keyQuery_id = NULL;
-    }
-    if(valueQuery_id){
-        free(valueQuery_id);
-        valueQuery_id = NULL;
-    }
-    if(keyPairQuery_id){
-        keyValuePair_free(keyPairQuery_id);
-        keyPairQuery_id = NULL;
-    }
     return elementToReturn;
 end:
     free(localVarPath);

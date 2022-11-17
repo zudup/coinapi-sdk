@@ -80,38 +80,38 @@ import 'package:openapi/src/model/sushiswap_token_day_data_dto.dart';
 import 'package:openapi/src/model/sushiswap_transaction_dto.dart';
 import 'package:openapi/src/model/sushiswap_user_dto.dart';
 import 'package:openapi/src/model/transactions_e_trade_aggressive_side.dart';
-import 'package:openapi/src/model/uniswap_v2_bundle_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_burn_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_liquidity_position_snapshot_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_liquidity_position_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_mint_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_hour_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_pair_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_swap_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_token_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_token_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_transaction_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_uniswap_day_data_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_uniswap_factory_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v2_user_v2_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_bundle_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_burn_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_factory_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_mint_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_pool_day_data_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_pool_hour_data_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_pool_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_position_snapshot_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_position_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_swap_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_tick_day_data_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_tick_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_token_hour_data_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_token_v3_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_bundle_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_burn_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_liquidity_position_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_liquidity_position_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_mint_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_pair_hour_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_swap_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_token_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_token_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_transaction_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_uniswap_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_uniswap_factory_dto.dart';
+import 'package:openapi/src/model/uniswap_v2_user_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_bundle_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_burn_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_factory_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_mint_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_pool_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_pool_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_pool_hour_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_position_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_position_snapshot_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_swap_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_tick_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_tick_day_data_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_token_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_token_hour_data_dto.dart';
 import 'package:openapi/src/model/uniswap_v3_token_v3_day_data_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_transaction_v3_dto.dart';
-import 'package:openapi/src/model/uniswap_v3_uniswap_day_data_v3_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_transaction_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_uniswap_day_data_dto.dart';
 
 part 'serializers.g.dart';
 
@@ -182,55 +182,59 @@ part 'serializers.g.dart';
   SushiswapTransactionDTO,
   SushiswapUserDTO,
   TransactionsETradeAggressiveSide,
-  UniswapV2BundleV2DTO,
-  UniswapV2BurnV2DTO,
-  UniswapV2LiquidityPositionSnapshotV2DTO,
-  UniswapV2LiquidityPositionV2DTO,
-  UniswapV2MintV2DTO,
-  UniswapV2PairDayDataV2DTO,
-  UniswapV2PairHourDataV2DTO,
-  UniswapV2PairV2DTO,
-  UniswapV2SwapV2DTO,
-  UniswapV2TokenDayDataV2DTO,
-  UniswapV2TokenV2DTO,
-  UniswapV2TransactionV2DTO,
-  UniswapV2UniswapDayDataV2DTO,
-  UniswapV2UniswapFactoryV2DTO,
-  UniswapV2UserV2DTO,
-  UniswapV3BundleV3DTO,
-  UniswapV3BurnV3DTO,
-  UniswapV3FactoryV3DTO,
-  UniswapV3MintV3DTO,
-  UniswapV3PoolDayDataV3DTO,
-  UniswapV3PoolHourDataV3DTO,
-  UniswapV3PoolV3DTO,
-  UniswapV3PositionSnapshotV3DTO,
-  UniswapV3PositionV3DTO,
-  UniswapV3SwapV3DTO,
-  UniswapV3TickDayDataV3DTO,
-  UniswapV3TickV3DTO,
-  UniswapV3TokenHourDataV3DTO,
-  UniswapV3TokenV3DTO,
+  UniswapV2BundleDTO,
+  UniswapV2BurnDTO,
+  UniswapV2LiquidityPositionDTO,
+  UniswapV2LiquidityPositionSnapshotDTO,
+  UniswapV2MintDTO,
+  UniswapV2PairDTO,
+  UniswapV2PairDayDataDTO,
+  UniswapV2PairHourDataDTO,
+  UniswapV2SwapDTO,
+  UniswapV2TokenDTO,
+  UniswapV2TokenDayDataDTO,
+  UniswapV2TransactionDTO,
+  UniswapV2UniswapDayDataDTO,
+  UniswapV2UniswapFactoryDTO,
+  UniswapV2UserDTO,
+  UniswapV3BundleDTO,
+  UniswapV3BurnDTO,
+  UniswapV3FactoryDTO,
+  UniswapV3MintDTO,
+  UniswapV3PoolDTO,
+  UniswapV3PoolDayDataDTO,
+  UniswapV3PoolHourDataDTO,
+  UniswapV3PositionDTO,
+  UniswapV3PositionSnapshotDTO,
+  UniswapV3SwapDTO,
+  UniswapV3TickDTO,
+  UniswapV3TickDayDataDTO,
+  UniswapV3TokenDTO,
+  UniswapV3TokenHourDataDTO,
   UniswapV3TokenV3DayDataDTO,
-  UniswapV3TransactionV3DTO,
-  UniswapV3UniswapDayDataV3DTO,
+  UniswapV3TransactionDTO,
+  UniswapV3UniswapDayDataDTO,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2TokenDayDataV2DTO)]),
-        () => ListBuilder<UniswapV2TokenDayDataV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3PositionDTO)]),
+        () => ListBuilder<UniswapV3PositionDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3UniswapDayDataV3DTO)]),
-        () => ListBuilder<UniswapV3UniswapDayDataV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]),
+        () => ListBuilder<UniswapV2PairHourDataDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3TokenHourDataDTO)]),
+        () => ListBuilder<UniswapV3TokenHourDataDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapHourDataDTO)]),
         () => ListBuilder<SushiswapHourDataDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2MintV2DTO)]),
-        () => ListBuilder<UniswapV2MintV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]),
+        () => ListBuilder<UniswapV2PairDayDataDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexTokenDTO)]),
@@ -241,20 +245,16 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurveGaugeDepositDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2TokenDTO)]),
+        () => ListBuilder<UniswapV2TokenDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]),
         () => ListBuilder<CurveHourlyVolumeDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotV2DTO)]),
-        () => ListBuilder<UniswapV2LiquidityPositionSnapshotV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionV2DTO)]),
-        () => ListBuilder<UniswapV2LiquidityPositionV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3BurnV3DTO)]),
-        () => ListBuilder<UniswapV3BurnV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3UniswapDayDataDTO)]),
+        () => ListBuilder<UniswapV3UniswapDayDataDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveAccountDTO)]),
@@ -277,16 +277,12 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<DexWithdrawRequestDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3TickDayDataV3DTO)]),
-        () => ListBuilder<UniswapV3TickDayDataV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]),
+        () => ListBuilder<UniswapV2UniswapDayDataDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveLpTokenDTO)]),
         () => ListBuilder<CurveLpTokenDTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3FactoryV3DTO)]),
-        () => ListBuilder<UniswapV3FactoryV3DTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapPairDayDataDTO)]),
@@ -297,16 +293,32 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<DexWithdrawDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2UserDTO)]),
+        () => ListBuilder<UniswapV2UserDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3TickDTO)]),
+        () => ListBuilder<UniswapV3TickDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]),
+        () => ListBuilder<UniswapV2TokenDayDataDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveSystemStateDTO)]),
         () => ListBuilder<CurveSystemStateDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2BundleDTO)]),
+        () => ListBuilder<UniswapV2BundleDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]),
         () => ListBuilder<CurveGaugeWeightVoteDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2UniswapFactoryV2DTO)]),
-        () => ListBuilder<UniswapV2UniswapFactoryV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]),
+        () => ListBuilder<UniswapV2LiquidityPositionSnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UniswapV3TokenV3DayDataDTO)]),
@@ -317,8 +329,8 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurvePoolDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3PoolV3DTO)]),
-        () => ListBuilder<UniswapV3PoolV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2PairDTO)]),
+        () => ListBuilder<UniswapV2PairDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapLiquidityPositionSnapshotDTO)]),
@@ -329,20 +341,36 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<SushiswapLiquidityPositionDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3TransactionV3DTO)]),
-        () => ListBuilder<UniswapV3TransactionV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]),
+        () => ListBuilder<UniswapV2UniswapFactoryDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3FactoryDTO)]),
+        () => ListBuilder<UniswapV3FactoryDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexSolutionDTO)]),
         () => ListBuilder<DexSolutionDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2SwapDTO)]),
+        () => ListBuilder<UniswapV2SwapDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapMintDTO)]),
         () => ListBuilder<SushiswapMintDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2TransactionV2DTO)]),
-        () => ListBuilder<UniswapV2TransactionV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3MintDTO)]),
+        () => ListBuilder<UniswapV3MintDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3PoolDTO)]),
+        () => ListBuilder<UniswapV3PoolDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2BurnDTO)]),
+        () => ListBuilder<UniswapV2BurnDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CowOrderDTO)]),
@@ -353,16 +381,8 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurveContractDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3PoolDayDataV3DTO)]),
-        () => ListBuilder<UniswapV3PoolDayDataV3DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3TickV3DTO)]),
-        () => ListBuilder<UniswapV3TickV3DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2BurnV2DTO)]),
-        () => ListBuilder<UniswapV2BurnV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3PoolHourDataDTO)]),
+        () => ListBuilder<UniswapV3PoolHourDataDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CowUserDTO)]),
@@ -381,28 +401,28 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CowTokenDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(CurveProposalVoteDTO)]),
-        () => ListBuilder<CurveProposalVoteDTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3TransactionDTO)]),
+        () => ListBuilder<UniswapV3TransactionDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3MintV3DTO)]),
-        () => ListBuilder<UniswapV3MintV3DTO>(),
+        const FullType(BuiltList, [FullType(CurveProposalVoteDTO)]),
+        () => ListBuilder<CurveProposalVoteDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexUserDTO)]),
         () => ListBuilder<DexUserDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2PairHourDataV2DTO)]),
-        () => ListBuilder<UniswapV2PairHourDataV2DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3TickDayDataDTO)]),
+        () => ListBuilder<UniswapV3TickDayDataDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3PositionV3DTO)]),
-        () => ListBuilder<UniswapV3PositionV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3BundleDTO)]),
+        () => ListBuilder<UniswapV3BundleDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3PoolHourDataV3DTO)]),
-        () => ListBuilder<UniswapV3PoolHourDataV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3TokenDTO)]),
+        () => ListBuilder<UniswapV3TokenDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexStatsDTO)]),
@@ -413,18 +433,6 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CurveTransferOwnershipEventDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2BundleV2DTO)]),
-        () => ListBuilder<UniswapV2BundleV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3SwapV3DTO)]),
-        () => ListBuilder<UniswapV3SwapV3DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2UserV2DTO)]),
-        () => ListBuilder<UniswapV2UserV2DTO>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]),
         () => ListBuilder<CurveGaugeTotalWeightDTO>(),
       )
@@ -433,20 +441,20 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<SushiswapTransactionDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2PairV2DTO)]),
-        () => ListBuilder<UniswapV2PairV2DTO>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]),
         () => ListBuilder<CurveGaugeWeightDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3PositionSnapshotV3DTO)]),
-        () => ListBuilder<UniswapV3PositionSnapshotV3DTO>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexOrderDTO)]),
         () => ListBuilder<DexOrderDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3PoolDayDataDTO)]),
+        () => ListBuilder<UniswapV3PoolDayDataDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]),
+        () => ListBuilder<UniswapV2LiquidityPositionDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapPairHourDataDTO)]),
@@ -465,8 +473,8 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CowSettlementDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3BundleV3DTO)]),
-        () => ListBuilder<UniswapV3BundleV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]),
+        () => ListBuilder<UniswapV2TransactionDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CowTradeDTO)]),
@@ -483,22 +491,6 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(SushiswapUserDTO)]),
         () => ListBuilder<SushiswapUserDTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2UniswapDayDataV2DTO)]),
-        () => ListBuilder<UniswapV2UniswapDayDataV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2TokenV2DTO)]),
-        () => ListBuilder<UniswapV2TokenV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3TokenV3DTO)]),
-        () => ListBuilder<UniswapV3TokenV3DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2PairDayDataV2DTO)]),
-        () => ListBuilder<UniswapV2PairDayDataV2DTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveContractVersionDTO)]),
@@ -533,6 +525,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<SushiswapBurnDTO>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3BurnDTO)]),
+        () => ListBuilder<UniswapV3BurnDTO>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]),
         () => ListBuilder<CurveDailyVolumeDTO>(),
       )
@@ -549,12 +545,8 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<SushiswapTokenDTO>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV2SwapV2DTO)]),
-        () => ListBuilder<UniswapV2SwapV2DTO>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(UniswapV3TokenHourDataV3DTO)]),
-        () => ListBuilder<UniswapV3TokenHourDataV3DTO>(),
+        const FullType(BuiltList, [FullType(UniswapV3PositionSnapshotDTO)]),
+        () => ListBuilder<UniswapV3PositionSnapshotDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveExchangeDTO)]),
@@ -563,6 +555,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]),
         () => ListBuilder<CurveRemoveLiquidityEventDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV3SwapDTO)]),
+        () => ListBuilder<UniswapV3SwapDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexDepositDTO)]),
@@ -579,6 +575,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DexPriceDTO)]),
         () => ListBuilder<DexPriceDTO>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UniswapV2MintDTO)]),
+        () => ListBuilder<UniswapV2MintDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]),

@@ -19,34 +19,36 @@ case class BurnDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <transaction id>:<transaction.burns.length>. */
+  /* Transaction hash + '#' + index in mints Transaction array. */
   id: Option[String] = None,
-  /* Reference to the transaction Burn was included in. */
+  /* Transaction burn was included in. */
   transaction: Option[String] = None,
-  /* Timestamp of Burn, used to sort recent liquidity removals. */
+  /* Pool position is within. */
+  pool: Option[String] = None,
+  /* Reference to token0 as stored in pool contract. */
+  token0: Option[String] = None,
+  /* Reference to token1 as stored in pool contract. */
+  token1: Option[String] = None,
+  /* Timestamp. */
   timestamp: Option[String] = None,
-  /* Reference to pair. */
-  pair: Option[String] = None,
-  /* Amount of liquidity tokens burned. */
-  liquidity: Option[String] = None,
-  /* Address that initiated the liquidity removal. */
-  sender: Option[String] = None,
-  /* Amount of token0 removed. */
+  /* Owner of position where liquidity was burned. */
+  owner: Option[String] = None,
+  /* Transaction origin: the EOA (Externally Owned Account) that initiated the transaction. */
+  origin: Option[String] = None,
+  /* Amount of liquidity burned. */
+  amount: Option[String] = None,
+  /* Amount of token 0 burned. */
   amount0: Option[String] = None,
-  /* Amount of token1 removed. */
+  /* Amount of token 1 burned. */
   amount1: Option[String] = None,
-  /* Recipient of tokens. */
-  to: Option[String] = None,
-  /* Index in the transaction event was emitted. */
-  logIndex: Option[String] = None,
   /* Derived amount based on available prices of tokens. */
   amountUsd: Option[String] = None,
-  /*  */
-  complete: Option[Boolean] = None,
-  /* Address of fee recipient (if fee is on). */
-  feeTo: Option[String] = None,
-  /* Amount of tokens sent to fee recipient (if fee is on). */
-  feeLiquidity: Option[String] = None,
+  /* Lower tick of position. */
+  tickLower: Option[String] = None,
+  /* Upper tick of position. */
+  tickUpper: Option[String] = None,
+  /* Position within the transactions. */
+  logIndex: Option[String] = None,
   /*  */
   vid: Option[Long] = None
 ) extends ApiModel

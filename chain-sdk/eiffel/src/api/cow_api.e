@@ -282,5 +282,170 @@ feature -- API Access
 			end
 		end
 
+	cow_orders_current : detachable LIST [COW_ORDER_DTO]
+			-- Orders (current)
+			-- Gets orders.
+			-- 
+			-- 
+			-- Result LIST [COW_ORDER_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/cow/orders/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [COW_ORDER_DTO] } l_response.data ({ LIST [COW_ORDER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	cow_settlements_current : detachable LIST [COW_SETTLEMENT_DTO]
+			-- Settlements (current)
+			-- Gets settlements.
+			-- 
+			-- 
+			-- Result LIST [COW_SETTLEMENT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/cow/settlements/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [COW_SETTLEMENT_DTO] } l_response.data ({ LIST [COW_SETTLEMENT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	cow_tokens_current : detachable LIST [COW_TOKEN_DTO]
+			-- Tokens (current)
+			-- Gets tokens.
+			-- 
+			-- 
+			-- Result LIST [COW_TOKEN_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/cow/tokens/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [COW_TOKEN_DTO] } l_response.data ({ LIST [COW_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	cow_trades_current : detachable LIST [COW_TRADE_DTO]
+			-- Trades (current)
+			-- Gets trades.
+			-- 
+			-- 
+			-- Result LIST [COW_TRADE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/cow/trades/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [COW_TRADE_DTO] } l_response.data ({ LIST [COW_TRADE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	cow_users_current : detachable LIST [COW_USER_DTO]
+			-- Users (current)
+			-- Gets users.
+			-- 
+			-- 
+			-- Result LIST [COW_USER_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/cow/users/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [COW_USER_DTO] } l_response.data ({ LIST [COW_USER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
 
 end

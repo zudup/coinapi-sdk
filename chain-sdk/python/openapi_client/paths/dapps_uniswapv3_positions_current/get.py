@@ -25,36 +25,10 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.uniswap_v3_position_v3_dto import UniswapV3PositionV3DTO
+from openapi_client.model.uniswap_v3_position_dto import UniswapV3PositionDTO
 
 from . import path
 
-# Query params
-FilterPoolIdSchema = schemas.StrSchema
-RequestRequiredQueryParams = typing_extensions.TypedDict(
-    'RequestRequiredQueryParams',
-    {
-    }
-)
-RequestOptionalQueryParams = typing_extensions.TypedDict(
-    'RequestOptionalQueryParams',
-    {
-        'filter_pool_id': typing.Union[FilterPoolIdSchema, str, ],
-    },
-    total=False
-)
-
-
-class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams):
-    pass
-
-
-request_query_filter_pool_id = api_client.QueryParameter(
-    name="filter_pool_id",
-    style=api_client.ParameterStyle.FORM,
-    schema=FilterPoolIdSchema,
-    explode=True,
-)
 
 
 class SchemaFor200ResponseBodyTextPlain(
@@ -65,12 +39,12 @@ class SchemaFor200ResponseBodyTextPlain(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3PositionV3DTO']:
-            return UniswapV3PositionV3DTO
+        def items() -> typing.Type['UniswapV3PositionDTO']:
+            return UniswapV3PositionDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3PositionV3DTO'], typing.List['UniswapV3PositionV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PositionDTO'], typing.List['UniswapV3PositionDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -79,7 +53,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3PositionV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PositionDTO':
         return super().__getitem__(i)
 
 
@@ -91,12 +65,12 @@ class SchemaFor200ResponseBodyApplicationJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3PositionV3DTO']:
-            return UniswapV3PositionV3DTO
+        def items() -> typing.Type['UniswapV3PositionDTO']:
+            return UniswapV3PositionDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3PositionV3DTO'], typing.List['UniswapV3PositionV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PositionDTO'], typing.List['UniswapV3PositionDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -105,7 +79,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3PositionV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PositionDTO':
         return super().__getitem__(i)
 
 
@@ -117,12 +91,12 @@ class SchemaFor200ResponseBodyTextJson(
     class MetaOapg:
         
         @staticmethod
-        def items() -> typing.Type['UniswapV3PositionV3DTO']:
-            return UniswapV3PositionV3DTO
+        def items() -> typing.Type['UniswapV3PositionDTO']:
+            return UniswapV3PositionDTO
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV3PositionV3DTO'], typing.List['UniswapV3PositionV3DTO']],
+        arg: typing.Union[typing.Tuple['UniswapV3PositionDTO'], typing.List['UniswapV3PositionDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -131,7 +105,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> 'UniswapV3PositionV3DTO':
+    def __getitem__(self, i: int) -> 'UniswapV3PositionDTO':
         return super().__getitem__(i)
 
 
@@ -169,9 +143,8 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _uniswap_v3_get_positions__current_oapg(
+    def _uniswap_v3_positions__current_oapg(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -181,19 +154,17 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _uniswap_v3_get_positions__current_oapg(
+    def _uniswap_v3_positions__current_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _uniswap_v3_get_positions__current_oapg(
+    def _uniswap_v3_positions__current_oapg(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -203,9 +174,8 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _uniswap_v3_get_positions__current_oapg(
+    def _uniswap_v3_positions__current_oapg(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -217,21 +187,7 @@ class BaseApi(api_client.Api):
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
-        self._verify_typed_dict_inputs_oapg(RequestQueryParams, query_params)
         used_path = path.value
-
-        prefix_separator_iterator = None
-        for parameter in (
-            request_query_filter_pool_id,
-        ):
-            parameter_data = query_params.get(parameter.name, schemas.unset)
-            if parameter_data is schemas.unset:
-                continue
-            if prefix_separator_iterator is None:
-                prefix_separator_iterator = parameter.get_prefix_separator_iterator()
-            serialized_data = parameter.serialize(parameter_data, prefix_separator_iterator)
-            for serialized_value in serialized_data.values():
-                used_path += serialized_value
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -262,13 +218,12 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class UniswapV3GetPositionsCurrent(BaseApi):
+class UniswapV3PositionsCurrent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def uniswap_v3_get_positions__current(
+    def uniswap_v3_positions__current(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -278,19 +233,17 @@ class UniswapV3GetPositionsCurrent(BaseApi):
     ]: ...
 
     @typing.overload
-    def uniswap_v3_get_positions__current(
+    def uniswap_v3_positions__current(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def uniswap_v3_get_positions__current(
+    def uniswap_v3_positions__current(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -300,16 +253,14 @@ class UniswapV3GetPositionsCurrent(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def uniswap_v3_get_positions__current(
+    def uniswap_v3_positions__current(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._uniswap_v3_get_positions__current_oapg(
-            query_params=query_params,
+        return self._uniswap_v3_positions__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -323,7 +274,6 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -336,7 +286,6 @@ class ApiForget(BaseApi):
     def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -345,7 +294,6 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -357,14 +305,12 @@ class ApiForget(BaseApi):
 
     def get(
         self,
-        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._uniswap_v3_get_positions__current_oapg(
-            query_params=query_params,
+        return self._uniswap_v3_positions__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

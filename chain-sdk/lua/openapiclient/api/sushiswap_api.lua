@@ -159,6 +159,202 @@ function sushiswap_api:dex_get_trades__current()
 	end
 end
 
+function sushiswap_api:sushiswap_bundles__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/bundles/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_bundle_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_burns__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/burns/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_burn_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/dayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_factorys__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/factorys/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_factory_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
 function sushiswap_api:sushiswap_get_bundles__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
@@ -262,7 +458,7 @@ function sushiswap_api:sushiswap_get_day_datas__historical(start_block, end_bloc
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/daydatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/dayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -360,7 +556,7 @@ function sushiswap_api:sushiswap_get_hour_datas__historical(start_block, end_blo
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/hourdatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/hourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -409,7 +605,7 @@ function sushiswap_api:sushiswap_get_liquidity_position_snapshots__historical(st
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/liquiditypositionsnapshots/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
+		path = string.format("%s/dapps/sushiswap/liquidityPositionSnapshots/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user), http_util.encodeURIComponent(pair));
 	})
 
@@ -458,7 +654,7 @@ function sushiswap_api:sushiswap_get_liquidity_positions__historical(start_block
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/liquiditypositions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
+		path = string.format("%s/dapps/sushiswap/liquidityPositions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user), http_util.encodeURIComponent(pair));
 	})
 
@@ -556,7 +752,7 @@ function sushiswap_api:sushiswap_get_pair_day_datas__historical(start_block, end
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairdaydatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s&token_0=%s&token_1=%s",
+		path = string.format("%s/dapps/sushiswap/pairDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s&token_0=%s&token_1=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair), http_util.encodeURIComponent(token_0), http_util.encodeURIComponent(token_1));
 	})
 
@@ -605,7 +801,7 @@ function sushiswap_api:sushiswap_get_pair_hour_datas__historical(start_block, en
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairhourdatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+		path = string.format("%s/dapps/sushiswap/pairHourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
 	})
 
@@ -747,55 +943,6 @@ function sushiswap_api:sushiswap_get_pools__current()
 	end
 end
 
-function sushiswap_api:sushiswap_get_swaps__current()
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/sushiswap/swaps/current",
-			self.basePath);
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
-	req.headers:upsert("content-type", "text/plain")
-
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		local body, err, errno2 = stream:get_body_as_string()
-		-- exception when getting the HTTP body
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		local result, _, err3 = dkjson.decode(body)
-		-- exception when decoding the HTTP body
-		if result == nil then
-			return nil, err3
-		end
-		for _, ob in ipairs(result) do
-			openapiclient_sushiswap_swap_dto.cast(ob)
-		end
-		return result, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
 function sushiswap_api:sushiswap_get_swaps__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
@@ -850,7 +997,7 @@ function sushiswap_api:sushiswap_get_token_day_datas__historical(start_block, en
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/tokendaydatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/tokenDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -881,55 +1028,6 @@ function sushiswap_api:sushiswap_get_token_day_datas__historical(start_block, en
 		end
 		for _, ob in ipairs(result) do
 			openapiclient_sushiswap_token_day_data_dto.cast(ob)
-		end
-		return result, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function sushiswap_api:sushiswap_get_tokens__current()
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/sushiswap/tokens/current",
-			self.basePath);
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
-	req.headers:upsert("content-type", "text/plain")
-
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		local body, err, errno2 = stream:get_body_as_string()
-		-- exception when getting the HTTP body
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		local result, _, err3 = dkjson.decode(body)
-		-- exception when decoding the HTTP body
-		if result == nil then
-			return nil, err3
-		end
-		for _, ob in ipairs(result) do
-			openapiclient_sushiswap_token_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -1048,6 +1146,594 @@ function sushiswap_api:sushiswap_get_users__historical(start_block, end_block, s
 		port = self.port;
 		path = string.format("%s/dapps/sushiswap/users/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_user_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_hour_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/hourDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_hour_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_liquidity_position_snapshots__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/liquidityPositionSnapshots/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_liquidity_position_snapshot_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_liquidity_positions__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/liquidityPositions/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_liquidity_position_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_mints__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/mints/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_mint_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_pair_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/pairDayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_pair_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_pair_hour_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/pairHourDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_pair_hour_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_pairs__current(id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/pairs/current?id=%s",
+			self.basePath, http_util.encodeURIComponent(id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_pair_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_swaps__current(pair)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/swaps/current?pair=%s",
+			self.basePath, http_util.encodeURIComponent(pair));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_swap_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_token_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/tokenDayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_token_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_tokens__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/tokens/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_token_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_transactions__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/transactions/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_sushiswap_transaction_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function sushiswap_api:sushiswap_users__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/sushiswap/users/current",
+			self.basePath);
 	})
 
 	-- set HTTP verb

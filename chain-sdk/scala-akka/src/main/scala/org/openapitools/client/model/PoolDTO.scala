@@ -19,52 +19,56 @@ case class PoolDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Pool address. */
-  id: Option[String] = None,
-  /* Pool's human-readable name. */
-  name: Option[String] = None,
-  /* Identify whether pool is a metapool. */
-  isMeta: Option[Boolean] = None,
-  /* Registry contract address from where this pool was registered. */
-  registryAddress: Option[String] = None,
-  /* Swap contract address. */
-  swapAddress: Option[String] = None,
-  /* Address of the token representing LP share. */
-  lpToken: Option[String] = None,
-  /* Number of coins composing the pool. */
-  coinCount: Option[String] = None,
-  /* Number of underlying coins composing the pool. */
-  underlyingCount: Option[String] = None,
-  /* Amplification coefficient multiplied by n * (n - 1). */
-  a: Option[String] = None,
-  /* Fee to charge for exchanges. */
-  fee: Option[String] = None,
-  /* Admin fee is represented as a percentage of the total fee collected on a swap. */
-  adminFee: Option[String] = None,
-  /* Admin address. */
-  owner: Option[String] = None,
-  /* Average dollar value of pool token. */
-  virtualPrice: Option[String] = None,
-  /*  */
-  locked: Option[String] = None,
-  /*  */
-  addedAt: Option[OffsetDateTime] = None,
-  /*  */
-  addedAtBlock: Option[String] = None,
-  /*  */
-  addedAtTransaction: Option[String] = None,
-  /*  */
-  removedAt: Option[String] = None,
-  /*  */
-  removedAtBlock: Option[String] = None,
-  /*  */
-  removedAtTransaction: Option[String] = None,
-  /*  */
-  exchangeCount: Option[String] = None,
-  /*  */
-  gaugeCount: Option[String] = None,
   /*  */
   vid: Option[Long] = None,
+  /* Pool address. */
+  id: Option[String] = None,
+  /* Creation time. */
+  createdAtTimestamp: Option[OffsetDateTime] = None,
+  /* Reference to token0 as stored in pool contract. */
+  token0: Option[String] = None,
+  /* Reference to token1 as stored in pool contract. */
+  token1: Option[String] = None,
+  feeTier: Option[BigInteger] = None,
+  liquidity: Option[BigInteger] = None,
+  sqrtPrice: Option[BigInteger] = None,
+  feeGrowthGlobal0x128: Option[BigInteger] = None,
+  feeGrowthGlobal1x128: Option[BigInteger] = None,
+  /* Token0 per token1. */
+  token0Price: Option[String] = None,
+  /* Token1 per token0. */
+  token1Price: Option[String] = None,
+  tick: Option[BigInteger] = None,
+  observationIndex: Option[BigInteger] = None,
+  /* All time token0 swapped. */
+  volumeToken0: Option[String] = None,
+  /* All time token1 swapped. */
+  volumeToken1: Option[String] = None,
+  /* All time USD swapped. */
+  volumeUsd: Option[String] = None,
+  /* All time USD swapped, unfiltered for unreliable USD pools. */
+  untrackedVolumeUsd: Option[String] = None,
+  /* Fees in USD. */
+  feesUsd: Option[String] = None,
+  txCount: Option[BigInteger] = None,
+  /* All time fees collected token0. */
+  collectedFeesToken0: Option[String] = None,
+  /* All time fees collected token1. */
+  collectedFeesToken1: Option[String] = None,
+  /* All time fees collected derived USD. */
+  collectedFeesUsd: Option[String] = None,
+  /* Total token 0 across all ticks. */
+  totalValueLockedToken0: Option[String] = None,
+  /*  */
+  totalValueLockedToken1: Option[String] = None,
+  /* Total token 1 across all ticks. */
+  totalValueLockedEth: Option[String] = None,
+  /* Total value locked USD. */
+  totalValueLockedUsd: Option[String] = None,
+  /* Total value locked derived ETH. */
+  totalValueLockedUsdUntracked: Option[String] = None,
+  /* Liquidity providers count, used to detect new exchanges. */
+  liquidityProviderCount: Option[String] = None,
   evaluatedAsk: Option[Double] = None
 ) extends ApiModel
 

@@ -13,12 +13,38 @@ inherit
 feature -- Test routines
 
 
-    test_uniswap_v2_get_bundle_v2s_historical
-            -- BundleV2s (historical) 🔥
+    test_uniswap_v2_bundles_current
+            -- Bundles (current)
             --
-            -- Gets bundlev2s.
+            -- Gets bundles.
         local
-            l_response: LIST [UNISWAP_V2_BUNDLE_V2_DTO]
+            l_response: LIST [UNISWAP_V2_BUNDLE_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_bundles_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_burns_current
+            -- Burns (current)
+            --
+            -- Gets burns.
+        local
+            l_response: LIST [UNISWAP_V2_BURN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_burns_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_get_bundles_historical
+            -- Bundles (historical) 🔥
+            --
+            -- Gets bundles.
+        local
+            l_response: LIST [UNISWAP_V2_BUNDLE_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -27,16 +53,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_bundle_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_bundles_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_burn_v2s_historical
-            -- BurnV2s (historical) 🔥
+    test_uniswap_v2_get_burns_historical
+            -- Burns (historical) 🔥
             --
-            -- Gets burnv2s.
+            -- Gets burns.
         local
-            l_response: LIST [UNISWAP_V2_BURN_V2_DTO]
+            l_response: LIST [UNISWAP_V2_BURN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -46,16 +72,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_burn_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.uniswap_v2_get_burns_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_liquidity_position_snapshot_v2s_historical
-            -- LiquidityPositionSnapshotV2s (historical) 🔥
+    test_uniswap_v2_get_liquidity_position_snapshots_historical
+            -- LiquidityPositionSnapshots (historical) 🔥
             --
-            -- Gets liquiditypositionsnapshotv2s.
+            -- Gets liquidityPositionSnapshots.
         local
-            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_V2_DTO]
+            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -66,16 +92,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_liquidity_position_snapshot_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user, l_pair)
+            -- l_response := api.uniswap_v2_get_liquidity_position_snapshots_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_liquidity_position_v2s_historical
-            -- LiquidityPositionV2s (historical) 🔥
+    test_uniswap_v2_get_liquidity_positions_historical
+            -- LiquidityPositions (historical) 🔥
             --
-            -- Gets liquiditypositionv2s.
+            -- Gets liquidityPositions.
         local
-            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_V2_DTO]
+            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -86,16 +112,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_liquidity_position_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user, l_pair)
+            -- l_response := api.uniswap_v2_get_liquidity_positions_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_mint_v2s_historical
-            -- MintV2s (historical) 🔥
+    test_uniswap_v2_get_mints_historical
+            -- Mints (historical) 🔥
             --
-            -- Gets mintv2s.
+            -- Gets mints.
         local
-            l_response: LIST [UNISWAP_V2_MINT_V2_DTO]
+            l_response: LIST [UNISWAP_V2_MINT_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -105,16 +131,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_mint_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.uniswap_v2_get_mints_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pair_day_data_v2s_historical
-            -- PairDayDataV2s (historical) 🔥
+    test_uniswap_v2_get_pair_day_datas_historical
+            -- PairDayDatas (historical) 🔥
             --
-            -- Gets pairdaydatav2s.
+            -- Gets pairDayDatas.
         local
-            l_response: LIST [UNISWAP_V2_PAIR_DAY_DATA_V2_DTO]
+            l_response: LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -125,16 +151,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_pair_day_data_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v2_get_pair_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pair_hour_data_v2s_historical
-            -- PairHourDataV2s (historical) 🔥
+    test_uniswap_v2_get_pair_hour_datas_historical
+            -- PairHourDatas (historical) 🔥
             --
-            -- Gets pairhourdatav2s.
+            -- Gets pairHourDatas.
         local
-            l_response: LIST [UNISWAP_V2_PAIR_HOUR_DATA_V2_DTO]
+            l_response: LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -144,16 +170,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_pair_hour_data_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.uniswap_v2_get_pair_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pair_v2s_historical
-            -- PairV2s (historical) 🔥
+    test_uniswap_v2_get_pairs_historical
+            -- Pairs (historical) 🔥
             --
-            -- Gets pairv2s.
+            -- Gets pairs.
         local
-            l_response: LIST [UNISWAP_V2_PAIR_V2_DTO]
+            l_response: LIST [UNISWAP_V2_PAIR_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -164,7 +190,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_pair_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v2_get_pairs_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
@@ -173,7 +199,7 @@ feature -- Test routines
             --
             -- Gets pools.
         local
-            l_response: LIST [UNISWAP_V2_PAIR_V2_DTO]
+            l_response: LIST [UNISWAP_V2_PAIR_DTO]
             l_filter_pool_id: STRING_32
         do
             -- TODO: Initialize required params.
@@ -182,12 +208,25 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_swap_v2s_historical
-            -- SwapV2s (historical) 🔥
+    test_uniswap_v2_get_swaps_current
+            -- Swaps (current) 🔥
             --
-            -- Gets swapv2s.
+            -- Gets swaps.
         local
-            l_response: LIST [UNISWAP_V2_SWAP_V2_DTO]
+            l_response: LIST [UNISWAP_V2_SWAP_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_get_swaps_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_get_swaps_historical
+            -- Swaps (historical) 🔥
+            --
+            -- Gets swaps.
+        local
+            l_response: LIST [UNISWAP_V2_SWAP_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -197,29 +236,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_swap_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.uniswap_v2_get_swaps_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_swaps_current
-            -- Swaps (current) 🔥
+    test_uniswap_v2_get_token_day_datas_historical
+            -- TokenDayDatas (historical) 🔥
             --
-            -- Gets swaps.
+            -- Gets tokenDayDatas.
         local
-            l_response: LIST [UNISWAP_V2_SWAP_V2_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v2_get_swaps_current
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v2_get_token_day_data_v2s_historical
-            -- TokenDayDataV2s (historical) 🔥
-            --
-            -- Gets tokendaydatav2s.
-        local
-            l_response: LIST [UNISWAP_V2_TOKEN_DAY_DATA_V2_DTO]
+            l_response: LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -228,16 +254,29 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_token_day_data_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_token_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_token_v2s_historical
-            -- TokenV2s (historical) 🔥
+    test_uniswap_v2_get_tokens_current
+            -- Tokens (current) 🔥
             --
-            -- Gets tokenv2s.
+            -- Gets tokens.
         local
-            l_response: LIST [UNISWAP_V2_TOKEN_V2_DTO]
+            l_response: LIST [UNISWAP_V2_TOKEN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_get_tokens_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_get_tokens_historical
+            -- Tokens (historical) 🔥
+            --
+            -- Gets tokens.
+        local
+            l_response: LIST [UNISWAP_V2_TOKEN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -248,29 +287,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_token_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_symbol, l_name)
+            -- l_response := api.uniswap_v2_get_tokens_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_symbol, l_name)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_tokens_current
-            -- Tokens (current) 🔥
+    test_uniswap_v2_get_transactions_historical
+            -- Transactions (historical) 🔥
             --
-            -- Gets tokens.
+            -- Gets transactions.
         local
-            l_response: LIST [UNISWAP_V2_TOKEN_V2_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v2_get_tokens_current
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v2_get_transaction_v2s_historical
-            -- TransactionV2s (historical) 🔥
-            --
-            -- Gets transactionv2s.
-        local
-            l_response: LIST [UNISWAP_V2_TRANSACTION_V2_DTO]
+            l_response: LIST [UNISWAP_V2_TRANSACTION_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -279,16 +305,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_transaction_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_transactions_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_uniswap_day_data_v2s_historical
-            -- UniswapDayDataV2s (historical) 🔥
+    test_uniswap_v2_get_uniswap_day_datas_historical
+            -- UniswapDayDatas (historical) 🔥
             --
-            -- Gets uniswapdaydatav2s.
+            -- Gets uniswapDayDatas.
         local
-            l_response: LIST [UNISWAP_V2_UNISWAP_DAY_DATA_V2_DTO]
+            l_response: LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -297,16 +323,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_uniswap_day_data_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_uniswap_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_uniswap_factory_v2s_historical
-            -- UniswapFactoryV2s (historical) 🔥
+    test_uniswap_v2_get_uniswap_factorys_historical
+            -- UniswapFactorys (historical) 🔥
             --
-            -- Gets uniswapfactoryv2s.
+            -- Gets uniswapFactorys.
         local
-            l_response: LIST [UNISWAP_V2_UNISWAP_FACTORY_V2_DTO]
+            l_response: LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -315,16 +341,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_uniswap_factory_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_uniswap_factorys_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_user_v2s_historical
-            -- UserV2s (historical) 🔥
+    test_uniswap_v2_get_users_historical
+            -- Users (historical) 🔥
             --
-            -- Gets userv2s.
+            -- Gets users.
         local
-            l_response: LIST [UNISWAP_V2_USER_V2_DTO]
+            l_response: LIST [UNISWAP_V2_USER_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -333,7 +359,151 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_user_v2s_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_users_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_liquidity_position_snapshots_current
+            -- LiquidityPositionSnapshots (current)
+            --
+            -- Gets liquidityPositionSnapshots.
+        local
+            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_liquidity_position_snapshots_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_liquidity_positions_current
+            -- LiquidityPositions (current)
+            --
+            -- Gets liquidityPositions.
+        local
+            l_response: LIST [UNISWAP_V2_LIQUIDITY_POSITION_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_liquidity_positions_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_mints_current
+            -- Mints (current)
+            --
+            -- Gets mints.
+        local
+            l_response: LIST [UNISWAP_V2_MINT_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_mints_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_pair_day_datas_current
+            -- PairDayDatas (current)
+            --
+            -- Gets pairDayDatas.
+        local
+            l_response: LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_pair_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_pair_hour_datas_current
+            -- PairHourDatas (current)
+            --
+            -- Gets pairHourDatas.
+        local
+            l_response: LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_pair_hour_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_pairs_current
+            -- Pairs (current)
+            --
+            -- Gets pairs.
+        local
+            l_response: LIST [UNISWAP_V2_PAIR_DTO]
+            l_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_pairs_current(l_id)
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_token_day_datas_current
+            -- TokenDayDatas (current)
+            --
+            -- Gets tokenDayDatas.
+        local
+            l_response: LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_token_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_transactions_current
+            -- Transactions (current)
+            --
+            -- Gets transactions.
+        local
+            l_response: LIST [UNISWAP_V2_TRANSACTION_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_transactions_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_uniswap_day_datas_current
+            -- UniswapDayDatas (current)
+            --
+            -- Gets uniswapDayDatas.
+        local
+            l_response: LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_uniswap_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_uniswap_factorys_current
+            -- UniswapFactorys (current)
+            --
+            -- Gets uniswapFactorys.
+        local
+            l_response: LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_uniswap_factorys_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_users_current
+            -- Users (current)
+            --
+            -- Gets users.
+        local
+            l_response: LIST [UNISWAP_V2_USER_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_users_current
             assert ("not_implemented", False)
         end
 

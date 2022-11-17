@@ -49,9 +49,107 @@ sub new {
 
 
 #
-# uniswap_v2_get_bundle_v2s__historical
+# uniswap_v2_bundles__current
 #
-# BundleV2s (historical) 🔥
+# Bundles (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_bundles__current' } = {
+        summary => 'Bundles (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2BundleDTO]',
+        };
+}
+# @return ARRAY[UniswapV2BundleDTO]
+#
+sub uniswap_v2_bundles__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/bundles/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BundleDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_burns__current
+#
+# Burns (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_burns__current' } = {
+        summary => 'Burns (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2BurnDTO]',
+        };
+}
+# @return ARRAY[UniswapV2BurnDTO]
+#
+sub uniswap_v2_burns__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/burns/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BurnDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_get_bundles__historical
+#
+# Bundles (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -86,19 +184,19 @@ sub new {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_bundle_v2s__historical' } = {
-        summary => 'BundleV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_bundles__historical' } = {
+        summary => 'Bundles (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2BundleV2DTO]',
+        returns => 'ARRAY[UniswapV2BundleDTO]',
         };
 }
-# @return ARRAY[UniswapV2BundleV2DTO]
+# @return ARRAY[UniswapV2BundleDTO]
 #
-sub uniswap_v2_get_bundle_v2s__historical {
+sub uniswap_v2_get_bundles__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/bundlev2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/bundles/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -148,14 +246,14 @@ sub uniswap_v2_get_bundle_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BundleV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BundleDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_burn_v2s__historical
+# uniswap_v2_get_burns__historical
 #
-# BurnV2s (historical) 🔥
+# Burns (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -196,19 +294,19 @@ sub uniswap_v2_get_bundle_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_burn_v2s__historical' } = {
-        summary => 'BurnV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_burns__historical' } = {
+        summary => 'Burns (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2BurnV2DTO]',
+        returns => 'ARRAY[UniswapV2BurnDTO]',
         };
 }
-# @return ARRAY[UniswapV2BurnV2DTO]
+# @return ARRAY[UniswapV2BurnDTO]
 #
-sub uniswap_v2_get_burn_v2s__historical {
+sub uniswap_v2_get_burns__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/burnv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/burns/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -263,14 +361,14 @@ sub uniswap_v2_get_burn_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BurnV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BurnDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_liquidity_position_snapshot_v2s__historical
+# uniswap_v2_get_liquidity_position_snapshots__historical
 #
-# LiquidityPositionSnapshotV2s (historical) 🔥
+# LiquidityPositionSnapshots (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -317,19 +415,19 @@ sub uniswap_v2_get_burn_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_snapshot_v2s__historical' } = {
-        summary => 'LiquidityPositionSnapshotV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_snapshots__historical' } = {
+        summary => 'LiquidityPositionSnapshots (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]',
+        returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotDTO]',
         };
 }
-# @return ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]
+# @return ARRAY[UniswapV2LiquidityPositionSnapshotDTO]
 #
-sub uniswap_v2_get_liquidity_position_snapshot_v2s__historical {
+sub uniswap_v2_get_liquidity_position_snapshots__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositionSnapshots/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -389,14 +487,14 @@ sub uniswap_v2_get_liquidity_position_snapshot_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionSnapshotDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_liquidity_position_v2s__historical
+# uniswap_v2_get_liquidity_positions__historical
 #
-# LiquidityPositionV2s (historical) 🔥
+# LiquidityPositions (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -443,19 +541,19 @@ sub uniswap_v2_get_liquidity_position_snapshot_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_v2s__historical' } = {
-        summary => 'LiquidityPositionV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_positions__historical' } = {
+        summary => 'LiquidityPositions (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2LiquidityPositionV2DTO]',
+        returns => 'ARRAY[UniswapV2LiquidityPositionDTO]',
         };
 }
-# @return ARRAY[UniswapV2LiquidityPositionV2DTO]
+# @return ARRAY[UniswapV2LiquidityPositionDTO]
 #
-sub uniswap_v2_get_liquidity_position_v2s__historical {
+sub uniswap_v2_get_liquidity_positions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/liquiditypositionv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositions/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -515,14 +613,14 @@ sub uniswap_v2_get_liquidity_position_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_mint_v2s__historical
+# uniswap_v2_get_mints__historical
 #
-# MintV2s (historical) 🔥
+# Mints (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -563,19 +661,19 @@ sub uniswap_v2_get_liquidity_position_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_mint_v2s__historical' } = {
-        summary => 'MintV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_mints__historical' } = {
+        summary => 'Mints (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2MintV2DTO]',
+        returns => 'ARRAY[UniswapV2MintDTO]',
         };
 }
-# @return ARRAY[UniswapV2MintV2DTO]
+# @return ARRAY[UniswapV2MintDTO]
 #
-sub uniswap_v2_get_mint_v2s__historical {
+sub uniswap_v2_get_mints__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/mintv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/mints/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -630,14 +728,14 @@ sub uniswap_v2_get_mint_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2MintV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2MintDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_pair_day_data_v2s__historical
+# uniswap_v2_get_pair_day_datas__historical
 #
-# PairDayDataV2s (historical) 🔥
+# PairDayDatas (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -684,19 +782,19 @@ sub uniswap_v2_get_mint_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_data_v2s__historical' } = {
-        summary => 'PairDayDataV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_datas__historical' } = {
+        summary => 'PairDayDatas (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2PairDayDataV2DTO]',
+        returns => 'ARRAY[UniswapV2PairDayDataDTO]',
         };
 }
-# @return ARRAY[UniswapV2PairDayDataV2DTO]
+# @return ARRAY[UniswapV2PairDayDataDTO]
 #
-sub uniswap_v2_get_pair_day_data_v2s__historical {
+sub uniswap_v2_get_pair_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairdaydatav2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/pairDayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -756,14 +854,14 @@ sub uniswap_v2_get_pair_day_data_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDayDataV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDayDataDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_pair_hour_data_v2s__historical
+# uniswap_v2_get_pair_hour_datas__historical
 #
-# PairHourDataV2s (historical) 🔥
+# PairHourDatas (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -804,19 +902,19 @@ sub uniswap_v2_get_pair_day_data_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_data_v2s__historical' } = {
-        summary => 'PairHourDataV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_datas__historical' } = {
+        summary => 'PairHourDatas (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2PairHourDataV2DTO]',
+        returns => 'ARRAY[UniswapV2PairHourDataDTO]',
         };
 }
-# @return ARRAY[UniswapV2PairHourDataV2DTO]
+# @return ARRAY[UniswapV2PairHourDataDTO]
 #
-sub uniswap_v2_get_pair_hour_data_v2s__historical {
+sub uniswap_v2_get_pair_hour_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairhourdatav2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/pairHourDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -871,14 +969,14 @@ sub uniswap_v2_get_pair_hour_data_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairHourDataV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairHourDataDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_pair_v2s__historical
+# uniswap_v2_get_pairs__historical
 #
-# PairV2s (historical) 🔥
+# Pairs (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -925,19 +1023,19 @@ sub uniswap_v2_get_pair_hour_data_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_v2s__historical' } = {
-        summary => 'PairV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pairs__historical' } = {
+        summary => 'Pairs (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2PairV2DTO]',
+        returns => 'ARRAY[UniswapV2PairDTO]',
         };
 }
-# @return ARRAY[UniswapV2PairV2DTO]
+# @return ARRAY[UniswapV2PairDTO]
 #
-sub uniswap_v2_get_pair_v2s__historical {
+sub uniswap_v2_get_pairs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/pairs/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -997,7 +1095,7 @@ sub uniswap_v2_get_pair_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDTO]', $response);
     return $_response_object;
 }
 
@@ -1018,10 +1116,10 @@ sub uniswap_v2_get_pair_v2s__historical {
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools__current' } = {
         summary => 'Pools (current) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2PairV2DTO]',
+        returns => 'ARRAY[UniswapV2PairDTO]',
         };
 }
-# @return ARRAY[UniswapV2PairV2DTO]
+# @return ARRAY[UniswapV2PairDTO]
 #
 sub uniswap_v2_get_pools__current {
     my ($self, %args) = @_;
@@ -1057,14 +1155,63 @@ sub uniswap_v2_get_pools__current {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_swap_v2s__historical
+# uniswap_v2_get_swaps__current
 #
-# SwapV2s (historical) 🔥
+# Swaps (current) 🔥
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__current' } = {
+        summary => 'Swaps (current) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV2SwapDTO]',
+        };
+}
+# @return ARRAY[UniswapV2SwapDTO]
+#
+sub uniswap_v2_get_swaps__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/swaps/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_get_swaps__historical
+#
+# Swaps (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1105,19 +1252,19 @@ sub uniswap_v2_get_pools__current {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swap_v2s__historical' } = {
-        summary => 'SwapV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__historical' } = {
+        summary => 'Swaps (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2SwapV2DTO]',
+        returns => 'ARRAY[UniswapV2SwapDTO]',
         };
 }
-# @return ARRAY[UniswapV2SwapV2DTO]
+# @return ARRAY[UniswapV2SwapDTO]
 #
-sub uniswap_v2_get_swap_v2s__historical {
+sub uniswap_v2_get_swaps__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/swapv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/swaps/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1172,63 +1319,14 @@ sub uniswap_v2_get_swap_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_swaps__current
+# uniswap_v2_get_token_day_datas__historical
 #
-# Swaps (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__current' } = {
-        summary => 'Swaps (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2SwapV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2SwapV2DTO]
-#
-sub uniswap_v2_get_swaps__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/swaps/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_token_day_data_v2s__historical
-#
-# TokenDayDataV2s (historical) 🔥
+# TokenDayDatas (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1263,19 +1361,19 @@ sub uniswap_v2_get_swaps__current {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_data_v2s__historical' } = {
-        summary => 'TokenDayDataV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_datas__historical' } = {
+        summary => 'TokenDayDatas (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2TokenDayDataV2DTO]',
+        returns => 'ARRAY[UniswapV2TokenDayDataDTO]',
         };
 }
-# @return ARRAY[UniswapV2TokenDayDataV2DTO]
+# @return ARRAY[UniswapV2TokenDayDataDTO]
 #
-sub uniswap_v2_get_token_day_data_v2s__historical {
+sub uniswap_v2_get_token_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokendaydatav2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/tokenDayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1325,14 +1423,63 @@ sub uniswap_v2_get_token_day_data_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_token_v2s__historical
+# uniswap_v2_get_tokens__current
 #
-# TokenV2s (historical) 🔥
+# Tokens (current) 🔥
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__current' } = {
+        summary => 'Tokens (current) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV2TokenDTO]',
+        };
+}
+# @return ARRAY[UniswapV2TokenDTO]
+#
+sub uniswap_v2_get_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_get_tokens__historical
+#
+# Tokens (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1379,19 +1526,19 @@ sub uniswap_v2_get_token_day_data_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_v2s__historical' } = {
-        summary => 'TokenV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__historical' } = {
+        summary => 'Tokens (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2TokenV2DTO]',
+        returns => 'ARRAY[UniswapV2TokenDTO]',
         };
 }
-# @return ARRAY[UniswapV2TokenV2DTO]
+# @return ARRAY[UniswapV2TokenDTO]
 #
-sub uniswap_v2_get_token_v2s__historical {
+sub uniswap_v2_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokenv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/tokens/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1451,63 +1598,14 @@ sub uniswap_v2_get_token_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_tokens__current
+# uniswap_v2_get_transactions__historical
 #
-# Tokens (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__current' } = {
-        summary => 'Tokens (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2TokenV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2TokenV2DTO]
-#
-sub uniswap_v2_get_tokens__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokens/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_transaction_v2s__historical
-#
-# TransactionV2s (historical) 🔥
+# Transactions (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1542,19 +1640,19 @@ sub uniswap_v2_get_tokens__current {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_transaction_v2s__historical' } = {
-        summary => 'TransactionV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_transactions__historical' } = {
+        summary => 'Transactions (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2TransactionV2DTO]',
+        returns => 'ARRAY[UniswapV2TransactionDTO]',
         };
 }
-# @return ARRAY[UniswapV2TransactionV2DTO]
+# @return ARRAY[UniswapV2TransactionDTO]
 #
-sub uniswap_v2_get_transaction_v2s__historical {
+sub uniswap_v2_get_transactions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/transactionv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/transactions/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1604,14 +1702,14 @@ sub uniswap_v2_get_transaction_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TransactionV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TransactionDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_uniswap_day_data_v2s__historical
+# uniswap_v2_get_uniswap_day_datas__historical
 #
-# UniswapDayDataV2s (historical) 🔥
+# UniswapDayDatas (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1646,19 +1744,19 @@ sub uniswap_v2_get_transaction_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_data_v2s__historical' } = {
-        summary => 'UniswapDayDataV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_datas__historical' } = {
+        summary => 'UniswapDayDatas (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2UniswapDayDataV2DTO]',
+        returns => 'ARRAY[UniswapV2UniswapDayDataDTO]',
         };
 }
-# @return ARRAY[UniswapV2UniswapDayDataV2DTO]
+# @return ARRAY[UniswapV2UniswapDayDataDTO]
 #
-sub uniswap_v2_get_uniswap_day_data_v2s__historical {
+sub uniswap_v2_get_uniswap_day_datas__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapdaydatav2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/uniswapDayDatas/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1708,14 +1806,14 @@ sub uniswap_v2_get_uniswap_day_data_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapDayDataV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapDayDataDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_uniswap_factory_v2s__historical
+# uniswap_v2_get_uniswap_factorys__historical
 #
-# UniswapFactoryV2s (historical) 🔥
+# UniswapFactorys (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1750,19 +1848,19 @@ sub uniswap_v2_get_uniswap_day_data_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factory_v2s__historical' } = {
-        summary => 'UniswapFactoryV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factorys__historical' } = {
+        summary => 'UniswapFactorys (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2UniswapFactoryV2DTO]',
+        returns => 'ARRAY[UniswapV2UniswapFactoryDTO]',
         };
 }
-# @return ARRAY[UniswapV2UniswapFactoryV2DTO]
+# @return ARRAY[UniswapV2UniswapFactoryDTO]
 #
-sub uniswap_v2_get_uniswap_factory_v2s__historical {
+sub uniswap_v2_get_uniswap_factorys__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapfactoryv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/uniswapFactorys/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1812,14 +1910,14 @@ sub uniswap_v2_get_uniswap_factory_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapFactoryV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapFactoryDTO]', $response);
     return $_response_object;
 }
 
 #
-# uniswap_v2_get_user_v2s__historical
+# uniswap_v2_get_users__historical
 #
-# UserV2s (historical) 🔥
+# Users (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1854,19 +1952,19 @@ sub uniswap_v2_get_uniswap_factory_v2s__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_user_v2s__historical' } = {
-        summary => 'UserV2s (historical) 🔥',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_users__historical' } = {
+        summary => 'Users (historical) 🔥',
         params => $params,
-        returns => 'ARRAY[UniswapV2UserV2DTO]',
+        returns => 'ARRAY[UniswapV2UserDTO]',
         };
 }
-# @return ARRAY[UniswapV2UserV2DTO]
+# @return ARRAY[UniswapV2UserDTO]
 #
-sub uniswap_v2_get_user_v2s__historical {
+sub uniswap_v2_get_users__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/userv2s/historical';
+    my $_resource_path = '/dapps/uniswapv2/users/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1916,7 +2014,557 @@ sub uniswap_v2_get_user_v2s__historical {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UserV2DTO]', $response);
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UserDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_liquidity_position_snapshots__current
+#
+# LiquidityPositionSnapshots (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_liquidity_position_snapshots__current' } = {
+        summary => 'LiquidityPositionSnapshots (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[UniswapV2LiquidityPositionSnapshotDTO]
+#
+sub uniswap_v2_liquidity_position_snapshots__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositionSnapshots/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_liquidity_positions__current
+#
+# LiquidityPositions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_liquidity_positions__current' } = {
+        summary => 'LiquidityPositions (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2LiquidityPositionDTO]',
+        };
+}
+# @return ARRAY[UniswapV2LiquidityPositionDTO]
+#
+sub uniswap_v2_liquidity_positions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_mints__current
+#
+# Mints (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_mints__current' } = {
+        summary => 'Mints (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2MintDTO]',
+        };
+}
+# @return ARRAY[UniswapV2MintDTO]
+#
+sub uniswap_v2_mints__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/mints/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2MintDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_pair_day_datas__current
+#
+# PairDayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_day_datas__current' } = {
+        summary => 'PairDayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2PairDayDataDTO]',
+        };
+}
+# @return ARRAY[UniswapV2PairDayDataDTO]
+#
+sub uniswap_v2_pair_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/pairDayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_pair_hour_datas__current
+#
+# PairHourDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_hour_datas__current' } = {
+        summary => 'PairHourDatas (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2PairHourDataDTO]',
+        };
+}
+# @return ARRAY[UniswapV2PairHourDataDTO]
+#
+sub uniswap_v2_pair_hour_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/pairHourDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairHourDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_pairs__current
+#
+# Pairs (current)
+#
+# @param string $id Pair contract address. (optional)
+{
+    my $params = {
+    'id' => {
+        data_type => 'string',
+        description => 'Pair contract address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_pairs__current' } = {
+        summary => 'Pairs (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2PairDTO]',
+        };
+}
+# @return ARRAY[UniswapV2PairDTO]
+#
+sub uniswap_v2_pairs__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/pairs/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_token_day_datas__current
+#
+# TokenDayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_token_day_datas__current' } = {
+        summary => 'TokenDayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2TokenDayDataDTO]',
+        };
+}
+# @return ARRAY[UniswapV2TokenDayDataDTO]
+#
+sub uniswap_v2_token_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/tokenDayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_transactions__current
+#
+# Transactions (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_transactions__current' } = {
+        summary => 'Transactions (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2TransactionDTO]',
+        };
+}
+# @return ARRAY[UniswapV2TransactionDTO]
+#
+sub uniswap_v2_transactions__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/transactions/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TransactionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_uniswap_day_datas__current
+#
+# UniswapDayDatas (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_day_datas__current' } = {
+        summary => 'UniswapDayDatas (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2UniswapDayDataDTO]',
+        };
+}
+# @return ARRAY[UniswapV2UniswapDayDataDTO]
+#
+sub uniswap_v2_uniswap_day_datas__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/uniswapDayDatas/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_uniswap_factorys__current
+#
+# UniswapFactorys (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_factorys__current' } = {
+        summary => 'UniswapFactorys (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2UniswapFactoryDTO]',
+        };
+}
+# @return ARRAY[UniswapV2UniswapFactoryDTO]
+#
+sub uniswap_v2_uniswap_factorys__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/uniswapFactorys/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapFactoryDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_users__current
+#
+# Users (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_users__current' } = {
+        summary => 'Users (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2UserDTO]',
+        };
+}
+# @return ARRAY[UniswapV2UserDTO]
+#
+sub uniswap_v2_users__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/users/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UserDTO]', $response);
     return $_response_object;
 }
 

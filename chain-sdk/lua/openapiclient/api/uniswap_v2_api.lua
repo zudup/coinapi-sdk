@@ -16,21 +16,21 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_uniswap_v2_bundle_v2_dto = require "openapiclient.model.uniswap_v2_bundle_v2_dto"
-local openapiclient_uniswap_v2_burn_v2_dto = require "openapiclient.model.uniswap_v2_burn_v2_dto"
-local openapiclient_uniswap_v2_liquidity_position_snapshot_v2_dto = require "openapiclient.model.uniswap_v2_liquidity_position_snapshot_v2_dto"
-local openapiclient_uniswap_v2_liquidity_position_v2_dto = require "openapiclient.model.uniswap_v2_liquidity_position_v2_dto"
-local openapiclient_uniswap_v2_mint_v2_dto = require "openapiclient.model.uniswap_v2_mint_v2_dto"
-local openapiclient_uniswap_v2_pair_day_data_v2_dto = require "openapiclient.model.uniswap_v2_pair_day_data_v2_dto"
-local openapiclient_uniswap_v2_pair_hour_data_v2_dto = require "openapiclient.model.uniswap_v2_pair_hour_data_v2_dto"
-local openapiclient_uniswap_v2_pair_v2_dto = require "openapiclient.model.uniswap_v2_pair_v2_dto"
-local openapiclient_uniswap_v2_swap_v2_dto = require "openapiclient.model.uniswap_v2_swap_v2_dto"
-local openapiclient_uniswap_v2_token_day_data_v2_dto = require "openapiclient.model.uniswap_v2_token_day_data_v2_dto"
-local openapiclient_uniswap_v2_token_v2_dto = require "openapiclient.model.uniswap_v2_token_v2_dto"
-local openapiclient_uniswap_v2_transaction_v2_dto = require "openapiclient.model.uniswap_v2_transaction_v2_dto"
-local openapiclient_uniswap_v2_uniswap_day_data_v2_dto = require "openapiclient.model.uniswap_v2_uniswap_day_data_v2_dto"
-local openapiclient_uniswap_v2_uniswap_factory_v2_dto = require "openapiclient.model.uniswap_v2_uniswap_factory_v2_dto"
-local openapiclient_uniswap_v2_user_v2_dto = require "openapiclient.model.uniswap_v2_user_v2_dto"
+local openapiclient_uniswap_v2_bundle_dto = require "openapiclient.model.uniswap_v2_bundle_dto"
+local openapiclient_uniswap_v2_burn_dto = require "openapiclient.model.uniswap_v2_burn_dto"
+local openapiclient_uniswap_v2_liquidity_position_dto = require "openapiclient.model.uniswap_v2_liquidity_position_dto"
+local openapiclient_uniswap_v2_liquidity_position_snapshot_dto = require "openapiclient.model.uniswap_v2_liquidity_position_snapshot_dto"
+local openapiclient_uniswap_v2_mint_dto = require "openapiclient.model.uniswap_v2_mint_dto"
+local openapiclient_uniswap_v2_pair_dto = require "openapiclient.model.uniswap_v2_pair_dto"
+local openapiclient_uniswap_v2_pair_day_data_dto = require "openapiclient.model.uniswap_v2_pair_day_data_dto"
+local openapiclient_uniswap_v2_pair_hour_data_dto = require "openapiclient.model.uniswap_v2_pair_hour_data_dto"
+local openapiclient_uniswap_v2_swap_dto = require "openapiclient.model.uniswap_v2_swap_dto"
+local openapiclient_uniswap_v2_token_dto = require "openapiclient.model.uniswap_v2_token_dto"
+local openapiclient_uniswap_v2_token_day_data_dto = require "openapiclient.model.uniswap_v2_token_day_data_dto"
+local openapiclient_uniswap_v2_transaction_dto = require "openapiclient.model.uniswap_v2_transaction_dto"
+local openapiclient_uniswap_v2_uniswap_day_data_dto = require "openapiclient.model.uniswap_v2_uniswap_day_data_dto"
+local openapiclient_uniswap_v2_uniswap_factory_dto = require "openapiclient.model.uniswap_v2_uniswap_factory_dto"
+local openapiclient_uniswap_v2_user_dto = require "openapiclient.model.uniswap_v2_user_dto"
 
 local uniswap_v2_api = {}
 local uniswap_v2_api_mt = {
@@ -58,12 +58,110 @@ local function new_uniswap_v2_api(authority, basePath, schemes)
 	}, uniswap_v2_api_mt)
 end
 
-function uniswap_v2_api:uniswap_v2_get_bundle_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_bundles__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/bundlev2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/bundles/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_bundle_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_burns__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/burns/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_burn_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_get_bundles__historical(start_block, end_block, start_date, end_date, id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/bundles/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -93,7 +191,7 @@ function uniswap_v2_api:uniswap_v2_get_bundle_v2s__historical(start_block, end_b
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_bundle_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_bundle_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -107,12 +205,12 @@ function uniswap_v2_api:uniswap_v2_get_bundle_v2s__historical(start_block, end_b
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_burn_v2s__historical(start_block, end_block, start_date, end_date, id, pair)
+function uniswap_v2_api:uniswap_v2_get_burns__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/burnv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+		path = string.format("%s/dapps/uniswapv2/burns/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
 	})
 
@@ -142,7 +240,7 @@ function uniswap_v2_api:uniswap_v2_get_burn_v2s__historical(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_burn_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_burn_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -156,12 +254,12 @@ function uniswap_v2_api:uniswap_v2_get_burn_v2s__historical(start_block, end_blo
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_liquidity_position_snapshot_v2s__historical(start_block, end_block, start_date, end_date, id, user, pair)
+function uniswap_v2_api:uniswap_v2_get_liquidity_position_snapshots__historical(start_block, end_block, start_date, end_date, id, user, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
+		path = string.format("%s/dapps/uniswapv2/liquidityPositionSnapshots/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user), http_util.encodeURIComponent(pair));
 	})
 
@@ -191,7 +289,7 @@ function uniswap_v2_api:uniswap_v2_get_liquidity_position_snapshot_v2s__historic
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_liquidity_position_snapshot_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_liquidity_position_snapshot_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -205,12 +303,12 @@ function uniswap_v2_api:uniswap_v2_get_liquidity_position_snapshot_v2s__historic
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_liquidity_position_v2s__historical(start_block, end_block, start_date, end_date, id, user, pair)
+function uniswap_v2_api:uniswap_v2_get_liquidity_positions__historical(start_block, end_block, start_date, end_date, id, user, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/liquiditypositionv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
+		path = string.format("%s/dapps/uniswapv2/liquidityPositions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user), http_util.encodeURIComponent(pair));
 	})
 
@@ -240,7 +338,7 @@ function uniswap_v2_api:uniswap_v2_get_liquidity_position_v2s__historical(start_
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_liquidity_position_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_liquidity_position_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -254,12 +352,12 @@ function uniswap_v2_api:uniswap_v2_get_liquidity_position_v2s__historical(start_
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_mint_v2s__historical(start_block, end_block, start_date, end_date, id, pair)
+function uniswap_v2_api:uniswap_v2_get_mints__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/mintv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+		path = string.format("%s/dapps/uniswapv2/mints/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
 	})
 
@@ -289,7 +387,7 @@ function uniswap_v2_api:uniswap_v2_get_mint_v2s__historical(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_mint_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_mint_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -303,12 +401,12 @@ function uniswap_v2_api:uniswap_v2_get_mint_v2s__historical(start_block, end_blo
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_pair_day_data_v2s__historical(start_block, end_block, start_date, end_date, id, token_0, token_1)
+function uniswap_v2_api:uniswap_v2_get_pair_day_datas__historical(start_block, end_block, start_date, end_date, id, token_0, token_1)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/pairdaydatav2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&token_0=%s&token_1=%s",
+		path = string.format("%s/dapps/uniswapv2/pairDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&token_0=%s&token_1=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(token_0), http_util.encodeURIComponent(token_1));
 	})
 
@@ -338,7 +436,7 @@ function uniswap_v2_api:uniswap_v2_get_pair_day_data_v2s__historical(start_block
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_pair_day_data_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_pair_day_data_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -352,12 +450,12 @@ function uniswap_v2_api:uniswap_v2_get_pair_day_data_v2s__historical(start_block
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_pair_hour_data_v2s__historical(start_block, end_block, start_date, end_date, id, pair)
+function uniswap_v2_api:uniswap_v2_get_pair_hour_datas__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/pairhourdatav2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+		path = string.format("%s/dapps/uniswapv2/pairHourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
 	})
 
@@ -387,7 +485,7 @@ function uniswap_v2_api:uniswap_v2_get_pair_hour_data_v2s__historical(start_bloc
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_pair_hour_data_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_pair_hour_data_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -401,12 +499,12 @@ function uniswap_v2_api:uniswap_v2_get_pair_hour_data_v2s__historical(start_bloc
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_pair_v2s__historical(start_block, end_block, start_date, end_date, id, token_0, token_1)
+function uniswap_v2_api:uniswap_v2_get_pairs__historical(start_block, end_block, start_date, end_date, id, token_0, token_1)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/pairv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&token_0=%s&token_1=%s",
+		path = string.format("%s/dapps/uniswapv2/pairs/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&token_0=%s&token_1=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(token_0), http_util.encodeURIComponent(token_1));
 	})
 
@@ -436,7 +534,7 @@ function uniswap_v2_api:uniswap_v2_get_pair_v2s__historical(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_pair_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_pair_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -485,56 +583,7 @@ function uniswap_v2_api:uniswap_v2_get_pools__current(filter_pool_id)
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_pair_v2_dto.cast(ob)
-		end
-		return result, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function uniswap_v2_api:uniswap_v2_get_swap_v2s__historical(start_block, end_block, start_date, end_date, id, pair)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/swapv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
-	req.headers:upsert("content-type", "text/plain")
-
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		local body, err, errno2 = stream:get_body_as_string()
-		-- exception when getting the HTTP body
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		local result, _, err3 = dkjson.decode(body)
-		-- exception when decoding the HTTP body
-		if result == nil then
-			return nil, err3
-		end
-		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_swap_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_pair_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -583,7 +632,7 @@ function uniswap_v2_api:uniswap_v2_get_swaps__current()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_swap_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_swap_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -597,12 +646,61 @@ function uniswap_v2_api:uniswap_v2_get_swaps__current()
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_token_day_data_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_get_swaps__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/tokendaydatav2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/swaps/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_swap_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_get_token_day_datas__historical(start_block, end_block, start_date, end_date, id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/tokenDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -632,56 +730,7 @@ function uniswap_v2_api:uniswap_v2_get_token_day_data_v2s__historical(start_bloc
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_token_day_data_v2_dto.cast(ob)
-		end
-		return result, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function uniswap_v2_api:uniswap_v2_get_token_v2s__historical(start_block, end_block, start_date, end_date, id, symbol, name)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/tokenv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&symbol=%s&name=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(symbol), http_util.encodeURIComponent(name));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "application/json", "text/json" }
-	req.headers:upsert("content-type", "text/plain")
-
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		local body, err, errno2 = stream:get_body_as_string()
-		-- exception when getting the HTTP body
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		local result, _, err3 = dkjson.decode(body)
-		-- exception when decoding the HTTP body
-		if result == nil then
-			return nil, err3
-		end
-		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_token_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_token_day_data_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -730,7 +779,7 @@ function uniswap_v2_api:uniswap_v2_get_tokens__current()
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_token_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_token_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -744,12 +793,61 @@ function uniswap_v2_api:uniswap_v2_get_tokens__current()
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_transaction_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_get_tokens__historical(start_block, end_block, start_date, end_date, id, symbol, name)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/transactionv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/tokens/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&symbol=%s&name=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(symbol), http_util.encodeURIComponent(name));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_token_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_get_transactions__historical(start_block, end_block, start_date, end_date, id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/transactions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -779,7 +877,7 @@ function uniswap_v2_api:uniswap_v2_get_transaction_v2s__historical(start_block, 
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_transaction_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_transaction_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -793,12 +891,12 @@ function uniswap_v2_api:uniswap_v2_get_transaction_v2s__historical(start_block, 
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_uniswap_day_data_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_get_uniswap_day_datas__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/uniswapdaydatav2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/uniswapDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -828,7 +926,7 @@ function uniswap_v2_api:uniswap_v2_get_uniswap_day_data_v2s__historical(start_bl
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_uniswap_day_data_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_uniswap_day_data_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -842,12 +940,12 @@ function uniswap_v2_api:uniswap_v2_get_uniswap_day_data_v2s__historical(start_bl
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_uniswap_factory_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_get_uniswap_factorys__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/uniswapfactoryv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/uniswapFactorys/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -877,7 +975,7 @@ function uniswap_v2_api:uniswap_v2_get_uniswap_factory_v2s__historical(start_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_uniswap_factory_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_uniswap_factory_dto.cast(ob)
 		end
 		return result, headers
 	else
@@ -891,12 +989,12 @@ function uniswap_v2_api:uniswap_v2_get_uniswap_factory_v2s__historical(start_blo
 	end
 end
 
-function uniswap_v2_api:uniswap_v2_get_user_v2s__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v2_api:uniswap_v2_get_users__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv2/userv2s/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv2/users/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -926,7 +1024,546 @@ function uniswap_v2_api:uniswap_v2_get_user_v2s__historical(start_block, end_blo
 			return nil, err3
 		end
 		for _, ob in ipairs(result) do
-			openapiclient_uniswap_v2_user_v2_dto.cast(ob)
+			openapiclient_uniswap_v2_user_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_liquidity_position_snapshots__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/liquidityPositionSnapshots/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_liquidity_position_snapshot_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_liquidity_positions__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/liquidityPositions/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_liquidity_position_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_mints__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/mints/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_mint_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_pair_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/pairDayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_pair_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_pair_hour_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/pairHourDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_pair_hour_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_pairs__current(id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/pairs/current?id=%s",
+			self.basePath, http_util.encodeURIComponent(id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_pair_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_token_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/tokenDayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_token_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_transactions__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/transactions/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_transaction_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_uniswap_day_datas__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/uniswapDayDatas/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_uniswap_day_data_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_uniswap_factorys__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/uniswapFactorys/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_uniswap_factory_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function uniswap_v2_api:uniswap_v2_users__current()
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/uniswapv2/users/current",
+			self.basePath);
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_uniswap_v2_user_dto.cast(ob)
 		end
 		return result, headers
 	else

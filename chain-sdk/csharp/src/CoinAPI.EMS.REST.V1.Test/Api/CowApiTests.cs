@@ -149,6 +149,61 @@ namespace CoinAPI.EMS.REST.V1.Test
             //Assert.IsInstanceOf(typeof(List<CowUserDTO>), response, "response is List<CowUserDTO>");
         }
         
+        /// <summary>
+        /// Test CowOrdersCurrent
+        /// </summary>
+        [Test]
+        public void CowOrdersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowOrdersCurrent();
+            //Assert.IsInstanceOf(typeof(List<CowOrderDTO>), response, "response is List<CowOrderDTO>");
+        }
+        
+        /// <summary>
+        /// Test CowSettlementsCurrent
+        /// </summary>
+        [Test]
+        public void CowSettlementsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowSettlementsCurrent();
+            //Assert.IsInstanceOf(typeof(List<CowSettlementDTO>), response, "response is List<CowSettlementDTO>");
+        }
+        
+        /// <summary>
+        /// Test CowTokensCurrent
+        /// </summary>
+        [Test]
+        public void CowTokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowTokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<CowTokenDTO>), response, "response is List<CowTokenDTO>");
+        }
+        
+        /// <summary>
+        /// Test CowTradesCurrent
+        /// </summary>
+        [Test]
+        public void CowTradesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowTradesCurrent();
+            //Assert.IsInstanceOf(typeof(List<CowTradeDTO>), response, "response is List<CowTradeDTO>");
+        }
+        
+        /// <summary>
+        /// Test CowUsersCurrent
+        /// </summary>
+        [Test]
+        public void CowUsersCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CowUsersCurrent();
+            //Assert.IsInstanceOf(typeof(List<CowUserDTO>), response, "response is List<CowUserDTO>");
+        }
+        
     }
 
 }
