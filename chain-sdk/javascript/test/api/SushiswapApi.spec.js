@@ -48,26 +48,6 @@
   }
 
   describe('SushiswapApi', function() {
-    describe('curveGetExchangesCurrent', function() {
-      it('should call curveGetExchangesCurrent successfully', function(done) {
-        //uncomment below and update the code to test curveGetExchangesCurrent
-        //instance.curveGetExchangesCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetTradesCurrent', function() {
-      it('should call dexGetTradesCurrent successfully', function(done) {
-        //uncomment below and update the code to test dexGetTradesCurrent
-        //instance.dexGetTradesCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('sushiswapBundlesCurrent', function() {
       it('should call sushiswapBundlesCurrent successfully', function(done) {
         //uncomment below and update the code to test sushiswapBundlesCurrent
@@ -212,16 +192,6 @@
       it('should call sushiswapGetPairsHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetPairsHistorical
         //instance.sushiswapGetPairsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetPoolsCurrent', function() {
-      it('should call sushiswapGetPoolsCurrent successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetPoolsCurrent
-        //instance.sushiswapGetPoolsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

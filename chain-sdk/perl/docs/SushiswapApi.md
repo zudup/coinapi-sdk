@@ -9,8 +9,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**curve_get_exchanges__current**](SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**dex_get_trades__current**](SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**sushiswap_bundles__current**](SushiswapApi.md#sushiswap_bundles__current) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswap_burns__current**](SushiswapApi.md#sushiswap_burns__current) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**sushiswap_day_datas__current**](SushiswapApi.md#sushiswap_day_datas__current) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -26,7 +24,6 @@ Method | HTTP request | Description
 [**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswap_get_pairs__historical**](SushiswapApi.md#sushiswap_get_pairs__historical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -45,90 +42,6 @@ Method | HTTP request | Description
 [**sushiswap_transactions__current**](SushiswapApi.md#sushiswap_transactions__current) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswap_users__current**](SushiswapApi.md#sushiswap_users__current) | **GET** /dapps/sushiswap/users/current | Users (current)
 
-
-# **curve_get_exchanges__current**
-> ARRAY[CurveExchangeDTO] curve_get_exchanges__current()
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-
-eval {
-    my $result = $api_instance->curve_get_exchanges__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->curve_get_exchanges__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[CurveExchangeDTO]**](CurveExchangeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dex_get_trades__current**
-> ARRAY[DexTradeDTO] dex_get_trades__current()
-
-Trades (current) 🔥
-
-Gets trades.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-
-eval {
-    my $result = $api_instance->dex_get_trades__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->dex_get_trades__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[DexTradeDTO]**](DexTradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswap_bundles__current**
 > ARRAY[SushiswapBundleDTO] sushiswap_bundles__current()
@@ -902,48 +815,6 @@ Name | Type | Description  | Notes
  **name** | **string**|  | [optional] 
  **token_0** | **string**|  | [optional] 
  **token_1** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pools__current**
-> ARRAY[SushiswapPairDTO] sushiswap_get_pools__current()
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-
-eval {
-    my $result = $api_instance->sushiswap_get_pools__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pools__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 

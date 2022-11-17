@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatashistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatashistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**UniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapv2getpairshistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatashistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatashistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapv2pairdaydatascurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapv2pairhourdatascurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**UniswapV2PairsCurrent**](UniswapV2Api.md#uniswapv2pairscurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**UniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapv2swapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapv2tokendaydatascurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2TokensCurrent**](UniswapV2Api.md#uniswapv2tokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapv2transactionscurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatascurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoryscurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -876,154 +875,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetPoolsCurrent
-
-> List&lt;UniswapV2PairDTO&gt; UniswapV2GetPoolsCurrent (string filterPoolId = null)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV2GetPoolsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV2Api(Configuration.Default);
-            var filterPoolId = "filterPoolId_example";  // string |  (optional) 
-
-            try
-            {
-                // Pools (current) 🔥
-                List<UniswapV2PairDTO> result = apiInstance.UniswapV2GetPoolsCurrent(filterPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetPoolsCurrent: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string**|  | [optional] 
-
-### Return type
-
-[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetSwapsCurrent
-
-> List&lt;UniswapV2SwapDTO&gt; UniswapV2GetSwapsCurrent ()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV2GetSwapsCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV2Api(Configuration.Default);
-
-            try
-            {
-                // Swaps (current) 🔥
-                List<UniswapV2SwapDTO> result = apiInstance.UniswapV2GetSwapsCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetSwapsCurrent: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## UniswapV2GetSwapsHistorical
 
 > List&lt;UniswapV2SwapDTO&gt; UniswapV2GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
@@ -1172,78 +1023,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetTokensCurrent
-
-> List&lt;UniswapV2TokenDTO&gt; UniswapV2GetTokensCurrent ()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class UniswapV2GetTokensCurrentExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new UniswapV2Api(Configuration.Default);
-
-            try
-            {
-                // Tokens (current) 🔥
-                List<UniswapV2TokenDTO> result = apiInstance.UniswapV2GetTokensCurrent();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling UniswapV2Api.UniswapV2GetTokensCurrent: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -2126,6 +1905,82 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UniswapV2SwapsCurrent
+
+> List&lt;UniswapV2SwapDTO&gt; UniswapV2SwapsCurrent (string pair = null)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2SwapsCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
+
+            try
+            {
+                // Swaps (current)
+                List<UniswapV2SwapDTO> result = apiInstance.UniswapV2SwapsCurrent(pair);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2SwapsCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string**| Reference to pair. | [optional] 
+
+### Return type
+
+[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UniswapV2TokenDayDatasCurrent
 
 > List&lt;UniswapV2TokenDayDataDTO&gt; UniswapV2TokenDayDatasCurrent ()
@@ -2176,6 +2031,78 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2TokensCurrent
+
+> List&lt;UniswapV2TokenDTO&gt; UniswapV2TokensCurrent ()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class UniswapV2TokensCurrentExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new UniswapV2Api(Configuration.Default);
+
+            try
+            {
+                // Tokens (current)
+                List<UniswapV2TokenDTO> result = apiInstance.UniswapV2TokensCurrent();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling UniswapV2Api.UniswapV2TokensCurrent: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

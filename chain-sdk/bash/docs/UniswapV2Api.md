@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -425,73 +424,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## uniswapV2GetPoolsCurrent
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-
-```bash
- uniswapV2GetPoolsCurrent  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-[**array[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV2GetSwapsCurrent
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```bash
- uniswapV2GetSwapsCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## uniswapV2GetSwapsHistorical
 
 Swaps (historical) 🔥
@@ -558,38 +490,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## uniswapV2GetTokensCurrent
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```bash
- uniswapV2GetTokensCurrent
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -995,6 +895,41 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## uniswapV2SwapsCurrent
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```bash
+ uniswapV2SwapsCurrent  pair=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## uniswapV2TokenDayDatasCurrent
 
 TokenDayDatas (current)
@@ -1014,6 +949,38 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**array[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2TokensCurrent
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```bash
+ uniswapV2TokensCurrent
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

@@ -375,49 +375,6 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetPoolsCurrent ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/pools/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (filterPoolId != null) {
-            queryParams.put("filter_pool_id", filterPoolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV2PairDTO.class )
-
-    }
-
-    def uniswapV2GetSwapsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/swaps/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV2SwapDTO.class )
-
-    }
-
     def uniswapV2GetSwapsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswapv2/swaps/historical"
 
@@ -488,26 +445,6 @@ class UniswapV2Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV2TokenDayDataDTO.class )
-
-    }
-
-    def uniswapV2GetTokensCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/tokens/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV2TokenDTO.class )
 
     }
 
@@ -815,6 +752,29 @@ class UniswapV2Api {
 
     }
 
+    def uniswapV2SwapsCurrent ( String pair, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/swaps/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (pair != null) {
+            queryParams.put("pair", pair)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    UniswapV2SwapDTO.class )
+
+    }
+
     def uniswapV2TokenDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswapv2/tokenDayDatas/current"
 
@@ -832,6 +792,26 @@ class UniswapV2Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV2TokenDayDataDTO.class )
+
+    }
+
+    def uniswapV2TokensCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/tokens/current"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    UniswapV2TokenDTO.class )
 
     }
 

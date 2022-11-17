@@ -107,24 +107,6 @@ void main() {
       // TODO
     });
 
-    // Pools (current) 🔥
-    //
-    // Gets pools.
-    //
-    //Future<List<UniswapV2PairDTO>> uniswapV2GetPoolsCurrent({ String filterPoolId }) async
-    test('test uniswapV2GetPoolsCurrent', () async {
-      // TODO
-    });
-
-    // Swaps (current) 🔥
-    //
-    // Gets swaps.
-    //
-    //Future<List<UniswapV2SwapDTO>> uniswapV2GetSwapsCurrent() async
-    test('test uniswapV2GetSwapsCurrent', () async {
-      // TODO
-    });
-
     // Swaps (historical) 🔥
     //
     // Gets swaps.
@@ -140,15 +122,6 @@ void main() {
     //
     //Future<List<UniswapV2TokenDayDataDTO>> uniswapV2GetTokenDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
     test('test uniswapV2GetTokenDayDatasHistorical', () async {
-      // TODO
-    });
-
-    // Tokens (current) 🔥
-    //
-    // Gets tokens.
-    //
-    //Future<List<UniswapV2TokenDTO>> uniswapV2GetTokensCurrent() async
-    test('test uniswapV2GetTokensCurrent', () async {
       // TODO
     });
 
@@ -251,12 +224,30 @@ void main() {
       // TODO
     });
 
+    // Swaps (current)
+    //
+    // Gets swaps.
+    //
+    //Future<List<UniswapV2SwapDTO>> uniswapV2SwapsCurrent({ String pair }) async
+    test('test uniswapV2SwapsCurrent', () async {
+      // TODO
+    });
+
     // TokenDayDatas (current)
     //
     // Gets tokenDayDatas.
     //
     //Future<List<UniswapV2TokenDayDataDTO>> uniswapV2TokenDayDatasCurrent() async
     test('test uniswapV2TokenDayDatasCurrent', () async {
+      // TODO
+    });
+
+    // Tokens (current)
+    //
+    // Gets tokens.
+    //
+    //Future<List<UniswapV2TokenDTO>> uniswapV2TokensCurrent() async
+    test('test uniswapV2TokensCurrent', () async {
       // TODO
     });
 

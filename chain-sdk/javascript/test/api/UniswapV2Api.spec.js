@@ -148,26 +148,6 @@
         done();
       });
     });
-    describe('uniswapV2GetPoolsCurrent', function() {
-      it('should call uniswapV2GetPoolsCurrent successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetPoolsCurrent
-        //instance.uniswapV2GetPoolsCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('uniswapV2GetSwapsCurrent', function() {
-      it('should call uniswapV2GetSwapsCurrent successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetSwapsCurrent
-        //instance.uniswapV2GetSwapsCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('uniswapV2GetSwapsHistorical', function() {
       it('should call uniswapV2GetSwapsHistorical successfully', function(done) {
         //uncomment below and update the code to test uniswapV2GetSwapsHistorical
@@ -182,16 +162,6 @@
       it('should call uniswapV2GetTokenDayDatasHistorical successfully', function(done) {
         //uncomment below and update the code to test uniswapV2GetTokenDayDatasHistorical
         //instance.uniswapV2GetTokenDayDatasHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('uniswapV2GetTokensCurrent', function() {
-      it('should call uniswapV2GetTokensCurrent successfully', function(done) {
-        //uncomment below and update the code to test uniswapV2GetTokensCurrent
-        //instance.uniswapV2GetTokensCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -308,10 +278,30 @@
         done();
       });
     });
+    describe('uniswapV2SwapsCurrent', function() {
+      it('should call uniswapV2SwapsCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2SwapsCurrent
+        //instance.uniswapV2SwapsCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('uniswapV2TokenDayDatasCurrent', function() {
       it('should call uniswapV2TokenDayDatasCurrent successfully', function(done) {
         //uncomment below and update the code to test uniswapV2TokenDayDatasCurrent
         //instance.uniswapV2TokenDayDatasCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uniswapV2TokensCurrent', function() {
+      it('should call uniswapV2TokensCurrent successfully', function(done) {
+        //uncomment below and update the code to test uniswapV2TokensCurrent
+        //instance.uniswapV2TokensCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

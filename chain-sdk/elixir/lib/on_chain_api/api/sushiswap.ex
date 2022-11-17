@@ -10,64 +10,6 @@ defmodule OnChainAPI.Api.Sushiswap do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  Exchanges (current) 🔥
-  Gets exchanges.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%CurveExchangeDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec curve_get_exchanges__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveExchangeDto.t)} | {:error, Tesla.Env.t}
-  def curve_get_exchanges__current(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/sushiswap/exchanges/current")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CurveExchangeDto{}]}
-    ])
-  end
-
-  @doc """
-  Trades (current) 🔥
-  Gets trades.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%DexTradeDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dex_get_trades__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTradeDto.t)} | {:error, Tesla.Env.t}
-  def dex_get_trades__current(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/sushiswap/trades/current")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.DexTradeDto{}]}
-    ])
-  end
-
-  @doc """
   Bundles (current)
   Gets bundles.
 
@@ -673,35 +615,6 @@ defmodule OnChainAPI.Api.Sushiswap do
       |> method(:get)
       |> url("/dapps/sushiswap/pairs/historical")
       |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.SushiswapPairDto{}]}
-    ])
-  end
-
-  @doc """
-  Pools (current) 🔥
-  Gets pools.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%SushiswapPairDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec sushiswap_get_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_pools__current(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/sushiswap/pools/current")
       |> Enum.into([])
 
     connection

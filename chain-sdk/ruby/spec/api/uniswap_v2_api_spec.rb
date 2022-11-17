@@ -193,29 +193,6 @@ describe 'UniswapV2Api' do
     end
   end
 
-  # unit tests for uniswap_v2_get_pools__current
-  # Pools (current) 🔥
-  # Gets pools.
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :filter_pool_id 
-  # @return [Array<UniswapV2PairDTO>]
-  describe 'uniswap_v2_get_pools__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_swaps__current
-  # Swaps (current) 🔥
-  # Gets swaps.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<UniswapV2SwapDTO>]
-  describe 'uniswap_v2_get_swaps__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for uniswap_v2_get_swaps__historical
   # Swaps (historical) 🔥
   # Gets swaps.
@@ -244,17 +221,6 @@ describe 'UniswapV2Api' do
   # @option opts [String] :id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
   # @return [Array<UniswapV2TokenDayDataDTO>]
   describe 'uniswap_v2_get_token_day_datas__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_tokens__current
-  # Tokens (current) 🔥
-  # Gets tokens.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<UniswapV2TokenDTO>]
-  describe 'uniswap_v2_get_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -409,12 +375,35 @@ describe 'UniswapV2Api' do
     end
   end
 
+  # unit tests for uniswap_v2_swaps__current
+  # Swaps (current)
+  # Gets swaps.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :pair Reference to pair.
+  # @return [Array<UniswapV2SwapDTO>]
+  describe 'uniswap_v2_swaps__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for uniswap_v2_token_day_datas__current
   # TokenDayDatas (current)
   # Gets tokenDayDatas.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV2TokenDayDataDTO>]
   describe 'uniswap_v2_token_day_datas__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for uniswap_v2_tokens__current
+  # Tokens (current)
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<UniswapV2TokenDTO>]
+  describe 'uniswap_v2_tokens__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

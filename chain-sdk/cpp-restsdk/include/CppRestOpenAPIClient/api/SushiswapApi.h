@@ -23,8 +23,6 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
-#include "CppRestOpenAPIClient/model/Curve_ExchangeDTO.h"
-#include "CppRestOpenAPIClient/model/Dex_TradeDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_BundleDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_BurnDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_DayDataDTO.h"
@@ -61,22 +59,6 @@ public:
 
     virtual ~SushiswapApi();
 
-    /// <summary>
-    /// Exchanges (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets exchanges.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Curve_ExchangeDTO>>> curve_GetExchanges__current(
-    ) const;
-    /// <summary>
-    /// Trades (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets trades.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_GetTrades__current(
-    ) const;
     /// <summary>
     /// Bundles (current)
     /// </summary>
@@ -332,14 +314,6 @@ public:
         boost::optional<utility::string_t> name,
         boost::optional<utility::string_t> token0,
         boost::optional<utility::string_t> token1
-    ) const;
-    /// <summary>
-    /// Pools (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets pools.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
     /// Swaps (historical) 🔥

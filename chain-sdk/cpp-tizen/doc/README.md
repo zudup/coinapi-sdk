@@ -249,10 +249,6 @@ Method | HTTP request | Description
 ### SushiswapManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-*curveGetExchanges (current)Sync* | *GET* /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥.
-*curveGetExchanges (current)ASync* | *GET* /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥.
-*dexGetTrades (current)Sync* | *GET* /dapps/sushiswap/trades/current | Trades (current) 🔥.
-*dexGetTrades (current)ASync* | *GET* /dapps/sushiswap/trades/current | Trades (current) 🔥.
 *sushiswapBundles (current)Sync* | *GET* /dapps/sushiswap/bundles/current | Bundles (current).
 *sushiswapBundles (current)ASync* | *GET* /dapps/sushiswap/bundles/current | Bundles (current).
 *sushiswapBurns (current)Sync* | *GET* /dapps/sushiswap/burns/current | Burns (current).
@@ -283,8 +279,6 @@ Method | HTTP request | Description
 *sushiswapGetPairHourDatas (historical)ASync* | *GET* /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥.
 *sushiswapGetPairs (historical)Sync* | *GET* /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥.
 *sushiswapGetPairs (historical)ASync* | *GET* /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥.
-*sushiswapGetPools (current)Sync* | *GET* /dapps/sushiswap/pools/current | Pools (current) 🔥.
-*sushiswapGetPools (current)ASync* | *GET* /dapps/sushiswap/pools/current | Pools (current) 🔥.
 *sushiswapGetSwaps (historical)Sync* | *GET* /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥.
 *sushiswapGetSwaps (historical)ASync* | *GET* /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥.
 *sushiswapGetTokenDayDatas (historical)Sync* | *GET* /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥.
@@ -344,16 +338,10 @@ Method | HTTP request | Description
 *uniswapV2GetPairHourDatas (historical)ASync* | *GET* /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥.
 *uniswapV2GetPairs (historical)Sync* | *GET* /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥.
 *uniswapV2GetPairs (historical)ASync* | *GET* /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥.
-*uniswapV2GetPools (current)Sync* | *GET* /dapps/uniswapv2/pools/current | Pools (current) 🔥.
-*uniswapV2GetPools (current)ASync* | *GET* /dapps/uniswapv2/pools/current | Pools (current) 🔥.
-*uniswapV2GetSwaps (current)Sync* | *GET* /dapps/uniswapv2/swaps/current | Swaps (current) 🔥.
-*uniswapV2GetSwaps (current)ASync* | *GET* /dapps/uniswapv2/swaps/current | Swaps (current) 🔥.
 *uniswapV2GetSwaps (historical)Sync* | *GET* /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥.
 *uniswapV2GetSwaps (historical)ASync* | *GET* /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥.
 *uniswapV2GetTokenDayDatas (historical)Sync* | *GET* /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥.
 *uniswapV2GetTokenDayDatas (historical)ASync* | *GET* /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥.
-*uniswapV2GetTokens (current)Sync* | *GET* /dapps/uniswapv2/tokens/current | Tokens (current) 🔥.
-*uniswapV2GetTokens (current)ASync* | *GET* /dapps/uniswapv2/tokens/current | Tokens (current) 🔥.
 *uniswapV2GetTokens (historical)Sync* | *GET* /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥.
 *uniswapV2GetTokens (historical)ASync* | *GET* /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥.
 *uniswapV2GetTransactions (historical)Sync* | *GET* /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥.
@@ -376,8 +364,12 @@ Method | HTTP request | Description
 *uniswapV2PairHourDatas (current)ASync* | *GET* /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current).
 *uniswapV2Pairs (current)Sync* | *GET* /dapps/uniswapv2/pairs/current | Pairs (current).
 *uniswapV2Pairs (current)ASync* | *GET* /dapps/uniswapv2/pairs/current | Pairs (current).
+*uniswapV2Swaps (current)Sync* | *GET* /dapps/uniswapv2/swaps/current | Swaps (current).
+*uniswapV2Swaps (current)ASync* | *GET* /dapps/uniswapv2/swaps/current | Swaps (current).
 *uniswapV2TokenDayDatas (current)Sync* | *GET* /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current).
 *uniswapV2TokenDayDatas (current)ASync* | *GET* /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current).
+*uniswapV2Tokens (current)Sync* | *GET* /dapps/uniswapv2/tokens/current | Tokens (current).
+*uniswapV2Tokens (current)ASync* | *GET* /dapps/uniswapv2/tokens/current | Tokens (current).
 *uniswapV2Transactions (current)Sync* | *GET* /dapps/uniswapv2/transactions/current | Transactions (current).
 *uniswapV2Transactions (current)ASync* | *GET* /dapps/uniswapv2/transactions/current | Transactions (current).
 *uniswapV2UniswapDayDatas (current)Sync* | *GET* /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current).

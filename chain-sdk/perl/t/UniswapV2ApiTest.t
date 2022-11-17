@@ -141,19 +141,6 @@ isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 #my $uniswap_v2_get_pairs__historical_result = $api->uniswap_v2_get_pairs__historical(start_block => $uniswap_v2_get_pairs__historical_start_block, end_block => $uniswap_v2_get_pairs__historical_end_block, start_date => $uniswap_v2_get_pairs__historical_start_date, end_date => $uniswap_v2_get_pairs__historical_end_date, id => $uniswap_v2_get_pairs__historical_id, token_0 => $uniswap_v2_get_pairs__historical_token_0, token_1 => $uniswap_v2_get_pairs__historical_token_1);
 
 #
-# uniswap_v2_get_pools__current test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_pools__current_filter_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__current_result = $api->uniswap_v2_get_pools__current(filter_pool_id => $uniswap_v2_get_pools__current_filter_pool_id);
-
-#
-# uniswap_v2_get_swaps__current test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_swaps__current_result = $api->uniswap_v2_get_swaps__current();
-
-#
 # uniswap_v2_get_swaps__historical test
 #
 # uncomment below and update the test
@@ -175,12 +162,6 @@ isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 #my $uniswap_v2_get_token_day_datas__historical_end_date = undef; # replace NULL with a proper value
 #my $uniswap_v2_get_token_day_datas__historical_id = undef; # replace NULL with a proper value
 #my $uniswap_v2_get_token_day_datas__historical_result = $api->uniswap_v2_get_token_day_datas__historical(start_block => $uniswap_v2_get_token_day_datas__historical_start_block, end_block => $uniswap_v2_get_token_day_datas__historical_end_block, start_date => $uniswap_v2_get_token_day_datas__historical_start_date, end_date => $uniswap_v2_get_token_day_datas__historical_end_date, id => $uniswap_v2_get_token_day_datas__historical_id);
-
-#
-# uniswap_v2_get_tokens__current test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_tokens__current_result = $api->uniswap_v2_get_tokens__current();
 
 #
 # uniswap_v2_get_tokens__historical test
@@ -277,10 +258,23 @@ isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 #my $uniswap_v2_pairs__current_result = $api->uniswap_v2_pairs__current(id => $uniswap_v2_pairs__current_id);
 
 #
+# uniswap_v2_swaps__current test
+#
+# uncomment below and update the test
+#my $uniswap_v2_swaps__current_pair = undef; # replace NULL with a proper value
+#my $uniswap_v2_swaps__current_result = $api->uniswap_v2_swaps__current(pair => $uniswap_v2_swaps__current_pair);
+
+#
 # uniswap_v2_token_day_datas__current test
 #
 # uncomment below and update the test
 #my $uniswap_v2_token_day_datas__current_result = $api->uniswap_v2_token_day_datas__current();
+
+#
+# uniswap_v2_tokens__current test
+#
+# uncomment below and update the test
+#my $uniswap_v2_tokens__current_result = $api->uniswap_v2_tokens__current();
 
 #
 # uniswap_v2_transactions__current test

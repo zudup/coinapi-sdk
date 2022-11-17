@@ -389,9 +389,7 @@ case $state in
             "dexTradesCurrent[Trades (current)]" \
             "dexUsersCurrent[Users (current)]" \
             "dexWithdrawRequestsCurrent[WithdrawRequests (current)]" \
-            "dexWithdrawsCurrent[Withdraws (current)]"             "curveGetExchangesCurrent[Exchanges (current) 🔥]" \
-            "dexGetTradesCurrent[Trades (current) 🔥]" \
-            "sushiswapBundlesCurrent[Bundles (current)]" \
+            "dexWithdrawsCurrent[Withdraws (current)]"             "sushiswapBundlesCurrent[Bundles (current)]" \
             "sushiswapBurnsCurrent[Burns (current)]" \
             "sushiswapDayDatasCurrent[DayDatas (current)]" \
             "sushiswapFactorysCurrent[Factorys (current)]" \
@@ -406,7 +404,6 @@ case $state in
             "sushiswapGetPairDayDatasHistorical[PairDayDatas (historical) 🔥]" \
             "sushiswapGetPairHourDatasHistorical[PairHourDatas (historical) 🔥]" \
             "sushiswapGetPairsHistorical[Pairs (historical) 🔥]" \
-            "sushiswapGetPoolsCurrent[Pools (current) 🔥]" \
             "sushiswapGetSwapsHistorical[Swaps (historical) 🔥]" \
             "sushiswapGetTokenDayDatasHistorical[TokenDayDatas (historical) 🔥]" \
             "sushiswapGetTokensHistorical[Tokens (historical) 🔥]" \
@@ -433,11 +430,8 @@ case $state in
             "uniswapV2GetPairDayDatasHistorical[PairDayDatas (historical) 🔥]" \
             "uniswapV2GetPairHourDatasHistorical[PairHourDatas (historical) 🔥]" \
             "uniswapV2GetPairsHistorical[Pairs (historical) 🔥]" \
-            "uniswapV2GetPoolsCurrent[Pools (current) 🔥]" \
-            "uniswapV2GetSwapsCurrent[Swaps (current) 🔥]" \
             "uniswapV2GetSwapsHistorical[Swaps (historical) 🔥]" \
             "uniswapV2GetTokenDayDatasHistorical[TokenDayDatas (historical) 🔥]" \
-            "uniswapV2GetTokensCurrent[Tokens (current) 🔥]" \
             "uniswapV2GetTokensHistorical[Tokens (historical) 🔥]" \
             "uniswapV2GetTransactionsHistorical[Transactions (historical) 🔥]" \
             "uniswapV2GetUniswapDayDatasHistorical[UniswapDayDatas (historical) 🔥]" \
@@ -449,7 +443,9 @@ case $state in
             "uniswapV2PairDayDatasCurrent[PairDayDatas (current)]" \
             "uniswapV2PairHourDatasCurrent[PairHourDatas (current)]" \
             "uniswapV2PairsCurrent[Pairs (current)]" \
+            "uniswapV2SwapsCurrent[Swaps (current)]" \
             "uniswapV2TokenDayDatasCurrent[TokenDayDatas (current)]" \
+            "uniswapV2TokensCurrent[Tokens (current)]" \
             "uniswapV2TransactionsCurrent[Transactions (current)]" \
             "uniswapV2UniswapDayDatasCurrent[UniswapDayDatas (current)]" \
             "uniswapV2UniswapFactorysCurrent[UniswapFactorys (current)]" \
@@ -1357,18 +1353,6 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      curveGetExchangesCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dexGetTradesCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       sushiswapBundlesCurrent)
         local -a _op_arguments
         _op_arguments=(
@@ -1525,12 +1509,6 @@ case $state in
 "token_0=:[QUERY] "
 "token_1=:[QUERY] "
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      sushiswapGetPoolsCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetSwapsHistorical)
@@ -1776,19 +1754,6 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetPoolsCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      uniswapV2GetSwapsCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       uniswapV2GetSwapsHistorical)
         local -a _op_arguments
         _op_arguments=(
@@ -1810,12 +1775,6 @@ case $state in
 "endDate=:[QUERY] The end date of timeframe."
 "id=:[QUERY] Token address and day id (day start timestamp in unix / 86400) concatenated with a dash."
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      uniswapV2GetTokensCurrent)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uniswapV2GetTokensHistorical)
@@ -1912,7 +1871,20 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      uniswapV2SwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "pair=:[QUERY] Reference to pair."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       uniswapV2TokenDayDatasCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2TokensCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )

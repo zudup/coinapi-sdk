@@ -1100,115 +1100,6 @@ sub uniswap_v2_get_pairs__historical {
 }
 
 #
-# uniswap_v2_get_pools__current
-#
-# Pools (current) 🔥
-#
-# @param string $filter_pool_id  (optional)
-{
-    my $params = {
-    'filter_pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools__current' } = {
-        summary => 'Pools (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2PairDTO]',
-        };
-}
-# @return ARRAY[UniswapV2PairDTO]
-#
-sub uniswap_v2_get_pools__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pools/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'filter_pool_id'}) {
-        $query_params->{'filter_pool_id'} = $self->{api_client}->to_query_value($args{'filter_pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_swaps__current
-#
-# Swaps (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__current' } = {
-        summary => 'Swaps (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2SwapDTO]',
-        };
-}
-# @return ARRAY[UniswapV2SwapDTO]
-#
-sub uniswap_v2_get_swaps__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/swaps/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapDTO]', $response);
-    return $_response_object;
-}
-
-#
 # uniswap_v2_get_swaps__historical
 #
 # Swaps (historical) 🔥
@@ -1424,55 +1315,6 @@ sub uniswap_v2_get_token_day_datas__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataDTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_tokens__current
-#
-# Tokens (current) 🔥
-#
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__current' } = {
-        summary => 'Tokens (current) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2TokenDTO]',
-        };
-}
-# @return ARRAY[UniswapV2TokenDTO]
-#
-sub uniswap_v2_get_tokens__current {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokens/current';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDTO]', $response);
     return $_response_object;
 }
 
@@ -2324,6 +2166,66 @@ sub uniswap_v2_pairs__current {
 }
 
 #
+# uniswap_v2_swaps__current
+#
+# Swaps (current)
+#
+# @param string $pair Reference to pair. (optional)
+{
+    my $params = {
+    'pair' => {
+        data_type => 'string',
+        description => 'Reference to pair.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_swaps__current' } = {
+        summary => 'Swaps (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2SwapDTO]',
+        };
+}
+# @return ARRAY[UniswapV2SwapDTO]
+#
+sub uniswap_v2_swaps__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/swaps/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapDTO]', $response);
+    return $_response_object;
+}
+
+#
 # uniswap_v2_token_day_datas__current
 #
 # TokenDayDatas (current)
@@ -2369,6 +2271,55 @@ sub uniswap_v2_token_day_datas__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v2_tokens__current
+#
+# Tokens (current)
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_tokens__current' } = {
+        summary => 'Tokens (current)',
+        params => $params,
+        returns => 'ARRAY[UniswapV2TokenDTO]',
+        };
+}
+# @return ARRAY[UniswapV2TokenDTO]
+#
+sub uniswap_v2_tokens__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv2/tokens/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDTO]', $response);
     return $_response_object;
 }
 

@@ -15,20 +15,6 @@ Please update as you see appropriate
 ]]
 describe("sushiswap_api", function()
   local openapiclient_sushiswap_api = require "openapiclient.api.sushiswap_api"
-  -- unit tests for curve_get_exchanges__current
-  describe("curve_get_exchanges__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_trades__current
-  describe("dex_get_trades__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for sushiswap_bundles__current
   describe("sushiswap_bundles__current test", function()
     it("should work", function()
@@ -129,13 +115,6 @@ describe("sushiswap_api", function()
 
   -- unit tests for sushiswap_get_pairs__historical
   describe("sushiswap_get_pairs__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for sushiswap_get_pools__current
-  describe("sushiswap_get_pools__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

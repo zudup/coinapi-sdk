@@ -122,8 +122,6 @@ Class | Method | HTTP request | Description
 *DEX_API* | [**dex_users_current**](docs/DEX_API.md#dex_users_current) | **Get** /dapps/dex/users/current | Users (current)
 *DEX_API* | [**dex_withdraw_requests_current**](docs/DEX_API.md#dex_withdraw_requests_current) | **Get** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DEX_API* | [**dex_withdraws_current**](docs/DEX_API.md#dex_withdraws_current) | **Get** /dapps/dex/withdraws/current | Withdraws (current)
-*SUSHISWAP_API* | [**curve_get_exchanges_current**](docs/SUSHISWAP_API.md#curve_get_exchanges_current) | **Get** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-*SUSHISWAP_API* | [**dex_get_trades_current**](docs/SUSHISWAP_API.md#dex_get_trades_current) | **Get** /dapps/sushiswap/trades/current | Trades (current) 🔥
 *SUSHISWAP_API* | [**sushiswap_bundles_current**](docs/SUSHISWAP_API.md#sushiswap_bundles_current) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 *SUSHISWAP_API* | [**sushiswap_burns_current**](docs/SUSHISWAP_API.md#sushiswap_burns_current) | **Get** /dapps/sushiswap/burns/current | Burns (current)
 *SUSHISWAP_API* | [**sushiswap_day_datas_current**](docs/SUSHISWAP_API.md#sushiswap_day_datas_current) | **Get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -139,7 +137,6 @@ Class | Method | HTTP request | Description
 *SUSHISWAP_API* | [**sushiswap_get_pair_day_datas_historical**](docs/SUSHISWAP_API.md#sushiswap_get_pair_day_datas_historical) | **Get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 *SUSHISWAP_API* | [**sushiswap_get_pair_hour_datas_historical**](docs/SUSHISWAP_API.md#sushiswap_get_pair_hour_datas_historical) | **Get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 *SUSHISWAP_API* | [**sushiswap_get_pairs_historical**](docs/SUSHISWAP_API.md#sushiswap_get_pairs_historical) | **Get** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-*SUSHISWAP_API* | [**sushiswap_get_pools_current**](docs/SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | Pools (current) 🔥
 *SUSHISWAP_API* | [**sushiswap_get_swaps_historical**](docs/SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 *SUSHISWAP_API* | [**sushiswap_get_token_day_datas_historical**](docs/SUSHISWAP_API.md#sushiswap_get_token_day_datas_historical) | **Get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 *SUSHISWAP_API* | [**sushiswap_get_tokens_historical**](docs/SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -167,11 +164,8 @@ Class | Method | HTTP request | Description
 *UNISWAPV2_API* | [**uniswap_v2_get_pair_day_datas_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_pair_day_datas_historical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_pair_hour_datas_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_pair_hour_datas_historical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_pairs_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_pairs_historical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-*UNISWAPV2_API* | [**uniswap_v2_get_pools_current**](docs/UNISWAPV2_API.md#uniswap_v2_get_pools_current) | **Get** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-*UNISWAPV2_API* | [**uniswap_v2_get_swaps_current**](docs/UNISWAPV2_API.md#uniswap_v2_get_swaps_current) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_swaps_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_swaps_historical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_token_day_datas_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_token_day_datas_historical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-*UNISWAPV2_API* | [**uniswap_v2_get_tokens_current**](docs/UNISWAPV2_API.md#uniswap_v2_get_tokens_current) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_tokens_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_tokens_historical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_transactions_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_transactions_historical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 *UNISWAPV2_API* | [**uniswap_v2_get_uniswap_day_datas_historical**](docs/UNISWAPV2_API.md#uniswap_v2_get_uniswap_day_datas_historical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -183,7 +177,9 @@ Class | Method | HTTP request | Description
 *UNISWAPV2_API* | [**uniswap_v2_pair_day_datas_current**](docs/UNISWAPV2_API.md#uniswap_v2_pair_day_datas_current) | **Get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 *UNISWAPV2_API* | [**uniswap_v2_pair_hour_datas_current**](docs/UNISWAPV2_API.md#uniswap_v2_pair_hour_datas_current) | **Get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 *UNISWAPV2_API* | [**uniswap_v2_pairs_current**](docs/UNISWAPV2_API.md#uniswap_v2_pairs_current) | **Get** /dapps/uniswapv2/pairs/current | Pairs (current)
+*UNISWAPV2_API* | [**uniswap_v2_swaps_current**](docs/UNISWAPV2_API.md#uniswap_v2_swaps_current) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current)
 *UNISWAPV2_API* | [**uniswap_v2_token_day_datas_current**](docs/UNISWAPV2_API.md#uniswap_v2_token_day_datas_current) | **Get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+*UNISWAPV2_API* | [**uniswap_v2_tokens_current**](docs/UNISWAPV2_API.md#uniswap_v2_tokens_current) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current)
 *UNISWAPV2_API* | [**uniswap_v2_transactions_current**](docs/UNISWAPV2_API.md#uniswap_v2_transactions_current) | **Get** /dapps/uniswapv2/transactions/current | Transactions (current)
 *UNISWAPV2_API* | [**uniswap_v2_uniswap_day_datas_current**](docs/UNISWAPV2_API.md#uniswap_v2_uniswap_day_datas_current) | **Get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 *UNISWAPV2_API* | [**uniswap_v2_uniswap_factorys_current**](docs/UNISWAPV2_API.md#uniswap_v2_uniswap_factorys_current) | **Get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)

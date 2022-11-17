@@ -17,24 +17,6 @@ void main() {
   // final instance = SushiswapApi();
 
   group('tests for SushiswapApi', () {
-    // Exchanges (current) 🔥
-    //
-    // Gets exchanges.
-    //
-    //Future<List<CurveExchangeDTO>> curveGetExchangesCurrent() async
-    test('test curveGetExchangesCurrent', () async {
-      // TODO
-    });
-
-    // Trades (current) 🔥
-    //
-    // Gets trades.
-    //
-    //Future<List<DexTradeDTO>> dexGetTradesCurrent() async
-    test('test dexGetTradesCurrent', () async {
-      // TODO
-    });
-
     // Bundles (current)
     //
     // Gets bundles.
@@ -167,15 +149,6 @@ void main() {
     //
     //Future<List<SushiswapPairDTO>> sushiswapGetPairsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String name, String token0, String token1 }) async
     test('test sushiswapGetPairsHistorical', () async {
-      // TODO
-    });
-
-    // Pools (current) 🔥
-    //
-    // Gets pools.
-    //
-    //Future<List<SushiswapPairDTO>> sushiswapGetPoolsCurrent() async
-    test('test sushiswapGetPoolsCurrent', () async {
       // TODO
     });
 

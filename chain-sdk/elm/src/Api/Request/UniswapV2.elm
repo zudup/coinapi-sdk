@@ -25,11 +25,8 @@ module Api.Request.UniswapV2 exposing
     , uniswapV2GetPairDayDatasHistorical
     , uniswapV2GetPairHourDatasHistorical
     , uniswapV2GetPairsHistorical
-    , uniswapV2GetPoolsCurrent
-    , uniswapV2GetSwapsCurrent
     , uniswapV2GetSwapsHistorical
     , uniswapV2GetTokenDayDatasHistorical
-    , uniswapV2GetTokensCurrent
     , uniswapV2GetTokensHistorical
     , uniswapV2GetTransactionsHistorical
     , uniswapV2GetUniswapDayDatasHistorical
@@ -41,7 +38,9 @@ module Api.Request.UniswapV2 exposing
     , uniswapV2PairDayDatasCurrent
     , uniswapV2PairHourDatasCurrent
     , uniswapV2PairsCurrent
+    , uniswapV2SwapsCurrent
     , uniswapV2TokenDayDatasCurrent
+    , uniswapV2TokensCurrent
     , uniswapV2TransactionsCurrent
     , uniswapV2UniswapDayDatasCurrent
     , uniswapV2UniswapFactorysCurrent
@@ -208,36 +207,6 @@ uniswapV2GetPairsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| Gets pools.
--}
-uniswapV2GetPoolsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV2PairDTO)
-uniswapV2GetPoolsCurrent filterPoolId_query =
-    Api.request
-        "GET"
-        "/dapps/uniswapv2/pools/current"
-        []
-        [ ( "filter_pool_id", Maybe.map identity filterPoolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV2PairDTODecoder)
-
-
-
-{-| Gets swaps.
--}
-uniswapV2GetSwapsCurrent : Api.Request (List Api.Data.UniswapV2SwapDTO)
-uniswapV2GetSwapsCurrent =
-    Api.request
-        "GET"
-        "/dapps/uniswapv2/swaps/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV2SwapDTODecoder)
-
-
-
 {-| Gets swaps.
 -}
 uniswapV2GetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2SwapDTO)
@@ -265,21 +234,6 @@ uniswapV2GetTokenDayDatasHistorical startBlock_query endBlock_query startDate_qu
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2TokenDayDataDTODecoder)
-
-
-
-{-| Gets tokens.
--}
-uniswapV2GetTokensCurrent : Api.Request (List Api.Data.UniswapV2TokenDTO)
-uniswapV2GetTokensCurrent =
-    Api.request
-        "GET"
-        "/dapps/uniswapv2/tokens/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.uniswapV2TokenDTODecoder)
 
 
 
@@ -448,6 +402,21 @@ uniswapV2PairsCurrent id_query =
 
 
 
+{-| Gets swaps.
+-}
+uniswapV2SwapsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV2SwapDTO)
+uniswapV2SwapsCurrent pair_query =
+    Api.request
+        "GET"
+        "/dapps/uniswapv2/swaps/current"
+        []
+        [ ( "pair", Maybe.map identity pair_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV2SwapDTODecoder)
+
+
+
 {-| Gets tokenDayDatas.
 -}
 uniswapV2TokenDayDatasCurrent : Api.Request (List Api.Data.UniswapV2TokenDayDataDTO)
@@ -460,6 +429,21 @@ uniswapV2TokenDayDatasCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2TokenDayDataDTODecoder)
+
+
+
+{-| Gets tokens.
+-}
+uniswapV2TokensCurrent : Api.Request (List Api.Data.UniswapV2TokenDTO)
+uniswapV2TokensCurrent =
+    Api.request
+        "GET"
+        "/dapps/uniswapv2/tokens/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.uniswapV2TokenDTODecoder)
 
 
 

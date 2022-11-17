@@ -1,8 +1,6 @@
 -module(openapi_sushiswap_api).
 
--export([curve_get_exchanges_(current)/1, curve_get_exchanges_(current)/2,
-         dex_get_trades_(current)/1, dex_get_trades_(current)/2,
-         sushiswap_bundles_(current)/1, sushiswap_bundles_(current)/2,
+-export([sushiswap_bundles_(current)/1, sushiswap_bundles_(current)/2,
          sushiswap_burns_(current)/1, sushiswap_burns_(current)/2,
          sushiswap_day_datas_(current)/1, sushiswap_day_datas_(current)/2,
          sushiswap_factorys_(current)/1, sushiswap_factorys_(current)/2,
@@ -17,7 +15,6 @@
          sushiswap_get_pair_day_datas_(historical)/1, sushiswap_get_pair_day_datas_(historical)/2,
          sushiswap_get_pair_hour_datas_(historical)/1, sushiswap_get_pair_hour_datas_(historical)/2,
          sushiswap_get_pairs_(historical)/1, sushiswap_get_pairs_(historical)/2,
-         sushiswap_get_pools_(current)/1, sushiswap_get_pools_(current)/2,
          sushiswap_get_swaps_(historical)/1, sushiswap_get_swaps_(historical)/2,
          sushiswap_get_token_day_datas_(historical)/1, sushiswap_get_token_day_datas_(historical)/2,
          sushiswap_get_tokens_(historical)/1, sushiswap_get_tokens_(historical)/2,
@@ -37,48 +34,6 @@
          sushiswap_users_(current)/1, sushiswap_users_(current)/2]).
 
 -define(BASE_URL, <<"">>).
-
-%% @doc Exchanges (current) 🔥
-%% Gets exchanges.
--spec curve_get_exchanges_(current)(ctx:ctx()) -> {ok, [openapi_curve_exchange_dto:openapi_curve_exchange_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_get_exchanges_(current)(Ctx) ->
-    curve_get_exchanges_(current)(Ctx, #{}).
-
--spec curve_get_exchanges_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_curve_exchange_dto:openapi_curve_exchange_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_get_exchanges_(current)(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/sushiswap/exchanges/current">>],
-    QS = [],
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc Trades (current) 🔥
-%% Gets trades.
--spec dex_get_trades_(current)(ctx:ctx()) -> {ok, [openapi_dex_trade_dto:openapi_dex_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_trades_(current)(Ctx) ->
-    dex_get_trades_(current)(Ctx, #{}).
-
--spec dex_get_trades_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_trade_dto:openapi_dex_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_trades_(current)(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/sushiswap/trades/current">>],
-    QS = [],
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Bundles (current)
 %% Gets bundles.
@@ -388,27 +343,6 @@ sushiswap_get_pairs_(historical)(Ctx, Optional) ->
     Method = get,
     Path = [<<"/dapps/sushiswap/pairs/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'name', 'token_0', 'token_1'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc Pools (current) 🔥
-%% Gets pools.
--spec sushiswap_get_pools_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pools_(current)(Ctx) ->
-    sushiswap_get_pools_(current)(Ctx, #{}).
-
--spec sushiswap_get_pools_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pools_(current)(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/sushiswap/pools/current">>],
-    QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),

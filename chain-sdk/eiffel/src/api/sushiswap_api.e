@@ -24,72 +24,6 @@ inherit
 feature -- API Access
 
 
-	curve_get_exchanges_current : detachable LIST [CURVE_EXCHANGE_DTO]
-			-- Exchanges (current) 🔥
-			-- Gets exchanges.
-			-- 
-			-- 
-			-- Result LIST [CURVE_EXCHANGE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/exchanges/current"
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_EXCHANGE_DTO] } l_response.data ({ LIST [CURVE_EXCHANGE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	dex_get_trades_current : detachable LIST [DEX_TRADE_DTO]
-			-- Trades (current) 🔥
-			-- Gets trades.
-			-- 
-			-- 
-			-- Result LIST [DEX_TRADE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/trades/current"
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [DEX_TRADE_DTO] } l_response.data ({ LIST [DEX_TRADE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
 	sushiswap_bundles_current : detachable LIST [SUSHISWAP_BUNDLE_DTO]
 			-- Bundles (current)
 			-- Gets bundles.
@@ -772,39 +706,6 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "name", name));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "token_0", token_0));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "token_1", token_1));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_PAIR_DTO] } l_response.data ({ LIST [SUSHISWAP_PAIR_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- Pools (current) 🔥
-			-- Gets pools.
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_PAIR_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/pools/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

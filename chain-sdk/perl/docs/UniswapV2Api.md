@@ -19,11 +19,8 @@ Method | HTTP request | Description
 [**uniswap_v2_get_pair_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_day_datas__historical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**uniswap_v2_get_pair_hour_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_hour_datas__historical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**uniswap_v2_get_pairs__historical**](UniswapV2Api.md#uniswap_v2_get_pairs__historical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswap_v2_get_pools__current**](UniswapV2Api.md#uniswap_v2_get_pools__current) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswap_v2_get_swaps__current**](UniswapV2Api.md#uniswap_v2_get_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**uniswap_v2_get_token_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_token_day_datas__historical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswap_v2_get_tokens__current**](UniswapV2Api.md#uniswap_v2_get_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**uniswap_v2_get_uniswap_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -35,7 +32,9 @@ Method | HTTP request | Description
 [**uniswap_v2_pair_day_datas__current**](UniswapV2Api.md#uniswap_v2_pair_day_datas__current) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**uniswap_v2_pair_hour_datas__current**](UniswapV2Api.md#uniswap_v2_pair_hour_datas__current) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**uniswap_v2_pairs__current**](UniswapV2Api.md#uniswap_v2_pairs__current) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswap_v2_swaps__current**](UniswapV2Api.md#uniswap_v2_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**uniswap_v2_token_day_datas__current**](UniswapV2Api.md#uniswap_v2_token_day_datas__current) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_tokens__current**](UniswapV2Api.md#uniswap_v2_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswap_v2_transactions__current**](UniswapV2Api.md#uniswap_v2_transactions__current) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**uniswap_v2_uniswap_day_datas__current**](UniswapV2Api.md#uniswap_v2_uniswap_day_datas__current) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**uniswap_v2_uniswap_factorys__current**](UniswapV2Api.md#uniswap_v2_uniswap_factorys__current) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -580,94 +579,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pools__current**
-> ARRAY[UniswapV2PairDTO] uniswap_v2_get_pools__current(filter_pool_id => $filter_pool_id)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::UniswapV2Api;
-my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
-);
-
-my $filter_pool_id = "filter_pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->uniswap_v2_get_pools__current(filter_pool_id => $filter_pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_pools__current: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter_pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[UniswapV2PairDTO]**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswap_v2_get_swaps__current**
-> ARRAY[UniswapV2SwapDTO] uniswap_v2_get_swaps__current()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::UniswapV2Api;
-my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
-);
-
-
-eval {
-    my $result = $api_instance->uniswap_v2_get_swaps__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_swaps__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **uniswap_v2_get_swaps__historical**
 > ARRAY[UniswapV2SwapDTO] uniswap_v2_get_swaps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
@@ -766,48 +677,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswap_v2_get_tokens__current**
-> ARRAY[UniswapV2TokenDTO] uniswap_v2_get_tokens__current()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::UniswapV2Api;
-my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
-);
-
-
-eval {
-    my $result = $api_instance->uniswap_v2_get_tokens__current();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_tokens__current: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ARRAY[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1350,6 +1219,52 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **uniswap_v2_swaps__current**
+> ARRAY[UniswapV2SwapDTO] uniswap_v2_swaps__current(pair => $pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV2Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
+);
+
+my $pair = "pair_example"; # string | Reference to pair.
+
+eval {
+    my $result = $api_instance->uniswap_v2_swaps__current(pair => $pair);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UniswapV2Api->uniswap_v2_swaps__current: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string**| Reference to pair. | [optional] 
+
+### Return type
+
+[**ARRAY[UniswapV2SwapDTO]**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **uniswap_v2_token_day_datas__current**
 > ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_token_day_datas__current()
 
@@ -1380,6 +1295,48 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ARRAY[UniswapV2TokenDayDataDTO]**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswap_v2_tokens__current**
+> ARRAY[UniswapV2TokenDTO] uniswap_v2_tokens__current()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::UniswapV2Api;
+my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
+);
+
+
+eval {
+    my $result = $api_instance->uniswap_v2_tokens__current();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UniswapV2Api->uniswap_v2_tokens__current: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[UniswapV2TokenDTO]**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

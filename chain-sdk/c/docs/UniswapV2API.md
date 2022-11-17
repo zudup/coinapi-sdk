@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**UniswapV2API_uniswapV2GetPairDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**UniswapV2API_uniswapV2GetPairHourDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**UniswapV2API_uniswapV2GetPairsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2API_uniswapV2GetPoolsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**UniswapV2API_uniswapV2GetSwapsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**UniswapV2API_uniswapV2GetSwapsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**UniswapV2API_uniswapV2GetTokenDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2API_uniswapV2GetTokensCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**UniswapV2API_uniswapV2GetTokensHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**UniswapV2API_uniswapV2GetTransactionsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**UniswapV2API_uniswapV2GetUniswapDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**UniswapV2API_uniswapV2PairDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**UniswapV2API_uniswapV2PairHourDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**UniswapV2API_uniswapV2PairsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**UniswapV2API_uniswapV2SwapsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**UniswapV2API_uniswapV2TokenDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2API_uniswapV2TokensCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2API_uniswapV2TransactionsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**UniswapV2API_uniswapV2UniswapDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**UniswapV2API_uniswapV2UniswapFactorysCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -388,67 +387,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetPoolsCurrent**
-```c
-// Pools (current) 🔥
-//
-// Gets pools.
-//
-list_t* UniswapV2API_uniswapV2GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool_id);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**filter_pool_id** | **char \*** |  | [optional] 
-
-### Return type
-
-[list_t](uniswap_v2_pair_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UniswapV2API_uniswapV2GetSwapsCurrent**
-```c
-// Swaps (current) 🔥
-//
-// Gets swaps.
-//
-list_t* UniswapV2API_uniswapV2GetSwapsCurrent(apiClient_t *apiClient);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-
-### Return type
-
-[list_t](uniswap_v2_swap_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **UniswapV2API_uniswapV2GetSwapsHistorical**
 ```c
 // Swaps (historical) 🔥
@@ -507,36 +445,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [list_t](uniswap_v2_token_day_data_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UniswapV2API_uniswapV2GetTokensCurrent**
-```c
-// Tokens (current) 🔥
-//
-// Gets tokens.
-//
-list_t* UniswapV2API_uniswapV2GetTokensCurrent(apiClient_t *apiClient);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-
-### Return type
-
-[list_t](uniswap_v2_token_dto.md) *
 
 
 ### Authorization
@@ -908,6 +816,37 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **UniswapV2API_uniswapV2SwapsCurrent**
+```c
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t* UniswapV2API_uniswapV2SwapsCurrent(apiClient_t *apiClient, char * pair);
+```
+
+### Parameters
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**apiClient** | **apiClient_t \*** | context containing the client configuration |
+**pair** | **char \*** | Reference to pair. | [optional] 
+
+### Return type
+
+[list_t](uniswap_v2_swap_dto.md) *
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **UniswapV2API_uniswapV2TokenDayDatasCurrent**
 ```c
 // TokenDayDatas (current)
@@ -925,6 +864,36 @@ Name | Type | Description  | Notes
 ### Return type
 
 [list_t](uniswap_v2_token_day_data_dto.md) *
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **UniswapV2API_uniswapV2TokensCurrent**
+```c
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t* UniswapV2API_uniswapV2TokensCurrent(apiClient_t *apiClient);
+```
+
+### Parameters
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**apiClient** | **apiClient_t \*** | context containing the client configuration |
+
+### Return type
+
+[list_t](uniswap_v2_token_dto.md) *
 
 
 ### Authorization

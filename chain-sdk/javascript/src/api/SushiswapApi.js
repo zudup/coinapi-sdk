@@ -13,8 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import CurveExchangeDTO from '../model/CurveExchangeDTO';
-import DexTradeDTO from '../model/DexTradeDTO';
 import SushiswapBundleDTO from '../model/SushiswapBundleDTO';
 import SushiswapBurnDTO from '../model/SushiswapBurnDTO';
 import SushiswapDayDataDTO from '../model/SushiswapDayDataDTO';
@@ -50,80 +48,6 @@ export default class SushiswapApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-    /**
-     * Callback function to receive the result of the curveGetExchangesCurrent operation.
-     * @callback module:api/SushiswapApi~curveGetExchangesCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CurveExchangeDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Exchanges (current) 🔥
-     * Gets exchanges.
-     * @param {module:api/SushiswapApi~curveGetExchangesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
-     */
-    curveGetExchangesCurrent(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CurveExchangeDTO];
-      return this.apiClient.callApi(
-        '/dapps/sushiswap/exchanges/current', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the dexGetTradesCurrent operation.
-     * @callback module:api/SushiswapApi~dexGetTradesCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/DexTradeDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Trades (current) 🔥
-     * Gets trades.
-     * @param {module:api/SushiswapApi~dexGetTradesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/DexTradeDTO>}
-     */
-    dexGetTradesCurrent(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [DexTradeDTO];
-      return this.apiClient.callApi(
-        '/dapps/sushiswap/trades/current', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the sushiswapBundlesCurrent operation.
@@ -833,43 +757,6 @@ export default class SushiswapApi {
       let returnType = [SushiswapPairDTO];
       return this.apiClient.callApi(
         '/dapps/sushiswap/pairs/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the sushiswapGetPoolsCurrent operation.
-     * @callback module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SushiswapPairDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
-     */
-    sushiswapGetPoolsCurrent(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [SushiswapPairDTO];
-      return this.apiClient.callApi(
-        '/dapps/sushiswap/pools/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

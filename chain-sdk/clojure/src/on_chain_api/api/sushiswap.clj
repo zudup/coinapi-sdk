@@ -105,52 +105,6 @@
   (:import (java.io File)))
 
 
-(defn-spec curve-get-exchanges-current-with-http-info any?
-  "Exchanges (current) 🔥
-  Gets exchanges."
-  []
-  (call-api "/dapps/sushiswap/exchanges/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec curve-get-exchanges-current (s/coll-of curve/exchange-dto-spec)
-  "Exchanges (current) 🔥
-  Gets exchanges."
-  []
-  (let [res (:data (curve-get-exchanges-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of curve/exchange-dto-spec) res st/string-transformer)
-       res)))
-
-
-(defn-spec dex-get-trades-current-with-http-info any?
-  "Trades (current) 🔥
-  Gets trades."
-  []
-  (call-api "/dapps/sushiswap/trades/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec dex-get-trades-current (s/coll-of dex/trade-dto-spec)
-  "Trades (current) 🔥
-  Gets trades."
-  []
-  (let [res (:data (dex-get-trades-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of dex/trade-dto-spec) res st/string-transformer)
-       res)))
-
-
 (defn-spec sushiswap-bundles-current-with-http-info any?
   "Bundles (current)
   Gets bundles."
@@ -516,29 +470,6 @@
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/pair-dto-spec) res st/string-transformer)
         res))))
-
-
-(defn-spec sushiswap-get-pools-current-with-http-info any?
-  "Pools (current) 🔥
-  Gets pools."
-  []
-  (call-api "/dapps/sushiswap/pools/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec sushiswap-get-pools-current (s/coll-of sushiswap/pair-dto-spec)
-  "Pools (current) 🔥
-  Gets pools."
-  []
-  (let [res (:data (sushiswap-get-pools-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap/pair-dto-spec) res st/string-transformer)
-       res)))
 
 
 (defn-spec sushiswap-get-swaps-historical-with-http-info any?

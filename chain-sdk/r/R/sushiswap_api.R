@@ -14,38 +14,6 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CurveGetExchangesCurrent } \emph{ Exchanges (current) 🔥 }
-#' Gets exchanges.
-#'
-#' \itemize{
-#' \item \emph{ @returnType } list( \link{Curve.ExchangeDTO} ) \cr
-#'
-#'
-#' \item status code : 200 | successful operation
-#'
-#' \item return type : array[CurveExchangeDTO]
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DexGetTradesCurrent } \emph{ Trades (current) 🔥 }
-#' Gets trades.
-#'
-#' \itemize{
-#' \item \emph{ @returnType } list( \link{Dex.TradeDTO} ) \cr
-#'
-#'
-#' \item status code : 200 | successful operation
-#'
-#' \item return type : array[DexTradeDTO]
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
 #' \strong{ SushiswapBundlesCurrent } \emph{ Bundles (current) }
 #' Gets bundles.
 #'
@@ -342,22 +310,6 @@
 #' \item \emph{ @param } name character
 #' \item \emph{ @param } token_0 character
 #' \item \emph{ @param } token_1 character
-#' \item \emph{ @returnType } list( \link{Sushiswap.PairDTO} ) \cr
-#'
-#'
-#' \item status code : 200 | successful operation
-#'
-#' \item return type : array[SushiswapPairDTO]
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ SushiswapGetPoolsCurrent } \emph{ Pools (current) 🔥 }
-#' Gets pools.
-#'
-#' \itemize{
 #' \item \emph{ @returnType } list( \link{Sushiswap.PairDTO} ) \cr
 #'
 #'
@@ -677,32 +629,6 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  CurveGetExchangesCurrent  ####################
-#'
-#' library(openapi)
-#'
-#' #Exchanges (current) 🔥
-#' api_instance <- SushiswapApi$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$CurveGetExchangesCurrent(data_file = "result.txt")
-#' result <- api_instance$CurveGetExchangesCurrent()
-#' dput(result)
-#'
-#'
-#' ####################  DexGetTradesCurrent  ####################
-#'
-#' library(openapi)
-#'
-#' #Trades (current) 🔥
-#' api_instance <- SushiswapApi$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DexGetTradesCurrent(data_file = "result.txt")
-#' result <- api_instance$DexGetTradesCurrent()
-#' dput(result)
-#'
-#'
 #' ####################  SushiswapBundlesCurrent  ####################
 #'
 #' library(openapi)
@@ -963,19 +889,6 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SushiswapGetPairsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, name = var_name, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
 #' result <- api_instance$SushiswapGetPairsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, name = var_name, token_0 = var_token_0, token_1 = var_token_1)
-#' dput(result)
-#'
-#'
-#' ####################  SushiswapGetPoolsCurrent  ####################
-#'
-#' library(openapi)
-#'
-#' #Pools (current) 🔥
-#' api_instance <- SushiswapApi$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$SushiswapGetPoolsCurrent(data_file = "result.txt")
-#' result <- api_instance$SushiswapGetPoolsCurrent()
 #' dput(result)
 #'
 #'
@@ -1250,178 +1163,6 @@ SushiswapApi <- R6::R6Class(
         self$api_client <- api_client
       } else {
         self$api_client <- ApiClient$new()
-      }
-    },
-    #' Exchanges (current) 🔥
-    #'
-    #' @description
-    #' Exchanges (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return array[CurveExchangeDTO]
-    #' @export
-    CurveGetExchangesCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$CurveGetExchangesCurrentWithHttpInfo(data_file = data_file, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' Exchanges (current) 🔥
-    #'
-    #' @description
-    #' Exchanges (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return API response (array[CurveExchangeDTO]) with additional information such as HTTP status code, headers
-    #' @export
-    CurveGetExchangesCurrentWithHttpInfo = function(data_file = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-      local_var_url_path <- "/dapps/sushiswap/exchanges/current"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        # save response in a file
-        if (!is.null(data_file)) {
-          write(local_var_resp$response, data_file)
-        }
-
-        deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[CurveExchangeDTO]", loadNamespace("openapi")),
-          error = function(e) {
-            stop("Failed to deserialize response")
-          }
-        )
-        local_var_resp$content <- deserialized_resp_obj
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' Trades (current) 🔥
-    #'
-    #' @description
-    #' Trades (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return array[DexTradeDTO]
-    #' @export
-    DexGetTradesCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$DexGetTradesCurrentWithHttpInfo(data_file = data_file, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' Trades (current) 🔥
-    #'
-    #' @description
-    #' Trades (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return API response (array[DexTradeDTO]) with additional information such as HTTP status code, headers
-    #' @export
-    DexGetTradesCurrentWithHttpInfo = function(data_file = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-      local_var_url_path <- "/dapps/sushiswap/trades/current"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        # save response in a file
-        if (!is.null(data_file)) {
-          write(local_var_resp$response, data_file)
-        }
-
-        deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[DexTradeDTO]", loadNamespace("openapi")),
-          error = function(e) {
-            stop("Failed to deserialize response")
-          }
-        )
-        local_var_resp$content <- deserialized_resp_obj
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
       }
     },
     #' Bundles (current)
@@ -3009,92 +2750,6 @@ SushiswapApi <- R6::R6Class(
       query_params[["token_1"]] <- `token_1`
 
       local_var_url_path <- "/dapps/sushiswap/pairs/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list("text/plain", "application/json", "text/json")
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        # save response in a file
-        if (!is.null(data_file)) {
-          write(local_var_resp$response, data_file)
-        }
-
-        deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairDTO]", loadNamespace("openapi")),
-          error = function(e) {
-            stop("Failed to deserialize response")
-          }
-        )
-        local_var_resp$content <- deserialized_resp_obj
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' Pools (current) 🔥
-    #'
-    #' @description
-    #' Pools (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return array[SushiswapPairDTO]
-    #' @export
-    SushiswapGetPoolsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$SushiswapGetPoolsCurrentWithHttpInfo(data_file = data_file, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' Pools (current) 🔥
-    #'
-    #' @description
-    #' Pools (current) 🔥
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return API response (array[SushiswapPairDTO]) with additional information such as HTTP status code, headers
-    #' @export
-    SushiswapGetPoolsCurrentWithHttpInfo = function(data_file = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-      local_var_url_path <- "/dapps/sushiswap/pools/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")

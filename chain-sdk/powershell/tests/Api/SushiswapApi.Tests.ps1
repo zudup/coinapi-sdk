@@ -7,22 +7,6 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
-    Context 'Invoke-CurveGetExchangesCurrent' {
-        It 'Test Invoke-CurveGetExchangesCurrent' {
-            #$TestResult = Invoke-CurveGetExchangesCurrent
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-DexGetTradesCurrent' {
-        It 'Test Invoke-DexGetTradesCurrent' {
-            #$TestResult = Invoke-DexGetTradesCurrent
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-SushiswapBundlesCurrent' {
         It 'Test Invoke-SushiswapBundlesCurrent' {
             #$TestResult = Invoke-SushiswapBundlesCurrent
@@ -138,14 +122,6 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
     Context 'Invoke-SushiswapGetPairsHistorical' {
         It 'Test Invoke-SushiswapGetPairsHistorical' {
             #$TestResult = Invoke-SushiswapGetPairsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Name "TEST_VALUE" -Token0 "TEST_VALUE" -Token1 "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-SushiswapGetPoolsCurrent' {
-        It 'Test Invoke-SushiswapGetPoolsCurrent' {
-            #$TestResult = Invoke-SushiswapGetPoolsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

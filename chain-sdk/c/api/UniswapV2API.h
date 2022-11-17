@@ -102,22 +102,6 @@ list_t*
 UniswapV2API_uniswapV2GetPairsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 );
 
 
-// Pools (current) 🔥
-//
-// Gets pools.
-//
-list_t*
-UniswapV2API_uniswapV2GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool_id );
-
-
-// Swaps (current) 🔥
-//
-// Gets swaps.
-//
-list_t*
-UniswapV2API_uniswapV2GetSwapsCurrent(apiClient_t *apiClient);
-
-
 // Swaps (historical) 🔥
 //
 // Gets swaps.
@@ -132,14 +116,6 @@ UniswapV2API_uniswapV2GetSwapsHistorical(apiClient_t *apiClient, long startBlock
 //
 list_t*
 UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
-
-
-// Tokens (current) 🔥
-//
-// Gets tokens.
-//
-list_t*
-UniswapV2API_uniswapV2GetTokensCurrent(apiClient_t *apiClient);
 
 
 // Tokens (historical) 🔥
@@ -230,12 +206,28 @@ list_t*
 UniswapV2API_uniswapV2PairsCurrent(apiClient_t *apiClient, char * id );
 
 
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t*
+UniswapV2API_uniswapV2SwapsCurrent(apiClient_t *apiClient, char * pair );
+
+
 // TokenDayDatas (current)
 //
 // Gets tokenDayDatas.
 //
 list_t*
 UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient);
+
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+UniswapV2API_uniswapV2TokensCurrent(apiClient_t *apiClient);
 
 
 // Transactions (current)

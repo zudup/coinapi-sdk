@@ -13,32 +13,6 @@ inherit
 feature -- Test routines
 
 
-    test_curve_get_exchanges_current
-            -- Exchanges (current) 🔥
-            --
-            -- Gets exchanges.
-        local
-            l_response: LIST [CURVE_EXCHANGE_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.curve_get_exchanges_current
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_trades_current
-            -- Trades (current) 🔥
-            --
-            -- Gets trades.
-        local
-            l_response: LIST [DEX_TRADE_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_trades_current
-            assert ("not_implemented", False)
-        end
-
     test_sushiswap_bundles_current
             -- Bundles (current)
             --
@@ -299,19 +273,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_pairs_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_name, l_token_0, l_token_1)
-            assert ("not_implemented", False)
-        end
-
-    test_sushiswap_get_pools_current
-            -- Pools (current) 🔥
-            --
-            -- Gets pools.
-        local
-            l_response: LIST [SUSHISWAP_PAIR_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.sushiswap_get_pools_current
             assert ("not_implemented", False)
         end
 

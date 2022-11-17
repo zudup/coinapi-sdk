@@ -20,11 +20,8 @@ from openapi_client.paths.dapps_uniswapv2_mints_historical.get import UniswapV2G
 from openapi_client.paths.dapps_uniswapv2_pair_day_datas_historical.get import UniswapV2GetPairDayDatasHistorical
 from openapi_client.paths.dapps_uniswapv2_pair_hour_datas_historical.get import UniswapV2GetPairHourDatasHistorical
 from openapi_client.paths.dapps_uniswapv2_pairs_historical.get import UniswapV2GetPairsHistorical
-from openapi_client.paths.dapps_uniswapv2_pools_current.get import UniswapV2GetPoolsCurrent
-from openapi_client.paths.dapps_uniswapv2_swaps_current.get import UniswapV2GetSwapsCurrent
 from openapi_client.paths.dapps_uniswapv2_swaps_historical.get import UniswapV2GetSwapsHistorical
 from openapi_client.paths.dapps_uniswapv2_token_day_datas_historical.get import UniswapV2GetTokenDayDatasHistorical
-from openapi_client.paths.dapps_uniswapv2_tokens_current.get import UniswapV2GetTokensCurrent
 from openapi_client.paths.dapps_uniswapv2_tokens_historical.get import UniswapV2GetTokensHistorical
 from openapi_client.paths.dapps_uniswapv2_transactions_historical.get import UniswapV2GetTransactionsHistorical
 from openapi_client.paths.dapps_uniswapv2_uniswap_day_datas_historical.get import UniswapV2GetUniswapDayDatasHistorical
@@ -36,7 +33,9 @@ from openapi_client.paths.dapps_uniswapv2_mints_current.get import UniswapV2Mint
 from openapi_client.paths.dapps_uniswapv2_pair_day_datas_current.get import UniswapV2PairDayDatasCurrent
 from openapi_client.paths.dapps_uniswapv2_pair_hour_datas_current.get import UniswapV2PairHourDatasCurrent
 from openapi_client.paths.dapps_uniswapv2_pairs_current.get import UniswapV2PairsCurrent
+from openapi_client.paths.dapps_uniswapv2_swaps_current.get import UniswapV2SwapsCurrent
 from openapi_client.paths.dapps_uniswapv2_token_day_datas_current.get import UniswapV2TokenDayDatasCurrent
+from openapi_client.paths.dapps_uniswapv2_tokens_current.get import UniswapV2TokensCurrent
 from openapi_client.paths.dapps_uniswapv2_transactions_current.get import UniswapV2TransactionsCurrent
 from openapi_client.paths.dapps_uniswapv2_uniswap_day_datas_current.get import UniswapV2UniswapDayDatasCurrent
 from openapi_client.paths.dapps_uniswapv2_uniswap_factorys_current.get import UniswapV2UniswapFactorysCurrent
@@ -54,11 +53,8 @@ class UniswapV2Api(
     UniswapV2GetPairDayDatasHistorical,
     UniswapV2GetPairHourDatasHistorical,
     UniswapV2GetPairsHistorical,
-    UniswapV2GetPoolsCurrent,
-    UniswapV2GetSwapsCurrent,
     UniswapV2GetSwapsHistorical,
     UniswapV2GetTokenDayDatasHistorical,
-    UniswapV2GetTokensCurrent,
     UniswapV2GetTokensHistorical,
     UniswapV2GetTransactionsHistorical,
     UniswapV2GetUniswapDayDatasHistorical,
@@ -70,7 +66,9 @@ class UniswapV2Api(
     UniswapV2PairDayDatasCurrent,
     UniswapV2PairHourDatasCurrent,
     UniswapV2PairsCurrent,
+    UniswapV2SwapsCurrent,
     UniswapV2TokenDayDatasCurrent,
+    UniswapV2TokensCurrent,
     UniswapV2TransactionsCurrent,
     UniswapV2UniswapDayDatasCurrent,
     UniswapV2UniswapFactorysCurrent,

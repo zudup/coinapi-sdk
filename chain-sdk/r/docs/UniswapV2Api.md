@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#UniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#UniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2GetTokensCurrent**](UniswapV2Api.md#UniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#UniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#UniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**UniswapV2PairsCurrent**](UniswapV2Api.md#UniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**UniswapV2SwapsCurrent**](UniswapV2Api.md#UniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#UniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2TokensCurrent**](UniswapV2Api.md#UniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2TransactionsCurrent**](UniswapV2Api.md#UniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#UniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#UniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -583,95 +582,6 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetPoolsCurrent**
-> array[UniswapV2PairDTO] UniswapV2GetPoolsCurrent(filter_pool_id = var.filter_pool_id)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```R
-library(openapi)
-
-# Pools (current) 🔥
-#
-# prepare function argument(s)
-var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
-
-api_instance <- UniswapV2Api$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetPoolsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-result <- api_instance$UniswapV2GetPoolsCurrent(filter_pool_id = var_filter_pool_id)
-dput(result)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter_pool_id** | **character**|  | [optional] 
-
-### Return type
-
-[**array[UniswapV2PairDTO]**](UniswapV2.PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-# **UniswapV2GetSwapsCurrent**
-> array[UniswapV2SwapDTO] UniswapV2GetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```R
-library(openapi)
-
-# Swaps (current) 🔥
-#
-
-api_instance <- UniswapV2Api$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetSwapsCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2GetSwapsCurrent()
-dput(result)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV2SwapDTO]**](UniswapV2.SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
 # **UniswapV2GetSwapsHistorical**
 > array[UniswapV2SwapDTO] UniswapV2GetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
@@ -769,48 +679,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[UniswapV2TokenDayDataDTO]**](UniswapV2.TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-# **UniswapV2GetTokensCurrent**
-> array[UniswapV2TokenDTO] UniswapV2GetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```R
-library(openapi)
-
-# Tokens (current) 🔥
-#
-
-api_instance <- UniswapV2Api$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetTokensCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2GetTokensCurrent()
-dput(result)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[UniswapV2TokenDTO]**](UniswapV2.TokenDTO.md)
 
 ### Authorization
 
@@ -1362,6 +1230,53 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **UniswapV2SwapsCurrent**
+> array[UniswapV2SwapDTO] UniswapV2SwapsCurrent(pair = var.pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```R
+library(openapi)
+
+# Swaps (current)
+#
+# prepare function argument(s)
+var_pair <- "pair_example" # character | Reference to pair. (Optional)
+
+api_instance <- UniswapV2Api$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$UniswapV2SwapsCurrent(pair = var_pairdata_file = "result.txt")
+result <- api_instance$UniswapV2SwapsCurrent(pair = var_pair)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **character**| Reference to pair. | [optional] 
+
+### Return type
+
+[**array[UniswapV2SwapDTO]**](UniswapV2.SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **UniswapV2TokenDayDatasCurrent**
 > array[UniswapV2TokenDayDataDTO] UniswapV2TokenDayDatasCurrent()
 
@@ -1389,6 +1304,48 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**array[UniswapV2TokenDayDataDTO]**](UniswapV2.TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **UniswapV2TokensCurrent**
+> array[UniswapV2TokenDTO] UniswapV2TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```R
+library(openapi)
+
+# Tokens (current)
+#
+
+api_instance <- UniswapV2Api$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$UniswapV2TokensCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2TokensCurrent()
+dput(result)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**array[UniswapV2TokenDTO]**](UniswapV2.TokenDTO.md)
 
 ### Authorization
 

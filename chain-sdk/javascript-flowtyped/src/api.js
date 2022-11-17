@@ -13984,50 +13984,6 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
 export const SushiswapApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets exchanges.
-         * @summary Exchanges (current) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetExchangesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/exchanges/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets trades.
-         * @summary Trades (current) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTradesCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/trades/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (current)
          * @throws {RequiredError}
@@ -14630,28 +14586,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPoolsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pools/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
@@ -15149,10 +15083,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type SushiswapApiType = { 
-    curveGetExchangesCurrent(options?: RequestOptions): Promise<Array<CurveExchangeDTO>>,
-
-    dexGetTradesCurrent(options?: RequestOptions): Promise<Array<DexTradeDTO>>,
-
     sushiswapBundlesCurrent(options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
 
     sushiswapBurnsCurrent(options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
@@ -15182,8 +15112,6 @@ export type SushiswapApiType = {
     sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
 
     sushiswapGetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, name?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
-
-    sushiswapGetPoolsCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
     sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
@@ -15227,36 +15155,6 @@ export type SushiswapApiType = {
 export const SushiswapApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): SushiswapApiType {
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
-        /**
-         * Gets exchanges.
-         * @summary Exchanges (current) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetExchangesCurrent(options?: RequestOptions = {}): Promise<Array<CurveExchangeDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).curveGetExchangesCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets trades.
-         * @summary Trades (current) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTradesCurrent(options?: RequestOptions = {}): Promise<Array<DexTradeDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dexGetTradesCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
         /**
          * Gets bundles.
          * @summary Bundles (current)
@@ -15474,21 +15372,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          */
         sushiswapGetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, name?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16187,54 +16070,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPoolsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pools/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (filterPoolId !== undefined) {
-                localVarQueryParameter['filter_pool_id'] = ((filterPoolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/swaps/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
@@ -16311,28 +16146,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             if (id !== undefined) {
                 localVarQueryParameter['id'] = ((id:any):string);
             }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets tokens.
-         * @summary Tokens (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokensCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokens/current`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -16699,12 +16512,60 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2SwapsCurrent(pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/swaps/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (pair !== undefined) {
+                localVarQueryParameter['pair'] = ((pair:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets tokenDayDatas.
          * @summary TokenDayDatas (current)
          * @throws {RequiredError}
          */
         uniswapV2TokenDayDatasCurrent(options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/uniswapv2/tokenDayDatas/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TokensCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokens/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16832,15 +16693,9 @@ export type UniswapV2ApiType = {
 
     uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
 
-    uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
-
-    uniswapV2GetSwapsCurrent(options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
-
     uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
 
     uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
-
-    uniswapV2GetTokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
 
     uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
 
@@ -16864,7 +16719,11 @@ export type UniswapV2ApiType = {
 
     uniswapV2PairsCurrent(id?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
 
+    uniswapV2SwapsCurrent(pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
+
     uniswapV2TokenDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
+
+    uniswapV2TokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
 
     uniswapV2TransactionsCurrent(options?: RequestOptions): Promise<Array<UniswapV2TransactionDTO>>,
 
@@ -17033,36 +16892,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pools.
-         * @summary Pools (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPoolsCurrent(filterPoolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets swaps.
-         * @summary Swaps (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2SwapDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapsCurrent(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
@@ -17084,21 +16913,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets tokens.
-         * @summary Tokens (current) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17273,12 +17087,42 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
+         * Gets swaps.
+         * @summary Swaps (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2SwapsCurrent(pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2SwapsCurrent(pair, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets tokenDayDatas.
          * @summary TokenDayDatas (current)
          * @throws {RequiredError}
          */
         uniswapV2TokenDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TokenDayDatasCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens.
+         * @summary Tokens (current)
+         * @throws {RequiredError}
+         */
+        uniswapV2TokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TokensCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

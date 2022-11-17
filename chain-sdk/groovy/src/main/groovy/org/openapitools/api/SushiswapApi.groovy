@@ -1,8 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.CurveExchangeDTO
-import org.openapitools.model.DexTradeDTO
 import org.openapitools.model.SushiswapBundleDTO
 import org.openapitools.model.SushiswapBurnDTO
 import org.openapitools.model.SushiswapDayDataDTO
@@ -24,46 +22,6 @@ class SushiswapApi {
     String basePath = "https://onchain.coinapi.io"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
-
-    def curveGetExchangesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/exchanges/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CurveExchangeDTO.class )
-
-    }
-
-    def dexGetTradesCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/trades/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    DexTradeDTO.class )
-
-    }
 
     def sushiswapBundlesCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/sushiswap/bundles/current"
@@ -559,26 +517,6 @@ class SushiswapApi {
         if (token1 != null) {
             queryParams.put("token_1", token1)
         }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapPairDTO.class )
-
-    }
-
-    def sushiswapGetPoolsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pools/current"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
 
 
 

@@ -16,8 +16,6 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
-    CurveExchangeDTO,
-    DexTradeDTO,
     SushiswapBundleDTO,
     SushiswapBurnDTO,
     SushiswapDayDataDTO,
@@ -192,32 +190,6 @@ export interface SushiswapSwapsCurrentRequest {
  * no description
  */
 export class SushiswapApi extends BaseAPI {
-
-    /**
-     * Gets exchanges.
-     * Exchanges (current) 🔥
-     */
-    curveGetExchangesCurrent(): Observable<Array<CurveExchangeDTO>>
-    curveGetExchangesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CurveExchangeDTO>>>
-    curveGetExchangesCurrent(opts?: OperationOpts): Observable<Array<CurveExchangeDTO> | AjaxResponse<Array<CurveExchangeDTO>>> {
-        return this.request<Array<CurveExchangeDTO>>({
-            url: '/dapps/sushiswap/exchanges/current',
-            method: 'GET',
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * Gets trades.
-     * Trades (current) 🔥
-     */
-    dexGetTradesCurrent(): Observable<Array<DexTradeDTO>>
-    dexGetTradesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<DexTradeDTO>>>
-    dexGetTradesCurrent(opts?: OperationOpts): Observable<Array<DexTradeDTO> | AjaxResponse<Array<DexTradeDTO>>> {
-        return this.request<Array<DexTradeDTO>>({
-            url: '/dapps/sushiswap/trades/current',
-            method: 'GET',
-        }, opts?.responseOpts);
-    };
 
     /**
      * Gets bundles.
@@ -534,19 +506,6 @@ export class SushiswapApi extends BaseAPI {
             url: '/dapps/sushiswap/pairs/historical',
             method: 'GET',
             query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * Gets pools.
-     * Pools (current) 🔥
-     */
-    sushiswapGetPoolsCurrent(): Observable<Array<SushiswapPairDTO>>
-    sushiswapGetPoolsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
-    sushiswapGetPoolsCurrent(opts?: OperationOpts): Observable<Array<SushiswapPairDTO> | AjaxResponse<Array<SushiswapPairDTO>>> {
-        return this.request<Array<SushiswapPairDTO>>({
-            url: '/dapps/sushiswap/pools/current',
-            method: 'GET',
         }, opts?.responseOpts);
     };
 

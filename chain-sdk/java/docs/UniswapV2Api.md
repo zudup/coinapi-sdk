@@ -14,11 +14,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
 | [**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
 | [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥 |
-| [**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥 |
-| [**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥 |
 | [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥 |
 | [**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
-| [**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥 |
 | [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥 |
 | [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥 |
 | [**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥 |
@@ -30,7 +27,9 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current) |
 | [**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current) |
 | [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current) |
+| [**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) |
 | [**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current) |
+| [**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) |
 | [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current) |
 | [**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current) |
 | [**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current) |
@@ -735,126 +734,6 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV2GetPoolsCurrent"></a>
-# **uniswapV2GetPoolsCurrent**
-> List&lt;UniswapV2PairDTO&gt; uniswapV2GetPoolsCurrent(filterPoolId)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV2Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
-    String filterPoolId = "filterPoolId_example"; // String | 
-    try {
-      List<UniswapV2PairDTO> result = apiInstance.uniswapV2GetPoolsCurrent(filterPoolId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPoolsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filterPoolId** | **String**|  | [optional] |
-
-### Return type
-
-[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV2GetSwapsCurrent"></a>
-# **uniswapV2GetSwapsCurrent**
-> List&lt;UniswapV2SwapDTO&gt; uniswapV2GetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV2Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
-    try {
-      List<UniswapV2SwapDTO> result = apiInstance.uniswapV2GetSwapsCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV2Api#uniswapV2GetSwapsCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
 <a name="uniswapV2GetSwapsHistorical"></a>
 # **uniswapV2GetSwapsHistorical**
 > List&lt;UniswapV2SwapDTO&gt; uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
@@ -982,64 +861,6 @@ public class Example {
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-<a name="uniswapV2GetTokensCurrent"></a>
-# **uniswapV2GetTokensCurrent**
-> List&lt;UniswapV2TokenDTO&gt; uniswapV2GetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.UniswapV2Api;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://onchain.coinapi.io");
-
-    UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
-    try {
-      List<UniswapV2TokenDTO> result = apiInstance.uniswapV2GetTokensCurrent();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokensCurrent");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1761,6 +1582,68 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+<a name="uniswapV2SwapsCurrent"></a>
+# **uniswapV2SwapsCurrent**
+> List&lt;UniswapV2SwapDTO&gt; uniswapV2SwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV2Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
+    String pair = "pair_example"; // String | Reference to pair.
+    try {
+      List<UniswapV2SwapDTO> result = apiInstance.uniswapV2SwapsCurrent(pair);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV2Api#uniswapV2SwapsCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pair** | **String**| Reference to pair. | [optional] |
+
+### Return type
+
+[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 <a name="uniswapV2TokenDayDatasCurrent"></a>
 # **uniswapV2TokenDayDatasCurrent**
 > List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDatasCurrent()
@@ -1804,6 +1687,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+<a name="uniswapV2TokensCurrent"></a>
+# **uniswapV2TokensCurrent**
+> List&lt;UniswapV2TokenDTO&gt; uniswapV2TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UniswapV2Api;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://onchain.coinapi.io");
+
+    UniswapV2Api apiInstance = new UniswapV2Api(defaultClient);
+    try {
+      List<UniswapV2TokenDTO> result = apiInstance.uniswapV2TokensCurrent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniswapV2Api#uniswapV2TokensCurrent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#UniswapV2GetPoolsCurrent) | **Get** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#UniswapV2GetSwapsCurrent) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2GetTokensCurrent**](UniswapV2Api.md#UniswapV2GetTokensCurrent) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#UniswapV2PairDayDatasCurrent) | **Get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#UniswapV2PairHourDatasCurrent) | **Get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**UniswapV2PairsCurrent**](UniswapV2Api.md#UniswapV2PairsCurrent) | **Get** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**UniswapV2SwapsCurrent**](UniswapV2Api.md#UniswapV2SwapsCurrent) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#UniswapV2TokenDayDatasCurrent) | **Get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2TokensCurrent**](UniswapV2Api.md#UniswapV2TokensCurrent) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2TransactionsCurrent**](UniswapV2Api.md#UniswapV2TransactionsCurrent) | **Get** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#UniswapV2UniswapDayDatasCurrent) | **Get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#UniswapV2UniswapFactorysCurrent) | **Get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -782,133 +781,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV2GetPoolsCurrent
-
-> []UniswapV2PairDTO UniswapV2GetPoolsCurrent(ctx).FilterPoolId(filterPoolId).Execute()
-
-Pools (current) 🔥
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    filterPoolId := "filterPoolId_example" // string |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV2Api.UniswapV2GetPoolsCurrent(context.Background()).FilterPoolId(filterPoolId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.UniswapV2GetPoolsCurrent``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UniswapV2GetPoolsCurrent`: []UniswapV2PairDTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.UniswapV2GetPoolsCurrent`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUniswapV2GetPoolsCurrentRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** |  | 
-
-### Return type
-
-[**[]UniswapV2PairDTO**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetSwapsCurrent
-
-> []UniswapV2SwapDTO UniswapV2GetSwapsCurrent(ctx).Execute()
-
-Swaps (current) 🔥
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV2Api.UniswapV2GetSwapsCurrent(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.UniswapV2GetSwapsCurrent``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UniswapV2GetSwapsCurrent`: []UniswapV2SwapDTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.UniswapV2GetSwapsCurrent`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUniswapV2GetSwapsCurrentRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]UniswapV2SwapDTO**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## UniswapV2GetSwapsHistorical
 
 > []UniswapV2SwapDTO UniswapV2GetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
@@ -1046,67 +918,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]UniswapV2TokenDayDataDTO**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UniswapV2GetTokensCurrent
-
-> []UniswapV2TokenDTO UniswapV2GetTokensCurrent(ctx).Execute()
-
-Tokens (current) 🔥
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UniswapV2Api.UniswapV2GetTokensCurrent(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.UniswapV2GetTokensCurrent``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UniswapV2GetTokensCurrent`: []UniswapV2TokenDTO
-    fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.UniswapV2GetTokensCurrent`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUniswapV2GetTokensCurrentRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]UniswapV2TokenDTO**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1872,6 +1683,72 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UniswapV2SwapsCurrent
+
+> []UniswapV2SwapDTO UniswapV2SwapsCurrent(ctx).Pair(pair).Execute()
+
+Swaps (current)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    pair := "pair_example" // string | Reference to pair. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV2Api.UniswapV2SwapsCurrent(context.Background()).Pair(pair).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.UniswapV2SwapsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UniswapV2SwapsCurrent`: []UniswapV2SwapDTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.UniswapV2SwapsCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUniswapV2SwapsCurrentRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **string** | Reference to pair. | 
+
+### Return type
+
+[**[]UniswapV2SwapDTO**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UniswapV2TokenDayDatasCurrent
 
 > []UniswapV2TokenDayDataDTO UniswapV2TokenDayDatasCurrent(ctx).Execute()
@@ -1918,6 +1795,67 @@ Other parameters are passed through a pointer to a apiUniswapV2TokenDayDatasCurr
 ### Return type
 
 [**[]UniswapV2TokenDayDataDTO**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UniswapV2TokensCurrent
+
+> []UniswapV2TokenDTO UniswapV2TokensCurrent(ctx).Execute()
+
+Tokens (current)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UniswapV2Api.UniswapV2TokensCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UniswapV2Api.UniswapV2TokensCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UniswapV2TokensCurrent`: []UniswapV2TokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `UniswapV2Api.UniswapV2TokensCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUniswapV2TokensCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]UniswapV2TokenDTO**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

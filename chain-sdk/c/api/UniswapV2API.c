@@ -1858,180 +1858,6 @@ end:
 
 }
 
-// Pools (current) 🔥
-//
-// Gets pools.
-//
-list_t*
-UniswapV2API_uniswapV2GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool_id )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/pools/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pools/current");
-
-
-
-
-    // query parameters
-    char *keyQuery_filter_pool_id = NULL;
-    char * valueQuery_filter_pool_id = NULL;
-    keyValuePair_t *keyPairQuery_filter_pool_id = 0;
-    if (filter_pool_id)
-    {
-        keyQuery_filter_pool_id = strdup("filter_pool_id");
-        valueQuery_filter_pool_id = strdup((filter_pool_id));
-        keyPairQuery_filter_pool_id = keyValuePair_create(keyQuery_filter_pool_id, valueQuery_filter_pool_id);
-        list_addElement(localVarQueryParameters,keyPairQuery_filter_pool_id);
-    }
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV2APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV2APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV2APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    if(keyQuery_filter_pool_id){
-        free(keyQuery_filter_pool_id);
-        keyQuery_filter_pool_id = NULL;
-    }
-    if(valueQuery_filter_pool_id){
-        free(valueQuery_filter_pool_id);
-        valueQuery_filter_pool_id = NULL;
-    }
-    if(keyPairQuery_filter_pool_id){
-        keyValuePair_free(keyPairQuery_filter_pool_id);
-        keyPairQuery_filter_pool_id = NULL;
-    }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// Swaps (current) 🔥
-//
-// Gets swaps.
-//
-list_t*
-UniswapV2API_uniswapV2GetSwapsCurrent(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/swaps/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/swaps/current");
-
-
-
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV2APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV2APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV2APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Swaps (historical) 🔥
 //
 // Gets swaps.
@@ -2407,81 +2233,6 @@ UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long st
         keyValuePair_free(keyPairQuery_id);
         keyPairQuery_id = NULL;
     }
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
-// Tokens (current) 🔥
-//
-// Gets tokens.
-//
-list_t*
-UniswapV2API_uniswapV2GetTokensCurrent(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/tokens/current")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokens/current");
-
-
-
-    list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"text/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","successful operation");
-    //}
-    cJSON *UniswapV2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    if(!cJSON_IsArray(UniswapV2APIlocalVarJSON)) {
-        return 0;//nonprimitive container
-    }
-    list_t *elementToReturn = list_createList();
-    cJSON *VarJSON;
-    cJSON_ArrayForEach(VarJSON, UniswapV2APIlocalVarJSON)
-    {
-        if(!cJSON_IsObject(VarJSON))
-        {
-           // return 0;
-        }
-        char *localVarJSONToChar = cJSON_Print(VarJSON);
-        list_addElement(elementToReturn , localVarJSONToChar);
-    }
-
-    cJSON_Delete( UniswapV2APIlocalVarJSON);
-    cJSON_Delete( VarJSON);
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
     return elementToReturn;
 end:
     free(localVarPath);
@@ -3906,6 +3657,105 @@ end:
 
 }
 
+// Swaps (current)
+//
+// Gets swaps.
+//
+list_t*
+UniswapV2API_uniswapV2SwapsCurrent(apiClient_t *apiClient, char * pair )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv2/swaps/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/swaps/current");
+
+
+
+
+    // query parameters
+    char *keyQuery_pair = NULL;
+    char * valueQuery_pair = NULL;
+    keyValuePair_t *keyPairQuery_pair = 0;
+    if (pair)
+    {
+        keyQuery_pair = strdup("pair");
+        valueQuery_pair = strdup((pair));
+        keyPairQuery_pair = keyValuePair_create(keyQuery_pair, valueQuery_pair);
+        list_addElement(localVarQueryParameters,keyPairQuery_pair);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV2APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV2APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV2APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_pair){
+        free(keyQuery_pair);
+        keyQuery_pair = NULL;
+    }
+    if(valueQuery_pair){
+        free(valueQuery_pair);
+        valueQuery_pair = NULL;
+    }
+    if(keyPairQuery_pair){
+        keyValuePair_free(keyPairQuery_pair);
+        keyPairQuery_pair = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // TokenDayDatas (current)
 //
 // Gets tokenDayDatas.
@@ -3924,6 +3774,81 @@ UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient)
     long sizeOfPath = strlen("/dapps/uniswapv2/tokenDayDatas/current")+1;
     char *localVarPath = malloc(sizeOfPath);
     snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokenDayDatas/current");
+
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV2APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV2APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV2APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// Tokens (current)
+//
+// Gets tokens.
+//
+list_t*
+UniswapV2API_uniswapV2TokensCurrent(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv2/tokens/current")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokens/current");
 
 
 

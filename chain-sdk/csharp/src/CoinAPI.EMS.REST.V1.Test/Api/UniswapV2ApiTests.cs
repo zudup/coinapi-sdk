@@ -225,29 +225,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2GetPoolsCurrent
-        /// </summary>
-        [Test]
-        public void UniswapV2GetPoolsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string filterPoolId = null;
-            //var response = instance.UniswapV2GetPoolsCurrent(filterPoolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV2PairDTO>), response, "response is List<UniswapV2PairDTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV2GetSwapsCurrent
-        /// </summary>
-        [Test]
-        public void UniswapV2GetSwapsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2GetSwapsCurrent();
-            //Assert.IsInstanceOf(typeof(List<UniswapV2SwapDTO>), response, "response is List<UniswapV2SwapDTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV2GetSwapsHistorical
         /// </summary>
         [Test]
@@ -278,17 +255,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string id = null;
             //var response = instance.UniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDayDataDTO>), response, "response is List<UniswapV2TokenDayDataDTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV2GetTokensCurrent
-        /// </summary>
-        [Test]
-        public void UniswapV2GetTokensCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2GetTokensCurrent();
-            //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDTO>), response, "response is List<UniswapV2TokenDTO>");
         }
         
         /// <summary>
@@ -441,6 +407,18 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
+        /// Test UniswapV2SwapsCurrent
+        /// </summary>
+        [Test]
+        public void UniswapV2SwapsCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pair = null;
+            //var response = instance.UniswapV2SwapsCurrent(pair);
+            //Assert.IsInstanceOf(typeof(List<UniswapV2SwapDTO>), response, "response is List<UniswapV2SwapDTO>");
+        }
+        
+        /// <summary>
         /// Test UniswapV2TokenDayDatasCurrent
         /// </summary>
         [Test]
@@ -449,6 +427,17 @@ namespace CoinAPI.EMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.UniswapV2TokenDayDatasCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDayDataDTO>), response, "response is List<UniswapV2TokenDayDataDTO>");
+        }
+        
+        /// <summary>
+        /// Test UniswapV2TokensCurrent
+        /// </summary>
+        [Test]
+        public void UniswapV2TokensCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.UniswapV2TokensCurrent();
+            //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDTO>), response, "response is List<UniswapV2TokenDTO>");
         }
         
         /// <summary>

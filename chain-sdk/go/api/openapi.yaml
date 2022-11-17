@@ -5140,92 +5140,6 @@ paths:
       summary: WithdrawRequests (current)
       tags:
       - Dex
-  /dapps/sushiswap/exchanges/current:
-    get:
-      description: Gets exchanges.
-      operationId: Curve.GetExchanges (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Curve.ExchangeDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Curve.ExchangeDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Curve.ExchangeDTO'
-                type: array
-          description: successful operation
-      summary: Exchanges (current) 🔥
-      tags:
-      - Sushiswap
-  /dapps/uniswapv2/pools/current:
-    get:
-      description: Gets pools.
-      operationId: UniswapV2.GetPools (current)
-      parameters:
-      - explode: true
-        in: query
-        name: filter_pool_id
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.PairDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.PairDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.PairDTO'
-                type: array
-          description: successful operation
-      summary: Pools (current) 🔥
-      tags:
-      - UniswapV2
-  /dapps/sushiswap/pools/current:
-    get:
-      description: Gets pools.
-      operationId: Sushiswap.GetPools (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-          description: successful operation
-      summary: Pools (current) 🔥
-      tags:
-      - Sushiswap
   /dapps/sushiswap/bundles/historical:
     get:
       description: Gets bundles.
@@ -6903,84 +6817,6 @@ paths:
       summary: Users (current)
       tags:
       - Sushiswap
-  /dapps/uniswapv2/swaps/current:
-    get:
-      description: Gets swaps.
-      operationId: UniswapV2.GetSwaps (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
-                type: array
-          description: successful operation
-      summary: Swaps (current) 🔥
-      tags:
-      - UniswapV2
-  /dapps/uniswapv2/tokens/current:
-    get:
-      description: Gets tokens.
-      operationId: UniswapV2.GetTokens (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
-                type: array
-          description: successful operation
-      summary: Tokens (current) 🔥
-      tags:
-      - UniswapV2
-  /dapps/sushiswap/trades/current:
-    get:
-      description: Gets trades.
-      operationId: Dex.GetTrades (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Dex.TradeDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Dex.TradeDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Dex.TradeDTO'
-                type: array
-          description: successful operation
-      summary: Trades (current) 🔥
-      tags:
-      - Sushiswap
   /dapps/uniswapv2/bundles/historical:
     get:
       description: Gets bundles.
@@ -7950,6 +7786,41 @@ paths:
       summary: Swaps (historical) 🔥
       tags:
       - UniswapV2
+  /dapps/uniswapv2/swaps/current:
+    get:
+      description: Gets swaps.
+      operationId: UniswapV2.Swaps (current)
+      parameters:
+      - description: Reference to pair.
+        explode: true
+        in: query
+        name: pair
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapDTO'
+                type: array
+          description: successful operation
+      summary: Swaps (current)
+      tags:
+      - UniswapV2
   /dapps/uniswapv2/tokenDayDatas/historical:
     get:
       description: Gets tokenDayDatas.
@@ -8139,6 +8010,32 @@ paths:
                 type: array
           description: successful operation
       summary: Tokens (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/tokens/current:
+    get:
+      description: Gets tokens.
+      operationId: UniswapV2.Tokens (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDTO'
+                type: array
+          description: successful operation
+      summary: Tokens (current)
       tags:
       - UniswapV2
   /dapps/uniswapv2/transactions/historical:

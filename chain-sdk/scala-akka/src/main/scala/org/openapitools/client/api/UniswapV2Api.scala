@@ -259,31 +259,6 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets pools.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PairDTO] (successful operation)
-   * 
-   * @param filterPoolId 
-   */
-  def uniswapV2GetPoolsCurrent(filterPoolId: Option[String] = None): ApiRequest[Seq[PairDTO]] =
-    ApiRequest[Seq[PairDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pools/current", "application/json")
-      .withQueryParam("filter_pool_id", filterPoolId)
-      .withSuccessResponse[Seq[PairDTO]](200)
-      
-
-  /**
-   * Gets swaps.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[SwapDTO] (successful operation)
-   */
-  def uniswapV2GetSwapsCurrent(): ApiRequest[Seq[SwapDTO]] =
-    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/swaps/current", "application/json")
-      .withSuccessResponse[Seq[SwapDTO]](200)
-      
-
-  /**
    * Gets swaps.
    * 
    * Expected answers:
@@ -327,17 +302,6 @@ class UniswapV2Api(baseUrl: String) {
       .withQueryParam("endDate", endDate)
       .withQueryParam("id", id)
       .withSuccessResponse[Seq[TokenDayDataDTO]](200)
-      
-
-  /**
-   * Gets tokens.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TokenDTO] (successful operation)
-   */
-  def uniswapV2GetTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
-    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokens/current", "application/json")
-      .withSuccessResponse[Seq[TokenDTO]](200)
       
 
   /**
@@ -524,6 +488,20 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
+   * Gets swaps.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SwapDTO] (successful operation)
+   * 
+   * @param pair Reference to pair.
+   */
+  def uniswapV2SwapsCurrent(pair: Option[String] = None): ApiRequest[Seq[SwapDTO]] =
+    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/swaps/current", "application/json")
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[SwapDTO]](200)
+      
+
+  /**
    * Gets tokenDayDatas.
    * 
    * Expected answers:
@@ -532,6 +510,17 @@ class UniswapV2Api(baseUrl: String) {
   def uniswapV2TokenDayDatasCurrent(): ApiRequest[Seq[TokenDayDataDTO]] =
     ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenDayDatas/current", "application/json")
       .withSuccessResponse[Seq[TokenDayDataDTO]](200)
+      
+
+  /**
+   * Gets tokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   */
+  def uniswapV2TokensCurrent(): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokens/current", "application/json")
+      .withSuccessResponse[Seq[TokenDTO]](200)
       
 
   /**

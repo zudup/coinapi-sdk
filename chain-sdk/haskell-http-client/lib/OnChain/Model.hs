@@ -79,9 +79,6 @@ newtype EndBlock = EndBlock { unEndBlock :: Integer } deriving (P.Eq, P.Show)
 -- ** EndDate
 newtype EndDate = EndDate { unEndDate :: DateTime } deriving (P.Eq, P.Show)
 
--- ** FilterPoolId
-newtype FilterPoolId = FilterPoolId { unFilterPoolId :: Text } deriving (P.Eq, P.Show)
-
 -- ** Id
 newtype Id = Id { unId :: Text } deriving (P.Eq, P.Show)
 

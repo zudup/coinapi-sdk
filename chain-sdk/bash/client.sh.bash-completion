@@ -164,8 +164,6 @@ _()
     operations["dexUsersCurrent"]=1
     operations["dexWithdrawRequestsCurrent"]=1
     operations["dexWithdrawsCurrent"]=1
-    operations["curveGetExchangesCurrent"]=1
-    operations["dexGetTradesCurrent"]=1
     operations["sushiswapBundlesCurrent"]=1
     operations["sushiswapBurnsCurrent"]=1
     operations["sushiswapDayDatasCurrent"]=1
@@ -181,7 +179,6 @@ _()
     operations["sushiswapGetPairDayDatasHistorical"]=1
     operations["sushiswapGetPairHourDatasHistorical"]=1
     operations["sushiswapGetPairsHistorical"]=1
-    operations["sushiswapGetPoolsCurrent"]=1
     operations["sushiswapGetSwapsHistorical"]=1
     operations["sushiswapGetTokenDayDatasHistorical"]=1
     operations["sushiswapGetTokensHistorical"]=1
@@ -209,11 +206,8 @@ _()
     operations["uniswapV2GetPairDayDatasHistorical"]=1
     operations["uniswapV2GetPairHourDatasHistorical"]=1
     operations["uniswapV2GetPairsHistorical"]=1
-    operations["uniswapV2GetPoolsCurrent"]=1
-    operations["uniswapV2GetSwapsCurrent"]=1
     operations["uniswapV2GetSwapsHistorical"]=1
     operations["uniswapV2GetTokenDayDatasHistorical"]=1
-    operations["uniswapV2GetTokensCurrent"]=1
     operations["uniswapV2GetTokensHistorical"]=1
     operations["uniswapV2GetTransactionsHistorical"]=1
     operations["uniswapV2GetUniswapDayDatasHistorical"]=1
@@ -225,7 +219,9 @@ _()
     operations["uniswapV2PairDayDatasCurrent"]=1
     operations["uniswapV2PairHourDatasCurrent"]=1
     operations["uniswapV2PairsCurrent"]=1
+    operations["uniswapV2SwapsCurrent"]=1
     operations["uniswapV2TokenDayDatasCurrent"]=1
+    operations["uniswapV2TokensCurrent"]=1
     operations["uniswapV2TransactionsCurrent"]=1
     operations["uniswapV2UniswapDayDatasCurrent"]=1
     operations["uniswapV2UniswapFactorysCurrent"]=1
@@ -364,8 +360,6 @@ _()
     operation_parameters["dexUsersCurrent"]=""
     operation_parameters["dexWithdrawRequestsCurrent"]=""
     operation_parameters["dexWithdrawsCurrent"]=""
-    operation_parameters["curveGetExchangesCurrent"]=""
-    operation_parameters["dexGetTradesCurrent"]=""
     operation_parameters["sushiswapBundlesCurrent"]=""
     operation_parameters["sushiswapBurnsCurrent"]=""
     operation_parameters["sushiswapDayDatasCurrent"]=""
@@ -381,7 +375,6 @@ _()
     operation_parameters["sushiswapGetPairDayDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= token_0= token_1= "
     operation_parameters["sushiswapGetPairHourDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
     operation_parameters["sushiswapGetPairsHistorical"]="startBlock= endBlock= startDate= endDate= id= name= token_0= token_1= "
-    operation_parameters["sushiswapGetPoolsCurrent"]=""
     operation_parameters["sushiswapGetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
     operation_parameters["sushiswapGetTokenDayDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= "
     operation_parameters["sushiswapGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= symbol= name= "
@@ -409,11 +402,8 @@ _()
     operation_parameters["uniswapV2GetPairDayDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= token_0= token_1= "
     operation_parameters["uniswapV2GetPairHourDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
     operation_parameters["uniswapV2GetPairsHistorical"]="startBlock= endBlock= startDate= endDate= id= token_0= token_1= "
-    operation_parameters["uniswapV2GetPoolsCurrent"]="filter_pool_id= "
-    operation_parameters["uniswapV2GetSwapsCurrent"]=""
     operation_parameters["uniswapV2GetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= id= pair= "
     operation_parameters["uniswapV2GetTokenDayDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= "
-    operation_parameters["uniswapV2GetTokensCurrent"]=""
     operation_parameters["uniswapV2GetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= symbol= name= "
     operation_parameters["uniswapV2GetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
     operation_parameters["uniswapV2GetUniswapDayDatasHistorical"]="startBlock= endBlock= startDate= endDate= id= "
@@ -425,7 +415,9 @@ _()
     operation_parameters["uniswapV2PairDayDatasCurrent"]=""
     operation_parameters["uniswapV2PairHourDatasCurrent"]=""
     operation_parameters["uniswapV2PairsCurrent"]="id= "
+    operation_parameters["uniswapV2SwapsCurrent"]="pair= "
     operation_parameters["uniswapV2TokenDayDatasCurrent"]=""
+    operation_parameters["uniswapV2TokensCurrent"]=""
     operation_parameters["uniswapV2TransactionsCurrent"]=""
     operation_parameters["uniswapV2UniswapDayDatasCurrent"]=""
     operation_parameters["uniswapV2UniswapFactorysCurrent"]=""

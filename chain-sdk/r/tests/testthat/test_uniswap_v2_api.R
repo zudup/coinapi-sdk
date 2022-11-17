@@ -166,29 +166,6 @@ test_that("UniswapV2GetPairsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV2GetPoolsCurrent", {
-  # tests for UniswapV2GetPoolsCurrent
-  # base path: https://onchain.coinapi.io
-  # Pools (current) 🔥
-  # Gets pools.
-  # @param filter_pool_id character  (optional)
-  # @return [array[UniswapV2PairDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV2GetSwapsCurrent", {
-  # tests for UniswapV2GetSwapsCurrent
-  # base path: https://onchain.coinapi.io
-  # Swaps (current) 🔥
-  # Gets swaps.
-  # @return [array[UniswapV2SwapDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV2GetSwapsHistorical", {
   # tests for UniswapV2GetSwapsHistorical
   # base path: https://onchain.coinapi.io
@@ -217,17 +194,6 @@ test_that("UniswapV2GetTokenDayDatasHistorical", {
   # @param end_date character The end date of timeframe. (optional)
   # @param id character Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
   # @return [array[UniswapV2TokenDayDataDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV2GetTokensCurrent", {
-  # tests for UniswapV2GetTokensCurrent
-  # base path: https://onchain.coinapi.io
-  # Tokens (current) 🔥
-  # Gets tokens.
-  # @return [array[UniswapV2TokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -382,12 +348,35 @@ test_that("UniswapV2PairsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("UniswapV2SwapsCurrent", {
+  # tests for UniswapV2SwapsCurrent
+  # base path: https://onchain.coinapi.io
+  # Swaps (current)
+  # Gets swaps.
+  # @param pair character Reference to pair. (optional)
+  # @return [array[UniswapV2SwapDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV2TokenDayDatasCurrent", {
   # tests for UniswapV2TokenDayDatasCurrent
   # base path: https://onchain.coinapi.io
   # TokenDayDatas (current)
   # Gets tokenDayDatas.
   # @return [array[UniswapV2TokenDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2TokensCurrent", {
+  # tests for UniswapV2TokensCurrent
+  # base path: https://onchain.coinapi.io
+  # Tokens (current)
+  # Gets tokens.
+  # @return [array[UniswapV2TokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

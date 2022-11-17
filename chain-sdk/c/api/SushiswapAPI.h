@@ -5,8 +5,6 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
-#include "../model/curve_exchange_dto.h"
-#include "../model/dex_trade_dto.h"
 #include "../model/sushiswap_bundle_dto.h"
 #include "../model/sushiswap_burn_dto.h"
 #include "../model/sushiswap_day_data_dto.h"
@@ -23,22 +21,6 @@
 #include "../model/sushiswap_token_dto.h"
 #include "../model/sushiswap_transaction_dto.h"
 #include "../model/sushiswap_user_dto.h"
-
-
-// Exchanges (current) 🔥
-//
-// Gets exchanges.
-//
-list_t*
-SushiswapAPI_curveGetExchangesCurrent(apiClient_t *apiClient);
-
-
-// Trades (current) 🔥
-//
-// Gets trades.
-//
-list_t*
-SushiswapAPI_dexGetTradesCurrent(apiClient_t *apiClient);
 
 
 // Bundles (current)
@@ -159,14 +141,6 @@ SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long st
 //
 list_t*
 SushiswapAPI_sushiswapGetPairsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * name , char * token_0 , char * token_1 );
-
-
-// Pools (current) 🔥
-//
-// Gets pools.
-//
-list_t*
-SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
 
 
 // Swaps (historical) 🔥

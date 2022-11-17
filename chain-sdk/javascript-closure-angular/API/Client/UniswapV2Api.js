@@ -623,73 +623,6 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPairsHistorical = function(opt_sta
 }
 
 /**
- * Pools (current) 🔥
- * Gets pools.
- * @param {!string=} opt_filterPoolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.PairDTO>>}
- */
-API.Client.UniswapV2Api.prototype.uniswapV2GetPoolsCurrent = function(opt_filterPoolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/pools/current';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_filterPoolId !== undefined) {
-    queryParameters['filter_pool_id'] = opt_filterPoolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * Swaps (current) 🔥
- * Gets swaps.
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.SwapDTO>>}
- */
-API.Client.UniswapV2Api.prototype.uniswapV2GetSwapsCurrent = function(opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/swaps/current';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
  * Swaps (historical) 🔥
  * Gets swaps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -790,37 +723,6 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTokenDayDatasHistorical = function
     queryParameters['id'] = opt_id;
   }
 
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * Tokens (current) 🔥
- * Gets tokens.
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.TokenDTO>>}
- */
-API.Client.UniswapV2Api.prototype.uniswapV2GetTokensCurrent = function(opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/tokens/current';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
   /** @type {!Object} */
   var httpRequestParams = {
     method: 'GET',
@@ -1319,6 +1221,42 @@ API.Client.UniswapV2Api.prototype.uniswapV2PairsCurrent = function(opt_id, opt_e
 }
 
 /**
+ * Swaps (current)
+ * Gets swaps.
+ * @param {!string=} opt_pair Reference to pair.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.SwapDTO>>}
+ */
+API.Client.UniswapV2Api.prototype.uniswapV2SwapsCurrent = function(opt_pair, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/swaps/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_pair !== undefined) {
+    queryParameters['pair'] = opt_pair;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * TokenDayDatas (current)
  * Gets tokenDayDatas.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1327,6 +1265,37 @@ API.Client.UniswapV2Api.prototype.uniswapV2PairsCurrent = function(opt_id, opt_e
 API.Client.UniswapV2Api.prototype.uniswapV2TokenDayDatasCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/uniswapv2/tokenDayDatas/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * Tokens (current)
+ * Gets tokens.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.TokenDTO>>}
+ */
+API.Client.UniswapV2Api.prototype.uniswapV2TokensCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/uniswapv2/tokens/current';
 
   /** @type {!Object} */
   var queryParameters = {};

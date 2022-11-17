@@ -4,8 +4,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-CurveGetExchangesCurrent**](SushiswapApi.md#Invoke-CurveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**Invoke-DexGetTradesCurrent**](SushiswapApi.md#Invoke-DexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**Invoke-SushiswapBundlesCurrent**](SushiswapApi.md#Invoke-SushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**Invoke-SushiswapBurnsCurrent**](SushiswapApi.md#Invoke-SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**Invoke-SushiswapDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -21,7 +19,6 @@ Method | HTTP request | Description
 [**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**Invoke-SushiswapGetPairsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**Invoke-SushiswapGetPoolsCurrent**](SushiswapApi.md#Invoke-SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -40,82 +37,6 @@ Method | HTTP request | Description
 [**Invoke-SushiswapTransactionsCurrent**](SushiswapApi.md#Invoke-SushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**Invoke-SushiswapUsersCurrent**](SushiswapApi.md#Invoke-SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
-
-<a name="Invoke-CurveGetExchangesCurrent"></a>
-# **Invoke-CurveGetExchangesCurrent**
-> CurveExchangeDTO[] Invoke-CurveGetExchangesCurrent<br>
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-### Example
-```powershell
-
-# Exchanges (current) 🔥
-try {
-    $Result = Invoke-CurveGetExchangesCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-CurveGetExchangesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**CurveExchangeDTO[]**](CurveExchangeDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DexGetTradesCurrent"></a>
-# **Invoke-DexGetTradesCurrent**
-> DexTradeDTO[] Invoke-DexGetTradesCurrent<br>
-
-Trades (current) 🔥
-
-Gets trades.
-
-### Example
-```powershell
-
-# Trades (current) 🔥
-try {
-    $Result = Invoke-DexGetTradesCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DexGetTradesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**DexTradeDTO[]**](DexTradeDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Invoke-SushiswapBundlesCurrent"></a>
 # **Invoke-SushiswapBundlesCurrent**
@@ -897,44 +818,6 @@ Name | Type | Description  | Notes
  **Name** | **String**|  | [optional] 
  **Token0** | **String**|  | [optional] 
  **Token1** | **String**|  | [optional] 
-
-### Return type
-
-[**SushiswapPairDTO[]**](SushiswapPairDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-SushiswapGetPoolsCurrent"></a>
-# **Invoke-SushiswapGetPoolsCurrent**
-> SushiswapPairDTO[] Invoke-SushiswapGetPoolsCurrent<br>
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```powershell
-
-# Pools (current) 🔥
-try {
-    $Result = Invoke-SushiswapGetPoolsCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPoolsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 

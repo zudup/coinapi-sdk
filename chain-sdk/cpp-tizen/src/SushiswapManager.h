@@ -5,8 +5,6 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "Curve.ExchangeDTO.h"
-#include "Dex.TradeDTO.h"
 #include "Sushiswap.BundleDTO.h"
 #include "Sushiswap.BurnDTO.h"
 #include "Sushiswap.DayDataDTO.h"
@@ -40,56 +38,6 @@ class SushiswapManager {
 public:
 	SushiswapManager();
 	virtual ~SushiswapManager();
-
-/*! \brief Exchanges (current) 🔥. *Synchronous*
- *
- * Gets exchanges.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool curveGetExchanges (current)Sync(char * accessToken,
-	
-	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Exchanges (current) 🔥. *Asynchronous*
- *
- * Gets exchanges.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool curveGetExchanges (current)Async(char * accessToken,
-	
-	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief Trades (current) 🔥. *Synchronous*
- *
- * Gets trades.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dexGetTrades (current)Sync(char * accessToken,
-	
-	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Trades (current) 🔥. *Asynchronous*
- *
- * Gets trades.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dexGetTrades (current)Async(char * accessToken,
-	
-	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
-	, void* userData);
-
 
 /*! \brief Bundles (current). *Synchronous*
  *
@@ -598,31 +546,6 @@ bool sushiswapGetPairs (historical)Sync(char * accessToken,
  */
 bool sushiswapGetPairs (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string name, std::string token0, std::string token1, 
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief Pools (current) 🔥. *Synchronous*
- *
- * Gets pools.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool sushiswapGetPools (current)Sync(char * accessToken,
-	
-	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Pools (current) 🔥. *Asynchronous*
- *
- * Gets pools.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool sushiswapGetPools (current)Async(char * accessToken,
-	
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 

@@ -529,55 +529,6 @@ instance Produces UniswapV2GetPairsHistorical MimeTextJson
 instance Produces UniswapV2GetPairsHistorical MimePlainText
 
 
--- *** uniswapV2GetPoolsCurrent
-
--- | @GET \/dapps\/uniswapv2\/pools\/current@
--- 
--- Pools (current) 🔥
--- 
--- Gets pools.
--- 
-uniswapV2GetPoolsCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV2GetPoolsCurrent MimeNoContent [UniswapV2PairDTO] accept
-uniswapV2GetPoolsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv2/pools/current"]
-
-data UniswapV2GetPoolsCurrent  
-instance HasOptionalParam UniswapV2GetPoolsCurrent FilterPoolId where
-  applyOptionalParam req (FilterPoolId xs) =
-    req `addQuery` toQuery ("filter_pool_id", Just xs)
--- | @application/json@
-instance Produces UniswapV2GetPoolsCurrent MimeJSON
--- | @text/json@
-instance Produces UniswapV2GetPoolsCurrent MimeTextJson
--- | @text/plain@
-instance Produces UniswapV2GetPoolsCurrent MimePlainText
-
-
--- *** uniswapV2GetSwapsCurrent
-
--- | @GET \/dapps\/uniswapv2\/swaps\/current@
--- 
--- Swaps (current) 🔥
--- 
--- Gets swaps.
--- 
-uniswapV2GetSwapsCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV2GetSwapsCurrent MimeNoContent [UniswapV2SwapDTO] accept
-uniswapV2GetSwapsCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv2/swaps/current"]
-
-data UniswapV2GetSwapsCurrent  
--- | @application/json@
-instance Produces UniswapV2GetSwapsCurrent MimeJSON
--- | @text/json@
-instance Produces UniswapV2GetSwapsCurrent MimeTextJson
--- | @text/plain@
-instance Produces UniswapV2GetSwapsCurrent MimePlainText
-
-
 -- *** uniswapV2GetSwapsHistorical
 
 -- | @GET \/dapps\/uniswapv2\/swaps\/historical@
@@ -677,29 +628,6 @@ instance Produces UniswapV2GetTokenDayDatasHistorical MimeJSON
 instance Produces UniswapV2GetTokenDayDatasHistorical MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2GetTokenDayDatasHistorical MimePlainText
-
-
--- *** uniswapV2GetTokensCurrent
-
--- | @GET \/dapps\/uniswapv2\/tokens\/current@
--- 
--- Tokens (current) 🔥
--- 
--- Gets tokens.
--- 
-uniswapV2GetTokensCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV2GetTokensCurrent MimeNoContent [UniswapV2TokenDTO] accept
-uniswapV2GetTokensCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv2/tokens/current"]
-
-data UniswapV2GetTokensCurrent  
--- | @application/json@
-instance Produces UniswapV2GetTokensCurrent MimeJSON
--- | @text/json@
-instance Produces UniswapV2GetTokensCurrent MimeTextJson
--- | @text/plain@
-instance Produces UniswapV2GetTokensCurrent MimePlainText
 
 
 -- *** uniswapV2GetTokensHistorical
@@ -1095,6 +1023,34 @@ instance Produces UniswapV2PairsCurrent MimeTextJson
 instance Produces UniswapV2PairsCurrent MimePlainText
 
 
+-- *** uniswapV2SwapsCurrent
+
+-- | @GET \/dapps\/uniswapv2\/swaps\/current@
+-- 
+-- Swaps (current)
+-- 
+-- Gets swaps.
+-- 
+uniswapV2SwapsCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2SwapsCurrent MimeNoContent [UniswapV2SwapDTO] accept
+uniswapV2SwapsCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/swaps/current"]
+
+data UniswapV2SwapsCurrent  
+
+-- | /Optional Param/ "pair" - Reference to pair.
+instance HasOptionalParam UniswapV2SwapsCurrent Pair where
+  applyOptionalParam req (Pair xs) =
+    req `addQuery` toQuery ("pair", Just xs)
+-- | @application/json@
+instance Produces UniswapV2SwapsCurrent MimeJSON
+-- | @text/json@
+instance Produces UniswapV2SwapsCurrent MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2SwapsCurrent MimePlainText
+
+
 -- *** uniswapV2TokenDayDatasCurrent
 
 -- | @GET \/dapps\/uniswapv2\/tokenDayDatas\/current@
@@ -1116,6 +1072,29 @@ instance Produces UniswapV2TokenDayDatasCurrent MimeJSON
 instance Produces UniswapV2TokenDayDatasCurrent MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2TokenDayDatasCurrent MimePlainText
+
+
+-- *** uniswapV2TokensCurrent
+
+-- | @GET \/dapps\/uniswapv2\/tokens\/current@
+-- 
+-- Tokens (current)
+-- 
+-- Gets tokens.
+-- 
+uniswapV2TokensCurrent
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2TokensCurrent MimeNoContent [UniswapV2TokenDTO] accept
+uniswapV2TokensCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/tokens/current"]
+
+data UniswapV2TokensCurrent  
+-- | @application/json@
+instance Produces UniswapV2TokensCurrent MimeJSON
+-- | @text/json@
+instance Produces UniswapV2TokensCurrent MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2TokensCurrent MimePlainText
 
 
 -- *** uniswapV2TransactionsCurrent

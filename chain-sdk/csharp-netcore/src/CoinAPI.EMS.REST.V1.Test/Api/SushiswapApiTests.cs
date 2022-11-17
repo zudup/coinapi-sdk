@@ -56,28 +56,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test CurveGetExchangesCurrent
-        /// </summary>
-        [Fact]
-        public void CurveGetExchangesCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CurveGetExchangesCurrent();
-            //Assert.IsType<List<CurveExchangeDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetTradesCurrent
-        /// </summary>
-        [Fact]
-        public void DexGetTradesCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.DexGetTradesCurrent();
-            //Assert.IsType<List<DexTradeDTO>>(response);
-        }
-
-        /// <summary>
         /// Test SushiswapBundlesCurrent
         /// </summary>
         [Fact]
@@ -307,17 +285,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string token0 = null;
             //string token1 = null;
             //var response = instance.SushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
-            //Assert.IsType<List<SushiswapPairDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetPoolsCurrent
-        /// </summary>
-        [Fact]
-        public void SushiswapGetPoolsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetPoolsCurrent();
             //Assert.IsType<List<SushiswapPairDTO>>(response);
         }
 

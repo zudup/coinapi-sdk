@@ -2315,40 +2315,6 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Withdraws__current;
 
-   --  Exchanges (current) 🔥
-   --  Gets exchanges.
-   procedure Curve_Get_Exchanges__current
-      (Client : in out Client_Type;
-       Result : out .Models.CurveExchangeDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Set_Path ("/dapps/sushiswap/exchanges/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Curve_Get_Exchanges__current;
-
-   --  Trades (current) 🔥
-   --  Gets trades.
-   procedure Dex_Get_Trades__current
-      (Client : in out Client_Type;
-       Result : out .Models.DexTradeDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Set_Path ("/dapps/sushiswap/trades/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Dex_Get_Trades__current;
-
    --  Bundles (current)
    --  Gets bundles.
    procedure Sushiswap_Bundles__current
@@ -2761,23 +2727,6 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pairs__historical;
-
-   --  Pools (current) 🔥
-   --  Gets pools.
-   procedure Sushiswap_Get_Pools__current
-      (Client : in out Client_Type;
-       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Set_Path ("/dapps/sushiswap/pools/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Pools__current;
 
    --  Swaps (historical) 🔥
    --  Gets swaps.
@@ -3426,42 +3375,6 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Pairs__historical;
 
-   --  Pools (current) 🔥
-   --  Gets pools.
-   procedure Uniswap_V2_Get_Pools__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Add_Param ("filter_pool_id", Filter_Pool_Id);
-      URI.Set_Path ("/dapps/uniswapv2/pools/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Pools__current;
-
-   --  Swaps (current) 🔥
-   --  Gets swaps.
-   procedure Uniswap_V2_Get_Swaps__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Set_Path ("/dapps/uniswapv2/swaps/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Swaps__current;
-
    --  Swaps (historical) 🔥
    --  Gets swaps.
    procedure Uniswap_V2_Get_Swaps__historical
@@ -3521,23 +3434,6 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Token_Day_Datas__historical;
-
-   --  Tokens (current) 🔥
-   --  Gets tokens.
-   procedure Uniswap_V2_Get_Tokens__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
-                          Swagger.Clients.APPLICATION_JSON,
-                          Swagger.Clients.TEXT_JSON));
-
-      URI.Set_Path ("/dapps/uniswapv2/tokens/current");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Tokens__current;
 
    --  Tokens (historical) 🔥
    --  Gets tokens.
@@ -3792,6 +3688,25 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Pairs__current;
 
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure Uniswap_V2_Swaps__current
+      (Client : in out Client_Type;
+       Pair : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("pair", Pair);
+      URI.Set_Path ("/dapps/uniswapv2/swaps/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Uniswap_V2_Swaps__current;
+
    --  TokenDayDatas (current)
    --  Gets tokenDayDatas.
    procedure Uniswap_V2_Token_Day_Datas__current
@@ -3808,6 +3723,23 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Token_Day_Datas__current;
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Uniswap_V2_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Set_Path ("/dapps/uniswapv2/tokens/current");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Uniswap_V2_Tokens__current;
 
    --  Transactions (current)
    --  Gets transactions.

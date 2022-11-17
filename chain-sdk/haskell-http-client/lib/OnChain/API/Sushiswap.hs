@@ -58,52 +58,6 @@ import qualified Prelude as P
 
 -- ** Sushiswap
 
--- *** curveGetExchangesCurrent
-
--- | @GET \/dapps\/sushiswap\/exchanges\/current@
--- 
--- Exchanges (current) 🔥
--- 
--- Gets exchanges.
--- 
-curveGetExchangesCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest CurveGetExchangesCurrent MimeNoContent [CurveExchangeDTO] accept
-curveGetExchangesCurrent  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/exchanges/current"]
-
-data CurveGetExchangesCurrent  
--- | @application/json@
-instance Produces CurveGetExchangesCurrent MimeJSON
--- | @text/json@
-instance Produces CurveGetExchangesCurrent MimeTextJson
--- | @text/plain@
-instance Produces CurveGetExchangesCurrent MimePlainText
-
-
--- *** dexGetTradesCurrent
-
--- | @GET \/dapps\/sushiswap\/trades\/current@
--- 
--- Trades (current) 🔥
--- 
--- Gets trades.
--- 
-dexGetTradesCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetTradesCurrent MimeNoContent [DexTradeDTO] accept
-dexGetTradesCurrent  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/trades/current"]
-
-data DexGetTradesCurrent  
--- | @application/json@
-instance Produces DexGetTradesCurrent MimeJSON
--- | @text/json@
-instance Produces DexGetTradesCurrent MimeTextJson
--- | @text/plain@
-instance Produces DexGetTradesCurrent MimePlainText
-
-
 -- *** sushiswapBundlesCurrent
 
 -- | @GET \/dapps\/sushiswap\/bundles\/current@
@@ -691,29 +645,6 @@ instance Produces SushiswapGetPairsHistorical MimeJSON
 instance Produces SushiswapGetPairsHistorical MimeTextJson
 -- | @text/plain@
 instance Produces SushiswapGetPairsHistorical MimePlainText
-
-
--- *** sushiswapGetPoolsCurrent
-
--- | @GET \/dapps\/sushiswap\/pools\/current@
--- 
--- Pools (current) 🔥
--- 
--- Gets pools.
--- 
-sushiswapGetPoolsCurrent
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest SushiswapGetPoolsCurrent MimeNoContent [SushiswapPairDTO] accept
-sushiswapGetPoolsCurrent  _ =
-  _mkRequest "GET" ["/dapps/sushiswap/pools/current"]
-
-data SushiswapGetPoolsCurrent  
--- | @application/json@
-instance Produces SushiswapGetPoolsCurrent MimeJSON
--- | @text/json@
-instance Produces SushiswapGetPoolsCurrent MimeTextJson
--- | @text/plain@
-instance Produces SushiswapGetPoolsCurrent MimePlainText
 
 
 -- *** sushiswapGetSwapsHistorical

@@ -4,8 +4,6 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**curveGetExchangesCurrent()**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥 |
-| [**dexGetTradesCurrent()**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥 |
 | [**sushiswapBundlesCurrent()**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current) |
 | [**sushiswapBurnsCurrent()**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current) |
 | [**sushiswapDayDatasCurrent()**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current) |
@@ -21,7 +19,6 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**sushiswapGetPairDayDatasHistorical()**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
 | [**sushiswapGetPairHourDatasHistorical()**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
 | [**sushiswapGetPairsHistorical()**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥 |
-| [**sushiswapGetPoolsCurrent()**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥 |
 | [**sushiswapGetSwapsHistorical()**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
 | [**sushiswapGetTokenDayDatasHistorical()**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
 | [**sushiswapGetTokensHistorical()**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
@@ -40,112 +37,6 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**sushiswapTransactionsCurrent()**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current) |
 | [**sushiswapUsersCurrent()**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current) |
 
-
-## `curveGetExchangesCurrent()`
-
-```php
-curveGetExchangesCurrent(): \OpenAPI\Client\Model\CurveExchangeDTO[]
-```
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->curveGetExchangesCurrent();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SushiswapApi->curveGetExchangesCurrent: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\OpenAPI\Client\Model\CurveExchangeDTO[]**](../Model/CurveExchangeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dexGetTradesCurrent()`
-
-```php
-dexGetTradesCurrent(): \OpenAPI\Client\Model\DexTradeDTO[]
-```
-
-Trades (current) 🔥
-
-Gets trades.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->dexGetTradesCurrent();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SushiswapApi->dexGetTradesCurrent: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\OpenAPI\Client\Model\DexTradeDTO[]**](../Model/DexTradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `sushiswapBundlesCurrent()`
 
@@ -1071,59 +962,6 @@ try {
 | **name** | **string**|  | [optional] |
 | **token_0** | **string**|  | [optional] |
 | **token_1** | **string**|  | [optional] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\SushiswapPairDTO[]**](../Model/SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `sushiswapGetPoolsCurrent()`
-
-```php
-sushiswapGetPoolsCurrent(): \OpenAPI\Client\Model\SushiswapPairDTO[]
-```
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->sushiswapGetPoolsCurrent();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SushiswapApi->sushiswapGetPoolsCurrent: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
 
 ### Return type
 

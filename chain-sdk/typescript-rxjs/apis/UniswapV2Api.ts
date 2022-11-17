@@ -108,10 +108,6 @@ export interface UniswapV2GetPairsHistoricalRequest {
     token1?: string;
 }
 
-export interface UniswapV2GetPoolsCurrentRequest {
-    filterPoolId?: string;
-}
-
 export interface UniswapV2GetSwapsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -173,6 +169,10 @@ export interface UniswapV2GetUsersHistoricalRequest {
 
 export interface UniswapV2PairsCurrentRequest {
     id?: string;
+}
+
+export interface UniswapV2SwapsCurrentRequest {
+    pair?: string;
 }
 
 /**
@@ -402,38 +402,6 @@ export class UniswapV2Api extends BaseAPI {
     };
 
     /**
-     * Gets pools.
-     * Pools (current) 🔥
-     */
-    uniswapV2GetPoolsCurrent({ filterPoolId }: UniswapV2GetPoolsCurrentRequest): Observable<Array<UniswapV2PairDTO>>
-    uniswapV2GetPoolsCurrent({ filterPoolId }: UniswapV2GetPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2PairDTO>>>
-    uniswapV2GetPoolsCurrent({ filterPoolId }: UniswapV2GetPoolsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV2PairDTO> | AjaxResponse<Array<UniswapV2PairDTO>>> {
-
-        const query: HttpQuery = {};
-
-        if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
-
-        return this.request<Array<UniswapV2PairDTO>>({
-            url: '/dapps/uniswapv2/pools/current',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * Gets swaps.
-     * Swaps (current) 🔥
-     */
-    uniswapV2GetSwapsCurrent(): Observable<Array<UniswapV2SwapDTO>>
-    uniswapV2GetSwapsCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2SwapDTO>>>
-    uniswapV2GetSwapsCurrent(opts?: OperationOpts): Observable<Array<UniswapV2SwapDTO> | AjaxResponse<Array<UniswapV2SwapDTO>>> {
-        return this.request<Array<UniswapV2SwapDTO>>({
-            url: '/dapps/uniswapv2/swaps/current',
-            method: 'GET',
-        }, opts?.responseOpts);
-    };
-
-    /**
      * Gets swaps.
      * Swaps (historical) 🔥
      */
@@ -477,19 +445,6 @@ export class UniswapV2Api extends BaseAPI {
             url: '/dapps/uniswapv2/tokenDayDatas/historical',
             method: 'GET',
             query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * Gets tokens.
-     * Tokens (current) 🔥
-     */
-    uniswapV2GetTokensCurrent(): Observable<Array<UniswapV2TokenDTO>>
-    uniswapV2GetTokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2TokenDTO>>>
-    uniswapV2GetTokensCurrent(opts?: OperationOpts): Observable<Array<UniswapV2TokenDTO> | AjaxResponse<Array<UniswapV2TokenDTO>>> {
-        return this.request<Array<UniswapV2TokenDTO>>({
-            url: '/dapps/uniswapv2/tokens/current',
-            method: 'GET',
         }, opts?.responseOpts);
     };
 
@@ -695,6 +650,25 @@ export class UniswapV2Api extends BaseAPI {
     };
 
     /**
+     * Gets swaps.
+     * Swaps (current)
+     */
+    uniswapV2SwapsCurrent({ pair }: UniswapV2SwapsCurrentRequest): Observable<Array<UniswapV2SwapDTO>>
+    uniswapV2SwapsCurrent({ pair }: UniswapV2SwapsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2SwapDTO>>>
+    uniswapV2SwapsCurrent({ pair }: UniswapV2SwapsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV2SwapDTO> | AjaxResponse<Array<UniswapV2SwapDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (pair != null) { query['pair'] = pair; }
+
+        return this.request<Array<UniswapV2SwapDTO>>({
+            url: '/dapps/uniswapv2/swaps/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets tokenDayDatas.
      * TokenDayDatas (current)
      */
@@ -703,6 +677,19 @@ export class UniswapV2Api extends BaseAPI {
     uniswapV2TokenDayDatasCurrent(opts?: OperationOpts): Observable<Array<UniswapV2TokenDayDataDTO> | AjaxResponse<Array<UniswapV2TokenDayDataDTO>>> {
         return this.request<Array<UniswapV2TokenDayDataDTO>>({
             url: '/dapps/uniswapv2/tokenDayDatas/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokens.
+     * Tokens (current)
+     */
+    uniswapV2TokensCurrent(): Observable<Array<UniswapV2TokenDTO>>
+    uniswapV2TokensCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV2TokenDTO>>>
+    uniswapV2TokensCurrent(opts?: OperationOpts): Observable<Array<UniswapV2TokenDTO> | AjaxResponse<Array<UniswapV2TokenDTO>>> {
+        return this.request<Array<UniswapV2TokenDTO>>({
+            url: '/dapps/uniswapv2/tokens/current',
             method: 'GET',
         }, opts?.responseOpts);
     };

@@ -87,22 +87,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV2Api' {
         }
     }
 
-    Context 'Invoke-UniswapV2GetPoolsCurrent' {
-        It 'Test Invoke-UniswapV2GetPoolsCurrent' {
-            #$TestResult = Invoke-UniswapV2GetPoolsCurrent -FilterPoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV2GetSwapsCurrent' {
-        It 'Test Invoke-UniswapV2GetSwapsCurrent' {
-            #$TestResult = Invoke-UniswapV2GetSwapsCurrent
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV2GetSwapsHistorical' {
         It 'Test Invoke-UniswapV2GetSwapsHistorical' {
             #$TestResult = Invoke-UniswapV2GetSwapsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
@@ -114,14 +98,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV2Api' {
     Context 'Invoke-UniswapV2GetTokenDayDatasHistorical' {
         It 'Test Invoke-UniswapV2GetTokenDayDatasHistorical' {
             #$TestResult = Invoke-UniswapV2GetTokenDayDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV2GetTokensCurrent' {
-        It 'Test Invoke-UniswapV2GetTokensCurrent' {
-            #$TestResult = Invoke-UniswapV2GetTokensCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -215,9 +191,25 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV2Api' {
         }
     }
 
+    Context 'Invoke-UniswapV2SwapsCurrent' {
+        It 'Test Invoke-UniswapV2SwapsCurrent' {
+            #$TestResult = Invoke-UniswapV2SwapsCurrent -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-UniswapV2TokenDayDatasCurrent' {
         It 'Test Invoke-UniswapV2TokenDayDatasCurrent' {
             #$TestResult = Invoke-UniswapV2TokenDayDatasCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-UniswapV2TokensCurrent' {
+        It 'Test Invoke-UniswapV2TokensCurrent' {
+            #$TestResult = Invoke-UniswapV2TokensCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

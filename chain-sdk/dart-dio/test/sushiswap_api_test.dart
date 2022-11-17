@@ -7,24 +7,6 @@ void main() {
   final instance = Openapi().getSushiswapApi();
 
   group(SushiswapApi, () {
-    // Exchanges (current) 🔥
-    //
-    // Gets exchanges.
-    //
-    //Future<BuiltList<CurveExchangeDTO>> curveGetExchangesCurrent() async
-    test('test curveGetExchangesCurrent', () async {
-      // TODO
-    });
-
-    // Trades (current) 🔥
-    //
-    // Gets trades.
-    //
-    //Future<BuiltList<DexTradeDTO>> dexGetTradesCurrent() async
-    test('test dexGetTradesCurrent', () async {
-      // TODO
-    });
-
     // Bundles (current)
     //
     // Gets bundles.
@@ -157,15 +139,6 @@ void main() {
     //
     //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPairsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String name, String token0, String token1 }) async
     test('test sushiswapGetPairsHistorical', () async {
-      // TODO
-    });
-
-    // Pools (current) 🔥
-    //
-    // Gets pools.
-    //
-    //Future<BuiltList<SushiswapPairDTO>> sushiswapGetPoolsCurrent() async
-    test('test sushiswapGetPoolsCurrent', () async {
       // TODO
     });
 

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2SwapsCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2SwapsCurrent unit test stubs
-        Swaps (current) 🔥  # noqa: E501
+        Swaps (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -390,58 +390,6 @@ bool uniswapV2GetPairs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Pools (current) 🔥. *Synchronous*
- *
- * Gets pools.
- * \param filterPoolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetPools (current)Sync(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Pools (current) 🔥. *Asynchronous*
- *
- * Gets pools.
- * \param filterPoolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetPools (current)Async(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2.PairDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief Swaps (current) 🔥. *Synchronous*
- *
- * Gets swaps.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetSwaps (current)Sync(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Swaps (current) 🔥. *Asynchronous*
- *
- * Gets swaps.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetSwaps (current)Async(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Swaps (historical) 🔥. *Synchronous*
  *
  * Gets swaps.
@@ -511,31 +459,6 @@ bool uniswapV2GetTokenDayDatas (historical)Sync(char * accessToken,
 bool uniswapV2GetTokenDayDatas (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief Tokens (current) 🔥. *Synchronous*
- *
- * Gets tokens.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetTokens (current)Sync(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief Tokens (current) 🔥. *Asynchronous*
- *
- * Gets tokens.
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV2GetTokens (current)Async(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
 	, void* userData);
 
 
@@ -870,6 +793,33 @@ bool uniswapV2Pairs (current)Async(char * accessToken,
 	, void* userData);
 
 
+/*! \brief Swaps (current). *Synchronous*
+ *
+ * Gets swaps.
+ * \param pair Reference to pair.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Swaps (current)Sync(char * accessToken,
+	std::string pair, 
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Swaps (current). *Asynchronous*
+ *
+ * Gets swaps.
+ * \param pair Reference to pair.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Swaps (current)Async(char * accessToken,
+	std::string pair, 
+	void(* handler)(std::list<UniswapV2.SwapDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief TokenDayDatas (current). *Synchronous*
  *
  * Gets tokenDayDatas.
@@ -892,6 +842,31 @@ bool uniswapV2TokenDayDatas (current)Sync(char * accessToken,
 bool uniswapV2TokenDayDatas (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief Tokens (current). *Synchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Tokens (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief Tokens (current). *Asynchronous*
+ *
+ * Gets tokens.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV2Tokens (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV2.TokenDTO>, Error, void* )
 	, void* userData);
 
 

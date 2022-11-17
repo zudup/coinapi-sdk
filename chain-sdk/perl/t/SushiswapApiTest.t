@@ -30,18 +30,6 @@ my $api = WWW::OpenAPIClient::SushiswapApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 
 #
-# curve_get_exchanges__current test
-#
-# uncomment below and update the test
-#my $curve_get_exchanges__current_result = $api->curve_get_exchanges__current();
-
-#
-# dex_get_trades__current test
-#
-# uncomment below and update the test
-#my $dex_get_trades__current_result = $api->dex_get_trades__current();
-
-#
 # sushiswap_bundles__current test
 #
 # uncomment below and update the test
@@ -198,12 +186,6 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_pairs__historical_token_0 = undef; # replace NULL with a proper value
 #my $sushiswap_get_pairs__historical_token_1 = undef; # replace NULL with a proper value
 #my $sushiswap_get_pairs__historical_result = $api->sushiswap_get_pairs__historical(start_block => $sushiswap_get_pairs__historical_start_block, end_block => $sushiswap_get_pairs__historical_end_block, start_date => $sushiswap_get_pairs__historical_start_date, end_date => $sushiswap_get_pairs__historical_end_date, id => $sushiswap_get_pairs__historical_id, name => $sushiswap_get_pairs__historical_name, token_0 => $sushiswap_get_pairs__historical_token_0, token_1 => $sushiswap_get_pairs__historical_token_1);
-
-#
-# sushiswap_get_pools__current test
-#
-# uncomment below and update the test
-#my $sushiswap_get_pools__current_result = $api->sushiswap_get_pools__current();
 
 #
 # sushiswap_get_swaps__historical test

@@ -742,123 +742,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Pools (current) 🔥
-    # Gets pools.
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :filter_pool_id 
-    # @return [Array<UniswapV2PairDTO>]
-    def uniswap_v2_get_pools__current(opts = {})
-      data, _status_code, _headers = uniswap_v2_get_pools__current_with_http_info(opts)
-      data
-    end
-
-    # Pools (current) 🔥
-    # Gets pools.
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :filter_pool_id 
-    # @return [Array<(Array<UniswapV2PairDTO>, Integer, Hash)>] Array<UniswapV2PairDTO> data, response status code and response headers
-    def uniswap_v2_get_pools__current_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pools__current ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/pools/current'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'filter_pool_id'] = opts[:'filter_pool_id'] if !opts[:'filter_pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.uniswap_v2_get_pools__current",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Swaps (current) 🔥
-    # Gets swaps.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<UniswapV2SwapDTO>]
-    def uniswap_v2_get_swaps__current(opts = {})
-      data, _status_code, _headers = uniswap_v2_get_swaps__current_with_http_info(opts)
-      data
-    end
-
-    # Swaps (current) 🔥
-    # Gets swaps.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<UniswapV2SwapDTO>, Integer, Hash)>] Array<UniswapV2SwapDTO> data, response status code and response headers
-    def uniswap_v2_get_swaps__current_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_swaps__current ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/swaps/current'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<UniswapV2SwapDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.uniswap_v2_get_swaps__current",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_swaps__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Swaps (historical) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
@@ -1002,63 +885,6 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_token_day_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Tokens (current) 🔥
-    # Gets tokens.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<UniswapV2TokenDTO>]
-    def uniswap_v2_get_tokens__current(opts = {})
-      data, _status_code, _headers = uniswap_v2_get_tokens__current_with_http_info(opts)
-      data
-    end
-
-    # Tokens (current) 🔥
-    # Gets tokens.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<UniswapV2TokenDTO>, Integer, Hash)>] Array<UniswapV2TokenDTO> data, response status code and response headers
-    def uniswap_v2_get_tokens__current_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_tokens__current ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/tokens/current'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.uniswap_v2_get_tokens__current",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1774,6 +1600,66 @@ module OpenapiClient
       return data, status_code, headers
     end
 
+    # Swaps (current)
+    # Gets swaps.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<UniswapV2SwapDTO>]
+    def uniswap_v2_swaps__current(opts = {})
+      data, _status_code, _headers = uniswap_v2_swaps__current_with_http_info(opts)
+      data
+    end
+
+    # Swaps (current)
+    # Gets swaps.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<(Array<UniswapV2SwapDTO>, Integer, Hash)>] Array<UniswapV2SwapDTO> data, response status code and response headers
+    def uniswap_v2_swaps__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_swaps__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/swaps/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2SwapDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_swaps__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_swaps__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # TokenDayDatas (current)
     # Gets tokenDayDatas.
     # @param [Hash] opts the optional parameters
@@ -1827,6 +1713,63 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_token_day_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UniswapV2TokenDTO>]
+    def uniswap_v2_tokens__current(opts = {})
+      data, _status_code, _headers = uniswap_v2_tokens__current_with_http_info(opts)
+      data
+    end
+
+    # Tokens (current)
+    # Gets tokens.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UniswapV2TokenDTO>, Integer, Hash)>] Array<UniswapV2TokenDTO> data, response status code and response headers
+    def uniswap_v2_tokens__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_tokens__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/tokens/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_tokens__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -85,20 +85,6 @@ describe("uniswap_v2_api", function()
     end)
   end)
 
-  -- unit tests for uniswap_v2_get_pools__current
-  describe("uniswap_v2_get_pools__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v2_get_swaps__current
-  describe("uniswap_v2_get_swaps__current test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for uniswap_v2_get_swaps__historical
   describe("uniswap_v2_get_swaps__historical test", function()
     it("should work", function()
@@ -108,13 +94,6 @@ describe("uniswap_v2_api", function()
 
   -- unit tests for uniswap_v2_get_token_day_datas__historical
   describe("uniswap_v2_get_token_day_datas__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for uniswap_v2_get_tokens__current
-  describe("uniswap_v2_get_tokens__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -197,8 +176,22 @@ describe("uniswap_v2_api", function()
     end)
   end)
 
+  -- unit tests for uniswap_v2_swaps__current
+  describe("uniswap_v2_swaps__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for uniswap_v2_token_day_datas__current
   describe("uniswap_v2_token_day_datas__current test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for uniswap_v2_tokens__current
+  describe("uniswap_v2_tokens__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

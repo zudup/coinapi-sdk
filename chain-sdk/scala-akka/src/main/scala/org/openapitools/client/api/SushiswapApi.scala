@@ -14,7 +14,6 @@ package org.openapitools.client.api
 import org.openapitools.client.model.BundleDTO
 import org.openapitools.client.model.BurnDTO
 import org.openapitools.client.model.DayDataDTO
-import org.openapitools.client.model.ExchangeDTO
 import org.openapitools.client.model.FactoryDTO
 import org.openapitools.client.model.HourDataDTO
 import org.openapitools.client.model.LiquidityPositionDTO
@@ -27,7 +26,6 @@ import org.openapitools.client.model.PairHourDataDTO
 import org.openapitools.client.model.SwapDTO
 import org.openapitools.client.model.TokenDTO
 import org.openapitools.client.model.TokenDayDataDTO
-import org.openapitools.client.model.TradeDTO
 import org.openapitools.client.model.TransactionDTO
 import org.openapitools.client.model.UserDTO
 import org.openapitools.client.core._
@@ -40,28 +38,6 @@ object SushiswapApi {
 }
 
 class SushiswapApi(baseUrl: String) {
-
-  /**
-   * Gets exchanges.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[ExchangeDTO] (successful operation)
-   */
-  def curveGetExchangesCurrent(): ApiRequest[Seq[ExchangeDTO]] =
-    ApiRequest[Seq[ExchangeDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/exchanges/current", "application/json")
-      .withSuccessResponse[Seq[ExchangeDTO]](200)
-      
-
-  /**
-   * Gets trades.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TradeDTO] (successful operation)
-   */
-  def dexGetTradesCurrent(): ApiRequest[Seq[TradeDTO]] =
-    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/trades/current", "application/json")
-      .withSuccessResponse[Seq[TradeDTO]](200)
-      
 
   /**
    * Gets bundles.
@@ -372,17 +348,6 @@ class SushiswapApi(baseUrl: String) {
       .withQueryParam("name", name)
       .withQueryParam("token_0", token0)
       .withQueryParam("token_1", token1)
-      .withSuccessResponse[Seq[PairDTO]](200)
-      
-
-  /**
-   * Gets pools.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PairDTO] (successful operation)
-   */
-  def sushiswapGetPoolsCurrent(): ApiRequest[Seq[PairDTO]] =
-    ApiRequest[Seq[PairDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pools/current", "application/json")
       .withSuccessResponse[Seq[PairDTO]](200)
       
 

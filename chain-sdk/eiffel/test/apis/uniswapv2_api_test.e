@@ -194,33 +194,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pools_current
-            -- Pools (current) 🔥
-            --
-            -- Gets pools.
-        local
-            l_response: LIST [UNISWAP_V2_PAIR_DTO]
-            l_filter_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v2_get_pools_current(l_filter_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v2_get_swaps_current
-            -- Swaps (current) 🔥
-            --
-            -- Gets swaps.
-        local
-            l_response: LIST [UNISWAP_V2_SWAP_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v2_get_swaps_current
-            assert ("not_implemented", False)
-        end
-
     test_uniswap_v2_get_swaps_historical
             -- Swaps (historical) 🔥
             --
@@ -255,19 +228,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.uniswap_v2_get_token_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
-            assert ("not_implemented", False)
-        end
-
-    test_uniswap_v2_get_tokens_current
-            -- Tokens (current) 🔥
-            --
-            -- Gets tokens.
-        local
-            l_response: LIST [UNISWAP_V2_TOKEN_DTO]
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.uniswap_v2_get_tokens_current
             assert ("not_implemented", False)
         end
 
@@ -442,6 +402,20 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_uniswap_v2_swaps_current
+            -- Swaps (current)
+            --
+            -- Gets swaps.
+        local
+            l_response: LIST [UNISWAP_V2_SWAP_DTO]
+            l_pair: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_swaps_current(l_pair)
+            assert ("not_implemented", False)
+        end
+
     test_uniswap_v2_token_day_datas_current
             -- TokenDayDatas (current)
             --
@@ -452,6 +426,19 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.uniswap_v2_token_day_datas_current
+            assert ("not_implemented", False)
+        end
+
+    test_uniswap_v2_tokens_current
+            -- Tokens (current)
+            --
+            -- Gets tokens.
+        local
+            l_response: LIST [UNISWAP_V2_TOKEN_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.uniswap_v2_tokens_current
             assert ("not_implemented", False)
         end
 

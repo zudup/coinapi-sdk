@@ -4,8 +4,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SushiswapAPI_curveGetExchangesCurrent**](SushiswapAPI.md#SushiswapAPI_curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**SushiswapAPI_dexGetTradesCurrent**](SushiswapAPI.md#SushiswapAPI_dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**SushiswapAPI_sushiswapBundlesCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**SushiswapAPI_sushiswapBurnsCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**SushiswapAPI_sushiswapDayDatasCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -21,7 +19,6 @@ Method | HTTP request | Description
 [**SushiswapAPI_sushiswapGetPairDayDatasHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**SushiswapAPI_sushiswapGetPairHourDatasHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**SushiswapAPI_sushiswapGetPairsHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**SushiswapAPI_sushiswapGetPoolsCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**SushiswapAPI_sushiswapGetSwapsHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**SushiswapAPI_sushiswapGetTokenDayDatasHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**SushiswapAPI_sushiswapGetTokensHistorical**](SushiswapAPI.md#SushiswapAPI_sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -40,66 +37,6 @@ Method | HTTP request | Description
 [**SushiswapAPI_sushiswapTransactionsCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**SushiswapAPI_sushiswapUsersCurrent**](SushiswapAPI.md#SushiswapAPI_sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
-
-# **SushiswapAPI_curveGetExchangesCurrent**
-```c
-// Exchanges (current) 🔥
-//
-// Gets exchanges.
-//
-list_t* SushiswapAPI_curveGetExchangesCurrent(apiClient_t *apiClient);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-
-### Return type
-
-[list_t](curve_exchange_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **SushiswapAPI_dexGetTradesCurrent**
-```c
-// Trades (current) 🔥
-//
-// Gets trades.
-//
-list_t* SushiswapAPI_dexGetTradesCurrent(apiClient_t *apiClient);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-
-### Return type
-
-[list_t](dex_trade_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SushiswapAPI_sushiswapBundlesCurrent**
 ```c
@@ -602,36 +539,6 @@ Name | Type | Description  | Notes
 **name** | **char \*** |  | [optional] 
 **token_0** | **char \*** |  | [optional] 
 **token_1** | **char \*** |  | [optional] 
-
-### Return type
-
-[list_t](sushiswap_pair_dto.md) *
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **SushiswapAPI_sushiswapGetPoolsCurrent**
-```c
-// Pools (current) 🔥
-//
-// Gets pools.
-//
-list_t* SushiswapAPI_sushiswapGetPoolsCurrent(apiClient_t *apiClient);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
 
 ### Return type
 

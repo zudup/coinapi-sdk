@@ -73,30 +73,6 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for curveGetExchangesCurrent
-     *
-     * Exchanges (current) 🔥.
-     *
-     */
-    public function testCurveGetExchangesCurrent()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dexGetTradesCurrent
-     *
-     * Trades (current) 🔥.
-     *
-     */
-    public function testDexGetTradesCurrent()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for sushiswapBundlesCurrent
      *
      * Bundles (current).
@@ -271,18 +247,6 @@ class SushiswapApiTest extends TestCase
      *
      */
     public function testSushiswapGetPairsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for sushiswapGetPoolsCurrent
-     *
-     * Pools (current) 🔥.
-     *
-     */
-    public function testSushiswapGetPoolsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

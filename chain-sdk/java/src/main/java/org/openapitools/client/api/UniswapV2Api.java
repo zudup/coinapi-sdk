@@ -1647,244 +1647,6 @@ public class UniswapV2Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV2GetPoolsCurrent
-     * @param filterPoolId  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetPoolsCurrentCall(String filterPoolId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/uniswapv2/pools/current";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (filterPoolId != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("filter_pool_id", filterPoolId));
-        }
-
-        final String[] localVarAccepts = {
-            "text/plain",
-            "application/json",
-            "text/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV2GetPoolsCurrentValidateBeforeCall(String filterPoolId, final ApiCallback _callback) throws ApiException {
-        return uniswapV2GetPoolsCurrentCall(filterPoolId, _callback);
-
-    }
-
-    /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param filterPoolId  (optional)
-     * @return List&lt;UniswapV2PairDTO&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public List<UniswapV2PairDTO> uniswapV2GetPoolsCurrent(String filterPoolId) throws ApiException {
-        ApiResponse<List<UniswapV2PairDTO>> localVarResp = uniswapV2GetPoolsCurrentWithHttpInfo(filterPoolId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param filterPoolId  (optional)
-     * @return ApiResponse&lt;List&lt;UniswapV2PairDTO&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<UniswapV2PairDTO>> uniswapV2GetPoolsCurrentWithHttpInfo(String filterPoolId) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV2GetPoolsCurrentValidateBeforeCall(filterPoolId, null);
-        Type localVarReturnType = new TypeToken<List<UniswapV2PairDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Pools (current) 🔥 (asynchronously)
-     * Gets pools.
-     * @param filterPoolId  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetPoolsCurrentAsync(String filterPoolId, final ApiCallback<List<UniswapV2PairDTO>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = uniswapV2GetPoolsCurrentValidateBeforeCall(filterPoolId, _callback);
-        Type localVarReturnType = new TypeToken<List<UniswapV2PairDTO>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for uniswapV2GetSwapsCurrent
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetSwapsCurrentCall(final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/uniswapv2/swaps/current";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "text/plain",
-            "application/json",
-            "text/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV2GetSwapsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV2GetSwapsCurrentCall(_callback);
-
-    }
-
-    /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @return List&lt;UniswapV2SwapDTO&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public List<UniswapV2SwapDTO> uniswapV2GetSwapsCurrent() throws ApiException {
-        ApiResponse<List<UniswapV2SwapDTO>> localVarResp = uniswapV2GetSwapsCurrentWithHttpInfo();
-        return localVarResp.getData();
-    }
-
-    /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @return ApiResponse&lt;List&lt;UniswapV2SwapDTO&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<UniswapV2SwapDTO>> uniswapV2GetSwapsCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV2GetSwapsCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<UniswapV2SwapDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Swaps (current) 🔥 (asynchronously)
-     * Gets swaps.
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetSwapsCurrentAsync(final ApiCallback<List<UniswapV2SwapDTO>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = uniswapV2GetSwapsCurrentValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<UniswapV2SwapDTO>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for uniswapV2GetSwapsHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2199,121 +1961,6 @@ public class UniswapV2Api {
 
         okhttp3.Call localVarCall = uniswapV2GetTokenDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV2TokenDayDataDTO>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for uniswapV2GetTokensCurrent
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetTokensCurrentCall(final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/dapps/uniswapv2/tokens/current";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "text/plain",
-            "application/json",
-            "text/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV2GetTokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV2GetTokensCurrentCall(_callback);
-
-    }
-
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @return List&lt;UniswapV2TokenDTO&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public List<UniswapV2TokenDTO> uniswapV2GetTokensCurrent() throws ApiException {
-        ApiResponse<List<UniswapV2TokenDTO>> localVarResp = uniswapV2GetTokensCurrentWithHttpInfo();
-        return localVarResp.getData();
-    }
-
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @return ApiResponse&lt;List&lt;UniswapV2TokenDTO&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<UniswapV2TokenDTO>> uniswapV2GetTokensCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV2GetTokensCurrentValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<UniswapV2TokenDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Tokens (current) 🔥 (asynchronously)
-     * Gets tokens.
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call uniswapV2GetTokensCurrentAsync(final ApiCallback<List<UniswapV2TokenDTO>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = uniswapV2GetTokensCurrentValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<UniswapV2TokenDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3807,6 +3454,129 @@ public class UniswapV2Api {
         return localVarCall;
     }
     /**
+     * Build call for uniswapV2SwapsCurrent
+     * @param pair Reference to pair. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uniswapV2SwapsCurrentCall(String pair, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswapv2/swaps/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pair != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pair", pair));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uniswapV2SwapsCurrentValidateBeforeCall(String pair, final ApiCallback _callback) throws ApiException {
+        return uniswapV2SwapsCurrentCall(pair, _callback);
+
+    }
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @return List&lt;UniswapV2SwapDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UniswapV2SwapDTO> uniswapV2SwapsCurrent(String pair) throws ApiException {
+        ApiResponse<List<UniswapV2SwapDTO>> localVarResp = uniswapV2SwapsCurrentWithHttpInfo(pair);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @return ApiResponse&lt;List&lt;UniswapV2SwapDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UniswapV2SwapDTO>> uniswapV2SwapsCurrentWithHttpInfo(String pair) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV2SwapsCurrentValidateBeforeCall(pair, null);
+        Type localVarReturnType = new TypeToken<List<UniswapV2SwapDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Swaps (current) (asynchronously)
+     * Gets swaps.
+     * @param pair Reference to pair. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uniswapV2SwapsCurrentAsync(String pair, final ApiCallback<List<UniswapV2SwapDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uniswapV2SwapsCurrentValidateBeforeCall(pair, _callback);
+        Type localVarReturnType = new TypeToken<List<UniswapV2SwapDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for uniswapV2TokenDayDatasCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -3918,6 +3688,121 @@ public class UniswapV2Api {
 
         okhttp3.Call localVarCall = uniswapV2TokenDayDatasCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV2TokenDayDataDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uniswapV2TokensCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uniswapV2TokensCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/uniswapv2/tokens/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uniswapV2TokensCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV2TokensCurrentCall(_callback);
+
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return List&lt;UniswapV2TokenDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<UniswapV2TokenDTO> uniswapV2TokensCurrent() throws ApiException {
+        ApiResponse<List<UniswapV2TokenDTO>> localVarResp = uniswapV2TokensCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @return ApiResponse&lt;List&lt;UniswapV2TokenDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<UniswapV2TokenDTO>> uniswapV2TokensCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV2TokensCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<UniswapV2TokenDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Tokens (current) (asynchronously)
+     * Gets tokens.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call uniswapV2TokensCurrentAsync(final ApiCallback<List<UniswapV2TokenDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uniswapV2TokensCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<UniswapV2TokenDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

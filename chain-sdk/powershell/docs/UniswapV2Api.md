@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**Invoke-UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**Invoke-UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**Invoke-UniswapV2GetPairsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**Invoke-UniswapV2GetPoolsCurrent**](UniswapV2Api.md#Invoke-UniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**Invoke-UniswapV2GetSwapsCurrent**](UniswapV2Api.md#Invoke-UniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**Invoke-UniswapV2GetSwapsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**Invoke-UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**Invoke-UniswapV2GetTokensCurrent**](UniswapV2Api.md#Invoke-UniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**Invoke-UniswapV2GetTokensHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**Invoke-UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**Invoke-UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**Invoke-UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**Invoke-UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**Invoke-UniswapV2PairsCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**Invoke-UniswapV2SwapsCurrent**](UniswapV2Api.md#Invoke-UniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**Invoke-UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**Invoke-UniswapV2TokensCurrent**](UniswapV2Api.md#Invoke-UniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**Invoke-UniswapV2TransactionsCurrent**](UniswapV2Api.md#Invoke-UniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**Invoke-UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**Invoke-UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -586,87 +585,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPoolsCurrent"></a>
-# **Invoke-UniswapV2GetPoolsCurrent**
-> UniswapV2PairDTO[] Invoke-UniswapV2GetPoolsCurrent<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```powershell
-$FilterPoolId = "MyFilterPoolId" # String |  (optional)
-
-# Pools (current) 🔥
-try {
-    $Result = Invoke-UniswapV2GetPoolsCurrent -FilterPoolId $FilterPoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetPoolsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**UniswapV2PairDTO[]**](UniswapV2PairDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-UniswapV2GetSwapsCurrent"></a>
-# **Invoke-UniswapV2GetSwapsCurrent**
-> UniswapV2SwapDTO[] Invoke-UniswapV2GetSwapsCurrent<br>
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```powershell
-
-# Swaps (current) 🔥
-try {
-    $Result = Invoke-UniswapV2GetSwapsCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetSwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**UniswapV2SwapDTO[]**](UniswapV2SwapDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="Invoke-UniswapV2GetSwapsHistorical"></a>
 # **Invoke-UniswapV2GetSwapsHistorical**
 > UniswapV2SwapDTO[] Invoke-UniswapV2GetSwapsHistorical<br>
@@ -768,44 +686,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV2TokenDayDataDTO[]**](UniswapV2TokenDayDataDTO.md) (PSCustomObject)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-UniswapV2GetTokensCurrent"></a>
-# **Invoke-UniswapV2GetTokensCurrent**
-> UniswapV2TokenDTO[] Invoke-UniswapV2GetTokensCurrent<br>
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```powershell
-
-# Tokens (current) 🔥
-try {
-    $Result = Invoke-UniswapV2GetTokensCurrent
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**UniswapV2TokenDTO[]**](UniswapV2TokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1332,6 +1212,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-UniswapV2SwapsCurrent"></a>
+# **Invoke-UniswapV2SwapsCurrent**
+> UniswapV2SwapDTO[] Invoke-UniswapV2SwapsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```powershell
+$Pair = "MyPair" # String | Reference to pair. (optional)
+
+# Swaps (current)
+try {
+    $Result = Invoke-UniswapV2SwapsCurrent -Pair $Pair
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2SwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**UniswapV2SwapDTO[]**](UniswapV2SwapDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-UniswapV2TokenDayDatasCurrent"></a>
 # **Invoke-UniswapV2TokenDayDatasCurrent**
 > UniswapV2TokenDayDataDTO[] Invoke-UniswapV2TokenDayDatasCurrent<br>
@@ -1358,6 +1281,44 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**UniswapV2TokenDayDataDTO[]**](UniswapV2TokenDayDataDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV2TokensCurrent"></a>
+# **Invoke-UniswapV2TokensCurrent**
+> UniswapV2TokenDTO[] Invoke-UniswapV2TokensCurrent<br>
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```powershell
+
+# Tokens (current)
+try {
+    $Result = Invoke-UniswapV2TokensCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2TokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UniswapV2TokenDTO[]**](UniswapV2TokenDTO.md) (PSCustomObject)
 
 ### Authorization
 

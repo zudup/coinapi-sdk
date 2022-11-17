@@ -228,33 +228,6 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * Pools (current) 🔥
-     *
-     * Gets pools.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV2GetPoolsCurrentTest() throws ApiException {
-        String filterPoolId = null;
-        List<UniswapV2PairDTO> response = api.uniswapV2GetPoolsCurrent(filterPoolId);
-        // TODO: test validations
-    }
-
-    /**
-     * Swaps (current) 🔥
-     *
-     * Gets swaps.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV2GetSwapsCurrentTest() throws ApiException {
-        List<UniswapV2SwapDTO> response = api.uniswapV2GetSwapsCurrent();
-        // TODO: test validations
-    }
-
-    /**
      * Swaps (historical) 🔥
      *
      * Gets swaps.
@@ -288,19 +261,6 @@ public class UniswapV2ApiTest {
         OffsetDateTime endDate = null;
         String id = null;
         List<UniswapV2TokenDayDataDTO> response = api.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
-        // TODO: test validations
-    }
-
-    /**
-     * Tokens (current) 🔥
-     *
-     * Gets tokens.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void uniswapV2GetTokensCurrentTest() throws ApiException {
-        List<UniswapV2TokenDTO> response = api.uniswapV2GetTokensCurrent();
         // TODO: test validations
     }
 
@@ -476,6 +436,20 @@ public class UniswapV2ApiTest {
     }
 
     /**
+     * Swaps (current)
+     *
+     * Gets swaps.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2SwapsCurrentTest() throws ApiException {
+        String pair = null;
+        List<UniswapV2SwapDTO> response = api.uniswapV2SwapsCurrent(pair);
+        // TODO: test validations
+    }
+
+    /**
      * TokenDayDatas (current)
      *
      * Gets tokenDayDatas.
@@ -485,6 +459,19 @@ public class UniswapV2ApiTest {
     @Test
     public void uniswapV2TokenDayDatasCurrentTest() throws ApiException {
         List<UniswapV2TokenDayDataDTO> response = api.uniswapV2TokenDayDatasCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * Tokens (current)
+     *
+     * Gets tokens.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2TokensCurrentTest() throws ApiException {
+        List<UniswapV2TokenDTO> response = api.uniswapV2TokensCurrent();
         // TODO: test validations
     }
 

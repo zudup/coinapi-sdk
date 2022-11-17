@@ -537,84 +537,6 @@ export default class UniswapV2Api {
     }
 
     /**
-     * Callback function to receive the result of the uniswapV2GetPoolsCurrent operation.
-     * @callback module:api/UniswapV2Api~uniswapV2GetPoolsCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UniswapV2PairDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.filterPoolId 
-     * @param {module:api/UniswapV2Api~uniswapV2GetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UniswapV2PairDTO>}
-     */
-    uniswapV2GetPoolsCurrent(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'filter_pool_id': opts['filterPoolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [UniswapV2PairDTO];
-      return this.apiClient.callApi(
-        '/dapps/uniswapv2/pools/current', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the uniswapV2GetSwapsCurrent operation.
-     * @callback module:api/UniswapV2Api~uniswapV2GetSwapsCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UniswapV2SwapDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Swaps (current) 🔥
-     * Gets swaps.
-     * @param {module:api/UniswapV2Api~uniswapV2GetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UniswapV2SwapDTO>}
-     */
-    uniswapV2GetSwapsCurrent(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [UniswapV2SwapDTO];
-      return this.apiClient.callApi(
-        '/dapps/uniswapv2/swaps/current', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the uniswapV2GetSwapsHistorical operation.
      * @callback module:api/UniswapV2Api~uniswapV2GetSwapsHistoricalCallback
      * @param {String} error Error message, if any.
@@ -709,43 +631,6 @@ export default class UniswapV2Api {
       let returnType = [UniswapV2TokenDayDataDTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv2/tokenDayDatas/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the uniswapV2GetTokensCurrent operation.
-     * @callback module:api/UniswapV2Api~uniswapV2GetTokensCurrentCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UniswapV2TokenDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Tokens (current) 🔥
-     * Gets tokens.
-     * @param {module:api/UniswapV2Api~uniswapV2GetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UniswapV2TokenDTO>}
-     */
-    uniswapV2GetTokensCurrent(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [UniswapV2TokenDTO];
-      return this.apiClient.callApi(
-        '/dapps/uniswapv2/tokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1227,6 +1112,47 @@ export default class UniswapV2Api {
     }
 
     /**
+     * Callback function to receive the result of the uniswapV2SwapsCurrent operation.
+     * @callback module:api/UniswapV2Api~uniswapV2SwapsCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV2SwapDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Swaps (current)
+     * Gets swaps.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.pair Reference to pair.
+     * @param {module:api/UniswapV2Api~uniswapV2SwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV2SwapDTO>}
+     */
+    uniswapV2SwapsCurrent(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV2SwapDTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/swaps/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the uniswapV2TokenDayDatasCurrent operation.
      * @callback module:api/UniswapV2Api~uniswapV2TokenDayDatasCurrentCallback
      * @param {String} error Error message, if any.
@@ -1258,6 +1184,43 @@ export default class UniswapV2Api {
       let returnType = [UniswapV2TokenDayDataDTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv2/tokenDayDatas/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV2TokensCurrent operation.
+     * @callback module:api/UniswapV2Api~uniswapV2TokensCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV2TokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Tokens (current)
+     * Gets tokens.
+     * @param {module:api/UniswapV2Api~uniswapV2TokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV2TokenDTO>}
+     */
+    uniswapV2TokensCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV2TokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv2/tokens/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

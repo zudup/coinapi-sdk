@@ -5,28 +5,6 @@ context("Test SushiswapApi")
 
 api_instance <- SushiswapApi$new()
 
-test_that("CurveGetExchangesCurrent", {
-  # tests for CurveGetExchangesCurrent
-  # base path: https://onchain.coinapi.io
-  # Exchanges (current) 🔥
-  # Gets exchanges.
-  # @return [array[CurveExchangeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("DexGetTradesCurrent", {
-  # tests for DexGetTradesCurrent
-  # base path: https://onchain.coinapi.io
-  # Trades (current) 🔥
-  # Gets trades.
-  # @return [array[DexTradeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("SushiswapBundlesCurrent", {
   # tests for SushiswapBundlesCurrent
   # base path: https://onchain.coinapi.io
@@ -254,17 +232,6 @@ test_that("SushiswapGetPairsHistorical", {
   # @param name character  (optional)
   # @param token_0 character  (optional)
   # @param token_1 character  (optional)
-  # @return [array[SushiswapPairDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("SushiswapGetPoolsCurrent", {
-  # tests for SushiswapGetPoolsCurrent
-  # base path: https://onchain.coinapi.io
-  # Pools (current) 🔥
-  # Gets pools.
   # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation

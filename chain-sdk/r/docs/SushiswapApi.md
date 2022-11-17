@@ -4,8 +4,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CurveGetExchangesCurrent**](SushiswapApi.md#CurveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**DexGetTradesCurrent**](SushiswapApi.md#DexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**SushiswapBundlesCurrent**](SushiswapApi.md#SushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**SushiswapBurnsCurrent**](SushiswapApi.md#SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**SushiswapDayDatasCurrent**](SushiswapApi.md#SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -21,7 +19,6 @@ Method | HTTP request | Description
 [**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**SushiswapGetPairsHistorical**](SushiswapApi.md#SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -40,90 +37,6 @@ Method | HTTP request | Description
 [**SushiswapTransactionsCurrent**](SushiswapApi.md#SushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**SushiswapUsersCurrent**](SushiswapApi.md#SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
-
-# **CurveGetExchangesCurrent**
-> array[CurveExchangeDTO] CurveGetExchangesCurrent()
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-### Example
-```R
-library(openapi)
-
-# Exchanges (current) 🔥
-#
-
-api_instance <- SushiswapApi$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$CurveGetExchangesCurrent(data_file = "result.txt")
-result <- api_instance$CurveGetExchangesCurrent()
-dput(result)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[CurveExchangeDTO]**](Curve.ExchangeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-# **DexGetTradesCurrent**
-> array[DexTradeDTO] DexGetTradesCurrent()
-
-Trades (current) 🔥
-
-Gets trades.
-
-### Example
-```R
-library(openapi)
-
-# Trades (current) 🔥
-#
-
-api_instance <- SushiswapApi$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$DexGetTradesCurrent(data_file = "result.txt")
-result <- api_instance$DexGetTradesCurrent()
-dput(result)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**array[DexTradeDTO]**](Dex.TradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
 
 # **SushiswapBundlesCurrent**
 > array[SushiswapBundleDTO] SushiswapBundlesCurrent()
@@ -905,48 +818,6 @@ Name | Type | Description  | Notes
  **name** | **character**|  | [optional] 
  **token_0** | **character**|  | [optional] 
  **token_1** | **character**|  | [optional] 
-
-### Return type
-
-[**array[SushiswapPairDTO]**](Sushiswap.PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  -  |
-
-# **SushiswapGetPoolsCurrent**
-> array[SushiswapPairDTO] SushiswapGetPoolsCurrent()
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```R
-library(openapi)
-
-# Pools (current) 🔥
-#
-
-api_instance <- SushiswapApi$new()
-# to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetPoolsCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapGetPoolsCurrent()
-dput(result)
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 

@@ -15,9 +15,7 @@
 
 
 module Api.Request.Sushiswap exposing
-    ( curveGetExchangesCurrent
-    , dexGetTradesCurrent
-    , sushiswapBundlesCurrent
+    ( sushiswapBundlesCurrent
     , sushiswapBurnsCurrent
     , sushiswapDayDatasCurrent
     , sushiswapFactorysCurrent
@@ -32,7 +30,6 @@ module Api.Request.Sushiswap exposing
     , sushiswapGetPairDayDatasHistorical
     , sushiswapGetPairHourDatasHistorical
     , sushiswapGetPairsHistorical
-    , sushiswapGetPoolsCurrent
     , sushiswapGetSwapsHistorical
     , sushiswapGetTokenDayDatasHistorical
     , sushiswapGetTokensHistorical
@@ -59,36 +56,6 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
-
-{-| Gets exchanges.
--}
-curveGetExchangesCurrent : Api.Request (List Api.Data.CurveExchangeDTO)
-curveGetExchangesCurrent =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/exchanges/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.curveExchangeDTODecoder)
-
-
-
-{-| Gets trades.
--}
-dexGetTradesCurrent : Api.Request (List Api.Data.DexTradeDTO)
-dexGetTradesCurrent =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/trades/current"
-        []
-        []
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexTradeDTODecoder)
 
 
 
@@ -311,21 +278,6 @@ sushiswapGetPairsHistorical startBlock_query endBlock_query startDate_query endD
         "/dapps/sushiswap/pairs/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "name", Maybe.map identity name_query ), ( "token_0", Maybe.map identity token0_query ), ( "token_1", Maybe.map identity token1_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
-
-
-{-| Gets pools.
--}
-sushiswapGetPoolsCurrent : Api.Request (List Api.Data.SushiswapPairDTO)
-sushiswapGetPoolsCurrent =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/pools/current"
-        []
-        []
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairDTODecoder)

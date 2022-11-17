@@ -241,24 +241,6 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// Pools (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets pools.
-    /// </remarks>
-    /// <param name="filterPoolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairDTO>>> uniswapV2_GetPools__current(
-        boost::optional<utility::string_t> filterPoolId
-    ) const;
-    /// <summary>
-    /// Swaps (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets swaps.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapDTO>>> uniswapV2_GetSwaps__current(
-    ) const;
-    /// <summary>
     /// Swaps (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -295,14 +277,6 @@ public:
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate,
         boost::optional<utility::string_t> id
-    ) const;
-    /// <summary>
-    /// Tokens (current) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets tokens.
-    /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDTO>>> uniswapV2_GetTokens__current(
     ) const;
     /// <summary>
     /// Tokens (historical) 🔥
@@ -449,12 +423,30 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
+    /// Swaps (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets swaps.
+    /// </remarks>
+    /// <param name="pair">Reference to pair. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapDTO>>> uniswapV2_Swaps__current(
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
     /// TokenDayDatas (current)
     /// </summary>
     /// <remarks>
     /// Gets tokenDayDatas.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDayDataDTO>>> uniswapV2_TokenDayDatas__current(
+    ) const;
+    /// <summary>
+    /// Tokens (current)
+    /// </summary>
+    /// <remarks>
+    /// Gets tokens.
+    /// </remarks>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDTO>>> uniswapV2_Tokens__current(
     ) const;
     /// <summary>
     /// Transactions (current)

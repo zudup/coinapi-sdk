@@ -14,11 +14,8 @@ Method | HTTP request | Description
 [**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -30,7 +27,9 @@ Method | HTTP request | Description
 [**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -576,94 +575,6 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPoolsCurrent
-
-> List&lt;UniswapV2PairDTO&gt; uniswapV2GetPoolsCurrent(filterPoolId)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.UniswapV2Api;
-
-UniswapV2Api apiInstance = new UniswapV2Api();
-String filterPoolId = null; // String | 
-try {
-    List<UniswapV2PairDTO> result = apiInstance.uniswapV2GetPoolsCurrent(filterPoolId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPoolsCurrent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**List&lt;UniswapV2PairDTO&gt;**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV2GetSwapsCurrent
-
-> List&lt;UniswapV2SwapDTO&gt; uniswapV2GetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.UniswapV2Api;
-
-UniswapV2Api apiInstance = new UniswapV2Api();
-try {
-    List<UniswapV2SwapDTO> result = apiInstance.uniswapV2GetSwapsCurrent();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetSwapsCurrent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## uniswapV2GetSwapsHistorical
 
 > List&lt;UniswapV2SwapDTO&gt; uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
@@ -763,48 +674,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## uniswapV2GetTokensCurrent
-
-> List&lt;UniswapV2TokenDTO&gt; uniswapV2GetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.UniswapV2Api;
-
-UniswapV2Api apiInstance = new UniswapV2Api();
-try {
-    List<UniswapV2TokenDTO> result = apiInstance.uniswapV2GetTokensCurrent();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokensCurrent");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1346,6 +1215,52 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## uniswapV2SwapsCurrent
+
+> List&lt;UniswapV2SwapDTO&gt; uniswapV2SwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV2Api;
+
+UniswapV2Api apiInstance = new UniswapV2Api();
+String pair = null; // String | Reference to pair.
+try {
+    List<UniswapV2SwapDTO> result = apiInstance.uniswapV2SwapsCurrent(pair);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2SwapsCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **String**| Reference to pair. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV2SwapDTO&gt;**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## uniswapV2TokenDayDatasCurrent
 
 > List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDatasCurrent()
@@ -1377,6 +1292,48 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UniswapV2TokenDayDataDTO&gt;**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV2TokensCurrent
+
+> List&lt;UniswapV2TokenDTO&gt; uniswapV2TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV2Api;
+
+UniswapV2Api apiInstance = new UniswapV2Api();
+try {
+    List<UniswapV2TokenDTO> result = apiInstance.uniswapV2TokensCurrent();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2TokensCurrent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;UniswapV2TokenDTO&gt;**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

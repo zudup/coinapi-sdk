@@ -32,28 +32,6 @@ describe 'SushiswapApi' do
     end
   end
 
-  # unit tests for curve_get_exchanges__current
-  # Exchanges (current) 🔥
-  # Gets exchanges.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<CurveExchangeDTO>]
-  describe 'curve_get_exchanges__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_trades__current
-  # Trades (current) 🔥
-  # Gets trades.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<DexTradeDTO>]
-  describe 'dex_get_trades__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for sushiswap_bundles__current
   # Bundles (current)
   # Gets bundles.
@@ -282,17 +260,6 @@ describe 'SushiswapApi' do
   # @option opts [String] :token_1 
   # @return [Array<SushiswapPairDTO>]
   describe 'sushiswap_get_pairs__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for sushiswap_get_pools__current
-  # Pools (current) 🔥
-  # Gets pools.
-  # @param [Hash] opts the optional parameters
-  # @return [Array<SushiswapPairDTO>]
-  describe 'sushiswap_get_pools__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

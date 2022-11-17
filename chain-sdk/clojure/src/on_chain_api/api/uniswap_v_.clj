@@ -351,54 +351,6 @@
         res))))
 
 
-(defn-spec uniswap-v2-get-pools-current-with-http-info any?
-  "Pools (current) 🔥
-  Gets pools."
-  ([] (uniswap-v2-get-pools-current-with-http-info nil))
-  ([{:keys [filter_pool_id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/pools/current" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"filter_pool_id" filter_pool_id }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec uniswap-v2-get-pools-current (s/coll-of uniswap-v2/pair-dto-spec)
-  "Pools (current) 🔥
-  Gets pools."
-  ([] (uniswap-v2-get-pools-current nil))
-  ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-pools-current-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of uniswap-v2/pair-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec uniswap-v2-get-swaps-current-with-http-info any?
-  "Swaps (current) 🔥
-  Gets swaps."
-  []
-  (call-api "/dapps/uniswapv2/swaps/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec uniswap-v2-get-swaps-current (s/coll-of uniswap-v2/swap-dto-spec)
-  "Swaps (current) 🔥
-  Gets swaps."
-  []
-  (let [res (:data (uniswap-v2-get-swaps-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v2/swap-dto-spec) res st/string-transformer)
-       res)))
-
-
 (defn-spec uniswap-v2-get-swaps-historical-with-http-info any?
   "Swaps (historical) 🔥
   Gets swaps."
@@ -447,29 +399,6 @@
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/token-day-data-dto-spec) res st/string-transformer)
         res))))
-
-
-(defn-spec uniswap-v2-get-tokens-current-with-http-info any?
-  "Tokens (current) 🔥
-  Gets tokens."
-  []
-  (call-api "/dapps/uniswapv2/tokens/current" :get
-            {:path-params   {}
-             :header-params {}
-             :query-params  {}
-             :form-params   {}
-             :content-types []
-             :accepts       ["text/plain" "application/json" "text/json"]
-             :auth-names    []}))
-
-(defn-spec uniswap-v2-get-tokens-current (s/coll-of uniswap-v2/token-dto-spec)
-  "Tokens (current) 🔥
-  Gets tokens."
-  []
-  (let [res (:data (uniswap-v2-get-tokens-current-with-http-info))]
-    (if (:decode-models *api-context*)
-       (st/decode (s/coll-of uniswap-v2/token-dto-spec) res st/string-transformer)
-       res)))
 
 
 (defn-spec uniswap-v2-get-tokens-historical-with-http-info any?
@@ -737,6 +666,31 @@
         res))))
 
 
+(defn-spec uniswap-v2-swaps-current-with-http-info any?
+  "Swaps (current)
+  Gets swaps."
+  ([] (uniswap-v2-swaps-current-with-http-info nil))
+  ([{:keys [pair]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/swaps/current" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"pair" pair }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-swaps-current (s/coll-of uniswap-v2/swap-dto-spec)
+  "Swaps (current)
+  Gets swaps."
+  ([] (uniswap-v2-swaps-current nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-swaps-current-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/swap-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-token-day-datas-current-with-http-info any?
   "TokenDayDatas (current)
   Gets tokenDayDatas."
@@ -757,6 +711,29 @@
   (let [res (:data (uniswap-v2-token-day-datas-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/token-day-data-dto-spec) res st/string-transformer)
+       res)))
+
+
+(defn-spec uniswap-v2-tokens-current-with-http-info any?
+  "Tokens (current)
+  Gets tokens."
+  []
+  (call-api "/dapps/uniswapv2/tokens/current" :get
+            {:path-params   {}
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json"]
+             :auth-names    []}))
+
+(defn-spec uniswap-v2-tokens-current (s/coll-of uniswap-v2/token-dto-spec)
+  "Tokens (current)
+  Gets tokens."
+  []
+  (let [res (:data (uniswap-v2-tokens-current-with-http-info))]
+    (if (:decode-models *api-context*)
+       (st/decode (s/coll-of uniswap-v2/token-dto-spec) res st/string-transformer)
        res)))
 
 

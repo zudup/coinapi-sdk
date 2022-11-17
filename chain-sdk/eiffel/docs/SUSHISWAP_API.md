@@ -4,8 +4,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**curve_get_exchanges_current**](SUSHISWAP_API.md#curve_get_exchanges_current) | **Get** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**dex_get_trades_current**](SUSHISWAP_API.md#dex_get_trades_current) | **Get** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**sushiswap_bundles_current**](SUSHISWAP_API.md#sushiswap_bundles_current) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswap_burns_current**](SUSHISWAP_API.md#sushiswap_burns_current) | **Get** /dapps/sushiswap/burns/current | Burns (current)
 [**sushiswap_day_datas_current**](SUSHISWAP_API.md#sushiswap_day_datas_current) | **Get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -21,7 +19,6 @@ Feature | HTTP request | Description
 [**sushiswap_get_pair_day_datas_historical**](SUSHISWAP_API.md#sushiswap_get_pair_day_datas_historical) | **Get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**sushiswap_get_pair_hour_datas_historical**](SUSHISWAP_API.md#sushiswap_get_pair_hour_datas_historical) | **Get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswap_get_pairs_historical**](SUSHISWAP_API.md#sushiswap_get_pairs_historical) | **Get** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**sushiswap_get_token_day_datas_historical**](SUSHISWAP_API.md#sushiswap_get_token_day_datas_historical) | **Get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -40,60 +37,6 @@ Feature | HTTP request | Description
 [**sushiswap_transactions_current**](SUSHISWAP_API.md#sushiswap_transactions_current) | **Get** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswap_users_current**](SUSHISWAP_API.md#sushiswap_users_current) | **Get** /dapps/sushiswap/users/current | Users (current)
 
-
-# **curve_get_exchanges_current**
-> curve_get_exchanges_current : detachable LIST [CURVE_EXCHANGE_DTO]
-
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**LIST [CURVE_EXCHANGE_DTO]**](Curve.ExchangeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dex_get_trades_current**
-> dex_get_trades_current : detachable LIST [DEX_TRADE_DTO]
-
-
-Trades (current) 🔥
-
-Gets trades.
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**LIST [DEX_TRADE_DTO]**](Dex.TradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswap_bundles_current**
 > sushiswap_bundles_current : detachable LIST [SUSHISWAP_BUNDLE_DTO]
@@ -574,33 +517,6 @@ Name | Type | Description  | Notes
  **name** | **STRING_32**|  | [optional] [default to null]
  **token_0** | **STRING_32**|  | [optional] [default to null]
  **token_1** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_PAIR_DTO]**](Sushiswap.PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pools_current**
-> sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-
-
-Pools (current) 🔥
-
-Gets pools.
-
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 

@@ -64,28 +64,6 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test CurveGetExchangesCurrent
-        /// </summary>
-        [Test]
-        public void CurveGetExchangesCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CurveGetExchangesCurrent();
-            //Assert.IsInstanceOf(typeof(List<CurveExchangeDTO>), response, "response is List<CurveExchangeDTO>");
-        }
-        
-        /// <summary>
-        /// Test DexGetTradesCurrent
-        /// </summary>
-        [Test]
-        public void DexGetTradesCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.DexGetTradesCurrent();
-            //Assert.IsInstanceOf(typeof(List<DexTradeDTO>), response, "response is List<DexTradeDTO>");
-        }
-        
-        /// <summary>
         /// Test SushiswapBundlesCurrent
         /// </summary>
         [Test]
@@ -315,17 +293,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string token0 = null;
             //string token1 = null;
             //var response = instance.SushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
-            //Assert.IsInstanceOf(typeof(List<SushiswapPairDTO>), response, "response is List<SushiswapPairDTO>");
-        }
-        
-        /// <summary>
-        /// Test SushiswapGetPoolsCurrent
-        /// </summary>
-        [Test]
-        public void SushiswapGetPoolsCurrentTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapGetPoolsCurrent();
             //Assert.IsInstanceOf(typeof(List<SushiswapPairDTO>), response, "response is List<SushiswapPairDTO>");
         }
         

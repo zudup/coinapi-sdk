@@ -19,11 +19,8 @@ Method | HTTP request | Description
 [**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatashistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatashistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapv2getpairshistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-[**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
 [**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatashistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
 [**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatashistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
@@ -35,7 +32,9 @@ Method | HTTP request | Description
 [**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapv2pairdaydatascurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
 [**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapv2pairhourdatascurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapv2pairscurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
+[**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapv2swapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapv2tokendaydatascurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapv2tokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapv2transactionscurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatascurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
 [**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoryscurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
@@ -550,88 +549,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPoolsCurrent**
-> List<UniswapV2PairDTO> uniswapV2GetPoolsCurrent(filterPoolId)
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = UniswapV2Api();
-final filterPoolId = filterPoolId_example; // String | 
-
-try {
-    final result = api_instance.uniswapV2GetPoolsCurrent(filterPoolId);
-    print(result);
-} catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPoolsCurrent: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**|  | [optional] 
-
-### Return type
-
-[**List<UniswapV2PairDTO>**](UniswapV2PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV2GetSwapsCurrent**
-> List<UniswapV2SwapDTO> uniswapV2GetSwapsCurrent()
-
-Swaps (current) 🔥
-
-Gets swaps.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = UniswapV2Api();
-
-try {
-    final result = api_instance.uniswapV2GetSwapsCurrent();
-    print(result);
-} catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetSwapsCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List<UniswapV2SwapDTO>**](UniswapV2SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **uniswapV2GetSwapsHistorical**
 > List<UniswapV2SwapDTO> uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -724,45 +641,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List<UniswapV2TokenDayDataDTO>**](UniswapV2TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **uniswapV2GetTokensCurrent**
-> List<UniswapV2TokenDTO> uniswapV2GetTokensCurrent()
-
-Tokens (current) 🔥
-
-Gets tokens.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = UniswapV2Api();
-
-try {
-    final result = api_instance.uniswapV2GetTokensCurrent();
-    print(result);
-} catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetTokensCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List<UniswapV2TokenDTO>**](UniswapV2TokenDTO.md)
 
 ### Authorization
 
@@ -1272,6 +1150,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **uniswapV2SwapsCurrent**
+> List<UniswapV2SwapDTO> uniswapV2SwapsCurrent(pair)
+
+Swaps (current)
+
+Gets swaps.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+final pair = pair_example; // String | Reference to pair.
+
+try {
+    final result = api_instance.uniswapV2SwapsCurrent(pair);
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2SwapsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pair** | **String**| Reference to pair. | [optional] 
+
+### Return type
+
+[**List<UniswapV2SwapDTO>**](UniswapV2SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **uniswapV2TokenDayDatasCurrent**
 > List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDatasCurrent()
 
@@ -1299,6 +1220,45 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List<UniswapV2TokenDayDataDTO>**](UniswapV2TokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2TokensCurrent**
+> List<UniswapV2TokenDTO> uniswapV2TokensCurrent()
+
+Tokens (current)
+
+Gets tokens.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = UniswapV2Api();
+
+try {
+    final result = api_instance.uniswapV2TokensCurrent();
+    print(result);
+} catch (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2TokensCurrent: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List<UniswapV2TokenDTO>**](UniswapV2TokenDTO.md)
 
 ### Authorization
 

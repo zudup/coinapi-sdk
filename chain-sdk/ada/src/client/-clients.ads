@@ -878,18 +878,6 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.DexWithdrawDTO_Type_Vectors.Vector);
 
-   --  Exchanges (current) 🔥
-   --  Gets exchanges.
-   procedure Curve_Get_Exchanges__current
-      (Client : in out Client_Type;
-       Result : out .Models.CurveExchangeDTO_Type_Vectors.Vector);
-
-   --  Trades (current) 🔥
-   --  Gets trades.
-   procedure Dex_Get_Trades__current
-      (Client : in out Client_Type;
-       Result : out .Models.DexTradeDTO_Type_Vectors.Vector);
-
    --  Bundles (current)
    --  Gets bundles.
    procedure Sushiswap_Bundles__current
@@ -1046,12 +1034,6 @@ package .Clients is
        Name : in Swagger.Nullable_UString;
        Token_0 : in Swagger.Nullable_UString;
        Token_1 : in Swagger.Nullable_UString;
-       Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
-
-   --  Pools (current) 🔥
-   --  Gets pools.
-   procedure Sushiswap_Get_Pools__current
-      (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDTO_Type_Vectors.Vector);
 
    --  Swaps (historical) 🔥
@@ -1297,19 +1279,6 @@ package .Clients is
        Token_1 : in Swagger.Nullable_UString;
        Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
 
-   --  Pools (current) 🔥
-   --  Gets pools.
-   procedure Uniswap_V2_Get_Pools__current
-      (Client : in out Client_Type;
-       Filter_Pool_Id : in Swagger.Nullable_UString;
-       Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
-
-   --  Swaps (current) 🔥
-   --  Gets swaps.
-   procedure Uniswap_V2_Get_Swaps__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector);
-
    --  Swaps (historical) 🔥
    --  Gets swaps.
    procedure Uniswap_V2_Get_Swaps__historical
@@ -1332,12 +1301,6 @@ package .Clients is
        End_Date : in Swagger.Nullable_Date;
        Id : in Swagger.Nullable_UString;
        Result : out .Models.UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
-
-   --  Tokens (current) 🔥
-   --  Gets tokens.
-   procedure Uniswap_V2_Get_Tokens__current
-      (Client : in out Client_Type;
-       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector);
 
    --  Tokens (historical) 🔥
    --  Gets tokens.
@@ -1433,11 +1396,24 @@ package .Clients is
        Id : in Swagger.Nullable_UString;
        Result : out .Models.UniswapV2PairDTO_Type_Vectors.Vector);
 
+   --  Swaps (current)
+   --  Gets swaps.
+   procedure Uniswap_V2_Swaps__current
+      (Client : in out Client_Type;
+       Pair : in Swagger.Nullable_UString;
+       Result : out .Models.UniswapV2SwapDTO_Type_Vectors.Vector);
+
    --  TokenDayDatas (current)
    --  Gets tokenDayDatas.
    procedure Uniswap_V2_Token_Day_Datas__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2TokenDayDataDTO_Type_Vectors.Vector);
+
+   --  Tokens (current)
+   --  Gets tokens.
+   procedure Uniswap_V2_Tokens__current
+      (Client : in out Client_Type;
+       Result : out .Models.UniswapV2TokenDTO_Type_Vectors.Vector);
 
    --  Transactions (current)
    --  Gets transactions.

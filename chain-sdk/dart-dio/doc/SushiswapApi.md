@@ -9,8 +9,6 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**curveGetExchangesCurrent**](SushiswapApi.md#curvegetexchangescurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
-[**dexGetTradesCurrent**](SushiswapApi.md#dexgettradescurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
 [**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapbundlescurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapdaydatascurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
@@ -26,7 +24,6 @@ Method | HTTP request | Description
 [**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
 [**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
 [**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
@@ -45,84 +42,6 @@ Method | HTTP request | Description
 [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswaptransactionscurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapuserscurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
-
-# **curveGetExchangesCurrent**
-> BuiltList<CurveExchangeDTO> curveGetExchangesCurrent()
-
-Exchanges (current) 🔥
-
-Gets exchanges.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-
-try {
-    final response = api.curveGetExchangesCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->curveGetExchangesCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dexGetTradesCurrent**
-> BuiltList<DexTradeDTO> dexGetTradesCurrent()
-
-Trades (current) 🔥
-
-Gets trades.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-
-try {
-    final response = api.dexGetTradesCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dexGetTradesCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswapBundlesCurrent**
 > BuiltList<SushiswapBundleDTO> sushiswapBundlesCurrent()
@@ -851,45 +770,6 @@ Name | Type | Description  | Notes
  **name** | **String**|  | [optional] 
  **token0** | **String**|  | [optional] 
  **token1** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswapGetPoolsCurrent**
-> BuiltList<SushiswapPairDTO> sushiswapGetPoolsCurrent()
-
-Pools (current) 🔥
-
-Gets pools.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-
-try {
-    final response = api.sushiswapGetPoolsCurrent();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->sushiswapGetPoolsCurrent: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 

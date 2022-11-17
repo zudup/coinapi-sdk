@@ -14,8 +14,6 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.CurveExchangeDTO;
-import org.openapitools.client.model.DexTradeDTO;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.SushiswapBundleDTO;
 import org.openapitools.client.model.SushiswapBurnDTO;
@@ -48,32 +46,6 @@ import java.util.Map;
 public class SushiswapApiTest {
 
     private final SushiswapApi api = new SushiswapApi();
-
-    /**
-     * Exchanges (current) 🔥
-     *
-     * Gets exchanges.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetExchangesCurrentTest() throws ApiException {
-        List<CurveExchangeDTO> response = api.curveGetExchangesCurrent();
-        // TODO: test validations
-    }
-
-    /**
-     * Trades (current) 🔥
-     *
-     * Gets trades.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void dexGetTradesCurrentTest() throws ApiException {
-        List<DexTradeDTO> response = api.dexGetTradesCurrent();
-        // TODO: test validations
-    }
 
     /**
      * Bundles (current)
@@ -335,19 +307,6 @@ public class SushiswapApiTest {
         String token0 = null;
         String token1 = null;
         List<SushiswapPairDTO> response = api.sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
-        // TODO: test validations
-    }
-
-    /**
-     * Pools (current) 🔥
-     *
-     * Gets pools.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetPoolsCurrentTest() throws ApiException {
-        List<SushiswapPairDTO> response = api.sushiswapGetPoolsCurrent();
         // TODO: test validations
     }
 

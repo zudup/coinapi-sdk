@@ -26,48 +26,6 @@ public class OASSushiswapApi {
     }
 
     /**
-     * Exchanges (current) 🔥
-     * Gets exchanges.
-     * @return List<OASCurveExchangeDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASCurveExchangeDTO> curveGetExchangesCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASCurveExchangeDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/exchanges/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASCurveExchangeDTO>.class
-        );
-    }
-    /**
-     * Trades (current) 🔥
-     * Gets trades.
-     * @return List<OASDexTradeDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexTradeDTO> dexGetTradesCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexTradeDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/trades/current', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexTradeDTO>.class
-        );
-    }
-    /**
      * Bundles (current)
      * Gets bundles.
      * @return List<OASSushiswapBundleDTO>
@@ -542,27 +500,6 @@ public class OASSushiswapApi {
 
         return (List<OASSushiswapPairDTO>) client.invoke(
             'GET', '/dapps/sushiswap/pairs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASSushiswapPairDTO>.class
-        );
-    }
-    /**
-     * Pools (current) 🔥
-     * Gets pools.
-     * @return List<OASSushiswapPairDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASSushiswapPairDTO> sushiswapGetPoolsCurrent() {
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASSushiswapPairDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pools/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

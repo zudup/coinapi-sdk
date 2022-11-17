@@ -434,70 +434,6 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Pools (current) 🔥
-  Gets pools.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%UniswapV2PairDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec uniswap_v2_get_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_pools__current(connection, opts \\ []) do
-    optional_params = %{
-      :filter_pool_id => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv2/pools/current")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapV2PairDto{}]}
-    ])
-  end
-
-  @doc """
-  Swaps (current) 🔥
-  Gets swaps.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%UniswapV2SwapDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec uniswap_v2_get_swaps__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2SwapDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_swaps__current(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv2/swaps/current")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapV2SwapDto{}]}
-    ])
-  end
-
-  @doc """
   Swaps (historical) 🔥
   Gets swaps.
 
@@ -582,35 +518,6 @@ defmodule OnChainAPI.Api.UniswapV2 do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.UniswapV2TokenDayDataDto{}]}
-    ])
-  end
-
-  @doc """
-  Tokens (current) 🔥
-  Gets tokens.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%UniswapV2TokenDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec uniswap_v2_get_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_tokens__current(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv2/tokens/current")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapV2TokenDto{}]}
     ])
   end
 
@@ -1014,6 +921,41 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
+  Swaps (current)
+  Gets swaps.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:pair` (String.t): Reference to pair.
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2SwapDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v2_swaps__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2SwapDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_swaps__current(connection, opts \\ []) do
+    optional_params = %{
+      :pair => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv2/swaps/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV2SwapDto{}]}
+    ])
+  end
+
+  @doc """
   TokenDayDatas (current)
   Gets tokenDayDatas.
 
@@ -1039,6 +981,35 @@ defmodule OnChainAPI.Api.UniswapV2 do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.UniswapV2TokenDayDataDto{}]}
+    ])
+  end
+
+  @doc """
+  Tokens (current)
+  Gets tokens.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV2TokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v2_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_tokens__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv2/tokens/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV2TokenDto{}]}
     ])
   end
 
