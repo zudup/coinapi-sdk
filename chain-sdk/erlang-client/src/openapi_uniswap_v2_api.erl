@@ -75,7 +75,7 @@ uniswap_v2_burns_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Bundles (historical) 🔥
+%% @doc Bundles (historical)
 %% Gets bundles.
 -spec uniswap_v2_get_bundles_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_bundle_dto:openapi_uniswap_v2_bundle_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_bundles_(historical)(Ctx) ->
@@ -96,7 +96,7 @@ uniswap_v2_get_bundles_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Burns (historical) 🔥
+%% @doc Burns (historical)
 %% Gets burns.
 -spec uniswap_v2_get_burns_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_burn_dto:openapi_uniswap_v2_burn_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_burns_(historical)(Ctx) ->
@@ -117,7 +117,7 @@ uniswap_v2_get_burns_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc LiquidityPositionSnapshots (historical) 🔥
+%% @doc LiquidityPositionSnapshots (historical)
 %% Gets liquidityPositionSnapshots.
 -spec uniswap_v2_get_liquidity_position_snapshots_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_liquidity_position_snapshot_dto:openapi_uniswap_v2_liquidity_position_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_liquidity_position_snapshots_(historical)(Ctx) ->
@@ -138,7 +138,7 @@ uniswap_v2_get_liquidity_position_snapshots_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc LiquidityPositions (historical) 🔥
+%% @doc LiquidityPositions (historical)
 %% Gets liquidityPositions.
 -spec uniswap_v2_get_liquidity_positions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_liquidity_position_dto:openapi_uniswap_v2_liquidity_position_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_liquidity_positions_(historical)(Ctx) ->
@@ -159,7 +159,7 @@ uniswap_v2_get_liquidity_positions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Mints (historical) 🔥
+%% @doc Mints (historical)
 %% Gets mints.
 -spec uniswap_v2_get_mints_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_mint_dto:openapi_uniswap_v2_mint_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_mints_(historical)(Ctx) ->
@@ -180,7 +180,7 @@ uniswap_v2_get_mints_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (historical) 🔥
+%% @doc PairDayDatas (historical)
 %% Gets pairDayDatas.
 -spec uniswap_v2_get_pair_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_pair_day_datas_(historical)(Ctx) ->
@@ -201,7 +201,7 @@ uniswap_v2_get_pair_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (historical) 🔥
+%% @doc PairHourDatas (historical)
 %% Gets pairHourDatas.
 -spec uniswap_v2_get_pair_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_pair_hour_datas_(historical)(Ctx) ->
@@ -222,7 +222,7 @@ uniswap_v2_get_pair_hour_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Pairs (historical) 🔥
+%% @doc Pairs (historical)
 %% Gets pairs.
 -spec uniswap_v2_get_pairs_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_dto:openapi_uniswap_v2_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_pairs_(historical)(Ctx) ->
@@ -243,7 +243,7 @@ uniswap_v2_get_pairs_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Swaps (historical) 🔥
+%% @doc Swaps (historical)
 %% Gets swaps.
 -spec uniswap_v2_get_swaps_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_swap_dto:openapi_uniswap_v2_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_swaps_(historical)(Ctx) ->
@@ -264,7 +264,7 @@ uniswap_v2_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (historical) 🔥
+%% @doc TokenDayDatas (historical)
 %% Gets tokenDayDatas.
 -spec uniswap_v2_get_token_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_token_day_datas_(historical)(Ctx) ->
@@ -285,7 +285,7 @@ uniswap_v2_get_token_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Tokens (historical) 🔥
+%% @doc Tokens (historical)
 %% Gets tokens.
 -spec uniswap_v2_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_dto:openapi_uniswap_v2_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_tokens_(historical)(Ctx) ->
@@ -306,7 +306,7 @@ uniswap_v2_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Transactions (historical) 🔥
+%% @doc Transactions (historical)
 %% Gets transactions.
 -spec uniswap_v2_get_transactions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_transaction_dto:openapi_uniswap_v2_transaction_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_transactions_(historical)(Ctx) ->
@@ -327,7 +327,7 @@ uniswap_v2_get_transactions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapDayDatas (historical) 🔥
+%% @doc UniswapDayDatas (historical)
 %% Gets uniswapDayDatas.
 -spec uniswap_v2_get_uniswap_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_uniswap_day_datas_(historical)(Ctx) ->
@@ -348,7 +348,7 @@ uniswap_v2_get_uniswap_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapFactorys (historical) 🔥
+%% @doc UniswapFactorys (historical)
 %% Gets uniswapFactorys.
 -spec uniswap_v2_get_uniswap_factorys_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_uniswap_factorys_(historical)(Ctx) ->
@@ -369,7 +369,7 @@ uniswap_v2_get_uniswap_factorys_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Users (historical) 🔥
+%% @doc Users (historical)
 %% Gets users.
 -spec uniswap_v2_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_user_dto:openapi_uniswap_v2_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v2_get_users_(historical)(Ctx) ->

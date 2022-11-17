@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2UniswapDayDatasHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2UniswapDayDatasHistorical unit test stubs
-        UniswapDayDatas (historical) 🔥  # noqa: E501
+        UniswapDayDatas (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

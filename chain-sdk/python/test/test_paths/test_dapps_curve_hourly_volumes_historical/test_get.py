@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveHourlyVolumesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveHourlyVolumesHistorical unit test stubs
-        HourlyVolumes (historical) 🔥  # noqa: E501
+        HourlyVolumes (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -9,22 +9,22 @@ Method | HTTP request | Description
 [**sushiswap_burns__current**](#sushiswap_burns__current) | **get** /dapps/sushiswap/burns/current | Burns (current)
 [**sushiswap_day_datas__current**](#sushiswap_day_datas__current) | **get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
 [**sushiswap_factorys__current**](#sushiswap_factorys__current) | **get** /dapps/sushiswap/factorys/current | Factorys (current)
-[**sushiswap_get_bundles__historical**](#sushiswap_get_bundles__historical) | **get** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
-[**sushiswap_get_burns__historical**](#sushiswap_get_burns__historical) | **get** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**sushiswap_get_day_datas__historical**](#sushiswap_get_day_datas__historical) | **get** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
-[**sushiswap_get_factorys__historical**](#sushiswap_get_factorys__historical) | **get** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**sushiswap_get_hour_datas__historical**](#sushiswap_get_hour_datas__historical) | **get** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
-[**sushiswap_get_liquidity_position_snapshots__historical**](#sushiswap_get_liquidity_position_snapshots__historical) | **get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**sushiswap_get_liquidity_positions__historical**](#sushiswap_get_liquidity_positions__historical) | **get** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**sushiswap_get_mints__historical**](#sushiswap_get_mints__historical) | **get** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**sushiswap_get_pair_day_datas__historical**](#sushiswap_get_pair_day_datas__historical) | **get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**sushiswap_get_pair_hour_datas__historical**](#sushiswap_get_pair_hour_datas__historical) | **get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**sushiswap_get_pairs__historical**](#sushiswap_get_pairs__historical) | **get** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswap_get_token_day_datas__historical**](#sushiswap_get_token_day_datas__historical) | **get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-[**sushiswap_get_transactions__historical**](#sushiswap_get_transactions__historical) | **get** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
-[**sushiswap_get_users__historical**](#sushiswap_get_users__historical) | **get** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**sushiswap_get_bundles__historical**](#sushiswap_get_bundles__historical) | **get** /dapps/sushiswap/bundles/historical | Bundles (historical)
+[**sushiswap_get_burns__historical**](#sushiswap_get_burns__historical) | **get** /dapps/sushiswap/burns/historical | Burns (historical)
+[**sushiswap_get_day_datas__historical**](#sushiswap_get_day_datas__historical) | **get** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
+[**sushiswap_get_factorys__historical**](#sushiswap_get_factorys__historical) | **get** /dapps/sushiswap/factorys/historical | Factorys (historical)
+[**sushiswap_get_hour_datas__historical**](#sushiswap_get_hour_datas__historical) | **get** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswap_get_liquidity_position_snapshots__historical**](#sushiswap_get_liquidity_position_snapshots__historical) | **get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**sushiswap_get_liquidity_positions__historical**](#sushiswap_get_liquidity_positions__historical) | **get** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
+[**sushiswap_get_mints__historical**](#sushiswap_get_mints__historical) | **get** /dapps/sushiswap/mints/historical | Mints (historical)
+[**sushiswap_get_pair_day_datas__historical**](#sushiswap_get_pair_day_datas__historical) | **get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
+[**sushiswap_get_pair_hour_datas__historical**](#sushiswap_get_pair_hour_datas__historical) | **get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswap_get_pairs__historical**](#sushiswap_get_pairs__historical) | **get** /dapps/sushiswap/pairs/historical | Pairs (historical)
+[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Swaps (historical)
+[**sushiswap_get_token_day_datas__historical**](#sushiswap_get_token_day_datas__historical) | **get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Tokens (historical)
+[**sushiswap_get_transactions__historical**](#sushiswap_get_transactions__historical) | **get** /dapps/sushiswap/transactions/historical | Transactions (historical)
+[**sushiswap_get_users__historical**](#sushiswap_get_users__historical) | **get** /dapps/sushiswap/users/historical | Users (historical)
 [**sushiswap_hour_datas__current**](#sushiswap_hour_datas__current) | **get** /dapps/sushiswap/hourDatas/current | HourDatas (current)
 [**sushiswap_liquidity_position_snapshots__current**](#sushiswap_liquidity_position_snapshots__current) | **get** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswap_liquidity_positions__current**](#sushiswap_liquidity_positions__current) | **get** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
@@ -414,7 +414,7 @@ No authorization required
 <a name="sushiswap_get_bundles__historical"></a>
 > [SushiswapBundleDTO] sushiswap_get_bundles__historical()
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -445,7 +445,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Bundles (historical) 🔥
+        # Bundles (historical)
         api_response = api_instance.sushiswap_get_bundles__historical(
             query_params=query_params,
         )
@@ -570,7 +570,7 @@ No authorization required
 <a name="sushiswap_get_burns__historical"></a>
 > [SushiswapBurnDTO] sushiswap_get_burns__historical()
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -602,7 +602,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Burns (historical) 🔥
+        # Burns (historical)
         api_response = api_instance.sushiswap_get_burns__historical(
             query_params=query_params,
         )
@@ -735,7 +735,7 @@ No authorization required
 <a name="sushiswap_get_day_datas__historical"></a>
 > [SushiswapDayDataDTO] sushiswap_get_day_datas__historical()
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 Gets dayDatas.
 
@@ -766,7 +766,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # DayDatas (historical) 🔥
+        # DayDatas (historical)
         api_response = api_instance.sushiswap_get_day_datas__historical(
             query_params=query_params,
         )
@@ -891,7 +891,7 @@ No authorization required
 <a name="sushiswap_get_factorys__historical"></a>
 > [SushiswapFactoryDTO] sushiswap_get_factorys__historical()
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -922,7 +922,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Factorys (historical) 🔥
+        # Factorys (historical)
         api_response = api_instance.sushiswap_get_factorys__historical(
             query_params=query_params,
         )
@@ -1047,7 +1047,7 @@ No authorization required
 <a name="sushiswap_get_hour_datas__historical"></a>
 > [SushiswapHourDataDTO] sushiswap_get_hour_datas__historical()
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 Gets hourDatas.
 
@@ -1078,7 +1078,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # HourDatas (historical) 🔥
+        # HourDatas (historical)
         api_response = api_instance.sushiswap_get_hour_datas__historical(
             query_params=query_params,
         )
@@ -1203,7 +1203,7 @@ No authorization required
 <a name="sushiswap_get_liquidity_position_snapshots__historical"></a>
 > [SushiswapLiquidityPositionSnapshotDTO] sushiswap_get_liquidity_position_snapshots__historical()
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -1236,7 +1236,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositionSnapshots (historical) 🔥
+        # LiquidityPositionSnapshots (historical)
         api_response = api_instance.sushiswap_get_liquidity_position_snapshots__historical(
             query_params=query_params,
         )
@@ -1377,7 +1377,7 @@ No authorization required
 <a name="sushiswap_get_liquidity_positions__historical"></a>
 > [SushiswapLiquidityPositionDTO] sushiswap_get_liquidity_positions__historical()
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -1410,7 +1410,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositions (historical) 🔥
+        # LiquidityPositions (historical)
         api_response = api_instance.sushiswap_get_liquidity_positions__historical(
             query_params=query_params,
         )
@@ -1551,7 +1551,7 @@ No authorization required
 <a name="sushiswap_get_mints__historical"></a>
 > [SushiswapMintDTO] sushiswap_get_mints__historical()
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -1583,7 +1583,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Mints (historical) 🔥
+        # Mints (historical)
         api_response = api_instance.sushiswap_get_mints__historical(
             query_params=query_params,
         )
@@ -1716,7 +1716,7 @@ No authorization required
 <a name="sushiswap_get_pair_day_datas__historical"></a>
 > [SushiswapPairDayDataDTO] sushiswap_get_pair_day_datas__historical()
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -1750,7 +1750,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairDayDatas (historical) 🔥
+        # PairDayDatas (historical)
         api_response = api_instance.sushiswap_get_pair_day_datas__historical(
             query_params=query_params,
         )
@@ -1899,7 +1899,7 @@ No authorization required
 <a name="sushiswap_get_pair_hour_datas__historical"></a>
 > [SushiswapPairHourDataDTO] sushiswap_get_pair_hour_datas__historical()
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -1931,7 +1931,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # PairHourDatas (historical) 🔥
+        # PairHourDatas (historical)
         api_response = api_instance.sushiswap_get_pair_hour_datas__historical(
             query_params=query_params,
         )
@@ -2064,7 +2064,7 @@ No authorization required
 <a name="sushiswap_get_pairs__historical"></a>
 > [SushiswapPairDTO] sushiswap_get_pairs__historical()
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -2098,7 +2098,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # Pairs (historical) 🔥
+        # Pairs (historical)
         api_response = api_instance.sushiswap_get_pairs__historical(
             query_params=query_params,
         )
@@ -2247,7 +2247,7 @@ No authorization required
 <a name="sushiswap_get_swaps__historical"></a>
 > [SushiswapSwapDTO] sushiswap_get_swaps__historical()
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -2279,7 +2279,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Swaps (historical) 🔥
+        # Swaps (historical)
         api_response = api_instance.sushiswap_get_swaps__historical(
             query_params=query_params,
         )
@@ -2412,7 +2412,7 @@ No authorization required
 <a name="sushiswap_get_token_day_datas__historical"></a>
 > [SushiswapTokenDayDataDTO] sushiswap_get_token_day_datas__historical()
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -2443,7 +2443,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # TokenDayDatas (historical) 🔥
+        # TokenDayDatas (historical)
         api_response = api_instance.sushiswap_get_token_day_datas__historical(
             query_params=query_params,
         )
@@ -2568,7 +2568,7 @@ No authorization required
 <a name="sushiswap_get_tokens__historical"></a>
 > [SushiswapTokenDTO] sushiswap_get_tokens__historical()
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -2601,7 +2601,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'name': "name_example",
     }
     try:
-        # Tokens (historical) 🔥
+        # Tokens (historical)
         api_response = api_instance.sushiswap_get_tokens__historical(
             query_params=query_params,
         )
@@ -2742,7 +2742,7 @@ No authorization required
 <a name="sushiswap_get_transactions__historical"></a>
 > [SushiswapTransactionDTO] sushiswap_get_transactions__historical()
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -2773,7 +2773,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Transactions (historical) 🔥
+        # Transactions (historical)
         api_response = api_instance.sushiswap_get_transactions__historical(
             query_params=query_params,
         )
@@ -2898,7 +2898,7 @@ No authorization required
 <a name="sushiswap_get_users__historical"></a>
 > [SushiswapUserDTO] sushiswap_get_users__historical()
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -2929,7 +2929,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Users (historical) 🔥
+        # Users (historical)
         api_response = api_instance.sushiswap_get_users__historical(
             query_params=query_params,
         )

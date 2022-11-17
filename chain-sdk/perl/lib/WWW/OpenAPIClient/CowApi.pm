@@ -51,7 +51,7 @@ sub new {
 #
 # cow_get_orders__historical
 #
-# Orders (historical) 🔥
+# Orders (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -87,7 +87,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_orders__historical' } = {
-        summary => 'Orders (historical) 🔥',
+        summary => 'Orders (historical)',
         params => $params,
         returns => 'ARRAY[CowOrderDTO]',
         };
@@ -155,7 +155,7 @@ sub cow_get_orders__historical {
 #
 # cow_get_settlements__historical
 #
-# Settlements (historical) 🔥
+# Settlements (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -191,7 +191,7 @@ sub cow_get_orders__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_settlements__historical' } = {
-        summary => 'Settlements (historical) 🔥',
+        summary => 'Settlements (historical)',
         params => $params,
         returns => 'ARRAY[CowSettlementDTO]',
         };
@@ -259,7 +259,7 @@ sub cow_get_settlements__historical {
 #
 # cow_get_tokens__historical
 #
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -313,7 +313,7 @@ sub cow_get_settlements__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_tokens__historical' } = {
-        summary => 'Tokens (historical) 🔥',
+        summary => 'Tokens (historical)',
         params => $params,
         returns => 'ARRAY[CowTokenDTO]',
         };
@@ -396,7 +396,7 @@ sub cow_get_tokens__historical {
 #
 # cow_get_trades__historical
 #
-# Trades (historical) 🔥
+# Trades (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -444,7 +444,7 @@ sub cow_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_trades__historical' } = {
-        summary => 'Trades (historical) 🔥',
+        summary => 'Trades (historical)',
         params => $params,
         returns => 'ARRAY[CowTradeDTO]',
         };
@@ -522,7 +522,7 @@ sub cow_get_trades__historical {
 #
 # cow_get_users__historical
 #
-# Users (historical) 🔥
+# Users (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -564,7 +564,7 @@ sub cow_get_trades__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_users__historical' } = {
-        summary => 'Users (historical) 🔥',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[CowUserDTO]',
         };

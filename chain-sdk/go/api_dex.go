@@ -267,7 +267,7 @@ func (r ApiDexGetBatchsHistoricalRequest) Execute() ([]DexBatchDTO, *http.Respon
 }
 
 /*
-DexGetBatchsHistorical Batchs (historical) 🔥
+DexGetBatchsHistorical Batchs (historical)
 
 Gets batchs.
 
@@ -417,7 +417,7 @@ func (r ApiDexGetDepositsHistoricalRequest) Execute() ([]DexDepositDTO, *http.Re
 }
 
 /*
-DexGetDepositsHistorical Deposits (historical) 🔥
+DexGetDepositsHistorical Deposits (historical)
 
 Gets deposits.
 
@@ -576,7 +576,7 @@ func (r ApiDexGetOrdersHistoricalRequest) Execute() ([]DexOrderDTO, *http.Respon
 }
 
 /*
-DexGetOrdersHistorical Orders (historical) 🔥
+DexGetOrdersHistorical Orders (historical)
 
 Gets orders.
 
@@ -726,7 +726,7 @@ func (r ApiDexGetPricesHistoricalRequest) Execute() ([]DexPriceDTO, *http.Respon
 }
 
 /*
-DexGetPricesHistorical Prices (historical) 🔥
+DexGetPricesHistorical Prices (historical)
 
 Gets prices.
 
@@ -875,7 +875,7 @@ func (r ApiDexGetSolutionsHistoricalRequest) Execute() ([]DexSolutionDTO, *http.
 }
 
 /*
-DexGetSolutionsHistorical Solutions (historical) 🔥
+DexGetSolutionsHistorical Solutions (historical)
 
 Gets solutions.
 
@@ -1024,7 +1024,7 @@ func (r ApiDexGetStatssHistoricalRequest) Execute() ([]DexStatsDTO, *http.Respon
 }
 
 /*
-DexGetStatssHistorical Statss (historical) 🔥
+DexGetStatssHistorical Statss (historical)
 
 Gets statss.
 
@@ -1194,7 +1194,7 @@ func (r ApiDexGetTokensHistoricalRequest) Execute() ([]DexTokenDTO, *http.Respon
 }
 
 /*
-DexGetTokensHistorical Tokens (historical) 🔥
+DexGetTokensHistorical Tokens (historical)
 
 Gets tokens.
 
@@ -1366,7 +1366,7 @@ func (r ApiDexGetTradesHistoricalRequest) Execute() ([]DexTradeDTO, *http.Respon
 }
 
 /*
-DexGetTradesHistorical Trades (historical) 🔥
+DexGetTradesHistorical Trades (historical)
 
 Gets trades.
 
@@ -1521,7 +1521,7 @@ func (r ApiDexGetUsersHistoricalRequest) Execute() ([]DexUserDTO, *http.Response
 }
 
 /*
-DexGetUsersHistorical Users (historical) 🔥
+DexGetUsersHistorical Users (historical)
 
 Gets users.
 
@@ -1671,7 +1671,7 @@ func (r ApiDexGetWithdrawRequestsHistoricalRequest) Execute() ([]DexWithdrawRequ
 }
 
 /*
-DexGetWithdrawRequestsHistorical WithdrawRequests (historical) 🔥
+DexGetWithdrawRequestsHistorical WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -1824,7 +1824,7 @@ func (r ApiDexGetWithdrawsHistoricalRequest) Execute() ([]DexWithdrawDTO, *http.
 }
 
 /*
-DexGetWithdrawsHistorical Withdraws (historical) 🔥
+DexGetWithdrawsHistorical Withdraws (historical)
 
 Gets withdraws.
 

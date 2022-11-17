@@ -1425,7 +1425,7 @@ class CurveApi {
     );
   }
 
-  /// Accounts (historical) 🔥
+  /// Accounts (historical)
   /// Gets accounts.
   ///
   /// Parameters:
@@ -1519,7 +1519,7 @@ class CurveApi {
     );
   }
 
-  /// AddLiquidityEvents (historical) 🔥
+  /// AddLiquidityEvents (historical)
   /// Gets addLiquidityEvents.
   ///
   /// Parameters:
@@ -1613,7 +1613,7 @@ class CurveApi {
     );
   }
 
-  /// AdminFeeChangeLogs (historical) 🔥
+  /// AdminFeeChangeLogs (historical)
   /// Gets adminFeeChangeLogs.
   ///
   /// Parameters:
@@ -1707,7 +1707,7 @@ class CurveApi {
     );
   }
 
-  /// AmplificationCoeffChangeLogs (historical) 🔥
+  /// AmplificationCoeffChangeLogs (historical)
   /// Gets amplificationCoeffChangeLogs.
   ///
   /// Parameters:
@@ -1801,7 +1801,7 @@ class CurveApi {
     );
   }
 
-  /// Coins (historical) 🔥
+  /// Coins (historical)
   /// Gets coins.
   ///
   /// Parameters:
@@ -1895,7 +1895,7 @@ class CurveApi {
     );
   }
 
-  /// ContractVersions (historical) 🔥
+  /// ContractVersions (historical)
   /// Gets contractVersions.
   ///
   /// Parameters:
@@ -1989,7 +1989,7 @@ class CurveApi {
     );
   }
 
-  /// Contracts (historical) 🔥
+  /// Contracts (historical)
   /// Gets contracts.
   ///
   /// Parameters:
@@ -2080,7 +2080,7 @@ class CurveApi {
     );
   }
 
-  /// DailyVolumes (historical) 🔥
+  /// DailyVolumes (historical)
   /// Gets dailyVolumes.
   ///
   /// Parameters:
@@ -2174,7 +2174,7 @@ class CurveApi {
     );
   }
 
-  /// Exchanges (historical) 🔥
+  /// Exchanges (historical)
   /// Gets exchanges.
   ///
   /// Parameters:
@@ -2268,7 +2268,7 @@ class CurveApi {
     );
   }
 
-  /// FeeChangeLogs (historical) 🔥
+  /// FeeChangeLogs (historical)
   /// Gets feeChangeLogs.
   ///
   /// Parameters:
@@ -2362,7 +2362,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeDeposits (historical) 🔥
+  /// GaugeDeposits (historical)
   /// Gets gaugeDeposits.
   ///
   /// Parameters:
@@ -2453,7 +2453,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeLiquiditys (historical) 🔥
+  /// GaugeLiquiditys (historical)
   /// Gets gaugeLiquiditys.
   ///
   /// Parameters:
@@ -2547,7 +2547,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeTotalWeights (historical) 🔥
+  /// GaugeTotalWeights (historical)
   /// Gets gaugeTotalWeights.
   ///
   /// Parameters:
@@ -2638,7 +2638,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeTypeWeights (historical) 🔥
+  /// GaugeTypeWeights (historical)
   /// Gets gaugeTypeWeights.
   ///
   /// Parameters:
@@ -2729,7 +2729,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeTypes (historical) 🔥
+  /// GaugeTypes (historical)
   /// Gets gaugeTypes.
   ///
   /// Parameters:
@@ -2823,7 +2823,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeWeightVotes (historical) 🔥
+  /// GaugeWeightVotes (historical)
   /// Gets gaugeWeightVotes.
   ///
   /// Parameters:
@@ -2917,7 +2917,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeWeights (historical) 🔥
+  /// GaugeWeights (historical)
   /// Gets gaugeWeights.
   ///
   /// Parameters:
@@ -3008,7 +3008,7 @@ class CurveApi {
     );
   }
 
-  /// GaugeWithdraws (historical) 🔥
+  /// GaugeWithdraws (historical)
   /// Gets gaugeWithdraws.
   ///
   /// Parameters:
@@ -3099,7 +3099,7 @@ class CurveApi {
     );
   }
 
-  /// Gauges (historical) 🔥
+  /// Gauges (historical)
   /// Gets gauges.
   ///
   /// Parameters:
@@ -3196,7 +3196,7 @@ class CurveApi {
     );
   }
 
-  /// HourlyVolumes (historical) 🔥
+  /// HourlyVolumes (historical)
   /// Gets hourlyVolumes.
   ///
   /// Parameters:
@@ -3290,7 +3290,7 @@ class CurveApi {
     );
   }
 
-  /// LpTokens (historical) 🔥
+  /// LpTokens (historical)
   /// Gets lpTokens.
   ///
   /// Parameters:
@@ -3393,7 +3393,7 @@ class CurveApi {
     );
   }
 
-  /// Pools (historical) 🔥
+  /// Pools (historical)
   /// Gets pools.
   ///
   /// Parameters:
@@ -3487,7 +3487,7 @@ class CurveApi {
     );
   }
 
-  /// ProposalVotes (historical) 🔥
+  /// ProposalVotes (historical)
   /// Gets proposalVotes.
   ///
   /// Parameters:
@@ -3578,7 +3578,7 @@ class CurveApi {
     );
   }
 
-  /// Proposals (historical) 🔥
+  /// Proposals (historical)
   /// Gets proposals.
   ///
   /// Parameters:
@@ -3669,7 +3669,7 @@ class CurveApi {
     );
   }
 
-  /// RemoveLiquidityEvents (historical) 🔥
+  /// RemoveLiquidityEvents (historical)
   /// Gets removeLiquidityEvents.
   ///
   /// Parameters:
@@ -3763,7 +3763,7 @@ class CurveApi {
     );
   }
 
-  /// RemoveLiquidityOneEvents (historical) 🔥
+  /// RemoveLiquidityOneEvents (historical)
   /// Gets removeLiquidityOneEvents.
   ///
   /// Parameters:
@@ -3857,7 +3857,7 @@ class CurveApi {
     );
   }
 
-  /// SystemStates (historical) 🔥
+  /// SystemStates (historical)
   /// Gets systemStates.
   ///
   /// Parameters:
@@ -3948,7 +3948,7 @@ class CurveApi {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -4048,7 +4048,7 @@ class CurveApi {
     );
   }
 
-  /// TransferOwnershipEvents (historical) 🔥
+  /// TransferOwnershipEvents (historical)
   /// Gets transferOwnershipEvents.
   ///
   /// Parameters:
@@ -4142,7 +4142,7 @@ class CurveApi {
     );
   }
 
-  /// UnderlyingCoins (historical) 🔥
+  /// UnderlyingCoins (historical)
   /// Gets underlyingCoins.
   ///
   /// Parameters:
@@ -4236,7 +4236,7 @@ class CurveApi {
     );
   }
 
-  /// VotingApps (historical) 🔥
+  /// VotingApps (historical)
   /// Gets votingApps.
   ///
   /// Parameters:
@@ -4330,7 +4330,7 @@ class CurveApi {
     );
   }
 
-  /// WeeklyVolumes (historical) 🔥
+  /// WeeklyVolumes (historical)
   /// Gets weeklyVolumes.
   ///
   /// Parameters:

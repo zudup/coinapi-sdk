@@ -116,7 +116,7 @@ API.Client.DexApi.prototype.dexDepositsCurrent = function(opt_extraHttpRequestPa
 }
 
 /**
- * Batchs (historical) 🔥
+ * Batchs (historical)
  * Gets batchs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -172,7 +172,7 @@ API.Client.DexApi.prototype.dexGetBatchsHistorical = function(opt_startBlock, op
 }
 
 /**
- * Deposits (historical) 🔥
+ * Deposits (historical)
  * Gets deposits.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -233,7 +233,7 @@ API.Client.DexApi.prototype.dexGetDepositsHistorical = function(opt_startBlock, 
 }
 
 /**
- * Orders (historical) 🔥
+ * Orders (historical)
  * Gets orders.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -299,7 +299,7 @@ API.Client.DexApi.prototype.dexGetOrdersHistorical = function(opt_startBlock, op
 }
 
 /**
- * Prices (historical) 🔥
+ * Prices (historical)
  * Gets prices.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -355,7 +355,7 @@ API.Client.DexApi.prototype.dexGetPricesHistorical = function(opt_startBlock, op
 }
 
 /**
- * Solutions (historical) 🔥
+ * Solutions (historical)
  * Gets solutions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -411,7 +411,7 @@ API.Client.DexApi.prototype.dexGetSolutionsHistorical = function(opt_startBlock,
 }
 
 /**
- * Statss (historical) 🔥
+ * Statss (historical)
  * Gets statss.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -467,7 +467,7 @@ API.Client.DexApi.prototype.dexGetStatssHistorical = function(opt_startBlock, op
 }
 
 /**
- * Tokens (historical) 🔥
+ * Tokens (historical)
  * Gets tokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -538,7 +538,7 @@ API.Client.DexApi.prototype.dexGetTokensHistorical = function(opt_startBlock, op
 }
 
 /**
- * Trades (historical) 🔥
+ * Trades (historical)
  * Gets trades.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -604,7 +604,7 @@ API.Client.DexApi.prototype.dexGetTradesHistorical = function(opt_startBlock, op
 }
 
 /**
- * Users (historical) 🔥
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -660,7 +660,7 @@ API.Client.DexApi.prototype.dexGetUsersHistorical = function(opt_startBlock, opt
 }
 
 /**
- * WithdrawRequests (historical) 🔥
+ * WithdrawRequests (historical)
  * Gets withdrawRequests.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -721,7 +721,7 @@ API.Client.DexApi.prototype.dexGetWithdrawRequestsHistorical = function(opt_star
 }
 
 /**
- * Withdraws (historical) 🔥
+ * Withdraws (historical)
  * Gets withdraws.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

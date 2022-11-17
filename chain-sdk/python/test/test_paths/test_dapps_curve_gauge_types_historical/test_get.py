@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveGaugeTypesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveGaugeTypesHistorical unit test stubs
-        GaugeTypes (historical) 🔥  # noqa: E501
+        GaugeTypes (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

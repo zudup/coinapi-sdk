@@ -8,7 +8,7 @@ api_instance <- CowApi$new()
 test_that("CowGetOrdersHistorical", {
   # tests for CowGetOrdersHistorical
   # base path: https://onchain.coinapi.io
-  # Orders (historical) 🔥
+  # Orders (historical)
   # Gets orders.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -24,7 +24,7 @@ test_that("CowGetOrdersHistorical", {
 test_that("CowGetSettlementsHistorical", {
   # tests for CowGetSettlementsHistorical
   # base path: https://onchain.coinapi.io
-  # Settlements (historical) 🔥
+  # Settlements (historical)
   # Gets settlements.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -40,7 +40,7 @@ test_that("CowGetSettlementsHistorical", {
 test_that("CowGetTokensHistorical", {
   # tests for CowGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -59,7 +59,7 @@ test_that("CowGetTokensHistorical", {
 test_that("CowGetTradesHistorical", {
   # tests for CowGetTradesHistorical
   # base path: https://onchain.coinapi.io
-  # Trades (historical) 🔥
+  # Trades (historical)
   # Gets trades.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -77,7 +77,7 @@ test_that("CowGetTradesHistorical", {
 test_that("CowGetUsersHistorical", {
   # tests for CowGetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

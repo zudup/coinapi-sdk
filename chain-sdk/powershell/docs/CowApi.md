@@ -4,11 +4,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-CowGetOrdersHistorical**](CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical) 🔥
-[**Invoke-CowGetSettlementsHistorical**](CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) 🔥
-[**Invoke-CowGetTokensHistorical**](CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-[**Invoke-CowGetTradesHistorical**](CowApi.md#Invoke-CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
-[**Invoke-CowGetUsersHistorical**](CowApi.md#Invoke-CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical) 🔥
+[**Invoke-CowGetOrdersHistorical**](CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**Invoke-CowGetSettlementsHistorical**](CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**Invoke-CowGetTokensHistorical**](CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
+[**Invoke-CowGetTradesHistorical**](CowApi.md#Invoke-CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical)
+[**Invoke-CowGetUsersHistorical**](CowApi.md#Invoke-CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 [**Invoke-CowOrdersCurrent**](CowApi.md#Invoke-CowOrdersCurrent) | **GET** /dapps/cow/orders/current | Orders (current)
 [**Invoke-CowSettlementsCurrent**](CowApi.md#Invoke-CowSettlementsCurrent) | **GET** /dapps/cow/settlements/current | Settlements (current)
 [**Invoke-CowTokensCurrent**](CowApi.md#Invoke-CowTokensCurrent) | **GET** /dapps/cow/tokens/current | Tokens (current)
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -37,7 +37,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | User's address. (optional)
 
-# Orders (historical) 🔥
+# Orders (historical)
 try {
     $Result = Invoke-CowGetOrdersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -80,7 +80,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Settlements (historical) 🔥
+Settlements (historical)
 
 Gets settlements.
 
@@ -92,7 +92,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Transaction hash. (optional)
 
-# Settlements (historical) 🔥
+# Settlements (historical)
 try {
     $Result = Invoke-CowGetSettlementsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -138,7 +138,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -153,7 +153,7 @@ $Address = "MyAddress" # String | Token's address. (optional)
 $Name = "MyName" # String | Token name fetched by ERC20 contract call. (optional)
 $Symbol = "MySymbol" # String | Token symbol fetched by contract call. (optional)
 
-# Tokens (historical) 🔥
+# Tokens (historical)
 try {
     $Result = Invoke-CowGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Address $Address -Name $Name -Symbol $Symbol
 } catch {
@@ -201,7 +201,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SellToken] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-BuyToken] <String><br>
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -215,7 +215,7 @@ $Id = "MyId" # String |  (optional)
 $SellToken = "MySellToken" # String |  (optional)
 $BuyToken = "MyBuyToken" # String |  (optional)
 
-# Trades (historical) 🔥
+# Trades (historical)
 try {
     $Result = Invoke-CowGetTradesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -SellToken $SellToken -BuyToken $BuyToken
 } catch {
@@ -261,7 +261,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Address] <String><br>
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -274,7 +274,7 @@ $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | User's address. (optional)
 $Address = "MyAddress" # String | User's address. (optional)
 
-# Users (historical) 🔥
+# Users (historical)
 try {
     $Result = Invoke-CowGetUsersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Address $Address
 } catch {

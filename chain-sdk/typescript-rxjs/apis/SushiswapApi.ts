@@ -245,7 +245,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets bundles.
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      */
     sushiswapGetBundlesHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetBundlesHistoricalRequest): Observable<Array<SushiswapBundleDTO>>
     sushiswapGetBundlesHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetBundlesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapBundleDTO>>>
@@ -268,7 +268,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets burns.
-     * Burns (historical) 🔥
+     * Burns (historical)
      */
     sushiswapGetBurnsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetBurnsHistoricalRequest): Observable<Array<SushiswapBurnDTO>>
     sushiswapGetBurnsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetBurnsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapBurnDTO>>>
@@ -292,7 +292,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets dayDatas.
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      */
     sushiswapGetDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetDayDatasHistoricalRequest): Observable<Array<SushiswapDayDataDTO>>
     sushiswapGetDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetDayDatasHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapDayDataDTO>>>
@@ -315,7 +315,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets factorys.
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      */
     sushiswapGetFactorysHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetFactorysHistoricalRequest): Observable<Array<SushiswapFactoryDTO>>
     sushiswapGetFactorysHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetFactorysHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapFactoryDTO>>>
@@ -338,7 +338,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets hourDatas.
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      */
     sushiswapGetHourDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetHourDatasHistoricalRequest): Observable<Array<SushiswapHourDataDTO>>
     sushiswapGetHourDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetHourDatasHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapHourDataDTO>>>
@@ -361,7 +361,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets liquidityPositionSnapshots.
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      */
     sushiswapGetLiquidityPositionSnapshotsHistorical({ startBlock, endBlock, startDate, endDate, id, user, pair }: SushiswapGetLiquidityPositionSnapshotsHistoricalRequest): Observable<Array<SushiswapLiquidityPositionSnapshotDTO>>
     sushiswapGetLiquidityPositionSnapshotsHistorical({ startBlock, endBlock, startDate, endDate, id, user, pair }: SushiswapGetLiquidityPositionSnapshotsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapLiquidityPositionSnapshotDTO>>>
@@ -386,7 +386,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets liquidityPositions.
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      */
     sushiswapGetLiquidityPositionsHistorical({ startBlock, endBlock, startDate, endDate, id, user, pair }: SushiswapGetLiquidityPositionsHistoricalRequest): Observable<Array<SushiswapLiquidityPositionDTO>>
     sushiswapGetLiquidityPositionsHistorical({ startBlock, endBlock, startDate, endDate, id, user, pair }: SushiswapGetLiquidityPositionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapLiquidityPositionDTO>>>
@@ -411,7 +411,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets mints.
-     * Mints (historical) 🔥
+     * Mints (historical)
      */
     sushiswapGetMintsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetMintsHistoricalRequest): Observable<Array<SushiswapMintDTO>>
     sushiswapGetMintsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetMintsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapMintDTO>>>
@@ -435,7 +435,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets pairDayDatas.
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      */
     sushiswapGetPairDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id, pair, token0, token1 }: SushiswapGetPairDayDatasHistoricalRequest): Observable<Array<SushiswapPairDayDataDTO>>
     sushiswapGetPairDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id, pair, token0, token1 }: SushiswapGetPairDayDatasHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDayDataDTO>>>
@@ -461,7 +461,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets pairHourDatas.
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      */
     sushiswapGetPairHourDatasHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetPairHourDatasHistoricalRequest): Observable<Array<SushiswapPairHourDataDTO>>
     sushiswapGetPairHourDatasHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetPairHourDatasHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairHourDataDTO>>>
@@ -485,7 +485,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets pairs.
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      */
     sushiswapGetPairsHistorical({ startBlock, endBlock, startDate, endDate, id, name, token0, token1 }: SushiswapGetPairsHistoricalRequest): Observable<Array<SushiswapPairDTO>>
     sushiswapGetPairsHistorical({ startBlock, endBlock, startDate, endDate, id, name, token0, token1 }: SushiswapGetPairsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
@@ -511,7 +511,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets swaps.
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      */
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetSwapsHistoricalRequest): Observable<Array<SushiswapSwapDTO>>
     sushiswapGetSwapsHistorical({ startBlock, endBlock, startDate, endDate, id, pair }: SushiswapGetSwapsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapSwapDTO>>>
@@ -535,7 +535,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets tokenDayDatas.
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      */
     sushiswapGetTokenDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetTokenDayDatasHistoricalRequest): Observable<Array<SushiswapTokenDayDataDTO>>
     sushiswapGetTokenDayDatasHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetTokenDayDatasHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDayDataDTO>>>
@@ -558,7 +558,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets tokens.
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      */
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, symbol, name }: SushiswapGetTokensHistoricalRequest): Observable<Array<SushiswapTokenDTO>>
     sushiswapGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, symbol, name }: SushiswapGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDTO>>>
@@ -583,7 +583,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets transactions.
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      */
     sushiswapGetTransactionsHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetTransactionsHistoricalRequest): Observable<Array<SushiswapTransactionDTO>>
     sushiswapGetTransactionsHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetTransactionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTransactionDTO>>>
@@ -606,7 +606,7 @@ export class SushiswapApi extends BaseAPI {
 
     /**
      * Gets users.
-     * Users (historical) 🔥
+     * Users (historical)
      */
     sushiswapGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetUsersHistoricalRequest): Observable<Array<SushiswapUserDTO>>
     sushiswapGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id }: SushiswapGetUsersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapUserDTO>>>

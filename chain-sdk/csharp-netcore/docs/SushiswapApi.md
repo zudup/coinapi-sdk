@@ -8,22 +8,22 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**SushiswapBurnsCurrent**](SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current) |
 | [**SushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapdaydatascurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current) |
 | [**SushiswapFactorysCurrent**](SushiswapApi.md#sushiswapfactoryscurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current) |
-| [**SushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥 |
-| [**SushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥 |
-| [**SushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥 |
-| [**SushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapgetfactoryshistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥 |
-| [**SushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥 |
-| [**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥 |
-| [**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥 |
-| [**SushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥 |
-| [**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
-| [**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
-| [**SushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥 |
-| [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
-| [**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
-| [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
-| [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥 |
-| [**SushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥 |
+| [**SushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) |
+| [**SushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) |
+| [**SushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) |
+| [**SushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapgetfactoryshistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) |
+| [**SushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) |
+| [**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) |
+| [**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) |
+| [**SushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) |
+| [**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) |
+| [**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) |
+| [**SushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) |
+| [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) |
+| [**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) |
+| [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) |
+| [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) |
+| [**SushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) |
 | [**SushiswapHourDatasCurrent**](SushiswapApi.md#sushiswaphourdatascurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current) |
 | [**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapliquiditypositionsnapshotscurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current) |
 | [**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapliquiditypositionscurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current) |
@@ -385,7 +385,7 @@ No authorization required
 # **SushiswapGetBundlesHistorical**
 > List&lt;SushiswapBundleDTO&gt; SushiswapGetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -414,7 +414,7 @@ namespace Example
 
             try
             {
-                // Bundles (historical) 🔥
+                // Bundles (historical)
                 List<SushiswapBundleDTO> result = apiInstance.SushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -435,7 +435,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Bundles (historical) 🔥
+    // Bundles (historical)
     ApiResponse<List<SushiswapBundleDTO>> response = apiInstance.SushiswapGetBundlesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -484,7 +484,7 @@ No authorization required
 # **SushiswapGetBurnsHistorical**
 > List&lt;SushiswapBurnDTO&gt; SushiswapGetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -514,7 +514,7 @@ namespace Example
 
             try
             {
-                // Burns (historical) 🔥
+                // Burns (historical)
                 List<SushiswapBurnDTO> result = apiInstance.SushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
@@ -535,7 +535,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Burns (historical) 🔥
+    // Burns (historical)
     ApiResponse<List<SushiswapBurnDTO>> response = apiInstance.SushiswapGetBurnsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -585,7 +585,7 @@ No authorization required
 # **SushiswapGetDayDatasHistorical**
 > List&lt;SushiswapDayDataDTO&gt; SushiswapGetDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 Gets dayDatas.
 
@@ -614,7 +614,7 @@ namespace Example
 
             try
             {
-                // DayDatas (historical) 🔥
+                // DayDatas (historical)
                 List<SushiswapDayDataDTO> result = apiInstance.SushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -635,7 +635,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // DayDatas (historical) 🔥
+    // DayDatas (historical)
     ApiResponse<List<SushiswapDayDataDTO>> response = apiInstance.SushiswapGetDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -684,7 +684,7 @@ No authorization required
 # **SushiswapGetFactorysHistorical**
 > List&lt;SushiswapFactoryDTO&gt; SushiswapGetFactorysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -713,7 +713,7 @@ namespace Example
 
             try
             {
-                // Factorys (historical) 🔥
+                // Factorys (historical)
                 List<SushiswapFactoryDTO> result = apiInstance.SushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -734,7 +734,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Factorys (historical) 🔥
+    // Factorys (historical)
     ApiResponse<List<SushiswapFactoryDTO>> response = apiInstance.SushiswapGetFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -783,7 +783,7 @@ No authorization required
 # **SushiswapGetHourDatasHistorical**
 > List&lt;SushiswapHourDataDTO&gt; SushiswapGetHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 Gets hourDatas.
 
@@ -812,7 +812,7 @@ namespace Example
 
             try
             {
-                // HourDatas (historical) 🔥
+                // HourDatas (historical)
                 List<SushiswapHourDataDTO> result = apiInstance.SushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -833,7 +833,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // HourDatas (historical) 🔥
+    // HourDatas (historical)
     ApiResponse<List<SushiswapHourDataDTO>> response = apiInstance.SushiswapGetHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -882,7 +882,7 @@ No authorization required
 # **SushiswapGetLiquidityPositionSnapshotsHistorical**
 > List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; SushiswapGetLiquidityPositionSnapshotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -913,7 +913,7 @@ namespace Example
 
             try
             {
-                // LiquidityPositionSnapshots (historical) 🔥
+                // LiquidityPositionSnapshots (historical)
                 List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.SushiswapGetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
                 Debug.WriteLine(result);
             }
@@ -934,7 +934,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // LiquidityPositionSnapshots (historical) 🔥
+    // LiquidityPositionSnapshots (historical)
     ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> response = apiInstance.SushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -985,7 +985,7 @@ No authorization required
 # **SushiswapGetLiquidityPositionsHistorical**
 > List&lt;SushiswapLiquidityPositionDTO&gt; SushiswapGetLiquidityPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null, string pair = null)
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -1016,7 +1016,7 @@ namespace Example
 
             try
             {
-                // LiquidityPositions (historical) 🔥
+                // LiquidityPositions (historical)
                 List<SushiswapLiquidityPositionDTO> result = apiInstance.SushiswapGetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
                 Debug.WriteLine(result);
             }
@@ -1037,7 +1037,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // LiquidityPositions (historical) 🔥
+    // LiquidityPositions (historical)
     ApiResponse<List<SushiswapLiquidityPositionDTO>> response = apiInstance.SushiswapGetLiquidityPositionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1088,7 +1088,7 @@ No authorization required
 # **SushiswapGetMintsHistorical**
 > List&lt;SushiswapMintDTO&gt; SushiswapGetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -1118,7 +1118,7 @@ namespace Example
 
             try
             {
-                // Mints (historical) 🔥
+                // Mints (historical)
                 List<SushiswapMintDTO> result = apiInstance.SushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
@@ -1139,7 +1139,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Mints (historical) 🔥
+    // Mints (historical)
     ApiResponse<List<SushiswapMintDTO>> response = apiInstance.SushiswapGetMintsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1189,7 +1189,7 @@ No authorization required
 # **SushiswapGetPairDayDatasHistorical**
 > List&lt;SushiswapPairDayDataDTO&gt; SushiswapGetPairDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null, string token0 = null, string token1 = null)
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -1221,7 +1221,7 @@ namespace Example
 
             try
             {
-                // PairDayDatas (historical) 🔥
+                // PairDayDatas (historical)
                 List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
                 Debug.WriteLine(result);
             }
@@ -1242,7 +1242,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // PairDayDatas (historical) 🔥
+    // PairDayDatas (historical)
     ApiResponse<List<SushiswapPairDayDataDTO>> response = apiInstance.SushiswapGetPairDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1294,7 +1294,7 @@ No authorization required
 # **SushiswapGetPairHourDatasHistorical**
 > List&lt;SushiswapPairHourDataDTO&gt; SushiswapGetPairHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -1324,7 +1324,7 @@ namespace Example
 
             try
             {
-                // PairHourDatas (historical) 🔥
+                // PairHourDatas (historical)
                 List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
@@ -1345,7 +1345,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // PairHourDatas (historical) 🔥
+    // PairHourDatas (historical)
     ApiResponse<List<SushiswapPairHourDataDTO>> response = apiInstance.SushiswapGetPairHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1395,7 +1395,7 @@ No authorization required
 # **SushiswapGetPairsHistorical**
 > List&lt;SushiswapPairDTO&gt; SushiswapGetPairsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null, string token0 = null, string token1 = null)
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -1427,7 +1427,7 @@ namespace Example
 
             try
             {
-                // Pairs (historical) 🔥
+                // Pairs (historical)
                 List<SushiswapPairDTO> result = apiInstance.SushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
                 Debug.WriteLine(result);
             }
@@ -1448,7 +1448,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Pairs (historical) 🔥
+    // Pairs (historical)
     ApiResponse<List<SushiswapPairDTO>> response = apiInstance.SushiswapGetPairsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1500,7 +1500,7 @@ No authorization required
 # **SushiswapGetSwapsHistorical**
 > List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -1530,7 +1530,7 @@ namespace Example
 
             try
             {
-                // Swaps (historical) 🔥
+                // Swaps (historical)
                 List<SushiswapSwapDTO> result = apiInstance.SushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
@@ -1551,7 +1551,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Swaps (historical) 🔥
+    // Swaps (historical)
     ApiResponse<List<SushiswapSwapDTO>> response = apiInstance.SushiswapGetSwapsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1601,7 +1601,7 @@ No authorization required
 # **SushiswapGetTokenDayDatasHistorical**
 > List&lt;SushiswapTokenDayDataDTO&gt; SushiswapGetTokenDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -1630,7 +1630,7 @@ namespace Example
 
             try
             {
-                // TokenDayDatas (historical) 🔥
+                // TokenDayDatas (historical)
                 List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -1651,7 +1651,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // TokenDayDatas (historical) 🔥
+    // TokenDayDatas (historical)
     ApiResponse<List<SushiswapTokenDayDataDTO>> response = apiInstance.SushiswapGetTokenDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1700,7 +1700,7 @@ No authorization required
 # **SushiswapGetTokensHistorical**
 > List&lt;SushiswapTokenDTO&gt; SushiswapGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1731,7 +1731,7 @@ namespace Example
 
             try
             {
-                // Tokens (historical) 🔥
+                // Tokens (historical)
                 List<SushiswapTokenDTO> result = apiInstance.SushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
                 Debug.WriteLine(result);
             }
@@ -1752,7 +1752,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Tokens (historical) 🔥
+    // Tokens (historical)
     ApiResponse<List<SushiswapTokenDTO>> response = apiInstance.SushiswapGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, symbol, name);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1803,7 +1803,7 @@ No authorization required
 # **SushiswapGetTransactionsHistorical**
 > List&lt;SushiswapTransactionDTO&gt; SushiswapGetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -1832,7 +1832,7 @@ namespace Example
 
             try
             {
-                // Transactions (historical) 🔥
+                // Transactions (historical)
                 List<SushiswapTransactionDTO> result = apiInstance.SushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -1853,7 +1853,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Transactions (historical) 🔥
+    // Transactions (historical)
     ApiResponse<List<SushiswapTransactionDTO>> response = apiInstance.SushiswapGetTransactionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1902,7 +1902,7 @@ No authorization required
 # **SushiswapGetUsersHistorical**
 > List&lt;SushiswapUserDTO&gt; SushiswapGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1931,7 +1931,7 @@ namespace Example
 
             try
             {
-                // Users (historical) 🔥
+                // Users (historical)
                 List<SushiswapUserDTO> result = apiInstance.SushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -1952,7 +1952,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Users (historical) 🔥
+    // Users (historical)
     ApiResponse<List<SushiswapUserDTO>> response = apiInstance.SushiswapGetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

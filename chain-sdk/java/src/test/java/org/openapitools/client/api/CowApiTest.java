@@ -37,7 +37,7 @@ public class CowApiTest {
     private final CowApi api = new CowApi();
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * Gets orders.
      *
@@ -55,7 +55,7 @@ public class CowApiTest {
     }
 
     /**
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * Gets settlements.
      *
@@ -73,7 +73,7 @@ public class CowApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      *
@@ -94,7 +94,7 @@ public class CowApiTest {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * Gets trades.
      *
@@ -114,7 +114,7 @@ public class CowApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      *

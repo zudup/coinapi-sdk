@@ -6,17 +6,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 |--------|--------------|-------------|
 | [**DexBatchsCurrent**](DexApi.md#dexbatchscurrent) | **GET** /dapps/dex/batchs/current | Batchs (current) |
 | [**DexDepositsCurrent**](DexApi.md#dexdepositscurrent) | **GET** /dapps/dex/deposits/current | Deposits (current) |
-| [**DexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥 |
-| [**DexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥 |
-| [**DexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥 |
-| [**DexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | Prices (historical) 🔥 |
-| [**DexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) 🔥 |
-| [**DexGetStatssHistorical**](DexApi.md#dexgetstatsshistorical) | **GET** /dapps/dex/statss/historical | Statss (historical) 🔥 |
-| [**DexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥 |
-| [**DexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥 |
-| [**DexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥 |
-| [**DexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥 |
-| [**DexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥 |
+| [**DexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) |
+| [**DexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) |
+| [**DexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) |
+| [**DexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | Prices (historical) |
+| [**DexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) |
+| [**DexGetStatssHistorical**](DexApi.md#dexgetstatsshistorical) | **GET** /dapps/dex/statss/historical | Statss (historical) |
+| [**DexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) |
+| [**DexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) |
+| [**DexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical) |
+| [**DexGetWithdrawRequestsHistorical**](DexApi.md#dexgetwithdrawrequestshistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) |
+| [**DexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) |
 | [**DexOrdersCurrent**](DexApi.md#dexorderscurrent) | **GET** /dapps/dex/orders/current | Orders (current) |
 | [**DexPricesCurrent**](DexApi.md#dexpricescurrent) | **GET** /dapps/dex/prices/current | Prices (current) |
 | [**DexSolutionsCurrent**](DexApi.md#dexsolutionscurrent) | **GET** /dapps/dex/solutions/current | Solutions (current) |
@@ -203,7 +203,7 @@ No authorization required
 # **DexGetBatchsHistorical**
 > List&lt;DexBatchDTO&gt; DexGetBatchsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 Gets batchs.
 
@@ -232,7 +232,7 @@ namespace Example
 
             try
             {
-                // Batchs (historical) 🔥
+                // Batchs (historical)
                 List<DexBatchDTO> result = apiInstance.DexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -253,7 +253,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Batchs (historical) 🔥
+    // Batchs (historical)
     ApiResponse<List<DexBatchDTO>> response = apiInstance.DexGetBatchsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -302,7 +302,7 @@ No authorization required
 # **DexGetDepositsHistorical**
 > List&lt;DexDepositDTO&gt; DexGetDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 Gets deposits.
 
@@ -332,7 +332,7 @@ namespace Example
 
             try
             {
-                // Deposits (historical) 🔥
+                // Deposits (historical)
                 List<DexDepositDTO> result = apiInstance.DexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -353,7 +353,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Deposits (historical) 🔥
+    // Deposits (historical)
     ApiResponse<List<DexDepositDTO>> response = apiInstance.DexGetDepositsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -403,7 +403,7 @@ No authorization required
 # **DexGetOrdersHistorical**
 > List&lt;DexOrderDTO&gt; DexGetOrdersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string buyToken = null, string sellToken = null)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -434,7 +434,7 @@ namespace Example
 
             try
             {
-                // Orders (historical) 🔥
+                // Orders (historical)
                 List<DexOrderDTO> result = apiInstance.DexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
                 Debug.WriteLine(result);
             }
@@ -455,7 +455,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Orders (historical) 🔥
+    // Orders (historical)
     ApiResponse<List<DexOrderDTO>> response = apiInstance.DexGetOrdersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -506,7 +506,7 @@ No authorization required
 # **DexGetPricesHistorical**
 > List&lt;DexPriceDTO&gt; DexGetPricesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Prices (historical) 🔥
+Prices (historical)
 
 Gets prices.
 
@@ -535,7 +535,7 @@ namespace Example
 
             try
             {
-                // Prices (historical) 🔥
+                // Prices (historical)
                 List<DexPriceDTO> result = apiInstance.DexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -556,7 +556,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Prices (historical) 🔥
+    // Prices (historical)
     ApiResponse<List<DexPriceDTO>> response = apiInstance.DexGetPricesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -605,7 +605,7 @@ No authorization required
 # **DexGetSolutionsHistorical**
 > List&lt;DexSolutionDTO&gt; DexGetSolutionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 Gets solutions.
 
@@ -634,7 +634,7 @@ namespace Example
 
             try
             {
-                // Solutions (historical) 🔥
+                // Solutions (historical)
                 List<DexSolutionDTO> result = apiInstance.DexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -655,7 +655,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Solutions (historical) 🔥
+    // Solutions (historical)
     ApiResponse<List<DexSolutionDTO>> response = apiInstance.DexGetSolutionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -704,7 +704,7 @@ No authorization required
 # **DexGetStatssHistorical**
 > List&lt;DexStatsDTO&gt; DexGetStatssHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Statss (historical) 🔥
+Statss (historical)
 
 Gets statss.
 
@@ -733,7 +733,7 @@ namespace Example
 
             try
             {
-                // Statss (historical) 🔥
+                // Statss (historical)
                 List<DexStatsDTO> result = apiInstance.DexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -754,7 +754,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Statss (historical) 🔥
+    // Statss (historical)
     ApiResponse<List<DexStatsDTO>> response = apiInstance.DexGetStatssHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -803,7 +803,7 @@ No authorization required
 # **DexGetTokensHistorical**
 > List&lt;DexTokenDTO&gt; DexGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string symbol = null, string name = null)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -835,7 +835,7 @@ namespace Example
 
             try
             {
-                // Tokens (historical) 🔥
+                // Tokens (historical)
                 List<DexTokenDTO> result = apiInstance.DexGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, symbol, name);
                 Debug.WriteLine(result);
             }
@@ -856,7 +856,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Tokens (historical) 🔥
+    // Tokens (historical)
     ApiResponse<List<DexTokenDTO>> response = apiInstance.DexGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address, symbol, name);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -908,7 +908,7 @@ No authorization required
 # **DexGetTradesHistorical**
 > List&lt;DexTradeDTO&gt; DexGetTradesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string buyToken = null, string sellToken = null)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -939,7 +939,7 @@ namespace Example
 
             try
             {
-                // Trades (historical) 🔥
+                // Trades (historical)
                 List<DexTradeDTO> result = apiInstance.DexGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
                 Debug.WriteLine(result);
             }
@@ -960,7 +960,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Trades (historical) 🔥
+    // Trades (historical)
     ApiResponse<List<DexTradeDTO>> response = apiInstance.DexGetTradesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1011,7 +1011,7 @@ No authorization required
 # **DexGetUsersHistorical**
 > List&lt;DexUserDTO&gt; DexGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1040,7 +1040,7 @@ namespace Example
 
             try
             {
-                // Users (historical) 🔥
+                // Users (historical)
                 List<DexUserDTO> result = apiInstance.DexGetUsersHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -1061,7 +1061,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Users (historical) 🔥
+    // Users (historical)
     ApiResponse<List<DexUserDTO>> response = apiInstance.DexGetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1110,7 +1110,7 @@ No authorization required
 # **DexGetWithdrawRequestsHistorical**
 > List&lt;DexWithdrawRequestDTO&gt; DexGetWithdrawRequestsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -1140,7 +1140,7 @@ namespace Example
 
             try
             {
-                // WithdrawRequests (historical) 🔥
+                // WithdrawRequests (historical)
                 List<DexWithdrawRequestDTO> result = apiInstance.DexGetWithdrawRequestsHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -1161,7 +1161,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // WithdrawRequests (historical) 🔥
+    // WithdrawRequests (historical)
     ApiResponse<List<DexWithdrawRequestDTO>> response = apiInstance.DexGetWithdrawRequestsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1211,7 +1211,7 @@ No authorization required
 # **DexGetWithdrawsHistorical**
 > List&lt;DexWithdrawDTO&gt; DexGetWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -1241,7 +1241,7 @@ namespace Example
 
             try
             {
-                // Withdraws (historical) 🔥
+                // Withdraws (historical)
                 List<DexWithdrawDTO> result = apiInstance.DexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -1262,7 +1262,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Withdraws (historical) 🔥
+    // Withdraws (historical)
     ApiResponse<List<DexWithdrawDTO>> response = apiInstance.DexGetWithdrawsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

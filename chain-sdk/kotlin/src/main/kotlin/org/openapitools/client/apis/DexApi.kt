@@ -190,7 +190,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -225,7 +225,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -289,7 +289,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -325,7 +325,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -394,7 +394,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -431,7 +431,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -505,7 +505,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -540,7 +540,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -604,7 +604,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -639,7 +639,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -703,7 +703,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -738,7 +738,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -802,7 +802,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -840,7 +840,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -919,7 +919,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -956,7 +956,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1030,7 +1030,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1065,7 +1065,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1129,7 +1129,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1165,7 +1165,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1234,7 +1234,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1270,7 +1270,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

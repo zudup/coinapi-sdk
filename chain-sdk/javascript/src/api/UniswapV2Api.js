@@ -131,7 +131,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -180,7 +180,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -231,7 +231,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -284,7 +284,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -337,7 +337,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -388,7 +388,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -441,7 +441,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -492,7 +492,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -545,7 +545,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -596,7 +596,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -645,7 +645,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -698,7 +698,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -747,7 +747,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      * Gets uniswapDayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -796,7 +796,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * UniswapFactorys (historical) 🔥
+     * UniswapFactorys (historical)
      * Gets uniswapFactorys.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -845,7 +845,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

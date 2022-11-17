@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveAdminFeeChangeLogsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveAdminFeeChangeLogsHistorical unit test stubs
-        AdminFeeChangeLogs (historical) 🔥  # noqa: E501
+        AdminFeeChangeLogs (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

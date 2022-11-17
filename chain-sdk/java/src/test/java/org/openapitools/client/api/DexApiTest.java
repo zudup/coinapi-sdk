@@ -69,7 +69,7 @@ public class DexApiTest {
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * Gets batchs.
      *
@@ -87,7 +87,7 @@ public class DexApiTest {
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * Gets deposits.
      *
@@ -106,7 +106,7 @@ public class DexApiTest {
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * Gets orders.
      *
@@ -126,7 +126,7 @@ public class DexApiTest {
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * Gets prices.
      *
@@ -144,7 +144,7 @@ public class DexApiTest {
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * Gets solutions.
      *
@@ -162,7 +162,7 @@ public class DexApiTest {
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * Gets statss.
      *
@@ -180,7 +180,7 @@ public class DexApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      *
@@ -201,7 +201,7 @@ public class DexApiTest {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * Gets trades.
      *
@@ -221,7 +221,7 @@ public class DexApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      *
@@ -239,7 +239,7 @@ public class DexApiTest {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * Gets withdrawRequests.
      *
@@ -258,7 +258,7 @@ public class DexApiTest {
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * Gets withdraws.
      *

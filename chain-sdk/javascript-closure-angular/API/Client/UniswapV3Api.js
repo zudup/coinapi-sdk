@@ -153,7 +153,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3FactorysCurrent = function(opt_extraH
 }
 
 /**
- * Bundles (historical) 🔥
+ * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -209,7 +209,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBundlesHistorical = function(opt_s
 }
 
 /**
- * Burns (historical) 🔥
+ * Burns (historical)
  * Gets burns.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -280,7 +280,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBurnsHistorical = function(opt_sta
 }
 
 /**
- * Factorys (historical) 🔥
+ * Factorys (historical)
  * Gets factorys.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -336,7 +336,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetFactorysHistorical = function(opt_
 }
 
 /**
- * Mints (historical) 🔥
+ * Mints (historical)
  * Gets mints.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -407,7 +407,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetMintsHistorical = function(opt_sta
 }
 
 /**
- * PoolDayDatas (historical) 🔥
+ * PoolDayDatas (historical)
  * Gets poolDayDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -468,7 +468,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolDayDatasHistorical = function(
 }
 
 /**
- * PoolHourDatas (historical) 🔥
+ * PoolHourDatas (historical)
  * Gets poolHourDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -529,7 +529,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolHourDatasHistorical = function
 }
 
 /**
- * Pools (historical) 🔥
+ * Pools (historical)
  * Gets pools.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -595,7 +595,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsHistorical = function(opt_sta
 }
 
 /**
- * PositionSnapshots (historical) 🔥
+ * PositionSnapshots (historical)
  * Gets positionSnapshots.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -656,7 +656,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionSnapshotsHistorical = func
 }
 
 /**
- * Positions (historical) 🔥
+ * Positions (historical)
  * Gets positions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -727,7 +727,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsHistorical = function(opt
 }
 
 /**
- * Swaps (historical) 🔥
+ * Swaps (historical)
  * Gets swaps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -798,7 +798,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetSwapsHistorical = function(opt_sta
 }
 
 /**
- * TickDayDatas (historical) 🔥
+ * TickDayDatas (historical)
  * Gets tickDayDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -859,7 +859,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTickDayDatasHistorical = function(
 }
 
 /**
- * Ticks (historical) 🔥
+ * Ticks (historical)
  * Gets ticks.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -920,7 +920,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTicksHistorical = function(opt_sta
 }
 
 /**
- * TokenHourDatas (historical) 🔥
+ * TokenHourDatas (historical)
  * Gets tokenHourDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -976,7 +976,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokenHourDatasHistorical = functio
 }
 
 /**
- * TokenV3DayDatas (historical) 🔥
+ * TokenV3DayDatas (historical)
  * Gets tokenV3DayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1032,7 +1032,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokenV3DayDatasHistorical = functi
 }
 
 /**
- * Tokens (historical) 🔥
+ * Tokens (historical)
  * Gets tokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1098,7 +1098,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensHistorical = function(opt_st
 }
 
 /**
- * Transactions (historical) 🔥
+ * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1154,7 +1154,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTransactionsHistorical = function(
 }
 
 /**
- * UniswapDayDatas (historical) 🔥
+ * UniswapDayDatas (historical)
  * Gets uniswapDayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

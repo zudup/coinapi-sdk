@@ -30,7 +30,7 @@ test_that("DexDepositsCurrent", {
 test_that("DexGetBatchsHistorical", {
   # tests for DexGetBatchsHistorical
   # base path: https://onchain.coinapi.io
-  # Batchs (historical) 🔥
+  # Batchs (historical)
   # Gets batchs.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -46,7 +46,7 @@ test_that("DexGetBatchsHistorical", {
 test_that("DexGetDepositsHistorical", {
   # tests for DexGetDepositsHistorical
   # base path: https://onchain.coinapi.io
-  # Deposits (historical) 🔥
+  # Deposits (historical)
   # Gets deposits.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -63,7 +63,7 @@ test_that("DexGetDepositsHistorical", {
 test_that("DexGetOrdersHistorical", {
   # tests for DexGetOrdersHistorical
   # base path: https://onchain.coinapi.io
-  # Orders (historical) 🔥
+  # Orders (historical)
   # Gets orders.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -81,7 +81,7 @@ test_that("DexGetOrdersHistorical", {
 test_that("DexGetPricesHistorical", {
   # tests for DexGetPricesHistorical
   # base path: https://onchain.coinapi.io
-  # Prices (historical) 🔥
+  # Prices (historical)
   # Gets prices.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -97,7 +97,7 @@ test_that("DexGetPricesHistorical", {
 test_that("DexGetSolutionsHistorical", {
   # tests for DexGetSolutionsHistorical
   # base path: https://onchain.coinapi.io
-  # Solutions (historical) 🔥
+  # Solutions (historical)
   # Gets solutions.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -113,7 +113,7 @@ test_that("DexGetSolutionsHistorical", {
 test_that("DexGetStatssHistorical", {
   # tests for DexGetStatssHistorical
   # base path: https://onchain.coinapi.io
-  # Statss (historical) 🔥
+  # Statss (historical)
   # Gets statss.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -129,7 +129,7 @@ test_that("DexGetStatssHistorical", {
 test_that("DexGetTokensHistorical", {
   # tests for DexGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -148,7 +148,7 @@ test_that("DexGetTokensHistorical", {
 test_that("DexGetTradesHistorical", {
   # tests for DexGetTradesHistorical
   # base path: https://onchain.coinapi.io
-  # Trades (historical) 🔥
+  # Trades (historical)
   # Gets trades.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -166,7 +166,7 @@ test_that("DexGetTradesHistorical", {
 test_that("DexGetUsersHistorical", {
   # tests for DexGetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -182,7 +182,7 @@ test_that("DexGetUsersHistorical", {
 test_that("DexGetWithdrawRequestsHistorical", {
   # tests for DexGetWithdrawRequestsHistorical
   # base path: https://onchain.coinapi.io
-  # WithdrawRequests (historical) 🔥
+  # WithdrawRequests (historical)
   # Gets withdrawRequests.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -199,7 +199,7 @@ test_that("DexGetWithdrawRequestsHistorical", {
 test_that("DexGetWithdrawsHistorical", {
   # tests for DexGetWithdrawsHistorical
   # base path: https://onchain.coinapi.io
-  # Withdraws (historical) 🔥
+  # Withdraws (historical)
   # Gets withdraws.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

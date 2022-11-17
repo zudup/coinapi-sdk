@@ -169,7 +169,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * Gets bundles.
      */
@@ -219,7 +219,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * Gets burns.
      */
@@ -270,7 +270,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      *
      * Gets dayDatas.
      */
@@ -320,7 +320,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * Gets factorys.
      */
@@ -370,7 +370,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      *
      * Gets hourDatas.
      */
@@ -420,7 +420,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      *
      * Gets liquidityPositionSnapshots.
      */
@@ -472,7 +472,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      *
      * Gets liquidityPositions.
      */
@@ -524,7 +524,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * Gets mints.
      */
@@ -575,7 +575,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      *
      * Gets pairDayDatas.
      */
@@ -628,7 +628,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      *
      * Gets pairHourDatas.
      */
@@ -679,7 +679,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      *
      * Gets pairs.
      */
@@ -732,7 +732,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * Gets swaps.
      */
@@ -783,7 +783,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      *
      * Gets tokenDayDatas.
      */
@@ -833,7 +833,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      */
@@ -885,7 +885,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * Gets transactions.
      */
@@ -935,7 +935,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      */

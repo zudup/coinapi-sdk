@@ -139,7 +139,7 @@ bool sushiswapFactorys (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Bundles (historical) 🔥. *Synchronous*
+/*! \brief Bundles (historical). *Synchronous*
  *
  * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -156,7 +156,7 @@ bool sushiswapGetBundles (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.BundleDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Bundles (historical) 🔥. *Asynchronous*
+/*! \brief Bundles (historical). *Asynchronous*
  *
  * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -174,7 +174,7 @@ bool sushiswapGetBundles (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Burns (historical) 🔥. *Synchronous*
+/*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -192,7 +192,7 @@ bool sushiswapGetBurns (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.BurnDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Burns (historical) 🔥. *Asynchronous*
+/*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -211,7 +211,7 @@ bool sushiswapGetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief DayDatas (historical) 🔥. *Synchronous*
+/*! \brief DayDatas (historical). *Synchronous*
  *
  * Gets dayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -228,7 +228,7 @@ bool sushiswapGetDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief DayDatas (historical) 🔥. *Asynchronous*
+/*! \brief DayDatas (historical). *Asynchronous*
  *
  * Gets dayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -246,7 +246,7 @@ bool sushiswapGetDayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Factorys (historical) 🔥. *Synchronous*
+/*! \brief Factorys (historical). *Synchronous*
  *
  * Gets factorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -263,7 +263,7 @@ bool sushiswapGetFactorys (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Factorys (historical) 🔥. *Asynchronous*
+/*! \brief Factorys (historical). *Asynchronous*
  *
  * Gets factorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -281,7 +281,7 @@ bool sushiswapGetFactorys (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief HourDatas (historical) 🔥. *Synchronous*
+/*! \brief HourDatas (historical). *Synchronous*
  *
  * Gets hourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -298,7 +298,7 @@ bool sushiswapGetHourDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief HourDatas (historical) 🔥. *Asynchronous*
+/*! \brief HourDatas (historical). *Asynchronous*
  *
  * Gets hourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -316,7 +316,7 @@ bool sushiswapGetHourDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief LiquidityPositionSnapshots (historical) 🔥. *Synchronous*
+/*! \brief LiquidityPositionSnapshots (historical). *Synchronous*
  *
  * Gets liquidityPositionSnapshots.
  * \param startBlock 
@@ -335,7 +335,7 @@ bool sushiswapGetLiquidityPositionSnapshots (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.LiquidityPositionSnapshotDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief LiquidityPositionSnapshots (historical) 🔥. *Asynchronous*
+/*! \brief LiquidityPositionSnapshots (historical). *Asynchronous*
  *
  * Gets liquidityPositionSnapshots.
  * \param startBlock 
@@ -355,7 +355,7 @@ bool sushiswapGetLiquidityPositionSnapshots (historical)Async(char * accessToken
 	, void* userData);
 
 
-/*! \brief LiquidityPositions (historical) 🔥. *Synchronous*
+/*! \brief LiquidityPositions (historical). *Synchronous*
  *
  * Gets liquidityPositions.
  * \param startBlock 
@@ -374,7 +374,7 @@ bool sushiswapGetLiquidityPositions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.LiquidityPositionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief LiquidityPositions (historical) 🔥. *Asynchronous*
+/*! \brief LiquidityPositions (historical). *Asynchronous*
  *
  * Gets liquidityPositions.
  * \param startBlock 
@@ -394,7 +394,7 @@ bool sushiswapGetLiquidityPositions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Mints (historical) 🔥. *Synchronous*
+/*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -412,7 +412,7 @@ bool sushiswapGetMints (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.MintDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Mints (historical) 🔥. *Asynchronous*
+/*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -431,7 +431,7 @@ bool sushiswapGetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PairDayDatas (historical) 🔥. *Synchronous*
+/*! \brief PairDayDatas (historical). *Synchronous*
  *
  * Gets pairDayDatas.
  * \param startBlock 
@@ -451,7 +451,7 @@ bool sushiswapGetPairDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairDayDatas (historical) 🔥. *Asynchronous*
+/*! \brief PairDayDatas (historical). *Asynchronous*
  *
  * Gets pairDayDatas.
  * \param startBlock 
@@ -472,7 +472,7 @@ bool sushiswapGetPairDayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PairHourDatas (historical) 🔥. *Synchronous*
+/*! \brief PairHourDatas (historical). *Synchronous*
  *
  * Gets pairHourDatas.
  * \param startBlock 
@@ -490,7 +490,7 @@ bool sushiswapGetPairHourDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairHourDatas (historical) 🔥. *Asynchronous*
+/*! \brief PairHourDatas (historical). *Asynchronous*
  *
  * Gets pairHourDatas.
  * \param startBlock 
@@ -509,7 +509,7 @@ bool sushiswapGetPairHourDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Pairs (historical) 🔥. *Synchronous*
+/*! \brief Pairs (historical). *Synchronous*
  *
  * Gets pairs.
  * \param startBlock 
@@ -529,7 +529,7 @@ bool sushiswapGetPairs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Pairs (historical) 🔥. *Asynchronous*
+/*! \brief Pairs (historical). *Asynchronous*
  *
  * Gets pairs.
  * \param startBlock 
@@ -550,7 +550,7 @@ bool sushiswapGetPairs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Swaps (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical). *Synchronous*
  *
  * Gets swaps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -568,7 +568,7 @@ bool sushiswapGetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Swaps (historical) 🔥. *Asynchronous*
+/*! \brief Swaps (historical). *Asynchronous*
  *
  * Gets swaps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -587,7 +587,7 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TokenDayDatas (historical) 🔥. *Synchronous*
+/*! \brief TokenDayDatas (historical). *Synchronous*
  *
  * Gets tokenDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -604,7 +604,7 @@ bool sushiswapGetTokenDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenDayDatas (historical) 🔥. *Asynchronous*
+/*! \brief TokenDayDatas (historical). *Asynchronous*
  *
  * Gets tokenDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -622,7 +622,7 @@ bool sushiswapGetTokenDayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Tokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical). *Synchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -641,7 +641,7 @@ bool sushiswapGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Tokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical). *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -661,7 +661,7 @@ bool sushiswapGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Transactions (historical) 🔥. *Synchronous*
+/*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -678,7 +678,7 @@ bool sushiswapGetTransactions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TransactionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Transactions (historical) 🔥. *Asynchronous*
+/*! \brief Transactions (historical). *Asynchronous*
  *
  * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -696,7 +696,7 @@ bool sushiswapGetTransactions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Users (historical) 🔥. *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -713,7 +713,7 @@ bool sushiswapGetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Users (historical) 🔥. *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

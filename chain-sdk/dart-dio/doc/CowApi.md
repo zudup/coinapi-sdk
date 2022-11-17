@@ -9,11 +9,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cowGetOrdersHistorical**](CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | Orders (historical) 🔥
-[**cowGetSettlementsHistorical**](CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) 🔥
-[**cowGetTokensHistorical**](CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-[**cowGetTradesHistorical**](CowApi.md#cowgettradeshistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
-[**cowGetUsersHistorical**](CowApi.md#cowgetusershistorical) | **GET** /dapps/cow/users/historical | Users (historical) 🔥
+[**cowGetOrdersHistorical**](CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
+[**cowGetTradesHistorical**](CowApi.md#cowgettradeshistorical) | **GET** /dapps/cow/trades/historical | Trades (historical)
+[**cowGetUsersHistorical**](CowApi.md#cowgetusershistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 [**cowOrdersCurrent**](CowApi.md#coworderscurrent) | **GET** /dapps/cow/orders/current | Orders (current)
 [**cowSettlementsCurrent**](CowApi.md#cowsettlementscurrent) | **GET** /dapps/cow/settlements/current | Settlements (current)
 [**cowTokensCurrent**](CowApi.md#cowtokenscurrent) | **GET** /dapps/cow/tokens/current | Tokens (current)
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 # **cowGetOrdersHistorical**
 > BuiltList<CowOrderDTO> cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -75,7 +75,7 @@ No authorization required
 # **cowGetSettlementsHistorical**
 > BuiltList<CowSettlementDTO> cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Settlements (historical) 🔥
+Settlements (historical)
 
 Gets settlements.
 
@@ -126,7 +126,7 @@ No authorization required
 # **cowGetTokensHistorical**
 > BuiltList<CowTokenDTO> cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -183,7 +183,7 @@ No authorization required
 # **cowGetTradesHistorical**
 > BuiltList<CowTradeDTO> cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -238,7 +238,7 @@ No authorization required
 # **cowGetUsersHistorical**
 > BuiltList<CowUserDTO> cowGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 

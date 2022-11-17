@@ -123,7 +123,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetBundlesHistorical
      *
-     * Bundles (historical) 🔥.
+     * Bundles (historical).
      *
      */
     public function testSushiswapGetBundlesHistorical()
@@ -135,7 +135,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetBurnsHistorical
      *
-     * Burns (historical) 🔥.
+     * Burns (historical).
      *
      */
     public function testSushiswapGetBurnsHistorical()
@@ -147,7 +147,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetDayDatasHistorical
      *
-     * DayDatas (historical) 🔥.
+     * DayDatas (historical).
      *
      */
     public function testSushiswapGetDayDatasHistorical()
@@ -159,7 +159,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetFactorysHistorical
      *
-     * Factorys (historical) 🔥.
+     * Factorys (historical).
      *
      */
     public function testSushiswapGetFactorysHistorical()
@@ -171,7 +171,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetHourDatasHistorical
      *
-     * HourDatas (historical) 🔥.
+     * HourDatas (historical).
      *
      */
     public function testSushiswapGetHourDatasHistorical()
@@ -183,7 +183,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetLiquidityPositionSnapshotsHistorical
      *
-     * LiquidityPositionSnapshots (historical) 🔥.
+     * LiquidityPositionSnapshots (historical).
      *
      */
     public function testSushiswapGetLiquidityPositionSnapshotsHistorical()
@@ -195,7 +195,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetLiquidityPositionsHistorical
      *
-     * LiquidityPositions (historical) 🔥.
+     * LiquidityPositions (historical).
      *
      */
     public function testSushiswapGetLiquidityPositionsHistorical()
@@ -207,7 +207,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetMintsHistorical
      *
-     * Mints (historical) 🔥.
+     * Mints (historical).
      *
      */
     public function testSushiswapGetMintsHistorical()
@@ -219,7 +219,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPairDayDatasHistorical
      *
-     * PairDayDatas (historical) 🔥.
+     * PairDayDatas (historical).
      *
      */
     public function testSushiswapGetPairDayDatasHistorical()
@@ -231,7 +231,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPairHourDatasHistorical
      *
-     * PairHourDatas (historical) 🔥.
+     * PairHourDatas (historical).
      *
      */
     public function testSushiswapGetPairHourDatasHistorical()
@@ -243,7 +243,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPairsHistorical
      *
-     * Pairs (historical) 🔥.
+     * Pairs (historical).
      *
      */
     public function testSushiswapGetPairsHistorical()
@@ -255,7 +255,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsHistorical
      *
-     * Swaps (historical) 🔥.
+     * Swaps (historical).
      *
      */
     public function testSushiswapGetSwapsHistorical()
@@ -267,7 +267,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokenDayDatasHistorical
      *
-     * TokenDayDatas (historical) 🔥.
+     * TokenDayDatas (historical).
      *
      */
     public function testSushiswapGetTokenDayDatasHistorical()
@@ -279,7 +279,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensHistorical
      *
-     * Tokens (historical) 🔥.
+     * Tokens (historical).
      *
      */
     public function testSushiswapGetTokensHistorical()
@@ -291,7 +291,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTransactionsHistorical
      *
-     * Transactions (historical) 🔥.
+     * Transactions (historical).
      *
      */
     public function testSushiswapGetTransactionsHistorical()
@@ -303,7 +303,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetUsersHistorical
      *
-     * Users (historical) 🔥.
+     * Users (historical).
      *
      */
     public function testSushiswapGetUsersHistorical()

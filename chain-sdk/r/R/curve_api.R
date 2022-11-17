@@ -319,7 +319,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAccountsHistorical } \emph{ Accounts (historical) 🔥 }
+#' \strong{ CurveGetAccountsHistorical } \emph{ Accounts (historical) }
 #' Gets accounts.
 #'
 #' \itemize{
@@ -341,7 +341,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAddLiquidityEventsHistorical } \emph{ AddLiquidityEvents (historical) 🔥 }
+#' \strong{ CurveGetAddLiquidityEventsHistorical } \emph{ AddLiquidityEvents (historical) }
 #' Gets addLiquidityEvents.
 #'
 #' \itemize{
@@ -363,7 +363,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAdminFeeChangeLogsHistorical } \emph{ AdminFeeChangeLogs (historical) 🔥 }
+#' \strong{ CurveGetAdminFeeChangeLogsHistorical } \emph{ AdminFeeChangeLogs (historical) }
 #' Gets adminFeeChangeLogs.
 #'
 #' \itemize{
@@ -385,7 +385,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAmplificationCoeffChangeLogsHistorical } \emph{ AmplificationCoeffChangeLogs (historical) 🔥 }
+#' \strong{ CurveGetAmplificationCoeffChangeLogsHistorical } \emph{ AmplificationCoeffChangeLogs (historical) }
 #' Gets amplificationCoeffChangeLogs.
 #'
 #' \itemize{
@@ -407,7 +407,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetCoinsHistorical } \emph{ Coins (historical) 🔥 }
+#' \strong{ CurveGetCoinsHistorical } \emph{ Coins (historical) }
 #' Gets coins.
 #'
 #' \itemize{
@@ -429,7 +429,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetContractVersionsHistorical } \emph{ ContractVersions (historical) 🔥 }
+#' \strong{ CurveGetContractVersionsHistorical } \emph{ ContractVersions (historical) }
 #' Gets contractVersions.
 #'
 #' \itemize{
@@ -451,7 +451,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetContractsHistorical } \emph{ Contracts (historical) 🔥 }
+#' \strong{ CurveGetContractsHistorical } \emph{ Contracts (historical) }
 #' Gets contracts.
 #'
 #' \itemize{
@@ -472,7 +472,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetDailyVolumesHistorical } \emph{ DailyVolumes (historical) 🔥 }
+#' \strong{ CurveGetDailyVolumesHistorical } \emph{ DailyVolumes (historical) }
 #' Gets dailyVolumes.
 #'
 #' \itemize{
@@ -494,7 +494,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetExchangesHistorical } \emph{ Exchanges (historical) 🔥 }
+#' \strong{ CurveGetExchangesHistorical } \emph{ Exchanges (historical) }
 #' Gets exchanges.
 #'
 #' \itemize{
@@ -516,7 +516,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetFeeChangeLogsHistorical } \emph{ FeeChangeLogs (historical) 🔥 }
+#' \strong{ CurveGetFeeChangeLogsHistorical } \emph{ FeeChangeLogs (historical) }
 #' Gets feeChangeLogs.
 #'
 #' \itemize{
@@ -538,7 +538,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeDepositsHistorical } \emph{ GaugeDeposits (historical) 🔥 }
+#' \strong{ CurveGetGaugeDepositsHistorical } \emph{ GaugeDeposits (historical) }
 #' Gets gaugeDeposits.
 #'
 #' \itemize{
@@ -559,7 +559,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeLiquiditysHistorical } \emph{ GaugeLiquiditys (historical) 🔥 }
+#' \strong{ CurveGetGaugeLiquiditysHistorical } \emph{ GaugeLiquiditys (historical) }
 #' Gets gaugeLiquiditys.
 #'
 #' \itemize{
@@ -581,7 +581,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeTotalWeightsHistorical } \emph{ GaugeTotalWeights (historical) 🔥 }
+#' \strong{ CurveGetGaugeTotalWeightsHistorical } \emph{ GaugeTotalWeights (historical) }
 #' Gets gaugeTotalWeights.
 #'
 #' \itemize{
@@ -602,7 +602,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeTypeWeightsHistorical } \emph{ GaugeTypeWeights (historical) 🔥 }
+#' \strong{ CurveGetGaugeTypeWeightsHistorical } \emph{ GaugeTypeWeights (historical) }
 #' Gets gaugeTypeWeights.
 #'
 #' \itemize{
@@ -623,7 +623,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeTypesHistorical } \emph{ GaugeTypes (historical) 🔥 }
+#' \strong{ CurveGetGaugeTypesHistorical } \emph{ GaugeTypes (historical) }
 #' Gets gaugeTypes.
 #'
 #' \itemize{
@@ -645,7 +645,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeWeightVotesHistorical } \emph{ GaugeWeightVotes (historical) 🔥 }
+#' \strong{ CurveGetGaugeWeightVotesHistorical } \emph{ GaugeWeightVotes (historical) }
 #' Gets gaugeWeightVotes.
 #'
 #' \itemize{
@@ -667,7 +667,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeWeightsHistorical } \emph{ GaugeWeights (historical) 🔥 }
+#' \strong{ CurveGetGaugeWeightsHistorical } \emph{ GaugeWeights (historical) }
 #' Gets gaugeWeights.
 #'
 #' \itemize{
@@ -688,7 +688,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeWithdrawsHistorical } \emph{ GaugeWithdraws (historical) 🔥 }
+#' \strong{ CurveGetGaugeWithdrawsHistorical } \emph{ GaugeWithdraws (historical) }
 #' Gets gaugeWithdraws.
 #'
 #' \itemize{
@@ -709,7 +709,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesHistorical } \emph{ Gauges (historical) 🔥 }
+#' \strong{ CurveGetGaugesHistorical } \emph{ Gauges (historical) }
 #' Gets gauges.
 #'
 #' \itemize{
@@ -732,7 +732,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetHourlyVolumesHistorical } \emph{ HourlyVolumes (historical) 🔥 }
+#' \strong{ CurveGetHourlyVolumesHistorical } \emph{ HourlyVolumes (historical) }
 #' Gets hourlyVolumes.
 #'
 #' \itemize{
@@ -754,7 +754,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetLpTokensHistorical } \emph{ LpTokens (historical) 🔥 }
+#' \strong{ CurveGetLpTokensHistorical } \emph{ LpTokens (historical) }
 #' Gets lpTokens.
 #'
 #' \itemize{
@@ -779,7 +779,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetPoolsHistorical } \emph{ Pools (historical) 🔥 }
+#' \strong{ CurveGetPoolsHistorical } \emph{ Pools (historical) }
 #' Gets pools.
 #'
 #' \itemize{
@@ -801,7 +801,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetProposalVotesHistorical } \emph{ ProposalVotes (historical) 🔥 }
+#' \strong{ CurveGetProposalVotesHistorical } \emph{ ProposalVotes (historical) }
 #' Gets proposalVotes.
 #'
 #' \itemize{
@@ -822,7 +822,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetProposalsHistorical } \emph{ Proposals (historical) 🔥 }
+#' \strong{ CurveGetProposalsHistorical } \emph{ Proposals (historical) }
 #' Gets proposals.
 #'
 #' \itemize{
@@ -843,7 +843,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetRemoveLiquidityEventsHistorical } \emph{ RemoveLiquidityEvents (historical) 🔥 }
+#' \strong{ CurveGetRemoveLiquidityEventsHistorical } \emph{ RemoveLiquidityEvents (historical) }
 #' Gets removeLiquidityEvents.
 #'
 #' \itemize{
@@ -865,7 +865,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetRemoveLiquidityOneEventsHistorical } \emph{ RemoveLiquidityOneEvents (historical) 🔥 }
+#' \strong{ CurveGetRemoveLiquidityOneEventsHistorical } \emph{ RemoveLiquidityOneEvents (historical) }
 #' Gets removeLiquidityOneEvents.
 #'
 #' \itemize{
@@ -887,7 +887,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetSystemStatesHistorical } \emph{ SystemStates (historical) 🔥 }
+#' \strong{ CurveGetSystemStatesHistorical } \emph{ SystemStates (historical) }
 #' Gets systemStates.
 #'
 #' \itemize{
@@ -908,7 +908,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
+#' \strong{ CurveGetTokensHistorical } \emph{ Tokens (historical) }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -932,7 +932,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetTransferOwnershipEventsHistorical } \emph{ TransferOwnershipEvents (historical) 🔥 }
+#' \strong{ CurveGetTransferOwnershipEventsHistorical } \emph{ TransferOwnershipEvents (historical) }
 #' Gets transferOwnershipEvents.
 #'
 #' \itemize{
@@ -954,7 +954,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetUnderlyingCoinsHistorical } \emph{ UnderlyingCoins (historical) 🔥 }
+#' \strong{ CurveGetUnderlyingCoinsHistorical } \emph{ UnderlyingCoins (historical) }
 #' Gets underlyingCoins.
 #'
 #' \itemize{
@@ -976,7 +976,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetVotingAppsHistorical } \emph{ VotingApps (historical) 🔥 }
+#' \strong{ CurveGetVotingAppsHistorical } \emph{ VotingApps (historical) }
 #' Gets votingApps.
 #'
 #' \itemize{
@@ -998,7 +998,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetWeeklyVolumesHistorical } \emph{ WeeklyVolumes (historical) 🔥 }
+#' \strong{ CurveGetWeeklyVolumesHistorical } \emph{ WeeklyVolumes (historical) }
 #' Gets weeklyVolumes.
 #'
 #' \itemize{
@@ -1492,7 +1492,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_address <- "address_example" # character |  (Optional)
 #'
-#' #Accounts (historical) 🔥
+#' #Accounts (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1511,7 +1511,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #AddLiquidityEvents (historical) 🔥
+#' #AddLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1530,7 +1530,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #AdminFeeChangeLogs (historical) 🔥
+#' #AdminFeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1549,7 +1549,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #AmplificationCoeffChangeLogs (historical) 🔥
+#' #AmplificationCoeffChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1568,7 +1568,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #Coins (historical) 🔥
+#' #Coins (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1587,7 +1587,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_address <- "address_example" # character |  (Optional)
 #'
-#' #ContractVersions (historical) 🔥
+#' #ContractVersions (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1605,7 +1605,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Contracts (historical) 🔥
+#' #Contracts (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1624,7 +1624,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #DailyVolumes (historical) 🔥
+#' #DailyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1643,7 +1643,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #Exchanges (historical) 🔥
+#' #Exchanges (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1662,7 +1662,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #FeeChangeLogs (historical) 🔥
+#' #FeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1680,7 +1680,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #GaugeDeposits (historical) 🔥
+#' #GaugeDeposits (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1699,7 +1699,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #GaugeLiquiditys (historical) 🔥
+#' #GaugeLiquiditys (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1717,7 +1717,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #GaugeTotalWeights (historical) 🔥
+#' #GaugeTotalWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1735,7 +1735,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #GaugeTypeWeights (historical) 🔥
+#' #GaugeTypeWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1754,7 +1754,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_name <- "name_example" # character |  (Optional)
 #'
-#' #GaugeTypes (historical) 🔥
+#' #GaugeTypes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1773,7 +1773,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #GaugeWeightVotes (historical) 🔥
+#' #GaugeWeightVotes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1791,7 +1791,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #GaugeWeights (historical) 🔥
+#' #GaugeWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1809,7 +1809,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #GaugeWithdraws (historical) 🔥
+#' #GaugeWithdraws (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1829,7 +1829,7 @@
 #' var_address <- "address_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #Gauges (historical) 🔥
+#' #Gauges (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1848,7 +1848,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #HourlyVolumes (historical) 🔥
+#' #HourlyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1870,7 +1870,7 @@
 #' var_symbol <- "symbol_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #LpTokens (historical) 🔥
+#' #LpTokens (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1889,7 +1889,7 @@
 #' var_id <- "id_example" # character | Pool address. (Optional)
 #' var_name <- "name_example" # character | Pool's human-readable name. (Optional)
 #'
-#' #Pools (historical) 🔥
+#' #Pools (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1907,7 +1907,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #ProposalVotes (historical) 🔥
+#' #ProposalVotes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1925,7 +1925,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Proposals (historical) 🔥
+#' #Proposals (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1944,7 +1944,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #RemoveLiquidityEvents (historical) 🔥
+#' #RemoveLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1963,7 +1963,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #RemoveLiquidityOneEvents (historical) 🔥
+#' #RemoveLiquidityOneEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1981,7 +1981,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Singleton ID, equals to 'current'. (Optional)
 #'
-#' #SystemStates (historical) 🔥
+#' #SystemStates (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -2002,7 +2002,7 @@
 #' var_name <- "name_example" # character |  (Optional)
 #' var_symbol <- "symbol_example" # character |  (Optional)
 #'
-#' #Tokens (historical) 🔥
+#' #Tokens (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -2021,7 +2021,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #TransferOwnershipEvents (historical) 🔥
+#' #TransferOwnershipEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -2040,7 +2040,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #UnderlyingCoins (historical) 🔥
+#' #UnderlyingCoins (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -2059,7 +2059,7 @@
 #' var_id <- "id_example" # character | App address. (Optional)
 #' var_address <- "address_example" # character |  (Optional)
 #'
-#' #VotingApps (historical) 🔥
+#' #VotingApps (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -2078,7 +2078,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
-#' #WeeklyVolumes (historical) 🔥
+#' #WeeklyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -3918,10 +3918,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Accounts (historical) 🔥
+    #' Accounts (historical)
     #'
     #' @description
-    #' Accounts (historical) 🔥
+    #' Accounts (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3945,10 +3945,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Accounts (historical) 🔥
+    #' Accounts (historical)
     #'
     #' @description
-    #' Accounts (historical) 🔥
+    #' Accounts (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4034,10 +4034,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' AddLiquidityEvents (historical) 🔥
+    #' AddLiquidityEvents (historical)
     #'
     #' @description
-    #' AddLiquidityEvents (historical) 🔥
+    #' AddLiquidityEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4061,10 +4061,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' AddLiquidityEvents (historical) 🔥
+    #' AddLiquidityEvents (historical)
     #'
     #' @description
-    #' AddLiquidityEvents (historical) 🔥
+    #' AddLiquidityEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4150,10 +4150,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' AdminFeeChangeLogs (historical) 🔥
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' AdminFeeChangeLogs (historical) 🔥
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4177,10 +4177,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' AdminFeeChangeLogs (historical) 🔥
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' AdminFeeChangeLogs (historical) 🔥
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4266,10 +4266,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' AmplificationCoeffChangeLogs (historical) 🔥
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' AmplificationCoeffChangeLogs (historical) 🔥
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4293,10 +4293,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' AmplificationCoeffChangeLogs (historical) 🔥
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' AmplificationCoeffChangeLogs (historical) 🔥
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4382,10 +4382,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Coins (historical) 🔥
+    #' Coins (historical)
     #'
     #' @description
-    #' Coins (historical) 🔥
+    #' Coins (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -4409,10 +4409,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Coins (historical) 🔥
+    #' Coins (historical)
     #'
     #' @description
-    #' Coins (historical) 🔥
+    #' Coins (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -4498,10 +4498,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' ContractVersions (historical) 🔥
+    #' ContractVersions (historical)
     #'
     #' @description
-    #' ContractVersions (historical) 🔥
+    #' ContractVersions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4525,10 +4525,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' ContractVersions (historical) 🔥
+    #' ContractVersions (historical)
     #'
     #' @description
-    #' ContractVersions (historical) 🔥
+    #' ContractVersions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4614,10 +4614,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Contracts (historical) 🔥
+    #' Contracts (historical)
     #'
     #' @description
-    #' Contracts (historical) 🔥
+    #' Contracts (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4640,10 +4640,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Contracts (historical) 🔥
+    #' Contracts (historical)
     #'
     #' @description
-    #' Contracts (historical) 🔥
+    #' Contracts (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4725,10 +4725,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' DailyVolumes (historical) 🔥
+    #' DailyVolumes (historical)
     #'
     #' @description
-    #' DailyVolumes (historical) 🔥
+    #' DailyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4752,10 +4752,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' DailyVolumes (historical) 🔥
+    #' DailyVolumes (historical)
     #'
     #' @description
-    #' DailyVolumes (historical) 🔥
+    #' DailyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4841,10 +4841,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Exchanges (historical) 🔥
+    #' Exchanges (historical)
     #'
     #' @description
-    #' Exchanges (historical) 🔥
+    #' Exchanges (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4868,10 +4868,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Exchanges (historical) 🔥
+    #' Exchanges (historical)
     #'
     #' @description
-    #' Exchanges (historical) 🔥
+    #' Exchanges (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4957,10 +4957,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' FeeChangeLogs (historical) 🔥
+    #' FeeChangeLogs (historical)
     #'
     #' @description
-    #' FeeChangeLogs (historical) 🔥
+    #' FeeChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4984,10 +4984,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' FeeChangeLogs (historical) 🔥
+    #' FeeChangeLogs (historical)
     #'
     #' @description
-    #' FeeChangeLogs (historical) 🔥
+    #' FeeChangeLogs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5073,10 +5073,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeDeposits (historical) 🔥
+    #' GaugeDeposits (historical)
     #'
     #' @description
-    #' GaugeDeposits (historical) 🔥
+    #' GaugeDeposits (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5099,10 +5099,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeDeposits (historical) 🔥
+    #' GaugeDeposits (historical)
     #'
     #' @description
-    #' GaugeDeposits (historical) 🔥
+    #' GaugeDeposits (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5184,10 +5184,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeLiquiditys (historical) 🔥
+    #' GaugeLiquiditys (historical)
     #'
     #' @description
-    #' GaugeLiquiditys (historical) 🔥
+    #' GaugeLiquiditys (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5211,10 +5211,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeLiquiditys (historical) 🔥
+    #' GaugeLiquiditys (historical)
     #'
     #' @description
-    #' GaugeLiquiditys (historical) 🔥
+    #' GaugeLiquiditys (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5300,10 +5300,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeTotalWeights (historical) 🔥
+    #' GaugeTotalWeights (historical)
     #'
     #' @description
-    #' GaugeTotalWeights (historical) 🔥
+    #' GaugeTotalWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5326,10 +5326,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeTotalWeights (historical) 🔥
+    #' GaugeTotalWeights (historical)
     #'
     #' @description
-    #' GaugeTotalWeights (historical) 🔥
+    #' GaugeTotalWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5411,10 +5411,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeTypeWeights (historical) 🔥
+    #' GaugeTypeWeights (historical)
     #'
     #' @description
-    #' GaugeTypeWeights (historical) 🔥
+    #' GaugeTypeWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5437,10 +5437,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeTypeWeights (historical) 🔥
+    #' GaugeTypeWeights (historical)
     #'
     #' @description
-    #' GaugeTypeWeights (historical) 🔥
+    #' GaugeTypeWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5522,10 +5522,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeTypes (historical) 🔥
+    #' GaugeTypes (historical)
     #'
     #' @description
-    #' GaugeTypes (historical) 🔥
+    #' GaugeTypes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5549,10 +5549,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeTypes (historical) 🔥
+    #' GaugeTypes (historical)
     #'
     #' @description
-    #' GaugeTypes (historical) 🔥
+    #' GaugeTypes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5638,10 +5638,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeWeightVotes (historical) 🔥
+    #' GaugeWeightVotes (historical)
     #'
     #' @description
-    #' GaugeWeightVotes (historical) 🔥
+    #' GaugeWeightVotes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5665,10 +5665,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeWeightVotes (historical) 🔥
+    #' GaugeWeightVotes (historical)
     #'
     #' @description
-    #' GaugeWeightVotes (historical) 🔥
+    #' GaugeWeightVotes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5754,10 +5754,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeWeights (historical) 🔥
+    #' GaugeWeights (historical)
     #'
     #' @description
-    #' GaugeWeights (historical) 🔥
+    #' GaugeWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5780,10 +5780,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeWeights (historical) 🔥
+    #' GaugeWeights (historical)
     #'
     #' @description
-    #' GaugeWeights (historical) 🔥
+    #' GaugeWeights (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5865,10 +5865,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeWithdraws (historical) 🔥
+    #' GaugeWithdraws (historical)
     #'
     #' @description
-    #' GaugeWithdraws (historical) 🔥
+    #' GaugeWithdraws (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5891,10 +5891,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeWithdraws (historical) 🔥
+    #' GaugeWithdraws (historical)
     #'
     #' @description
-    #' GaugeWithdraws (historical) 🔥
+    #' GaugeWithdraws (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5976,10 +5976,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Gauges (historical) 🔥
+    #' Gauges (historical)
     #'
     #' @description
-    #' Gauges (historical) 🔥
+    #' Gauges (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6004,10 +6004,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Gauges (historical) 🔥
+    #' Gauges (historical)
     #'
     #' @description
-    #' Gauges (historical) 🔥
+    #' Gauges (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6097,10 +6097,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' HourlyVolumes (historical) 🔥
+    #' HourlyVolumes (historical)
     #'
     #' @description
-    #' HourlyVolumes (historical) 🔥
+    #' HourlyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6124,10 +6124,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' HourlyVolumes (historical) 🔥
+    #' HourlyVolumes (historical)
     #'
     #' @description
-    #' HourlyVolumes (historical) 🔥
+    #' HourlyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6213,10 +6213,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' LpTokens (historical) 🔥
+    #' LpTokens (historical)
     #'
     #' @description
-    #' LpTokens (historical) 🔥
+    #' LpTokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6243,10 +6243,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' LpTokens (historical) 🔥
+    #' LpTokens (historical)
     #'
     #' @description
-    #' LpTokens (historical) 🔥
+    #' LpTokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6344,10 +6344,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Pools (historical) 🔥
+    #' Pools (historical)
     #'
     #' @description
-    #' Pools (historical) 🔥
+    #' Pools (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6371,10 +6371,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Pools (historical) 🔥
+    #' Pools (historical)
     #'
     #' @description
-    #' Pools (historical) 🔥
+    #' Pools (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6460,10 +6460,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' ProposalVotes (historical) 🔥
+    #' ProposalVotes (historical)
     #'
     #' @description
-    #' ProposalVotes (historical) 🔥
+    #' ProposalVotes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6486,10 +6486,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' ProposalVotes (historical) 🔥
+    #' ProposalVotes (historical)
     #'
     #' @description
-    #' ProposalVotes (historical) 🔥
+    #' ProposalVotes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6571,10 +6571,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Proposals (historical) 🔥
+    #' Proposals (historical)
     #'
     #' @description
-    #' Proposals (historical) 🔥
+    #' Proposals (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6597,10 +6597,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Proposals (historical) 🔥
+    #' Proposals (historical)
     #'
     #' @description
-    #' Proposals (historical) 🔥
+    #' Proposals (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6682,10 +6682,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' RemoveLiquidityEvents (historical) 🔥
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' RemoveLiquidityEvents (historical) 🔥
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6709,10 +6709,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' RemoveLiquidityEvents (historical) 🔥
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' RemoveLiquidityEvents (historical) 🔥
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6798,10 +6798,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' RemoveLiquidityOneEvents (historical) 🔥
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' RemoveLiquidityOneEvents (historical) 🔥
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6825,10 +6825,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' RemoveLiquidityOneEvents (historical) 🔥
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' RemoveLiquidityOneEvents (historical) 🔥
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6914,10 +6914,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' SystemStates (historical) 🔥
+    #' SystemStates (historical)
     #'
     #' @description
-    #' SystemStates (historical) 🔥
+    #' SystemStates (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6940,10 +6940,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' SystemStates (historical) 🔥
+    #' SystemStates (historical)
     #'
     #' @description
-    #' SystemStates (historical) 🔥
+    #' SystemStates (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7025,10 +7025,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7054,10 +7054,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7151,10 +7151,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' TransferOwnershipEvents (historical) 🔥
+    #' TransferOwnershipEvents (historical)
     #'
     #' @description
-    #' TransferOwnershipEvents (historical) 🔥
+    #' TransferOwnershipEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7178,10 +7178,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' TransferOwnershipEvents (historical) 🔥
+    #' TransferOwnershipEvents (historical)
     #'
     #' @description
-    #' TransferOwnershipEvents (historical) 🔥
+    #' TransferOwnershipEvents (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7267,10 +7267,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UnderlyingCoins (historical) 🔥
+    #' UnderlyingCoins (historical)
     #'
     #' @description
-    #' UnderlyingCoins (historical) 🔥
+    #' UnderlyingCoins (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -7294,10 +7294,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' UnderlyingCoins (historical) 🔥
+    #' UnderlyingCoins (historical)
     #'
     #' @description
-    #' UnderlyingCoins (historical) 🔥
+    #' UnderlyingCoins (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -7383,10 +7383,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' VotingApps (historical) 🔥
+    #' VotingApps (historical)
     #'
     #' @description
-    #' VotingApps (historical) 🔥
+    #' VotingApps (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7410,10 +7410,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' VotingApps (historical) 🔥
+    #' VotingApps (historical)
     #'
     #' @description
-    #' VotingApps (historical) 🔥
+    #' VotingApps (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7499,10 +7499,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' WeeklyVolumes (historical) 🔥
+    #' WeeklyVolumes (historical)
     #'
     #' @description
-    #' WeeklyVolumes (historical) 🔥
+    #' WeeklyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -7526,10 +7526,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' WeeklyVolumes (historical) 🔥
+    #' WeeklyVolumes (historical)
     #'
     #' @description
-    #' WeeklyVolumes (historical) 🔥
+    #' WeeklyVolumes (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

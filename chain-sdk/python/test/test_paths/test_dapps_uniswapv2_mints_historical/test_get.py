@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2MintsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2MintsHistorical unit test stubs
-        Mints (historical) 🔥  # noqa: E501
+        Mints (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

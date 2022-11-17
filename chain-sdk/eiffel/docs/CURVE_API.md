@@ -23,38 +23,38 @@ Feature | HTTP request | Description
 [**curve_gauge_weights_current**](CURVE_API.md#curve_gauge_weights_current) | **Get** /dapps/curve/gaugeWeights/current | GaugeWeights (current)
 [**curve_gauge_withdraws_current**](CURVE_API.md#curve_gauge_withdraws_current) | **Get** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current)
 [**curve_gauges_current**](CURVE_API.md#curve_gauges_current) | **Get** /dapps/curve/gauges/current | Gauges (current)
-[**curve_get_accounts_historical**](CURVE_API.md#curve_get_accounts_historical) | **Get** /dapps/curve/accounts/historical | Accounts (historical) 🔥
-[**curve_get_add_liquidity_events_historical**](CURVE_API.md#curve_get_add_liquidity_events_historical) | **Get** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥
-[**curve_get_admin_fee_change_logs_historical**](CURVE_API.md#curve_get_admin_fee_change_logs_historical) | **Get** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥
-[**curve_get_amplification_coeff_change_logs_historical**](CURVE_API.md#curve_get_amplification_coeff_change_logs_historical) | **Get** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
-[**curve_get_coins_historical**](CURVE_API.md#curve_get_coins_historical) | **Get** /dapps/curve/coins/historical | Coins (historical) 🔥
-[**curve_get_contract_versions_historical**](CURVE_API.md#curve_get_contract_versions_historical) | **Get** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥
-[**curve_get_contracts_historical**](CURVE_API.md#curve_get_contracts_historical) | **Get** /dapps/curve/contracts/historical | Contracts (historical) 🔥
-[**curve_get_daily_volumes_historical**](CURVE_API.md#curve_get_daily_volumes_historical) | **Get** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥
-[**curve_get_exchanges_historical**](CURVE_API.md#curve_get_exchanges_historical) | **Get** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
-[**curve_get_fee_change_logs_historical**](CURVE_API.md#curve_get_fee_change_logs_historical) | **Get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥
-[**curve_get_gauge_deposits_historical**](CURVE_API.md#curve_get_gauge_deposits_historical) | **Get** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥
-[**curve_get_gauge_liquiditys_historical**](CURVE_API.md#curve_get_gauge_liquiditys_historical) | **Get** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥
-[**curve_get_gauge_total_weights_historical**](CURVE_API.md#curve_get_gauge_total_weights_historical) | **Get** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥
-[**curve_get_gauge_type_weights_historical**](CURVE_API.md#curve_get_gauge_type_weights_historical) | **Get** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥
-[**curve_get_gauge_types_historical**](CURVE_API.md#curve_get_gauge_types_historical) | **Get** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥
-[**curve_get_gauge_weight_votes_historical**](CURVE_API.md#curve_get_gauge_weight_votes_historical) | **Get** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥
-[**curve_get_gauge_weights_historical**](CURVE_API.md#curve_get_gauge_weights_historical) | **Get** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥
-[**curve_get_gauge_withdraws_historical**](CURVE_API.md#curve_get_gauge_withdraws_historical) | **Get** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥
-[**curve_get_gauges_historical**](CURVE_API.md#curve_get_gauges_historical) | **Get** /dapps/curve/gauges/historical | Gauges (historical) 🔥
-[**curve_get_hourly_volumes_historical**](CURVE_API.md#curve_get_hourly_volumes_historical) | **Get** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥
-[**curve_get_lp_tokens_historical**](CURVE_API.md#curve_get_lp_tokens_historical) | **Get** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥
-[**curve_get_pools_historical**](CURVE_API.md#curve_get_pools_historical) | **Get** /dapps/curve/pools/historical | Pools (historical) 🔥
-[**curve_get_proposal_votes_historical**](CURVE_API.md#curve_get_proposal_votes_historical) | **Get** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥
-[**curve_get_proposals_historical**](CURVE_API.md#curve_get_proposals_historical) | **Get** /dapps/curve/proposals/historical | Proposals (historical) 🔥
-[**curve_get_remove_liquidity_events_historical**](CURVE_API.md#curve_get_remove_liquidity_events_historical) | **Get** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥
-[**curve_get_remove_liquidity_one_events_historical**](CURVE_API.md#curve_get_remove_liquidity_one_events_historical) | **Get** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥
-[**curve_get_system_states_historical**](CURVE_API.md#curve_get_system_states_historical) | **Get** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥
-[**curve_get_tokens_historical**](CURVE_API.md#curve_get_tokens_historical) | **Get** /dapps/curve/tokens/historical | Tokens (historical) 🔥
-[**curve_get_transfer_ownership_events_historical**](CURVE_API.md#curve_get_transfer_ownership_events_historical) | **Get** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥
-[**curve_get_underlying_coins_historical**](CURVE_API.md#curve_get_underlying_coins_historical) | **Get** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥
-[**curve_get_voting_apps_historical**](CURVE_API.md#curve_get_voting_apps_historical) | **Get** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥
-[**curve_get_weekly_volumes_historical**](CURVE_API.md#curve_get_weekly_volumes_historical) | **Get** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥
+[**curve_get_accounts_historical**](CURVE_API.md#curve_get_accounts_historical) | **Get** /dapps/curve/accounts/historical | Accounts (historical)
+[**curve_get_add_liquidity_events_historical**](CURVE_API.md#curve_get_add_liquidity_events_historical) | **Get** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**curve_get_admin_fee_change_logs_historical**](CURVE_API.md#curve_get_admin_fee_change_logs_historical) | **Get** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**curve_get_amplification_coeff_change_logs_historical**](CURVE_API.md#curve_get_amplification_coeff_change_logs_historical) | **Get** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**curve_get_coins_historical**](CURVE_API.md#curve_get_coins_historical) | **Get** /dapps/curve/coins/historical | Coins (historical)
+[**curve_get_contract_versions_historical**](CURVE_API.md#curve_get_contract_versions_historical) | **Get** /dapps/curve/contractVersions/historical | ContractVersions (historical)
+[**curve_get_contracts_historical**](CURVE_API.md#curve_get_contracts_historical) | **Get** /dapps/curve/contracts/historical | Contracts (historical)
+[**curve_get_daily_volumes_historical**](CURVE_API.md#curve_get_daily_volumes_historical) | **Get** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**curve_get_exchanges_historical**](CURVE_API.md#curve_get_exchanges_historical) | **Get** /dapps/curve/exchanges/historical | Exchanges (historical)
+[**curve_get_fee_change_logs_historical**](CURVE_API.md#curve_get_fee_change_logs_historical) | **Get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**curve_get_gauge_deposits_historical**](CURVE_API.md#curve_get_gauge_deposits_historical) | **Get** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
+[**curve_get_gauge_liquiditys_historical**](CURVE_API.md#curve_get_gauge_liquiditys_historical) | **Get** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curve_get_gauge_total_weights_historical**](CURVE_API.md#curve_get_gauge_total_weights_historical) | **Get** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
+[**curve_get_gauge_type_weights_historical**](CURVE_API.md#curve_get_gauge_type_weights_historical) | **Get** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
+[**curve_get_gauge_types_historical**](CURVE_API.md#curve_get_gauge_types_historical) | **Get** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
+[**curve_get_gauge_weight_votes_historical**](CURVE_API.md#curve_get_gauge_weight_votes_historical) | **Get** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical)
+[**curve_get_gauge_weights_historical**](CURVE_API.md#curve_get_gauge_weights_historical) | **Get** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical)
+[**curve_get_gauge_withdraws_historical**](CURVE_API.md#curve_get_gauge_withdraws_historical) | **Get** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical)
+[**curve_get_gauges_historical**](CURVE_API.md#curve_get_gauges_historical) | **Get** /dapps/curve/gauges/historical | Gauges (historical)
+[**curve_get_hourly_volumes_historical**](CURVE_API.md#curve_get_hourly_volumes_historical) | **Get** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**curve_get_lp_tokens_historical**](CURVE_API.md#curve_get_lp_tokens_historical) | **Get** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**curve_get_pools_historical**](CURVE_API.md#curve_get_pools_historical) | **Get** /dapps/curve/pools/historical | Pools (historical)
+[**curve_get_proposal_votes_historical**](CURVE_API.md#curve_get_proposal_votes_historical) | **Get** /dapps/curve/proposalVotes/historical | ProposalVotes (historical)
+[**curve_get_proposals_historical**](CURVE_API.md#curve_get_proposals_historical) | **Get** /dapps/curve/proposals/historical | Proposals (historical)
+[**curve_get_remove_liquidity_events_historical**](CURVE_API.md#curve_get_remove_liquidity_events_historical) | **Get** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**curve_get_remove_liquidity_one_events_historical**](CURVE_API.md#curve_get_remove_liquidity_one_events_historical) | **Get** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**curve_get_system_states_historical**](CURVE_API.md#curve_get_system_states_historical) | **Get** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**curve_get_tokens_historical**](CURVE_API.md#curve_get_tokens_historical) | **Get** /dapps/curve/tokens/historical | Tokens (historical)
+[**curve_get_transfer_ownership_events_historical**](CURVE_API.md#curve_get_transfer_ownership_events_historical) | **Get** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**curve_get_underlying_coins_historical**](CURVE_API.md#curve_get_underlying_coins_historical) | **Get** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**curve_get_voting_apps_historical**](CURVE_API.md#curve_get_voting_apps_historical) | **Get** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**curve_get_weekly_volumes_historical**](CURVE_API.md#curve_get_weekly_volumes_historical) | **Get** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 [**curve_hourly_volumes_current**](CURVE_API.md#curve_hourly_volumes_current) | **Get** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current)
 [**curve_lp_tokens_current**](CURVE_API.md#curve_lp_tokens_current) | **Get** /dapps/curve/lpTokens/current | LpTokens (current)
 [**curve_pools_current**](CURVE_API.md#curve_pools_current) | **Get** /dapps/curve/pools/current | Pools (current)
@@ -590,7 +590,7 @@ No authorization required
 > curve_get_accounts_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ): detachable LIST [CURVE_ACCOUNT_DTO]
 
 
-Accounts (historical) 🔥
+Accounts (historical)
 
 Gets accounts.
 
@@ -625,7 +625,7 @@ No authorization required
 > curve_get_add_liquidity_events_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO]
 
 
-AddLiquidityEvents (historical) 🔥
+AddLiquidityEvents (historical)
 
 Gets addLiquidityEvents.
 
@@ -660,7 +660,7 @@ No authorization required
 > curve_get_admin_fee_change_logs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO]
 
 
-AdminFeeChangeLogs (historical) 🔥
+AdminFeeChangeLogs (historical)
 
 Gets adminFeeChangeLogs.
 
@@ -695,7 +695,7 @@ No authorization required
 > curve_get_amplification_coeff_change_logs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO]
 
 
-AmplificationCoeffChangeLogs (historical) 🔥
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplificationCoeffChangeLogs.
 
@@ -730,7 +730,7 @@ No authorization required
 > curve_get_coins_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_COIN_DTO]
 
 
-Coins (historical) 🔥
+Coins (historical)
 
 Gets coins.
 
@@ -765,7 +765,7 @@ No authorization required
 > curve_get_contract_versions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ): detachable LIST [CURVE_CONTRACT_VERSION_DTO]
 
 
-ContractVersions (historical) 🔥
+ContractVersions (historical)
 
 Gets contractVersions.
 
@@ -800,7 +800,7 @@ No authorization required
 > curve_get_contracts_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_CONTRACT_DTO]
 
 
-Contracts (historical) 🔥
+Contracts (historical)
 
 Gets contracts.
 
@@ -834,7 +834,7 @@ No authorization required
 > curve_get_daily_volumes_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_DAILY_VOLUME_DTO]
 
 
-DailyVolumes (historical) 🔥
+DailyVolumes (historical)
 
 Gets dailyVolumes.
 
@@ -869,7 +869,7 @@ No authorization required
 > curve_get_exchanges_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_EXCHANGE_DTO]
 
 
-Exchanges (historical) 🔥
+Exchanges (historical)
 
 Gets exchanges.
 
@@ -904,7 +904,7 @@ No authorization required
 > curve_get_fee_change_logs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_FEE_CHANGE_LOG_DTO]
 
 
-FeeChangeLogs (historical) 🔥
+FeeChangeLogs (historical)
 
 Gets feeChangeLogs.
 
@@ -939,7 +939,7 @@ No authorization required
 > curve_get_gauge_deposits_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_DEPOSIT_DTO]
 
 
-GaugeDeposits (historical) 🔥
+GaugeDeposits (historical)
 
 Gets gaugeDeposits.
 
@@ -973,7 +973,7 @@ No authorization required
 > curve_get_gauge_liquiditys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
 
 
-GaugeLiquiditys (historical) 🔥
+GaugeLiquiditys (historical)
 
 Gets gaugeLiquiditys.
 
@@ -1008,7 +1008,7 @@ No authorization required
 > curve_get_gauge_total_weights_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO]
 
 
-GaugeTotalWeights (historical) 🔥
+GaugeTotalWeights (historical)
 
 Gets gaugeTotalWeights.
 
@@ -1042,7 +1042,7 @@ No authorization required
 > curve_get_gauge_type_weights_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO]
 
 
-GaugeTypeWeights (historical) 🔥
+GaugeTypeWeights (historical)
 
 Gets gaugeTypeWeights.
 
@@ -1076,7 +1076,7 @@ No authorization required
 > curve_get_gauge_types_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_TYPE_DTO]
 
 
-GaugeTypes (historical) 🔥
+GaugeTypes (historical)
 
 Gets gaugeTypes.
 
@@ -1111,7 +1111,7 @@ No authorization required
 > curve_get_gauge_weight_votes_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO]
 
 
-GaugeWeightVotes (historical) 🔥
+GaugeWeightVotes (historical)
 
 Gets gaugeWeightVotes.
 
@@ -1146,7 +1146,7 @@ No authorization required
 > curve_get_gauge_weights_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_WEIGHT_DTO]
 
 
-GaugeWeights (historical) 🔥
+GaugeWeights (historical)
 
 Gets gaugeWeights.
 
@@ -1180,7 +1180,7 @@ No authorization required
 > curve_get_gauge_withdraws_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_WITHDRAW_DTO]
 
 
-GaugeWithdraws (historical) 🔥
+GaugeWithdraws (historical)
 
 Gets gaugeWithdraws.
 
@@ -1214,7 +1214,7 @@ No authorization required
 > curve_get_gauges_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_DTO]
 
 
-Gauges (historical) 🔥
+Gauges (historical)
 
 Gets gauges.
 
@@ -1250,7 +1250,7 @@ No authorization required
 > curve_get_hourly_volumes_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_HOURLY_VOLUME_DTO]
 
 
-HourlyVolumes (historical) 🔥
+HourlyVolumes (historical)
 
 Gets hourlyVolumes.
 
@@ -1285,7 +1285,7 @@ No authorization required
 > curve_get_lp_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ; name:  detachable STRING_32 ; symbol:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_LP_TOKEN_DTO]
 
 
-LpTokens (historical) 🔥
+LpTokens (historical)
 
 Gets lpTokens.
 
@@ -1323,7 +1323,7 @@ No authorization required
 > curve_get_pools_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [CURVE_POOL_DTO]
 
 
-Pools (historical) 🔥
+Pools (historical)
 
 Gets pools.
 
@@ -1358,7 +1358,7 @@ No authorization required
 > curve_get_proposal_votes_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_PROPOSAL_VOTE_DTO]
 
 
-ProposalVotes (historical) 🔥
+ProposalVotes (historical)
 
 Gets proposalVotes.
 
@@ -1392,7 +1392,7 @@ No authorization required
 > curve_get_proposals_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_PROPOSAL_DTO]
 
 
-Proposals (historical) 🔥
+Proposals (historical)
 
 Gets proposals.
 
@@ -1426,7 +1426,7 @@ No authorization required
 > curve_get_remove_liquidity_events_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO]
 
 
-RemoveLiquidityEvents (historical) 🔥
+RemoveLiquidityEvents (historical)
 
 Gets removeLiquidityEvents.
 
@@ -1461,7 +1461,7 @@ No authorization required
 > curve_get_remove_liquidity_one_events_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO]
 
 
-RemoveLiquidityOneEvents (historical) 🔥
+RemoveLiquidityOneEvents (historical)
 
 Gets removeLiquidityOneEvents.
 
@@ -1496,7 +1496,7 @@ No authorization required
 > curve_get_system_states_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [CURVE_SYSTEM_STATE_DTO]
 
 
-SystemStates (historical) 🔥
+SystemStates (historical)
 
 Gets systemStates.
 
@@ -1530,7 +1530,7 @@ No authorization required
 > curve_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ; name:  detachable STRING_32 ; symbol:  detachable STRING_32 ): detachable LIST [CURVE_TOKEN_DTO]
 
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1567,7 +1567,7 @@ No authorization required
 > curve_get_transfer_ownership_events_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO]
 
 
-TransferOwnershipEvents (historical) 🔥
+TransferOwnershipEvents (historical)
 
 Gets transferOwnershipEvents.
 
@@ -1602,7 +1602,7 @@ No authorization required
 > curve_get_underlying_coins_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_UNDERLYING_COIN_DTO]
 
 
-UnderlyingCoins (historical) 🔥
+UnderlyingCoins (historical)
 
 Gets underlyingCoins.
 
@@ -1637,7 +1637,7 @@ No authorization required
 > curve_get_voting_apps_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ): detachable LIST [CURVE_VOTING_APP_DTO]
 
 
-VotingApps (historical) 🔥
+VotingApps (historical)
 
 Gets votingApps.
 
@@ -1672,7 +1672,7 @@ No authorization required
 > curve_get_weekly_volumes_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [CURVE_WEEKLY_VOLUME_DTO]
 
 
-WeeklyVolumes (historical) 🔥
+WeeklyVolumes (historical)
 
 Gets weeklyVolumes.
 

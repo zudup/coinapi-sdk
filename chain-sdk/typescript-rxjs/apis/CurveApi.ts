@@ -603,7 +603,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets accounts.
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      */
     curveGetAccountsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetAccountsHistoricalRequest): Observable<Array<CurveAccountDTO>>
     curveGetAccountsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetAccountsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAccountDTO>>>
@@ -627,7 +627,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets addLiquidityEvents.
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      */
     curveGetAddLiquidityEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAddLiquidityEventsHistoricalRequest): Observable<Array<CurveAddLiquidityEventDTO>>
     curveGetAddLiquidityEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAddLiquidityEventsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAddLiquidityEventDTO>>>
@@ -651,7 +651,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets adminFeeChangeLogs.
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      */
     curveGetAdminFeeChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAdminFeeChangeLogsHistoricalRequest): Observable<Array<CurveAdminFeeChangeLogDTO>>
     curveGetAdminFeeChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAdminFeeChangeLogsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAdminFeeChangeLogDTO>>>
@@ -675,7 +675,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets amplificationCoeffChangeLogs.
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      */
     curveGetAmplificationCoeffChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAmplificationCoeffChangeLogsHistoricalRequest): Observable<Array<CurveAmplificationCoeffChangeLogDTO>>
     curveGetAmplificationCoeffChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetAmplificationCoeffChangeLogsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAmplificationCoeffChangeLogDTO>>>
@@ -699,7 +699,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets coins.
-     * Coins (historical) 🔥
+     * Coins (historical)
      */
     curveGetCoinsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetCoinsHistoricalRequest): Observable<Array<CurveCoinDTO>>
     curveGetCoinsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetCoinsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveCoinDTO>>>
@@ -723,7 +723,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets contractVersions.
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      */
     curveGetContractVersionsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetContractVersionsHistoricalRequest): Observable<Array<CurveContractVersionDTO>>
     curveGetContractVersionsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetContractVersionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveContractVersionDTO>>>
@@ -747,7 +747,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets contracts.
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      */
     curveGetContractsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetContractsHistoricalRequest): Observable<Array<CurveContractDTO>>
     curveGetContractsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetContractsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveContractDTO>>>
@@ -770,7 +770,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets dailyVolumes.
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      */
     curveGetDailyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetDailyVolumesHistoricalRequest): Observable<Array<CurveDailyVolumeDTO>>
     curveGetDailyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetDailyVolumesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveDailyVolumeDTO>>>
@@ -794,7 +794,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets exchanges.
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      */
     curveGetExchangesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetExchangesHistoricalRequest): Observable<Array<CurveExchangeDTO>>
     curveGetExchangesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetExchangesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveExchangeDTO>>>
@@ -818,7 +818,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets feeChangeLogs.
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      */
     curveGetFeeChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetFeeChangeLogsHistoricalRequest): Observable<Array<CurveFeeChangeLogDTO>>
     curveGetFeeChangeLogsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetFeeChangeLogsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveFeeChangeLogDTO>>>
@@ -842,7 +842,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeDeposits.
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      */
     curveGetGaugeDepositsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeDepositsHistoricalRequest): Observable<Array<CurveGaugeDepositDTO>>
     curveGetGaugeDepositsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeDepositsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeDepositDTO>>>
@@ -865,7 +865,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeLiquiditys.
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      */
     curveGetGaugeLiquiditysHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditysHistoricalRequest): Observable<Array<CurveGaugeLiquidityDTO>>
     curveGetGaugeLiquiditysHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditysHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
@@ -889,7 +889,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeTotalWeights.
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      */
     curveGetGaugeTotalWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeTotalWeightsHistoricalRequest): Observable<Array<CurveGaugeTotalWeightDTO>>
     curveGetGaugeTotalWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeTotalWeightsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTotalWeightDTO>>>
@@ -912,7 +912,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeTypeWeights.
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      */
     curveGetGaugeTypeWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeTypeWeightsHistoricalRequest): Observable<Array<CurveGaugeTypeWeightDTO>>
     curveGetGaugeTypeWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeTypeWeightsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTypeWeightDTO>>>
@@ -935,7 +935,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeTypes.
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      */
     curveGetGaugeTypesHistorical({ startBlock, endBlock, startDate, endDate, id, name }: CurveGetGaugeTypesHistoricalRequest): Observable<Array<CurveGaugeTypeDTO>>
     curveGetGaugeTypesHistorical({ startBlock, endBlock, startDate, endDate, id, name }: CurveGetGaugeTypesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTypeDTO>>>
@@ -959,7 +959,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeWeightVotes.
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      */
     curveGetGaugeWeightVotesHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeWeightVotesHistoricalRequest): Observable<Array<CurveGaugeWeightVoteDTO>>
     curveGetGaugeWeightVotesHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeWeightVotesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWeightVoteDTO>>>
@@ -983,7 +983,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeWeights.
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      */
     curveGetGaugeWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeWeightsHistoricalRequest): Observable<Array<CurveGaugeWeightDTO>>
     curveGetGaugeWeightsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeWeightsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWeightDTO>>>
@@ -1006,7 +1006,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gaugeWithdraws.
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      */
     curveGetGaugeWithdrawsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeWithdrawsHistoricalRequest): Observable<Array<CurveGaugeWithdrawDTO>>
     curveGetGaugeWithdrawsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetGaugeWithdrawsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWithdrawDTO>>>
@@ -1029,7 +1029,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets gauges.
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      */
     curveGetGaugesHistorical({ startBlock, endBlock, startDate, endDate, id, address, pool }: CurveGetGaugesHistoricalRequest): Observable<Array<CurveGaugeDTO>>
     curveGetGaugesHistorical({ startBlock, endBlock, startDate, endDate, id, address, pool }: CurveGetGaugesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeDTO>>>
@@ -1054,7 +1054,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets hourlyVolumes.
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      */
     curveGetHourlyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetHourlyVolumesHistoricalRequest): Observable<Array<CurveHourlyVolumeDTO>>
     curveGetHourlyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetHourlyVolumesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveHourlyVolumeDTO>>>
@@ -1078,7 +1078,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets lpTokens.
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      */
     curveGetLpTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool }: CurveGetLpTokensHistoricalRequest): Observable<Array<CurveLpTokenDTO>>
     curveGetLpTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool }: CurveGetLpTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveLpTokenDTO>>>
@@ -1105,7 +1105,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets pools.
-     * Pools (historical) 🔥
+     * Pools (historical)
      */
     curveGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, id, name }: CurveGetPoolsHistoricalRequest): Observable<Array<CurvePoolDTO>>
     curveGetPoolsHistorical({ startBlock, endBlock, startDate, endDate, id, name }: CurveGetPoolsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurvePoolDTO>>>
@@ -1129,7 +1129,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets proposalVotes.
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      */
     curveGetProposalVotesHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetProposalVotesHistoricalRequest): Observable<Array<CurveProposalVoteDTO>>
     curveGetProposalVotesHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetProposalVotesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveProposalVoteDTO>>>
@@ -1152,7 +1152,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets proposals.
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      */
     curveGetProposalsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetProposalsHistoricalRequest): Observable<Array<CurveProposalDTO>>
     curveGetProposalsHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetProposalsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveProposalDTO>>>
@@ -1175,7 +1175,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets removeLiquidityEvents.
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      */
     curveGetRemoveLiquidityEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetRemoveLiquidityEventsHistoricalRequest): Observable<Array<CurveRemoveLiquidityEventDTO>>
     curveGetRemoveLiquidityEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetRemoveLiquidityEventsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveRemoveLiquidityEventDTO>>>
@@ -1199,7 +1199,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets removeLiquidityOneEvents.
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      */
     curveGetRemoveLiquidityOneEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetRemoveLiquidityOneEventsHistoricalRequest): Observable<Array<CurveRemoveLiquidityOneEventDTO>>
     curveGetRemoveLiquidityOneEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetRemoveLiquidityOneEventsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveRemoveLiquidityOneEventDTO>>>
@@ -1223,7 +1223,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets systemStates.
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      */
     curveGetSystemStatesHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetSystemStatesHistoricalRequest): Observable<Array<CurveSystemStateDTO>>
     curveGetSystemStatesHistorical({ startBlock, endBlock, startDate, endDate, id }: CurveGetSystemStatesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveSystemStateDTO>>>
@@ -1246,7 +1246,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets tokens.
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      */
     curveGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol }: CurveGetTokensHistoricalRequest): Observable<Array<CurveTokenDTO>>
     curveGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol }: CurveGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveTokenDTO>>>
@@ -1272,7 +1272,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets transferOwnershipEvents.
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      */
     curveGetTransferOwnershipEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetTransferOwnershipEventsHistoricalRequest): Observable<Array<CurveTransferOwnershipEventDTO>>
     curveGetTransferOwnershipEventsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetTransferOwnershipEventsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveTransferOwnershipEventDTO>>>
@@ -1296,7 +1296,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets underlyingCoins.
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      */
     curveGetUnderlyingCoinsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetUnderlyingCoinsHistoricalRequest): Observable<Array<CurveUnderlyingCoinDTO>>
     curveGetUnderlyingCoinsHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetUnderlyingCoinsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveUnderlyingCoinDTO>>>
@@ -1320,7 +1320,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets votingApps.
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      */
     curveGetVotingAppsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetVotingAppsHistoricalRequest): Observable<Array<CurveVotingAppDTO>>
     curveGetVotingAppsHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CurveGetVotingAppsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveVotingAppDTO>>>
@@ -1344,7 +1344,7 @@ export class CurveApi extends BaseAPI {
 
     /**
      * Gets weeklyVolumes.
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      */
     curveGetWeeklyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetWeeklyVolumesHistoricalRequest): Observable<Array<CurveWeeklyVolumeDTO>>
     curveGetWeeklyVolumesHistorical({ startBlock, endBlock, startDate, endDate, id, pool }: CurveGetWeeklyVolumesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveWeeklyVolumeDTO>>>

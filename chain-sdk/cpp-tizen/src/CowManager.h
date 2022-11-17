@@ -28,7 +28,7 @@ public:
 	CowManager();
 	virtual ~CowManager();
 
-/*! \brief Orders (historical) 🔥. *Synchronous*
+/*! \brief Orders (historical). *Synchronous*
  *
  * Gets orders.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -45,7 +45,7 @@ bool cowGetOrders (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Orders (historical) 🔥. *Asynchronous*
+/*! \brief Orders (historical). *Asynchronous*
  *
  * Gets orders.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -63,7 +63,7 @@ bool cowGetOrders (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Settlements (historical) 🔥. *Synchronous*
+/*! \brief Settlements (historical). *Synchronous*
  *
  * Gets settlements.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -80,7 +80,7 @@ bool cowGetSettlements (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Settlements (historical) 🔥. *Asynchronous*
+/*! \brief Settlements (historical). *Asynchronous*
  *
  * Gets settlements.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -98,7 +98,7 @@ bool cowGetSettlements (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Tokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical). *Synchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -118,7 +118,7 @@ bool cowGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Tokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical). *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -139,7 +139,7 @@ bool cowGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Trades (historical) 🔥. *Synchronous*
+/*! \brief Trades (historical). *Synchronous*
  *
  * Gets trades.
  * \param startBlock 
@@ -158,7 +158,7 @@ bool cowGetTrades (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Trades (historical) 🔥. *Asynchronous*
+/*! \brief Trades (historical). *Asynchronous*
  *
  * Gets trades.
  * \param startBlock 
@@ -178,7 +178,7 @@ bool cowGetTrades (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Users (historical) 🔥. *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -196,7 +196,7 @@ bool cowGetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Users (historical) 🔥. *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

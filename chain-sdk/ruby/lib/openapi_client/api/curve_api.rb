@@ -1105,7 +1105,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Accounts (historical) 🔥
+    # Accounts (historical)
     # Gets accounts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1120,7 +1120,7 @@ module OpenapiClient
       data
     end
 
-    # Accounts (historical) 🔥
+    # Accounts (historical)
     # Gets accounts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1180,7 +1180,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # AddLiquidityEvents (historical) 🔥
+    # AddLiquidityEvents (historical)
     # Gets addLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1195,7 +1195,7 @@ module OpenapiClient
       data
     end
 
-    # AddLiquidityEvents (historical) 🔥
+    # AddLiquidityEvents (historical)
     # Gets addLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1255,7 +1255,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # AdminFeeChangeLogs (historical) 🔥
+    # AdminFeeChangeLogs (historical)
     # Gets adminFeeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1270,7 +1270,7 @@ module OpenapiClient
       data
     end
 
-    # AdminFeeChangeLogs (historical) 🔥
+    # AdminFeeChangeLogs (historical)
     # Gets adminFeeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1330,7 +1330,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # AmplificationCoeffChangeLogs (historical) 🔥
+    # AmplificationCoeffChangeLogs (historical)
     # Gets amplificationCoeffChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1345,7 +1345,7 @@ module OpenapiClient
       data
     end
 
-    # AmplificationCoeffChangeLogs (historical) 🔥
+    # AmplificationCoeffChangeLogs (historical)
     # Gets amplificationCoeffChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1405,7 +1405,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Coins (historical) 🔥
+    # Coins (historical)
     # Gets coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1420,7 +1420,7 @@ module OpenapiClient
       data
     end
 
-    # Coins (historical) 🔥
+    # Coins (historical)
     # Gets coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1480,7 +1480,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # ContractVersions (historical) 🔥
+    # ContractVersions (historical)
     # Gets contractVersions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1495,7 +1495,7 @@ module OpenapiClient
       data
     end
 
-    # ContractVersions (historical) 🔥
+    # ContractVersions (historical)
     # Gets contractVersions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1555,7 +1555,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Contracts (historical) 🔥
+    # Contracts (historical)
     # Gets contracts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1569,7 +1569,7 @@ module OpenapiClient
       data
     end
 
-    # Contracts (historical) 🔥
+    # Contracts (historical)
     # Gets contracts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1627,7 +1627,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # DailyVolumes (historical) 🔥
+    # DailyVolumes (historical)
     # Gets dailyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1642,7 +1642,7 @@ module OpenapiClient
       data
     end
 
-    # DailyVolumes (historical) 🔥
+    # DailyVolumes (historical)
     # Gets dailyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1702,7 +1702,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Exchanges (historical) 🔥
+    # Exchanges (historical)
     # Gets exchanges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1717,7 +1717,7 @@ module OpenapiClient
       data
     end
 
-    # Exchanges (historical) 🔥
+    # Exchanges (historical)
     # Gets exchanges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1777,7 +1777,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # FeeChangeLogs (historical) 🔥
+    # FeeChangeLogs (historical)
     # Gets feeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1792,7 +1792,7 @@ module OpenapiClient
       data
     end
 
-    # FeeChangeLogs (historical) 🔥
+    # FeeChangeLogs (historical)
     # Gets feeChangeLogs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1852,7 +1852,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeDeposits (historical) 🔥
+    # GaugeDeposits (historical)
     # Gets gaugeDeposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1866,7 +1866,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeDeposits (historical) 🔥
+    # GaugeDeposits (historical)
     # Gets gaugeDeposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1924,7 +1924,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeLiquiditys (historical) 🔥
+    # GaugeLiquiditys (historical)
     # Gets gaugeLiquiditys.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1939,7 +1939,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeLiquiditys (historical) 🔥
+    # GaugeLiquiditys (historical)
     # Gets gaugeLiquiditys.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1999,7 +1999,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeTotalWeights (historical) 🔥
+    # GaugeTotalWeights (historical)
     # Gets gaugeTotalWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2013,7 +2013,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeTotalWeights (historical) 🔥
+    # GaugeTotalWeights (historical)
     # Gets gaugeTotalWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2071,7 +2071,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeTypeWeights (historical) 🔥
+    # GaugeTypeWeights (historical)
     # Gets gaugeTypeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2085,7 +2085,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeTypeWeights (historical) 🔥
+    # GaugeTypeWeights (historical)
     # Gets gaugeTypeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2143,7 +2143,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeTypes (historical) 🔥
+    # GaugeTypes (historical)
     # Gets gaugeTypes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2158,7 +2158,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeTypes (historical) 🔥
+    # GaugeTypes (historical)
     # Gets gaugeTypes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2218,7 +2218,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeWeightVotes (historical) 🔥
+    # GaugeWeightVotes (historical)
     # Gets gaugeWeightVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2233,7 +2233,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeWeightVotes (historical) 🔥
+    # GaugeWeightVotes (historical)
     # Gets gaugeWeightVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2293,7 +2293,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeWeights (historical) 🔥
+    # GaugeWeights (historical)
     # Gets gaugeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2307,7 +2307,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeWeights (historical) 🔥
+    # GaugeWeights (historical)
     # Gets gaugeWeights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2365,7 +2365,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeWithdraws (historical) 🔥
+    # GaugeWithdraws (historical)
     # Gets gaugeWithdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2379,7 +2379,7 @@ module OpenapiClient
       data
     end
 
-    # GaugeWithdraws (historical) 🔥
+    # GaugeWithdraws (historical)
     # Gets gaugeWithdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2437,7 +2437,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Gauges (historical) 🔥
+    # Gauges (historical)
     # Gets gauges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2453,7 +2453,7 @@ module OpenapiClient
       data
     end
 
-    # Gauges (historical) 🔥
+    # Gauges (historical)
     # Gets gauges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2515,7 +2515,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # HourlyVolumes (historical) 🔥
+    # HourlyVolumes (historical)
     # Gets hourlyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2530,7 +2530,7 @@ module OpenapiClient
       data
     end
 
-    # HourlyVolumes (historical) 🔥
+    # HourlyVolumes (historical)
     # Gets hourlyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2590,7 +2590,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # LpTokens (historical) 🔥
+    # LpTokens (historical)
     # Gets lpTokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2608,7 +2608,7 @@ module OpenapiClient
       data
     end
 
-    # LpTokens (historical) 🔥
+    # LpTokens (historical)
     # Gets lpTokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2674,7 +2674,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Pools (historical) 🔥
+    # Pools (historical)
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2689,7 +2689,7 @@ module OpenapiClient
       data
     end
 
-    # Pools (historical) 🔥
+    # Pools (historical)
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2749,7 +2749,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # ProposalVotes (historical) 🔥
+    # ProposalVotes (historical)
     # Gets proposalVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2763,7 +2763,7 @@ module OpenapiClient
       data
     end
 
-    # ProposalVotes (historical) 🔥
+    # ProposalVotes (historical)
     # Gets proposalVotes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2821,7 +2821,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Proposals (historical) 🔥
+    # Proposals (historical)
     # Gets proposals.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2835,7 +2835,7 @@ module OpenapiClient
       data
     end
 
-    # Proposals (historical) 🔥
+    # Proposals (historical)
     # Gets proposals.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2893,7 +2893,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # RemoveLiquidityEvents (historical) 🔥
+    # RemoveLiquidityEvents (historical)
     # Gets removeLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2908,7 +2908,7 @@ module OpenapiClient
       data
     end
 
-    # RemoveLiquidityEvents (historical) 🔥
+    # RemoveLiquidityEvents (historical)
     # Gets removeLiquidityEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2968,7 +2968,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # RemoveLiquidityOneEvents (historical) 🔥
+    # RemoveLiquidityOneEvents (historical)
     # Gets removeLiquidityOneEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2983,7 +2983,7 @@ module OpenapiClient
       data
     end
 
-    # RemoveLiquidityOneEvents (historical) 🔥
+    # RemoveLiquidityOneEvents (historical)
     # Gets removeLiquidityOneEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3043,7 +3043,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # SystemStates (historical) 🔥
+    # SystemStates (historical)
     # Gets systemStates.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3057,7 +3057,7 @@ module OpenapiClient
       data
     end
 
-    # SystemStates (historical) 🔥
+    # SystemStates (historical)
     # Gets systemStates.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3115,7 +3115,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Tokens (historical) 🔥
+    # Tokens (historical)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3132,7 +3132,7 @@ module OpenapiClient
       data
     end
 
-    # Tokens (historical) 🔥
+    # Tokens (historical)
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3196,7 +3196,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # TransferOwnershipEvents (historical) 🔥
+    # TransferOwnershipEvents (historical)
     # Gets transferOwnershipEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3211,7 +3211,7 @@ module OpenapiClient
       data
     end
 
-    # TransferOwnershipEvents (historical) 🔥
+    # TransferOwnershipEvents (historical)
     # Gets transferOwnershipEvents.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3271,7 +3271,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # UnderlyingCoins (historical) 🔥
+    # UnderlyingCoins (historical)
     # Gets underlyingCoins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -3286,7 +3286,7 @@ module OpenapiClient
       data
     end
 
-    # UnderlyingCoins (historical) 🔥
+    # UnderlyingCoins (historical)
     # Gets underlyingCoins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -3346,7 +3346,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # VotingApps (historical) 🔥
+    # VotingApps (historical)
     # Gets votingApps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3361,7 +3361,7 @@ module OpenapiClient
       data
     end
 
-    # VotingApps (historical) 🔥
+    # VotingApps (historical)
     # Gets votingApps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3421,7 +3421,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # WeeklyVolumes (historical) 🔥
+    # WeeklyVolumes (historical)
     # Gets weeklyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -3436,7 +3436,7 @@ module OpenapiClient
       data
     end
 
-    # WeeklyVolumes (historical) 🔥
+    # WeeklyVolumes (historical)
     # Gets weeklyVolumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

@@ -119,7 +119,7 @@ sushiswap_factorys_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Bundles (historical) 🔥
+%% @doc Bundles (historical)
 %% Gets bundles.
 -spec sushiswap_get_bundles_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_bundle_dto:openapi_sushiswap_bundle_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_bundles_(historical)(Ctx) ->
@@ -140,7 +140,7 @@ sushiswap_get_bundles_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Burns (historical) 🔥
+%% @doc Burns (historical)
 %% Gets burns.
 -spec sushiswap_get_burns_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_burn_dto:openapi_sushiswap_burn_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_burns_(historical)(Ctx) ->
@@ -161,7 +161,7 @@ sushiswap_get_burns_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc DayDatas (historical) 🔥
+%% @doc DayDatas (historical)
 %% Gets dayDatas.
 -spec sushiswap_get_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_day_datas_(historical)(Ctx) ->
@@ -182,7 +182,7 @@ sushiswap_get_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Factorys (historical) 🔥
+%% @doc Factorys (historical)
 %% Gets factorys.
 -spec sushiswap_get_factorys_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_factorys_(historical)(Ctx) ->
@@ -203,7 +203,7 @@ sushiswap_get_factorys_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc HourDatas (historical) 🔥
+%% @doc HourDatas (historical)
 %% Gets hourDatas.
 -spec sushiswap_get_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_hour_datas_(historical)(Ctx) ->
@@ -224,7 +224,7 @@ sushiswap_get_hour_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc LiquidityPositionSnapshots (historical) 🔥
+%% @doc LiquidityPositionSnapshots (historical)
 %% Gets liquidityPositionSnapshots.
 -spec sushiswap_get_liquidity_position_snapshots_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_liquidity_position_snapshot_dto:openapi_sushiswap_liquidity_position_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_liquidity_position_snapshots_(historical)(Ctx) ->
@@ -245,7 +245,7 @@ sushiswap_get_liquidity_position_snapshots_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc LiquidityPositions (historical) 🔥
+%% @doc LiquidityPositions (historical)
 %% Gets liquidityPositions.
 -spec sushiswap_get_liquidity_positions_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_liquidity_position_dto:openapi_sushiswap_liquidity_position_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_liquidity_positions_(historical)(Ctx) ->
@@ -266,7 +266,7 @@ sushiswap_get_liquidity_positions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Mints (historical) 🔥
+%% @doc Mints (historical)
 %% Gets mints.
 -spec sushiswap_get_mints_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_mint_dto:openapi_sushiswap_mint_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_mints_(historical)(Ctx) ->
@@ -287,7 +287,7 @@ sushiswap_get_mints_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (historical) 🔥
+%% @doc PairDayDatas (historical)
 %% Gets pairDayDatas.
 -spec sushiswap_get_pair_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_pair_day_datas_(historical)(Ctx) ->
@@ -308,7 +308,7 @@ sushiswap_get_pair_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (historical) 🔥
+%% @doc PairHourDatas (historical)
 %% Gets pairHourDatas.
 -spec sushiswap_get_pair_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_pair_hour_datas_(historical)(Ctx) ->
@@ -329,7 +329,7 @@ sushiswap_get_pair_hour_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Pairs (historical) 🔥
+%% @doc Pairs (historical)
 %% Gets pairs.
 -spec sushiswap_get_pairs_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_dto:openapi_sushiswap_pair_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_pairs_(historical)(Ctx) ->
@@ -350,7 +350,7 @@ sushiswap_get_pairs_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Swaps (historical) 🔥
+%% @doc Swaps (historical)
 %% Gets swaps.
 -spec sushiswap_get_swaps_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_swap_dto:openapi_sushiswap_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_swaps_(historical)(Ctx) ->
@@ -371,7 +371,7 @@ sushiswap_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (historical) 🔥
+%% @doc TokenDayDatas (historical)
 %% Gets tokenDayDatas.
 -spec sushiswap_get_token_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_token_day_datas_(historical)(Ctx) ->
@@ -392,7 +392,7 @@ sushiswap_get_token_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Tokens (historical) 🔥
+%% @doc Tokens (historical)
 %% Gets tokens.
 -spec sushiswap_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_dto:openapi_sushiswap_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_tokens_(historical)(Ctx) ->
@@ -413,7 +413,7 @@ sushiswap_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Transactions (historical) 🔥
+%% @doc Transactions (historical)
 %% Gets transactions.
 -spec sushiswap_get_transactions_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_transaction_dto:openapi_sushiswap_transaction_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_transactions_(historical)(Ctx) ->
@@ -434,7 +434,7 @@ sushiswap_get_transactions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Users (historical) 🔥
+%% @doc Users (historical)
 %% Gets users.
 -spec sushiswap_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_user_dto:openapi_sushiswap_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 sushiswap_get_users_(historical)(Ctx) ->

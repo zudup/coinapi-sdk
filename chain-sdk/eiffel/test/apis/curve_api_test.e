@@ -262,7 +262,7 @@ feature -- Test routines
         end
 
     test_curve_get_accounts_historical
-            -- Accounts (historical) 🔥
+            -- Accounts (historical)
             --
             -- Gets accounts.
         local
@@ -281,7 +281,7 @@ feature -- Test routines
         end
 
     test_curve_get_add_liquidity_events_historical
-            -- AddLiquidityEvents (historical) 🔥
+            -- AddLiquidityEvents (historical)
             --
             -- Gets addLiquidityEvents.
         local
@@ -300,7 +300,7 @@ feature -- Test routines
         end
 
     test_curve_get_admin_fee_change_logs_historical
-            -- AdminFeeChangeLogs (historical) 🔥
+            -- AdminFeeChangeLogs (historical)
             --
             -- Gets adminFeeChangeLogs.
         local
@@ -319,7 +319,7 @@ feature -- Test routines
         end
 
     test_curve_get_amplification_coeff_change_logs_historical
-            -- AmplificationCoeffChangeLogs (historical) 🔥
+            -- AmplificationCoeffChangeLogs (historical)
             --
             -- Gets amplificationCoeffChangeLogs.
         local
@@ -338,7 +338,7 @@ feature -- Test routines
         end
 
     test_curve_get_coins_historical
-            -- Coins (historical) 🔥
+            -- Coins (historical)
             --
             -- Gets coins.
         local
@@ -357,7 +357,7 @@ feature -- Test routines
         end
 
     test_curve_get_contract_versions_historical
-            -- ContractVersions (historical) 🔥
+            -- ContractVersions (historical)
             --
             -- Gets contractVersions.
         local
@@ -376,7 +376,7 @@ feature -- Test routines
         end
 
     test_curve_get_contracts_historical
-            -- Contracts (historical) 🔥
+            -- Contracts (historical)
             --
             -- Gets contracts.
         local
@@ -394,7 +394,7 @@ feature -- Test routines
         end
 
     test_curve_get_daily_volumes_historical
-            -- DailyVolumes (historical) 🔥
+            -- DailyVolumes (historical)
             --
             -- Gets dailyVolumes.
         local
@@ -413,7 +413,7 @@ feature -- Test routines
         end
 
     test_curve_get_exchanges_historical
-            -- Exchanges (historical) 🔥
+            -- Exchanges (historical)
             --
             -- Gets exchanges.
         local
@@ -432,7 +432,7 @@ feature -- Test routines
         end
 
     test_curve_get_fee_change_logs_historical
-            -- FeeChangeLogs (historical) 🔥
+            -- FeeChangeLogs (historical)
             --
             -- Gets feeChangeLogs.
         local
@@ -451,7 +451,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_deposits_historical
-            -- GaugeDeposits (historical) 🔥
+            -- GaugeDeposits (historical)
             --
             -- Gets gaugeDeposits.
         local
@@ -469,7 +469,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_liquiditys_historical
-            -- GaugeLiquiditys (historical) 🔥
+            -- GaugeLiquiditys (historical)
             --
             -- Gets gaugeLiquiditys.
         local
@@ -488,7 +488,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_total_weights_historical
-            -- GaugeTotalWeights (historical) 🔥
+            -- GaugeTotalWeights (historical)
             --
             -- Gets gaugeTotalWeights.
         local
@@ -506,7 +506,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_type_weights_historical
-            -- GaugeTypeWeights (historical) 🔥
+            -- GaugeTypeWeights (historical)
             --
             -- Gets gaugeTypeWeights.
         local
@@ -524,7 +524,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_types_historical
-            -- GaugeTypes (historical) 🔥
+            -- GaugeTypes (historical)
             --
             -- Gets gaugeTypes.
         local
@@ -543,7 +543,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_weight_votes_historical
-            -- GaugeWeightVotes (historical) 🔥
+            -- GaugeWeightVotes (historical)
             --
             -- Gets gaugeWeightVotes.
         local
@@ -562,7 +562,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_weights_historical
-            -- GaugeWeights (historical) 🔥
+            -- GaugeWeights (historical)
             --
             -- Gets gaugeWeights.
         local
@@ -580,7 +580,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauge_withdraws_historical
-            -- GaugeWithdraws (historical) 🔥
+            -- GaugeWithdraws (historical)
             --
             -- Gets gaugeWithdraws.
         local
@@ -598,7 +598,7 @@ feature -- Test routines
         end
 
     test_curve_get_gauges_historical
-            -- Gauges (historical) 🔥
+            -- Gauges (historical)
             --
             -- Gets gauges.
         local
@@ -618,7 +618,7 @@ feature -- Test routines
         end
 
     test_curve_get_hourly_volumes_historical
-            -- HourlyVolumes (historical) 🔥
+            -- HourlyVolumes (historical)
             --
             -- Gets hourlyVolumes.
         local
@@ -637,7 +637,7 @@ feature -- Test routines
         end
 
     test_curve_get_lp_tokens_historical
-            -- LpTokens (historical) 🔥
+            -- LpTokens (historical)
             --
             -- Gets lpTokens.
         local
@@ -659,7 +659,7 @@ feature -- Test routines
         end
 
     test_curve_get_pools_historical
-            -- Pools (historical) 🔥
+            -- Pools (historical)
             --
             -- Gets pools.
         local
@@ -678,7 +678,7 @@ feature -- Test routines
         end
 
     test_curve_get_proposal_votes_historical
-            -- ProposalVotes (historical) 🔥
+            -- ProposalVotes (historical)
             --
             -- Gets proposalVotes.
         local
@@ -696,7 +696,7 @@ feature -- Test routines
         end
 
     test_curve_get_proposals_historical
-            -- Proposals (historical) 🔥
+            -- Proposals (historical)
             --
             -- Gets proposals.
         local
@@ -714,7 +714,7 @@ feature -- Test routines
         end
 
     test_curve_get_remove_liquidity_events_historical
-            -- RemoveLiquidityEvents (historical) 🔥
+            -- RemoveLiquidityEvents (historical)
             --
             -- Gets removeLiquidityEvents.
         local
@@ -733,7 +733,7 @@ feature -- Test routines
         end
 
     test_curve_get_remove_liquidity_one_events_historical
-            -- RemoveLiquidityOneEvents (historical) 🔥
+            -- RemoveLiquidityOneEvents (historical)
             --
             -- Gets removeLiquidityOneEvents.
         local
@@ -752,7 +752,7 @@ feature -- Test routines
         end
 
     test_curve_get_system_states_historical
-            -- SystemStates (historical) 🔥
+            -- SystemStates (historical)
             --
             -- Gets systemStates.
         local
@@ -770,7 +770,7 @@ feature -- Test routines
         end
 
     test_curve_get_tokens_historical
-            -- Tokens (historical) 🔥
+            -- Tokens (historical)
             --
             -- Gets tokens.
         local
@@ -791,7 +791,7 @@ feature -- Test routines
         end
 
     test_curve_get_transfer_ownership_events_historical
-            -- TransferOwnershipEvents (historical) 🔥
+            -- TransferOwnershipEvents (historical)
             --
             -- Gets transferOwnershipEvents.
         local
@@ -810,7 +810,7 @@ feature -- Test routines
         end
 
     test_curve_get_underlying_coins_historical
-            -- UnderlyingCoins (historical) 🔥
+            -- UnderlyingCoins (historical)
             --
             -- Gets underlyingCoins.
         local
@@ -829,7 +829,7 @@ feature -- Test routines
         end
 
     test_curve_get_voting_apps_historical
-            -- VotingApps (historical) 🔥
+            -- VotingApps (historical)
             --
             -- Gets votingApps.
         local
@@ -848,7 +848,7 @@ feature -- Test routines
         end
 
     test_curve_get_weekly_volumes_historical
-            -- WeeklyVolumes (historical) 🔥
+            -- WeeklyVolumes (historical)
             --
             -- Gets weeklyVolumes.
         local

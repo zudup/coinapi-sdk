@@ -115,7 +115,7 @@ bool uniswapV3Factorys (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Bundles (historical) 🔥. *Synchronous*
+/*! \brief Bundles (historical). *Synchronous*
  *
  * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -132,7 +132,7 @@ bool uniswapV3GetBundles (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BundleDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Bundles (historical) 🔥. *Asynchronous*
+/*! \brief Bundles (historical). *Asynchronous*
  *
  * Gets bundles.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -150,7 +150,7 @@ bool uniswapV3GetBundles (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Burns (historical) 🔥. *Synchronous*
+/*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -170,7 +170,7 @@ bool uniswapV3GetBurns (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BurnDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Burns (historical) 🔥. *Asynchronous*
+/*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -191,7 +191,7 @@ bool uniswapV3GetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Factorys (historical) 🔥. *Synchronous*
+/*! \brief Factorys (historical). *Synchronous*
  *
  * Gets factorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -208,7 +208,7 @@ bool uniswapV3GetFactorys (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.FactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Factorys (historical) 🔥. *Asynchronous*
+/*! \brief Factorys (historical). *Asynchronous*
  *
  * Gets factorys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -226,7 +226,7 @@ bool uniswapV3GetFactorys (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Mints (historical) 🔥. *Synchronous*
+/*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -246,7 +246,7 @@ bool uniswapV3GetMints (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.MintDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Mints (historical) 🔥. *Asynchronous*
+/*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -267,7 +267,7 @@ bool uniswapV3GetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PoolDayDatas (historical) 🔥. *Synchronous*
+/*! \brief PoolDayDatas (historical). *Synchronous*
  *
  * Gets poolDayDatas.
  * \param startBlock 
@@ -285,7 +285,7 @@ bool uniswapV3GetPoolDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PoolDayDatas (historical) 🔥. *Asynchronous*
+/*! \brief PoolDayDatas (historical). *Asynchronous*
  *
  * Gets poolDayDatas.
  * \param startBlock 
@@ -304,7 +304,7 @@ bool uniswapV3GetPoolDayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PoolHourDatas (historical) 🔥. *Synchronous*
+/*! \brief PoolHourDatas (historical). *Synchronous*
  *
  * Gets poolHourDatas.
  * \param startBlock 
@@ -322,7 +322,7 @@ bool uniswapV3GetPoolHourDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PoolHourDatas (historical) 🔥. *Asynchronous*
+/*! \brief PoolHourDatas (historical). *Asynchronous*
  *
  * Gets poolHourDatas.
  * \param startBlock 
@@ -341,7 +341,7 @@ bool uniswapV3GetPoolHourDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Pools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical). *Synchronous*
  *
  * Gets pools.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -360,7 +360,7 @@ bool uniswapV3GetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Pools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical). *Asynchronous*
  *
  * Gets pools.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -380,7 +380,7 @@ bool uniswapV3GetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PositionSnapshots (historical) 🔥. *Synchronous*
+/*! \brief PositionSnapshots (historical). *Synchronous*
  *
  * Gets positionSnapshots.
  * \param startBlock 
@@ -398,7 +398,7 @@ bool uniswapV3GetPositionSnapshots (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionSnapshotDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PositionSnapshots (historical) 🔥. *Asynchronous*
+/*! \brief PositionSnapshots (historical). *Asynchronous*
  *
  * Gets positionSnapshots.
  * \param startBlock 
@@ -417,7 +417,7 @@ bool uniswapV3GetPositionSnapshots (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Positions (historical) 🔥. *Synchronous*
+/*! \brief Positions (historical). *Synchronous*
  *
  * Gets positions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -437,7 +437,7 @@ bool uniswapV3GetPositions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Positions (historical) 🔥. *Asynchronous*
+/*! \brief Positions (historical). *Asynchronous*
  *
  * Gets positions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -458,7 +458,7 @@ bool uniswapV3GetPositions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Swaps (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical). *Synchronous*
  *
  * Gets swaps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -478,7 +478,7 @@ bool uniswapV3GetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Swaps (historical) 🔥. *Asynchronous*
+/*! \brief Swaps (historical). *Asynchronous*
  *
  * Gets swaps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -499,7 +499,7 @@ bool uniswapV3GetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TickDayDatas (historical) 🔥. *Synchronous*
+/*! \brief TickDayDatas (historical). *Synchronous*
  *
  * Gets tickDayDatas.
  * \param startBlock 
@@ -517,7 +517,7 @@ bool uniswapV3GetTickDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TickDayDatas (historical) 🔥. *Asynchronous*
+/*! \brief TickDayDatas (historical). *Asynchronous*
  *
  * Gets tickDayDatas.
  * \param startBlock 
@@ -536,7 +536,7 @@ bool uniswapV3GetTickDayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Ticks (historical) 🔥. *Synchronous*
+/*! \brief Ticks (historical). *Synchronous*
  *
  * Gets ticks.
  * \param startBlock 
@@ -554,7 +554,7 @@ bool uniswapV3GetTicks (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Ticks (historical) 🔥. *Asynchronous*
+/*! \brief Ticks (historical). *Asynchronous*
  *
  * Gets ticks.
  * \param startBlock 
@@ -573,7 +573,7 @@ bool uniswapV3GetTicks (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TokenHourDatas (historical) 🔥. *Synchronous*
+/*! \brief TokenHourDatas (historical). *Synchronous*
  *
  * Gets tokenHourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -590,7 +590,7 @@ bool uniswapV3GetTokenHourDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenHourDatas (historical) 🔥. *Asynchronous*
+/*! \brief TokenHourDatas (historical). *Asynchronous*
  *
  * Gets tokenHourDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -608,7 +608,7 @@ bool uniswapV3GetTokenHourDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TokenV3DayDatas (historical) 🔥. *Synchronous*
+/*! \brief TokenV3DayDatas (historical). *Synchronous*
  *
  * Gets tokenV3DayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -625,7 +625,7 @@ bool uniswapV3GetTokenV3DayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenV3DayDatas (historical) 🔥. *Asynchronous*
+/*! \brief TokenV3DayDatas (historical). *Asynchronous*
  *
  * Gets tokenV3DayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -643,7 +643,7 @@ bool uniswapV3GetTokenV3DayDatas (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Tokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical). *Synchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -662,7 +662,7 @@ bool uniswapV3GetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Tokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical). *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -682,7 +682,7 @@ bool uniswapV3GetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Transactions (historical) 🔥. *Synchronous*
+/*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -699,7 +699,7 @@ bool uniswapV3GetTransactions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TransactionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Transactions (historical) 🔥. *Asynchronous*
+/*! \brief Transactions (historical). *Asynchronous*
  *
  * Gets transactions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -717,7 +717,7 @@ bool uniswapV3GetTransactions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief UniswapDayDatas (historical) 🔥. *Synchronous*
+/*! \brief UniswapDayDatas (historical). *Synchronous*
  *
  * Gets uniswapDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -734,7 +734,7 @@ bool uniswapV3GetUniswapDayDatas (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.UniswapDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief UniswapDayDatas (historical) 🔥. *Asynchronous*
+/*! \brief UniswapDayDatas (historical). *Asynchronous*
  *
  * Gets uniswapDayDatas.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

@@ -13,7 +13,7 @@ with Swagger.Streams;
 package body .Clients is
    pragma Style_Checks ("-mr");
 
-   --  Orders (historical) 🔥
+   --  Orders (historical)
    --  Gets orders.
    procedure Cow_Get_Orders__historical
       (Client : in out Client_Type;
@@ -42,7 +42,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Cow_Get_Orders__historical;
 
-   --  Settlements (historical) 🔥
+   --  Settlements (historical)
    --  Gets settlements.
    procedure Cow_Get_Settlements__historical
       (Client : in out Client_Type;
@@ -71,7 +71,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Cow_Get_Settlements__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Cow_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -106,7 +106,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Cow_Get_Tokens__historical;
 
-   --  Trades (historical) 🔥
+   --  Trades (historical)
    --  Gets trades.
    procedure Cow_Get_Trades__historical
       (Client : in out Client_Type;
@@ -139,7 +139,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Cow_Get_Trades__historical;
 
-   --  Users (historical) 🔥
+   --  Users (historical)
    --  Gets users.
    procedure Cow_Get_Users__historical
       (Client : in out Client_Type;
@@ -580,7 +580,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Gauges__current;
 
-   --  Accounts (historical) 🔥
+   --  Accounts (historical)
    --  Gets accounts.
    procedure Curve_Get_Accounts__historical
       (Client : in out Client_Type;
@@ -611,7 +611,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Accounts__historical;
 
-   --  AddLiquidityEvents (historical) 🔥
+   --  AddLiquidityEvents (historical)
    --  Gets addLiquidityEvents.
    procedure Curve_Get_Add_Liquidity_Events__historical
       (Client : in out Client_Type;
@@ -642,7 +642,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Add_Liquidity_Events__historical;
 
-   --  AdminFeeChangeLogs (historical) 🔥
+   --  AdminFeeChangeLogs (historical)
    --  Gets adminFeeChangeLogs.
    procedure Curve_Get_Admin_Fee_Change_Logs__historical
       (Client : in out Client_Type;
@@ -673,7 +673,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Admin_Fee_Change_Logs__historical;
 
-   --  AmplificationCoeffChangeLogs (historical) 🔥
+   --  AmplificationCoeffChangeLogs (historical)
    --  Gets amplificationCoeffChangeLogs.
    procedure Curve_Get_Amplification_Coeff_Change_Logs__historical
       (Client : in out Client_Type;
@@ -704,7 +704,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Amplification_Coeff_Change_Logs__historical;
 
-   --  Coins (historical) 🔥
+   --  Coins (historical)
    --  Gets coins.
    procedure Curve_Get_Coins__historical
       (Client : in out Client_Type;
@@ -735,7 +735,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Coins__historical;
 
-   --  ContractVersions (historical) 🔥
+   --  ContractVersions (historical)
    --  Gets contractVersions.
    procedure Curve_Get_Contract_Versions__historical
       (Client : in out Client_Type;
@@ -766,7 +766,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Contract_Versions__historical;
 
-   --  Contracts (historical) 🔥
+   --  Contracts (historical)
    --  Gets contracts.
    procedure Curve_Get_Contracts__historical
       (Client : in out Client_Type;
@@ -795,7 +795,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Contracts__historical;
 
-   --  DailyVolumes (historical) 🔥
+   --  DailyVolumes (historical)
    --  Gets dailyVolumes.
    procedure Curve_Get_Daily_Volumes__historical
       (Client : in out Client_Type;
@@ -826,7 +826,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Daily_Volumes__historical;
 
-   --  Exchanges (historical) 🔥
+   --  Exchanges (historical)
    --  Gets exchanges.
    procedure Curve_Get_Exchanges__historical
       (Client : in out Client_Type;
@@ -857,7 +857,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Exchanges__historical;
 
-   --  FeeChangeLogs (historical) 🔥
+   --  FeeChangeLogs (historical)
    --  Gets feeChangeLogs.
    procedure Curve_Get_Fee_Change_Logs__historical
       (Client : in out Client_Type;
@@ -888,7 +888,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Fee_Change_Logs__historical;
 
-   --  GaugeDeposits (historical) 🔥
+   --  GaugeDeposits (historical)
    --  Gets gaugeDeposits.
    procedure Curve_Get_Gauge_Deposits__historical
       (Client : in out Client_Type;
@@ -917,7 +917,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Deposits__historical;
 
-   --  GaugeLiquiditys (historical) 🔥
+   --  GaugeLiquiditys (historical)
    --  Gets gaugeLiquiditys.
    procedure Curve_Get_Gauge_Liquiditys__historical
       (Client : in out Client_Type;
@@ -948,7 +948,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Liquiditys__historical;
 
-   --  GaugeTotalWeights (historical) 🔥
+   --  GaugeTotalWeights (historical)
    --  Gets gaugeTotalWeights.
    procedure Curve_Get_Gauge_Total_Weights__historical
       (Client : in out Client_Type;
@@ -977,7 +977,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Total_Weights__historical;
 
-   --  GaugeTypeWeights (historical) 🔥
+   --  GaugeTypeWeights (historical)
    --  Gets gaugeTypeWeights.
    procedure Curve_Get_Gauge_Type_Weights__historical
       (Client : in out Client_Type;
@@ -1006,7 +1006,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Type_Weights__historical;
 
-   --  GaugeTypes (historical) 🔥
+   --  GaugeTypes (historical)
    --  Gets gaugeTypes.
    procedure Curve_Get_Gauge_Types__historical
       (Client : in out Client_Type;
@@ -1037,7 +1037,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Types__historical;
 
-   --  GaugeWeightVotes (historical) 🔥
+   --  GaugeWeightVotes (historical)
    --  Gets gaugeWeightVotes.
    procedure Curve_Get_Gauge_Weight_Votes__historical
       (Client : in out Client_Type;
@@ -1068,7 +1068,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Weight_Votes__historical;
 
-   --  GaugeWeights (historical) 🔥
+   --  GaugeWeights (historical)
    --  Gets gaugeWeights.
    procedure Curve_Get_Gauge_Weights__historical
       (Client : in out Client_Type;
@@ -1097,7 +1097,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Weights__historical;
 
-   --  GaugeWithdraws (historical) 🔥
+   --  GaugeWithdraws (historical)
    --  Gets gaugeWithdraws.
    procedure Curve_Get_Gauge_Withdraws__historical
       (Client : in out Client_Type;
@@ -1126,7 +1126,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Withdraws__historical;
 
-   --  Gauges (historical) 🔥
+   --  Gauges (historical)
    --  Gets gauges.
    procedure Curve_Get_Gauges__historical
       (Client : in out Client_Type;
@@ -1159,7 +1159,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauges__historical;
 
-   --  HourlyVolumes (historical) 🔥
+   --  HourlyVolumes (historical)
    --  Gets hourlyVolumes.
    procedure Curve_Get_Hourly_Volumes__historical
       (Client : in out Client_Type;
@@ -1190,7 +1190,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Hourly_Volumes__historical;
 
-   --  LpTokens (historical) 🔥
+   --  LpTokens (historical)
    --  Gets lpTokens.
    procedure Curve_Get_Lp_Tokens__historical
       (Client : in out Client_Type;
@@ -1227,7 +1227,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Lp_Tokens__historical;
 
-   --  Pools (historical) 🔥
+   --  Pools (historical)
    --  Gets pools.
    procedure Curve_Get_Pools__historical
       (Client : in out Client_Type;
@@ -1258,7 +1258,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Pools__historical;
 
-   --  ProposalVotes (historical) 🔥
+   --  ProposalVotes (historical)
    --  Gets proposalVotes.
    procedure Curve_Get_Proposal_Votes__historical
       (Client : in out Client_Type;
@@ -1287,7 +1287,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Proposal_Votes__historical;
 
-   --  Proposals (historical) 🔥
+   --  Proposals (historical)
    --  Gets proposals.
    procedure Curve_Get_Proposals__historical
       (Client : in out Client_Type;
@@ -1316,7 +1316,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Proposals__historical;
 
-   --  RemoveLiquidityEvents (historical) 🔥
+   --  RemoveLiquidityEvents (historical)
    --  Gets removeLiquidityEvents.
    procedure Curve_Get_Remove_Liquidity_Events__historical
       (Client : in out Client_Type;
@@ -1347,7 +1347,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Remove_Liquidity_Events__historical;
 
-   --  RemoveLiquidityOneEvents (historical) 🔥
+   --  RemoveLiquidityOneEvents (historical)
    --  Gets removeLiquidityOneEvents.
    procedure Curve_Get_Remove_Liquidity_One_Events__historical
       (Client : in out Client_Type;
@@ -1378,7 +1378,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Remove_Liquidity_One_Events__historical;
 
-   --  SystemStates (historical) 🔥
+   --  SystemStates (historical)
    --  Gets systemStates.
    procedure Curve_Get_System_States__historical
       (Client : in out Client_Type;
@@ -1407,7 +1407,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_System_States__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Curve_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -1442,7 +1442,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Tokens__historical;
 
-   --  TransferOwnershipEvents (historical) 🔥
+   --  TransferOwnershipEvents (historical)
    --  Gets transferOwnershipEvents.
    procedure Curve_Get_Transfer_Ownership_Events__historical
       (Client : in out Client_Type;
@@ -1473,7 +1473,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Transfer_Ownership_Events__historical;
 
-   --  UnderlyingCoins (historical) 🔥
+   --  UnderlyingCoins (historical)
    --  Gets underlyingCoins.
    procedure Curve_Get_Underlying_Coins__historical
       (Client : in out Client_Type;
@@ -1504,7 +1504,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Underlying_Coins__historical;
 
-   --  VotingApps (historical) 🔥
+   --  VotingApps (historical)
    --  Gets votingApps.
    procedure Curve_Get_Voting_Apps__historical
       (Client : in out Client_Type;
@@ -1535,7 +1535,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Voting_Apps__historical;
 
-   --  WeeklyVolumes (historical) 🔥
+   --  WeeklyVolumes (historical)
    --  Gets weeklyVolumes.
    procedure Curve_Get_Weekly_Volumes__historical
       (Client : in out Client_Type;
@@ -1823,7 +1823,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Deposits__current;
 
-   --  Batchs (historical) 🔥
+   --  Batchs (historical)
    --  Gets batchs.
    procedure Dex_Get_Batchs__historical
       (Client : in out Client_Type;
@@ -1852,7 +1852,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Batchs__historical;
 
-   --  Deposits (historical) 🔥
+   --  Deposits (historical)
    --  Gets deposits.
    procedure Dex_Get_Deposits__historical
       (Client : in out Client_Type;
@@ -1883,7 +1883,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Deposits__historical;
 
-   --  Orders (historical) 🔥
+   --  Orders (historical)
    --  Gets orders.
    procedure Dex_Get_Orders__historical
       (Client : in out Client_Type;
@@ -1916,7 +1916,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Orders__historical;
 
-   --  Prices (historical) 🔥
+   --  Prices (historical)
    --  Gets prices.
    procedure Dex_Get_Prices__historical
       (Client : in out Client_Type;
@@ -1945,7 +1945,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Prices__historical;
 
-   --  Solutions (historical) 🔥
+   --  Solutions (historical)
    --  Gets solutions.
    procedure Dex_Get_Solutions__historical
       (Client : in out Client_Type;
@@ -1974,7 +1974,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Solutions__historical;
 
-   --  Statss (historical) 🔥
+   --  Statss (historical)
    --  Gets statss.
    procedure Dex_Get_Statss__historical
       (Client : in out Client_Type;
@@ -2003,7 +2003,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Statss__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Dex_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -2038,7 +2038,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Tokens__historical;
 
-   --  Trades (historical) 🔥
+   --  Trades (historical)
    --  Gets trades.
    procedure Dex_Get_Trades__historical
       (Client : in out Client_Type;
@@ -2071,7 +2071,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Trades__historical;
 
-   --  Users (historical) 🔥
+   --  Users (historical)
    --  Gets users.
    procedure Dex_Get_Users__historical
       (Client : in out Client_Type;
@@ -2100,7 +2100,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Users__historical;
 
-   --  WithdrawRequests (historical) 🔥
+   --  WithdrawRequests (historical)
    --  Gets withdrawRequests.
    procedure Dex_Get_Withdraw_Requests__historical
       (Client : in out Client_Type;
@@ -2131,7 +2131,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Withdraw_Requests__historical;
 
-   --  Withdraws (historical) 🔥
+   --  Withdraws (historical)
    --  Gets withdraws.
    procedure Dex_Get_Withdraws__historical
       (Client : in out Client_Type;
@@ -2383,7 +2383,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Factorys__current;
 
-   --  Bundles (historical) 🔥
+   --  Bundles (historical)
    --  Gets bundles.
    procedure Sushiswap_Get_Bundles__historical
       (Client : in out Client_Type;
@@ -2412,7 +2412,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Bundles__historical;
 
-   --  Burns (historical) 🔥
+   --  Burns (historical)
    --  Gets burns.
    procedure Sushiswap_Get_Burns__historical
       (Client : in out Client_Type;
@@ -2443,7 +2443,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Burns__historical;
 
-   --  DayDatas (historical) 🔥
+   --  DayDatas (historical)
    --  Gets dayDatas.
    procedure Sushiswap_Get_Day_Datas__historical
       (Client : in out Client_Type;
@@ -2472,7 +2472,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Day_Datas__historical;
 
-   --  Factorys (historical) 🔥
+   --  Factorys (historical)
    --  Gets factorys.
    procedure Sushiswap_Get_Factorys__historical
       (Client : in out Client_Type;
@@ -2501,7 +2501,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Factorys__historical;
 
-   --  HourDatas (historical) 🔥
+   --  HourDatas (historical)
    --  Gets hourDatas.
    procedure Sushiswap_Get_Hour_Datas__historical
       (Client : in out Client_Type;
@@ -2530,7 +2530,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Hour_Datas__historical;
 
-   --  LiquidityPositionSnapshots (historical) 🔥
+   --  LiquidityPositionSnapshots (historical)
    --  Gets liquidityPositionSnapshots.
    procedure Sushiswap_Get_Liquidity_Position_Snapshots__historical
       (Client : in out Client_Type;
@@ -2563,7 +2563,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Liquidity_Position_Snapshots__historical;
 
-   --  LiquidityPositions (historical) 🔥
+   --  LiquidityPositions (historical)
    --  Gets liquidityPositions.
    procedure Sushiswap_Get_Liquidity_Positions__historical
       (Client : in out Client_Type;
@@ -2596,7 +2596,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Liquidity_Positions__historical;
 
-   --  Mints (historical) 🔥
+   --  Mints (historical)
    --  Gets mints.
    procedure Sushiswap_Get_Mints__historical
       (Client : in out Client_Type;
@@ -2627,7 +2627,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Mints__historical;
 
-   --  PairDayDatas (historical) 🔥
+   --  PairDayDatas (historical)
    --  Gets pairDayDatas.
    procedure Sushiswap_Get_Pair_Day_Datas__historical
       (Client : in out Client_Type;
@@ -2662,7 +2662,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pair_Day_Datas__historical;
 
-   --  PairHourDatas (historical) 🔥
+   --  PairHourDatas (historical)
    --  Gets pairHourDatas.
    procedure Sushiswap_Get_Pair_Hour_Datas__historical
       (Client : in out Client_Type;
@@ -2693,7 +2693,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pair_Hour_Datas__historical;
 
-   --  Pairs (historical) 🔥
+   --  Pairs (historical)
    --  Gets pairs.
    procedure Sushiswap_Get_Pairs__historical
       (Client : in out Client_Type;
@@ -2728,7 +2728,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Pairs__historical;
 
-   --  Swaps (historical) 🔥
+   --  Swaps (historical)
    --  Gets swaps.
    procedure Sushiswap_Get_Swaps__historical
       (Client : in out Client_Type;
@@ -2759,7 +2759,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__historical;
 
-   --  TokenDayDatas (historical) 🔥
+   --  TokenDayDatas (historical)
    --  Gets tokenDayDatas.
    procedure Sushiswap_Get_Token_Day_Datas__historical
       (Client : in out Client_Type;
@@ -2788,7 +2788,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Token_Day_Datas__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Sushiswap_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -2821,7 +2821,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Tokens__historical;
 
-   --  Transactions (historical) 🔥
+   --  Transactions (historical)
    --  Gets transactions.
    procedure Sushiswap_Get_Transactions__historical
       (Client : in out Client_Type;
@@ -2850,7 +2850,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Transactions__historical;
 
-   --  Users (historical) 🔥
+   --  Users (historical)
    --  Gets users.
    procedure Sushiswap_Get_Users__historical
       (Client : in out Client_Type;
@@ -3121,7 +3121,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Burns__current;
 
-   --  Bundles (historical) 🔥
+   --  Bundles (historical)
    --  Gets bundles.
    procedure Uniswap_V2_Get_Bundles__historical
       (Client : in out Client_Type;
@@ -3150,7 +3150,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Bundles__historical;
 
-   --  Burns (historical) 🔥
+   --  Burns (historical)
    --  Gets burns.
    procedure Uniswap_V2_Get_Burns__historical
       (Client : in out Client_Type;
@@ -3181,7 +3181,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Burns__historical;
 
-   --  LiquidityPositionSnapshots (historical) 🔥
+   --  LiquidityPositionSnapshots (historical)
    --  Gets liquidityPositionSnapshots.
    procedure Uniswap_V2_Get_Liquidity_Position_Snapshots__historical
       (Client : in out Client_Type;
@@ -3214,7 +3214,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Liquidity_Position_Snapshots__historical;
 
-   --  LiquidityPositions (historical) 🔥
+   --  LiquidityPositions (historical)
    --  Gets liquidityPositions.
    procedure Uniswap_V2_Get_Liquidity_Positions__historical
       (Client : in out Client_Type;
@@ -3247,7 +3247,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Liquidity_Positions__historical;
 
-   --  Mints (historical) 🔥
+   --  Mints (historical)
    --  Gets mints.
    procedure Uniswap_V2_Get_Mints__historical
       (Client : in out Client_Type;
@@ -3278,7 +3278,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Mints__historical;
 
-   --  PairDayDatas (historical) 🔥
+   --  PairDayDatas (historical)
    --  Gets pairDayDatas.
    procedure Uniswap_V2_Get_Pair_Day_Datas__historical
       (Client : in out Client_Type;
@@ -3311,7 +3311,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Pair_Day_Datas__historical;
 
-   --  PairHourDatas (historical) 🔥
+   --  PairHourDatas (historical)
    --  Gets pairHourDatas.
    procedure Uniswap_V2_Get_Pair_Hour_Datas__historical
       (Client : in out Client_Type;
@@ -3342,7 +3342,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Pair_Hour_Datas__historical;
 
-   --  Pairs (historical) 🔥
+   --  Pairs (historical)
    --  Gets pairs.
    procedure Uniswap_V2_Get_Pairs__historical
       (Client : in out Client_Type;
@@ -3375,7 +3375,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Pairs__historical;
 
-   --  Swaps (historical) 🔥
+   --  Swaps (historical)
    --  Gets swaps.
    procedure Uniswap_V2_Get_Swaps__historical
       (Client : in out Client_Type;
@@ -3406,7 +3406,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Swaps__historical;
 
-   --  TokenDayDatas (historical) 🔥
+   --  TokenDayDatas (historical)
    --  Gets tokenDayDatas.
    procedure Uniswap_V2_Get_Token_Day_Datas__historical
       (Client : in out Client_Type;
@@ -3435,7 +3435,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Token_Day_Datas__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Uniswap_V2_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -3468,7 +3468,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Tokens__historical;
 
-   --  Transactions (historical) 🔥
+   --  Transactions (historical)
    --  Gets transactions.
    procedure Uniswap_V2_Get_Transactions__historical
       (Client : in out Client_Type;
@@ -3497,7 +3497,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Transactions__historical;
 
-   --  UniswapDayDatas (historical) 🔥
+   --  UniswapDayDatas (historical)
    --  Gets uniswapDayDatas.
    procedure Uniswap_V2_Get_Uniswap_Day_Datas__historical
       (Client : in out Client_Type;
@@ -3526,7 +3526,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Uniswap_Day_Datas__historical;
 
-   --  UniswapFactorys (historical) 🔥
+   --  UniswapFactorys (historical)
    --  Gets uniswapFactorys.
    procedure Uniswap_V2_Get_Uniswap_Factorys__historical
       (Client : in out Client_Type;
@@ -3555,7 +3555,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Uniswap_Factorys__historical;
 
-   --  Users (historical) 🔥
+   --  Users (historical)
    --  Gets users.
    procedure Uniswap_V2_Get_Users__historical
       (Client : in out Client_Type;
@@ -3860,7 +3860,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Factorys__current;
 
-   --  Bundles (historical) 🔥
+   --  Bundles (historical)
    --  Gets bundles.
    procedure Uniswap_V3_Get_Bundles__historical
       (Client : in out Client_Type;
@@ -3889,7 +3889,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Bundles__historical;
 
-   --  Burns (historical) 🔥
+   --  Burns (historical)
    --  Gets burns.
    procedure Uniswap_V3_Get_Burns__historical
       (Client : in out Client_Type;
@@ -3924,7 +3924,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Burns__historical;
 
-   --  Factorys (historical) 🔥
+   --  Factorys (historical)
    --  Gets factorys.
    procedure Uniswap_V3_Get_Factorys__historical
       (Client : in out Client_Type;
@@ -3953,7 +3953,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Factorys__historical;
 
-   --  Mints (historical) 🔥
+   --  Mints (historical)
    --  Gets mints.
    procedure Uniswap_V3_Get_Mints__historical
       (Client : in out Client_Type;
@@ -3988,7 +3988,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Mints__historical;
 
-   --  PoolDayDatas (historical) 🔥
+   --  PoolDayDatas (historical)
    --  Gets poolDayDatas.
    procedure Uniswap_V3_Get_Pool_Day_Datas__historical
       (Client : in out Client_Type;
@@ -4019,7 +4019,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Pool_Day_Datas__historical;
 
-   --  PoolHourDatas (historical) 🔥
+   --  PoolHourDatas (historical)
    --  Gets poolHourDatas.
    procedure Uniswap_V3_Get_Pool_Hour_Datas__historical
       (Client : in out Client_Type;
@@ -4050,7 +4050,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Pool_Hour_Datas__historical;
 
-   --  Pools (historical) 🔥
+   --  Pools (historical)
    --  Gets pools.
    procedure Uniswap_V3_Get_Pools__historical
       (Client : in out Client_Type;
@@ -4083,7 +4083,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Pools__historical;
 
-   --  PositionSnapshots (historical) 🔥
+   --  PositionSnapshots (historical)
    --  Gets positionSnapshots.
    procedure Uniswap_V3_Get_Position_Snapshots__historical
       (Client : in out Client_Type;
@@ -4114,7 +4114,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Position_Snapshots__historical;
 
-   --  Positions (historical) 🔥
+   --  Positions (historical)
    --  Gets positions.
    procedure Uniswap_V3_Get_Positions__historical
       (Client : in out Client_Type;
@@ -4149,7 +4149,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Positions__historical;
 
-   --  Swaps (historical) 🔥
+   --  Swaps (historical)
    --  Gets swaps.
    procedure Uniswap_V3_Get_Swaps__historical
       (Client : in out Client_Type;
@@ -4184,7 +4184,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Swaps__historical;
 
-   --  TickDayDatas (historical) 🔥
+   --  TickDayDatas (historical)
    --  Gets tickDayDatas.
    procedure Uniswap_V3_Get_Tick_Day_Datas__historical
       (Client : in out Client_Type;
@@ -4215,7 +4215,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Tick_Day_Datas__historical;
 
-   --  Ticks (historical) 🔥
+   --  Ticks (historical)
    --  Gets ticks.
    procedure Uniswap_V3_Get_Ticks__historical
       (Client : in out Client_Type;
@@ -4246,7 +4246,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Ticks__historical;
 
-   --  TokenHourDatas (historical) 🔥
+   --  TokenHourDatas (historical)
    --  Gets tokenHourDatas.
    procedure Uniswap_V3_Get_Token_Hour_Datas__historical
       (Client : in out Client_Type;
@@ -4275,7 +4275,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Token_Hour_Datas__historical;
 
-   --  TokenV3DayDatas (historical) 🔥
+   --  TokenV3DayDatas (historical)
    --  Gets tokenV3DayDatas.
    procedure Uniswap_V3_Get_Token_V3Day_Datas__historical
       (Client : in out Client_Type;
@@ -4304,7 +4304,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Token_V3Day_Datas__historical;
 
-   --  Tokens (historical) 🔥
+   --  Tokens (historical)
    --  Gets tokens.
    procedure Uniswap_V3_Get_Tokens__historical
       (Client : in out Client_Type;
@@ -4337,7 +4337,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Tokens__historical;
 
-   --  Transactions (historical) 🔥
+   --  Transactions (historical)
    --  Gets transactions.
    procedure Uniswap_V3_Get_Transactions__historical
       (Client : in out Client_Type;
@@ -4366,7 +4366,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Transactions__historical;
 
-   --  UniswapDayDatas (historical) 🔥
+   --  UniswapDayDatas (historical)
    --  Gets uniswapDayDatas.
    procedure Uniswap_V3_Get_Uniswap_Day_Datas__historical
       (Client : in out Client_Type;

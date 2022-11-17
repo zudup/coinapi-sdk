@@ -1,7 +1,7 @@
 @isTest
 private class OASCowApiTest {
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * Gets orders.
      */
@@ -51,7 +51,7 @@ private class OASCowApiTest {
     }
 
     /**
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * Gets settlements.
      */
@@ -101,7 +101,7 @@ private class OASCowApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      */
@@ -154,7 +154,7 @@ private class OASCowApiTest {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * Gets trades.
      */
@@ -206,7 +206,7 @@ private class OASCowApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      */

@@ -1014,7 +1014,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistorical
      *
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1036,7 +1036,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalWithHttpInfo
      *
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1140,7 +1140,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalAsync
      *
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1165,7 +1165,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalAsyncWithHttpInfo
      *
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1352,7 +1352,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistorical
      *
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1377,7 +1377,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalWithHttpInfo
      *
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1484,7 +1484,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalAsync
      *
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1512,7 +1512,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalAsyncWithHttpInfo
      *
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1735,7 +1735,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactorysHistorical
      *
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1757,7 +1757,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactorysHistoricalWithHttpInfo
      *
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1861,7 +1861,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactorysHistoricalAsync
      *
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1886,7 +1886,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactorysHistoricalAsyncWithHttpInfo
      *
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2073,7 +2073,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistorical
      *
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2098,7 +2098,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalWithHttpInfo
      *
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2205,7 +2205,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalAsync
      *
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2233,7 +2233,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalAsyncWithHttpInfo
      *
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2456,7 +2456,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolDayDatasHistorical
      *
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -2479,7 +2479,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolDayDatasHistoricalWithHttpInfo
      *
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2584,7 +2584,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolDayDatasHistoricalAsync
      *
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2610,7 +2610,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolDayDatasHistoricalAsyncWithHttpInfo
      *
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2809,7 +2809,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolHourDatasHistorical
      *
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -2832,7 +2832,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolHourDatasHistoricalWithHttpInfo
      *
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2937,7 +2937,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolHourDatasHistoricalAsync
      *
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2963,7 +2963,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolHourDatasHistoricalAsyncWithHttpInfo
      *
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3162,7 +3162,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistorical
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3186,7 +3186,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalWithHttpInfo
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3292,7 +3292,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalAsync
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3319,7 +3319,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalAsyncWithHttpInfo
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3530,7 +3530,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionSnapshotsHistorical
      *
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -3553,7 +3553,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionSnapshotsHistoricalWithHttpInfo
      *
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3658,7 +3658,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionSnapshotsHistoricalAsync
      *
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3684,7 +3684,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionSnapshotsHistoricalAsyncWithHttpInfo
      *
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3883,7 +3883,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistorical
      *
-     * Positions (historical) 🔥
+     * Positions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3908,7 +3908,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalWithHttpInfo
      *
-     * Positions (historical) 🔥
+     * Positions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4015,7 +4015,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalAsync
      *
-     * Positions (historical) 🔥
+     * Positions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4043,7 +4043,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalAsyncWithHttpInfo
      *
-     * Positions (historical) 🔥
+     * Positions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4266,7 +4266,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistorical
      *
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4291,7 +4291,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalWithHttpInfo
      *
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4398,7 +4398,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalAsync
      *
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4426,7 +4426,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalAsyncWithHttpInfo
      *
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4649,7 +4649,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTickDayDatasHistorical
      *
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -4672,7 +4672,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTickDayDatasHistoricalWithHttpInfo
      *
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4777,7 +4777,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTickDayDatasHistoricalAsync
      *
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4803,7 +4803,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTickDayDatasHistoricalAsyncWithHttpInfo
      *
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5002,7 +5002,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistorical
      *
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -5025,7 +5025,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalWithHttpInfo
      *
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5130,7 +5130,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalAsync
      *
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5156,7 +5156,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalAsyncWithHttpInfo
      *
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -5355,7 +5355,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenHourDatasHistorical
      *
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5377,7 +5377,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenHourDatasHistoricalWithHttpInfo
      *
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5481,7 +5481,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenHourDatasHistoricalAsync
      *
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5506,7 +5506,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenHourDatasHistoricalAsyncWithHttpInfo
      *
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5693,7 +5693,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenV3DayDatasHistorical
      *
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5715,7 +5715,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo
      *
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5819,7 +5819,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenV3DayDatasHistoricalAsync
      *
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5844,7 +5844,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokenV3DayDatasHistoricalAsyncWithHttpInfo
      *
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6031,7 +6031,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistorical
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6055,7 +6055,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6161,7 +6161,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalAsync
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6188,7 +6188,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalAsyncWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6399,7 +6399,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistorical
      *
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6421,7 +6421,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalWithHttpInfo
      *
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6525,7 +6525,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalAsync
      *
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6550,7 +6550,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalAsyncWithHttpInfo
      *
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6737,7 +6737,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetUniswapDayDatasHistorical
      *
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6759,7 +6759,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo
      *
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6863,7 +6863,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetUniswapDayDatasHistoricalAsync
      *
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6888,7 +6888,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetUniswapDayDatasHistoricalAsyncWithHttpInfo
      *
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

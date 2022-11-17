@@ -6,17 +6,17 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
 [**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥
-[**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥
-[**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥
-[**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical) 🔥
-[**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) 🔥
-[**dexGetStatssHistorical**](DexApi.md#dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical) 🔥
-[**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
-[**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
-[**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥
-[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
-[**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+[**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+[**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+[**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+[**dexGetStatssHistorical**](DexApi.md#dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
+[**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
+[**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
+[**dexGetWithdrawRequestsHistorical**](DexApi.md#dexGetWithdrawRequestsHistorical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical)
+[**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
 [**dexOrdersCurrent**](DexApi.md#dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**dexPricesCurrent**](DexApi.md#dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
@@ -115,7 +115,7 @@ No authorization required
 
 > [DexBatchDTO] dexGetBatchsHistorical(opts)
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 Gets batchs.
 
@@ -170,7 +170,7 @@ No authorization required
 
 > [DexDepositDTO] dexGetDepositsHistorical(opts)
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 Gets deposits.
 
@@ -227,7 +227,7 @@ No authorization required
 
 > [DexOrderDTO] dexGetOrdersHistorical(opts)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -286,7 +286,7 @@ No authorization required
 
 > [DexPriceDTO] dexGetPricesHistorical(opts)
 
-Prices (historical) 🔥
+Prices (historical)
 
 Gets prices.
 
@@ -341,7 +341,7 @@ No authorization required
 
 > [DexSolutionDTO] dexGetSolutionsHistorical(opts)
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 Gets solutions.
 
@@ -396,7 +396,7 @@ No authorization required
 
 > [DexStatsDTO] dexGetStatssHistorical(opts)
 
-Statss (historical) 🔥
+Statss (historical)
 
 Gets statss.
 
@@ -451,7 +451,7 @@ No authorization required
 
 > [DexTokenDTO] dexGetTokensHistorical(opts)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -512,7 +512,7 @@ No authorization required
 
 > [DexTradeDTO] dexGetTradesHistorical(opts)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -571,7 +571,7 @@ No authorization required
 
 > [DexUserDTO] dexGetUsersHistorical(opts)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -626,7 +626,7 @@ No authorization required
 
 > [DexWithdrawRequestDTO] dexGetWithdrawRequestsHistorical(opts)
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -683,7 +683,7 @@ No authorization required
 
 > [DexWithdrawDTO] dexGetWithdrawsHistorical(opts)
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 Gets withdraws.
 

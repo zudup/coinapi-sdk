@@ -48,7 +48,7 @@ API.Client.CowApi = function($http, $httpParamSerializer, $injector) {
 API.Client.CowApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * Orders (historical) 🔥
+ * Orders (historical)
  * Gets orders.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -104,7 +104,7 @@ API.Client.CowApi.prototype.cowGetOrdersHistorical = function(opt_startBlock, op
 }
 
 /**
- * Settlements (historical) 🔥
+ * Settlements (historical)
  * Gets settlements.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -160,7 +160,7 @@ API.Client.CowApi.prototype.cowGetSettlementsHistorical = function(opt_startBloc
 }
 
 /**
- * Tokens (historical) 🔥
+ * Tokens (historical)
  * Gets tokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -231,7 +231,7 @@ API.Client.CowApi.prototype.cowGetTokensHistorical = function(opt_startBlock, op
 }
 
 /**
- * Trades (historical) 🔥
+ * Trades (historical)
  * Gets trades.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -297,7 +297,7 @@ API.Client.CowApi.prototype.cowGetTradesHistorical = function(opt_startBlock, op
 }
 
 /**
- * Users (historical) 🔥
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

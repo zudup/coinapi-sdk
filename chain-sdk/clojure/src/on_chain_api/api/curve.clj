@@ -545,7 +545,7 @@
 
 
 (defn-spec curve-get-accounts-historical-with-http-info any?
-  "Accounts (historical) 🔥
+  "Accounts (historical)
   Gets accounts."
   ([] (curve-get-accounts-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address]} (s/map-of keyword? any?)]
@@ -559,7 +559,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-accounts-historical (s/coll-of curve/account-dto-spec)
-  "Accounts (historical) 🔥
+  "Accounts (historical)
   Gets accounts."
   ([] (curve-get-accounts-historical nil))
   ([optional-params any?]
@@ -570,7 +570,7 @@
 
 
 (defn-spec curve-get-add-liquidity-events-historical-with-http-info any?
-  "AddLiquidityEvents (historical) 🔥
+  "AddLiquidityEvents (historical)
   Gets addLiquidityEvents."
   ([] (curve-get-add-liquidity-events-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -584,7 +584,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-add-liquidity-events-historical (s/coll-of curve/add-liquidity-event-dto-spec)
-  "AddLiquidityEvents (historical) 🔥
+  "AddLiquidityEvents (historical)
   Gets addLiquidityEvents."
   ([] (curve-get-add-liquidity-events-historical nil))
   ([optional-params any?]
@@ -595,7 +595,7 @@
 
 
 (defn-spec curve-get-admin-fee-change-logs-historical-with-http-info any?
-  "AdminFeeChangeLogs (historical) 🔥
+  "AdminFeeChangeLogs (historical)
   Gets adminFeeChangeLogs."
   ([] (curve-get-admin-fee-change-logs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -609,7 +609,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-admin-fee-change-logs-historical (s/coll-of curve/admin-fee-change-log-dto-spec)
-  "AdminFeeChangeLogs (historical) 🔥
+  "AdminFeeChangeLogs (historical)
   Gets adminFeeChangeLogs."
   ([] (curve-get-admin-fee-change-logs-historical nil))
   ([optional-params any?]
@@ -620,7 +620,7 @@
 
 
 (defn-spec curve-get-amplification-coeff-change-logs-historical-with-http-info any?
-  "AmplificationCoeffChangeLogs (historical) 🔥
+  "AmplificationCoeffChangeLogs (historical)
   Gets amplificationCoeffChangeLogs."
   ([] (curve-get-amplification-coeff-change-logs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -634,7 +634,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-amplification-coeff-change-logs-historical (s/coll-of curve/amplification-coeff-change-log-dto-spec)
-  "AmplificationCoeffChangeLogs (historical) 🔥
+  "AmplificationCoeffChangeLogs (historical)
   Gets amplificationCoeffChangeLogs."
   ([] (curve-get-amplification-coeff-change-logs-historical nil))
   ([optional-params any?]
@@ -645,7 +645,7 @@
 
 
 (defn-spec curve-get-coins-historical-with-http-info any?
-  "Coins (historical) 🔥
+  "Coins (historical)
   Gets coins."
   ([] (curve-get-coins-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -659,7 +659,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-coins-historical (s/coll-of curve/coin-dto-spec)
-  "Coins (historical) 🔥
+  "Coins (historical)
   Gets coins."
   ([] (curve-get-coins-historical nil))
   ([optional-params any?]
@@ -670,7 +670,7 @@
 
 
 (defn-spec curve-get-contract-versions-historical-with-http-info any?
-  "ContractVersions (historical) 🔥
+  "ContractVersions (historical)
   Gets contractVersions."
   ([] (curve-get-contract-versions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address]} (s/map-of keyword? any?)]
@@ -684,7 +684,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-contract-versions-historical (s/coll-of curve/contract-version-dto-spec)
-  "ContractVersions (historical) 🔥
+  "ContractVersions (historical)
   Gets contractVersions."
   ([] (curve-get-contract-versions-historical nil))
   ([optional-params any?]
@@ -695,7 +695,7 @@
 
 
 (defn-spec curve-get-contracts-historical-with-http-info any?
-  "Contracts (historical) 🔥
+  "Contracts (historical)
   Gets contracts."
   ([] (curve-get-contracts-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -709,7 +709,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-contracts-historical (s/coll-of curve/contract-dto-spec)
-  "Contracts (historical) 🔥
+  "Contracts (historical)
   Gets contracts."
   ([] (curve-get-contracts-historical nil))
   ([optional-params any?]
@@ -720,7 +720,7 @@
 
 
 (defn-spec curve-get-daily-volumes-historical-with-http-info any?
-  "DailyVolumes (historical) 🔥
+  "DailyVolumes (historical)
   Gets dailyVolumes."
   ([] (curve-get-daily-volumes-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -734,7 +734,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-daily-volumes-historical (s/coll-of curve/daily-volume-dto-spec)
-  "DailyVolumes (historical) 🔥
+  "DailyVolumes (historical)
   Gets dailyVolumes."
   ([] (curve-get-daily-volumes-historical nil))
   ([optional-params any?]
@@ -745,7 +745,7 @@
 
 
 (defn-spec curve-get-exchanges-historical-with-http-info any?
-  "Exchanges (historical) 🔥
+  "Exchanges (historical)
   Gets exchanges."
   ([] (curve-get-exchanges-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -759,7 +759,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-exchanges-historical (s/coll-of curve/exchange-dto-spec)
-  "Exchanges (historical) 🔥
+  "Exchanges (historical)
   Gets exchanges."
   ([] (curve-get-exchanges-historical nil))
   ([optional-params any?]
@@ -770,7 +770,7 @@
 
 
 (defn-spec curve-get-fee-change-logs-historical-with-http-info any?
-  "FeeChangeLogs (historical) 🔥
+  "FeeChangeLogs (historical)
   Gets feeChangeLogs."
   ([] (curve-get-fee-change-logs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -784,7 +784,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-fee-change-logs-historical (s/coll-of curve/fee-change-log-dto-spec)
-  "FeeChangeLogs (historical) 🔥
+  "FeeChangeLogs (historical)
   Gets feeChangeLogs."
   ([] (curve-get-fee-change-logs-historical nil))
   ([optional-params any?]
@@ -795,7 +795,7 @@
 
 
 (defn-spec curve-get-gauge-deposits-historical-with-http-info any?
-  "GaugeDeposits (historical) 🔥
+  "GaugeDeposits (historical)
   Gets gaugeDeposits."
   ([] (curve-get-gauge-deposits-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -809,7 +809,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-deposits-historical (s/coll-of curve/gauge-deposit-dto-spec)
-  "GaugeDeposits (historical) 🔥
+  "GaugeDeposits (historical)
   Gets gaugeDeposits."
   ([] (curve-get-gauge-deposits-historical nil))
   ([optional-params any?]
@@ -820,7 +820,7 @@
 
 
 (defn-spec curve-get-gauge-liquiditys-historical-with-http-info any?
-  "GaugeLiquiditys (historical) 🔥
+  "GaugeLiquiditys (historical)
   Gets gaugeLiquiditys."
   ([] (curve-get-gauge-liquiditys-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
@@ -834,7 +834,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-liquiditys-historical (s/coll-of curve/gauge-liquidity-dto-spec)
-  "GaugeLiquiditys (historical) 🔥
+  "GaugeLiquiditys (historical)
   Gets gaugeLiquiditys."
   ([] (curve-get-gauge-liquiditys-historical nil))
   ([optional-params any?]
@@ -845,7 +845,7 @@
 
 
 (defn-spec curve-get-gauge-total-weights-historical-with-http-info any?
-  "GaugeTotalWeights (historical) 🔥
+  "GaugeTotalWeights (historical)
   Gets gaugeTotalWeights."
   ([] (curve-get-gauge-total-weights-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -859,7 +859,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-total-weights-historical (s/coll-of curve/gauge-total-weight-dto-spec)
-  "GaugeTotalWeights (historical) 🔥
+  "GaugeTotalWeights (historical)
   Gets gaugeTotalWeights."
   ([] (curve-get-gauge-total-weights-historical nil))
   ([optional-params any?]
@@ -870,7 +870,7 @@
 
 
 (defn-spec curve-get-gauge-type-weights-historical-with-http-info any?
-  "GaugeTypeWeights (historical) 🔥
+  "GaugeTypeWeights (historical)
   Gets gaugeTypeWeights."
   ([] (curve-get-gauge-type-weights-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -884,7 +884,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-type-weights-historical (s/coll-of curve/gauge-type-weight-dto-spec)
-  "GaugeTypeWeights (historical) 🔥
+  "GaugeTypeWeights (historical)
   Gets gaugeTypeWeights."
   ([] (curve-get-gauge-type-weights-historical nil))
   ([optional-params any?]
@@ -895,7 +895,7 @@
 
 
 (defn-spec curve-get-gauge-types-historical-with-http-info any?
-  "GaugeTypes (historical) 🔥
+  "GaugeTypes (historical)
   Gets gaugeTypes."
   ([] (curve-get-gauge-types-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id name]} (s/map-of keyword? any?)]
@@ -909,7 +909,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-types-historical (s/coll-of curve/gauge-type-dto-spec)
-  "GaugeTypes (historical) 🔥
+  "GaugeTypes (historical)
   Gets gaugeTypes."
   ([] (curve-get-gauge-types-historical nil))
   ([optional-params any?]
@@ -920,7 +920,7 @@
 
 
 (defn-spec curve-get-gauge-weight-votes-historical-with-http-info any?
-  "GaugeWeightVotes (historical) 🔥
+  "GaugeWeightVotes (historical)
   Gets gaugeWeightVotes."
   ([] (curve-get-gauge-weight-votes-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
@@ -934,7 +934,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-weight-votes-historical (s/coll-of curve/gauge-weight-vote-dto-spec)
-  "GaugeWeightVotes (historical) 🔥
+  "GaugeWeightVotes (historical)
   Gets gaugeWeightVotes."
   ([] (curve-get-gauge-weight-votes-historical nil))
   ([optional-params any?]
@@ -945,7 +945,7 @@
 
 
 (defn-spec curve-get-gauge-weights-historical-with-http-info any?
-  "GaugeWeights (historical) 🔥
+  "GaugeWeights (historical)
   Gets gaugeWeights."
   ([] (curve-get-gauge-weights-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -959,7 +959,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-weights-historical (s/coll-of curve/gauge-weight-dto-spec)
-  "GaugeWeights (historical) 🔥
+  "GaugeWeights (historical)
   Gets gaugeWeights."
   ([] (curve-get-gauge-weights-historical nil))
   ([optional-params any?]
@@ -970,7 +970,7 @@
 
 
 (defn-spec curve-get-gauge-withdraws-historical-with-http-info any?
-  "GaugeWithdraws (historical) 🔥
+  "GaugeWithdraws (historical)
   Gets gaugeWithdraws."
   ([] (curve-get-gauge-withdraws-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -984,7 +984,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauge-withdraws-historical (s/coll-of curve/gauge-withdraw-dto-spec)
-  "GaugeWithdraws (historical) 🔥
+  "GaugeWithdraws (historical)
   Gets gaugeWithdraws."
   ([] (curve-get-gauge-withdraws-historical nil))
   ([optional-params any?]
@@ -995,7 +995,7 @@
 
 
 (defn-spec curve-get-gauges-historical-with-http-info any?
-  "Gauges (historical) 🔥
+  "Gauges (historical)
   Gets gauges."
   ([] (curve-get-gauges-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address pool]} (s/map-of keyword? any?)]
@@ -1009,7 +1009,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-gauges-historical (s/coll-of curve/gauge-dto-spec)
-  "Gauges (historical) 🔥
+  "Gauges (historical)
   Gets gauges."
   ([] (curve-get-gauges-historical nil))
   ([optional-params any?]
@@ -1020,7 +1020,7 @@
 
 
 (defn-spec curve-get-hourly-volumes-historical-with-http-info any?
-  "HourlyVolumes (historical) 🔥
+  "HourlyVolumes (historical)
   Gets hourlyVolumes."
   ([] (curve-get-hourly-volumes-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1034,7 +1034,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-hourly-volumes-historical (s/coll-of curve/hourly-volume-dto-spec)
-  "HourlyVolumes (historical) 🔥
+  "HourlyVolumes (historical)
   Gets hourlyVolumes."
   ([] (curve-get-hourly-volumes-historical nil))
   ([optional-params any?]
@@ -1045,7 +1045,7 @@
 
 
 (defn-spec curve-get-lp-tokens-historical-with-http-info any?
-  "LpTokens (historical) 🔥
+  "LpTokens (historical)
   Gets lpTokens."
   ([] (curve-get-lp-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address name symbol pool]} (s/map-of keyword? any?)]
@@ -1059,7 +1059,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-lp-tokens-historical (s/coll-of curve/lp-token-dto-spec)
-  "LpTokens (historical) 🔥
+  "LpTokens (historical)
   Gets lpTokens."
   ([] (curve-get-lp-tokens-historical nil))
   ([optional-params any?]
@@ -1070,7 +1070,7 @@
 
 
 (defn-spec curve-get-pools-historical-with-http-info any?
-  "Pools (historical) 🔥
+  "Pools (historical)
   Gets pools."
   ([] (curve-get-pools-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id name]} (s/map-of keyword? any?)]
@@ -1084,7 +1084,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-pools-historical (s/coll-of curve/pool-dto-spec)
-  "Pools (historical) 🔥
+  "Pools (historical)
   Gets pools."
   ([] (curve-get-pools-historical nil))
   ([optional-params any?]
@@ -1095,7 +1095,7 @@
 
 
 (defn-spec curve-get-proposal-votes-historical-with-http-info any?
-  "ProposalVotes (historical) 🔥
+  "ProposalVotes (historical)
   Gets proposalVotes."
   ([] (curve-get-proposal-votes-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1109,7 +1109,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-proposal-votes-historical (s/coll-of curve/proposal-vote-dto-spec)
-  "ProposalVotes (historical) 🔥
+  "ProposalVotes (historical)
   Gets proposalVotes."
   ([] (curve-get-proposal-votes-historical nil))
   ([optional-params any?]
@@ -1120,7 +1120,7 @@
 
 
 (defn-spec curve-get-proposals-historical-with-http-info any?
-  "Proposals (historical) 🔥
+  "Proposals (historical)
   Gets proposals."
   ([] (curve-get-proposals-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1134,7 +1134,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-proposals-historical (s/coll-of curve/proposal-dto-spec)
-  "Proposals (historical) 🔥
+  "Proposals (historical)
   Gets proposals."
   ([] (curve-get-proposals-historical nil))
   ([optional-params any?]
@@ -1145,7 +1145,7 @@
 
 
 (defn-spec curve-get-remove-liquidity-events-historical-with-http-info any?
-  "RemoveLiquidityEvents (historical) 🔥
+  "RemoveLiquidityEvents (historical)
   Gets removeLiquidityEvents."
   ([] (curve-get-remove-liquidity-events-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1159,7 +1159,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-remove-liquidity-events-historical (s/coll-of curve/remove-liquidity-event-dto-spec)
-  "RemoveLiquidityEvents (historical) 🔥
+  "RemoveLiquidityEvents (historical)
   Gets removeLiquidityEvents."
   ([] (curve-get-remove-liquidity-events-historical nil))
   ([optional-params any?]
@@ -1170,7 +1170,7 @@
 
 
 (defn-spec curve-get-remove-liquidity-one-events-historical-with-http-info any?
-  "RemoveLiquidityOneEvents (historical) 🔥
+  "RemoveLiquidityOneEvents (historical)
   Gets removeLiquidityOneEvents."
   ([] (curve-get-remove-liquidity-one-events-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1184,7 +1184,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-remove-liquidity-one-events-historical (s/coll-of curve/remove-liquidity-one-event-dto-spec)
-  "RemoveLiquidityOneEvents (historical) 🔥
+  "RemoveLiquidityOneEvents (historical)
   Gets removeLiquidityOneEvents."
   ([] (curve-get-remove-liquidity-one-events-historical nil))
   ([optional-params any?]
@@ -1195,7 +1195,7 @@
 
 
 (defn-spec curve-get-system-states-historical-with-http-info any?
-  "SystemStates (historical) 🔥
+  "SystemStates (historical)
   Gets systemStates."
   ([] (curve-get-system-states-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1209,7 +1209,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-system-states-historical (s/coll-of curve/system-state-dto-spec)
-  "SystemStates (historical) 🔥
+  "SystemStates (historical)
   Gets systemStates."
   ([] (curve-get-system-states-historical nil))
   ([optional-params any?]
@@ -1220,7 +1220,7 @@
 
 
 (defn-spec curve-get-tokens-historical-with-http-info any?
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (curve-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address name symbol]} (s/map-of keyword? any?)]
@@ -1234,7 +1234,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-tokens-historical (s/coll-of curve/token-dto-spec)
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (curve-get-tokens-historical nil))
   ([optional-params any?]
@@ -1245,7 +1245,7 @@
 
 
 (defn-spec curve-get-transfer-ownership-events-historical-with-http-info any?
-  "TransferOwnershipEvents (historical) 🔥
+  "TransferOwnershipEvents (historical)
   Gets transferOwnershipEvents."
   ([] (curve-get-transfer-ownership-events-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1259,7 +1259,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-transfer-ownership-events-historical (s/coll-of curve/transfer-ownership-event-dto-spec)
-  "TransferOwnershipEvents (historical) 🔥
+  "TransferOwnershipEvents (historical)
   Gets transferOwnershipEvents."
   ([] (curve-get-transfer-ownership-events-historical nil))
   ([optional-params any?]
@@ -1270,7 +1270,7 @@
 
 
 (defn-spec curve-get-underlying-coins-historical-with-http-info any?
-  "UnderlyingCoins (historical) 🔥
+  "UnderlyingCoins (historical)
   Gets underlyingCoins."
   ([] (curve-get-underlying-coins-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1284,7 +1284,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-underlying-coins-historical (s/coll-of curve/underlying-coin-dto-spec)
-  "UnderlyingCoins (historical) 🔥
+  "UnderlyingCoins (historical)
   Gets underlyingCoins."
   ([] (curve-get-underlying-coins-historical nil))
   ([optional-params any?]
@@ -1295,7 +1295,7 @@
 
 
 (defn-spec curve-get-voting-apps-historical-with-http-info any?
-  "VotingApps (historical) 🔥
+  "VotingApps (historical)
   Gets votingApps."
   ([] (curve-get-voting-apps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address]} (s/map-of keyword? any?)]
@@ -1309,7 +1309,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-voting-apps-historical (s/coll-of curve/voting-app-dto-spec)
-  "VotingApps (historical) 🔥
+  "VotingApps (historical)
   Gets votingApps."
   ([] (curve-get-voting-apps-historical nil))
   ([optional-params any?]
@@ -1320,7 +1320,7 @@
 
 
 (defn-spec curve-get-weekly-volumes-historical-with-http-info any?
-  "WeeklyVolumes (historical) 🔥
+  "WeeklyVolumes (historical)
   Gets weeklyVolumes."
   ([] (curve-get-weekly-volumes-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1334,7 +1334,7 @@
               :auth-names    []})))
 
 (defn-spec curve-get-weekly-volumes-historical (s/coll-of curve/weekly-volume-dto-spec)
-  "WeeklyVolumes (historical) 🔥
+  "WeeklyVolumes (historical)
   Gets weeklyVolumes."
   ([] (curve-get-weekly-volumes-historical nil))
   ([optional-params any?]

@@ -6,17 +6,17 @@ Feature | HTTP request | Description
 ------------- | ------------- | -------------
 [**dex_batchs_current**](DEX_API.md#dex_batchs_current) | **Get** /dapps/dex/batchs/current | Batchs (current)
 [**dex_deposits_current**](DEX_API.md#dex_deposits_current) | **Get** /dapps/dex/deposits/current | Deposits (current)
-[**dex_get_batchs_historical**](DEX_API.md#dex_get_batchs_historical) | **Get** /dapps/dex/batchs/historical | Batchs (historical) 🔥
-[**dex_get_deposits_historical**](DEX_API.md#dex_get_deposits_historical) | **Get** /dapps/dex/deposits/historical | Deposits (historical) 🔥
-[**dex_get_orders_historical**](DEX_API.md#dex_get_orders_historical) | **Get** /dapps/dex/orders/historical | Orders (historical) 🔥
-[**dex_get_prices_historical**](DEX_API.md#dex_get_prices_historical) | **Get** /dapps/dex/prices/historical | Prices (historical) 🔥
-[**dex_get_solutions_historical**](DEX_API.md#dex_get_solutions_historical) | **Get** /dapps/dex/solutions/historical | Solutions (historical) 🔥
-[**dex_get_statss_historical**](DEX_API.md#dex_get_statss_historical) | **Get** /dapps/dex/statss/historical | Statss (historical) 🔥
-[**dex_get_tokens_historical**](DEX_API.md#dex_get_tokens_historical) | **Get** /dapps/dex/tokens/historical | Tokens (historical) 🔥
-[**dex_get_trades_historical**](DEX_API.md#dex_get_trades_historical) | **Get** /dapps/dex/trades/historical | Trades (historical) 🔥
-[**dex_get_users_historical**](DEX_API.md#dex_get_users_historical) | **Get** /dapps/dex/users/historical | Users (historical) 🔥
-[**dex_get_withdraw_requests_historical**](DEX_API.md#dex_get_withdraw_requests_historical) | **Get** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
-[**dex_get_withdraws_historical**](DEX_API.md#dex_get_withdraws_historical) | **Get** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dex_get_batchs_historical**](DEX_API.md#dex_get_batchs_historical) | **Get** /dapps/dex/batchs/historical | Batchs (historical)
+[**dex_get_deposits_historical**](DEX_API.md#dex_get_deposits_historical) | **Get** /dapps/dex/deposits/historical | Deposits (historical)
+[**dex_get_orders_historical**](DEX_API.md#dex_get_orders_historical) | **Get** /dapps/dex/orders/historical | Orders (historical)
+[**dex_get_prices_historical**](DEX_API.md#dex_get_prices_historical) | **Get** /dapps/dex/prices/historical | Prices (historical)
+[**dex_get_solutions_historical**](DEX_API.md#dex_get_solutions_historical) | **Get** /dapps/dex/solutions/historical | Solutions (historical)
+[**dex_get_statss_historical**](DEX_API.md#dex_get_statss_historical) | **Get** /dapps/dex/statss/historical | Statss (historical)
+[**dex_get_tokens_historical**](DEX_API.md#dex_get_tokens_historical) | **Get** /dapps/dex/tokens/historical | Tokens (historical)
+[**dex_get_trades_historical**](DEX_API.md#dex_get_trades_historical) | **Get** /dapps/dex/trades/historical | Trades (historical)
+[**dex_get_users_historical**](DEX_API.md#dex_get_users_historical) | **Get** /dapps/dex/users/historical | Users (historical)
+[**dex_get_withdraw_requests_historical**](DEX_API.md#dex_get_withdraw_requests_historical) | **Get** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical)
+[**dex_get_withdraws_historical**](DEX_API.md#dex_get_withdraws_historical) | **Get** /dapps/dex/withdraws/historical | Withdraws (historical)
 [**dex_orders_current**](DEX_API.md#dex_orders_current) | **Get** /dapps/dex/orders/current | Orders (current)
 [**dex_prices_current**](DEX_API.md#dex_prices_current) | **Get** /dapps/dex/prices/current | Prices (current)
 [**dex_solutions_current**](DEX_API.md#dex_solutions_current) | **Get** /dapps/dex/solutions/current | Solutions (current)
@@ -86,7 +86,7 @@ No authorization required
 > dex_get_batchs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_BATCH_DTO]
 
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 Gets batchs.
 
@@ -120,7 +120,7 @@ No authorization required
 > dex_get_deposits_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [DEX_DEPOSIT_DTO]
 
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 Gets deposits.
 
@@ -155,7 +155,7 @@ No authorization required
 > dex_get_orders_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; buy_token:  detachable STRING_32 ; sell_token:  detachable STRING_32 ): detachable LIST [DEX_ORDER_DTO]
 
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -191,7 +191,7 @@ No authorization required
 > dex_get_prices_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_PRICE_DTO]
 
 
-Prices (historical) 🔥
+Prices (historical)
 
 Gets prices.
 
@@ -225,7 +225,7 @@ No authorization required
 > dex_get_solutions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_SOLUTION_DTO]
 
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 Gets solutions.
 
@@ -259,7 +259,7 @@ No authorization required
 > dex_get_statss_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_STATS_DTO]
 
 
-Statss (historical) 🔥
+Statss (historical)
 
 Gets statss.
 
@@ -293,7 +293,7 @@ No authorization required
 > dex_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; address:  detachable STRING_32 ; symbol:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [DEX_TOKEN_DTO]
 
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -330,7 +330,7 @@ No authorization required
 > dex_get_trades_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; buy_token:  detachable STRING_32 ; sell_token:  detachable STRING_32 ): detachable LIST [DEX_TRADE_DTO]
 
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -366,7 +366,7 @@ No authorization required
 > dex_get_users_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_USER_DTO]
 
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -400,7 +400,7 @@ No authorization required
 > dex_get_withdraw_requests_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [DEX_WITHDRAW_REQUEST_DTO]
 
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -435,7 +435,7 @@ No authorization required
 > dex_get_withdraws_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [DEX_WITHDRAW_DTO]
 
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 Gets withdraws.
 

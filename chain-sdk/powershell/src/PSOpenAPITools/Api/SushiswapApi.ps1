@@ -309,7 +309,7 @@ function Invoke-SushiswapFactorysCurrent {
 <#
 .SYNOPSIS
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 .DESCRIPTION
 
@@ -434,7 +434,7 @@ function Invoke-SushiswapGetBundlesHistorical {
 <#
 .SYNOPSIS
 
-Burns (historical) 🔥
+Burns (historical)
 
 .DESCRIPTION
 
@@ -569,7 +569,7 @@ function Invoke-SushiswapGetBurnsHistorical {
 <#
 .SYNOPSIS
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 .DESCRIPTION
 
@@ -694,7 +694,7 @@ function Invoke-SushiswapGetDayDatasHistorical {
 <#
 .SYNOPSIS
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 .DESCRIPTION
 
@@ -819,7 +819,7 @@ function Invoke-SushiswapGetFactorysHistorical {
 <#
 .SYNOPSIS
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 .DESCRIPTION
 
@@ -944,7 +944,7 @@ function Invoke-SushiswapGetHourDatasHistorical {
 <#
 .SYNOPSIS
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 .DESCRIPTION
 
@@ -1089,7 +1089,7 @@ function Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical {
 <#
 .SYNOPSIS
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 .DESCRIPTION
 
@@ -1234,7 +1234,7 @@ function Invoke-SushiswapGetLiquidityPositionsHistorical {
 <#
 .SYNOPSIS
 
-Mints (historical) 🔥
+Mints (historical)
 
 .DESCRIPTION
 
@@ -1369,7 +1369,7 @@ function Invoke-SushiswapGetMintsHistorical {
 <#
 .SYNOPSIS
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 .DESCRIPTION
 
@@ -1524,7 +1524,7 @@ function Invoke-SushiswapGetPairDayDatasHistorical {
 <#
 .SYNOPSIS
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 .DESCRIPTION
 
@@ -1659,7 +1659,7 @@ function Invoke-SushiswapGetPairHourDatasHistorical {
 <#
 .SYNOPSIS
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 .DESCRIPTION
 
@@ -1814,7 +1814,7 @@ function Invoke-SushiswapGetPairsHistorical {
 <#
 .SYNOPSIS
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 .DESCRIPTION
 
@@ -1949,7 +1949,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 .DESCRIPTION
 
@@ -2074,7 +2074,7 @@ function Invoke-SushiswapGetTokenDayDatasHistorical {
 <#
 .SYNOPSIS
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 .DESCRIPTION
 
@@ -2219,7 +2219,7 @@ function Invoke-SushiswapGetTokensHistorical {
 <#
 .SYNOPSIS
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 .DESCRIPTION
 
@@ -2344,7 +2344,7 @@ function Invoke-SushiswapGetTransactionsHistorical {
 <#
 .SYNOPSIS
 
-Users (historical) 🔥
+Users (historical)
 
 .DESCRIPTION
 

@@ -152,7 +152,7 @@
 
 
 (defn-spec uniswap-v2-get-bundles-historical-with-http-info any?
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (uniswap-v2-get-bundles-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -166,7 +166,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-bundles-historical (s/coll-of uniswap-v2/bundle-dto-spec)
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (uniswap-v2-get-bundles-historical nil))
   ([optional-params any?]
@@ -177,7 +177,7 @@
 
 
 (defn-spec uniswap-v2-get-burns-historical-with-http-info any?
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (uniswap-v2-get-burns-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -191,7 +191,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-burns-historical (s/coll-of uniswap-v2/burn-dto-spec)
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (uniswap-v2-get-burns-historical nil))
   ([optional-params any?]
@@ -202,7 +202,7 @@
 
 
 (defn-spec uniswap-v2-get-liquidity-position-snapshots-historical-with-http-info any?
-  "LiquidityPositionSnapshots (historical) 🔥
+  "LiquidityPositionSnapshots (historical)
   Gets liquidityPositionSnapshots."
   ([] (uniswap-v2-get-liquidity-position-snapshots-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user pair]} (s/map-of keyword? any?)]
@@ -216,7 +216,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-liquidity-position-snapshots-historical (s/coll-of uniswap-v2/liquidity-position-snapshot-dto-spec)
-  "LiquidityPositionSnapshots (historical) 🔥
+  "LiquidityPositionSnapshots (historical)
   Gets liquidityPositionSnapshots."
   ([] (uniswap-v2-get-liquidity-position-snapshots-historical nil))
   ([optional-params any?]
@@ -227,7 +227,7 @@
 
 
 (defn-spec uniswap-v2-get-liquidity-positions-historical-with-http-info any?
-  "LiquidityPositions (historical) 🔥
+  "LiquidityPositions (historical)
   Gets liquidityPositions."
   ([] (uniswap-v2-get-liquidity-positions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user pair]} (s/map-of keyword? any?)]
@@ -241,7 +241,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-liquidity-positions-historical (s/coll-of uniswap-v2/liquidity-position-dto-spec)
-  "LiquidityPositions (historical) 🔥
+  "LiquidityPositions (historical)
   Gets liquidityPositions."
   ([] (uniswap-v2-get-liquidity-positions-historical nil))
   ([optional-params any?]
@@ -252,7 +252,7 @@
 
 
 (defn-spec uniswap-v2-get-mints-historical-with-http-info any?
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (uniswap-v2-get-mints-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -266,7 +266,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-mints-historical (s/coll-of uniswap-v2/mint-dto-spec)
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (uniswap-v2-get-mints-historical nil))
   ([optional-params any?]
@@ -277,7 +277,7 @@
 
 
 (defn-spec uniswap-v2-get-pair-day-datas-historical-with-http-info any?
-  "PairDayDatas (historical) 🔥
+  "PairDayDatas (historical)
   Gets pairDayDatas."
   ([] (uniswap-v2-get-pair-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id token_0 token_1]} (s/map-of keyword? any?)]
@@ -291,7 +291,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-pair-day-datas-historical (s/coll-of uniswap-v2/pair-day-data-dto-spec)
-  "PairDayDatas (historical) 🔥
+  "PairDayDatas (historical)
   Gets pairDayDatas."
   ([] (uniswap-v2-get-pair-day-datas-historical nil))
   ([optional-params any?]
@@ -302,7 +302,7 @@
 
 
 (defn-spec uniswap-v2-get-pair-hour-datas-historical-with-http-info any?
-  "PairHourDatas (historical) 🔥
+  "PairHourDatas (historical)
   Gets pairHourDatas."
   ([] (uniswap-v2-get-pair-hour-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -316,7 +316,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-pair-hour-datas-historical (s/coll-of uniswap-v2/pair-hour-data-dto-spec)
-  "PairHourDatas (historical) 🔥
+  "PairHourDatas (historical)
   Gets pairHourDatas."
   ([] (uniswap-v2-get-pair-hour-datas-historical nil))
   ([optional-params any?]
@@ -327,7 +327,7 @@
 
 
 (defn-spec uniswap-v2-get-pairs-historical-with-http-info any?
-  "Pairs (historical) 🔥
+  "Pairs (historical)
   Gets pairs."
   ([] (uniswap-v2-get-pairs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id token_0 token_1]} (s/map-of keyword? any?)]
@@ -341,7 +341,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-pairs-historical (s/coll-of uniswap-v2/pair-dto-spec)
-  "Pairs (historical) 🔥
+  "Pairs (historical)
   Gets pairs."
   ([] (uniswap-v2-get-pairs-historical nil))
   ([optional-params any?]
@@ -352,7 +352,7 @@
 
 
 (defn-spec uniswap-v2-get-swaps-historical-with-http-info any?
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (uniswap-v2-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -366,7 +366,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-swaps-historical (s/coll-of uniswap-v2/swap-dto-spec)
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (uniswap-v2-get-swaps-historical nil))
   ([optional-params any?]
@@ -377,7 +377,7 @@
 
 
 (defn-spec uniswap-v2-get-token-day-datas-historical-with-http-info any?
-  "TokenDayDatas (historical) 🔥
+  "TokenDayDatas (historical)
   Gets tokenDayDatas."
   ([] (uniswap-v2-get-token-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -391,7 +391,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-token-day-datas-historical (s/coll-of uniswap-v2/token-day-data-dto-spec)
-  "TokenDayDatas (historical) 🔥
+  "TokenDayDatas (historical)
   Gets tokenDayDatas."
   ([] (uniswap-v2-get-token-day-datas-historical nil))
   ([optional-params any?]
@@ -402,7 +402,7 @@
 
 
 (defn-spec uniswap-v2-get-tokens-historical-with-http-info any?
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (uniswap-v2-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id symbol name]} (s/map-of keyword? any?)]
@@ -416,7 +416,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-tokens-historical (s/coll-of uniswap-v2/token-dto-spec)
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (uniswap-v2-get-tokens-historical nil))
   ([optional-params any?]
@@ -427,7 +427,7 @@
 
 
 (defn-spec uniswap-v2-get-transactions-historical-with-http-info any?
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (uniswap-v2-get-transactions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -441,7 +441,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-transactions-historical (s/coll-of uniswap-v2/transaction-dto-spec)
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (uniswap-v2-get-transactions-historical nil))
   ([optional-params any?]
@@ -452,7 +452,7 @@
 
 
 (defn-spec uniswap-v2-get-uniswap-day-datas-historical-with-http-info any?
-  "UniswapDayDatas (historical) 🔥
+  "UniswapDayDatas (historical)
   Gets uniswapDayDatas."
   ([] (uniswap-v2-get-uniswap-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -466,7 +466,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-uniswap-day-datas-historical (s/coll-of uniswap-v2/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (historical) 🔥
+  "UniswapDayDatas (historical)
   Gets uniswapDayDatas."
   ([] (uniswap-v2-get-uniswap-day-datas-historical nil))
   ([optional-params any?]
@@ -477,7 +477,7 @@
 
 
 (defn-spec uniswap-v2-get-uniswap-factorys-historical-with-http-info any?
-  "UniswapFactorys (historical) 🔥
+  "UniswapFactorys (historical)
   Gets uniswapFactorys."
   ([] (uniswap-v2-get-uniswap-factorys-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -491,7 +491,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-uniswap-factorys-historical (s/coll-of uniswap-v2/uniswap-factory-dto-spec)
-  "UniswapFactorys (historical) 🔥
+  "UniswapFactorys (historical)
   Gets uniswapFactorys."
   ([] (uniswap-v2-get-uniswap-factorys-historical nil))
   ([optional-params any?]
@@ -502,7 +502,7 @@
 
 
 (defn-spec uniswap-v2-get-users-historical-with-http-info any?
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (uniswap-v2-get-users-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -516,7 +516,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v2-get-users-historical (s/coll-of uniswap-v2/user-dto-spec)
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (uniswap-v2-get-users-historical nil))
   ([optional-params any?]
@@ -899,7 +899,7 @@
 
 
 (defn-spec uniswap-v3-get-bundles-historical-with-http-info any?
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (uniswap-v3-get-bundles-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -913,7 +913,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-bundles-historical (s/coll-of uniswap-v3/bundle-dto-spec)
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (uniswap-v3-get-bundles-historical nil))
   ([optional-params any?]
@@ -924,7 +924,7 @@
 
 
 (defn-spec uniswap-v3-get-burns-historical-with-http-info any?
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (uniswap-v3-get-burns-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool token_0 token_1]} (s/map-of keyword? any?)]
@@ -938,7 +938,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-burns-historical (s/coll-of uniswap-v3/burn-dto-spec)
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (uniswap-v3-get-burns-historical nil))
   ([optional-params any?]
@@ -949,7 +949,7 @@
 
 
 (defn-spec uniswap-v3-get-factorys-historical-with-http-info any?
-  "Factorys (historical) 🔥
+  "Factorys (historical)
   Gets factorys."
   ([] (uniswap-v3-get-factorys-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -963,7 +963,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-factorys-historical (s/coll-of uniswap-v3/factory-dto-spec)
-  "Factorys (historical) 🔥
+  "Factorys (historical)
   Gets factorys."
   ([] (uniswap-v3-get-factorys-historical nil))
   ([optional-params any?]
@@ -974,7 +974,7 @@
 
 
 (defn-spec uniswap-v3-get-mints-historical-with-http-info any?
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (uniswap-v3-get-mints-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool token_0 token_1]} (s/map-of keyword? any?)]
@@ -988,7 +988,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-mints-historical (s/coll-of uniswap-v3/mint-dto-spec)
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (uniswap-v3-get-mints-historical nil))
   ([optional-params any?]
@@ -999,7 +999,7 @@
 
 
 (defn-spec uniswap-v3-get-pool-day-datas-historical-with-http-info any?
-  "PoolDayDatas (historical) 🔥
+  "PoolDayDatas (historical)
   Gets poolDayDatas."
   ([] (uniswap-v3-get-pool-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1013,7 +1013,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-pool-day-datas-historical (s/coll-of uniswap-v3/pool-day-data-dto-spec)
-  "PoolDayDatas (historical) 🔥
+  "PoolDayDatas (historical)
   Gets poolDayDatas."
   ([] (uniswap-v3-get-pool-day-datas-historical nil))
   ([optional-params any?]
@@ -1024,7 +1024,7 @@
 
 
 (defn-spec uniswap-v3-get-pool-hour-datas-historical-with-http-info any?
-  "PoolHourDatas (historical) 🔥
+  "PoolHourDatas (historical)
   Gets poolHourDatas."
   ([] (uniswap-v3-get-pool-hour-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1038,7 +1038,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-pool-hour-datas-historical (s/coll-of uniswap-v3/pool-hour-data-dto-spec)
-  "PoolHourDatas (historical) 🔥
+  "PoolHourDatas (historical)
   Gets poolHourDatas."
   ([] (uniswap-v3-get-pool-hour-datas-historical nil))
   ([optional-params any?]
@@ -1049,7 +1049,7 @@
 
 
 (defn-spec uniswap-v3-get-pools-historical-with-http-info any?
-  "Pools (historical) 🔥
+  "Pools (historical)
   Gets pools."
   ([] (uniswap-v3-get-pools-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id token_0 token_1]} (s/map-of keyword? any?)]
@@ -1063,7 +1063,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-pools-historical (s/coll-of uniswap-v3/pool-dto-spec)
-  "Pools (historical) 🔥
+  "Pools (historical)
   Gets pools."
   ([] (uniswap-v3-get-pools-historical nil))
   ([optional-params any?]
@@ -1074,7 +1074,7 @@
 
 
 (defn-spec uniswap-v3-get-position-snapshots-historical-with-http-info any?
-  "PositionSnapshots (historical) 🔥
+  "PositionSnapshots (historical)
   Gets positionSnapshots."
   ([] (uniswap-v3-get-position-snapshots-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1088,7 +1088,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-position-snapshots-historical (s/coll-of uniswap-v3/position-snapshot-dto-spec)
-  "PositionSnapshots (historical) 🔥
+  "PositionSnapshots (historical)
   Gets positionSnapshots."
   ([] (uniswap-v3-get-position-snapshots-historical nil))
   ([optional-params any?]
@@ -1099,7 +1099,7 @@
 
 
 (defn-spec uniswap-v3-get-positions-historical-with-http-info any?
-  "Positions (historical) 🔥
+  "Positions (historical)
   Gets positions."
   ([] (uniswap-v3-get-positions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool token_0 token_1]} (s/map-of keyword? any?)]
@@ -1113,7 +1113,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-positions-historical (s/coll-of uniswap-v3/position-dto-spec)
-  "Positions (historical) 🔥
+  "Positions (historical)
   Gets positions."
   ([] (uniswap-v3-get-positions-historical nil))
   ([optional-params any?]
@@ -1124,7 +1124,7 @@
 
 
 (defn-spec uniswap-v3-get-swaps-historical-with-http-info any?
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (uniswap-v3-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool token_0 token_1]} (s/map-of keyword? any?)]
@@ -1138,7 +1138,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-swaps-historical (s/coll-of uniswap-v3/swap-dto-spec)
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (uniswap-v3-get-swaps-historical nil))
   ([optional-params any?]
@@ -1149,7 +1149,7 @@
 
 
 (defn-spec uniswap-v3-get-tick-day-datas-historical-with-http-info any?
-  "TickDayDatas (historical) 🔥
+  "TickDayDatas (historical)
   Gets tickDayDatas."
   ([] (uniswap-v3-get-tick-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1163,7 +1163,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-tick-day-datas-historical (s/coll-of uniswap-v3/tick-day-data-dto-spec)
-  "TickDayDatas (historical) 🔥
+  "TickDayDatas (historical)
   Gets tickDayDatas."
   ([] (uniswap-v3-get-tick-day-datas-historical nil))
   ([optional-params any?]
@@ -1174,7 +1174,7 @@
 
 
 (defn-spec uniswap-v3-get-ticks-historical-with-http-info any?
-  "Ticks (historical) 🔥
+  "Ticks (historical)
   Gets ticks."
   ([] (uniswap-v3-get-ticks-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
@@ -1188,7 +1188,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-ticks-historical (s/coll-of uniswap-v3/tick-dto-spec)
-  "Ticks (historical) 🔥
+  "Ticks (historical)
   Gets ticks."
   ([] (uniswap-v3-get-ticks-historical nil))
   ([optional-params any?]
@@ -1199,7 +1199,7 @@
 
 
 (defn-spec uniswap-v3-get-token-hour-datas-historical-with-http-info any?
-  "TokenHourDatas (historical) 🔥
+  "TokenHourDatas (historical)
   Gets tokenHourDatas."
   ([] (uniswap-v3-get-token-hour-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1213,7 +1213,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-token-hour-datas-historical (s/coll-of uniswap-v3/token-hour-data-dto-spec)
-  "TokenHourDatas (historical) 🔥
+  "TokenHourDatas (historical)
   Gets tokenHourDatas."
   ([] (uniswap-v3-get-token-hour-datas-historical nil))
   ([optional-params any?]
@@ -1224,7 +1224,7 @@
 
 
 (defn-spec uniswap-v3-get-token-v3-day-datas-historical-with-http-info any?
-  "TokenV3DayDatas (historical) 🔥
+  "TokenV3DayDatas (historical)
   Gets tokenV3DayDatas."
   ([] (uniswap-v3-get-token-v3-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1238,7 +1238,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-token-v3-day-datas-historical (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
-  "TokenV3DayDatas (historical) 🔥
+  "TokenV3DayDatas (historical)
   Gets tokenV3DayDatas."
   ([] (uniswap-v3-get-token-v3-day-datas-historical nil))
   ([optional-params any?]
@@ -1249,7 +1249,7 @@
 
 
 (defn-spec uniswap-v3-get-tokens-historical-with-http-info any?
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (uniswap-v3-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id symbol name]} (s/map-of keyword? any?)]
@@ -1263,7 +1263,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-tokens-historical (s/coll-of uniswap-v3/token-dto-spec)
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (uniswap-v3-get-tokens-historical nil))
   ([optional-params any?]
@@ -1274,7 +1274,7 @@
 
 
 (defn-spec uniswap-v3-get-transactions-historical-with-http-info any?
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (uniswap-v3-get-transactions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1288,7 +1288,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-transactions-historical (s/coll-of uniswap-v3/transaction-dto-spec)
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (uniswap-v3-get-transactions-historical nil))
   ([optional-params any?]
@@ -1299,7 +1299,7 @@
 
 
 (defn-spec uniswap-v3-get-uniswap-day-datas-historical-with-http-info any?
-  "UniswapDayDatas (historical) 🔥
+  "UniswapDayDatas (historical)
   Gets uniswapDayDatas."
   ([] (uniswap-v3-get-uniswap-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -1313,7 +1313,7 @@
               :auth-names    []})))
 
 (defn-spec uniswap-v3-get-uniswap-day-datas-historical (s/coll-of uniswap-v3/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (historical) 🔥
+  "UniswapDayDatas (historical)
   Gets uniswapDayDatas."
   ([] (uniswap-v3-get-uniswap-day-datas-historical nil))
   ([optional-params any?]

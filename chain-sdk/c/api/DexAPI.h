@@ -34,7 +34,7 @@ list_t*
 DexAPI_dexDepositsCurrent(apiClient_t *apiClient);
 
 
-// Batchs (historical) 🔥
+// Batchs (historical)
 //
 // Gets batchs.
 //
@@ -42,7 +42,7 @@ list_t*
 DexAPI_dexGetBatchsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// Deposits (historical) 🔥
+// Deposits (historical)
 //
 // Gets deposits.
 //
@@ -50,7 +50,7 @@ list_t*
 DexAPI_dexGetDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
 
 
-// Orders (historical) 🔥
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -58,7 +58,7 @@ list_t*
 DexAPI_dexGetOrdersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * buy_token , char * sell_token );
 
 
-// Prices (historical) 🔥
+// Prices (historical)
 //
 // Gets prices.
 //
@@ -66,7 +66,7 @@ list_t*
 DexAPI_dexGetPricesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// Solutions (historical) 🔥
+// Solutions (historical)
 //
 // Gets solutions.
 //
@@ -74,7 +74,7 @@ list_t*
 DexAPI_dexGetSolutionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// Statss (historical) 🔥
+// Statss (historical)
 //
 // Gets statss.
 //
@@ -82,7 +82,7 @@ list_t*
 DexAPI_dexGetStatssHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// Tokens (historical) 🔥
+// Tokens (historical)
 //
 // Gets tokens.
 //
@@ -90,7 +90,7 @@ list_t*
 DexAPI_dexGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * address , char * symbol , char * name );
 
 
-// Trades (historical) 🔥
+// Trades (historical)
 //
 // Gets trades.
 //
@@ -98,7 +98,7 @@ list_t*
 DexAPI_dexGetTradesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * buy_token , char * sell_token );
 
 
-// Users (historical) 🔥
+// Users (historical)
 //
 // Gets users.
 //
@@ -106,7 +106,7 @@ list_t*
 DexAPI_dexGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// WithdrawRequests (historical) 🔥
+// WithdrawRequests (historical)
 //
 // Gets withdrawRequests.
 //
@@ -114,7 +114,7 @@ list_t*
 DexAPI_dexGetWithdrawRequestsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
 
 
-// Withdraws (historical) 🔥
+// Withdraws (historical)
 //
 // Gets withdraws.
 //

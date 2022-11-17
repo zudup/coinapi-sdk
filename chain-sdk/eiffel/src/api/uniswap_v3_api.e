@@ -124,7 +124,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_BUNDLE_DTO]
-			-- Bundles (historical) 🔥
+			-- Bundles (historical)
 			-- Gets bundles.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -172,7 +172,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_burns_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [UNISWAP_V3_BURN_DTO]
-			-- Burns (historical) 🔥
+			-- Burns (historical)
 			-- Gets burns.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -229,7 +229,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_factorys_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_FACTORY_DTO]
-			-- Factorys (historical) 🔥
+			-- Factorys (historical)
 			-- Gets factorys.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -277,7 +277,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_mints_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [UNISWAP_V3_MINT_DTO]
-			-- Mints (historical) 🔥
+			-- Mints (historical)
 			-- Gets mints.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -334,7 +334,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pool_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
-			-- PoolDayDatas (historical) 🔥
+			-- PoolDayDatas (historical)
 			-- Gets poolDayDatas.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -385,7 +385,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pool_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
-			-- PoolHourDatas (historical) 🔥
+			-- PoolHourDatas (historical)
 			-- Gets poolHourDatas.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -436,7 +436,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [UNISWAP_V3_POOL_DTO]
-			-- Pools (historical) 🔥
+			-- Pools (historical)
 			-- Gets pools.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -490,7 +490,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_position_snapshots_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_DTO]
-			-- PositionSnapshots (historical) 🔥
+			-- PositionSnapshots (historical)
 			-- Gets positionSnapshots.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -541,7 +541,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_positions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [UNISWAP_V3_POSITION_DTO]
-			-- Positions (historical) 🔥
+			-- Positions (historical)
 			-- Gets positions.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -598,7 +598,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [UNISWAP_V3_SWAP_DTO]
-			-- Swaps (historical) 🔥
+			-- Swaps (historical)
 			-- Gets swaps.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -655,7 +655,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tick_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
-			-- TickDayDatas (historical) 🔥
+			-- TickDayDatas (historical)
 			-- Gets tickDayDatas.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -706,7 +706,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_ticks_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_TICK_DTO]
-			-- Ticks (historical) 🔥
+			-- Ticks (historical)
 			-- Gets ticks.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -757,7 +757,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_token_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
-			-- TokenHourDatas (historical) 🔥
+			-- TokenHourDatas (historical)
 			-- Gets tokenHourDatas.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -805,7 +805,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_token_v3_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-			-- TokenV3DayDatas (historical) 🔥
+			-- TokenV3DayDatas (historical)
 			-- Gets tokenV3DayDatas.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -853,7 +853,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; symbol: STRING_32; name: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_DTO]
-			-- Tokens (historical) 🔥
+			-- Tokens (historical)
 			-- Gets tokens.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -907,7 +907,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_transactions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TRANSACTION_DTO]
-			-- Transactions (historical) 🔥
+			-- Transactions (historical)
 			-- Gets transactions.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -955,7 +955,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_uniswap_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
-			-- UniswapDayDatas (historical) 🔥
+			-- UniswapDayDatas (historical)
 			-- Gets uniswapDayDatas.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)

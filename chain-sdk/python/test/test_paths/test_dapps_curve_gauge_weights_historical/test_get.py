@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveGaugeWeightsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveGaugeWeightsHistorical unit test stubs
-        GaugeWeights (historical) 🔥  # noqa: E501
+        GaugeWeights (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

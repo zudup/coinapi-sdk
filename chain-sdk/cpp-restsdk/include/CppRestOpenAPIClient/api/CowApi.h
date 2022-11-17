@@ -49,7 +49,7 @@ public:
     virtual ~CowApi();
 
     /// <summary>
-    /// Orders (historical) 🔥
+    /// Orders (historical)
     /// </summary>
     /// <remarks>
     /// Gets orders.
@@ -67,7 +67,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Settlements (historical) 🔥
+    /// Settlements (historical)
     /// </summary>
     /// <remarks>
     /// Gets settlements.
@@ -85,7 +85,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Tokens (historical) 🔥
+    /// Tokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -109,7 +109,7 @@ public:
         boost::optional<utility::string_t> symbol
     ) const;
     /// <summary>
-    /// Trades (historical) 🔥
+    /// Trades (historical)
     /// </summary>
     /// <remarks>
     /// Gets trades.
@@ -131,7 +131,7 @@ public:
         boost::optional<utility::string_t> buyToken
     ) const;
     /// <summary>
-    /// Users (historical) 🔥
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.

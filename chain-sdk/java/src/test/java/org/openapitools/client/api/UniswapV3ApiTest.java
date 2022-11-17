@@ -88,7 +88,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * Gets bundles.
      *
@@ -106,7 +106,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * Gets burns.
      *
@@ -127,7 +127,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * Gets factorys.
      *
@@ -145,7 +145,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * Gets mints.
      *
@@ -166,7 +166,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      *
      * Gets poolDayDatas.
      *
@@ -185,7 +185,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      *
      * Gets poolHourDatas.
      *
@@ -204,7 +204,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * Gets pools.
      *
@@ -224,7 +224,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      *
      * Gets positionSnapshots.
      *
@@ -243,7 +243,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Positions (historical) 🔥
+     * Positions (historical)
      *
      * Gets positions.
      *
@@ -264,7 +264,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * Gets swaps.
      *
@@ -285,7 +285,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      *
      * Gets tickDayDatas.
      *
@@ -304,7 +304,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      *
      * Gets ticks.
      *
@@ -323,7 +323,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      *
      * Gets tokenHourDatas.
      *
@@ -341,7 +341,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      *
      * Gets tokenV3DayDatas.
      *
@@ -359,7 +359,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      *
@@ -379,7 +379,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * Gets transactions.
      *
@@ -397,7 +397,7 @@ public class UniswapV3ApiTest {
     }
 
     /**
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      *
      * Gets uniswapDayDatas.
      *

@@ -149,7 +149,7 @@ sub uniswap_v2_burns__current {
 #
 # uniswap_v2_get_bundles__historical
 #
-# Bundles (historical) 🔥
+# Bundles (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -185,7 +185,7 @@ sub uniswap_v2_burns__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_bundles__historical' } = {
-        summary => 'Bundles (historical) 🔥',
+        summary => 'Bundles (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2BundleDTO]',
         };
@@ -253,7 +253,7 @@ sub uniswap_v2_get_bundles__historical {
 #
 # uniswap_v2_get_burns__historical
 #
-# Burns (historical) 🔥
+# Burns (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -295,7 +295,7 @@ sub uniswap_v2_get_bundles__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_burns__historical' } = {
-        summary => 'Burns (historical) 🔥',
+        summary => 'Burns (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2BurnDTO]',
         };
@@ -368,7 +368,7 @@ sub uniswap_v2_get_burns__historical {
 #
 # uniswap_v2_get_liquidity_position_snapshots__historical
 #
-# LiquidityPositionSnapshots (historical) 🔥
+# LiquidityPositionSnapshots (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -416,7 +416,7 @@ sub uniswap_v2_get_burns__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_snapshots__historical' } = {
-        summary => 'LiquidityPositionSnapshots (historical) 🔥',
+        summary => 'LiquidityPositionSnapshots (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotDTO]',
         };
@@ -494,7 +494,7 @@ sub uniswap_v2_get_liquidity_position_snapshots__historical {
 #
 # uniswap_v2_get_liquidity_positions__historical
 #
-# LiquidityPositions (historical) 🔥
+# LiquidityPositions (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -542,7 +542,7 @@ sub uniswap_v2_get_liquidity_position_snapshots__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_positions__historical' } = {
-        summary => 'LiquidityPositions (historical) 🔥',
+        summary => 'LiquidityPositions (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2LiquidityPositionDTO]',
         };
@@ -620,7 +620,7 @@ sub uniswap_v2_get_liquidity_positions__historical {
 #
 # uniswap_v2_get_mints__historical
 #
-# Mints (historical) 🔥
+# Mints (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -662,7 +662,7 @@ sub uniswap_v2_get_liquidity_positions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_mints__historical' } = {
-        summary => 'Mints (historical) 🔥',
+        summary => 'Mints (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2MintDTO]',
         };
@@ -735,7 +735,7 @@ sub uniswap_v2_get_mints__historical {
 #
 # uniswap_v2_get_pair_day_datas__historical
 #
-# PairDayDatas (historical) 🔥
+# PairDayDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -783,7 +783,7 @@ sub uniswap_v2_get_mints__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_datas__historical' } = {
-        summary => 'PairDayDatas (historical) 🔥',
+        summary => 'PairDayDatas (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairDayDataDTO]',
         };
@@ -861,7 +861,7 @@ sub uniswap_v2_get_pair_day_datas__historical {
 #
 # uniswap_v2_get_pair_hour_datas__historical
 #
-# PairHourDatas (historical) 🔥
+# PairHourDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -903,7 +903,7 @@ sub uniswap_v2_get_pair_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_datas__historical' } = {
-        summary => 'PairHourDatas (historical) 🔥',
+        summary => 'PairHourDatas (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairHourDataDTO]',
         };
@@ -976,7 +976,7 @@ sub uniswap_v2_get_pair_hour_datas__historical {
 #
 # uniswap_v2_get_pairs__historical
 #
-# Pairs (historical) 🔥
+# Pairs (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1024,7 +1024,7 @@ sub uniswap_v2_get_pair_hour_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pairs__historical' } = {
-        summary => 'Pairs (historical) 🔥',
+        summary => 'Pairs (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairDTO]',
         };
@@ -1102,7 +1102,7 @@ sub uniswap_v2_get_pairs__historical {
 #
 # uniswap_v2_get_swaps__historical
 #
-# Swaps (historical) 🔥
+# Swaps (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1144,7 +1144,7 @@ sub uniswap_v2_get_pairs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__historical' } = {
-        summary => 'Swaps (historical) 🔥',
+        summary => 'Swaps (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2SwapDTO]',
         };
@@ -1217,7 +1217,7 @@ sub uniswap_v2_get_swaps__historical {
 #
 # uniswap_v2_get_token_day_datas__historical
 #
-# TokenDayDatas (historical) 🔥
+# TokenDayDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1253,7 +1253,7 @@ sub uniswap_v2_get_swaps__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_datas__historical' } = {
-        summary => 'TokenDayDatas (historical) 🔥',
+        summary => 'TokenDayDatas (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenDayDataDTO]',
         };
@@ -1321,7 +1321,7 @@ sub uniswap_v2_get_token_day_datas__historical {
 #
 # uniswap_v2_get_tokens__historical
 #
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1369,7 +1369,7 @@ sub uniswap_v2_get_token_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__historical' } = {
-        summary => 'Tokens (historical) 🔥',
+        summary => 'Tokens (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenDTO]',
         };
@@ -1447,7 +1447,7 @@ sub uniswap_v2_get_tokens__historical {
 #
 # uniswap_v2_get_transactions__historical
 #
-# Transactions (historical) 🔥
+# Transactions (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1483,7 +1483,7 @@ sub uniswap_v2_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_transactions__historical' } = {
-        summary => 'Transactions (historical) 🔥',
+        summary => 'Transactions (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TransactionDTO]',
         };
@@ -1551,7 +1551,7 @@ sub uniswap_v2_get_transactions__historical {
 #
 # uniswap_v2_get_uniswap_day_datas__historical
 #
-# UniswapDayDatas (historical) 🔥
+# UniswapDayDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1587,7 +1587,7 @@ sub uniswap_v2_get_transactions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_datas__historical' } = {
-        summary => 'UniswapDayDatas (historical) 🔥',
+        summary => 'UniswapDayDatas (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapDayDataDTO]',
         };
@@ -1655,7 +1655,7 @@ sub uniswap_v2_get_uniswap_day_datas__historical {
 #
 # uniswap_v2_get_uniswap_factorys__historical
 #
-# UniswapFactorys (historical) 🔥
+# UniswapFactorys (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1691,7 +1691,7 @@ sub uniswap_v2_get_uniswap_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factorys__historical' } = {
-        summary => 'UniswapFactorys (historical) 🔥',
+        summary => 'UniswapFactorys (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapFactoryDTO]',
         };
@@ -1759,7 +1759,7 @@ sub uniswap_v2_get_uniswap_factorys__historical {
 #
 # uniswap_v2_get_users__historical
 #
-# Users (historical) 🔥
+# Users (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1795,7 +1795,7 @@ sub uniswap_v2_get_uniswap_factorys__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_users__historical' } = {
-        summary => 'Users (historical) 🔥',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UserDTO]',
         };

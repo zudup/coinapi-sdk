@@ -66,7 +66,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_bundles_historical
-            -- Bundles (historical) 🔥
+            -- Bundles (historical)
             --
             -- Gets bundles.
         local
@@ -84,7 +84,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_burns_historical
-            -- Burns (historical) 🔥
+            -- Burns (historical)
             --
             -- Gets burns.
         local
@@ -103,7 +103,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_day_datas_historical
-            -- DayDatas (historical) 🔥
+            -- DayDatas (historical)
             --
             -- Gets dayDatas.
         local
@@ -121,7 +121,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_factorys_historical
-            -- Factorys (historical) 🔥
+            -- Factorys (historical)
             --
             -- Gets factorys.
         local
@@ -139,7 +139,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_hour_datas_historical
-            -- HourDatas (historical) 🔥
+            -- HourDatas (historical)
             --
             -- Gets hourDatas.
         local
@@ -157,7 +157,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_liquidity_position_snapshots_historical
-            -- LiquidityPositionSnapshots (historical) 🔥
+            -- LiquidityPositionSnapshots (historical)
             --
             -- Gets liquidityPositionSnapshots.
         local
@@ -177,7 +177,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_liquidity_positions_historical
-            -- LiquidityPositions (historical) 🔥
+            -- LiquidityPositions (historical)
             --
             -- Gets liquidityPositions.
         local
@@ -197,7 +197,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_mints_historical
-            -- Mints (historical) 🔥
+            -- Mints (historical)
             --
             -- Gets mints.
         local
@@ -216,7 +216,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pair_day_datas_historical
-            -- PairDayDatas (historical) 🔥
+            -- PairDayDatas (historical)
             --
             -- Gets pairDayDatas.
         local
@@ -237,7 +237,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pair_hour_datas_historical
-            -- PairHourDatas (historical) 🔥
+            -- PairHourDatas (historical)
             --
             -- Gets pairHourDatas.
         local
@@ -256,7 +256,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pairs_historical
-            -- Pairs (historical) 🔥
+            -- Pairs (historical)
             --
             -- Gets pairs.
         local
@@ -277,7 +277,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- Swaps (historical) 🔥
+            -- Swaps (historical)
             --
             -- Gets swaps.
         local
@@ -296,7 +296,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_token_day_datas_historical
-            -- TokenDayDatas (historical) 🔥
+            -- TokenDayDatas (historical)
             --
             -- Gets tokenDayDatas.
         local
@@ -314,7 +314,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- Tokens (historical) 🔥
+            -- Tokens (historical)
             --
             -- Gets tokens.
         local
@@ -334,7 +334,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_transactions_historical
-            -- Transactions (historical) 🔥
+            -- Transactions (historical)
             --
             -- Gets transactions.
         local
@@ -352,7 +352,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_users_historical
-            -- Users (historical) 🔥
+            -- Users (historical)
             --
             -- Gets users.
         local

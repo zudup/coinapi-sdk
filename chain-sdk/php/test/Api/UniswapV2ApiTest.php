@@ -99,7 +99,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetBundlesHistorical
      *
-     * Bundles (historical) 🔥.
+     * Bundles (historical).
      *
      */
     public function testUniswapV2GetBundlesHistorical()
@@ -111,7 +111,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetBurnsHistorical
      *
-     * Burns (historical) 🔥.
+     * Burns (historical).
      *
      */
     public function testUniswapV2GetBurnsHistorical()
@@ -123,7 +123,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetLiquidityPositionSnapshotsHistorical
      *
-     * LiquidityPositionSnapshots (historical) 🔥.
+     * LiquidityPositionSnapshots (historical).
      *
      */
     public function testUniswapV2GetLiquidityPositionSnapshotsHistorical()
@@ -135,7 +135,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetLiquidityPositionsHistorical
      *
-     * LiquidityPositions (historical) 🔥.
+     * LiquidityPositions (historical).
      *
      */
     public function testUniswapV2GetLiquidityPositionsHistorical()
@@ -147,7 +147,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetMintsHistorical
      *
-     * Mints (historical) 🔥.
+     * Mints (historical).
      *
      */
     public function testUniswapV2GetMintsHistorical()
@@ -159,7 +159,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetPairDayDatasHistorical
      *
-     * PairDayDatas (historical) 🔥.
+     * PairDayDatas (historical).
      *
      */
     public function testUniswapV2GetPairDayDatasHistorical()
@@ -171,7 +171,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetPairHourDatasHistorical
      *
-     * PairHourDatas (historical) 🔥.
+     * PairHourDatas (historical).
      *
      */
     public function testUniswapV2GetPairHourDatasHistorical()
@@ -183,7 +183,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetPairsHistorical
      *
-     * Pairs (historical) 🔥.
+     * Pairs (historical).
      *
      */
     public function testUniswapV2GetPairsHistorical()
@@ -195,7 +195,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetSwapsHistorical
      *
-     * Swaps (historical) 🔥.
+     * Swaps (historical).
      *
      */
     public function testUniswapV2GetSwapsHistorical()
@@ -207,7 +207,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetTokenDayDatasHistorical
      *
-     * TokenDayDatas (historical) 🔥.
+     * TokenDayDatas (historical).
      *
      */
     public function testUniswapV2GetTokenDayDatasHistorical()
@@ -219,7 +219,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetTokensHistorical
      *
-     * Tokens (historical) 🔥.
+     * Tokens (historical).
      *
      */
     public function testUniswapV2GetTokensHistorical()
@@ -231,7 +231,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetTransactionsHistorical
      *
-     * Transactions (historical) 🔥.
+     * Transactions (historical).
      *
      */
     public function testUniswapV2GetTransactionsHistorical()
@@ -243,7 +243,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetUniswapDayDatasHistorical
      *
-     * UniswapDayDatas (historical) 🔥.
+     * UniswapDayDatas (historical).
      *
      */
     public function testUniswapV2GetUniswapDayDatasHistorical()
@@ -255,7 +255,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetUniswapFactorysHistorical
      *
-     * UniswapFactorys (historical) 🔥.
+     * UniswapFactorys (historical).
      *
      */
     public function testUniswapV2GetUniswapFactorysHistorical()
@@ -267,7 +267,7 @@ class UniswapV2ApiTest extends TestCase
     /**
      * Test case for uniswapV2GetUsersHistorical
      *
-     * Users (historical) 🔥.
+     * Users (historical).
      *
      */
     public function testUniswapV2GetUsersHistorical()

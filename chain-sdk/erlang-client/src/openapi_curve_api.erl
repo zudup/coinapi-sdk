@@ -466,7 +466,7 @@ curve_gauges_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Accounts (historical) 🔥
+%% @doc Accounts (historical)
 %% Gets accounts.
 -spec curve_get_accounts_(historical)(ctx:ctx()) -> {ok, [openapi_curve_account_dto:openapi_curve_account_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_accounts_(historical)(Ctx) ->
@@ -487,7 +487,7 @@ curve_get_accounts_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc AddLiquidityEvents (historical) 🔥
+%% @doc AddLiquidityEvents (historical)
 %% Gets addLiquidityEvents.
 -spec curve_get_add_liquidity_events_(historical)(ctx:ctx()) -> {ok, [openapi_curve_add_liquidity_event_dto:openapi_curve_add_liquidity_event_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_add_liquidity_events_(historical)(Ctx) ->
@@ -508,7 +508,7 @@ curve_get_add_liquidity_events_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc AdminFeeChangeLogs (historical) 🔥
+%% @doc AdminFeeChangeLogs (historical)
 %% Gets adminFeeChangeLogs.
 -spec curve_get_admin_fee_change_logs_(historical)(ctx:ctx()) -> {ok, [openapi_curve_admin_fee_change_log_dto:openapi_curve_admin_fee_change_log_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_admin_fee_change_logs_(historical)(Ctx) ->
@@ -529,7 +529,7 @@ curve_get_admin_fee_change_logs_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc AmplificationCoeffChangeLogs (historical) 🔥
+%% @doc AmplificationCoeffChangeLogs (historical)
 %% Gets amplificationCoeffChangeLogs.
 -spec curve_get_amplification_coeff_change_logs_(historical)(ctx:ctx()) -> {ok, [openapi_curve_amplification_coeff_change_log_dto:openapi_curve_amplification_coeff_change_log_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_amplification_coeff_change_logs_(historical)(Ctx) ->
@@ -550,7 +550,7 @@ curve_get_amplification_coeff_change_logs_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Coins (historical) 🔥
+%% @doc Coins (historical)
 %% Gets coins.
 -spec curve_get_coins_(historical)(ctx:ctx()) -> {ok, [openapi_curve_coin_dto:openapi_curve_coin_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_coins_(historical)(Ctx) ->
@@ -571,7 +571,7 @@ curve_get_coins_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc ContractVersions (historical) 🔥
+%% @doc ContractVersions (historical)
 %% Gets contractVersions.
 -spec curve_get_contract_versions_(historical)(ctx:ctx()) -> {ok, [openapi_curve_contract_version_dto:openapi_curve_contract_version_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_contract_versions_(historical)(Ctx) ->
@@ -592,7 +592,7 @@ curve_get_contract_versions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Contracts (historical) 🔥
+%% @doc Contracts (historical)
 %% Gets contracts.
 -spec curve_get_contracts_(historical)(ctx:ctx()) -> {ok, [openapi_curve_contract_dto:openapi_curve_contract_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_contracts_(historical)(Ctx) ->
@@ -613,7 +613,7 @@ curve_get_contracts_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc DailyVolumes (historical) 🔥
+%% @doc DailyVolumes (historical)
 %% Gets dailyVolumes.
 -spec curve_get_daily_volumes_(historical)(ctx:ctx()) -> {ok, [openapi_curve_daily_volume_dto:openapi_curve_daily_volume_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_daily_volumes_(historical)(Ctx) ->
@@ -634,7 +634,7 @@ curve_get_daily_volumes_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Exchanges (historical) 🔥
+%% @doc Exchanges (historical)
 %% Gets exchanges.
 -spec curve_get_exchanges_(historical)(ctx:ctx()) -> {ok, [openapi_curve_exchange_dto:openapi_curve_exchange_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_exchanges_(historical)(Ctx) ->
@@ -655,7 +655,7 @@ curve_get_exchanges_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc FeeChangeLogs (historical) 🔥
+%% @doc FeeChangeLogs (historical)
 %% Gets feeChangeLogs.
 -spec curve_get_fee_change_logs_(historical)(ctx:ctx()) -> {ok, [openapi_curve_fee_change_log_dto:openapi_curve_fee_change_log_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_fee_change_logs_(historical)(Ctx) ->
@@ -676,7 +676,7 @@ curve_get_fee_change_logs_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeDeposits (historical) 🔥
+%% @doc GaugeDeposits (historical)
 %% Gets gaugeDeposits.
 -spec curve_get_gauge_deposits_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_deposit_dto:openapi_curve_gauge_deposit_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_deposits_(historical)(Ctx) ->
@@ -697,7 +697,7 @@ curve_get_gauge_deposits_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeLiquiditys (historical) 🔥
+%% @doc GaugeLiquiditys (historical)
 %% Gets gaugeLiquiditys.
 -spec curve_get_gauge_liquiditys_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_liquiditys_(historical)(Ctx) ->
@@ -718,7 +718,7 @@ curve_get_gauge_liquiditys_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeTotalWeights (historical) 🔥
+%% @doc GaugeTotalWeights (historical)
 %% Gets gaugeTotalWeights.
 -spec curve_get_gauge_total_weights_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_total_weight_dto:openapi_curve_gauge_total_weight_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_total_weights_(historical)(Ctx) ->
@@ -739,7 +739,7 @@ curve_get_gauge_total_weights_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeTypeWeights (historical) 🔥
+%% @doc GaugeTypeWeights (historical)
 %% Gets gaugeTypeWeights.
 -spec curve_get_gauge_type_weights_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_type_weight_dto:openapi_curve_gauge_type_weight_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_type_weights_(historical)(Ctx) ->
@@ -760,7 +760,7 @@ curve_get_gauge_type_weights_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeTypes (historical) 🔥
+%% @doc GaugeTypes (historical)
 %% Gets gaugeTypes.
 -spec curve_get_gauge_types_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_type_dto:openapi_curve_gauge_type_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_types_(historical)(Ctx) ->
@@ -781,7 +781,7 @@ curve_get_gauge_types_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeWeightVotes (historical) 🔥
+%% @doc GaugeWeightVotes (historical)
 %% Gets gaugeWeightVotes.
 -spec curve_get_gauge_weight_votes_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_weight_vote_dto:openapi_curve_gauge_weight_vote_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_weight_votes_(historical)(Ctx) ->
@@ -802,7 +802,7 @@ curve_get_gauge_weight_votes_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeWeights (historical) 🔥
+%% @doc GaugeWeights (historical)
 %% Gets gaugeWeights.
 -spec curve_get_gauge_weights_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_weight_dto:openapi_curve_gauge_weight_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_weights_(historical)(Ctx) ->
@@ -823,7 +823,7 @@ curve_get_gauge_weights_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeWithdraws (historical) 🔥
+%% @doc GaugeWithdraws (historical)
 %% Gets gaugeWithdraws.
 -spec curve_get_gauge_withdraws_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_withdraw_dto:openapi_curve_gauge_withdraw_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauge_withdraws_(historical)(Ctx) ->
@@ -844,7 +844,7 @@ curve_get_gauge_withdraws_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Gauges (historical) 🔥
+%% @doc Gauges (historical)
 %% Gets gauges.
 -spec curve_get_gauges_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_dto:openapi_curve_gauge_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_gauges_(historical)(Ctx) ->
@@ -865,7 +865,7 @@ curve_get_gauges_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc HourlyVolumes (historical) 🔥
+%% @doc HourlyVolumes (historical)
 %% Gets hourlyVolumes.
 -spec curve_get_hourly_volumes_(historical)(ctx:ctx()) -> {ok, [openapi_curve_hourly_volume_dto:openapi_curve_hourly_volume_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_hourly_volumes_(historical)(Ctx) ->
@@ -886,7 +886,7 @@ curve_get_hourly_volumes_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc LpTokens (historical) 🔥
+%% @doc LpTokens (historical)
 %% Gets lpTokens.
 -spec curve_get_lp_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_curve_lp_token_dto:openapi_curve_lp_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_lp_tokens_(historical)(Ctx) ->
@@ -907,7 +907,7 @@ curve_get_lp_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Pools (historical) 🔥
+%% @doc Pools (historical)
 %% Gets pools.
 -spec curve_get_pools_(historical)(ctx:ctx()) -> {ok, [openapi_curve_pool_dto:openapi_curve_pool_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_pools_(historical)(Ctx) ->
@@ -928,7 +928,7 @@ curve_get_pools_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc ProposalVotes (historical) 🔥
+%% @doc ProposalVotes (historical)
 %% Gets proposalVotes.
 -spec curve_get_proposal_votes_(historical)(ctx:ctx()) -> {ok, [openapi_curve_proposal_vote_dto:openapi_curve_proposal_vote_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_proposal_votes_(historical)(Ctx) ->
@@ -949,7 +949,7 @@ curve_get_proposal_votes_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Proposals (historical) 🔥
+%% @doc Proposals (historical)
 %% Gets proposals.
 -spec curve_get_proposals_(historical)(ctx:ctx()) -> {ok, [openapi_curve_proposal_dto:openapi_curve_proposal_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_proposals_(historical)(Ctx) ->
@@ -970,7 +970,7 @@ curve_get_proposals_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc RemoveLiquidityEvents (historical) 🔥
+%% @doc RemoveLiquidityEvents (historical)
 %% Gets removeLiquidityEvents.
 -spec curve_get_remove_liquidity_events_(historical)(ctx:ctx()) -> {ok, [openapi_curve_remove_liquidity_event_dto:openapi_curve_remove_liquidity_event_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_remove_liquidity_events_(historical)(Ctx) ->
@@ -991,7 +991,7 @@ curve_get_remove_liquidity_events_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc RemoveLiquidityOneEvents (historical) 🔥
+%% @doc RemoveLiquidityOneEvents (historical)
 %% Gets removeLiquidityOneEvents.
 -spec curve_get_remove_liquidity_one_events_(historical)(ctx:ctx()) -> {ok, [openapi_curve_remove_liquidity_one_event_dto:openapi_curve_remove_liquidity_one_event_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_remove_liquidity_one_events_(historical)(Ctx) ->
@@ -1012,7 +1012,7 @@ curve_get_remove_liquidity_one_events_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc SystemStates (historical) 🔥
+%% @doc SystemStates (historical)
 %% Gets systemStates.
 -spec curve_get_system_states_(historical)(ctx:ctx()) -> {ok, [openapi_curve_system_state_dto:openapi_curve_system_state_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_system_states_(historical)(Ctx) ->
@@ -1033,7 +1033,7 @@ curve_get_system_states_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Tokens (historical) 🔥
+%% @doc Tokens (historical)
 %% Gets tokens.
 -spec curve_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_curve_token_dto:openapi_curve_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_tokens_(historical)(Ctx) ->
@@ -1054,7 +1054,7 @@ curve_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TransferOwnershipEvents (historical) 🔥
+%% @doc TransferOwnershipEvents (historical)
 %% Gets transferOwnershipEvents.
 -spec curve_get_transfer_ownership_events_(historical)(ctx:ctx()) -> {ok, [openapi_curve_transfer_ownership_event_dto:openapi_curve_transfer_ownership_event_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_transfer_ownership_events_(historical)(Ctx) ->
@@ -1075,7 +1075,7 @@ curve_get_transfer_ownership_events_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UnderlyingCoins (historical) 🔥
+%% @doc UnderlyingCoins (historical)
 %% Gets underlyingCoins.
 -spec curve_get_underlying_coins_(historical)(ctx:ctx()) -> {ok, [openapi_curve_underlying_coin_dto:openapi_curve_underlying_coin_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_underlying_coins_(historical)(Ctx) ->
@@ -1096,7 +1096,7 @@ curve_get_underlying_coins_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc VotingApps (historical) 🔥
+%% @doc VotingApps (historical)
 %% Gets votingApps.
 -spec curve_get_voting_apps_(historical)(ctx:ctx()) -> {ok, [openapi_curve_voting_app_dto:openapi_curve_voting_app_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_voting_apps_(historical)(Ctx) ->
@@ -1117,7 +1117,7 @@ curve_get_voting_apps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc WeeklyVolumes (historical) 🔥
+%% @doc WeeklyVolumes (historical)
 %% Gets weeklyVolumes.
 -spec curve_get_weekly_volumes_(historical)(ctx:ctx()) -> {ok, [openapi_curve_weekly_volume_dto:openapi_curve_weekly_volume_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 curve_get_weekly_volumes_(historical)(Ctx) ->

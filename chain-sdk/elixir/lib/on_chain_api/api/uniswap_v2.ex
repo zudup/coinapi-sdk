@@ -68,7 +68,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Bundles (historical) 🔥
+  Bundles (historical)
   Gets bundles.
 
   ### Parameters
@@ -111,7 +111,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Burns (historical) 🔥
+  Burns (historical)
   Gets burns.
 
   ### Parameters
@@ -156,7 +156,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  LiquidityPositionSnapshots (historical) 🔥
+  LiquidityPositionSnapshots (historical)
   Gets liquidityPositionSnapshots.
 
   ### Parameters
@@ -203,7 +203,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  LiquidityPositions (historical) 🔥
+  LiquidityPositions (historical)
   Gets liquidityPositions.
 
   ### Parameters
@@ -250,7 +250,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Mints (historical) 🔥
+  Mints (historical)
   Gets mints.
 
   ### Parameters
@@ -295,7 +295,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairDayDatas (historical) 🔥
+  PairDayDatas (historical)
   Gets pairDayDatas.
 
   ### Parameters
@@ -342,7 +342,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairHourDatas (historical) 🔥
+  PairHourDatas (historical)
   Gets pairHourDatas.
 
   ### Parameters
@@ -387,7 +387,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Pairs (historical) 🔥
+  Pairs (historical)
   Gets pairs.
 
   ### Parameters
@@ -434,7 +434,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Swaps (historical) 🔥
+  Swaps (historical)
   Gets swaps.
 
   ### Parameters
@@ -479,7 +479,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  TokenDayDatas (historical) 🔥
+  TokenDayDatas (historical)
   Gets tokenDayDatas.
 
   ### Parameters
@@ -522,7 +522,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Tokens (historical) 🔥
+  Tokens (historical)
   Gets tokens.
 
   ### Parameters
@@ -569,7 +569,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Transactions (historical) 🔥
+  Transactions (historical)
   Gets transactions.
 
   ### Parameters
@@ -612,7 +612,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapDayDatas (historical) 🔥
+  UniswapDayDatas (historical)
   Gets uniswapDayDatas.
 
   ### Parameters
@@ -655,7 +655,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapFactorys (historical) 🔥
+  UniswapFactorys (historical)
   Gets uniswapFactorys.
 
   ### Parameters
@@ -698,7 +698,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  Users (historical) 🔥
+  Users (historical)
   Gets users.
 
   ### Parameters

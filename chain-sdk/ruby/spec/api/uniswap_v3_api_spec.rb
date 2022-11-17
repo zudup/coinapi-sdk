@@ -66,7 +66,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_bundles__historical
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -82,7 +82,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_burns__historical
-  # Burns (historical) 🔥
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -101,7 +101,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_factorys__historical
-  # Factorys (historical) 🔥
+  # Factorys (historical)
   # Gets factorys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -117,7 +117,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_mints__historical
-  # Mints (historical) 🔥
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -136,7 +136,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pool_day_datas__historical
-  # PoolDayDatas (historical) 🔥
+  # PoolDayDatas (historical)
   # Gets poolDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -153,7 +153,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pool_hour_datas__historical
-  # PoolHourDatas (historical) 🔥
+  # PoolHourDatas (historical)
   # Gets poolHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -170,7 +170,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools__historical
-  # Pools (historical) 🔥
+  # Pools (historical)
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -188,7 +188,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_position_snapshots__historical
-  # PositionSnapshots (historical) 🔥
+  # PositionSnapshots (historical)
   # Gets positionSnapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -205,7 +205,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_positions__historical
-  # Positions (historical) 🔥
+  # Positions (historical)
   # Gets positions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -224,7 +224,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_swaps__historical
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -243,7 +243,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tick_day_datas__historical
-  # TickDayDatas (historical) 🔥
+  # TickDayDatas (historical)
   # Gets tickDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -260,7 +260,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_ticks__historical
-  # Ticks (historical) 🔥
+  # Ticks (historical)
   # Gets ticks.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -277,7 +277,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_token_hour_datas__historical
-  # TokenHourDatas (historical) 🔥
+  # TokenHourDatas (historical)
   # Gets tokenHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -293,7 +293,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_token_v3_day_datas__historical
-  # TokenV3DayDatas (historical) 🔥
+  # TokenV3DayDatas (historical)
   # Gets tokenV3DayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -309,7 +309,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -327,7 +327,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_transactions__historical
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -343,7 +343,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_uniswap_day_datas__historical
-  # UniswapDayDatas (historical) 🔥
+  # UniswapDayDatas (historical)
   # Gets uniswapDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

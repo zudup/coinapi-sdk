@@ -76,7 +76,7 @@ export class CowApi extends BaseAPI {
 
     /**
      * Gets orders.
-     * Orders (historical) 🔥
+     * Orders (historical)
      */
     cowGetOrdersHistorical({ startBlock, endBlock, startDate, endDate, id }: CowGetOrdersHistoricalRequest): Observable<Array<CowOrderDTO>>
     cowGetOrdersHistorical({ startBlock, endBlock, startDate, endDate, id }: CowGetOrdersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowOrderDTO>>>
@@ -99,7 +99,7 @@ export class CowApi extends BaseAPI {
 
     /**
      * Gets settlements.
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      */
     cowGetSettlementsHistorical({ startBlock, endBlock, startDate, endDate, id }: CowGetSettlementsHistoricalRequest): Observable<Array<CowSettlementDTO>>
     cowGetSettlementsHistorical({ startBlock, endBlock, startDate, endDate, id }: CowGetSettlementsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowSettlementDTO>>>
@@ -122,7 +122,7 @@ export class CowApi extends BaseAPI {
 
     /**
      * Gets tokens.
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      */
     cowGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol }: CowGetTokensHistoricalRequest): Observable<Array<CowTokenDTO>>
     cowGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, name, symbol }: CowGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowTokenDTO>>>
@@ -148,7 +148,7 @@ export class CowApi extends BaseAPI {
 
     /**
      * Gets trades.
-     * Trades (historical) 🔥
+     * Trades (historical)
      */
     cowGetTradesHistorical({ startBlock, endBlock, startDate, endDate, id, sellToken, buyToken }: CowGetTradesHistoricalRequest): Observable<Array<CowTradeDTO>>
     cowGetTradesHistorical({ startBlock, endBlock, startDate, endDate, id, sellToken, buyToken }: CowGetTradesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowTradeDTO>>>
@@ -173,7 +173,7 @@ export class CowApi extends BaseAPI {
 
     /**
      * Gets users.
-     * Users (historical) 🔥
+     * Users (historical)
      */
     cowGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CowGetUsersHistoricalRequest): Observable<Array<CowUserDTO>>
     cowGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id, address }: CowGetUsersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowUserDTO>>>

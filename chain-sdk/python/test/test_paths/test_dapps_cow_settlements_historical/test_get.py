@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCowSettlementsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCowSettlementsHistorical unit test stubs
-        Settlements (historical) 🔥  # noqa: E501
+        Settlements (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

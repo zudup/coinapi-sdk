@@ -1358,7 +1358,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1394,7 +1394,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1463,7 +1463,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1499,7 +1499,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1568,7 +1568,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1604,7 +1604,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1673,7 +1673,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1709,7 +1709,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1778,7 +1778,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Coins (historical) 🔥
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1814,7 +1814,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Coins (historical) 🔥
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1883,7 +1883,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1919,7 +1919,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1988,7 +1988,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2023,7 +2023,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2087,7 +2087,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2123,7 +2123,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2192,7 +2192,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      * Gets exchanges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2228,7 +2228,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      * Gets exchanges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2297,7 +2297,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2333,7 +2333,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2402,7 +2402,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2437,7 +2437,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2501,7 +2501,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2537,7 +2537,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2606,7 +2606,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2641,7 +2641,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2705,7 +2705,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2740,7 +2740,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2804,7 +2804,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2840,7 +2840,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2909,7 +2909,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2945,7 +2945,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3014,7 +3014,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3049,7 +3049,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3113,7 +3113,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3148,7 +3148,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3212,7 +3212,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3249,7 +3249,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3323,7 +3323,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3359,7 +3359,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3428,7 +3428,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3467,7 +3467,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3551,7 +3551,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3587,7 +3587,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3656,7 +3656,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3691,7 +3691,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3755,7 +3755,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3790,7 +3790,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3854,7 +3854,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3890,7 +3890,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3959,7 +3959,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3995,7 +3995,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4064,7 +4064,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4099,7 +4099,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4163,7 +4163,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4201,7 +4201,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4280,7 +4280,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4316,7 +4316,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4385,7 +4385,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4421,7 +4421,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4490,7 +4490,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4526,7 +4526,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4595,7 +4595,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4631,7 +4631,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

@@ -295,7 +295,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -380,7 +380,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -480,7 +480,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -565,7 +565,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -665,7 +665,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      * Gets poolDayDatas.
      * @param startBlock 
      * @param endBlock 
@@ -755,7 +755,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      * Gets poolHourDatas.
      * @param startBlock 
      * @param endBlock 
@@ -845,7 +845,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -940,7 +940,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      * Gets positionSnapshots.
      * @param startBlock 
      * @param endBlock 
@@ -1030,7 +1030,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Positions (historical) 🔥
+     * Positions (historical)
      * Gets positions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1130,7 +1130,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1230,7 +1230,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      * Gets tickDayDatas.
      * @param startBlock 
      * @param endBlock 
@@ -1320,7 +1320,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock 
      * @param endBlock 
@@ -1410,7 +1410,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      * Gets tokenHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1495,7 +1495,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      * Gets tokenV3DayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1580,7 +1580,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1675,7 +1675,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1760,7 +1760,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      * Gets uniswapDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

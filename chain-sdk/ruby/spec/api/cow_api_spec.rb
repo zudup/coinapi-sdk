@@ -33,7 +33,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_orders__historical
-  # Orders (historical) 🔥
+  # Orders (historical)
   # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -49,7 +49,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_settlements__historical
-  # Settlements (historical) 🔥
+  # Settlements (historical)
   # Gets settlements.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -65,7 +65,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -84,7 +84,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_trades__historical
-  # Trades (historical) 🔥
+  # Trades (historical)
   # Gets trades.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -102,7 +102,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_users__historical
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

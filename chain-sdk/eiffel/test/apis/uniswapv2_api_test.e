@@ -40,7 +40,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_bundles_historical
-            -- Bundles (historical) 🔥
+            -- Bundles (historical)
             --
             -- Gets bundles.
         local
@@ -58,7 +58,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_burns_historical
-            -- Burns (historical) 🔥
+            -- Burns (historical)
             --
             -- Gets burns.
         local
@@ -77,7 +77,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_liquidity_position_snapshots_historical
-            -- LiquidityPositionSnapshots (historical) 🔥
+            -- LiquidityPositionSnapshots (historical)
             --
             -- Gets liquidityPositionSnapshots.
         local
@@ -97,7 +97,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_liquidity_positions_historical
-            -- LiquidityPositions (historical) 🔥
+            -- LiquidityPositions (historical)
             --
             -- Gets liquidityPositions.
         local
@@ -117,7 +117,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_mints_historical
-            -- Mints (historical) 🔥
+            -- Mints (historical)
             --
             -- Gets mints.
         local
@@ -136,7 +136,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_pair_day_datas_historical
-            -- PairDayDatas (historical) 🔥
+            -- PairDayDatas (historical)
             --
             -- Gets pairDayDatas.
         local
@@ -156,7 +156,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_pair_hour_datas_historical
-            -- PairHourDatas (historical) 🔥
+            -- PairHourDatas (historical)
             --
             -- Gets pairHourDatas.
         local
@@ -175,7 +175,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_pairs_historical
-            -- Pairs (historical) 🔥
+            -- Pairs (historical)
             --
             -- Gets pairs.
         local
@@ -195,7 +195,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_swaps_historical
-            -- Swaps (historical) 🔥
+            -- Swaps (historical)
             --
             -- Gets swaps.
         local
@@ -214,7 +214,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_token_day_datas_historical
-            -- TokenDayDatas (historical) 🔥
+            -- TokenDayDatas (historical)
             --
             -- Gets tokenDayDatas.
         local
@@ -232,7 +232,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_tokens_historical
-            -- Tokens (historical) 🔥
+            -- Tokens (historical)
             --
             -- Gets tokens.
         local
@@ -252,7 +252,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_transactions_historical
-            -- Transactions (historical) 🔥
+            -- Transactions (historical)
             --
             -- Gets transactions.
         local
@@ -270,7 +270,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_uniswap_day_datas_historical
-            -- UniswapDayDatas (historical) 🔥
+            -- UniswapDayDatas (historical)
             --
             -- Gets uniswapDayDatas.
         local
@@ -288,7 +288,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_uniswap_factorys_historical
-            -- UniswapFactorys (historical) 🔥
+            -- UniswapFactorys (historical)
             --
             -- Gets uniswapFactorys.
         local
@@ -306,7 +306,7 @@ feature -- Test routines
         end
 
     test_uniswap_v2_get_users_historical
-            -- Users (historical) 🔥
+            -- Users (historical)
             --
             -- Gets users.
         local

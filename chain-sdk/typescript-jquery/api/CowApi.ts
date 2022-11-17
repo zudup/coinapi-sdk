@@ -48,7 +48,7 @@ export class CowApi {
 
     /**
      * Gets orders.
-     * @summary Orders (historical) 🔥
+     * @summary Orders (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -126,7 +126,7 @@ export class CowApi {
 
     /**
      * Gets settlements.
-     * @summary Settlements (historical) 🔥
+     * @summary Settlements (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -204,7 +204,7 @@ export class CowApi {
 
     /**
      * Gets tokens.
-     * @summary Tokens (historical) 🔥
+     * @summary Tokens (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -294,7 +294,7 @@ export class CowApi {
 
     /**
      * Gets trades.
-     * @summary Trades (historical) 🔥
+     * @summary Trades (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -380,7 +380,7 @@ export class CowApi {
 
     /**
      * Gets users.
-     * @summary Users (historical) 🔥
+     * @summary Users (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.

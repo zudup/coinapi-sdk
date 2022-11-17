@@ -25,7 +25,7 @@ void main() {
       // TODO
     });
 
-    // Bundles (historical) 🔥
+    // Bundles (historical)
     //
     // Gets bundles.
     //
@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // Burns (historical) 🔥
+    // Burns (historical)
     //
     // Gets burns.
     //
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // LiquidityPositionSnapshots (historical) 🔥
+    // LiquidityPositionSnapshots (historical)
     //
     // Gets liquidityPositionSnapshots.
     //
@@ -52,7 +52,7 @@ void main() {
       // TODO
     });
 
-    // LiquidityPositions (historical) 🔥
+    // LiquidityPositions (historical)
     //
     // Gets liquidityPositions.
     //
@@ -61,7 +61,7 @@ void main() {
       // TODO
     });
 
-    // Mints (historical) 🔥
+    // Mints (historical)
     //
     // Gets mints.
     //
@@ -70,7 +70,7 @@ void main() {
       // TODO
     });
 
-    // PairDayDatas (historical) 🔥
+    // PairDayDatas (historical)
     //
     // Gets pairDayDatas.
     //
@@ -79,7 +79,7 @@ void main() {
       // TODO
     });
 
-    // PairHourDatas (historical) 🔥
+    // PairHourDatas (historical)
     //
     // Gets pairHourDatas.
     //
@@ -88,7 +88,7 @@ void main() {
       // TODO
     });
 
-    // Pairs (historical) 🔥
+    // Pairs (historical)
     //
     // Gets pairs.
     //
@@ -97,7 +97,7 @@ void main() {
       // TODO
     });
 
-    // Swaps (historical) 🔥
+    // Swaps (historical)
     //
     // Gets swaps.
     //
@@ -106,7 +106,7 @@ void main() {
       // TODO
     });
 
-    // TokenDayDatas (historical) 🔥
+    // TokenDayDatas (historical)
     //
     // Gets tokenDayDatas.
     //
@@ -115,7 +115,7 @@ void main() {
       // TODO
     });
 
-    // Tokens (historical) 🔥
+    // Tokens (historical)
     //
     // Gets tokens.
     //
@@ -124,7 +124,7 @@ void main() {
       // TODO
     });
 
-    // Transactions (historical) 🔥
+    // Transactions (historical)
     //
     // Gets transactions.
     //
@@ -133,7 +133,7 @@ void main() {
       // TODO
     });
 
-    // UniswapDayDatas (historical) 🔥
+    // UniswapDayDatas (historical)
     //
     // Gets uniswapDayDatas.
     //
@@ -142,7 +142,7 @@ void main() {
       // TODO
     });
 
-    // UniswapFactorys (historical) 🔥
+    // UniswapFactorys (historical)
     //
     // Gets uniswapFactorys.
     //
@@ -151,7 +151,7 @@ void main() {
       // TODO
     });
 
-    // Users (historical) 🔥
+    // Users (historical)
     //
     // Gets users.
     //

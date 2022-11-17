@@ -55,7 +55,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_batchs__historical
-  # Batchs (historical) 🔥
+  # Batchs (historical)
   # Gets batchs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -71,7 +71,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_deposits__historical
-  # Deposits (historical) 🔥
+  # Deposits (historical)
   # Gets deposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -88,7 +88,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_orders__historical
-  # Orders (historical) 🔥
+  # Orders (historical)
   # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -106,7 +106,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_prices__historical
-  # Prices (historical) 🔥
+  # Prices (historical)
   # Gets prices.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -122,7 +122,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_solutions__historical
-  # Solutions (historical) 🔥
+  # Solutions (historical)
   # Gets solutions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -138,7 +138,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_statss__historical
-  # Statss (historical) 🔥
+  # Statss (historical)
   # Gets statss.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -154,7 +154,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -173,7 +173,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_trades__historical
-  # Trades (historical) 🔥
+  # Trades (historical)
   # Gets trades.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -191,7 +191,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_users__historical
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -207,7 +207,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_withdraw_requests__historical
-  # WithdrawRequests (historical) 🔥
+  # WithdrawRequests (historical)
   # Gets withdrawRequests.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -224,7 +224,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_withdraws__historical
-  # Withdraws (historical) 🔥
+  # Withdraws (historical)
   # Gets withdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

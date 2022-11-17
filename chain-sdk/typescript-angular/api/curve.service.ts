@@ -1245,7 +1245,7 @@ export class CurveService {
     }
 
     /**
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1335,7 +1335,7 @@ export class CurveService {
     }
 
     /**
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1425,7 +1425,7 @@ export class CurveService {
     }
 
     /**
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1515,7 +1515,7 @@ export class CurveService {
     }
 
     /**
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1605,7 +1605,7 @@ export class CurveService {
     }
 
     /**
-     * Coins (historical) 🔥
+     * Coins (historical)
      * Gets coins.
      * @param startBlock 
      * @param endBlock 
@@ -1695,7 +1695,7 @@ export class CurveService {
     }
 
     /**
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1785,7 +1785,7 @@ export class CurveService {
     }
 
     /**
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1870,7 +1870,7 @@ export class CurveService {
     }
 
     /**
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1960,7 +1960,7 @@ export class CurveService {
     }
 
     /**
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      * Gets exchanges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2050,7 +2050,7 @@ export class CurveService {
     }
 
     /**
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2140,7 +2140,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2225,7 +2225,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2315,7 +2315,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2400,7 +2400,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2485,7 +2485,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2575,7 +2575,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2665,7 +2665,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2750,7 +2750,7 @@ export class CurveService {
     }
 
     /**
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2835,7 +2835,7 @@ export class CurveService {
     }
 
     /**
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2930,7 +2930,7 @@ export class CurveService {
     }
 
     /**
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3020,7 +3020,7 @@ export class CurveService {
     }
 
     /**
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3125,7 +3125,7 @@ export class CurveService {
     }
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3215,7 +3215,7 @@ export class CurveService {
     }
 
     /**
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3300,7 +3300,7 @@ export class CurveService {
     }
 
     /**
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3385,7 +3385,7 @@ export class CurveService {
     }
 
     /**
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3475,7 +3475,7 @@ export class CurveService {
     }
 
     /**
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3565,7 +3565,7 @@ export class CurveService {
     }
 
     /**
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3650,7 +3650,7 @@ export class CurveService {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3750,7 +3750,7 @@ export class CurveService {
     }
 
     /**
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3840,7 +3840,7 @@ export class CurveService {
     }
 
     /**
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param startBlock 
      * @param endBlock 
@@ -3930,7 +3930,7 @@ export class CurveService {
     }
 
     /**
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4020,7 +4020,7 @@ export class CurveService {
     }
 
     /**
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

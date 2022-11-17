@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveContractsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveContractsHistorical unit test stubs
-        Contracts (historical) 🔥  # noqa: E501
+        Contracts (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

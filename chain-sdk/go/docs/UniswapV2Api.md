@@ -6,21 +6,21 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UniswapV2BundlesCurrent**](UniswapV2Api.md#UniswapV2BundlesCurrent) | **Get** /dapps/uniswapv2/bundles/current | Bundles (current)
 [**UniswapV2BurnsCurrent**](UniswapV2Api.md#UniswapV2BurnsCurrent) | **Get** /dapps/uniswapv2/burns/current | Burns (current)
-[**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#UniswapV2GetBundlesHistorical) | **Get** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
-[**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#UniswapV2GetBurnsHistorical) | **Get** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
-[**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionSnapshotsHistorical) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionsHistorical) | **Get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**UniswapV2GetMintsHistorical**](UniswapV2Api.md#UniswapV2GetMintsHistorical) | **Get** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
-[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
-[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
-[**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
-[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
-[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactorysHistorical) | **Get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
-[**UniswapV2GetUsersHistorical**](UniswapV2Api.md#UniswapV2GetUsersHistorical) | **Get** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#UniswapV2GetBundlesHistorical) | **Get** /dapps/uniswapv2/bundles/historical | Bundles (historical)
+[**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#UniswapV2GetBurnsHistorical) | **Get** /dapps/uniswapv2/burns/historical | Burns (historical)
+[**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionSnapshotsHistorical) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionsHistorical) | **Get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
+[**UniswapV2GetMintsHistorical**](UniswapV2Api.md#UniswapV2GetMintsHistorical) | **Get** /dapps/uniswapv2/mints/historical | Mints (historical)
+[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
+[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical)
+[**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical)
+[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical)
+[**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical)
+[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactorysHistorical) | **Get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**UniswapV2GetUsersHistorical**](UniswapV2Api.md#UniswapV2GetUsersHistorical) | **Get** /dapps/uniswapv2/users/historical | Users (historical)
 [**UniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionSnapshotsCurrent) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**UniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionsCurrent) | **Get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**UniswapV2MintsCurrent**](UniswapV2Api.md#UniswapV2MintsCurrent) | **Get** /dapps/uniswapv2/mints/current | Mints (current)
@@ -163,7 +163,7 @@ No authorization required
 
 > []UniswapV2BundleDTO UniswapV2GetBundlesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 
 
@@ -238,7 +238,7 @@ No authorization required
 
 > []UniswapV2BurnDTO UniswapV2GetBurnsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
 
-Burns (historical) 🔥
+Burns (historical)
 
 
 
@@ -315,7 +315,7 @@ No authorization required
 
 > []UniswapV2LiquidityPositionSnapshotDTO UniswapV2GetLiquidityPositionSnapshotsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Pair(pair).Execute()
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 
 
@@ -394,7 +394,7 @@ No authorization required
 
 > []UniswapV2LiquidityPositionDTO UniswapV2GetLiquidityPositionsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Pair(pair).Execute()
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 
 
@@ -473,7 +473,7 @@ No authorization required
 
 > []UniswapV2MintDTO UniswapV2GetMintsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
 
-Mints (historical) 🔥
+Mints (historical)
 
 
 
@@ -550,7 +550,7 @@ No authorization required
 
 > []UniswapV2PairDayDataDTO UniswapV2GetPairDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Token0(token0).Token1(token1).Execute()
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 
 
@@ -629,7 +629,7 @@ No authorization required
 
 > []UniswapV2PairHourDataDTO UniswapV2GetPairHourDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 
 
@@ -706,7 +706,7 @@ No authorization required
 
 > []UniswapV2PairDTO UniswapV2GetPairsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Token0(token0).Token1(token1).Execute()
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 
 
@@ -785,7 +785,7 @@ No authorization required
 
 > []UniswapV2SwapDTO UniswapV2GetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 
 
@@ -862,7 +862,7 @@ No authorization required
 
 > []UniswapV2TokenDayDataDTO UniswapV2GetTokenDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 
 
@@ -937,7 +937,7 @@ No authorization required
 
 > []UniswapV2TokenDTO UniswapV2GetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Symbol(symbol).Name(name).Execute()
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 
 
@@ -1016,7 +1016,7 @@ No authorization required
 
 > []UniswapV2TransactionDTO UniswapV2GetTransactionsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 
 
@@ -1091,7 +1091,7 @@ No authorization required
 
 > []UniswapV2UniswapDayDataDTO UniswapV2GetUniswapDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 
 
@@ -1166,7 +1166,7 @@ No authorization required
 
 > []UniswapV2UniswapFactoryDTO UniswapV2GetUniswapFactorysHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-UniswapFactorys (historical) 🔥
+UniswapFactorys (historical)
 
 
 
@@ -1241,7 +1241,7 @@ No authorization required
 
 > []UniswapV2UserDTO UniswapV2GetUsersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Users (historical) 🔥
+Users (historical)
 
 
 

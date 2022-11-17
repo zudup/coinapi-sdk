@@ -62,7 +62,7 @@ import qualified Prelude as P
 
 -- | @GET \/dapps\/cow\/orders\/historical@
 -- 
--- Orders (historical) 🔥
+-- Orders (historical)
 -- 
 -- Gets orders.
 -- 
@@ -110,7 +110,7 @@ instance Produces CowGetOrdersHistorical MimePlainText
 
 -- | @GET \/dapps\/cow\/settlements\/historical@
 -- 
--- Settlements (historical) 🔥
+-- Settlements (historical)
 -- 
 -- Gets settlements.
 -- 
@@ -158,7 +158,7 @@ instance Produces CowGetSettlementsHistorical MimePlainText
 
 -- | @GET \/dapps\/cow\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -221,7 +221,7 @@ instance Produces CowGetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/cow\/trades\/historical@
 -- 
--- Trades (historical) 🔥
+-- Trades (historical)
 -- 
 -- Gets trades.
 -- 
@@ -265,7 +265,7 @@ instance Produces CowGetTradesHistorical MimePlainText
 
 -- | @GET \/dapps\/cow\/users\/historical@
 -- 
--- Users (historical) 🔥
+-- Users (historical)
 -- 
 -- Gets users.
 -- 

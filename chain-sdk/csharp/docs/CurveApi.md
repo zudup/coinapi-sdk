@@ -23,38 +23,38 @@ Method | HTTP request | Description
 [**CurveGaugeWeightsCurrent**](CurveApi.md#curvegaugeweightscurrent) | **GET** /dapps/curve/gaugeWeights/current | GaugeWeights (current)
 [**CurveGaugeWithdrawsCurrent**](CurveApi.md#curvegaugewithdrawscurrent) | **GET** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current)
 [**CurveGaugesCurrent**](CurveApi.md#curvegaugescurrent) | **GET** /dapps/curve/gauges/current | Gauges (current)
-[**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) 🔥
-[**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥
-[**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥
-[**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥
-[**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) 🔥
-[**CurveGetContractVersionsHistorical**](CurveApi.md#curvegetcontractversionshistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥
-[**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) 🔥
-[**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥
-[**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
-[**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥
-[**CurveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥
-[**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥
-[**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥
-[**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥
-[**CurveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥
-[**CurveGetGaugeWeightVotesHistorical**](CurveApi.md#curvegetgaugeweightvoteshistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥
-[**CurveGetGaugeWeightsHistorical**](CurveApi.md#curvegetgaugeweightshistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥
-[**CurveGetGaugeWithdrawsHistorical**](CurveApi.md#curvegetgaugewithdrawshistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥
-[**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) 🔥
-[**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥
-[**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥
-[**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
-[**CurveGetProposalVotesHistorical**](CurveApi.md#curvegetproposalvoteshistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥
-[**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) 🔥
-[**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥
-[**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥
-[**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥
-[**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
-[**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥
-[**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥
-[**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥
-[**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥
+[**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
+[**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | Coins (historical)
+[**CurveGetContractVersionsHistorical**](CurveApi.md#curvegetcontractversionshistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical)
+[**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
+[**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
+[**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**CurveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
+[**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
+[**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
+[**CurveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
+[**CurveGetGaugeWeightVotesHistorical**](CurveApi.md#curvegetgaugeweightvoteshistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical)
+[**CurveGetGaugeWeightsHistorical**](CurveApi.md#curvegetgaugeweightshistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical)
+[**CurveGetGaugeWithdrawsHistorical**](CurveApi.md#curvegetgaugewithdrawshistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical)
+[**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
+[**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | Pools (historical)
+[**CurveGetProposalVotesHistorical**](CurveApi.md#curvegetproposalvoteshistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical)
+[**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
+[**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical)
+[**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 [**CurveHourlyVolumesCurrent**](CurveApi.md#curvehourlyvolumescurrent) | **GET** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current)
 [**CurveLpTokensCurrent**](CurveApi.md#curvelptokenscurrent) | **GET** /dapps/curve/lpTokens/current | LpTokens (current)
 [**CurvePoolsCurrent**](CurveApi.md#curvepoolscurrent) | **GET** /dapps/curve/pools/current | Pools (current)
@@ -1447,7 +1447,7 @@ No authorization required
 
 > List&lt;CurveAccountDTO&gt; CurveGetAccountsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-Accounts (historical) 🔥
+Accounts (historical)
 
 Gets accounts.
 
@@ -1477,7 +1477,7 @@ namespace Example
 
             try
             {
-                // Accounts (historical) 🔥
+                // Accounts (historical)
                 List<CurveAccountDTO> result = apiInstance.CurveGetAccountsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -1533,7 +1533,7 @@ No authorization required
 
 > List&lt;CurveAddLiquidityEventDTO&gt; CurveGetAddLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AddLiquidityEvents (historical) 🔥
+AddLiquidityEvents (historical)
 
 Gets addLiquidityEvents.
 
@@ -1563,7 +1563,7 @@ namespace Example
 
             try
             {
-                // AddLiquidityEvents (historical) 🔥
+                // AddLiquidityEvents (historical)
                 List<CurveAddLiquidityEventDTO> result = apiInstance.CurveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1619,7 +1619,7 @@ No authorization required
 
 > List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AdminFeeChangeLogs (historical) 🔥
+AdminFeeChangeLogs (historical)
 
 Gets adminFeeChangeLogs.
 
@@ -1649,7 +1649,7 @@ namespace Example
 
             try
             {
-                // AdminFeeChangeLogs (historical) 🔥
+                // AdminFeeChangeLogs (historical)
                 List<CurveAdminFeeChangeLogDTO> result = apiInstance.CurveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1705,7 +1705,7 @@ No authorization required
 
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveGetAmplificationCoeffChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AmplificationCoeffChangeLogs (historical) 🔥
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplificationCoeffChangeLogs.
 
@@ -1735,7 +1735,7 @@ namespace Example
 
             try
             {
-                // AmplificationCoeffChangeLogs (historical) 🔥
+                // AmplificationCoeffChangeLogs (historical)
                 List<CurveAmplificationCoeffChangeLogDTO> result = apiInstance.CurveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1791,7 +1791,7 @@ No authorization required
 
 > List&lt;CurveCoinDTO&gt; CurveGetCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Coins (historical) 🔥
+Coins (historical)
 
 Gets coins.
 
@@ -1821,7 +1821,7 @@ namespace Example
 
             try
             {
-                // Coins (historical) 🔥
+                // Coins (historical)
                 List<CurveCoinDTO> result = apiInstance.CurveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1877,7 +1877,7 @@ No authorization required
 
 > List&lt;CurveContractVersionDTO&gt; CurveGetContractVersionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-ContractVersions (historical) 🔥
+ContractVersions (historical)
 
 Gets contractVersions.
 
@@ -1907,7 +1907,7 @@ namespace Example
 
             try
             {
-                // ContractVersions (historical) 🔥
+                // ContractVersions (historical)
                 List<CurveContractVersionDTO> result = apiInstance.CurveGetContractVersionsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -1963,7 +1963,7 @@ No authorization required
 
 > List&lt;CurveContractDTO&gt; CurveGetContractsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Contracts (historical) 🔥
+Contracts (historical)
 
 Gets contracts.
 
@@ -1992,7 +1992,7 @@ namespace Example
 
             try
             {
-                // Contracts (historical) 🔥
+                // Contracts (historical)
                 List<CurveContractDTO> result = apiInstance.CurveGetContractsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2047,7 +2047,7 @@ No authorization required
 
 > List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-DailyVolumes (historical) 🔥
+DailyVolumes (historical)
 
 Gets dailyVolumes.
 
@@ -2077,7 +2077,7 @@ namespace Example
 
             try
             {
-                // DailyVolumes (historical) 🔥
+                // DailyVolumes (historical)
                 List<CurveDailyVolumeDTO> result = apiInstance.CurveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2133,7 +2133,7 @@ No authorization required
 
 > List&lt;CurveExchangeDTO&gt; CurveGetExchangesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Exchanges (historical) 🔥
+Exchanges (historical)
 
 Gets exchanges.
 
@@ -2163,7 +2163,7 @@ namespace Example
 
             try
             {
-                // Exchanges (historical) 🔥
+                // Exchanges (historical)
                 List<CurveExchangeDTO> result = apiInstance.CurveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2219,7 +2219,7 @@ No authorization required
 
 > List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-FeeChangeLogs (historical) 🔥
+FeeChangeLogs (historical)
 
 Gets feeChangeLogs.
 
@@ -2249,7 +2249,7 @@ namespace Example
 
             try
             {
-                // FeeChangeLogs (historical) 🔥
+                // FeeChangeLogs (historical)
                 List<CurveFeeChangeLogDTO> result = apiInstance.CurveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2305,7 +2305,7 @@ No authorization required
 
 > List&lt;CurveGaugeDepositDTO&gt; CurveGetGaugeDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeDeposits (historical) 🔥
+GaugeDeposits (historical)
 
 Gets gaugeDeposits.
 
@@ -2334,7 +2334,7 @@ namespace Example
 
             try
             {
-                // GaugeDeposits (historical) 🔥
+                // GaugeDeposits (historical)
                 List<CurveGaugeDepositDTO> result = apiInstance.CurveGetGaugeDepositsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2389,7 +2389,7 @@ No authorization required
 
 > List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquiditysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-GaugeLiquiditys (historical) 🔥
+GaugeLiquiditys (historical)
 
 Gets gaugeLiquiditys.
 
@@ -2419,7 +2419,7 @@ namespace Example
 
             try
             {
-                // GaugeLiquiditys (historical) 🔥
+                // GaugeLiquiditys (historical)
                 List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -2475,7 +2475,7 @@ No authorization required
 
 > List&lt;CurveGaugeTotalWeightDTO&gt; CurveGetGaugeTotalWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeTotalWeights (historical) 🔥
+GaugeTotalWeights (historical)
 
 Gets gaugeTotalWeights.
 
@@ -2504,7 +2504,7 @@ namespace Example
 
             try
             {
-                // GaugeTotalWeights (historical) 🔥
+                // GaugeTotalWeights (historical)
                 List<CurveGaugeTotalWeightDTO> result = apiInstance.CurveGetGaugeTotalWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2559,7 +2559,7 @@ No authorization required
 
 > List&lt;CurveGaugeTypeWeightDTO&gt; CurveGetGaugeTypeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeTypeWeights (historical) 🔥
+GaugeTypeWeights (historical)
 
 Gets gaugeTypeWeights.
 
@@ -2588,7 +2588,7 @@ namespace Example
 
             try
             {
-                // GaugeTypeWeights (historical) 🔥
+                // GaugeTypeWeights (historical)
                 List<CurveGaugeTypeWeightDTO> result = apiInstance.CurveGetGaugeTypeWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2643,7 +2643,7 @@ No authorization required
 
 > List&lt;CurveGaugeTypeDTO&gt; CurveGetGaugeTypesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
-GaugeTypes (historical) 🔥
+GaugeTypes (historical)
 
 Gets gaugeTypes.
 
@@ -2673,7 +2673,7 @@ namespace Example
 
             try
             {
-                // GaugeTypes (historical) 🔥
+                // GaugeTypes (historical)
                 List<CurveGaugeTypeDTO> result = apiInstance.CurveGetGaugeTypesHistorical(startBlock, endBlock, startDate, endDate, id, name);
                 Debug.WriteLine(result);
             }
@@ -2729,7 +2729,7 @@ No authorization required
 
 > List&lt;CurveGaugeWeightVoteDTO&gt; CurveGetGaugeWeightVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-GaugeWeightVotes (historical) 🔥
+GaugeWeightVotes (historical)
 
 Gets gaugeWeightVotes.
 
@@ -2759,7 +2759,7 @@ namespace Example
 
             try
             {
-                // GaugeWeightVotes (historical) 🔥
+                // GaugeWeightVotes (historical)
                 List<CurveGaugeWeightVoteDTO> result = apiInstance.CurveGetGaugeWeightVotesHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -2815,7 +2815,7 @@ No authorization required
 
 > List&lt;CurveGaugeWeightDTO&gt; CurveGetGaugeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeWeights (historical) 🔥
+GaugeWeights (historical)
 
 Gets gaugeWeights.
 
@@ -2844,7 +2844,7 @@ namespace Example
 
             try
             {
-                // GaugeWeights (historical) 🔥
+                // GaugeWeights (historical)
                 List<CurveGaugeWeightDTO> result = apiInstance.CurveGetGaugeWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2899,7 +2899,7 @@ No authorization required
 
 > List&lt;CurveGaugeWithdrawDTO&gt; CurveGetGaugeWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeWithdraws (historical) 🔥
+GaugeWithdraws (historical)
 
 Gets gaugeWithdraws.
 
@@ -2928,7 +2928,7 @@ namespace Example
 
             try
             {
-                // GaugeWithdraws (historical) 🔥
+                // GaugeWithdraws (historical)
                 List<CurveGaugeWithdrawDTO> result = apiInstance.CurveGetGaugeWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2983,7 +2983,7 @@ No authorization required
 
 > List&lt;CurveGaugeDTO&gt; CurveGetGaugesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string pool = null)
 
-Gauges (historical) 🔥
+Gauges (historical)
 
 Gets gauges.
 
@@ -3014,7 +3014,7 @@ namespace Example
 
             try
             {
-                // Gauges (historical) 🔥
+                // Gauges (historical)
                 List<CurveGaugeDTO> result = apiInstance.CurveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, id, address, pool);
                 Debug.WriteLine(result);
             }
@@ -3071,7 +3071,7 @@ No authorization required
 
 > List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-HourlyVolumes (historical) 🔥
+HourlyVolumes (historical)
 
 Gets hourlyVolumes.
 
@@ -3101,7 +3101,7 @@ namespace Example
 
             try
             {
-                // HourlyVolumes (historical) 🔥
+                // HourlyVolumes (historical)
                 List<CurveHourlyVolumeDTO> result = apiInstance.CurveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -3157,7 +3157,7 @@ No authorization required
 
 > List&lt;CurveLpTokenDTO&gt; CurveGetLpTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null, string pool = null)
 
-LpTokens (historical) 🔥
+LpTokens (historical)
 
 Gets lpTokens.
 
@@ -3190,7 +3190,7 @@ namespace Example
 
             try
             {
-                // LpTokens (historical) 🔥
+                // LpTokens (historical)
                 List<CurveLpTokenDTO> result = apiInstance.CurveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool);
                 Debug.WriteLine(result);
             }
@@ -3249,7 +3249,7 @@ No authorization required
 
 > List&lt;CurvePoolDTO&gt; CurveGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
-Pools (historical) 🔥
+Pools (historical)
 
 Gets pools.
 
@@ -3279,7 +3279,7 @@ namespace Example
 
             try
             {
-                // Pools (historical) 🔥
+                // Pools (historical)
                 List<CurvePoolDTO> result = apiInstance.CurveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, name);
                 Debug.WriteLine(result);
             }
@@ -3335,7 +3335,7 @@ No authorization required
 
 > List&lt;CurveProposalVoteDTO&gt; CurveGetProposalVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-ProposalVotes (historical) 🔥
+ProposalVotes (historical)
 
 Gets proposalVotes.
 
@@ -3364,7 +3364,7 @@ namespace Example
 
             try
             {
-                // ProposalVotes (historical) 🔥
+                // ProposalVotes (historical)
                 List<CurveProposalVoteDTO> result = apiInstance.CurveGetProposalVotesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3419,7 +3419,7 @@ No authorization required
 
 > List&lt;CurveProposalDTO&gt; CurveGetProposalsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Proposals (historical) 🔥
+Proposals (historical)
 
 Gets proposals.
 
@@ -3448,7 +3448,7 @@ namespace Example
 
             try
             {
-                // Proposals (historical) 🔥
+                // Proposals (historical)
                 List<CurveProposalDTO> result = apiInstance.CurveGetProposalsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3503,7 +3503,7 @@ No authorization required
 
 > List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-RemoveLiquidityEvents (historical) 🔥
+RemoveLiquidityEvents (historical)
 
 Gets removeLiquidityEvents.
 
@@ -3533,7 +3533,7 @@ namespace Example
 
             try
             {
-                // RemoveLiquidityEvents (historical) 🔥
+                // RemoveLiquidityEvents (historical)
                 List<CurveRemoveLiquidityEventDTO> result = apiInstance.CurveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -3589,7 +3589,7 @@ No authorization required
 
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveGetRemoveLiquidityOneEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-RemoveLiquidityOneEvents (historical) 🔥
+RemoveLiquidityOneEvents (historical)
 
 Gets removeLiquidityOneEvents.
 
@@ -3619,7 +3619,7 @@ namespace Example
 
             try
             {
-                // RemoveLiquidityOneEvents (historical) 🔥
+                // RemoveLiquidityOneEvents (historical)
                 List<CurveRemoveLiquidityOneEventDTO> result = apiInstance.CurveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -3675,7 +3675,7 @@ No authorization required
 
 > List&lt;CurveSystemStateDTO&gt; CurveGetSystemStatesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-SystemStates (historical) 🔥
+SystemStates (historical)
 
 Gets systemStates.
 
@@ -3704,7 +3704,7 @@ namespace Example
 
             try
             {
-                // SystemStates (historical) 🔥
+                // SystemStates (historical)
                 List<CurveSystemStateDTO> result = apiInstance.CurveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3759,7 +3759,7 @@ No authorization required
 
 > List&lt;CurveTokenDTO&gt; CurveGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -3791,7 +3791,7 @@ namespace Example
 
             try
             {
-                // Tokens (historical) 🔥
+                // Tokens (historical)
                 List<CurveTokenDTO> result = apiInstance.CurveGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol);
                 Debug.WriteLine(result);
             }
@@ -3849,7 +3849,7 @@ No authorization required
 
 > List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-TransferOwnershipEvents (historical) 🔥
+TransferOwnershipEvents (historical)
 
 Gets transferOwnershipEvents.
 
@@ -3879,7 +3879,7 @@ namespace Example
 
             try
             {
-                // TransferOwnershipEvents (historical) 🔥
+                // TransferOwnershipEvents (historical)
                 List<CurveTransferOwnershipEventDTO> result = apiInstance.CurveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -3935,7 +3935,7 @@ No authorization required
 
 > List&lt;CurveUnderlyingCoinDTO&gt; CurveGetUnderlyingCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-UnderlyingCoins (historical) 🔥
+UnderlyingCoins (historical)
 
 Gets underlyingCoins.
 
@@ -3965,7 +3965,7 @@ namespace Example
 
             try
             {
-                // UnderlyingCoins (historical) 🔥
+                // UnderlyingCoins (historical)
                 List<CurveUnderlyingCoinDTO> result = apiInstance.CurveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4021,7 +4021,7 @@ No authorization required
 
 > List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-VotingApps (historical) 🔥
+VotingApps (historical)
 
 Gets votingApps.
 
@@ -4051,7 +4051,7 @@ namespace Example
 
             try
             {
-                // VotingApps (historical) 🔥
+                // VotingApps (historical)
                 List<CurveVotingAppDTO> result = apiInstance.CurveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -4107,7 +4107,7 @@ No authorization required
 
 > List&lt;CurveWeeklyVolumeDTO&gt; CurveGetWeeklyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-WeeklyVolumes (historical) 🔥
+WeeklyVolumes (historical)
 
 Gets weeklyVolumes.
 
@@ -4137,7 +4137,7 @@ namespace Example
 
             try
             {
-                // WeeklyVolumes (historical) 🔥
+                // WeeklyVolumes (historical)
                 List<CurveWeeklyVolumeDTO> result = apiInstance.CurveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }

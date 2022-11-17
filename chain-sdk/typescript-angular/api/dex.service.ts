@@ -226,7 +226,7 @@ export class DexService {
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -311,7 +311,7 @@ export class DexService {
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock 
      * @param endBlock 
@@ -401,7 +401,7 @@ export class DexService {
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock 
      * @param endBlock 
@@ -496,7 +496,7 @@ export class DexService {
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock 
      * @param endBlock 
@@ -581,7 +581,7 @@ export class DexService {
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -666,7 +666,7 @@ export class DexService {
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -751,7 +751,7 @@ export class DexService {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -851,7 +851,7 @@ export class DexService {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -946,7 +946,7 @@ export class DexService {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1031,7 +1031,7 @@ export class DexService {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock 
      * @param endBlock 
@@ -1121,7 +1121,7 @@ export class DexService {
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock 
      * @param endBlock 

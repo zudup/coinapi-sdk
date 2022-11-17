@@ -127,7 +127,7 @@ export default class DexApi {
      */
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -176,7 +176,7 @@ export default class DexApi {
      */
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -227,7 +227,7 @@ export default class DexApi {
      */
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -280,7 +280,7 @@ export default class DexApi {
      */
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -329,7 +329,7 @@ export default class DexApi {
      */
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -378,7 +378,7 @@ export default class DexApi {
      */
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -427,7 +427,7 @@ export default class DexApi {
      */
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -482,7 +482,7 @@ export default class DexApi {
      */
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -535,7 +535,7 @@ export default class DexApi {
      */
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -584,7 +584,7 @@ export default class DexApi {
      */
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -635,7 +635,7 @@ export default class DexApi {
      */
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

@@ -71,7 +71,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_DepositDTO>>> dex_Deposits__current(
     ) const;
     /// <summary>
-    /// Batchs (historical) 🔥
+    /// Batchs (historical)
     /// </summary>
     /// <remarks>
     /// Gets batchs.
@@ -89,7 +89,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Deposits (historical) 🔥
+    /// Deposits (historical)
     /// </summary>
     /// <remarks>
     /// Gets deposits.
@@ -109,7 +109,7 @@ public:
         boost::optional<utility::string_t> user
     ) const;
     /// <summary>
-    /// Orders (historical) 🔥
+    /// Orders (historical)
     /// </summary>
     /// <remarks>
     /// Gets orders.
@@ -131,7 +131,7 @@ public:
         boost::optional<utility::string_t> sellToken
     ) const;
     /// <summary>
-    /// Prices (historical) 🔥
+    /// Prices (historical)
     /// </summary>
     /// <remarks>
     /// Gets prices.
@@ -149,7 +149,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Solutions (historical) 🔥
+    /// Solutions (historical)
     /// </summary>
     /// <remarks>
     /// Gets solutions.
@@ -167,7 +167,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Statss (historical) 🔥
+    /// Statss (historical)
     /// </summary>
     /// <remarks>
     /// Gets statss.
@@ -185,7 +185,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Tokens (historical) 🔥
+    /// Tokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -209,7 +209,7 @@ public:
         boost::optional<utility::string_t> name
     ) const;
     /// <summary>
-    /// Trades (historical) 🔥
+    /// Trades (historical)
     /// </summary>
     /// <remarks>
     /// Gets trades.
@@ -231,7 +231,7 @@ public:
         boost::optional<utility::string_t> sellToken
     ) const;
     /// <summary>
-    /// Users (historical) 🔥
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.
@@ -249,7 +249,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// WithdrawRequests (historical) 🔥
+    /// WithdrawRequests (historical)
     /// </summary>
     /// <remarks>
     /// Gets withdrawRequests.
@@ -269,7 +269,7 @@ public:
         boost::optional<utility::string_t> user
     ) const;
     /// <summary>
-    /// Withdraws (historical) 🔥
+    /// Withdraws (historical)
     /// </summary>
     /// <remarks>
     /// Gets withdraws.

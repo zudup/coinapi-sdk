@@ -230,7 +230,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Curve_GaugeDTO>>> curve_Gauges__current(
     ) const;
     /// <summary>
-    /// Accounts (historical) 🔥
+    /// Accounts (historical)
     /// </summary>
     /// <remarks>
     /// Gets accounts.
@@ -250,7 +250,7 @@ public:
         boost::optional<utility::string_t> address
     ) const;
     /// <summary>
-    /// AddLiquidityEvents (historical) 🔥
+    /// AddLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets addLiquidityEvents.
@@ -270,7 +270,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// AdminFeeChangeLogs (historical) 🔥
+    /// AdminFeeChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets adminFeeChangeLogs.
@@ -290,7 +290,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// AmplificationCoeffChangeLogs (historical) 🔥
+    /// AmplificationCoeffChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets amplificationCoeffChangeLogs.
@@ -310,7 +310,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Coins (historical) 🔥
+    /// Coins (historical)
     /// </summary>
     /// <remarks>
     /// Gets coins.
@@ -330,7 +330,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// ContractVersions (historical) 🔥
+    /// ContractVersions (historical)
     /// </summary>
     /// <remarks>
     /// Gets contractVersions.
@@ -350,7 +350,7 @@ public:
         boost::optional<utility::string_t> address
     ) const;
     /// <summary>
-    /// Contracts (historical) 🔥
+    /// Contracts (historical)
     /// </summary>
     /// <remarks>
     /// Gets contracts.
@@ -368,7 +368,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// DailyVolumes (historical) 🔥
+    /// DailyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets dailyVolumes.
@@ -388,7 +388,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Exchanges (historical) 🔥
+    /// Exchanges (historical)
     /// </summary>
     /// <remarks>
     /// Gets exchanges.
@@ -408,7 +408,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// FeeChangeLogs (historical) 🔥
+    /// FeeChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets feeChangeLogs.
@@ -428,7 +428,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// GaugeDeposits (historical) 🔥
+    /// GaugeDeposits (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeDeposits.
@@ -446,7 +446,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// GaugeLiquiditys (historical) 🔥
+    /// GaugeLiquiditys (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeLiquiditys.
@@ -466,7 +466,7 @@ public:
         boost::optional<utility::string_t> user
     ) const;
     /// <summary>
-    /// GaugeTotalWeights (historical) 🔥
+    /// GaugeTotalWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeTotalWeights.
@@ -484,7 +484,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// GaugeTypeWeights (historical) 🔥
+    /// GaugeTypeWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeTypeWeights.
@@ -502,7 +502,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// GaugeTypes (historical) 🔥
+    /// GaugeTypes (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeTypes.
@@ -522,7 +522,7 @@ public:
         boost::optional<utility::string_t> name
     ) const;
     /// <summary>
-    /// GaugeWeightVotes (historical) 🔥
+    /// GaugeWeightVotes (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeWeightVotes.
@@ -542,7 +542,7 @@ public:
         boost::optional<utility::string_t> user
     ) const;
     /// <summary>
-    /// GaugeWeights (historical) 🔥
+    /// GaugeWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeWeights.
@@ -560,7 +560,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// GaugeWithdraws (historical) 🔥
+    /// GaugeWithdraws (historical)
     /// </summary>
     /// <remarks>
     /// Gets gaugeWithdraws.
@@ -578,7 +578,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Gauges (historical) 🔥
+    /// Gauges (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges.
@@ -600,7 +600,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// HourlyVolumes (historical) 🔥
+    /// HourlyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets hourlyVolumes.
@@ -620,7 +620,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// LpTokens (historical) 🔥
+    /// LpTokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets lpTokens.
@@ -646,7 +646,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Pools (historical) 🔥
+    /// Pools (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -666,7 +666,7 @@ public:
         boost::optional<utility::string_t> name
     ) const;
     /// <summary>
-    /// ProposalVotes (historical) 🔥
+    /// ProposalVotes (historical)
     /// </summary>
     /// <remarks>
     /// Gets proposalVotes.
@@ -684,7 +684,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Proposals (historical) 🔥
+    /// Proposals (historical)
     /// </summary>
     /// <remarks>
     /// Gets proposals.
@@ -702,7 +702,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// RemoveLiquidityEvents (historical) 🔥
+    /// RemoveLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets removeLiquidityEvents.
@@ -722,7 +722,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// RemoveLiquidityOneEvents (historical) 🔥
+    /// RemoveLiquidityOneEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets removeLiquidityOneEvents.
@@ -742,7 +742,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// SystemStates (historical) 🔥
+    /// SystemStates (historical)
     /// </summary>
     /// <remarks>
     /// Gets systemStates.
@@ -760,7 +760,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Tokens (historical) 🔥
+    /// Tokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -784,7 +784,7 @@ public:
         boost::optional<utility::string_t> symbol
     ) const;
     /// <summary>
-    /// TransferOwnershipEvents (historical) 🔥
+    /// TransferOwnershipEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets transferOwnershipEvents.
@@ -804,7 +804,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// UnderlyingCoins (historical) 🔥
+    /// UnderlyingCoins (historical)
     /// </summary>
     /// <remarks>
     /// Gets underlyingCoins.
@@ -824,7 +824,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// VotingApps (historical) 🔥
+    /// VotingApps (historical)
     /// </summary>
     /// <remarks>
     /// Gets votingApps.
@@ -844,7 +844,7 @@ public:
         boost::optional<utility::string_t> address
     ) const;
     /// <summary>
-    /// WeeklyVolumes (historical) 🔥
+    /// WeeklyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets weeklyVolumes.

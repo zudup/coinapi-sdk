@@ -8,22 +8,22 @@ Method | HTTP request | Description
 [**SushiswapBurnsCurrent**](SushiswapApi.md#SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**SushiswapDayDatasCurrent**](SushiswapApi.md#SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
 [**SushiswapFactorysCurrent**](SushiswapApi.md#SushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
-[**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
-[**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
-[**SushiswapGetFactorysHistorical**](SushiswapApi.md#SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
-[**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**SushiswapGetPairsHistorical**](SushiswapApi.md#SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-[**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
-[**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
+[**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
+[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
+[**SushiswapGetFactorysHistorical**](SushiswapApi.md#SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
+[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
+[**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
+[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
+[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**SushiswapGetPairsHistorical**](SushiswapApi.md#SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
+[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
+[**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
+[**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
 [**SushiswapHourDatasCurrent**](SushiswapApi.md#SushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
 [**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
@@ -209,7 +209,7 @@ No authorization required
 # **SushiswapGetBundlesHistorical**
 > array[SushiswapBundleDTO] SushiswapGetBundlesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -217,7 +217,7 @@ Gets bundles.
 ```R
 library(openapi)
 
-# Bundles (historical) 🔥
+# Bundles (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -264,7 +264,7 @@ No authorization required
 # **SushiswapGetBurnsHistorical**
 > array[SushiswapBurnDTO] SushiswapGetBurnsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -272,7 +272,7 @@ Gets burns.
 ```R
 library(openapi)
 
-# Burns (historical) 🔥
+# Burns (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -321,7 +321,7 @@ No authorization required
 # **SushiswapGetDayDatasHistorical**
 > array[SushiswapDayDataDTO] SushiswapGetDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 Gets dayDatas.
 
@@ -329,7 +329,7 @@ Gets dayDatas.
 ```R
 library(openapi)
 
-# DayDatas (historical) 🔥
+# DayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -376,7 +376,7 @@ No authorization required
 # **SushiswapGetFactorysHistorical**
 > array[SushiswapFactoryDTO] SushiswapGetFactorysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -384,7 +384,7 @@ Gets factorys.
 ```R
 library(openapi)
 
-# Factorys (historical) 🔥
+# Factorys (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -431,7 +431,7 @@ No authorization required
 # **SushiswapGetHourDatasHistorical**
 > array[SushiswapHourDataDTO] SushiswapGetHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 Gets hourDatas.
 
@@ -439,7 +439,7 @@ Gets hourDatas.
 ```R
 library(openapi)
 
-# HourDatas (historical) 🔥
+# HourDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -486,7 +486,7 @@ No authorization required
 # **SushiswapGetLiquidityPositionSnapshotsHistorical**
 > array[SushiswapLiquidityPositionSnapshotDTO] SushiswapGetLiquidityPositionSnapshotsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user, pair = var.pair)
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -494,7 +494,7 @@ Gets liquidityPositionSnapshots.
 ```R
 library(openapi)
 
-# LiquidityPositionSnapshots (historical) 🔥
+# LiquidityPositionSnapshots (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -545,7 +545,7 @@ No authorization required
 # **SushiswapGetLiquidityPositionsHistorical**
 > array[SushiswapLiquidityPositionDTO] SushiswapGetLiquidityPositionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user, pair = var.pair)
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -553,7 +553,7 @@ Gets liquidityPositions.
 ```R
 library(openapi)
 
-# LiquidityPositions (historical) 🔥
+# LiquidityPositions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -604,7 +604,7 @@ No authorization required
 # **SushiswapGetMintsHistorical**
 > array[SushiswapMintDTO] SushiswapGetMintsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -612,7 +612,7 @@ Gets mints.
 ```R
 library(openapi)
 
-# Mints (historical) 🔥
+# Mints (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -661,7 +661,7 @@ No authorization required
 # **SushiswapGetPairDayDatasHistorical**
 > array[SushiswapPairDayDataDTO] SushiswapGetPairDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair, token_0 = var.token_0, token_1 = var.token_1)
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -669,7 +669,7 @@ Gets pairDayDatas.
 ```R
 library(openapi)
 
-# PairDayDatas (historical) 🔥
+# PairDayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -722,7 +722,7 @@ No authorization required
 # **SushiswapGetPairHourDatasHistorical**
 > array[SushiswapPairHourDataDTO] SushiswapGetPairHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -730,7 +730,7 @@ Gets pairHourDatas.
 ```R
 library(openapi)
 
-# PairHourDatas (historical) 🔥
+# PairHourDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -779,7 +779,7 @@ No authorization required
 # **SushiswapGetPairsHistorical**
 > array[SushiswapPairDTO] SushiswapGetPairsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, name = var.name, token_0 = var.token_0, token_1 = var.token_1)
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -787,7 +787,7 @@ Gets pairs.
 ```R
 library(openapi)
 
-# Pairs (historical) 🔥
+# Pairs (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -840,7 +840,7 @@ No authorization required
 # **SushiswapGetSwapsHistorical**
 > array[SushiswapSwapDTO] SushiswapGetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -848,7 +848,7 @@ Gets swaps.
 ```R
 library(openapi)
 
-# Swaps (historical) 🔥
+# Swaps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -897,7 +897,7 @@ No authorization required
 # **SushiswapGetTokenDayDatasHistorical**
 > array[SushiswapTokenDayDataDTO] SushiswapGetTokenDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -905,7 +905,7 @@ Gets tokenDayDatas.
 ```R
 library(openapi)
 
-# TokenDayDatas (historical) 🔥
+# TokenDayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -952,7 +952,7 @@ No authorization required
 # **SushiswapGetTokensHistorical**
 > array[SushiswapTokenDTO] SushiswapGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, symbol = var.symbol, name = var.name)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -960,7 +960,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -1011,7 +1011,7 @@ No authorization required
 # **SushiswapGetTransactionsHistorical**
 > array[SushiswapTransactionDTO] SushiswapGetTransactionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -1019,7 +1019,7 @@ Gets transactions.
 ```R
 library(openapi)
 
-# Transactions (historical) 🔥
+# Transactions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -1066,7 +1066,7 @@ No authorization required
 # **SushiswapGetUsersHistorical**
 > array[SushiswapUserDTO] SushiswapGetUsersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1074,7 +1074,7 @@ Gets users.
 ```R
 library(openapi)
 
-# Users (historical) 🔥
+# Users (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)

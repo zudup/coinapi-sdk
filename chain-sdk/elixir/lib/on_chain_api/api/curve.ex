@@ -567,7 +567,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Accounts (historical) 🔥
+  Accounts (historical)
   Gets accounts.
 
   ### Parameters
@@ -612,7 +612,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  AddLiquidityEvents (historical) 🔥
+  AddLiquidityEvents (historical)
   Gets addLiquidityEvents.
 
   ### Parameters
@@ -657,7 +657,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  AdminFeeChangeLogs (historical) 🔥
+  AdminFeeChangeLogs (historical)
   Gets adminFeeChangeLogs.
 
   ### Parameters
@@ -702,7 +702,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  AmplificationCoeffChangeLogs (historical) 🔥
+  AmplificationCoeffChangeLogs (historical)
   Gets amplificationCoeffChangeLogs.
 
   ### Parameters
@@ -747,7 +747,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Coins (historical) 🔥
+  Coins (historical)
   Gets coins.
 
   ### Parameters
@@ -792,7 +792,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  ContractVersions (historical) 🔥
+  ContractVersions (historical)
   Gets contractVersions.
 
   ### Parameters
@@ -837,7 +837,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Contracts (historical) 🔥
+  Contracts (historical)
   Gets contracts.
 
   ### Parameters
@@ -880,7 +880,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  DailyVolumes (historical) 🔥
+  DailyVolumes (historical)
   Gets dailyVolumes.
 
   ### Parameters
@@ -925,7 +925,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Exchanges (historical) 🔥
+  Exchanges (historical)
   Gets exchanges.
 
   ### Parameters
@@ -970,7 +970,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  FeeChangeLogs (historical) 🔥
+  FeeChangeLogs (historical)
   Gets feeChangeLogs.
 
   ### Parameters
@@ -1015,7 +1015,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeDeposits (historical) 🔥
+  GaugeDeposits (historical)
   Gets gaugeDeposits.
 
   ### Parameters
@@ -1058,7 +1058,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeLiquiditys (historical) 🔥
+  GaugeLiquiditys (historical)
   Gets gaugeLiquiditys.
 
   ### Parameters
@@ -1103,7 +1103,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeTotalWeights (historical) 🔥
+  GaugeTotalWeights (historical)
   Gets gaugeTotalWeights.
 
   ### Parameters
@@ -1146,7 +1146,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeTypeWeights (historical) 🔥
+  GaugeTypeWeights (historical)
   Gets gaugeTypeWeights.
 
   ### Parameters
@@ -1189,7 +1189,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeTypes (historical) 🔥
+  GaugeTypes (historical)
   Gets gaugeTypes.
 
   ### Parameters
@@ -1234,7 +1234,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeWeightVotes (historical) 🔥
+  GaugeWeightVotes (historical)
   Gets gaugeWeightVotes.
 
   ### Parameters
@@ -1279,7 +1279,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeWeights (historical) 🔥
+  GaugeWeights (historical)
   Gets gaugeWeights.
 
   ### Parameters
@@ -1322,7 +1322,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeWithdraws (historical) 🔥
+  GaugeWithdraws (historical)
   Gets gaugeWithdraws.
 
   ### Parameters
@@ -1365,7 +1365,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Gauges (historical) 🔥
+  Gauges (historical)
   Gets gauges.
 
   ### Parameters
@@ -1412,7 +1412,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  HourlyVolumes (historical) 🔥
+  HourlyVolumes (historical)
   Gets hourlyVolumes.
 
   ### Parameters
@@ -1457,7 +1457,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  LpTokens (historical) 🔥
+  LpTokens (historical)
   Gets lpTokens.
 
   ### Parameters
@@ -1508,7 +1508,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Pools (historical) 🔥
+  Pools (historical)
   Gets pools.
 
   ### Parameters
@@ -1553,7 +1553,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  ProposalVotes (historical) 🔥
+  ProposalVotes (historical)
   Gets proposalVotes.
 
   ### Parameters
@@ -1596,7 +1596,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Proposals (historical) 🔥
+  Proposals (historical)
   Gets proposals.
 
   ### Parameters
@@ -1639,7 +1639,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  RemoveLiquidityEvents (historical) 🔥
+  RemoveLiquidityEvents (historical)
   Gets removeLiquidityEvents.
 
   ### Parameters
@@ -1684,7 +1684,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  RemoveLiquidityOneEvents (historical) 🔥
+  RemoveLiquidityOneEvents (historical)
   Gets removeLiquidityOneEvents.
 
   ### Parameters
@@ -1729,7 +1729,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  SystemStates (historical) 🔥
+  SystemStates (historical)
   Gets systemStates.
 
   ### Parameters
@@ -1772,7 +1772,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  Tokens (historical) 🔥
+  Tokens (historical)
   Gets tokens.
 
   ### Parameters
@@ -1821,7 +1821,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  TransferOwnershipEvents (historical) 🔥
+  TransferOwnershipEvents (historical)
   Gets transferOwnershipEvents.
 
   ### Parameters
@@ -1866,7 +1866,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  UnderlyingCoins (historical) 🔥
+  UnderlyingCoins (historical)
   Gets underlyingCoins.
 
   ### Parameters
@@ -1911,7 +1911,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  VotingApps (historical) 🔥
+  VotingApps (historical)
   Gets votingApps.
 
   ### Parameters
@@ -1956,7 +1956,7 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  WeeklyVolumes (historical) 🔥
+  WeeklyVolumes (historical)
   Gets weeklyVolumes.
 
   ### Parameters

@@ -1967,7 +1967,7 @@ func (r ApiCurveGetAccountsHistoricalRequest) Execute() ([]CurveAccountDTO, *htt
 }
 
 /*
-CurveGetAccountsHistorical Accounts (historical) 🔥
+CurveGetAccountsHistorical Accounts (historical)
 
 Gets accounts.
 
@@ -2126,7 +2126,7 @@ func (r ApiCurveGetAddLiquidityEventsHistoricalRequest) Execute() ([]CurveAddLiq
 }
 
 /*
-CurveGetAddLiquidityEventsHistorical AddLiquidityEvents (historical) 🔥
+CurveGetAddLiquidityEventsHistorical AddLiquidityEvents (historical)
 
 Gets addLiquidityEvents.
 
@@ -2285,7 +2285,7 @@ func (r ApiCurveGetAdminFeeChangeLogsHistoricalRequest) Execute() ([]CurveAdminF
 }
 
 /*
-CurveGetAdminFeeChangeLogsHistorical AdminFeeChangeLogs (historical) 🔥
+CurveGetAdminFeeChangeLogsHistorical AdminFeeChangeLogs (historical)
 
 Gets adminFeeChangeLogs.
 
@@ -2444,7 +2444,7 @@ func (r ApiCurveGetAmplificationCoeffChangeLogsHistoricalRequest) Execute() ([]C
 }
 
 /*
-CurveGetAmplificationCoeffChangeLogsHistorical AmplificationCoeffChangeLogs (historical) 🔥
+CurveGetAmplificationCoeffChangeLogsHistorical AmplificationCoeffChangeLogs (historical)
 
 Gets amplificationCoeffChangeLogs.
 
@@ -2597,7 +2597,7 @@ func (r ApiCurveGetCoinsHistoricalRequest) Execute() ([]CurveCoinDTO, *http.Resp
 }
 
 /*
-CurveGetCoinsHistorical Coins (historical) 🔥
+CurveGetCoinsHistorical Coins (historical)
 
 Gets coins.
 
@@ -2756,7 +2756,7 @@ func (r ApiCurveGetContractVersionsHistoricalRequest) Execute() ([]CurveContract
 }
 
 /*
-CurveGetContractVersionsHistorical ContractVersions (historical) 🔥
+CurveGetContractVersionsHistorical ContractVersions (historical)
 
 Gets contractVersions.
 
@@ -2908,7 +2908,7 @@ func (r ApiCurveGetContractsHistoricalRequest) Execute() ([]CurveContractDTO, *h
 }
 
 /*
-CurveGetContractsHistorical Contracts (historical) 🔥
+CurveGetContractsHistorical Contracts (historical)
 
 Gets contracts.
 
@@ -3064,7 +3064,7 @@ func (r ApiCurveGetDailyVolumesHistoricalRequest) Execute() ([]CurveDailyVolumeD
 }
 
 /*
-CurveGetDailyVolumesHistorical DailyVolumes (historical) 🔥
+CurveGetDailyVolumesHistorical DailyVolumes (historical)
 
 Gets dailyVolumes.
 
@@ -3223,7 +3223,7 @@ func (r ApiCurveGetExchangesHistoricalRequest) Execute() ([]CurveExchangeDTO, *h
 }
 
 /*
-CurveGetExchangesHistorical Exchanges (historical) 🔥
+CurveGetExchangesHistorical Exchanges (historical)
 
 Gets exchanges.
 
@@ -3382,7 +3382,7 @@ func (r ApiCurveGetFeeChangeLogsHistoricalRequest) Execute() ([]CurveFeeChangeLo
 }
 
 /*
-CurveGetFeeChangeLogsHistorical FeeChangeLogs (historical) 🔥
+CurveGetFeeChangeLogsHistorical FeeChangeLogs (historical)
 
 Gets feeChangeLogs.
 
@@ -3534,7 +3534,7 @@ func (r ApiCurveGetGaugeDepositsHistoricalRequest) Execute() ([]CurveGaugeDeposi
 }
 
 /*
-CurveGetGaugeDepositsHistorical GaugeDeposits (historical) 🔥
+CurveGetGaugeDepositsHistorical GaugeDeposits (historical)
 
 Gets gaugeDeposits.
 
@@ -3690,7 +3690,7 @@ func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) Execute() ([]CurveGaugeLiqu
 }
 
 /*
-CurveGetGaugeLiquiditysHistorical GaugeLiquiditys (historical) 🔥
+CurveGetGaugeLiquiditysHistorical GaugeLiquiditys (historical)
 
 Gets gaugeLiquiditys.
 
@@ -3842,7 +3842,7 @@ func (r ApiCurveGetGaugeTotalWeightsHistoricalRequest) Execute() ([]CurveGaugeTo
 }
 
 /*
-CurveGetGaugeTotalWeightsHistorical GaugeTotalWeights (historical) 🔥
+CurveGetGaugeTotalWeightsHistorical GaugeTotalWeights (historical)
 
 Gets gaugeTotalWeights.
 
@@ -3991,7 +3991,7 @@ func (r ApiCurveGetGaugeTypeWeightsHistoricalRequest) Execute() ([]CurveGaugeTyp
 }
 
 /*
-CurveGetGaugeTypeWeightsHistorical GaugeTypeWeights (historical) 🔥
+CurveGetGaugeTypeWeightsHistorical GaugeTypeWeights (historical)
 
 Gets gaugeTypeWeights.
 
@@ -4147,7 +4147,7 @@ func (r ApiCurveGetGaugeTypesHistoricalRequest) Execute() ([]CurveGaugeTypeDTO, 
 }
 
 /*
-CurveGetGaugeTypesHistorical GaugeTypes (historical) 🔥
+CurveGetGaugeTypesHistorical GaugeTypes (historical)
 
 Gets gaugeTypes.
 
@@ -4306,7 +4306,7 @@ func (r ApiCurveGetGaugeWeightVotesHistoricalRequest) Execute() ([]CurveGaugeWei
 }
 
 /*
-CurveGetGaugeWeightVotesHistorical GaugeWeightVotes (historical) 🔥
+CurveGetGaugeWeightVotesHistorical GaugeWeightVotes (historical)
 
 Gets gaugeWeightVotes.
 
@@ -4458,7 +4458,7 @@ func (r ApiCurveGetGaugeWeightsHistoricalRequest) Execute() ([]CurveGaugeWeightD
 }
 
 /*
-CurveGetGaugeWeightsHistorical GaugeWeights (historical) 🔥
+CurveGetGaugeWeightsHistorical GaugeWeights (historical)
 
 Gets gaugeWeights.
 
@@ -4607,7 +4607,7 @@ func (r ApiCurveGetGaugeWithdrawsHistoricalRequest) Execute() ([]CurveGaugeWithd
 }
 
 /*
-CurveGetGaugeWithdrawsHistorical GaugeWithdraws (historical) 🔥
+CurveGetGaugeWithdrawsHistorical GaugeWithdraws (historical)
 
 Gets gaugeWithdraws.
 
@@ -4770,7 +4770,7 @@ func (r ApiCurveGetGaugesHistoricalRequest) Execute() ([]CurveGaugeDTO, *http.Re
 }
 
 /*
-CurveGetGaugesHistorical Gauges (historical) 🔥
+CurveGetGaugesHistorical Gauges (historical)
 
 Gets gauges.
 
@@ -4932,7 +4932,7 @@ func (r ApiCurveGetHourlyVolumesHistoricalRequest) Execute() ([]CurveHourlyVolum
 }
 
 /*
-CurveGetHourlyVolumesHistorical HourlyVolumes (historical) 🔥
+CurveGetHourlyVolumesHistorical HourlyVolumes (historical)
 
 Gets hourlyVolumes.
 
@@ -5112,7 +5112,7 @@ func (r ApiCurveGetLpTokensHistoricalRequest) Execute() ([]CurveLpTokenDTO, *htt
 }
 
 /*
-CurveGetLpTokensHistorical LpTokens (historical) 🔥
+CurveGetLpTokensHistorical LpTokens (historical)
 
 Gets lpTokens.
 
@@ -5280,7 +5280,7 @@ func (r ApiCurveGetPoolsHistoricalRequest) Execute() ([]CurvePoolDTO, *http.Resp
 }
 
 /*
-CurveGetPoolsHistorical Pools (historical) 🔥
+CurveGetPoolsHistorical Pools (historical)
 
 Gets pools.
 
@@ -5432,7 +5432,7 @@ func (r ApiCurveGetProposalVotesHistoricalRequest) Execute() ([]CurveProposalVot
 }
 
 /*
-CurveGetProposalVotesHistorical ProposalVotes (historical) 🔥
+CurveGetProposalVotesHistorical ProposalVotes (historical)
 
 Gets proposalVotes.
 
@@ -5581,7 +5581,7 @@ func (r ApiCurveGetProposalsHistoricalRequest) Execute() ([]CurveProposalDTO, *h
 }
 
 /*
-CurveGetProposalsHistorical Proposals (historical) 🔥
+CurveGetProposalsHistorical Proposals (historical)
 
 Gets proposals.
 
@@ -5737,7 +5737,7 @@ func (r ApiCurveGetRemoveLiquidityEventsHistoricalRequest) Execute() ([]CurveRem
 }
 
 /*
-CurveGetRemoveLiquidityEventsHistorical RemoveLiquidityEvents (historical) 🔥
+CurveGetRemoveLiquidityEventsHistorical RemoveLiquidityEvents (historical)
 
 Gets removeLiquidityEvents.
 
@@ -5896,7 +5896,7 @@ func (r ApiCurveGetRemoveLiquidityOneEventsHistoricalRequest) Execute() ([]Curve
 }
 
 /*
-CurveGetRemoveLiquidityOneEventsHistorical RemoveLiquidityOneEvents (historical) 🔥
+CurveGetRemoveLiquidityOneEventsHistorical RemoveLiquidityOneEvents (historical)
 
 Gets removeLiquidityOneEvents.
 
@@ -6048,7 +6048,7 @@ func (r ApiCurveGetSystemStatesHistoricalRequest) Execute() ([]CurveSystemStateD
 }
 
 /*
-CurveGetSystemStatesHistorical SystemStates (historical) 🔥
+CurveGetSystemStatesHistorical SystemStates (historical)
 
 Gets systemStates.
 
@@ -6218,7 +6218,7 @@ func (r ApiCurveGetTokensHistoricalRequest) Execute() ([]CurveTokenDTO, *http.Re
 }
 
 /*
-CurveGetTokensHistorical Tokens (historical) 🔥
+CurveGetTokensHistorical Tokens (historical)
 
 Gets tokens.
 
@@ -6383,7 +6383,7 @@ func (r ApiCurveGetTransferOwnershipEventsHistoricalRequest) Execute() ([]CurveT
 }
 
 /*
-CurveGetTransferOwnershipEventsHistorical TransferOwnershipEvents (historical) 🔥
+CurveGetTransferOwnershipEventsHistorical TransferOwnershipEvents (historical)
 
 Gets transferOwnershipEvents.
 
@@ -6536,7 +6536,7 @@ func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) Execute() ([]CurveUnderlyin
 }
 
 /*
-CurveGetUnderlyingCoinsHistorical UnderlyingCoins (historical) 🔥
+CurveGetUnderlyingCoinsHistorical UnderlyingCoins (historical)
 
 Gets underlyingCoins.
 
@@ -6695,7 +6695,7 @@ func (r ApiCurveGetVotingAppsHistoricalRequest) Execute() ([]CurveVotingAppDTO, 
 }
 
 /*
-CurveGetVotingAppsHistorical VotingApps (historical) 🔥
+CurveGetVotingAppsHistorical VotingApps (historical)
 
 Gets votingApps.
 
@@ -6854,7 +6854,7 @@ func (r ApiCurveGetWeeklyVolumesHistoricalRequest) Execute() ([]CurveWeeklyVolum
 }
 
 /*
-CurveGetWeeklyVolumesHistorical WeeklyVolumes (historical) 🔥
+CurveGetWeeklyVolumesHistorical WeeklyVolumes (historical)
 
 Gets weeklyVolumes.
 

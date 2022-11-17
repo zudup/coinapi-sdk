@@ -11,21 +11,21 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**uniswap_v2_bundles__current**](UniswapV2Api.md#uniswap_v2_bundles__current) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
 [**uniswap_v2_burns__current**](UniswapV2Api.md#uniswap_v2_burns__current) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
-[**uniswap_v2_get_bundles__historical**](UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
-[**uniswap_v2_get_burns__historical**](UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
-[**uniswap_v2_get_liquidity_position_snapshots__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_position_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**uniswap_v2_get_liquidity_positions__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**uniswap_v2_get_mints__historical**](UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
-[**uniswap_v2_get_pair_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_day_datas__historical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**uniswap_v2_get_pair_hour_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_hour_datas__historical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**uniswap_v2_get_pairs__historical**](UniswapV2Api.md#uniswap_v2_get_pairs__historical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
-[**uniswap_v2_get_token_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_token_day_datas__historical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
-[**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
-[**uniswap_v2_get_uniswap_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
-[**uniswap_v2_get_uniswap_factorys__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_factorys__historical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
-[**uniswap_v2_get_users__historical**](UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswap_v2_get_bundles__historical**](UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical)
+[**uniswap_v2_get_burns__historical**](UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical)
+[**uniswap_v2_get_liquidity_position_snapshots__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_position_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**uniswap_v2_get_liquidity_positions__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
+[**uniswap_v2_get_mints__historical**](UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
+[**uniswap_v2_get_pair_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_day_datas__historical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
+[**uniswap_v2_get_pair_hour_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_hour_datas__historical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswap_v2_get_pairs__historical**](UniswapV2Api.md#uniswap_v2_get_pairs__historical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
+[**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
+[**uniswap_v2_get_token_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_token_day_datas__historical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
+[**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
+[**uniswap_v2_get_uniswap_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**uniswap_v2_get_uniswap_factorys__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_factorys__historical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswap_v2_get_users__historical**](UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswap_v2_liquidity_position_snapshots__current**](UniswapV2Api.md#uniswap_v2_liquidity_position_snapshots__current) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswap_v2_liquidity_positions__current**](UniswapV2Api.md#uniswap_v2_liquidity_positions__current) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswap_v2_mints__current**](UniswapV2Api.md#uniswap_v2_mints__current) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
@@ -128,7 +128,7 @@ No authorization required
 # **uniswap_v2_get_bundles__historical**
 > ARRAY[UniswapV2BundleDTO] uniswap_v2_get_bundles__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -182,7 +182,7 @@ No authorization required
 # **uniswap_v2_get_burns__historical**
 > ARRAY[UniswapV2BurnDTO] uniswap_v2_get_burns__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -238,7 +238,7 @@ No authorization required
 # **uniswap_v2_get_liquidity_position_snapshots__historical**
 > ARRAY[UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_get_liquidity_position_snapshots__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, user => $user, pair => $pair)
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -296,7 +296,7 @@ No authorization required
 # **uniswap_v2_get_liquidity_positions__historical**
 > ARRAY[UniswapV2LiquidityPositionDTO] uniswap_v2_get_liquidity_positions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, user => $user, pair => $pair)
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -354,7 +354,7 @@ No authorization required
 # **uniswap_v2_get_mints__historical**
 > ARRAY[UniswapV2MintDTO] uniswap_v2_get_mints__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -410,7 +410,7 @@ No authorization required
 # **uniswap_v2_get_pair_day_datas__historical**
 > ARRAY[UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1)
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -468,7 +468,7 @@ No authorization required
 # **uniswap_v2_get_pair_hour_datas__historical**
 > ARRAY[UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -524,7 +524,7 @@ No authorization required
 # **uniswap_v2_get_pairs__historical**
 > ARRAY[UniswapV2PairDTO] uniswap_v2_get_pairs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1)
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -582,7 +582,7 @@ No authorization required
 # **uniswap_v2_get_swaps__historical**
 > ARRAY[UniswapV2SwapDTO] uniswap_v2_get_swaps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -638,7 +638,7 @@ No authorization required
 # **uniswap_v2_get_token_day_datas__historical**
 > ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -692,7 +692,7 @@ No authorization required
 # **uniswap_v2_get_tokens__historical**
 > ARRAY[UniswapV2TokenDTO] uniswap_v2_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, symbol => $symbol, name => $name)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -750,7 +750,7 @@ No authorization required
 # **uniswap_v2_get_transactions__historical**
 > ARRAY[UniswapV2TransactionDTO] uniswap_v2_get_transactions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -804,7 +804,7 @@ No authorization required
 # **uniswap_v2_get_uniswap_day_datas__historical**
 > ARRAY[UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 
@@ -858,7 +858,7 @@ No authorization required
 # **uniswap_v2_get_uniswap_factorys__historical**
 > ARRAY[UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factorys__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-UniswapFactorys (historical) 🔥
+UniswapFactorys (historical)
 
 Gets uniswapFactorys.
 
@@ -912,7 +912,7 @@ No authorization required
 # **uniswap_v2_get_users__historical**
 > ARRAY[UniswapV2UserDTO] uniswap_v2_get_users__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 

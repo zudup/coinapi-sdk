@@ -243,7 +243,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_accounts__historical
-  # Accounts (historical) 🔥
+  # Accounts (historical)
   # Gets accounts.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -260,7 +260,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_add_liquidity_events__historical
-  # AddLiquidityEvents (historical) 🔥
+  # AddLiquidityEvents (historical)
   # Gets addLiquidityEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -277,7 +277,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_admin_fee_change_logs__historical
-  # AdminFeeChangeLogs (historical) 🔥
+  # AdminFeeChangeLogs (historical)
   # Gets adminFeeChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -294,7 +294,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_amplification_coeff_change_logs__historical
-  # AmplificationCoeffChangeLogs (historical) 🔥
+  # AmplificationCoeffChangeLogs (historical)
   # Gets amplificationCoeffChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -311,7 +311,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_coins__historical
-  # Coins (historical) 🔥
+  # Coins (historical)
   # Gets coins.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -328,7 +328,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_contract_versions__historical
-  # ContractVersions (historical) 🔥
+  # ContractVersions (historical)
   # Gets contractVersions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -345,7 +345,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_contracts__historical
-  # Contracts (historical) 🔥
+  # Contracts (historical)
   # Gets contracts.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -361,7 +361,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_daily_volumes__historical
-  # DailyVolumes (historical) 🔥
+  # DailyVolumes (historical)
   # Gets dailyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -378,7 +378,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_exchanges__historical
-  # Exchanges (historical) 🔥
+  # Exchanges (historical)
   # Gets exchanges.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -395,7 +395,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_fee_change_logs__historical
-  # FeeChangeLogs (historical) 🔥
+  # FeeChangeLogs (historical)
   # Gets feeChangeLogs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -412,7 +412,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_deposits__historical
-  # GaugeDeposits (historical) 🔥
+  # GaugeDeposits (historical)
   # Gets gaugeDeposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -428,7 +428,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_liquiditys__historical
-  # GaugeLiquiditys (historical) 🔥
+  # GaugeLiquiditys (historical)
   # Gets gaugeLiquiditys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -445,7 +445,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_total_weights__historical
-  # GaugeTotalWeights (historical) 🔥
+  # GaugeTotalWeights (historical)
   # Gets gaugeTotalWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -461,7 +461,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_type_weights__historical
-  # GaugeTypeWeights (historical) 🔥
+  # GaugeTypeWeights (historical)
   # Gets gaugeTypeWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -477,7 +477,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_types__historical
-  # GaugeTypes (historical) 🔥
+  # GaugeTypes (historical)
   # Gets gaugeTypes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -494,7 +494,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_weight_votes__historical
-  # GaugeWeightVotes (historical) 🔥
+  # GaugeWeightVotes (historical)
   # Gets gaugeWeightVotes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -511,7 +511,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_weights__historical
-  # GaugeWeights (historical) 🔥
+  # GaugeWeights (historical)
   # Gets gaugeWeights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -527,7 +527,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauge_withdraws__historical
-  # GaugeWithdraws (historical) 🔥
+  # GaugeWithdraws (historical)
   # Gets gaugeWithdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -543,7 +543,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges__historical
-  # Gauges (historical) 🔥
+  # Gauges (historical)
   # Gets gauges.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -561,7 +561,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_hourly_volumes__historical
-  # HourlyVolumes (historical) 🔥
+  # HourlyVolumes (historical)
   # Gets hourlyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -578,7 +578,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_lp_tokens__historical
-  # LpTokens (historical) 🔥
+  # LpTokens (historical)
   # Gets lpTokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -598,7 +598,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_pools__historical
-  # Pools (historical) 🔥
+  # Pools (historical)
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -615,7 +615,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_proposal_votes__historical
-  # ProposalVotes (historical) 🔥
+  # ProposalVotes (historical)
   # Gets proposalVotes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -631,7 +631,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_proposals__historical
-  # Proposals (historical) 🔥
+  # Proposals (historical)
   # Gets proposals.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -647,7 +647,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_remove_liquidity_events__historical
-  # RemoveLiquidityEvents (historical) 🔥
+  # RemoveLiquidityEvents (historical)
   # Gets removeLiquidityEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -664,7 +664,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_remove_liquidity_one_events__historical
-  # RemoveLiquidityOneEvents (historical) 🔥
+  # RemoveLiquidityOneEvents (historical)
   # Gets removeLiquidityOneEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -681,7 +681,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_system_states__historical
-  # SystemStates (historical) 🔥
+  # SystemStates (historical)
   # Gets systemStates.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -697,7 +697,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -716,7 +716,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_transfer_ownership_events__historical
-  # TransferOwnershipEvents (historical) 🔥
+  # TransferOwnershipEvents (historical)
   # Gets transferOwnershipEvents.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -733,7 +733,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_underlying_coins__historical
-  # UnderlyingCoins (historical) 🔥
+  # UnderlyingCoins (historical)
   # Gets underlyingCoins.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -750,7 +750,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_voting_apps__historical
-  # VotingApps (historical) 🔥
+  # VotingApps (historical)
   # Gets votingApps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -767,7 +767,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_weekly_volumes__historical
-  # WeeklyVolumes (historical) 🔥
+  # WeeklyVolumes (historical)
   # Gets weeklyVolumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

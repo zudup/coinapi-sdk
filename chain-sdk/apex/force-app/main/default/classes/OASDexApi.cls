@@ -68,7 +68,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -102,7 +102,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -138,7 +138,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -176,7 +176,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -210,7 +210,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -244,7 +244,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -278,7 +278,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -318,7 +318,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -356,7 +356,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -390,7 +390,7 @@ public class OASDexApi {
         );
     }
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -426,7 +426,7 @@ public class OASDexApi {
         );
     }
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

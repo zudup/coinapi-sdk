@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveLpTokensHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveLpTokensHistorical unit test stubs
-        LpTokens (historical) 🔥  # noqa: E501
+        LpTokens (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

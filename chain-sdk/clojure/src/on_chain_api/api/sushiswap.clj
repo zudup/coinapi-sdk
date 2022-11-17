@@ -198,7 +198,7 @@
 
 
 (defn-spec sushiswap-get-bundles-historical-with-http-info any?
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (sushiswap-get-bundles-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -212,7 +212,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-bundles-historical (s/coll-of sushiswap/bundle-dto-spec)
-  "Bundles (historical) 🔥
+  "Bundles (historical)
   Gets bundles."
   ([] (sushiswap-get-bundles-historical nil))
   ([optional-params any?]
@@ -223,7 +223,7 @@
 
 
 (defn-spec sushiswap-get-burns-historical-with-http-info any?
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (sushiswap-get-burns-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -237,7 +237,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-burns-historical (s/coll-of sushiswap/burn-dto-spec)
-  "Burns (historical) 🔥
+  "Burns (historical)
   Gets burns."
   ([] (sushiswap-get-burns-historical nil))
   ([optional-params any?]
@@ -248,7 +248,7 @@
 
 
 (defn-spec sushiswap-get-day-datas-historical-with-http-info any?
-  "DayDatas (historical) 🔥
+  "DayDatas (historical)
   Gets dayDatas."
   ([] (sushiswap-get-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -262,7 +262,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-day-datas-historical (s/coll-of sushiswap/day-data-dto-spec)
-  "DayDatas (historical) 🔥
+  "DayDatas (historical)
   Gets dayDatas."
   ([] (sushiswap-get-day-datas-historical nil))
   ([optional-params any?]
@@ -273,7 +273,7 @@
 
 
 (defn-spec sushiswap-get-factorys-historical-with-http-info any?
-  "Factorys (historical) 🔥
+  "Factorys (historical)
   Gets factorys."
   ([] (sushiswap-get-factorys-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -287,7 +287,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-factorys-historical (s/coll-of sushiswap/factory-dto-spec)
-  "Factorys (historical) 🔥
+  "Factorys (historical)
   Gets factorys."
   ([] (sushiswap-get-factorys-historical nil))
   ([optional-params any?]
@@ -298,7 +298,7 @@
 
 
 (defn-spec sushiswap-get-hour-datas-historical-with-http-info any?
-  "HourDatas (historical) 🔥
+  "HourDatas (historical)
   Gets hourDatas."
   ([] (sushiswap-get-hour-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -312,7 +312,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-hour-datas-historical (s/coll-of sushiswap/hour-data-dto-spec)
-  "HourDatas (historical) 🔥
+  "HourDatas (historical)
   Gets hourDatas."
   ([] (sushiswap-get-hour-datas-historical nil))
   ([optional-params any?]
@@ -323,7 +323,7 @@
 
 
 (defn-spec sushiswap-get-liquidity-position-snapshots-historical-with-http-info any?
-  "LiquidityPositionSnapshots (historical) 🔥
+  "LiquidityPositionSnapshots (historical)
   Gets liquidityPositionSnapshots."
   ([] (sushiswap-get-liquidity-position-snapshots-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user pair]} (s/map-of keyword? any?)]
@@ -337,7 +337,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-liquidity-position-snapshots-historical (s/coll-of sushiswap/liquidity-position-snapshot-dto-spec)
-  "LiquidityPositionSnapshots (historical) 🔥
+  "LiquidityPositionSnapshots (historical)
   Gets liquidityPositionSnapshots."
   ([] (sushiswap-get-liquidity-position-snapshots-historical nil))
   ([optional-params any?]
@@ -348,7 +348,7 @@
 
 
 (defn-spec sushiswap-get-liquidity-positions-historical-with-http-info any?
-  "LiquidityPositions (historical) 🔥
+  "LiquidityPositions (historical)
   Gets liquidityPositions."
   ([] (sushiswap-get-liquidity-positions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user pair]} (s/map-of keyword? any?)]
@@ -362,7 +362,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-liquidity-positions-historical (s/coll-of sushiswap/liquidity-position-dto-spec)
-  "LiquidityPositions (historical) 🔥
+  "LiquidityPositions (historical)
   Gets liquidityPositions."
   ([] (sushiswap-get-liquidity-positions-historical nil))
   ([optional-params any?]
@@ -373,7 +373,7 @@
 
 
 (defn-spec sushiswap-get-mints-historical-with-http-info any?
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (sushiswap-get-mints-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -387,7 +387,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-mints-historical (s/coll-of sushiswap/mint-dto-spec)
-  "Mints (historical) 🔥
+  "Mints (historical)
   Gets mints."
   ([] (sushiswap-get-mints-historical nil))
   ([optional-params any?]
@@ -398,7 +398,7 @@
 
 
 (defn-spec sushiswap-get-pair-day-datas-historical-with-http-info any?
-  "PairDayDatas (historical) 🔥
+  "PairDayDatas (historical)
   Gets pairDayDatas."
   ([] (sushiswap-get-pair-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair token_0 token_1]} (s/map-of keyword? any?)]
@@ -412,7 +412,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-pair-day-datas-historical (s/coll-of sushiswap/pair-day-data-dto-spec)
-  "PairDayDatas (historical) 🔥
+  "PairDayDatas (historical)
   Gets pairDayDatas."
   ([] (sushiswap-get-pair-day-datas-historical nil))
   ([optional-params any?]
@@ -423,7 +423,7 @@
 
 
 (defn-spec sushiswap-get-pair-hour-datas-historical-with-http-info any?
-  "PairHourDatas (historical) 🔥
+  "PairHourDatas (historical)
   Gets pairHourDatas."
   ([] (sushiswap-get-pair-hour-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -437,7 +437,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-pair-hour-datas-historical (s/coll-of sushiswap/pair-hour-data-dto-spec)
-  "PairHourDatas (historical) 🔥
+  "PairHourDatas (historical)
   Gets pairHourDatas."
   ([] (sushiswap-get-pair-hour-datas-historical nil))
   ([optional-params any?]
@@ -448,7 +448,7 @@
 
 
 (defn-spec sushiswap-get-pairs-historical-with-http-info any?
-  "Pairs (historical) 🔥
+  "Pairs (historical)
   Gets pairs."
   ([] (sushiswap-get-pairs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id name token_0 token_1]} (s/map-of keyword? any?)]
@@ -462,7 +462,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-pairs-historical (s/coll-of sushiswap/pair-dto-spec)
-  "Pairs (historical) 🔥
+  "Pairs (historical)
   Gets pairs."
   ([] (sushiswap-get-pairs-historical nil))
   ([optional-params any?]
@@ -473,7 +473,7 @@
 
 
 (defn-spec sushiswap-get-swaps-historical-with-http-info any?
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (sushiswap-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
@@ -487,7 +487,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-swaps-historical (s/coll-of sushiswap/swap-dto-spec)
-  "Swaps (historical) 🔥
+  "Swaps (historical)
   Gets swaps."
   ([] (sushiswap-get-swaps-historical nil))
   ([optional-params any?]
@@ -498,7 +498,7 @@
 
 
 (defn-spec sushiswap-get-token-day-datas-historical-with-http-info any?
-  "TokenDayDatas (historical) 🔥
+  "TokenDayDatas (historical)
   Gets tokenDayDatas."
   ([] (sushiswap-get-token-day-datas-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -512,7 +512,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-token-day-datas-historical (s/coll-of sushiswap/token-day-data-dto-spec)
-  "TokenDayDatas (historical) 🔥
+  "TokenDayDatas (historical)
   Gets tokenDayDatas."
   ([] (sushiswap-get-token-day-datas-historical nil))
   ([optional-params any?]
@@ -523,7 +523,7 @@
 
 
 (defn-spec sushiswap-get-tokens-historical-with-http-info any?
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (sushiswap-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id symbol name]} (s/map-of keyword? any?)]
@@ -537,7 +537,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-tokens-historical (s/coll-of sushiswap/token-dto-spec)
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (sushiswap-get-tokens-historical nil))
   ([optional-params any?]
@@ -548,7 +548,7 @@
 
 
 (defn-spec sushiswap-get-transactions-historical-with-http-info any?
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (sushiswap-get-transactions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -562,7 +562,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-transactions-historical (s/coll-of sushiswap/transaction-dto-spec)
-  "Transactions (historical) 🔥
+  "Transactions (historical)
   Gets transactions."
   ([] (sushiswap-get-transactions-historical nil))
   ([optional-params any?]
@@ -573,7 +573,7 @@
 
 
 (defn-spec sushiswap-get-users-historical-with-http-info any?
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (sushiswap-get-users-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -587,7 +587,7 @@
               :auth-names    []})))
 
 (defn-spec sushiswap-get-users-historical (s/coll-of sushiswap/user-dto-spec)
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (sushiswap-get-users-historical nil))
   ([optional-params any?]

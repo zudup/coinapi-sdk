@@ -7,23 +7,23 @@ Method | HTTP request | Description
 [**Invoke-UniswapV3BundlesCurrent**](UniswapV3Api.md#Invoke-UniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**Invoke-UniswapV3BurnsCurrent**](UniswapV3Api.md#Invoke-UniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
 [**Invoke-UniswapV3FactorysCurrent**](UniswapV3Api.md#Invoke-UniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
-[**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
-[**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
-[**Invoke-UniswapV3GetFactorysHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
-[**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
-[**Invoke-UniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
-[**Invoke-UniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
-[**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
-[**Invoke-UniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
-[**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
-[**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
-[**Invoke-UniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
-[**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
-[**Invoke-UniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
-[**Invoke-UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
-[**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
-[**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
-[**Invoke-UniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**Invoke-UniswapV3GetFactorysHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**Invoke-UniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
+[**Invoke-UniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
+[**Invoke-UniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
+[**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
+[**Invoke-UniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**Invoke-UniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
+[**Invoke-UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
+[**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
+[**Invoke-UniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
 [**Invoke-UniswapV3MintsCurrent**](UniswapV3Api.md#Invoke-UniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
 [**Invoke-UniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#Invoke-UniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
 [**Invoke-UniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#Invoke-UniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
@@ -163,7 +163,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -175,7 +175,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String |  (optional)
 
-# Bundles (historical) 🔥
+# Bundles (historical)
 try {
     $Result = Invoke-UniswapV3GetBundlesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -221,7 +221,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -236,7 +236,7 @@ $Pool = "MyPool" # String | Pool position is within. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pool contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pool contract. (optional)
 
-# Burns (historical) 🔥
+# Burns (historical)
 try {
     $Result = Invoke-UniswapV3GetBurnsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -282,7 +282,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -294,7 +294,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Factory address. (optional)
 
-# Factorys (historical) 🔥
+# Factorys (historical)
 try {
     $Result = Invoke-UniswapV3GetFactorysHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -340,7 +340,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -355,7 +355,7 @@ $Pool = "MyPool" # String | Pool address. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pool contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pool contract. (optional)
 
-# Mints (historical) 🔥
+# Mints (historical)
 try {
     $Result = Invoke-UniswapV3GetMintsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -402,7 +402,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
-PoolDayDatas (historical) 🔥
+PoolDayDatas (historical)
 
 Gets poolDayDatas.
 
@@ -415,7 +415,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pool = "MyPool" # String |  (optional)
 
-# PoolDayDatas (historical) 🔥
+# PoolDayDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetPoolDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool
 } catch {
@@ -460,7 +460,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
-PoolHourDatas (historical) 🔥
+PoolHourDatas (historical)
 
 Gets poolHourDatas.
 
@@ -473,7 +473,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pool = "MyPool" # String |  (optional)
 
-# PoolHourDatas (historical) 🔥
+# PoolHourDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetPoolHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool
 } catch {
@@ -519,7 +519,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Pools (historical) 🔥
+Pools (historical)
 
 Gets pools.
 
@@ -533,7 +533,7 @@ $Id = "MyId" # String | Pool address. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pool contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pool contract. (optional)
 
-# Pools (historical) 🔥
+# Pools (historical)
 try {
     $Result = Invoke-UniswapV3GetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -579,7 +579,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
-PositionSnapshots (historical) 🔥
+PositionSnapshots (historical)
 
 Gets positionSnapshots.
 
@@ -592,7 +592,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pool = "MyPool" # String |  (optional)
 
-# PositionSnapshots (historical) 🔥
+# PositionSnapshots (historical)
 try {
     $Result = Invoke-UniswapV3GetPositionSnapshotsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool
 } catch {
@@ -639,7 +639,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Positions (historical) 🔥
+Positions (historical)
 
 Gets positions.
 
@@ -654,7 +654,7 @@ $Pool = "MyPool" # String | Pool position is within. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pair contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pair contract. (optional)
 
-# Positions (historical) 🔥
+# Positions (historical)
 try {
     $Result = Invoke-UniswapV3GetPositionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -703,7 +703,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -718,7 +718,7 @@ $Pool = "MyPool" # String | Pool swap occured within. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pair contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pair contract. (optional)
 
-# Swaps (historical) 🔥
+# Swaps (historical)
 try {
     $Result = Invoke-UniswapV3GetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -765,7 +765,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
-TickDayDatas (historical) 🔥
+TickDayDatas (historical)
 
 Gets tickDayDatas.
 
@@ -778,7 +778,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pool = "MyPool" # String |  (optional)
 
-# TickDayDatas (historical) 🔥
+# TickDayDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetTickDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool
 } catch {
@@ -823,7 +823,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
 
-Ticks (historical) 🔥
+Ticks (historical)
 
 Gets ticks.
 
@@ -836,7 +836,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pool = "MyPool" # String |  (optional)
 
-# Ticks (historical) 🔥
+# Ticks (historical)
 try {
     $Result = Invoke-UniswapV3GetTicksHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pool $Pool
 } catch {
@@ -880,7 +880,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-TokenHourDatas (historical) 🔥
+TokenHourDatas (historical)
 
 Gets tokenHourDatas.
 
@@ -892,7 +892,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Token address concatendated with date. (optional)
 
-# TokenHourDatas (historical) 🔥
+# TokenHourDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetTokenHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -935,7 +935,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-TokenV3DayDatas (historical) 🔥
+TokenV3DayDatas (historical)
 
 Gets tokenV3DayDatas.
 
@@ -947,7 +947,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Token address concatendated with date. (optional)
 
-# TokenV3DayDatas (historical) 🔥
+# TokenV3DayDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetTokenV3DayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -992,7 +992,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1006,7 +1006,7 @@ $Id = "MyId" # String | Token address. (optional)
 $Symbol = "MySymbol" # String | Token symbol. (optional)
 $Name = "MyName" # String | Token name. (optional)
 
-# Tokens (historical) 🔥
+# Tokens (historical)
 try {
     $Result = Invoke-UniswapV3GetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Symbol $Symbol -Name $Name
 } catch {
@@ -1051,7 +1051,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -1063,7 +1063,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Transaction hash. (optional)
 
-# Transactions (historical) 🔥
+# Transactions (historical)
 try {
     $Result = Invoke-UniswapV3GetTransactionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -1106,7 +1106,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 
@@ -1118,7 +1118,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Timestamp rounded to current day by dividing by 86400. (optional)
 
-# UniswapDayDatas (historical) 🔥
+# UniswapDayDatas (historical)
 try {
     $Result = Invoke-UniswapV3GetUniswapDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {

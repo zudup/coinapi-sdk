@@ -77,7 +77,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_bundles__historical
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -93,7 +93,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_burns__historical
-  # Burns (historical) 🔥
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -110,7 +110,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_day_datas__historical
-  # DayDatas (historical) 🔥
+  # DayDatas (historical)
   # Gets dayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -126,7 +126,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_factorys__historical
-  # Factorys (historical) 🔥
+  # Factorys (historical)
   # Gets factorys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -142,7 +142,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_hour_datas__historical
-  # HourDatas (historical) 🔥
+  # HourDatas (historical)
   # Gets hourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -158,7 +158,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_liquidity_position_snapshots__historical
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   # Gets liquidityPositionSnapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -176,7 +176,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_liquidity_positions__historical
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   # Gets liquidityPositions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -194,7 +194,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_mints__historical
-  # Mints (historical) 🔥
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -211,7 +211,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pair_day_datas__historical
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   # Gets pairDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -230,7 +230,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pair_hour_datas__historical
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   # Gets pairHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -247,7 +247,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pairs__historical
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   # Gets pairs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -266,7 +266,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__historical
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -283,7 +283,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_token_day_datas__historical
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   # Gets tokenDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -299,7 +299,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -317,7 +317,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_transactions__historical
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -333,7 +333,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_users__historical
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

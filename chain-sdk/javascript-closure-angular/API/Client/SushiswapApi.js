@@ -183,7 +183,7 @@ API.Client.SushiswapApi.prototype.sushiswapFactorysCurrent = function(opt_extraH
 }
 
 /**
- * Bundles (historical) 🔥
+ * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -239,7 +239,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBundlesHistorical = function(opt_s
 }
 
 /**
- * Burns (historical) 🔥
+ * Burns (historical)
  * Gets burns.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -300,7 +300,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBurnsHistorical = function(opt_sta
 }
 
 /**
- * DayDatas (historical) 🔥
+ * DayDatas (historical)
  * Gets dayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -356,7 +356,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetDayDatasHistorical = function(opt_
 }
 
 /**
- * Factorys (historical) 🔥
+ * Factorys (historical)
  * Gets factorys.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -412,7 +412,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactorysHistorical = function(opt_
 }
 
 /**
- * HourDatas (historical) 🔥
+ * HourDatas (historical)
  * Gets hourDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -468,7 +468,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDatasHistorical = function(opt
 }
 
 /**
- * LiquidityPositionSnapshots (historical) 🔥
+ * LiquidityPositionSnapshots (historical)
  * Gets liquidityPositionSnapshots.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -534,7 +534,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotsHistoric
 }
 
 /**
- * LiquidityPositions (historical) 🔥
+ * LiquidityPositions (historical)
  * Gets liquidityPositions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -600,7 +600,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionsHistorical = fun
 }
 
 /**
- * Mints (historical) 🔥
+ * Mints (historical)
  * Gets mints.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -661,7 +661,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
 }
 
 /**
- * PairDayDatas (historical) 🔥
+ * PairDayDatas (historical)
  * Gets pairDayDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -732,7 +732,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairDayDatasHistorical = function(
 }
 
 /**
- * PairHourDatas (historical) 🔥
+ * PairHourDatas (historical)
  * Gets pairHourDatas.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -793,7 +793,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairHourDatasHistorical = function
 }
 
 /**
- * Pairs (historical) 🔥
+ * Pairs (historical)
  * Gets pairs.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -864,7 +864,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairsHistorical = function(opt_sta
 }
 
 /**
- * Swaps (historical) 🔥
+ * Swaps (historical)
  * Gets swaps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -925,7 +925,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 }
 
 /**
- * TokenDayDatas (historical) 🔥
+ * TokenDayDatas (historical)
  * Gets tokenDayDatas.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -981,7 +981,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokenDayDatasHistorical = function
 }
 
 /**
- * Tokens (historical) 🔥
+ * Tokens (historical)
  * Gets tokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1047,7 +1047,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensHistorical = function(opt_st
 }
 
 /**
- * Transactions (historical) 🔥
+ * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1103,7 +1103,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTransactionsHistorical = function(
 }
 
 /**
- * Users (historical) 🔥
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

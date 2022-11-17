@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexPricesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexPricesHistorical unit test stubs
-        Prices (historical) 🔥  # noqa: E501
+        Prices (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

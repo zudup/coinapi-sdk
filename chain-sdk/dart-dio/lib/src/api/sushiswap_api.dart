@@ -322,7 +322,7 @@ class SushiswapApi {
     );
   }
 
-  /// Bundles (historical) 🔥
+  /// Bundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -413,7 +413,7 @@ class SushiswapApi {
     );
   }
 
-  /// Burns (historical) 🔥
+  /// Burns (historical)
   /// Gets burns.
   ///
   /// Parameters:
@@ -507,7 +507,7 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (historical) 🔥
+  /// DayDatas (historical)
   /// Gets dayDatas.
   ///
   /// Parameters:
@@ -598,7 +598,7 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (historical) 🔥
+  /// Factorys (historical)
   /// Gets factorys.
   ///
   /// Parameters:
@@ -689,7 +689,7 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (historical) 🔥
+  /// HourDatas (historical)
   /// Gets hourDatas.
   ///
   /// Parameters:
@@ -780,7 +780,7 @@ class SushiswapApi {
     );
   }
 
-  /// LiquidityPositionSnapshots (historical) 🔥
+  /// LiquidityPositionSnapshots (historical)
   /// Gets liquidityPositionSnapshots.
   ///
   /// Parameters:
@@ -877,7 +877,7 @@ class SushiswapApi {
     );
   }
 
-  /// LiquidityPositions (historical) 🔥
+  /// LiquidityPositions (historical)
   /// Gets liquidityPositions.
   ///
   /// Parameters:
@@ -974,7 +974,7 @@ class SushiswapApi {
     );
   }
 
-  /// Mints (historical) 🔥
+  /// Mints (historical)
   /// Gets mints.
   ///
   /// Parameters:
@@ -1068,7 +1068,7 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (historical) 🔥
+  /// PairDayDatas (historical)
   /// Gets pairDayDatas.
   ///
   /// Parameters:
@@ -1168,7 +1168,7 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (historical) 🔥
+  /// PairHourDatas (historical)
   /// Gets pairHourDatas.
   ///
   /// Parameters:
@@ -1262,7 +1262,7 @@ class SushiswapApi {
     );
   }
 
-  /// Pairs (historical) 🔥
+  /// Pairs (historical)
   /// Gets pairs.
   ///
   /// Parameters:
@@ -1362,7 +1362,7 @@ class SushiswapApi {
     );
   }
 
-  /// Swaps (historical) 🔥
+  /// Swaps (historical)
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1456,7 +1456,7 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (historical) 🔥
+  /// TokenDayDatas (historical)
   /// Gets tokenDayDatas.
   ///
   /// Parameters:
@@ -1547,7 +1547,7 @@ class SushiswapApi {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1644,7 +1644,7 @@ class SushiswapApi {
     );
   }
 
-  /// Transactions (historical) 🔥
+  /// Transactions (historical)
   /// Gets transactions.
   ///
   /// Parameters:
@@ -1735,7 +1735,7 @@ class SushiswapApi {
     );
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   /// Gets users.
   ///
   /// Parameters:

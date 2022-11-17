@@ -222,7 +222,7 @@ export class DexApi {
     }
     /**
      * Gets batchs.
-     * @summary Batchs (historical) 🔥
+     * @summary Batchs (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -309,7 +309,7 @@ export class DexApi {
     }
     /**
      * Gets deposits.
-     * @summary Deposits (historical) 🔥
+     * @summary Deposits (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -401,7 +401,7 @@ export class DexApi {
     }
     /**
      * Gets orders.
-     * @summary Orders (historical) 🔥
+     * @summary Orders (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -498,7 +498,7 @@ export class DexApi {
     }
     /**
      * Gets prices.
-     * @summary Prices (historical) 🔥
+     * @summary Prices (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -585,7 +585,7 @@ export class DexApi {
     }
     /**
      * Gets solutions.
-     * @summary Solutions (historical) 🔥
+     * @summary Solutions (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -672,7 +672,7 @@ export class DexApi {
     }
     /**
      * Gets statss.
-     * @summary Statss (historical) 🔥
+     * @summary Statss (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -759,7 +759,7 @@ export class DexApi {
     }
     /**
      * Gets tokens.
-     * @summary Tokens (historical) 🔥
+     * @summary Tokens (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -861,7 +861,7 @@ export class DexApi {
     }
     /**
      * Gets trades.
-     * @summary Trades (historical) 🔥
+     * @summary Trades (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -958,7 +958,7 @@ export class DexApi {
     }
     /**
      * Gets users.
-     * @summary Users (historical) 🔥
+     * @summary Users (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1045,7 +1045,7 @@ export class DexApi {
     }
     /**
      * Gets withdrawRequests.
-     * @summary WithdrawRequests (historical) 🔥
+     * @summary WithdrawRequests (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1137,7 +1137,7 @@ export class DexApi {
     }
     /**
      * Gets withdraws.
-     * @summary Withdraws (historical) 🔥
+     * @summary Withdraws (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

@@ -715,7 +715,7 @@ class DexApi
     /**
      * Operation dexGetBatchsHistorical
      *
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -737,7 +737,7 @@ class DexApi
     /**
      * Operation dexGetBatchsHistoricalWithHttpInfo
      *
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -841,7 +841,7 @@ class DexApi
     /**
      * Operation dexGetBatchsHistoricalAsync
      *
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -866,7 +866,7 @@ class DexApi
     /**
      * Operation dexGetBatchsHistoricalAsyncWithHttpInfo
      *
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1053,7 +1053,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistorical
      *
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -1076,7 +1076,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalWithHttpInfo
      *
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1181,7 +1181,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalAsync
      *
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1207,7 +1207,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalAsyncWithHttpInfo
      *
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1406,7 +1406,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistorical
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -1430,7 +1430,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalWithHttpInfo
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1536,7 +1536,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalAsync
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1563,7 +1563,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalAsyncWithHttpInfo
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1774,7 +1774,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistorical
      *
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -1796,7 +1796,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalWithHttpInfo
      *
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1900,7 +1900,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalAsync
      *
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1925,7 +1925,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalAsyncWithHttpInfo
      *
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2112,7 +2112,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistorical
      *
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2134,7 +2134,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalWithHttpInfo
      *
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2238,7 +2238,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalAsync
      *
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2263,7 +2263,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalAsyncWithHttpInfo
      *
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2450,7 +2450,7 @@ class DexApi
     /**
      * Operation dexGetStatssHistorical
      *
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2472,7 +2472,7 @@ class DexApi
     /**
      * Operation dexGetStatssHistoricalWithHttpInfo
      *
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2576,7 +2576,7 @@ class DexApi
     /**
      * Operation dexGetStatssHistoricalAsync
      *
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2601,7 +2601,7 @@ class DexApi
     /**
      * Operation dexGetStatssHistoricalAsyncWithHttpInfo
      *
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2788,7 +2788,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistorical
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2813,7 +2813,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2920,7 +2920,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalAsync
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2948,7 +2948,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalAsyncWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3171,7 +3171,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistorical
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3195,7 +3195,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalWithHttpInfo
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3301,7 +3301,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalAsync
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3328,7 +3328,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalAsyncWithHttpInfo
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3539,7 +3539,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistorical
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3561,7 +3561,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalWithHttpInfo
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3665,7 +3665,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalAsync
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3690,7 +3690,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalAsyncWithHttpInfo
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3877,7 +3877,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawRequestsHistorical
      *
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -3900,7 +3900,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawRequestsHistoricalWithHttpInfo
      *
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4005,7 +4005,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawRequestsHistoricalAsync
      *
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4031,7 +4031,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawRequestsHistoricalAsyncWithHttpInfo
      *
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4230,7 +4230,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistorical
      *
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -4253,7 +4253,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalWithHttpInfo
      *
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4358,7 +4358,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalAsync
      *
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4384,7 +4384,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalAsyncWithHttpInfo
      *
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)

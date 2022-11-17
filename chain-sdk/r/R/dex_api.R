@@ -46,7 +46,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetBatchsHistorical } \emph{ Batchs (historical) 🔥 }
+#' \strong{ DexGetBatchsHistorical } \emph{ Batchs (historical) }
 #' Gets batchs.
 #'
 #' \itemize{
@@ -67,7 +67,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetDepositsHistorical } \emph{ Deposits (historical) 🔥 }
+#' \strong{ DexGetDepositsHistorical } \emph{ Deposits (historical) }
 #' Gets deposits.
 #'
 #' \itemize{
@@ -89,7 +89,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetOrdersHistorical } \emph{ Orders (historical) 🔥 }
+#' \strong{ DexGetOrdersHistorical } \emph{ Orders (historical) }
 #' Gets orders.
 #'
 #' \itemize{
@@ -112,7 +112,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetPricesHistorical } \emph{ Prices (historical) 🔥 }
+#' \strong{ DexGetPricesHistorical } \emph{ Prices (historical) }
 #' Gets prices.
 #'
 #' \itemize{
@@ -133,7 +133,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetSolutionsHistorical } \emph{ Solutions (historical) 🔥 }
+#' \strong{ DexGetSolutionsHistorical } \emph{ Solutions (historical) }
 #' Gets solutions.
 #'
 #' \itemize{
@@ -154,7 +154,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetStatssHistorical } \emph{ Statss (historical) 🔥 }
+#' \strong{ DexGetStatssHistorical } \emph{ Statss (historical) }
 #' Gets statss.
 #'
 #' \itemize{
@@ -175,7 +175,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
+#' \strong{ DexGetTokensHistorical } \emph{ Tokens (historical) }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -199,7 +199,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetTradesHistorical } \emph{ Trades (historical) 🔥 }
+#' \strong{ DexGetTradesHistorical } \emph{ Trades (historical) }
 #' Gets trades.
 #'
 #' \itemize{
@@ -222,7 +222,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetUsersHistorical } \emph{ Users (historical) 🔥 }
+#' \strong{ DexGetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -243,7 +243,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetWithdrawRequestsHistorical } \emph{ WithdrawRequests (historical) 🔥 }
+#' \strong{ DexGetWithdrawRequestsHistorical } \emph{ WithdrawRequests (historical) }
 #' Gets withdrawRequests.
 #'
 #' \itemize{
@@ -265,7 +265,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetWithdrawsHistorical } \emph{ Withdraws (historical) 🔥 }
+#' \strong{ DexGetWithdrawsHistorical } \emph{ Withdraws (historical) }
 #' Gets withdraws.
 #'
 #' \itemize{
@@ -471,7 +471,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Identifier. (Optional)
 #'
-#' #Batchs (historical) 🔥
+#' #Batchs (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -490,7 +490,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #Deposits (historical) 🔥
+#' #Deposits (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -510,7 +510,7 @@
 #' var_buy_token <- "buy_token_example" # character |  (Optional)
 #' var_sell_token <- "sell_token_example" # character |  (Optional)
 #'
-#' #Orders (historical) 🔥
+#' #Orders (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -528,7 +528,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Prices (historical) 🔥
+#' #Prices (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -546,7 +546,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Solutions (historical) 🔥
+#' #Solutions (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -564,7 +564,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Statss (historical) 🔥
+#' #Statss (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -585,7 +585,7 @@
 #' var_symbol <- "symbol_example" # character |  (Optional)
 #' var_name <- "name_example" # character |  (Optional)
 #'
-#' #Tokens (historical) 🔥
+#' #Tokens (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -605,7 +605,7 @@
 #' var_buy_token <- "buy_token_example" # character |  (Optional)
 #' var_sell_token <- "sell_token_example" # character |  (Optional)
 #'
-#' #Trades (historical) 🔥
+#' #Trades (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -623,7 +623,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Users (historical) 🔥
+#' #Users (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -642,7 +642,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #WithdrawRequests (historical) 🔥
+#' #WithdrawRequests (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -661,7 +661,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #Withdraws (historical) 🔥
+#' #Withdraws (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -981,10 +981,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Batchs (historical) 🔥
+    #' Batchs (historical)
     #'
     #' @description
-    #' Batchs (historical) 🔥
+    #' Batchs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1007,10 +1007,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Batchs (historical) 🔥
+    #' Batchs (historical)
     #'
     #' @description
-    #' Batchs (historical) 🔥
+    #' Batchs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1092,10 +1092,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Deposits (historical) 🔥
+    #' Deposits (historical)
     #'
     #' @description
-    #' Deposits (historical) 🔥
+    #' Deposits (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1119,10 +1119,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Deposits (historical) 🔥
+    #' Deposits (historical)
     #'
     #' @description
-    #' Deposits (historical) 🔥
+    #' Deposits (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1208,10 +1208,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @description
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1236,10 +1236,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @description
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1329,10 +1329,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Prices (historical) 🔥
+    #' Prices (historical)
     #'
     #' @description
-    #' Prices (historical) 🔥
+    #' Prices (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1355,10 +1355,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Prices (historical) 🔥
+    #' Prices (historical)
     #'
     #' @description
-    #' Prices (historical) 🔥
+    #' Prices (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1440,10 +1440,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Solutions (historical) 🔥
+    #' Solutions (historical)
     #'
     #' @description
-    #' Solutions (historical) 🔥
+    #' Solutions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1466,10 +1466,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Solutions (historical) 🔥
+    #' Solutions (historical)
     #'
     #' @description
-    #' Solutions (historical) 🔥
+    #' Solutions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1551,10 +1551,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Statss (historical) 🔥
+    #' Statss (historical)
     #'
     #' @description
-    #' Statss (historical) 🔥
+    #' Statss (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1577,10 +1577,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Statss (historical) 🔥
+    #' Statss (historical)
     #'
     #' @description
-    #' Statss (historical) 🔥
+    #' Statss (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1662,10 +1662,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1691,10 +1691,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1788,10 +1788,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @description
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1816,10 +1816,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @description
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1909,10 +1909,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1935,10 +1935,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2020,10 +2020,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' WithdrawRequests (historical) 🔥
+    #' WithdrawRequests (historical)
     #'
     #' @description
-    #' WithdrawRequests (historical) 🔥
+    #' WithdrawRequests (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2047,10 +2047,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' WithdrawRequests (historical) 🔥
+    #' WithdrawRequests (historical)
     #'
     #' @description
-    #' WithdrawRequests (historical) 🔥
+    #' WithdrawRequests (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2136,10 +2136,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Withdraws (historical) 🔥
+    #' Withdraws (historical)
     #'
     #' @description
-    #' Withdraws (historical) 🔥
+    #' Withdraws (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -2163,10 +2163,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Withdraws (historical) 🔥
+    #' Withdraws (historical)
     #'
     #' @description
-    #' Withdraws (historical) 🔥
+    #' Withdraws (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description

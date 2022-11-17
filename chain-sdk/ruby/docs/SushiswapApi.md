@@ -8,22 +8,22 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**sushiswap_burns__current**](SushiswapApi.md#sushiswap_burns__current) | **GET** /dapps/sushiswap/burns/current | Burns (current) |
 | [**sushiswap_day_datas__current**](SushiswapApi.md#sushiswap_day_datas__current) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current) |
 | [**sushiswap_factorys__current**](SushiswapApi.md#sushiswap_factorys__current) | **GET** /dapps/sushiswap/factorys/current | Factorys (current) |
-| [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥 |
-| [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥 |
-| [**sushiswap_get_day_datas__historical**](SushiswapApi.md#sushiswap_get_day_datas__historical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥 |
-| [**sushiswap_get_factorys__historical**](SushiswapApi.md#sushiswap_get_factorys__historical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥 |
-| [**sushiswap_get_hour_datas__historical**](SushiswapApi.md#sushiswap_get_hour_datas__historical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥 |
-| [**sushiswap_get_liquidity_position_snapshots__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshots__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥 |
-| [**sushiswap_get_liquidity_positions__historical**](SushiswapApi.md#sushiswap_get_liquidity_positions__historical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥 |
-| [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥 |
-| [**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥 |
-| [**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥 |
-| [**sushiswap_get_pairs__historical**](SushiswapApi.md#sushiswap_get_pairs__historical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥 |
-| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
-| [**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥 |
-| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
-| [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥 |
-| [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥 |
+| [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) |
+| [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) |
+| [**sushiswap_get_day_datas__historical**](SushiswapApi.md#sushiswap_get_day_datas__historical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) |
+| [**sushiswap_get_factorys__historical**](SushiswapApi.md#sushiswap_get_factorys__historical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) |
+| [**sushiswap_get_hour_datas__historical**](SushiswapApi.md#sushiswap_get_hour_datas__historical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) |
+| [**sushiswap_get_liquidity_position_snapshots__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshots__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) |
+| [**sushiswap_get_liquidity_positions__historical**](SushiswapApi.md#sushiswap_get_liquidity_positions__historical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) |
+| [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) |
+| [**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) |
+| [**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) |
+| [**sushiswap_get_pairs__historical**](SushiswapApi.md#sushiswap_get_pairs__historical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) |
+| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) |
+| [**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) |
+| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) |
+| [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) |
+| [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical) |
 | [**sushiswap_hour_datas__current**](SushiswapApi.md#sushiswap_hour_datas__current) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current) |
 | [**sushiswap_liquidity_position_snapshots__current**](SushiswapApi.md#sushiswap_liquidity_position_snapshots__current) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current) |
 | [**sushiswap_liquidity_positions__current**](SushiswapApi.md#sushiswap_liquidity_positions__current) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current) |
@@ -286,7 +286,7 @@ No authorization required
 
 > <Array<SushiswapBundleDTO>> sushiswap_get_bundles__historical(opts)
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -306,7 +306,7 @@ opts = {
 }
 
 begin
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   result = api_instance.sushiswap_get_bundles__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -322,7 +322,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   data, status_code, headers = api_instance.sushiswap_get_bundles__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -360,7 +360,7 @@ No authorization required
 
 > <Array<SushiswapBurnDTO>> sushiswap_get_burns__historical(opts)
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -381,7 +381,7 @@ opts = {
 }
 
 begin
-  # Burns (historical) 🔥
+  # Burns (historical)
   result = api_instance.sushiswap_get_burns__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -397,7 +397,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Burns (historical) 🔥
+  # Burns (historical)
   data, status_code, headers = api_instance.sushiswap_get_burns__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -436,7 +436,7 @@ No authorization required
 
 > <Array<SushiswapDayDataDTO>> sushiswap_get_day_datas__historical(opts)
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 Gets dayDatas.
 
@@ -456,7 +456,7 @@ opts = {
 }
 
 begin
-  # DayDatas (historical) 🔥
+  # DayDatas (historical)
   result = api_instance.sushiswap_get_day_datas__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -472,7 +472,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # DayDatas (historical) 🔥
+  # DayDatas (historical)
   data, status_code, headers = api_instance.sushiswap_get_day_datas__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -510,7 +510,7 @@ No authorization required
 
 > <Array<SushiswapFactoryDTO>> sushiswap_get_factorys__historical(opts)
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -530,7 +530,7 @@ opts = {
 }
 
 begin
-  # Factorys (historical) 🔥
+  # Factorys (historical)
   result = api_instance.sushiswap_get_factorys__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -546,7 +546,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Factorys (historical) 🔥
+  # Factorys (historical)
   data, status_code, headers = api_instance.sushiswap_get_factorys__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -584,7 +584,7 @@ No authorization required
 
 > <Array<SushiswapHourDataDTO>> sushiswap_get_hour_datas__historical(opts)
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 Gets hourDatas.
 
@@ -604,7 +604,7 @@ opts = {
 }
 
 begin
-  # HourDatas (historical) 🔥
+  # HourDatas (historical)
   result = api_instance.sushiswap_get_hour_datas__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -620,7 +620,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # HourDatas (historical) 🔥
+  # HourDatas (historical)
   data, status_code, headers = api_instance.sushiswap_get_hour_datas__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -658,7 +658,7 @@ No authorization required
 
 > <Array<SushiswapLiquidityPositionSnapshotDTO>> sushiswap_get_liquidity_position_snapshots__historical(opts)
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -680,7 +680,7 @@ opts = {
 }
 
 begin
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   result = api_instance.sushiswap_get_liquidity_position_snapshots__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -696,7 +696,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   data, status_code, headers = api_instance.sushiswap_get_liquidity_position_snapshots__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -736,7 +736,7 @@ No authorization required
 
 > <Array<SushiswapLiquidityPositionDTO>> sushiswap_get_liquidity_positions__historical(opts)
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -758,7 +758,7 @@ opts = {
 }
 
 begin
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   result = api_instance.sushiswap_get_liquidity_positions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -774,7 +774,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   data, status_code, headers = api_instance.sushiswap_get_liquidity_positions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -814,7 +814,7 @@ No authorization required
 
 > <Array<SushiswapMintDTO>> sushiswap_get_mints__historical(opts)
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -835,7 +835,7 @@ opts = {
 }
 
 begin
-  # Mints (historical) 🔥
+  # Mints (historical)
   result = api_instance.sushiswap_get_mints__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -851,7 +851,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Mints (historical) 🔥
+  # Mints (historical)
   data, status_code, headers = api_instance.sushiswap_get_mints__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -890,7 +890,7 @@ No authorization required
 
 > <Array<SushiswapPairDayDataDTO>> sushiswap_get_pair_day_datas__historical(opts)
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -913,7 +913,7 @@ opts = {
 }
 
 begin
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   result = api_instance.sushiswap_get_pair_day_datas__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -929,7 +929,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   data, status_code, headers = api_instance.sushiswap_get_pair_day_datas__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -970,7 +970,7 @@ No authorization required
 
 > <Array<SushiswapPairHourDataDTO>> sushiswap_get_pair_hour_datas__historical(opts)
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -991,7 +991,7 @@ opts = {
 }
 
 begin
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   result = api_instance.sushiswap_get_pair_hour_datas__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1007,7 +1007,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   data, status_code, headers = api_instance.sushiswap_get_pair_hour_datas__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1046,7 +1046,7 @@ No authorization required
 
 > <Array<SushiswapPairDTO>> sushiswap_get_pairs__historical(opts)
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -1069,7 +1069,7 @@ opts = {
 }
 
 begin
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   result = api_instance.sushiswap_get_pairs__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1085,7 +1085,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   data, status_code, headers = api_instance.sushiswap_get_pairs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1126,7 +1126,7 @@ No authorization required
 
 > <Array<SushiswapSwapDTO>> sushiswap_get_swaps__historical(opts)
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -1147,7 +1147,7 @@ opts = {
 }
 
 begin
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   result = api_instance.sushiswap_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1163,7 +1163,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   data, status_code, headers = api_instance.sushiswap_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1202,7 +1202,7 @@ No authorization required
 
 > <Array<SushiswapTokenDayDataDTO>> sushiswap_get_token_day_datas__historical(opts)
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -1222,7 +1222,7 @@ opts = {
 }
 
 begin
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   result = api_instance.sushiswap_get_token_day_datas__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1238,7 +1238,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   data, status_code, headers = api_instance.sushiswap_get_token_day_datas__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1276,7 +1276,7 @@ No authorization required
 
 > <Array<SushiswapTokenDTO>> sushiswap_get_tokens__historical(opts)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1298,7 +1298,7 @@ opts = {
 }
 
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   result = api_instance.sushiswap_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1314,7 +1314,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   data, status_code, headers = api_instance.sushiswap_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1354,7 +1354,7 @@ No authorization required
 
 > <Array<SushiswapTransactionDTO>> sushiswap_get_transactions__historical(opts)
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -1374,7 +1374,7 @@ opts = {
 }
 
 begin
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   result = api_instance.sushiswap_get_transactions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1390,7 +1390,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   data, status_code, headers = api_instance.sushiswap_get_transactions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1428,7 +1428,7 @@ No authorization required
 
 > <Array<SushiswapUserDTO>> sushiswap_get_users__historical(opts)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1448,7 +1448,7 @@ opts = {
 }
 
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   result = api_instance.sushiswap_get_users__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1464,7 +1464,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   data, status_code, headers = api_instance.sushiswap_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

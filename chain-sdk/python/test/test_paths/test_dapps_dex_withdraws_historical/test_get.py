@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexWithdrawsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexWithdrawsHistorical unit test stubs
-        Withdraws (historical) 🔥  # noqa: E501
+        Withdraws (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

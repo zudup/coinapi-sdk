@@ -6,21 +6,21 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UniswapV2BundlesCurrent**](UniswapV2Api.md#UniswapV2BundlesCurrent) | **GET** /dapps/uniswapv2/bundles/current | Bundles (current)
 [**UniswapV2BurnsCurrent**](UniswapV2Api.md#UniswapV2BurnsCurrent) | **GET** /dapps/uniswapv2/burns/current | Burns (current)
-[**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#UniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
-[**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#UniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
-[**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**UniswapV2GetMintsHistorical**](UniswapV2Api.md#UniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
-[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
-[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
-[**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
-[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
-[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
-[**UniswapV2GetUsersHistorical**](UniswapV2Api.md#UniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#UniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical)
+[**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#UniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical)
+[**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
+[**UniswapV2GetMintsHistorical**](UniswapV2Api.md#UniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
+[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
+[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
+[**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
+[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
+[**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
+[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**UniswapV2GetUsersHistorical**](UniswapV2Api.md#UniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**UniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**UniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**UniswapV2MintsCurrent**](UniswapV2Api.md#UniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
@@ -123,7 +123,7 @@ No authorization required
 # **UniswapV2GetBundlesHistorical**
 > array[UniswapV2BundleDTO] UniswapV2GetBundlesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -131,7 +131,7 @@ Gets bundles.
 ```R
 library(openapi)
 
-# Bundles (historical) 🔥
+# Bundles (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -178,7 +178,7 @@ No authorization required
 # **UniswapV2GetBurnsHistorical**
 > array[UniswapV2BurnDTO] UniswapV2GetBurnsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -186,7 +186,7 @@ Gets burns.
 ```R
 library(openapi)
 
-# Burns (historical) 🔥
+# Burns (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -235,7 +235,7 @@ No authorization required
 # **UniswapV2GetLiquidityPositionSnapshotsHistorical**
 > array[UniswapV2LiquidityPositionSnapshotDTO] UniswapV2GetLiquidityPositionSnapshotsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user, pair = var.pair)
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -243,7 +243,7 @@ Gets liquidityPositionSnapshots.
 ```R
 library(openapi)
 
-# LiquidityPositionSnapshots (historical) 🔥
+# LiquidityPositionSnapshots (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -294,7 +294,7 @@ No authorization required
 # **UniswapV2GetLiquidityPositionsHistorical**
 > array[UniswapV2LiquidityPositionDTO] UniswapV2GetLiquidityPositionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user, pair = var.pair)
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -302,7 +302,7 @@ Gets liquidityPositions.
 ```R
 library(openapi)
 
-# LiquidityPositions (historical) 🔥
+# LiquidityPositions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -353,7 +353,7 @@ No authorization required
 # **UniswapV2GetMintsHistorical**
 > array[UniswapV2MintDTO] UniswapV2GetMintsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -361,7 +361,7 @@ Gets mints.
 ```R
 library(openapi)
 
-# Mints (historical) 🔥
+# Mints (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -410,7 +410,7 @@ No authorization required
 # **UniswapV2GetPairDayDatasHistorical**
 > array[UniswapV2PairDayDataDTO] UniswapV2GetPairDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, token_0 = var.token_0, token_1 = var.token_1)
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -418,7 +418,7 @@ Gets pairDayDatas.
 ```R
 library(openapi)
 
-# PairDayDatas (historical) 🔥
+# PairDayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -469,7 +469,7 @@ No authorization required
 # **UniswapV2GetPairHourDatasHistorical**
 > array[UniswapV2PairHourDataDTO] UniswapV2GetPairHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -477,7 +477,7 @@ Gets pairHourDatas.
 ```R
 library(openapi)
 
-# PairHourDatas (historical) 🔥
+# PairHourDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -526,7 +526,7 @@ No authorization required
 # **UniswapV2GetPairsHistorical**
 > array[UniswapV2PairDTO] UniswapV2GetPairsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, token_0 = var.token_0, token_1 = var.token_1)
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -534,7 +534,7 @@ Gets pairs.
 ```R
 library(openapi)
 
-# Pairs (historical) 🔥
+# Pairs (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -585,7 +585,7 @@ No authorization required
 # **UniswapV2GetSwapsHistorical**
 > array[UniswapV2SwapDTO] UniswapV2GetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -593,7 +593,7 @@ Gets swaps.
 ```R
 library(openapi)
 
-# Swaps (historical) 🔥
+# Swaps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -642,7 +642,7 @@ No authorization required
 # **UniswapV2GetTokenDayDatasHistorical**
 > array[UniswapV2TokenDayDataDTO] UniswapV2GetTokenDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -650,7 +650,7 @@ Gets tokenDayDatas.
 ```R
 library(openapi)
 
-# TokenDayDatas (historical) 🔥
+# TokenDayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -697,7 +697,7 @@ No authorization required
 # **UniswapV2GetTokensHistorical**
 > array[UniswapV2TokenDTO] UniswapV2GetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, symbol = var.symbol, name = var.name)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -705,7 +705,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -756,7 +756,7 @@ No authorization required
 # **UniswapV2GetTransactionsHistorical**
 > array[UniswapV2TransactionDTO] UniswapV2GetTransactionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -764,7 +764,7 @@ Gets transactions.
 ```R
 library(openapi)
 
-# Transactions (historical) 🔥
+# Transactions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -811,7 +811,7 @@ No authorization required
 # **UniswapV2GetUniswapDayDatasHistorical**
 > array[UniswapV2UniswapDayDataDTO] UniswapV2GetUniswapDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 
@@ -819,7 +819,7 @@ Gets uniswapDayDatas.
 ```R
 library(openapi)
 
-# UniswapDayDatas (historical) 🔥
+# UniswapDayDatas (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -866,7 +866,7 @@ No authorization required
 # **UniswapV2GetUniswapFactorysHistorical**
 > array[UniswapV2UniswapFactoryDTO] UniswapV2GetUniswapFactorysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-UniswapFactorys (historical) 🔥
+UniswapFactorys (historical)
 
 Gets uniswapFactorys.
 
@@ -874,7 +874,7 @@ Gets uniswapFactorys.
 ```R
 library(openapi)
 
-# UniswapFactorys (historical) 🔥
+# UniswapFactorys (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -921,7 +921,7 @@ No authorization required
 # **UniswapV2GetUsersHistorical**
 > array[UniswapV2UserDTO] UniswapV2GetUsersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -929,7 +929,7 @@ Gets users.
 ```R
 library(openapi)
 
-# Users (historical) 🔥
+# Users (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)

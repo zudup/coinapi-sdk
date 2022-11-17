@@ -303,7 +303,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetAccountsHistorical
      *
-     * Accounts (historical) 🔥.
+     * Accounts (historical).
      *
      */
     public function testCurveGetAccountsHistorical()
@@ -315,7 +315,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetAddLiquidityEventsHistorical
      *
-     * AddLiquidityEvents (historical) 🔥.
+     * AddLiquidityEvents (historical).
      *
      */
     public function testCurveGetAddLiquidityEventsHistorical()
@@ -327,7 +327,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetAdminFeeChangeLogsHistorical
      *
-     * AdminFeeChangeLogs (historical) 🔥.
+     * AdminFeeChangeLogs (historical).
      *
      */
     public function testCurveGetAdminFeeChangeLogsHistorical()
@@ -339,7 +339,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetAmplificationCoeffChangeLogsHistorical
      *
-     * AmplificationCoeffChangeLogs (historical) 🔥.
+     * AmplificationCoeffChangeLogs (historical).
      *
      */
     public function testCurveGetAmplificationCoeffChangeLogsHistorical()
@@ -351,7 +351,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetCoinsHistorical
      *
-     * Coins (historical) 🔥.
+     * Coins (historical).
      *
      */
     public function testCurveGetCoinsHistorical()
@@ -363,7 +363,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetContractVersionsHistorical
      *
-     * ContractVersions (historical) 🔥.
+     * ContractVersions (historical).
      *
      */
     public function testCurveGetContractVersionsHistorical()
@@ -375,7 +375,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetContractsHistorical
      *
-     * Contracts (historical) 🔥.
+     * Contracts (historical).
      *
      */
     public function testCurveGetContractsHistorical()
@@ -387,7 +387,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetDailyVolumesHistorical
      *
-     * DailyVolumes (historical) 🔥.
+     * DailyVolumes (historical).
      *
      */
     public function testCurveGetDailyVolumesHistorical()
@@ -399,7 +399,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetExchangesHistorical
      *
-     * Exchanges (historical) 🔥.
+     * Exchanges (historical).
      *
      */
     public function testCurveGetExchangesHistorical()
@@ -411,7 +411,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetFeeChangeLogsHistorical
      *
-     * FeeChangeLogs (historical) 🔥.
+     * FeeChangeLogs (historical).
      *
      */
     public function testCurveGetFeeChangeLogsHistorical()
@@ -423,7 +423,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeDepositsHistorical
      *
-     * GaugeDeposits (historical) 🔥.
+     * GaugeDeposits (historical).
      *
      */
     public function testCurveGetGaugeDepositsHistorical()
@@ -435,7 +435,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeLiquiditysHistorical
      *
-     * GaugeLiquiditys (historical) 🔥.
+     * GaugeLiquiditys (historical).
      *
      */
     public function testCurveGetGaugeLiquiditysHistorical()
@@ -447,7 +447,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeTotalWeightsHistorical
      *
-     * GaugeTotalWeights (historical) 🔥.
+     * GaugeTotalWeights (historical).
      *
      */
     public function testCurveGetGaugeTotalWeightsHistorical()
@@ -459,7 +459,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeTypeWeightsHistorical
      *
-     * GaugeTypeWeights (historical) 🔥.
+     * GaugeTypeWeights (historical).
      *
      */
     public function testCurveGetGaugeTypeWeightsHistorical()
@@ -471,7 +471,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeTypesHistorical
      *
-     * GaugeTypes (historical) 🔥.
+     * GaugeTypes (historical).
      *
      */
     public function testCurveGetGaugeTypesHistorical()
@@ -483,7 +483,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeWeightVotesHistorical
      *
-     * GaugeWeightVotes (historical) 🔥.
+     * GaugeWeightVotes (historical).
      *
      */
     public function testCurveGetGaugeWeightVotesHistorical()
@@ -495,7 +495,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeWeightsHistorical
      *
-     * GaugeWeights (historical) 🔥.
+     * GaugeWeights (historical).
      *
      */
     public function testCurveGetGaugeWeightsHistorical()
@@ -507,7 +507,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugeWithdrawsHistorical
      *
-     * GaugeWithdraws (historical) 🔥.
+     * GaugeWithdraws (historical).
      *
      */
     public function testCurveGetGaugeWithdrawsHistorical()
@@ -519,7 +519,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetGaugesHistorical
      *
-     * Gauges (historical) 🔥.
+     * Gauges (historical).
      *
      */
     public function testCurveGetGaugesHistorical()
@@ -531,7 +531,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetHourlyVolumesHistorical
      *
-     * HourlyVolumes (historical) 🔥.
+     * HourlyVolumes (historical).
      *
      */
     public function testCurveGetHourlyVolumesHistorical()
@@ -543,7 +543,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetLpTokensHistorical
      *
-     * LpTokens (historical) 🔥.
+     * LpTokens (historical).
      *
      */
     public function testCurveGetLpTokensHistorical()
@@ -555,7 +555,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetPoolsHistorical
      *
-     * Pools (historical) 🔥.
+     * Pools (historical).
      *
      */
     public function testCurveGetPoolsHistorical()
@@ -567,7 +567,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetProposalVotesHistorical
      *
-     * ProposalVotes (historical) 🔥.
+     * ProposalVotes (historical).
      *
      */
     public function testCurveGetProposalVotesHistorical()
@@ -579,7 +579,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetProposalsHistorical
      *
-     * Proposals (historical) 🔥.
+     * Proposals (historical).
      *
      */
     public function testCurveGetProposalsHistorical()
@@ -591,7 +591,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetRemoveLiquidityEventsHistorical
      *
-     * RemoveLiquidityEvents (historical) 🔥.
+     * RemoveLiquidityEvents (historical).
      *
      */
     public function testCurveGetRemoveLiquidityEventsHistorical()
@@ -603,7 +603,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetRemoveLiquidityOneEventsHistorical
      *
-     * RemoveLiquidityOneEvents (historical) 🔥.
+     * RemoveLiquidityOneEvents (historical).
      *
      */
     public function testCurveGetRemoveLiquidityOneEventsHistorical()
@@ -615,7 +615,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetSystemStatesHistorical
      *
-     * SystemStates (historical) 🔥.
+     * SystemStates (historical).
      *
      */
     public function testCurveGetSystemStatesHistorical()
@@ -627,7 +627,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetTokensHistorical
      *
-     * Tokens (historical) 🔥.
+     * Tokens (historical).
      *
      */
     public function testCurveGetTokensHistorical()
@@ -639,7 +639,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetTransferOwnershipEventsHistorical
      *
-     * TransferOwnershipEvents (historical) 🔥.
+     * TransferOwnershipEvents (historical).
      *
      */
     public function testCurveGetTransferOwnershipEventsHistorical()
@@ -651,7 +651,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetUnderlyingCoinsHistorical
      *
-     * UnderlyingCoins (historical) 🔥.
+     * UnderlyingCoins (historical).
      *
      */
     public function testCurveGetUnderlyingCoinsHistorical()
@@ -663,7 +663,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetVotingAppsHistorical
      *
-     * VotingApps (historical) 🔥.
+     * VotingApps (historical).
      *
      */
     public function testCurveGetVotingAppsHistorical()
@@ -675,7 +675,7 @@ class CurveApiTest extends TestCase
     /**
      * Test case for curveGetWeeklyVolumesHistorical
      *
-     * WeeklyVolumes (historical) 🔥.
+     * WeeklyVolumes (historical).
      *
      */
     public function testCurveGetWeeklyVolumesHistorical()

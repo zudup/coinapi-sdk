@@ -100,7 +100,7 @@ uniswap_v3_factorys_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Bundles (historical) 🔥
+%% @doc Bundles (historical)
 %% Gets bundles.
 -spec uniswap_v3_get_bundles_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_bundle_dto:openapi_uniswap_v3_bundle_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_bundles_(historical)(Ctx) ->
@@ -121,7 +121,7 @@ uniswap_v3_get_bundles_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Burns (historical) 🔥
+%% @doc Burns (historical)
 %% Gets burns.
 -spec uniswap_v3_get_burns_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_burn_dto:openapi_uniswap_v3_burn_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_burns_(historical)(Ctx) ->
@@ -142,7 +142,7 @@ uniswap_v3_get_burns_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Factorys (historical) 🔥
+%% @doc Factorys (historical)
 %% Gets factorys.
 -spec uniswap_v3_get_factorys_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_factory_dto:openapi_uniswap_v3_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_factorys_(historical)(Ctx) ->
@@ -163,7 +163,7 @@ uniswap_v3_get_factorys_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Mints (historical) 🔥
+%% @doc Mints (historical)
 %% Gets mints.
 -spec uniswap_v3_get_mints_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_mint_dto:openapi_uniswap_v3_mint_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_mints_(historical)(Ctx) ->
@@ -184,7 +184,7 @@ uniswap_v3_get_mints_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PoolDayDatas (historical) 🔥
+%% @doc PoolDayDatas (historical)
 %% Gets poolDayDatas.
 -spec uniswap_v3_get_pool_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_day_data_dto:openapi_uniswap_v3_pool_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_pool_day_datas_(historical)(Ctx) ->
@@ -205,7 +205,7 @@ uniswap_v3_get_pool_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PoolHourDatas (historical) 🔥
+%% @doc PoolHourDatas (historical)
 %% Gets poolHourDatas.
 -spec uniswap_v3_get_pool_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_hour_data_dto:openapi_uniswap_v3_pool_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_pool_hour_datas_(historical)(Ctx) ->
@@ -226,7 +226,7 @@ uniswap_v3_get_pool_hour_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Pools (historical) 🔥
+%% @doc Pools (historical)
 %% Gets pools.
 -spec uniswap_v3_get_pools_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_pool_dto:openapi_uniswap_v3_pool_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_pools_(historical)(Ctx) ->
@@ -247,7 +247,7 @@ uniswap_v3_get_pools_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PositionSnapshots (historical) 🔥
+%% @doc PositionSnapshots (historical)
 %% Gets positionSnapshots.
 -spec uniswap_v3_get_position_snapshots_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_position_snapshot_dto:openapi_uniswap_v3_position_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_position_snapshots_(historical)(Ctx) ->
@@ -268,7 +268,7 @@ uniswap_v3_get_position_snapshots_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Positions (historical) 🔥
+%% @doc Positions (historical)
 %% Gets positions.
 -spec uniswap_v3_get_positions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_position_dto:openapi_uniswap_v3_position_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_positions_(historical)(Ctx) ->
@@ -289,7 +289,7 @@ uniswap_v3_get_positions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Swaps (historical) 🔥
+%% @doc Swaps (historical)
 %% Gets swaps.
 -spec uniswap_v3_get_swaps_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_swap_dto:openapi_uniswap_v3_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_swaps_(historical)(Ctx) ->
@@ -310,7 +310,7 @@ uniswap_v3_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TickDayDatas (historical) 🔥
+%% @doc TickDayDatas (historical)
 %% Gets tickDayDatas.
 -spec uniswap_v3_get_tick_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_tick_day_data_dto:openapi_uniswap_v3_tick_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_tick_day_datas_(historical)(Ctx) ->
@@ -331,7 +331,7 @@ uniswap_v3_get_tick_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Ticks (historical) 🔥
+%% @doc Ticks (historical)
 %% Gets ticks.
 -spec uniswap_v3_get_ticks_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_tick_dto:openapi_uniswap_v3_tick_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_ticks_(historical)(Ctx) ->
@@ -352,7 +352,7 @@ uniswap_v3_get_ticks_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenHourDatas (historical) 🔥
+%% @doc TokenHourDatas (historical)
 %% Gets tokenHourDatas.
 -spec uniswap_v3_get_token_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_hour_data_dto:openapi_uniswap_v3_token_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_token_hour_datas_(historical)(Ctx) ->
@@ -373,7 +373,7 @@ uniswap_v3_get_token_hour_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenV3DayDatas (historical) 🔥
+%% @doc TokenV3DayDatas (historical)
 %% Gets tokenV3DayDatas.
 -spec uniswap_v3_get_token_v3_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_v3_day_data_dto:openapi_uniswap_v3_token_v3_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_token_v3_day_datas_(historical)(Ctx) ->
@@ -394,7 +394,7 @@ uniswap_v3_get_token_v3_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Tokens (historical) 🔥
+%% @doc Tokens (historical)
 %% Gets tokens.
 -spec uniswap_v3_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_token_dto:openapi_uniswap_v3_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_tokens_(historical)(Ctx) ->
@@ -415,7 +415,7 @@ uniswap_v3_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Transactions (historical) 🔥
+%% @doc Transactions (historical)
 %% Gets transactions.
 -spec uniswap_v3_get_transactions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_transaction_dto:openapi_uniswap_v3_transaction_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_transactions_(historical)(Ctx) ->
@@ -436,7 +436,7 @@ uniswap_v3_get_transactions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapDayDatas (historical) 🔥
+%% @doc UniswapDayDatas (historical)
 %% Gets uniswapDayDatas.
 -spec uniswap_v3_get_uniswap_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v3_uniswap_day_data_dto:openapi_uniswap_v3_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 uniswap_v3_get_uniswap_day_datas_(historical)(Ctx) ->

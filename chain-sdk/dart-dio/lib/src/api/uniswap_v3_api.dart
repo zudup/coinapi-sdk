@@ -251,7 +251,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Bundles (historical) 🔥
+  /// Bundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -342,7 +342,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Burns (historical) 🔥
+  /// Burns (historical)
   /// Gets burns.
   ///
   /// Parameters:
@@ -442,7 +442,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Factorys (historical) 🔥
+  /// Factorys (historical)
   /// Gets factorys.
   ///
   /// Parameters:
@@ -533,7 +533,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Mints (historical) 🔥
+  /// Mints (historical)
   /// Gets mints.
   ///
   /// Parameters:
@@ -633,7 +633,7 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolDayDatas (historical) 🔥
+  /// PoolDayDatas (historical)
   /// Gets poolDayDatas.
   ///
   /// Parameters:
@@ -727,7 +727,7 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolHourDatas (historical) 🔥
+  /// PoolHourDatas (historical)
   /// Gets poolHourDatas.
   ///
   /// Parameters:
@@ -821,7 +821,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Pools (historical) 🔥
+  /// Pools (historical)
   /// Gets pools.
   ///
   /// Parameters:
@@ -918,7 +918,7 @@ class UniswapV3Api {
     );
   }
 
-  /// PositionSnapshots (historical) 🔥
+  /// PositionSnapshots (historical)
   /// Gets positionSnapshots.
   ///
   /// Parameters:
@@ -1012,7 +1012,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Positions (historical) 🔥
+  /// Positions (historical)
   /// Gets positions.
   ///
   /// Parameters:
@@ -1112,7 +1112,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Swaps (historical) 🔥
+  /// Swaps (historical)
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1212,7 +1212,7 @@ class UniswapV3Api {
     );
   }
 
-  /// TickDayDatas (historical) 🔥
+  /// TickDayDatas (historical)
   /// Gets tickDayDatas.
   ///
   /// Parameters:
@@ -1306,7 +1306,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Ticks (historical) 🔥
+  /// Ticks (historical)
   /// Gets ticks.
   ///
   /// Parameters:
@@ -1400,7 +1400,7 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenHourDatas (historical) 🔥
+  /// TokenHourDatas (historical)
   /// Gets tokenHourDatas.
   ///
   /// Parameters:
@@ -1491,7 +1491,7 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenV3DayDatas (historical) 🔥
+  /// TokenV3DayDatas (historical)
   /// Gets tokenV3DayDatas.
   ///
   /// Parameters:
@@ -1582,7 +1582,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1679,7 +1679,7 @@ class UniswapV3Api {
     );
   }
 
-  /// Transactions (historical) 🔥
+  /// Transactions (historical)
   /// Gets transactions.
   ///
   /// Parameters:
@@ -1770,7 +1770,7 @@ class UniswapV3Api {
     );
   }
 
-  /// UniswapDayDatas (historical) 🔥
+  /// UniswapDayDatas (historical)
   /// Gets uniswapDayDatas.
   ///
   /// Parameters:

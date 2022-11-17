@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2PairHourDatasHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2PairHourDatasHistorical unit test stubs
-        PairHourDatas (historical) 🔥  # noqa: E501
+        PairHourDatas (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

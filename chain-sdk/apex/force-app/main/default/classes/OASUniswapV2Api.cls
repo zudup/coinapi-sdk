@@ -68,7 +68,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -102,7 +102,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -138,7 +138,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -176,7 +176,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -214,7 +214,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -250,7 +250,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -288,7 +288,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -324,7 +324,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -362,7 +362,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -398,7 +398,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -432,7 +432,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -470,7 +470,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -504,7 +504,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      * Gets uniswapDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -538,7 +538,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * UniswapFactorys (historical) 🔥
+     * UniswapFactorys (historical)
      * Gets uniswapFactorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -572,7 +572,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

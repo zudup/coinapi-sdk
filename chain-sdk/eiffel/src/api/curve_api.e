@@ -655,7 +655,7 @@ feature -- API Access
 		end
 
 	curve_get_accounts_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32): detachable LIST [CURVE_ACCOUNT_DTO]
-			-- Accounts (historical) 🔥
+			-- Accounts (historical)
 			-- Gets accounts.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -706,7 +706,7 @@ feature -- API Access
 		end
 
 	curve_get_add_liquidity_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO]
-			-- AddLiquidityEvents (historical) 🔥
+			-- AddLiquidityEvents (historical)
 			-- Gets addLiquidityEvents.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -757,7 +757,7 @@ feature -- API Access
 		end
 
 	curve_get_admin_fee_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO]
-			-- AdminFeeChangeLogs (historical) 🔥
+			-- AdminFeeChangeLogs (historical)
 			-- Gets adminFeeChangeLogs.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -808,7 +808,7 @@ feature -- API Access
 		end
 
 	curve_get_amplification_coeff_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO]
-			-- AmplificationCoeffChangeLogs (historical) 🔥
+			-- AmplificationCoeffChangeLogs (historical)
 			-- Gets amplificationCoeffChangeLogs.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -859,7 +859,7 @@ feature -- API Access
 		end
 
 	curve_get_coins_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_COIN_DTO]
-			-- Coins (historical) 🔥
+			-- Coins (historical)
 			-- Gets coins.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -910,7 +910,7 @@ feature -- API Access
 		end
 
 	curve_get_contract_versions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32): detachable LIST [CURVE_CONTRACT_VERSION_DTO]
-			-- ContractVersions (historical) 🔥
+			-- ContractVersions (historical)
 			-- Gets contractVersions.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -961,7 +961,7 @@ feature -- API Access
 		end
 
 	curve_get_contracts_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_CONTRACT_DTO]
-			-- Contracts (historical) 🔥
+			-- Contracts (historical)
 			-- Gets contracts.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1009,7 +1009,7 @@ feature -- API Access
 		end
 
 	curve_get_daily_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_DAILY_VOLUME_DTO]
-			-- DailyVolumes (historical) 🔥
+			-- DailyVolumes (historical)
 			-- Gets dailyVolumes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1060,7 +1060,7 @@ feature -- API Access
 		end
 
 	curve_get_exchanges_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_EXCHANGE_DTO]
-			-- Exchanges (historical) 🔥
+			-- Exchanges (historical)
 			-- Gets exchanges.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1111,7 +1111,7 @@ feature -- API Access
 		end
 
 	curve_get_fee_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_FEE_CHANGE_LOG_DTO]
-			-- FeeChangeLogs (historical) 🔥
+			-- FeeChangeLogs (historical)
 			-- Gets feeChangeLogs.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1162,7 +1162,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_deposits_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_GAUGE_DEPOSIT_DTO]
-			-- GaugeDeposits (historical) 🔥
+			-- GaugeDeposits (historical)
 			-- Gets gaugeDeposits.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1210,7 +1210,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_liquiditys_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; user: STRING_32): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-			-- GaugeLiquiditys (historical) 🔥
+			-- GaugeLiquiditys (historical)
 			-- Gets gaugeLiquiditys.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1261,7 +1261,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_total_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO]
-			-- GaugeTotalWeights (historical) 🔥
+			-- GaugeTotalWeights (historical)
 			-- Gets gaugeTotalWeights.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1309,7 +1309,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_type_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO]
-			-- GaugeTypeWeights (historical) 🔥
+			-- GaugeTypeWeights (historical)
 			-- Gets gaugeTypeWeights.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1357,7 +1357,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_types_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; name: STRING_32): detachable LIST [CURVE_GAUGE_TYPE_DTO]
-			-- GaugeTypes (historical) 🔥
+			-- GaugeTypes (historical)
 			-- Gets gaugeTypes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1408,7 +1408,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_weight_votes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; user: STRING_32): detachable LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO]
-			-- GaugeWeightVotes (historical) 🔥
+			-- GaugeWeightVotes (historical)
 			-- Gets gaugeWeightVotes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1459,7 +1459,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_GAUGE_WEIGHT_DTO]
-			-- GaugeWeights (historical) 🔥
+			-- GaugeWeights (historical)
 			-- Gets gaugeWeights.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1507,7 +1507,7 @@ feature -- API Access
 		end
 
 	curve_get_gauge_withdraws_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_GAUGE_WITHDRAW_DTO]
-			-- GaugeWithdraws (historical) 🔥
+			-- GaugeWithdraws (historical)
 			-- Gets gaugeWithdraws.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1555,7 +1555,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32; pool: STRING_32): detachable LIST [CURVE_GAUGE_DTO]
-			-- Gauges (historical) 🔥
+			-- Gauges (historical)
 			-- Gets gauges.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1609,7 +1609,7 @@ feature -- API Access
 		end
 
 	curve_get_hourly_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_HOURLY_VOLUME_DTO]
-			-- HourlyVolumes (historical) 🔥
+			-- HourlyVolumes (historical)
 			-- Gets hourlyVolumes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1660,7 +1660,7 @@ feature -- API Access
 		end
 
 	curve_get_lp_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32; name: STRING_32; symbol: STRING_32; pool: STRING_32): detachable LIST [CURVE_LP_TOKEN_DTO]
-			-- LpTokens (historical) 🔥
+			-- LpTokens (historical)
 			-- Gets lpTokens.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1720,7 +1720,7 @@ feature -- API Access
 		end
 
 	curve_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; name: STRING_32): detachable LIST [CURVE_POOL_DTO]
-			-- Pools (historical) 🔥
+			-- Pools (historical)
 			-- Gets pools.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1771,7 +1771,7 @@ feature -- API Access
 		end
 
 	curve_get_proposal_votes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_PROPOSAL_VOTE_DTO]
-			-- ProposalVotes (historical) 🔥
+			-- ProposalVotes (historical)
 			-- Gets proposalVotes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1819,7 +1819,7 @@ feature -- API Access
 		end
 
 	curve_get_proposals_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_PROPOSAL_DTO]
-			-- Proposals (historical) 🔥
+			-- Proposals (historical)
 			-- Gets proposals.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1867,7 +1867,7 @@ feature -- API Access
 		end
 
 	curve_get_remove_liquidity_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO]
-			-- RemoveLiquidityEvents (historical) 🔥
+			-- RemoveLiquidityEvents (historical)
 			-- Gets removeLiquidityEvents.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1918,7 +1918,7 @@ feature -- API Access
 		end
 
 	curve_get_remove_liquidity_one_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO]
-			-- RemoveLiquidityOneEvents (historical) 🔥
+			-- RemoveLiquidityOneEvents (historical)
 			-- Gets removeLiquidityOneEvents.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -1969,7 +1969,7 @@ feature -- API Access
 		end
 
 	curve_get_system_states_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [CURVE_SYSTEM_STATE_DTO]
-			-- SystemStates (historical) 🔥
+			-- SystemStates (historical)
 			-- Gets systemStates.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -2017,7 +2017,7 @@ feature -- API Access
 		end
 
 	curve_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32; name: STRING_32; symbol: STRING_32): detachable LIST [CURVE_TOKEN_DTO]
-			-- Tokens (historical) 🔥
+			-- Tokens (historical)
 			-- Gets tokens.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -2074,7 +2074,7 @@ feature -- API Access
 		end
 
 	curve_get_transfer_ownership_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO]
-			-- TransferOwnershipEvents (historical) 🔥
+			-- TransferOwnershipEvents (historical)
 			-- Gets transferOwnershipEvents.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -2125,7 +2125,7 @@ feature -- API Access
 		end
 
 	curve_get_underlying_coins_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_UNDERLYING_COIN_DTO]
-			-- UnderlyingCoins (historical) 🔥
+			-- UnderlyingCoins (historical)
 			-- Gets underlyingCoins.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -2176,7 +2176,7 @@ feature -- API Access
 		end
 
 	curve_get_voting_apps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32): detachable LIST [CURVE_VOTING_APP_DTO]
-			-- VotingApps (historical) 🔥
+			-- VotingApps (historical)
 			-- Gets votingApps.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -2227,7 +2227,7 @@ feature -- API Access
 		end
 
 	curve_get_weekly_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [CURVE_WEEKLY_VOLUME_DTO]
-			-- WeeklyVolumes (historical) 🔥
+			-- WeeklyVolumes (historical)
 			-- Gets weeklyVolumes.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)

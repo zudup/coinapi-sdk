@@ -106,7 +106,7 @@ paths:
                   $ref: '#/components/schemas/Cow.OrderDTO'
                 type: array
           description: successful operation
-      summary: Orders (historical) 🔥
+      summary: Orders (historical)
       tags:
       - Cow
       x-accepts: application/json
@@ -208,7 +208,7 @@ paths:
                   $ref: '#/components/schemas/Cow.SettlementDTO'
                 type: array
           description: successful operation
-      summary: Settlements (historical) 🔥
+      summary: Settlements (historical)
       tags:
       - Cow
       x-accepts: application/json
@@ -334,7 +334,7 @@ paths:
                   $ref: '#/components/schemas/Cow.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - Cow
       x-accepts: application/json
@@ -442,7 +442,7 @@ paths:
                   $ref: '#/components/schemas/Cow.TradeDTO'
                 type: array
           description: successful operation
-      summary: Trades (historical) 🔥
+      summary: Trades (historical)
       tags:
       - Cow
       x-accepts: application/json
@@ -552,7 +552,7 @@ paths:
                   $ref: '#/components/schemas/Cow.UserDTO'
                 type: array
           description: successful operation
-      summary: Users (historical) 🔥
+      summary: Users (historical)
       tags:
       - Cow
       x-accepts: application/json
@@ -662,7 +662,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AccountDTO'
                 type: array
           description: successful operation
-      summary: Accounts (historical) 🔥
+      summary: Accounts (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -772,7 +772,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AddLiquidityEventDTO'
                 type: array
           description: successful operation
-      summary: AddLiquidityEvents (historical) 🔥
+      summary: AddLiquidityEvents (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -882,7 +882,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AdminFeeChangeLogDTO'
                 type: array
           description: successful operation
-      summary: AdminFeeChangeLogs (historical) 🔥
+      summary: AdminFeeChangeLogs (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -992,7 +992,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AmplificationCoeffChangeLogDTO'
                 type: array
           description: successful operation
-      summary: AmplificationCoeffChangeLogs (historical) 🔥
+      summary: AmplificationCoeffChangeLogs (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1093,7 +1093,7 @@ paths:
                   $ref: '#/components/schemas/Curve.CoinDTO'
                 type: array
           description: successful operation
-      summary: Coins (historical) 🔥
+      summary: Coins (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1195,7 +1195,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ContractDTO'
                 type: array
           description: successful operation
-      summary: Contracts (historical) 🔥
+      summary: Contracts (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1305,7 +1305,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ContractVersionDTO'
                 type: array
           description: successful operation
-      summary: ContractVersions (historical) 🔥
+      summary: ContractVersions (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1415,7 +1415,7 @@ paths:
                   $ref: '#/components/schemas/Curve.DailyVolumeDTO'
                 type: array
           description: successful operation
-      summary: DailyVolumes (historical) 🔥
+      summary: DailyVolumes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1525,7 +1525,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ExchangeDTO'
                 type: array
           description: successful operation
-      summary: Exchanges (historical) 🔥
+      summary: Exchanges (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1644,7 +1644,7 @@ paths:
                   $ref: '#/components/schemas/Curve.FeeChangeLogDTO'
                 type: array
           description: successful operation
-      summary: FeeChangeLogs (historical) 🔥
+      summary: FeeChangeLogs (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1746,7 +1746,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeDepositDTO'
                 type: array
           description: successful operation
-      summary: GaugeDeposits (historical) 🔥
+      summary: GaugeDeposits (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1864,7 +1864,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeDTO'
                 type: array
           description: successful operation
-      summary: Gauges (historical) 🔥
+      summary: Gauges (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -1974,7 +1974,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
                 type: array
           description: successful operation
-      summary: GaugeLiquiditys (historical) 🔥
+      summary: GaugeLiquiditys (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2076,7 +2076,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTotalWeightDTO'
                 type: array
           description: successful operation
-      summary: GaugeTotalWeights (historical) 🔥
+      summary: GaugeTotalWeights (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2186,7 +2186,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTypeDTO'
                 type: array
           description: successful operation
-      summary: GaugeTypes (historical) 🔥
+      summary: GaugeTypes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2288,7 +2288,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTypeWeightDTO'
                 type: array
           description: successful operation
-      summary: GaugeTypeWeights (historical) 🔥
+      summary: GaugeTypeWeights (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2390,7 +2390,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWeightDTO'
                 type: array
           description: successful operation
-      summary: GaugeWeights (historical) 🔥
+      summary: GaugeWeights (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2500,7 +2500,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWeightVoteDTO'
                 type: array
           description: successful operation
-      summary: GaugeWeightVotes (historical) 🔥
+      summary: GaugeWeightVotes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2602,7 +2602,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWithdrawDTO'
                 type: array
           description: successful operation
-      summary: GaugeWithdraws (historical) 🔥
+      summary: GaugeWithdraws (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2712,7 +2712,7 @@ paths:
                   $ref: '#/components/schemas/Curve.HourlyVolumeDTO'
                 type: array
           description: successful operation
-      summary: HourlyVolumes (historical) 🔥
+      summary: HourlyVolumes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2846,7 +2846,7 @@ paths:
                   $ref: '#/components/schemas/Curve.LpTokenDTO'
                 type: array
           description: successful operation
-      summary: LpTokens (historical) 🔥
+      summary: LpTokens (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -2956,7 +2956,7 @@ paths:
                   $ref: '#/components/schemas/Curve.PoolDTO'
                 type: array
           description: successful operation
-      summary: Pools (historical) 🔥
+      summary: Pools (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3067,7 +3067,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ProposalDTO'
                 type: array
           description: successful operation
-      summary: Proposals (historical) 🔥
+      summary: Proposals (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3169,7 +3169,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ProposalVoteDTO'
                 type: array
           description: successful operation
-      summary: ProposalVotes (historical) 🔥
+      summary: ProposalVotes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3279,7 +3279,7 @@ paths:
                   $ref: '#/components/schemas/Curve.RemoveLiquidityEventDTO'
                 type: array
           description: successful operation
-      summary: RemoveLiquidityEvents (historical) 🔥
+      summary: RemoveLiquidityEvents (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3389,7 +3389,7 @@ paths:
                   $ref: '#/components/schemas/Curve.RemoveLiquidityOneEventDTO'
                 type: array
           description: successful operation
-      summary: RemoveLiquidityOneEvents (historical) 🔥
+      summary: RemoveLiquidityOneEvents (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3491,7 +3491,7 @@ paths:
                   $ref: '#/components/schemas/Curve.SystemStateDTO'
                 type: array
           description: successful operation
-      summary: SystemStates (historical) 🔥
+      summary: SystemStates (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3617,7 +3617,7 @@ paths:
                   $ref: '#/components/schemas/Curve.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3727,7 +3727,7 @@ paths:
                   $ref: '#/components/schemas/Curve.TransferOwnershipEventDTO'
                 type: array
           description: successful operation
-      summary: TransferOwnershipEvents (historical) 🔥
+      summary: TransferOwnershipEvents (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3828,7 +3828,7 @@ paths:
                   $ref: '#/components/schemas/Curve.UnderlyingCoinDTO'
                 type: array
           description: successful operation
-      summary: UnderlyingCoins (historical) 🔥
+      summary: UnderlyingCoins (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -3938,7 +3938,7 @@ paths:
                   $ref: '#/components/schemas/Curve.VotingAppDTO'
                 type: array
           description: successful operation
-      summary: VotingApps (historical) 🔥
+      summary: VotingApps (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -4048,7 +4048,7 @@ paths:
                   $ref: '#/components/schemas/Curve.WeeklyVolumeDTO'
                 type: array
           description: successful operation
-      summary: WeeklyVolumes (historical) 🔥
+      summary: WeeklyVolumes (historical)
       tags:
       - Curve
       x-accepts: application/json
@@ -4150,7 +4150,7 @@ paths:
                   $ref: '#/components/schemas/Dex.BatchDTO'
                 type: array
           description: successful operation
-      summary: Batchs (historical) 🔥
+      summary: Batchs (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4251,7 +4251,7 @@ paths:
                   $ref: '#/components/schemas/Dex.DepositDTO'
                 type: array
           description: successful operation
-      summary: Deposits (historical) 🔥
+      summary: Deposits (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4359,7 +4359,7 @@ paths:
                   $ref: '#/components/schemas/Dex.OrderDTO'
                 type: array
           description: successful operation
-      summary: Orders (historical) 🔥
+      summary: Orders (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4453,7 +4453,7 @@ paths:
                   $ref: '#/components/schemas/Dex.PriceDTO'
                 type: array
           description: successful operation
-      summary: Prices (historical) 🔥
+      summary: Prices (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4555,7 +4555,7 @@ paths:
                   $ref: '#/components/schemas/Dex.SolutionDTO'
                 type: array
           description: successful operation
-      summary: Solutions (historical) 🔥
+      summary: Solutions (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4657,7 +4657,7 @@ paths:
                   $ref: '#/components/schemas/Dex.StatsDTO'
                 type: array
           description: successful operation
-      summary: Statss (historical) 🔥
+      summary: Statss (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4783,7 +4783,7 @@ paths:
                   $ref: '#/components/schemas/Dex.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -4901,7 +4901,7 @@ paths:
                   $ref: '#/components/schemas/Dex.TradeDTO'
                 type: array
           description: successful operation
-      summary: Trades (historical) 🔥
+      summary: Trades (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -5003,7 +5003,7 @@ paths:
                   $ref: '#/components/schemas/Dex.UserDTO'
                 type: array
           description: successful operation
-      summary: Users (historical) 🔥
+      summary: Users (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -5104,7 +5104,7 @@ paths:
                   $ref: '#/components/schemas/Dex.WithdrawDTO'
                 type: array
           description: successful operation
-      summary: Withdraws (historical) 🔥
+      summary: Withdraws (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -5205,7 +5205,7 @@ paths:
                   $ref: '#/components/schemas/Dex.WithdrawRequestDTO'
                 type: array
           description: successful operation
-      summary: WithdrawRequests (historical) 🔥
+      summary: WithdrawRequests (historical)
       tags:
       - Dex
       x-accepts: application/json
@@ -5307,7 +5307,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.BundleDTO'
                 type: array
           description: successful operation
-      summary: Bundles (historical) 🔥
+      summary: Bundles (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5408,7 +5408,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.BurnDTO'
                 type: array
           description: successful operation
-      summary: Burns (historical) 🔥
+      summary: Burns (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5510,7 +5510,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.DayDataDTO'
                 type: array
           description: successful operation
-      summary: DayDatas (historical) 🔥
+      summary: DayDatas (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5612,7 +5612,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (historical) 🔥
+      summary: Factorys (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5714,7 +5714,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.HourDataDTO'
                 type: array
           description: successful operation
-      summary: HourDatas (historical) 🔥
+      summary: HourDatas (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5822,7 +5822,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
                 type: array
           description: successful operation
-      summary: LiquidityPositions (historical) 🔥
+      summary: LiquidityPositions (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5930,7 +5930,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
                 type: array
           description: successful operation
-      summary: LiquidityPositionSnapshots (historical) 🔥
+      summary: LiquidityPositionSnapshots (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6031,7 +6031,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.MintDTO'
                 type: array
           description: successful operation
-      summary: Mints (historical) 🔥
+      summary: Mints (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6146,7 +6146,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (historical) 🔥
+      summary: PairDayDatas (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6261,7 +6261,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: Pairs (historical) 🔥
+      summary: Pairs (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6371,7 +6371,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (historical) 🔥
+      summary: PairHourDatas (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6481,7 +6481,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: Swaps (historical) 🔥
+      summary: Swaps (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6592,7 +6592,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (historical) 🔥
+      summary: TokenDayDatas (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6710,7 +6710,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6812,7 +6812,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TransactionDTO'
                 type: array
           description: successful operation
-      summary: Transactions (historical) 🔥
+      summary: Transactions (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -6914,7 +6914,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.UserDTO'
                 type: array
           description: successful operation
-      summary: Users (historical) 🔥
+      summary: Users (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -7016,7 +7016,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.BundleDTO'
                 type: array
           description: successful operation
-      summary: Bundles (historical) 🔥
+      summary: Bundles (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7126,7 +7126,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.BurnDTO'
                 type: array
           description: successful operation
-      summary: Burns (historical) 🔥
+      summary: Burns (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7244,7 +7244,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.LiquidityPositionDTO'
                 type: array
           description: successful operation
-      summary: LiquidityPositions (historical) 🔥
+      summary: LiquidityPositions (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7352,7 +7352,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.LiquidityPositionSnapshotDTO'
                 type: array
           description: successful operation
-      summary: LiquidityPositionSnapshots (historical) 🔥
+      summary: LiquidityPositionSnapshots (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7462,7 +7462,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.MintDTO'
                 type: array
           description: successful operation
-      summary: Mints (historical) 🔥
+      summary: Mints (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7580,7 +7580,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (historical) 🔥
+      summary: PairDayDatas (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7698,7 +7698,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairDTO'
                 type: array
           description: successful operation
-      summary: Pairs (historical) 🔥
+      summary: Pairs (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7817,7 +7817,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (historical) 🔥
+      summary: PairHourDatas (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -7927,7 +7927,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.SwapDTO'
                 type: array
           description: successful operation
-      summary: Swaps (historical) 🔥
+      summary: Swaps (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8039,7 +8039,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (historical) 🔥
+      summary: TokenDayDatas (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8157,7 +8157,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8259,7 +8259,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TransactionDTO'
                 type: array
           description: successful operation
-      summary: Transactions (historical) 🔥
+      summary: Transactions (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8361,7 +8361,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (historical) 🔥
+      summary: UniswapDayDatas (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8463,7 +8463,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapFactoryDTO'
                 type: array
           description: successful operation
-      summary: UniswapFactorys (historical) 🔥
+      summary: UniswapFactorys (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8565,7 +8565,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UserDTO'
                 type: array
           description: successful operation
-      summary: Users (historical) 🔥
+      summary: Users (historical)
       tags:
       - UniswapV2
       x-accepts: application/json
@@ -8667,7 +8667,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BundleDTO'
                 type: array
           description: successful operation
-      summary: Bundles (historical) 🔥
+      summary: Bundles (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -8793,7 +8793,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BurnDTO'
                 type: array
           description: successful operation
-      summary: Burns (historical) 🔥
+      summary: Burns (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -8895,7 +8895,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (historical) 🔥
+      summary: Factorys (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9021,7 +9021,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.MintDTO'
                 type: array
           description: successful operation
-      summary: Mints (historical) 🔥
+      summary: Mints (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9122,7 +9122,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDayDataDTO'
                 type: array
           description: successful operation
-      summary: PoolDayDatas (historical) 🔥
+      summary: PoolDayDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9240,7 +9240,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDTO'
                 type: array
           description: successful operation
-      summary: Pools (historical) 🔥
+      summary: Pools (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9350,7 +9350,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolHourDataDTO'
                 type: array
           description: successful operation
-      summary: PoolHourDatas (historical) 🔥
+      summary: PoolHourDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9476,7 +9476,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionDTO'
                 type: array
           description: successful operation
-      summary: Positions (historical) 🔥
+      summary: Positions (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9577,7 +9577,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionSnapshotDTO'
                 type: array
           description: successful operation
-      summary: PositionSnapshots (historical) 🔥
+      summary: PositionSnapshots (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9704,7 +9704,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.SwapDTO'
                 type: array
           description: successful operation
-      summary: Swaps (historical) 🔥
+      summary: Swaps (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9814,7 +9814,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDayDataDTO'
                 type: array
           description: successful operation
-      summary: TickDayDatas (historical) 🔥
+      summary: TickDayDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -9915,7 +9915,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDTO'
                 type: array
           description: successful operation
-      summary: Ticks (historical) 🔥
+      summary: Ticks (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -10033,7 +10033,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenDTO'
                 type: array
           description: successful operation
-      summary: Tokens (historical) 🔥
+      summary: Tokens (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -10135,7 +10135,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenHourDataDTO'
                 type: array
           description: successful operation
-      summary: TokenHourDatas (historical) 🔥
+      summary: TokenHourDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -10237,7 +10237,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenV3DayDatas (historical) 🔥
+      summary: TokenV3DayDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -10339,7 +10339,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TransactionDTO'
                 type: array
           description: successful operation
-      summary: Transactions (historical) 🔥
+      summary: Transactions (historical)
       tags:
       - UniswapV3
       x-accepts: application/json
@@ -10441,7 +10441,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (historical) 🔥
+      summary: UniswapDayDatas (historical)
       tags:
       - UniswapV3
       x-accepts: application/json

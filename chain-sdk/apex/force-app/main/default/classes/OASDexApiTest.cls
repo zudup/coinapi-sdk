@@ -85,7 +85,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      *
      * Gets batchs.
      */
@@ -135,7 +135,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      *
      * Gets deposits.
      */
@@ -186,7 +186,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * Gets orders.
      */
@@ -238,7 +238,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      *
      * Gets prices.
      */
@@ -288,7 +288,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      *
      * Gets solutions.
      */
@@ -338,7 +338,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      *
      * Gets statss.
      */
@@ -388,7 +388,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      */
@@ -441,7 +441,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * Gets trades.
      */
@@ -493,7 +493,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      */
@@ -543,7 +543,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      *
      * Gets withdrawRequests.
      */
@@ -594,7 +594,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      *
      * Gets withdraws.
      */

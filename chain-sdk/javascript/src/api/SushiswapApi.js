@@ -206,7 +206,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -255,7 +255,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -306,7 +306,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      * Gets dayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -355,7 +355,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -404,7 +404,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      * Gets hourDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -453,7 +453,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -506,7 +506,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -559,7 +559,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -610,7 +610,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -665,7 +665,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -716,7 +716,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -771,7 +771,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -822,7 +822,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -871,7 +871,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -924,7 +924,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -973,7 +973,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

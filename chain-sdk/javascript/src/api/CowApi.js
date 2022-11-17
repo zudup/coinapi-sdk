@@ -47,7 +47,7 @@ export default class CowApi {
      */
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -96,7 +96,7 @@ export default class CowApi {
      */
 
     /**
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      * Gets settlements.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -145,7 +145,7 @@ export default class CowApi {
      */
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -200,7 +200,7 @@ export default class CowApi {
      */
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -253,7 +253,7 @@ export default class CowApi {
      */
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

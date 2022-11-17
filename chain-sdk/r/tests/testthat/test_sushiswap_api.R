@@ -52,7 +52,7 @@ test_that("SushiswapFactorysCurrent", {
 test_that("SushiswapGetBundlesHistorical", {
   # tests for SushiswapGetBundlesHistorical
   # base path: https://onchain.coinapi.io
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   # Gets bundles.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -68,7 +68,7 @@ test_that("SushiswapGetBundlesHistorical", {
 test_that("SushiswapGetBurnsHistorical", {
   # tests for SushiswapGetBurnsHistorical
   # base path: https://onchain.coinapi.io
-  # Burns (historical) 🔥
+  # Burns (historical)
   # Gets burns.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -85,7 +85,7 @@ test_that("SushiswapGetBurnsHistorical", {
 test_that("SushiswapGetDayDatasHistorical", {
   # tests for SushiswapGetDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # DayDatas (historical) 🔥
+  # DayDatas (historical)
   # Gets dayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -101,7 +101,7 @@ test_that("SushiswapGetDayDatasHistorical", {
 test_that("SushiswapGetFactorysHistorical", {
   # tests for SushiswapGetFactorysHistorical
   # base path: https://onchain.coinapi.io
-  # Factorys (historical) 🔥
+  # Factorys (historical)
   # Gets factorys.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -117,7 +117,7 @@ test_that("SushiswapGetFactorysHistorical", {
 test_that("SushiswapGetHourDatasHistorical", {
   # tests for SushiswapGetHourDatasHistorical
   # base path: https://onchain.coinapi.io
-  # HourDatas (historical) 🔥
+  # HourDatas (historical)
   # Gets hourDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -133,7 +133,7 @@ test_that("SushiswapGetHourDatasHistorical", {
 test_that("SushiswapGetLiquidityPositionSnapshotsHistorical", {
   # tests for SushiswapGetLiquidityPositionSnapshotsHistorical
   # base path: https://onchain.coinapi.io
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   # Gets liquidityPositionSnapshots.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -151,7 +151,7 @@ test_that("SushiswapGetLiquidityPositionSnapshotsHistorical", {
 test_that("SushiswapGetLiquidityPositionsHistorical", {
   # tests for SushiswapGetLiquidityPositionsHistorical
   # base path: https://onchain.coinapi.io
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   # Gets liquidityPositions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -169,7 +169,7 @@ test_that("SushiswapGetLiquidityPositionsHistorical", {
 test_that("SushiswapGetMintsHistorical", {
   # tests for SushiswapGetMintsHistorical
   # base path: https://onchain.coinapi.io
-  # Mints (historical) 🔥
+  # Mints (historical)
   # Gets mints.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -186,7 +186,7 @@ test_that("SushiswapGetMintsHistorical", {
 test_that("SushiswapGetPairDayDatasHistorical", {
   # tests for SushiswapGetPairDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   # Gets pairDayDatas.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -205,7 +205,7 @@ test_that("SushiswapGetPairDayDatasHistorical", {
 test_that("SushiswapGetPairHourDatasHistorical", {
   # tests for SushiswapGetPairHourDatasHistorical
   # base path: https://onchain.coinapi.io
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   # Gets pairHourDatas.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -222,7 +222,7 @@ test_that("SushiswapGetPairHourDatasHistorical", {
 test_that("SushiswapGetPairsHistorical", {
   # tests for SushiswapGetPairsHistorical
   # base path: https://onchain.coinapi.io
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   # Gets pairs.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -241,7 +241,7 @@ test_that("SushiswapGetPairsHistorical", {
 test_that("SushiswapGetSwapsHistorical", {
   # tests for SushiswapGetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   # Gets swaps.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -258,7 +258,7 @@ test_that("SushiswapGetSwapsHistorical", {
 test_that("SushiswapGetTokenDayDatasHistorical", {
   # tests for SushiswapGetTokenDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   # Gets tokenDayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -274,7 +274,7 @@ test_that("SushiswapGetTokenDayDatasHistorical", {
 test_that("SushiswapGetTokensHistorical", {
   # tests for SushiswapGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -292,7 +292,7 @@ test_that("SushiswapGetTokensHistorical", {
 test_that("SushiswapGetTransactionsHistorical", {
   # tests for SushiswapGetTransactionsHistorical
   # base path: https://onchain.coinapi.io
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   # Gets transactions.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -308,7 +308,7 @@ test_that("SushiswapGetTransactionsHistorical", {
 test_that("SushiswapGetUsersHistorical", {
   # tests for SushiswapGetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

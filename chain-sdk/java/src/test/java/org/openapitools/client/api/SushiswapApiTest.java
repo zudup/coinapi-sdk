@@ -100,7 +100,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      *
      * Gets bundles.
      *
@@ -118,7 +118,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      *
      * Gets burns.
      *
@@ -137,7 +137,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      *
      * Gets dayDatas.
      *
@@ -155,7 +155,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      *
      * Gets factorys.
      *
@@ -173,7 +173,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      *
      * Gets hourDatas.
      *
@@ -191,7 +191,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      *
      * Gets liquidityPositionSnapshots.
      *
@@ -211,7 +211,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      *
      * Gets liquidityPositions.
      *
@@ -231,7 +231,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      *
      * Gets mints.
      *
@@ -250,7 +250,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      *
      * Gets pairDayDatas.
      *
@@ -271,7 +271,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      *
      * Gets pairHourDatas.
      *
@@ -290,7 +290,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      *
      * Gets pairs.
      *
@@ -311,7 +311,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      *
      * Gets swaps.
      *
@@ -330,7 +330,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      *
      * Gets tokenDayDatas.
      *
@@ -348,7 +348,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * Gets tokens.
      *
@@ -368,7 +368,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      *
      * Gets transactions.
      *
@@ -386,7 +386,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * Gets users.
      *

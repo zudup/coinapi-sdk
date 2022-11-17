@@ -5327,7 +5327,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistorical
      *
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5350,7 +5350,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalWithHttpInfo
      *
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5455,7 +5455,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalAsync
      *
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5481,7 +5481,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalAsyncWithHttpInfo
      *
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5680,7 +5680,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistorical
      *
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5703,7 +5703,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalWithHttpInfo
      *
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5808,7 +5808,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalAsync
      *
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5834,7 +5834,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalAsyncWithHttpInfo
      *
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6033,7 +6033,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistorical
      *
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6056,7 +6056,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalWithHttpInfo
      *
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6161,7 +6161,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalAsync
      *
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6187,7 +6187,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6386,7 +6386,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistorical
      *
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6409,7 +6409,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo
      *
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6514,7 +6514,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalAsync
      *
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6540,7 +6540,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6739,7 +6739,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistorical
      *
-     * Coins (historical) 🔥
+     * Coins (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -6762,7 +6762,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalWithHttpInfo
      *
-     * Coins (historical) 🔥
+     * Coins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -6867,7 +6867,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalAsync
      *
-     * Coins (historical) 🔥
+     * Coins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -6893,7 +6893,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalAsyncWithHttpInfo
      *
-     * Coins (historical) 🔥
+     * Coins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -7092,7 +7092,7 @@ class CurveApi
     /**
      * Operation curveGetContractVersionsHistorical
      *
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7115,7 +7115,7 @@ class CurveApi
     /**
      * Operation curveGetContractVersionsHistoricalWithHttpInfo
      *
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7220,7 +7220,7 @@ class CurveApi
     /**
      * Operation curveGetContractVersionsHistoricalAsync
      *
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7246,7 +7246,7 @@ class CurveApi
     /**
      * Operation curveGetContractVersionsHistoricalAsyncWithHttpInfo
      *
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7445,7 +7445,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistorical
      *
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7467,7 +7467,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalWithHttpInfo
      *
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7571,7 +7571,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalAsync
      *
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7596,7 +7596,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalAsyncWithHttpInfo
      *
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7783,7 +7783,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistorical
      *
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7806,7 +7806,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalWithHttpInfo
      *
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7911,7 +7911,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalAsync
      *
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -7937,7 +7937,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalAsyncWithHttpInfo
      *
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8136,7 +8136,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistorical
      *
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8159,7 +8159,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalWithHttpInfo
      *
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8264,7 +8264,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalAsync
      *
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8290,7 +8290,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalAsyncWithHttpInfo
      *
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8489,7 +8489,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistorical
      *
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8512,7 +8512,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalWithHttpInfo
      *
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8617,7 +8617,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalAsync
      *
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8643,7 +8643,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8842,7 +8842,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeDepositsHistorical
      *
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8864,7 +8864,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeDepositsHistoricalWithHttpInfo
      *
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8968,7 +8968,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeDepositsHistoricalAsync
      *
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -8993,7 +8993,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeDepositsHistoricalAsyncWithHttpInfo
      *
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9180,7 +9180,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeLiquiditysHistorical
      *
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9203,7 +9203,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeLiquiditysHistoricalWithHttpInfo
      *
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9308,7 +9308,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeLiquiditysHistoricalAsync
      *
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9334,7 +9334,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeLiquiditysHistoricalAsyncWithHttpInfo
      *
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9533,7 +9533,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTotalWeightsHistorical
      *
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9555,7 +9555,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTotalWeightsHistoricalWithHttpInfo
      *
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9659,7 +9659,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTotalWeightsHistoricalAsync
      *
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9684,7 +9684,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTotalWeightsHistoricalAsyncWithHttpInfo
      *
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9871,7 +9871,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypeWeightsHistorical
      *
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9893,7 +9893,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypeWeightsHistoricalWithHttpInfo
      *
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9997,7 +9997,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypeWeightsHistoricalAsync
      *
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10022,7 +10022,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypeWeightsHistoricalAsyncWithHttpInfo
      *
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10209,7 +10209,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypesHistorical
      *
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10232,7 +10232,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypesHistoricalWithHttpInfo
      *
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10337,7 +10337,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypesHistoricalAsync
      *
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10363,7 +10363,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeTypesHistoricalAsyncWithHttpInfo
      *
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10562,7 +10562,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightVotesHistorical
      *
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10585,7 +10585,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightVotesHistoricalWithHttpInfo
      *
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10690,7 +10690,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightVotesHistoricalAsync
      *
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10716,7 +10716,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightVotesHistoricalAsyncWithHttpInfo
      *
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10915,7 +10915,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightsHistorical
      *
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -10937,7 +10937,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightsHistoricalWithHttpInfo
      *
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11041,7 +11041,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightsHistoricalAsync
      *
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11066,7 +11066,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWeightsHistoricalAsyncWithHttpInfo
      *
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11253,7 +11253,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWithdrawsHistorical
      *
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11275,7 +11275,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWithdrawsHistoricalWithHttpInfo
      *
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11379,7 +11379,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWithdrawsHistoricalAsync
      *
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11404,7 +11404,7 @@ class CurveApi
     /**
      * Operation curveGetGaugeWithdrawsHistoricalAsyncWithHttpInfo
      *
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11591,7 +11591,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistorical
      *
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11615,7 +11615,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalWithHttpInfo
      *
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11721,7 +11721,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalAsync
      *
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11748,7 +11748,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalAsyncWithHttpInfo
      *
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11959,7 +11959,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistorical
      *
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -11982,7 +11982,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalWithHttpInfo
      *
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12087,7 +12087,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalAsync
      *
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12113,7 +12113,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalAsyncWithHttpInfo
      *
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12312,7 +12312,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistorical
      *
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12338,7 +12338,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalWithHttpInfo
      *
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12446,7 +12446,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalAsync
      *
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12475,7 +12475,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalAsyncWithHttpInfo
      *
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12710,7 +12710,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistorical
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12733,7 +12733,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalWithHttpInfo
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12838,7 +12838,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalAsync
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -12864,7 +12864,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalAsyncWithHttpInfo
      *
-     * Pools (historical) 🔥
+     * Pools (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13063,7 +13063,7 @@ class CurveApi
     /**
      * Operation curveGetProposalVotesHistorical
      *
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13085,7 +13085,7 @@ class CurveApi
     /**
      * Operation curveGetProposalVotesHistoricalWithHttpInfo
      *
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13189,7 +13189,7 @@ class CurveApi
     /**
      * Operation curveGetProposalVotesHistoricalAsync
      *
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13214,7 +13214,7 @@ class CurveApi
     /**
      * Operation curveGetProposalVotesHistoricalAsyncWithHttpInfo
      *
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13401,7 +13401,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistorical
      *
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13423,7 +13423,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalWithHttpInfo
      *
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13527,7 +13527,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalAsync
      *
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13552,7 +13552,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalAsyncWithHttpInfo
      *
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13739,7 +13739,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistorical
      *
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13762,7 +13762,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalWithHttpInfo
      *
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13867,7 +13867,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalAsync
      *
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -13893,7 +13893,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalAsyncWithHttpInfo
      *
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14092,7 +14092,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistorical
      *
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14115,7 +14115,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo
      *
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14220,7 +14220,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalAsync
      *
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14246,7 +14246,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalAsyncWithHttpInfo
      *
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14445,7 +14445,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistorical
      *
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14467,7 +14467,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalWithHttpInfo
      *
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14571,7 +14571,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalAsync
      *
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14596,7 +14596,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalAsyncWithHttpInfo
      *
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14783,7 +14783,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistorical
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14808,7 +14808,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14915,7 +14915,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalAsync
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -14943,7 +14943,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalAsyncWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15166,7 +15166,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistorical
      *
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15189,7 +15189,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalWithHttpInfo
      *
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15294,7 +15294,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalAsync
      *
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15320,7 +15320,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalAsyncWithHttpInfo
      *
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15519,7 +15519,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistorical
      *
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -15542,7 +15542,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalWithHttpInfo
      *
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -15647,7 +15647,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalAsync
      *
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -15673,7 +15673,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalAsyncWithHttpInfo
      *
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -15872,7 +15872,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistorical
      *
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -15895,7 +15895,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalWithHttpInfo
      *
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16000,7 +16000,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalAsync
      *
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16026,7 +16026,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalAsyncWithHttpInfo
      *
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16225,7 +16225,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistorical
      *
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16248,7 +16248,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalWithHttpInfo
      *
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16353,7 +16353,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalAsync
      *
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -16379,7 +16379,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalAsyncWithHttpInfo
      *
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

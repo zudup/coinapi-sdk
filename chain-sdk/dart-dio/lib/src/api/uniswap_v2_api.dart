@@ -177,7 +177,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Bundles (historical) 🔥
+  /// Bundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -268,7 +268,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Burns (historical) 🔥
+  /// Burns (historical)
   /// Gets burns.
   ///
   /// Parameters:
@@ -362,7 +362,7 @@ class UniswapV2Api {
     );
   }
 
-  /// LiquidityPositionSnapshots (historical) 🔥
+  /// LiquidityPositionSnapshots (historical)
   /// Gets liquidityPositionSnapshots.
   ///
   /// Parameters:
@@ -459,7 +459,7 @@ class UniswapV2Api {
     );
   }
 
-  /// LiquidityPositions (historical) 🔥
+  /// LiquidityPositions (historical)
   /// Gets liquidityPositions.
   ///
   /// Parameters:
@@ -556,7 +556,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Mints (historical) 🔥
+  /// Mints (historical)
   /// Gets mints.
   ///
   /// Parameters:
@@ -650,7 +650,7 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDatas (historical) 🔥
+  /// PairDayDatas (historical)
   /// Gets pairDayDatas.
   ///
   /// Parameters:
@@ -747,7 +747,7 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDatas (historical) 🔥
+  /// PairHourDatas (historical)
   /// Gets pairHourDatas.
   ///
   /// Parameters:
@@ -841,7 +841,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Pairs (historical) 🔥
+  /// Pairs (historical)
   /// Gets pairs.
   ///
   /// Parameters:
@@ -938,7 +938,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Swaps (historical) 🔥
+  /// Swaps (historical)
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1032,7 +1032,7 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenDayDatas (historical) 🔥
+  /// TokenDayDatas (historical)
   /// Gets tokenDayDatas.
   ///
   /// Parameters:
@@ -1123,7 +1123,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1220,7 +1220,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Transactions (historical) 🔥
+  /// Transactions (historical)
   /// Gets transactions.
   ///
   /// Parameters:
@@ -1311,7 +1311,7 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDatas (historical) 🔥
+  /// UniswapDayDatas (historical)
   /// Gets uniswapDayDatas.
   ///
   /// Parameters:
@@ -1402,7 +1402,7 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactorys (historical) 🔥
+  /// UniswapFactorys (historical)
   /// Gets uniswapFactorys.
   ///
   /// Parameters:
@@ -1493,7 +1493,7 @@ class UniswapV2Api {
     );
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   /// Gets users.
   ///
   /// Parameters:

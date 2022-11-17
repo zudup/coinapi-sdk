@@ -131,7 +131,7 @@ instance Produces UniswapV3FactorysCurrent MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/bundles\/historical@
 -- 
--- Bundles (historical) 🔥
+-- Bundles (historical)
 -- 
 -- Gets bundles.
 -- 
@@ -179,7 +179,7 @@ instance Produces UniswapV3GetBundlesHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/burns\/historical@
 -- 
--- Burns (historical) 🔥
+-- Burns (historical)
 -- 
 -- Gets burns.
 -- 
@@ -242,7 +242,7 @@ instance Produces UniswapV3GetBurnsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/factorys\/historical@
 -- 
--- Factorys (historical) 🔥
+-- Factorys (historical)
 -- 
 -- Gets factorys.
 -- 
@@ -290,7 +290,7 @@ instance Produces UniswapV3GetFactorysHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/mints\/historical@
 -- 
--- Mints (historical) 🔥
+-- Mints (historical)
 -- 
 -- Gets mints.
 -- 
@@ -353,7 +353,7 @@ instance Produces UniswapV3GetMintsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/poolDayDatas\/historical@
 -- 
--- PoolDayDatas (historical) 🔥
+-- PoolDayDatas (historical)
 -- 
 -- Gets poolDayDatas.
 -- 
@@ -394,7 +394,7 @@ instance Produces UniswapV3GetPoolDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/poolHourDatas\/historical@
 -- 
--- PoolHourDatas (historical) 🔥
+-- PoolHourDatas (historical)
 -- 
 -- Gets poolHourDatas.
 -- 
@@ -435,7 +435,7 @@ instance Produces UniswapV3GetPoolHourDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/pools\/historical@
 -- 
--- Pools (historical) 🔥
+-- Pools (historical)
 -- 
 -- Gets pools.
 -- 
@@ -493,7 +493,7 @@ instance Produces UniswapV3GetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/positionSnapshots\/historical@
 -- 
--- PositionSnapshots (historical) 🔥
+-- PositionSnapshots (historical)
 -- 
 -- Gets positionSnapshots.
 -- 
@@ -534,7 +534,7 @@ instance Produces UniswapV3GetPositionSnapshotsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/positions\/historical@
 -- 
--- Positions (historical) 🔥
+-- Positions (historical)
 -- 
 -- Gets positions.
 -- 
@@ -597,7 +597,7 @@ instance Produces UniswapV3GetPositionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/swaps\/historical@
 -- 
--- Swaps (historical) 🔥
+-- Swaps (historical)
 -- 
 -- Gets swaps.
 -- 
@@ -660,7 +660,7 @@ instance Produces UniswapV3GetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/tickDayDatas\/historical@
 -- 
--- TickDayDatas (historical) 🔥
+-- TickDayDatas (historical)
 -- 
 -- Gets tickDayDatas.
 -- 
@@ -701,7 +701,7 @@ instance Produces UniswapV3GetTickDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/ticks\/historical@
 -- 
--- Ticks (historical) 🔥
+-- Ticks (historical)
 -- 
 -- Gets ticks.
 -- 
@@ -742,7 +742,7 @@ instance Produces UniswapV3GetTicksHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/tokenHourDatas\/historical@
 -- 
--- TokenHourDatas (historical) 🔥
+-- TokenHourDatas (historical)
 -- 
 -- Gets tokenHourDatas.
 -- 
@@ -790,7 +790,7 @@ instance Produces UniswapV3GetTokenHourDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/tokenV3DayDatas\/historical@
 -- 
--- TokenV3DayDatas (historical) 🔥
+-- TokenV3DayDatas (historical)
 -- 
 -- Gets tokenV3DayDatas.
 -- 
@@ -838,7 +838,7 @@ instance Produces UniswapV3GetTokenV3DayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -896,7 +896,7 @@ instance Produces UniswapV3GetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/transactions\/historical@
 -- 
--- Transactions (historical) 🔥
+-- Transactions (historical)
 -- 
 -- Gets transactions.
 -- 
@@ -944,7 +944,7 @@ instance Produces UniswapV3GetTransactionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv3\/uniswapDayDatas\/historical@
 -- 
--- UniswapDayDatas (historical) 🔥
+-- UniswapDayDatas (historical)
 -- 
 -- Gets uniswapDayDatas.
 -- 

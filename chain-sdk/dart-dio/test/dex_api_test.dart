@@ -25,7 +25,7 @@ void main() {
       // TODO
     });
 
-    // Batchs (historical) 🔥
+    // Batchs (historical)
     //
     // Gets batchs.
     //
@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // Deposits (historical) 🔥
+    // Deposits (historical)
     //
     // Gets deposits.
     //
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // Orders (historical) 🔥
+    // Orders (historical)
     //
     // Gets orders.
     //
@@ -52,7 +52,7 @@ void main() {
       // TODO
     });
 
-    // Prices (historical) 🔥
+    // Prices (historical)
     //
     // Gets prices.
     //
@@ -61,7 +61,7 @@ void main() {
       // TODO
     });
 
-    // Solutions (historical) 🔥
+    // Solutions (historical)
     //
     // Gets solutions.
     //
@@ -70,7 +70,7 @@ void main() {
       // TODO
     });
 
-    // Statss (historical) 🔥
+    // Statss (historical)
     //
     // Gets statss.
     //
@@ -79,7 +79,7 @@ void main() {
       // TODO
     });
 
-    // Tokens (historical) 🔥
+    // Tokens (historical)
     //
     // Gets tokens.
     //
@@ -88,7 +88,7 @@ void main() {
       // TODO
     });
 
-    // Trades (historical) 🔥
+    // Trades (historical)
     //
     // Gets trades.
     //
@@ -97,7 +97,7 @@ void main() {
       // TODO
     });
 
-    // Users (historical) 🔥
+    // Users (historical)
     //
     // Gets users.
     //
@@ -106,7 +106,7 @@ void main() {
       // TODO
     });
 
-    // WithdrawRequests (historical) 🔥
+    // WithdrawRequests (historical)
     //
     // Gets withdrawRequests.
     //
@@ -115,7 +115,7 @@ void main() {
       // TODO
     });
 
-    // Withdraws (historical) 🔥
+    // Withdraws (historical)
     //
     // Gets withdraws.
     //

@@ -218,7 +218,7 @@ test_that("CurveGaugesCurrent", {
 test_that("CurveGetAccountsHistorical", {
   # tests for CurveGetAccountsHistorical
   # base path: https://onchain.coinapi.io
-  # Accounts (historical) 🔥
+  # Accounts (historical)
   # Gets accounts.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -235,7 +235,7 @@ test_that("CurveGetAccountsHistorical", {
 test_that("CurveGetAddLiquidityEventsHistorical", {
   # tests for CurveGetAddLiquidityEventsHistorical
   # base path: https://onchain.coinapi.io
-  # AddLiquidityEvents (historical) 🔥
+  # AddLiquidityEvents (historical)
   # Gets addLiquidityEvents.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -252,7 +252,7 @@ test_that("CurveGetAddLiquidityEventsHistorical", {
 test_that("CurveGetAdminFeeChangeLogsHistorical", {
   # tests for CurveGetAdminFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # AdminFeeChangeLogs (historical) 🔥
+  # AdminFeeChangeLogs (historical)
   # Gets adminFeeChangeLogs.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -269,7 +269,7 @@ test_that("CurveGetAdminFeeChangeLogsHistorical", {
 test_that("CurveGetAmplificationCoeffChangeLogsHistorical", {
   # tests for CurveGetAmplificationCoeffChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # AmplificationCoeffChangeLogs (historical) 🔥
+  # AmplificationCoeffChangeLogs (historical)
   # Gets amplificationCoeffChangeLogs.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -286,7 +286,7 @@ test_that("CurveGetAmplificationCoeffChangeLogsHistorical", {
 test_that("CurveGetCoinsHistorical", {
   # tests for CurveGetCoinsHistorical
   # base path: https://onchain.coinapi.io
-  # Coins (historical) 🔥
+  # Coins (historical)
   # Gets coins.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -303,7 +303,7 @@ test_that("CurveGetCoinsHistorical", {
 test_that("CurveGetContractVersionsHistorical", {
   # tests for CurveGetContractVersionsHistorical
   # base path: https://onchain.coinapi.io
-  # ContractVersions (historical) 🔥
+  # ContractVersions (historical)
   # Gets contractVersions.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -320,7 +320,7 @@ test_that("CurveGetContractVersionsHistorical", {
 test_that("CurveGetContractsHistorical", {
   # tests for CurveGetContractsHistorical
   # base path: https://onchain.coinapi.io
-  # Contracts (historical) 🔥
+  # Contracts (historical)
   # Gets contracts.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -336,7 +336,7 @@ test_that("CurveGetContractsHistorical", {
 test_that("CurveGetDailyVolumesHistorical", {
   # tests for CurveGetDailyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # DailyVolumes (historical) 🔥
+  # DailyVolumes (historical)
   # Gets dailyVolumes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -353,7 +353,7 @@ test_that("CurveGetDailyVolumesHistorical", {
 test_that("CurveGetExchangesHistorical", {
   # tests for CurveGetExchangesHistorical
   # base path: https://onchain.coinapi.io
-  # Exchanges (historical) 🔥
+  # Exchanges (historical)
   # Gets exchanges.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -370,7 +370,7 @@ test_that("CurveGetExchangesHistorical", {
 test_that("CurveGetFeeChangeLogsHistorical", {
   # tests for CurveGetFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # FeeChangeLogs (historical) 🔥
+  # FeeChangeLogs (historical)
   # Gets feeChangeLogs.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -387,7 +387,7 @@ test_that("CurveGetFeeChangeLogsHistorical", {
 test_that("CurveGetGaugeDepositsHistorical", {
   # tests for CurveGetGaugeDepositsHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeDeposits (historical) 🔥
+  # GaugeDeposits (historical)
   # Gets gaugeDeposits.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -403,7 +403,7 @@ test_that("CurveGetGaugeDepositsHistorical", {
 test_that("CurveGetGaugeLiquiditysHistorical", {
   # tests for CurveGetGaugeLiquiditysHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeLiquiditys (historical) 🔥
+  # GaugeLiquiditys (historical)
   # Gets gaugeLiquiditys.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -420,7 +420,7 @@ test_that("CurveGetGaugeLiquiditysHistorical", {
 test_that("CurveGetGaugeTotalWeightsHistorical", {
   # tests for CurveGetGaugeTotalWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeTotalWeights (historical) 🔥
+  # GaugeTotalWeights (historical)
   # Gets gaugeTotalWeights.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -436,7 +436,7 @@ test_that("CurveGetGaugeTotalWeightsHistorical", {
 test_that("CurveGetGaugeTypeWeightsHistorical", {
   # tests for CurveGetGaugeTypeWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeTypeWeights (historical) 🔥
+  # GaugeTypeWeights (historical)
   # Gets gaugeTypeWeights.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -452,7 +452,7 @@ test_that("CurveGetGaugeTypeWeightsHistorical", {
 test_that("CurveGetGaugeTypesHistorical", {
   # tests for CurveGetGaugeTypesHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeTypes (historical) 🔥
+  # GaugeTypes (historical)
   # Gets gaugeTypes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -469,7 +469,7 @@ test_that("CurveGetGaugeTypesHistorical", {
 test_that("CurveGetGaugeWeightVotesHistorical", {
   # tests for CurveGetGaugeWeightVotesHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeWeightVotes (historical) 🔥
+  # GaugeWeightVotes (historical)
   # Gets gaugeWeightVotes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -486,7 +486,7 @@ test_that("CurveGetGaugeWeightVotesHistorical", {
 test_that("CurveGetGaugeWeightsHistorical", {
   # tests for CurveGetGaugeWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeWeights (historical) 🔥
+  # GaugeWeights (historical)
   # Gets gaugeWeights.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -502,7 +502,7 @@ test_that("CurveGetGaugeWeightsHistorical", {
 test_that("CurveGetGaugeWithdrawsHistorical", {
   # tests for CurveGetGaugeWithdrawsHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeWithdraws (historical) 🔥
+  # GaugeWithdraws (historical)
   # Gets gaugeWithdraws.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -518,7 +518,7 @@ test_that("CurveGetGaugeWithdrawsHistorical", {
 test_that("CurveGetGaugesHistorical", {
   # tests for CurveGetGaugesHistorical
   # base path: https://onchain.coinapi.io
-  # Gauges (historical) 🔥
+  # Gauges (historical)
   # Gets gauges.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -536,7 +536,7 @@ test_that("CurveGetGaugesHistorical", {
 test_that("CurveGetHourlyVolumesHistorical", {
   # tests for CurveGetHourlyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # HourlyVolumes (historical) 🔥
+  # HourlyVolumes (historical)
   # Gets hourlyVolumes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -553,7 +553,7 @@ test_that("CurveGetHourlyVolumesHistorical", {
 test_that("CurveGetLpTokensHistorical", {
   # tests for CurveGetLpTokensHistorical
   # base path: https://onchain.coinapi.io
-  # LpTokens (historical) 🔥
+  # LpTokens (historical)
   # Gets lpTokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -573,7 +573,7 @@ test_that("CurveGetLpTokensHistorical", {
 test_that("CurveGetPoolsHistorical", {
   # tests for CurveGetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # Pools (historical) 🔥
+  # Pools (historical)
   # Gets pools.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -590,7 +590,7 @@ test_that("CurveGetPoolsHistorical", {
 test_that("CurveGetProposalVotesHistorical", {
   # tests for CurveGetProposalVotesHistorical
   # base path: https://onchain.coinapi.io
-  # ProposalVotes (historical) 🔥
+  # ProposalVotes (historical)
   # Gets proposalVotes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -606,7 +606,7 @@ test_that("CurveGetProposalVotesHistorical", {
 test_that("CurveGetProposalsHistorical", {
   # tests for CurveGetProposalsHistorical
   # base path: https://onchain.coinapi.io
-  # Proposals (historical) 🔥
+  # Proposals (historical)
   # Gets proposals.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -622,7 +622,7 @@ test_that("CurveGetProposalsHistorical", {
 test_that("CurveGetRemoveLiquidityEventsHistorical", {
   # tests for CurveGetRemoveLiquidityEventsHistorical
   # base path: https://onchain.coinapi.io
-  # RemoveLiquidityEvents (historical) 🔥
+  # RemoveLiquidityEvents (historical)
   # Gets removeLiquidityEvents.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -639,7 +639,7 @@ test_that("CurveGetRemoveLiquidityEventsHistorical", {
 test_that("CurveGetRemoveLiquidityOneEventsHistorical", {
   # tests for CurveGetRemoveLiquidityOneEventsHistorical
   # base path: https://onchain.coinapi.io
-  # RemoveLiquidityOneEvents (historical) 🔥
+  # RemoveLiquidityOneEvents (historical)
   # Gets removeLiquidityOneEvents.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -656,7 +656,7 @@ test_that("CurveGetRemoveLiquidityOneEventsHistorical", {
 test_that("CurveGetSystemStatesHistorical", {
   # tests for CurveGetSystemStatesHistorical
   # base path: https://onchain.coinapi.io
-  # SystemStates (historical) 🔥
+  # SystemStates (historical)
   # Gets systemStates.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -672,7 +672,7 @@ test_that("CurveGetSystemStatesHistorical", {
 test_that("CurveGetTokensHistorical", {
   # tests for CurveGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -691,7 +691,7 @@ test_that("CurveGetTokensHistorical", {
 test_that("CurveGetTransferOwnershipEventsHistorical", {
   # tests for CurveGetTransferOwnershipEventsHistorical
   # base path: https://onchain.coinapi.io
-  # TransferOwnershipEvents (historical) 🔥
+  # TransferOwnershipEvents (historical)
   # Gets transferOwnershipEvents.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -708,7 +708,7 @@ test_that("CurveGetTransferOwnershipEventsHistorical", {
 test_that("CurveGetUnderlyingCoinsHistorical", {
   # tests for CurveGetUnderlyingCoinsHistorical
   # base path: https://onchain.coinapi.io
-  # UnderlyingCoins (historical) 🔥
+  # UnderlyingCoins (historical)
   # Gets underlyingCoins.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -725,7 +725,7 @@ test_that("CurveGetUnderlyingCoinsHistorical", {
 test_that("CurveGetVotingAppsHistorical", {
   # tests for CurveGetVotingAppsHistorical
   # base path: https://onchain.coinapi.io
-  # VotingApps (historical) 🔥
+  # VotingApps (historical)
   # Gets votingApps.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -742,7 +742,7 @@ test_that("CurveGetVotingAppsHistorical", {
 test_that("CurveGetWeeklyVolumesHistorical", {
   # tests for CurveGetWeeklyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # WeeklyVolumes (historical) 🔥
+  # WeeklyVolumes (historical)
   # Gets weeklyVolumes.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

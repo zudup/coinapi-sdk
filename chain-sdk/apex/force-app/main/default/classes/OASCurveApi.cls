@@ -430,7 +430,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -466,7 +466,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -502,7 +502,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -538,7 +538,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -574,7 +574,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Coins (historical) 🔥
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -610,7 +610,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      * Gets contractVersions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -646,7 +646,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -680,7 +680,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -716,7 +716,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      * Gets exchanges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -752,7 +752,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -788,7 +788,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -822,7 +822,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      * Gets gaugeLiquiditys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -858,7 +858,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -892,7 +892,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -926,7 +926,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -962,7 +962,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -998,7 +998,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1032,7 +1032,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1066,7 +1066,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1104,7 +1104,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1140,7 +1140,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      * Gets lpTokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1182,7 +1182,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1218,7 +1218,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1252,7 +1252,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1286,7 +1286,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1322,7 +1322,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1358,7 +1358,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      * Gets systemStates.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1392,7 +1392,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1432,7 +1432,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1468,7 +1468,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1504,7 +1504,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      * Gets votingApps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1540,7 +1540,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

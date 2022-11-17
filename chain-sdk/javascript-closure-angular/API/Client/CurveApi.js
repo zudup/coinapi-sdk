@@ -669,7 +669,7 @@ API.Client.CurveApi.prototype.curveGaugesCurrent = function(opt_extraHttpRequest
 }
 
 /**
- * Accounts (historical) 🔥
+ * Accounts (historical)
  * Gets accounts.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -730,7 +730,7 @@ API.Client.CurveApi.prototype.curveGetAccountsHistorical = function(opt_startBlo
 }
 
 /**
- * AddLiquidityEvents (historical) 🔥
+ * AddLiquidityEvents (historical)
  * Gets addLiquidityEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -791,7 +791,7 @@ API.Client.CurveApi.prototype.curveGetAddLiquidityEventsHistorical = function(op
 }
 
 /**
- * AdminFeeChangeLogs (historical) 🔥
+ * AdminFeeChangeLogs (historical)
  * Gets adminFeeChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -852,7 +852,7 @@ API.Client.CurveApi.prototype.curveGetAdminFeeChangeLogsHistorical = function(op
 }
 
 /**
- * AmplificationCoeffChangeLogs (historical) 🔥
+ * AmplificationCoeffChangeLogs (historical)
  * Gets amplificationCoeffChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -913,7 +913,7 @@ API.Client.CurveApi.prototype.curveGetAmplificationCoeffChangeLogsHistorical = f
 }
 
 /**
- * Coins (historical) 🔥
+ * Coins (historical)
  * Gets coins.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -974,7 +974,7 @@ API.Client.CurveApi.prototype.curveGetCoinsHistorical = function(opt_startBlock,
 }
 
 /**
- * ContractVersions (historical) 🔥
+ * ContractVersions (historical)
  * Gets contractVersions.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1035,7 +1035,7 @@ API.Client.CurveApi.prototype.curveGetContractVersionsHistorical = function(opt_
 }
 
 /**
- * Contracts (historical) 🔥
+ * Contracts (historical)
  * Gets contracts.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1091,7 +1091,7 @@ API.Client.CurveApi.prototype.curveGetContractsHistorical = function(opt_startBl
 }
 
 /**
- * DailyVolumes (historical) 🔥
+ * DailyVolumes (historical)
  * Gets dailyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1152,7 +1152,7 @@ API.Client.CurveApi.prototype.curveGetDailyVolumesHistorical = function(opt_star
 }
 
 /**
- * Exchanges (historical) 🔥
+ * Exchanges (historical)
  * Gets exchanges.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1213,7 +1213,7 @@ API.Client.CurveApi.prototype.curveGetExchangesHistorical = function(opt_startBl
 }
 
 /**
- * FeeChangeLogs (historical) 🔥
+ * FeeChangeLogs (historical)
  * Gets feeChangeLogs.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1274,7 +1274,7 @@ API.Client.CurveApi.prototype.curveGetFeeChangeLogsHistorical = function(opt_sta
 }
 
 /**
- * GaugeDeposits (historical) 🔥
+ * GaugeDeposits (historical)
  * Gets gaugeDeposits.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1330,7 +1330,7 @@ API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_sta
 }
 
 /**
- * GaugeLiquiditys (historical) 🔥
+ * GaugeLiquiditys (historical)
  * Gets gaugeLiquiditys.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1391,7 +1391,7 @@ API.Client.CurveApi.prototype.curveGetGaugeLiquiditysHistorical = function(opt_s
 }
 
 /**
- * GaugeTotalWeights (historical) 🔥
+ * GaugeTotalWeights (historical)
  * Gets gaugeTotalWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1447,7 +1447,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTotalWeightsHistorical = function(opt
 }
 
 /**
- * GaugeTypeWeights (historical) 🔥
+ * GaugeTypeWeights (historical)
  * Gets gaugeTypeWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1503,7 +1503,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypeWeightsHistorical = function(opt_
 }
 
 /**
- * GaugeTypes (historical) 🔥
+ * GaugeTypes (historical)
  * Gets gaugeTypes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1564,7 +1564,7 @@ API.Client.CurveApi.prototype.curveGetGaugeTypesHistorical = function(opt_startB
 }
 
 /**
- * GaugeWeightVotes (historical) 🔥
+ * GaugeWeightVotes (historical)
  * Gets gaugeWeightVotes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1625,7 +1625,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightVotesHistorical = function(opt_
 }
 
 /**
- * GaugeWeights (historical) 🔥
+ * GaugeWeights (historical)
  * Gets gaugeWeights.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1681,7 +1681,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWeightsHistorical = function(opt_star
 }
 
 /**
- * GaugeWithdraws (historical) 🔥
+ * GaugeWithdraws (historical)
  * Gets gaugeWithdraws.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1737,7 +1737,7 @@ API.Client.CurveApi.prototype.curveGetGaugeWithdrawsHistorical = function(opt_st
 }
 
 /**
- * Gauges (historical) 🔥
+ * Gauges (historical)
  * Gets gauges.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1803,7 +1803,7 @@ API.Client.CurveApi.prototype.curveGetGaugesHistorical = function(opt_startBlock
 }
 
 /**
- * HourlyVolumes (historical) 🔥
+ * HourlyVolumes (historical)
  * Gets hourlyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1864,7 +1864,7 @@ API.Client.CurveApi.prototype.curveGetHourlyVolumesHistorical = function(opt_sta
 }
 
 /**
- * LpTokens (historical) 🔥
+ * LpTokens (historical)
  * Gets lpTokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1940,7 +1940,7 @@ API.Client.CurveApi.prototype.curveGetLpTokensHistorical = function(opt_startBlo
 }
 
 /**
- * Pools (historical) 🔥
+ * Pools (historical)
  * Gets pools.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2001,7 +2001,7 @@ API.Client.CurveApi.prototype.curveGetPoolsHistorical = function(opt_startBlock,
 }
 
 /**
- * ProposalVotes (historical) 🔥
+ * ProposalVotes (historical)
  * Gets proposalVotes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2057,7 +2057,7 @@ API.Client.CurveApi.prototype.curveGetProposalVotesHistorical = function(opt_sta
 }
 
 /**
- * Proposals (historical) 🔥
+ * Proposals (historical)
  * Gets proposals.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2113,7 +2113,7 @@ API.Client.CurveApi.prototype.curveGetProposalsHistorical = function(opt_startBl
 }
 
 /**
- * RemoveLiquidityEvents (historical) 🔥
+ * RemoveLiquidityEvents (historical)
  * Gets removeLiquidityEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2174,7 +2174,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityEventsHistorical = function
 }
 
 /**
- * RemoveLiquidityOneEvents (historical) 🔥
+ * RemoveLiquidityOneEvents (historical)
  * Gets removeLiquidityOneEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2235,7 +2235,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityOneEventsHistorical = funct
 }
 
 /**
- * SystemStates (historical) 🔥
+ * SystemStates (historical)
  * Gets systemStates.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2291,7 +2291,7 @@ API.Client.CurveApi.prototype.curveGetSystemStatesHistorical = function(opt_star
 }
 
 /**
- * Tokens (historical) 🔥
+ * Tokens (historical)
  * Gets tokens.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2362,7 +2362,7 @@ API.Client.CurveApi.prototype.curveGetTokensHistorical = function(opt_startBlock
 }
 
 /**
- * TransferOwnershipEvents (historical) 🔥
+ * TransferOwnershipEvents (historical)
  * Gets transferOwnershipEvents.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2423,7 +2423,7 @@ API.Client.CurveApi.prototype.curveGetTransferOwnershipEventsHistorical = functi
 }
 
 /**
- * UnderlyingCoins (historical) 🔥
+ * UnderlyingCoins (historical)
  * Gets underlyingCoins.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -2484,7 +2484,7 @@ API.Client.CurveApi.prototype.curveGetUnderlyingCoinsHistorical = function(opt_s
 }
 
 /**
- * VotingApps (historical) 🔥
+ * VotingApps (historical)
  * Gets votingApps.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2545,7 +2545,7 @@ API.Client.CurveApi.prototype.curveGetVotingAppsHistorical = function(opt_startB
 }
 
 /**
- * WeeklyVolumes (historical) 🔥
+ * WeeklyVolumes (historical)
  * Gets weeklyVolumes.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

@@ -110,7 +110,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -144,7 +144,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -180,7 +180,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -214,7 +214,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -248,7 +248,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -282,7 +282,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -320,7 +320,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -358,7 +358,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -394,7 +394,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -434,7 +434,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -470,7 +470,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -510,7 +510,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -546,7 +546,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -580,7 +580,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -618,7 +618,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -652,7 +652,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

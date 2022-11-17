@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveVotingAppsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveVotingAppsHistorical unit test stubs
-        VotingApps (historical) 🔥  # noqa: E501
+        VotingApps (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

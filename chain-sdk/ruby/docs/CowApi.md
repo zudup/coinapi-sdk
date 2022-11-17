@@ -4,11 +4,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical) 🔥 |
-| [**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) 🔥 |
-| [**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥 |
-| [**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥 |
-| [**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical) 🔥 |
+| [**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical) |
+| [**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) |
+| [**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) |
+| [**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) |
+| [**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical) |
 | [**cow_orders__current**](CowApi.md#cow_orders__current) | **GET** /dapps/cow/orders/current | Orders (current) |
 | [**cow_settlements__current**](CowApi.md#cow_settlements__current) | **GET** /dapps/cow/settlements/current | Settlements (current) |
 | [**cow_tokens__current**](CowApi.md#cow_tokens__current) | **GET** /dapps/cow/tokens/current | Tokens (current) |
@@ -20,7 +20,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 > <Array<CowOrderDTO>> cow_get_orders__historical(opts)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -40,7 +40,7 @@ opts = {
 }
 
 begin
-  # Orders (historical) 🔥
+  # Orders (historical)
   result = api_instance.cow_get_orders__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -56,7 +56,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Orders (historical) 🔥
+  # Orders (historical)
   data, status_code, headers = api_instance.cow_get_orders__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -94,7 +94,7 @@ No authorization required
 
 > <Array<CowSettlementDTO>> cow_get_settlements__historical(opts)
 
-Settlements (historical) 🔥
+Settlements (historical)
 
 Gets settlements.
 
@@ -114,7 +114,7 @@ opts = {
 }
 
 begin
-  # Settlements (historical) 🔥
+  # Settlements (historical)
   result = api_instance.cow_get_settlements__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -130,7 +130,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Settlements (historical) 🔥
+  # Settlements (historical)
   data, status_code, headers = api_instance.cow_get_settlements__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -168,7 +168,7 @@ No authorization required
 
 > <Array<CowTokenDTO>> cow_get_tokens__historical(opts)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -191,7 +191,7 @@ opts = {
 }
 
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   result = api_instance.cow_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -207,7 +207,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   data, status_code, headers = api_instance.cow_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -248,7 +248,7 @@ No authorization required
 
 > <Array<CowTradeDTO>> cow_get_trades__historical(opts)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -270,7 +270,7 @@ opts = {
 }
 
 begin
-  # Trades (historical) 🔥
+  # Trades (historical)
   result = api_instance.cow_get_trades__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -286,7 +286,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Trades (historical) 🔥
+  # Trades (historical)
   data, status_code, headers = api_instance.cow_get_trades__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -326,7 +326,7 @@ No authorization required
 
 > <Array<CowUserDTO>> cow_get_users__historical(opts)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -347,7 +347,7 @@ opts = {
 }
 
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   result = api_instance.cow_get_users__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -363,7 +363,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   data, status_code, headers = api_instance.cow_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

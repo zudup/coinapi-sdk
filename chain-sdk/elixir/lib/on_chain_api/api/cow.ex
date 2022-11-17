@@ -10,7 +10,7 @@ defmodule OnChainAPI.Api.Cow do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  Orders (historical) 🔥
+  Orders (historical)
   Gets orders.
 
   ### Parameters
@@ -53,7 +53,7 @@ defmodule OnChainAPI.Api.Cow do
   end
 
   @doc """
-  Settlements (historical) 🔥
+  Settlements (historical)
   Gets settlements.
 
   ### Parameters
@@ -96,7 +96,7 @@ defmodule OnChainAPI.Api.Cow do
   end
 
   @doc """
-  Tokens (historical) 🔥
+  Tokens (historical)
   Gets tokens.
 
   ### Parameters
@@ -145,7 +145,7 @@ defmodule OnChainAPI.Api.Cow do
   end
 
   @doc """
-  Trades (historical) 🔥
+  Trades (historical)
   Gets trades.
 
   ### Parameters
@@ -192,7 +192,7 @@ defmodule OnChainAPI.Api.Cow do
   end
 
   @doc """
-  Users (historical) 🔥
+  Users (historical)
   Gets users.
 
   ### Parameters

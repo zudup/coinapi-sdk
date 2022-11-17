@@ -159,7 +159,7 @@ function Invoke-UniswapV2BurnsCurrent {
 <#
 .SYNOPSIS
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 .DESCRIPTION
 
@@ -284,7 +284,7 @@ function Invoke-UniswapV2GetBundlesHistorical {
 <#
 .SYNOPSIS
 
-Burns (historical) 🔥
+Burns (historical)
 
 .DESCRIPTION
 
@@ -419,7 +419,7 @@ function Invoke-UniswapV2GetBurnsHistorical {
 <#
 .SYNOPSIS
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 .DESCRIPTION
 
@@ -564,7 +564,7 @@ function Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical {
 <#
 .SYNOPSIS
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 .DESCRIPTION
 
@@ -709,7 +709,7 @@ function Invoke-UniswapV2GetLiquidityPositionsHistorical {
 <#
 .SYNOPSIS
 
-Mints (historical) 🔥
+Mints (historical)
 
 .DESCRIPTION
 
@@ -844,7 +844,7 @@ function Invoke-UniswapV2GetMintsHistorical {
 <#
 .SYNOPSIS
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 .DESCRIPTION
 
@@ -989,7 +989,7 @@ function Invoke-UniswapV2GetPairDayDatasHistorical {
 <#
 .SYNOPSIS
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 .DESCRIPTION
 
@@ -1124,7 +1124,7 @@ function Invoke-UniswapV2GetPairHourDatasHistorical {
 <#
 .SYNOPSIS
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 .DESCRIPTION
 
@@ -1269,7 +1269,7 @@ function Invoke-UniswapV2GetPairsHistorical {
 <#
 .SYNOPSIS
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 .DESCRIPTION
 
@@ -1404,7 +1404,7 @@ function Invoke-UniswapV2GetSwapsHistorical {
 <#
 .SYNOPSIS
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 .DESCRIPTION
 
@@ -1529,7 +1529,7 @@ function Invoke-UniswapV2GetTokenDayDatasHistorical {
 <#
 .SYNOPSIS
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 .DESCRIPTION
 
@@ -1674,7 +1674,7 @@ function Invoke-UniswapV2GetTokensHistorical {
 <#
 .SYNOPSIS
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 .DESCRIPTION
 
@@ -1799,7 +1799,7 @@ function Invoke-UniswapV2GetTransactionsHistorical {
 <#
 .SYNOPSIS
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 .DESCRIPTION
 
@@ -1924,7 +1924,7 @@ function Invoke-UniswapV2GetUniswapDayDatasHistorical {
 <#
 .SYNOPSIS
 
-UniswapFactorys (historical) 🔥
+UniswapFactorys (historical)
 
 .DESCRIPTION
 
@@ -2049,7 +2049,7 @@ function Invoke-UniswapV2GetUniswapFactorysHistorical {
 <#
 .SYNOPSIS
 
-Users (historical) 🔥
+Users (historical)
 
 .DESCRIPTION
 

@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CowGetOrdersHistorical } \emph{ Orders (historical) 🔥 }
+#' \strong{ CowGetOrdersHistorical } \emph{ Orders (historical) }
 #' Gets orders.
 #'
 #' \itemize{
@@ -35,7 +35,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetSettlementsHistorical } \emph{ Settlements (historical) 🔥 }
+#' \strong{ CowGetSettlementsHistorical } \emph{ Settlements (historical) }
 #' Gets settlements.
 #'
 #' \itemize{
@@ -56,7 +56,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
+#' \strong{ CowGetTokensHistorical } \emph{ Tokens (historical) }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -80,7 +80,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetTradesHistorical } \emph{ Trades (historical) 🔥 }
+#' \strong{ CowGetTradesHistorical } \emph{ Trades (historical) }
 #' Gets trades.
 #'
 #' \itemize{
@@ -103,7 +103,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetUsersHistorical } \emph{ Users (historical) 🔥 }
+#' \strong{ CowGetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -219,7 +219,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | User's address. (Optional)
 #'
-#' #Orders (historical) 🔥
+#' #Orders (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -237,7 +237,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Transaction hash. (Optional)
 #'
-#' #Settlements (historical) 🔥
+#' #Settlements (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -258,7 +258,7 @@
 #' var_name <- "name_example" # character | Token name fetched by ERC20 contract call. (Optional)
 #' var_symbol <- "symbol_example" # character | Token symbol fetched by contract call. (Optional)
 #'
-#' #Tokens (historical) 🔥
+#' #Tokens (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -278,7 +278,7 @@
 #' var_sell_token <- "sell_token_example" # character |  (Optional)
 #' var_buy_token <- "buy_token_example" # character |  (Optional)
 #'
-#' #Trades (historical) 🔥
+#' #Trades (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -297,7 +297,7 @@
 #' var_id <- "id_example" # character | User's address. (Optional)
 #' var_address <- "address_example" # character | User's address. (Optional)
 #'
-#' #Users (historical) 🔥
+#' #Users (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -393,10 +393,10 @@ CowApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @description
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -419,10 +419,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @description
-    #' Orders (historical) 🔥
+    #' Orders (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -504,10 +504,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Settlements (historical) 🔥
+    #' Settlements (historical)
     #'
     #' @description
-    #' Settlements (historical) 🔥
+    #' Settlements (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -530,10 +530,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Settlements (historical) 🔥
+    #' Settlements (historical)
     #'
     #' @description
-    #' Settlements (historical) 🔥
+    #' Settlements (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -615,10 +615,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -644,10 +644,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -741,10 +741,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @description
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -769,10 +769,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @description
-    #' Trades (historical) 🔥
+    #' Trades (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -862,10 +862,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -889,10 +889,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

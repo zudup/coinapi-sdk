@@ -7,21 +7,21 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**uniswap_v2_bundles__current**](#uniswap_v2_bundles__current) | **get** /dapps/uniswapv2/bundles/current | Bundles (current)
 [**uniswap_v2_burns__current**](#uniswap_v2_burns__current) | **get** /dapps/uniswapv2/burns/current | Burns (current)
-[**uniswap_v2_get_bundles__historical**](#uniswap_v2_get_bundles__historical) | **get** /dapps/uniswapv2/bundles/historical | Bundles (historical) 🔥
-[**uniswap_v2_get_burns__historical**](#uniswap_v2_get_burns__historical) | **get** /dapps/uniswapv2/burns/historical | Burns (historical) 🔥
-[**uniswap_v2_get_liquidity_position_snapshots__historical**](#uniswap_v2_get_liquidity_position_snapshots__historical) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**uniswap_v2_get_liquidity_positions__historical**](#uniswap_v2_get_liquidity_positions__historical) | **get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**uniswap_v2_get_mints__historical**](#uniswap_v2_get_mints__historical) | **get** /dapps/uniswapv2/mints/historical | Mints (historical) 🔥
-[**uniswap_v2_get_pair_day_datas__historical**](#uniswap_v2_get_pair_day_datas__historical) | **get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**uniswap_v2_get_pair_hour_datas__historical**](#uniswap_v2_get_pair_hour_datas__historical) | **get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**uniswap_v2_get_pairs__historical**](#uniswap_v2_get_pairs__historical) | **get** /dapps/uniswapv2/pairs/historical | Pairs (historical) 🔥
-[**uniswap_v2_get_swaps__historical**](#uniswap_v2_get_swaps__historical) | **get** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
-[**uniswap_v2_get_token_day_datas__historical**](#uniswap_v2_get_token_day_datas__historical) | **get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**uniswap_v2_get_tokens__historical**](#uniswap_v2_get_tokens__historical) | **get** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
-[**uniswap_v2_get_transactions__historical**](#uniswap_v2_get_transactions__historical) | **get** /dapps/uniswapv2/transactions/historical | Transactions (historical) 🔥
-[**uniswap_v2_get_uniswap_day_datas__historical**](#uniswap_v2_get_uniswap_day_datas__historical) | **get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
-[**uniswap_v2_get_uniswap_factorys__historical**](#uniswap_v2_get_uniswap_factorys__historical) | **get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical) 🔥
-[**uniswap_v2_get_users__historical**](#uniswap_v2_get_users__historical) | **get** /dapps/uniswapv2/users/historical | Users (historical) 🔥
+[**uniswap_v2_get_bundles__historical**](#uniswap_v2_get_bundles__historical) | **get** /dapps/uniswapv2/bundles/historical | Bundles (historical)
+[**uniswap_v2_get_burns__historical**](#uniswap_v2_get_burns__historical) | **get** /dapps/uniswapv2/burns/historical | Burns (historical)
+[**uniswap_v2_get_liquidity_position_snapshots__historical**](#uniswap_v2_get_liquidity_position_snapshots__historical) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**uniswap_v2_get_liquidity_positions__historical**](#uniswap_v2_get_liquidity_positions__historical) | **get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
+[**uniswap_v2_get_mints__historical**](#uniswap_v2_get_mints__historical) | **get** /dapps/uniswapv2/mints/historical | Mints (historical)
+[**uniswap_v2_get_pair_day_datas__historical**](#uniswap_v2_get_pair_day_datas__historical) | **get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
+[**uniswap_v2_get_pair_hour_datas__historical**](#uniswap_v2_get_pair_hour_datas__historical) | **get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswap_v2_get_pairs__historical**](#uniswap_v2_get_pairs__historical) | **get** /dapps/uniswapv2/pairs/historical | Pairs (historical)
+[**uniswap_v2_get_swaps__historical**](#uniswap_v2_get_swaps__historical) | **get** /dapps/uniswapv2/swaps/historical | Swaps (historical)
+[**uniswap_v2_get_token_day_datas__historical**](#uniswap_v2_get_token_day_datas__historical) | **get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswap_v2_get_tokens__historical**](#uniswap_v2_get_tokens__historical) | **get** /dapps/uniswapv2/tokens/historical | Tokens (historical)
+[**uniswap_v2_get_transactions__historical**](#uniswap_v2_get_transactions__historical) | **get** /dapps/uniswapv2/transactions/historical | Transactions (historical)
+[**uniswap_v2_get_uniswap_day_datas__historical**](#uniswap_v2_get_uniswap_day_datas__historical) | **get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**uniswap_v2_get_uniswap_factorys__historical**](#uniswap_v2_get_uniswap_factorys__historical) | **get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswap_v2_get_users__historical**](#uniswap_v2_get_users__historical) | **get** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswap_v2_liquidity_position_snapshots__current**](#uniswap_v2_liquidity_position_snapshots__current) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswap_v2_liquidity_positions__current**](#uniswap_v2_liquidity_positions__current) | **get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswap_v2_mints__current**](#uniswap_v2_mints__current) | **get** /dapps/uniswapv2/mints/current | Mints (current)
@@ -226,7 +226,7 @@ No authorization required
 <a name="uniswap_v2_get_bundles__historical"></a>
 > [UniswapV2BundleDTO] uniswap_v2_get_bundles__historical()
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -257,7 +257,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Bundles (historical) 🔥
+        # Bundles (historical)
         api_response = api_instance.uniswap_v2_get_bundles__historical(
             query_params=query_params,
         )
@@ -382,7 +382,7 @@ No authorization required
 <a name="uniswap_v2_get_burns__historical"></a>
 > [UniswapV2BurnDTO] uniswap_v2_get_burns__historical()
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -414,7 +414,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Burns (historical) 🔥
+        # Burns (historical)
         api_response = api_instance.uniswap_v2_get_burns__historical(
             query_params=query_params,
         )
@@ -547,7 +547,7 @@ No authorization required
 <a name="uniswap_v2_get_liquidity_position_snapshots__historical"></a>
 > [UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_get_liquidity_position_snapshots__historical()
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -580,7 +580,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositionSnapshots (historical) 🔥
+        # LiquidityPositionSnapshots (historical)
         api_response = api_instance.uniswap_v2_get_liquidity_position_snapshots__historical(
             query_params=query_params,
         )
@@ -721,7 +721,7 @@ No authorization required
 <a name="uniswap_v2_get_liquidity_positions__historical"></a>
 > [UniswapV2LiquidityPositionDTO] uniswap_v2_get_liquidity_positions__historical()
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -754,7 +754,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # LiquidityPositions (historical) 🔥
+        # LiquidityPositions (historical)
         api_response = api_instance.uniswap_v2_get_liquidity_positions__historical(
             query_params=query_params,
         )
@@ -895,7 +895,7 @@ No authorization required
 <a name="uniswap_v2_get_mints__historical"></a>
 > [UniswapV2MintDTO] uniswap_v2_get_mints__historical()
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -927,7 +927,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Mints (historical) 🔥
+        # Mints (historical)
         api_response = api_instance.uniswap_v2_get_mints__historical(
             query_params=query_params,
         )
@@ -1060,7 +1060,7 @@ No authorization required
 <a name="uniswap_v2_get_pair_day_datas__historical"></a>
 > [UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_datas__historical()
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -1093,7 +1093,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairDayDatas (historical) 🔥
+        # PairDayDatas (historical)
         api_response = api_instance.uniswap_v2_get_pair_day_datas__historical(
             query_params=query_params,
         )
@@ -1234,7 +1234,7 @@ No authorization required
 <a name="uniswap_v2_get_pair_hour_datas__historical"></a>
 > [UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_datas__historical()
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -1266,7 +1266,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # PairHourDatas (historical) 🔥
+        # PairHourDatas (historical)
         api_response = api_instance.uniswap_v2_get_pair_hour_datas__historical(
             query_params=query_params,
         )
@@ -1399,7 +1399,7 @@ No authorization required
 <a name="uniswap_v2_get_pairs__historical"></a>
 > [UniswapV2PairDTO] uniswap_v2_get_pairs__historical()
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -1432,7 +1432,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # Pairs (historical) 🔥
+        # Pairs (historical)
         api_response = api_instance.uniswap_v2_get_pairs__historical(
             query_params=query_params,
         )
@@ -1573,7 +1573,7 @@ No authorization required
 <a name="uniswap_v2_get_swaps__historical"></a>
 > [UniswapV2SwapDTO] uniswap_v2_get_swaps__historical()
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -1605,7 +1605,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # Swaps (historical) 🔥
+        # Swaps (historical)
         api_response = api_instance.uniswap_v2_get_swaps__historical(
             query_params=query_params,
         )
@@ -1738,7 +1738,7 @@ No authorization required
 <a name="uniswap_v2_get_token_day_datas__historical"></a>
 > [UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_datas__historical()
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -1769,7 +1769,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # TokenDayDatas (historical) 🔥
+        # TokenDayDatas (historical)
         api_response = api_instance.uniswap_v2_get_token_day_datas__historical(
             query_params=query_params,
         )
@@ -1894,7 +1894,7 @@ No authorization required
 <a name="uniswap_v2_get_tokens__historical"></a>
 > [UniswapV2TokenDTO] uniswap_v2_get_tokens__historical()
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1927,7 +1927,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'name': "name_example",
     }
     try:
-        # Tokens (historical) 🔥
+        # Tokens (historical)
         api_response = api_instance.uniswap_v2_get_tokens__historical(
             query_params=query_params,
         )
@@ -2068,7 +2068,7 @@ No authorization required
 <a name="uniswap_v2_get_transactions__historical"></a>
 > [UniswapV2TransactionDTO] uniswap_v2_get_transactions__historical()
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -2099,7 +2099,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Transactions (historical) 🔥
+        # Transactions (historical)
         api_response = api_instance.uniswap_v2_get_transactions__historical(
             query_params=query_params,
         )
@@ -2224,7 +2224,7 @@ No authorization required
 <a name="uniswap_v2_get_uniswap_day_datas__historical"></a>
 > [UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_datas__historical()
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 
@@ -2255,7 +2255,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # UniswapDayDatas (historical) 🔥
+        # UniswapDayDatas (historical)
         api_response = api_instance.uniswap_v2_get_uniswap_day_datas__historical(
             query_params=query_params,
         )
@@ -2380,7 +2380,7 @@ No authorization required
 <a name="uniswap_v2_get_uniswap_factorys__historical"></a>
 > [UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factorys__historical()
 
-UniswapFactorys (historical) 🔥
+UniswapFactorys (historical)
 
 Gets uniswapFactorys.
 
@@ -2411,7 +2411,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # UniswapFactorys (historical) 🔥
+        # UniswapFactorys (historical)
         api_response = api_instance.uniswap_v2_get_uniswap_factorys__historical(
             query_params=query_params,
         )
@@ -2536,7 +2536,7 @@ No authorization required
 <a name="uniswap_v2_get_users__historical"></a>
 > [UniswapV2UserDTO] uniswap_v2_get_users__historical()
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -2567,7 +2567,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Users (historical) 🔥
+        # Users (historical)
         api_response = api_instance.uniswap_v2_get_users__historical(
             query_params=query_params,
         )

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveExchangesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveExchangesHistorical unit test stubs
-        Exchanges (historical) 🔥  # noqa: E501
+        Exchanges (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

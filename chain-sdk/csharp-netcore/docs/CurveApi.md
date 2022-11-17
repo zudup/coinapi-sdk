@@ -23,38 +23,38 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CurveGaugeWeightsCurrent**](CurveApi.md#curvegaugeweightscurrent) | **GET** /dapps/curve/gaugeWeights/current | GaugeWeights (current) |
 | [**CurveGaugeWithdrawsCurrent**](CurveApi.md#curvegaugewithdrawscurrent) | **GET** /dapps/curve/gaugeWithdraws/current | GaugeWithdraws (current) |
 | [**CurveGaugesCurrent**](CurveApi.md#curvegaugescurrent) | **GET** /dapps/curve/gauges/current | Gauges (current) |
-| [**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) 🔥 |
-| [**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) 🔥 |
-| [**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) 🔥 |
-| [**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) 🔥 |
-| [**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) 🔥 |
-| [**CurveGetContractVersionsHistorical**](CurveApi.md#curvegetcontractversionshistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) 🔥 |
-| [**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) 🔥 |
-| [**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) 🔥 |
-| [**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥 |
-| [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) 🔥 |
-| [**CurveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) 🔥 |
-| [**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) 🔥 |
-| [**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) 🔥 |
-| [**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) 🔥 |
-| [**CurveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) 🔥 |
-| [**CurveGetGaugeWeightVotesHistorical**](CurveApi.md#curvegetgaugeweightvoteshistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) 🔥 |
-| [**CurveGetGaugeWeightsHistorical**](CurveApi.md#curvegetgaugeweightshistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) 🔥 |
-| [**CurveGetGaugeWithdrawsHistorical**](CurveApi.md#curvegetgaugewithdrawshistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) 🔥 |
-| [**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) 🔥 |
-| [**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) 🔥 |
-| [**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) 🔥 |
-| [**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥 |
-| [**CurveGetProposalVotesHistorical**](CurveApi.md#curvegetproposalvoteshistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) 🔥 |
-| [**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) 🔥 |
-| [**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) 🔥 |
-| [**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) 🔥 |
-| [**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) 🔥 |
-| [**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥 |
-| [**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) 🔥 |
-| [**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) 🔥 |
-| [**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) 🔥 |
-| [**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) 🔥 |
+| [**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) |
+| [**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) |
+| [**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) |
+| [**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) |
+| [**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) |
+| [**CurveGetContractVersionsHistorical**](CurveApi.md#curvegetcontractversionshistorical) | **GET** /dapps/curve/contractVersions/historical | ContractVersions (historical) |
+| [**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) |
+| [**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) |
+| [**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) |
+| [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
+| [**CurveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) |
+| [**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) |
+| [**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) |
+| [**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) |
+| [**CurveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) |
+| [**CurveGetGaugeWeightVotesHistorical**](CurveApi.md#curvegetgaugeweightvoteshistorical) | **GET** /dapps/curve/gaugeWeightVotes/historical | GaugeWeightVotes (historical) |
+| [**CurveGetGaugeWeightsHistorical**](CurveApi.md#curvegetgaugeweightshistorical) | **GET** /dapps/curve/gaugeWeights/historical | GaugeWeights (historical) |
+| [**CurveGetGaugeWithdrawsHistorical**](CurveApi.md#curvegetgaugewithdrawshistorical) | **GET** /dapps/curve/gaugeWithdraws/historical | GaugeWithdraws (historical) |
+| [**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) |
+| [**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) |
+| [**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) |
+| [**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) |
+| [**CurveGetProposalVotesHistorical**](CurveApi.md#curvegetproposalvoteshistorical) | **GET** /dapps/curve/proposalVotes/historical | ProposalVotes (historical) |
+| [**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) |
+| [**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) |
+| [**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) |
+| [**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) |
+| [**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) |
+| [**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) |
+| [**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) |
+| [**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) |
+| [**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) |
 | [**CurveHourlyVolumesCurrent**](CurveApi.md#curvehourlyvolumescurrent) | **GET** /dapps/curve/hourlyVolumes/current | HourlyVolumes (current) |
 | [**CurveLpTokensCurrent**](CurveApi.md#curvelptokenscurrent) | **GET** /dapps/curve/lpTokens/current | LpTokens (current) |
 | [**CurvePoolsCurrent**](CurveApi.md#curvepoolscurrent) | **GET** /dapps/curve/pools/current | Pools (current) |
@@ -1712,7 +1712,7 @@ No authorization required
 # **CurveGetAccountsHistorical**
 > List&lt;CurveAccountDTO&gt; CurveGetAccountsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-Accounts (historical) 🔥
+Accounts (historical)
 
 Gets accounts.
 
@@ -1742,7 +1742,7 @@ namespace Example
 
             try
             {
-                // Accounts (historical) 🔥
+                // Accounts (historical)
                 List<CurveAccountDTO> result = apiInstance.CurveGetAccountsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -1763,7 +1763,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Accounts (historical) 🔥
+    // Accounts (historical)
     ApiResponse<List<CurveAccountDTO>> response = apiInstance.CurveGetAccountsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1813,7 +1813,7 @@ No authorization required
 # **CurveGetAddLiquidityEventsHistorical**
 > List&lt;CurveAddLiquidityEventDTO&gt; CurveGetAddLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AddLiquidityEvents (historical) 🔥
+AddLiquidityEvents (historical)
 
 Gets addLiquidityEvents.
 
@@ -1843,7 +1843,7 @@ namespace Example
 
             try
             {
-                // AddLiquidityEvents (historical) 🔥
+                // AddLiquidityEvents (historical)
                 List<CurveAddLiquidityEventDTO> result = apiInstance.CurveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1864,7 +1864,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // AddLiquidityEvents (historical) 🔥
+    // AddLiquidityEvents (historical)
     ApiResponse<List<CurveAddLiquidityEventDTO>> response = apiInstance.CurveGetAddLiquidityEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1914,7 +1914,7 @@ No authorization required
 # **CurveGetAdminFeeChangeLogsHistorical**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AdminFeeChangeLogs (historical) 🔥
+AdminFeeChangeLogs (historical)
 
 Gets adminFeeChangeLogs.
 
@@ -1944,7 +1944,7 @@ namespace Example
 
             try
             {
-                // AdminFeeChangeLogs (historical) 🔥
+                // AdminFeeChangeLogs (historical)
                 List<CurveAdminFeeChangeLogDTO> result = apiInstance.CurveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -1965,7 +1965,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // AdminFeeChangeLogs (historical) 🔥
+    // AdminFeeChangeLogs (historical)
     ApiResponse<List<CurveAdminFeeChangeLogDTO>> response = apiInstance.CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2015,7 +2015,7 @@ No authorization required
 # **CurveGetAmplificationCoeffChangeLogsHistorical**
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveGetAmplificationCoeffChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-AmplificationCoeffChangeLogs (historical) 🔥
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplificationCoeffChangeLogs.
 
@@ -2045,7 +2045,7 @@ namespace Example
 
             try
             {
-                // AmplificationCoeffChangeLogs (historical) 🔥
+                // AmplificationCoeffChangeLogs (historical)
                 List<CurveAmplificationCoeffChangeLogDTO> result = apiInstance.CurveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2066,7 +2066,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // AmplificationCoeffChangeLogs (historical) 🔥
+    // AmplificationCoeffChangeLogs (historical)
     ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> response = apiInstance.CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2116,7 +2116,7 @@ No authorization required
 # **CurveGetCoinsHistorical**
 > List&lt;CurveCoinDTO&gt; CurveGetCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Coins (historical) 🔥
+Coins (historical)
 
 Gets coins.
 
@@ -2146,7 +2146,7 @@ namespace Example
 
             try
             {
-                // Coins (historical) 🔥
+                // Coins (historical)
                 List<CurveCoinDTO> result = apiInstance.CurveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2167,7 +2167,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Coins (historical) 🔥
+    // Coins (historical)
     ApiResponse<List<CurveCoinDTO>> response = apiInstance.CurveGetCoinsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2217,7 +2217,7 @@ No authorization required
 # **CurveGetContractVersionsHistorical**
 > List&lt;CurveContractVersionDTO&gt; CurveGetContractVersionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-ContractVersions (historical) 🔥
+ContractVersions (historical)
 
 Gets contractVersions.
 
@@ -2247,7 +2247,7 @@ namespace Example
 
             try
             {
-                // ContractVersions (historical) 🔥
+                // ContractVersions (historical)
                 List<CurveContractVersionDTO> result = apiInstance.CurveGetContractVersionsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -2268,7 +2268,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // ContractVersions (historical) 🔥
+    // ContractVersions (historical)
     ApiResponse<List<CurveContractVersionDTO>> response = apiInstance.CurveGetContractVersionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2318,7 +2318,7 @@ No authorization required
 # **CurveGetContractsHistorical**
 > List&lt;CurveContractDTO&gt; CurveGetContractsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Contracts (historical) 🔥
+Contracts (historical)
 
 Gets contracts.
 
@@ -2347,7 +2347,7 @@ namespace Example
 
             try
             {
-                // Contracts (historical) 🔥
+                // Contracts (historical)
                 List<CurveContractDTO> result = apiInstance.CurveGetContractsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2368,7 +2368,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Contracts (historical) 🔥
+    // Contracts (historical)
     ApiResponse<List<CurveContractDTO>> response = apiInstance.CurveGetContractsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2417,7 +2417,7 @@ No authorization required
 # **CurveGetDailyVolumesHistorical**
 > List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-DailyVolumes (historical) 🔥
+DailyVolumes (historical)
 
 Gets dailyVolumes.
 
@@ -2447,7 +2447,7 @@ namespace Example
 
             try
             {
-                // DailyVolumes (historical) 🔥
+                // DailyVolumes (historical)
                 List<CurveDailyVolumeDTO> result = apiInstance.CurveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2468,7 +2468,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // DailyVolumes (historical) 🔥
+    // DailyVolumes (historical)
     ApiResponse<List<CurveDailyVolumeDTO>> response = apiInstance.CurveGetDailyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2518,7 +2518,7 @@ No authorization required
 # **CurveGetExchangesHistorical**
 > List&lt;CurveExchangeDTO&gt; CurveGetExchangesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-Exchanges (historical) 🔥
+Exchanges (historical)
 
 Gets exchanges.
 
@@ -2548,7 +2548,7 @@ namespace Example
 
             try
             {
-                // Exchanges (historical) 🔥
+                // Exchanges (historical)
                 List<CurveExchangeDTO> result = apiInstance.CurveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2569,7 +2569,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Exchanges (historical) 🔥
+    // Exchanges (historical)
     ApiResponse<List<CurveExchangeDTO>> response = apiInstance.CurveGetExchangesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2619,7 +2619,7 @@ No authorization required
 # **CurveGetFeeChangeLogsHistorical**
 > List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-FeeChangeLogs (historical) 🔥
+FeeChangeLogs (historical)
 
 Gets feeChangeLogs.
 
@@ -2649,7 +2649,7 @@ namespace Example
 
             try
             {
-                // FeeChangeLogs (historical) 🔥
+                // FeeChangeLogs (historical)
                 List<CurveFeeChangeLogDTO> result = apiInstance.CurveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -2670,7 +2670,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // FeeChangeLogs (historical) 🔥
+    // FeeChangeLogs (historical)
     ApiResponse<List<CurveFeeChangeLogDTO>> response = apiInstance.CurveGetFeeChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2720,7 +2720,7 @@ No authorization required
 # **CurveGetGaugeDepositsHistorical**
 > List&lt;CurveGaugeDepositDTO&gt; CurveGetGaugeDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeDeposits (historical) 🔥
+GaugeDeposits (historical)
 
 Gets gaugeDeposits.
 
@@ -2749,7 +2749,7 @@ namespace Example
 
             try
             {
-                // GaugeDeposits (historical) 🔥
+                // GaugeDeposits (historical)
                 List<CurveGaugeDepositDTO> result = apiInstance.CurveGetGaugeDepositsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2770,7 +2770,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeDeposits (historical) 🔥
+    // GaugeDeposits (historical)
     ApiResponse<List<CurveGaugeDepositDTO>> response = apiInstance.CurveGetGaugeDepositsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2819,7 +2819,7 @@ No authorization required
 # **CurveGetGaugeLiquiditysHistorical**
 > List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquiditysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-GaugeLiquiditys (historical) 🔥
+GaugeLiquiditys (historical)
 
 Gets gaugeLiquiditys.
 
@@ -2849,7 +2849,7 @@ namespace Example
 
             try
             {
-                // GaugeLiquiditys (historical) 🔥
+                // GaugeLiquiditys (historical)
                 List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -2870,7 +2870,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeLiquiditys (historical) 🔥
+    // GaugeLiquiditys (historical)
     ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -2920,7 +2920,7 @@ No authorization required
 # **CurveGetGaugeTotalWeightsHistorical**
 > List&lt;CurveGaugeTotalWeightDTO&gt; CurveGetGaugeTotalWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeTotalWeights (historical) 🔥
+GaugeTotalWeights (historical)
 
 Gets gaugeTotalWeights.
 
@@ -2949,7 +2949,7 @@ namespace Example
 
             try
             {
-                // GaugeTotalWeights (historical) 🔥
+                // GaugeTotalWeights (historical)
                 List<CurveGaugeTotalWeightDTO> result = apiInstance.CurveGetGaugeTotalWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -2970,7 +2970,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeTotalWeights (historical) 🔥
+    // GaugeTotalWeights (historical)
     ApiResponse<List<CurveGaugeTotalWeightDTO>> response = apiInstance.CurveGetGaugeTotalWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3019,7 +3019,7 @@ No authorization required
 # **CurveGetGaugeTypeWeightsHistorical**
 > List&lt;CurveGaugeTypeWeightDTO&gt; CurveGetGaugeTypeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeTypeWeights (historical) 🔥
+GaugeTypeWeights (historical)
 
 Gets gaugeTypeWeights.
 
@@ -3048,7 +3048,7 @@ namespace Example
 
             try
             {
-                // GaugeTypeWeights (historical) 🔥
+                // GaugeTypeWeights (historical)
                 List<CurveGaugeTypeWeightDTO> result = apiInstance.CurveGetGaugeTypeWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3069,7 +3069,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeTypeWeights (historical) 🔥
+    // GaugeTypeWeights (historical)
     ApiResponse<List<CurveGaugeTypeWeightDTO>> response = apiInstance.CurveGetGaugeTypeWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3118,7 +3118,7 @@ No authorization required
 # **CurveGetGaugeTypesHistorical**
 > List&lt;CurveGaugeTypeDTO&gt; CurveGetGaugeTypesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
-GaugeTypes (historical) 🔥
+GaugeTypes (historical)
 
 Gets gaugeTypes.
 
@@ -3148,7 +3148,7 @@ namespace Example
 
             try
             {
-                // GaugeTypes (historical) 🔥
+                // GaugeTypes (historical)
                 List<CurveGaugeTypeDTO> result = apiInstance.CurveGetGaugeTypesHistorical(startBlock, endBlock, startDate, endDate, id, name);
                 Debug.WriteLine(result);
             }
@@ -3169,7 +3169,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeTypes (historical) 🔥
+    // GaugeTypes (historical)
     ApiResponse<List<CurveGaugeTypeDTO>> response = apiInstance.CurveGetGaugeTypesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, name);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3219,7 +3219,7 @@ No authorization required
 # **CurveGetGaugeWeightVotesHistorical**
 > List&lt;CurveGaugeWeightVoteDTO&gt; CurveGetGaugeWeightVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-GaugeWeightVotes (historical) 🔥
+GaugeWeightVotes (historical)
 
 Gets gaugeWeightVotes.
 
@@ -3249,7 +3249,7 @@ namespace Example
 
             try
             {
-                // GaugeWeightVotes (historical) 🔥
+                // GaugeWeightVotes (historical)
                 List<CurveGaugeWeightVoteDTO> result = apiInstance.CurveGetGaugeWeightVotesHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
@@ -3270,7 +3270,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeWeightVotes (historical) 🔥
+    // GaugeWeightVotes (historical)
     ApiResponse<List<CurveGaugeWeightVoteDTO>> response = apiInstance.CurveGetGaugeWeightVotesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3320,7 +3320,7 @@ No authorization required
 # **CurveGetGaugeWeightsHistorical**
 > List&lt;CurveGaugeWeightDTO&gt; CurveGetGaugeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeWeights (historical) 🔥
+GaugeWeights (historical)
 
 Gets gaugeWeights.
 
@@ -3349,7 +3349,7 @@ namespace Example
 
             try
             {
-                // GaugeWeights (historical) 🔥
+                // GaugeWeights (historical)
                 List<CurveGaugeWeightDTO> result = apiInstance.CurveGetGaugeWeightsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3370,7 +3370,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeWeights (historical) 🔥
+    // GaugeWeights (historical)
     ApiResponse<List<CurveGaugeWeightDTO>> response = apiInstance.CurveGetGaugeWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3419,7 +3419,7 @@ No authorization required
 # **CurveGetGaugeWithdrawsHistorical**
 > List&lt;CurveGaugeWithdrawDTO&gt; CurveGetGaugeWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-GaugeWithdraws (historical) 🔥
+GaugeWithdraws (historical)
 
 Gets gaugeWithdraws.
 
@@ -3448,7 +3448,7 @@ namespace Example
 
             try
             {
-                // GaugeWithdraws (historical) 🔥
+                // GaugeWithdraws (historical)
                 List<CurveGaugeWithdrawDTO> result = apiInstance.CurveGetGaugeWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3469,7 +3469,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GaugeWithdraws (historical) 🔥
+    // GaugeWithdraws (historical)
     ApiResponse<List<CurveGaugeWithdrawDTO>> response = apiInstance.CurveGetGaugeWithdrawsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3518,7 +3518,7 @@ No authorization required
 # **CurveGetGaugesHistorical**
 > List&lt;CurveGaugeDTO&gt; CurveGetGaugesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string pool = null)
 
-Gauges (historical) 🔥
+Gauges (historical)
 
 Gets gauges.
 
@@ -3549,7 +3549,7 @@ namespace Example
 
             try
             {
-                // Gauges (historical) 🔥
+                // Gauges (historical)
                 List<CurveGaugeDTO> result = apiInstance.CurveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, id, address, pool);
                 Debug.WriteLine(result);
             }
@@ -3570,7 +3570,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Gauges (historical) 🔥
+    // Gauges (historical)
     ApiResponse<List<CurveGaugeDTO>> response = apiInstance.CurveGetGaugesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3621,7 +3621,7 @@ No authorization required
 # **CurveGetHourlyVolumesHistorical**
 > List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-HourlyVolumes (historical) 🔥
+HourlyVolumes (historical)
 
 Gets hourlyVolumes.
 
@@ -3651,7 +3651,7 @@ namespace Example
 
             try
             {
-                // HourlyVolumes (historical) 🔥
+                // HourlyVolumes (historical)
                 List<CurveHourlyVolumeDTO> result = apiInstance.CurveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -3672,7 +3672,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // HourlyVolumes (historical) 🔥
+    // HourlyVolumes (historical)
     ApiResponse<List<CurveHourlyVolumeDTO>> response = apiInstance.CurveGetHourlyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3722,7 +3722,7 @@ No authorization required
 # **CurveGetLpTokensHistorical**
 > List&lt;CurveLpTokenDTO&gt; CurveGetLpTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null, string pool = null)
 
-LpTokens (historical) 🔥
+LpTokens (historical)
 
 Gets lpTokens.
 
@@ -3755,7 +3755,7 @@ namespace Example
 
             try
             {
-                // LpTokens (historical) 🔥
+                // LpTokens (historical)
                 List<CurveLpTokenDTO> result = apiInstance.CurveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool);
                 Debug.WriteLine(result);
             }
@@ -3776,7 +3776,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // LpTokens (historical) 🔥
+    // LpTokens (historical)
     ApiResponse<List<CurveLpTokenDTO>> response = apiInstance.CurveGetLpTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3829,7 +3829,7 @@ No authorization required
 # **CurveGetPoolsHistorical**
 > List&lt;CurvePoolDTO&gt; CurveGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
-Pools (historical) 🔥
+Pools (historical)
 
 Gets pools.
 
@@ -3859,7 +3859,7 @@ namespace Example
 
             try
             {
-                // Pools (historical) 🔥
+                // Pools (historical)
                 List<CurvePoolDTO> result = apiInstance.CurveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, name);
                 Debug.WriteLine(result);
             }
@@ -3880,7 +3880,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Pools (historical) 🔥
+    // Pools (historical)
     ApiResponse<List<CurvePoolDTO>> response = apiInstance.CurveGetPoolsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, name);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -3930,7 +3930,7 @@ No authorization required
 # **CurveGetProposalVotesHistorical**
 > List&lt;CurveProposalVoteDTO&gt; CurveGetProposalVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-ProposalVotes (historical) 🔥
+ProposalVotes (historical)
 
 Gets proposalVotes.
 
@@ -3959,7 +3959,7 @@ namespace Example
 
             try
             {
-                // ProposalVotes (historical) 🔥
+                // ProposalVotes (historical)
                 List<CurveProposalVoteDTO> result = apiInstance.CurveGetProposalVotesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -3980,7 +3980,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // ProposalVotes (historical) 🔥
+    // ProposalVotes (historical)
     ApiResponse<List<CurveProposalVoteDTO>> response = apiInstance.CurveGetProposalVotesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4029,7 +4029,7 @@ No authorization required
 # **CurveGetProposalsHistorical**
 > List&lt;CurveProposalDTO&gt; CurveGetProposalsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Proposals (historical) 🔥
+Proposals (historical)
 
 Gets proposals.
 
@@ -4058,7 +4058,7 @@ namespace Example
 
             try
             {
-                // Proposals (historical) 🔥
+                // Proposals (historical)
                 List<CurveProposalDTO> result = apiInstance.CurveGetProposalsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -4079,7 +4079,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Proposals (historical) 🔥
+    // Proposals (historical)
     ApiResponse<List<CurveProposalDTO>> response = apiInstance.CurveGetProposalsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4128,7 +4128,7 @@ No authorization required
 # **CurveGetRemoveLiquidityEventsHistorical**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-RemoveLiquidityEvents (historical) 🔥
+RemoveLiquidityEvents (historical)
 
 Gets removeLiquidityEvents.
 
@@ -4158,7 +4158,7 @@ namespace Example
 
             try
             {
-                // RemoveLiquidityEvents (historical) 🔥
+                // RemoveLiquidityEvents (historical)
                 List<CurveRemoveLiquidityEventDTO> result = apiInstance.CurveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4179,7 +4179,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // RemoveLiquidityEvents (historical) 🔥
+    // RemoveLiquidityEvents (historical)
     ApiResponse<List<CurveRemoveLiquidityEventDTO>> response = apiInstance.CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4229,7 +4229,7 @@ No authorization required
 # **CurveGetRemoveLiquidityOneEventsHistorical**
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveGetRemoveLiquidityOneEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-RemoveLiquidityOneEvents (historical) 🔥
+RemoveLiquidityOneEvents (historical)
 
 Gets removeLiquidityOneEvents.
 
@@ -4259,7 +4259,7 @@ namespace Example
 
             try
             {
-                // RemoveLiquidityOneEvents (historical) 🔥
+                // RemoveLiquidityOneEvents (historical)
                 List<CurveRemoveLiquidityOneEventDTO> result = apiInstance.CurveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4280,7 +4280,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // RemoveLiquidityOneEvents (historical) 🔥
+    // RemoveLiquidityOneEvents (historical)
     ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> response = apiInstance.CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4330,7 +4330,7 @@ No authorization required
 # **CurveGetSystemStatesHistorical**
 > List&lt;CurveSystemStateDTO&gt; CurveGetSystemStatesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-SystemStates (historical) 🔥
+SystemStates (historical)
 
 Gets systemStates.
 
@@ -4359,7 +4359,7 @@ namespace Example
 
             try
             {
-                // SystemStates (historical) 🔥
+                // SystemStates (historical)
                 List<CurveSystemStateDTO> result = apiInstance.CurveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
@@ -4380,7 +4380,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // SystemStates (historical) 🔥
+    // SystemStates (historical)
     ApiResponse<List<CurveSystemStateDTO>> response = apiInstance.CurveGetSystemStatesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4429,7 +4429,7 @@ No authorization required
 # **CurveGetTokensHistorical**
 > List&lt;CurveTokenDTO&gt; CurveGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -4461,7 +4461,7 @@ namespace Example
 
             try
             {
-                // Tokens (historical) 🔥
+                // Tokens (historical)
                 List<CurveTokenDTO> result = apiInstance.CurveGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol);
                 Debug.WriteLine(result);
             }
@@ -4482,7 +4482,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Tokens (historical) 🔥
+    // Tokens (historical)
     ApiResponse<List<CurveTokenDTO>> response = apiInstance.CurveGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address, name, symbol);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4534,7 +4534,7 @@ No authorization required
 # **CurveGetTransferOwnershipEventsHistorical**
 > List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-TransferOwnershipEvents (historical) 🔥
+TransferOwnershipEvents (historical)
 
 Gets transferOwnershipEvents.
 
@@ -4564,7 +4564,7 @@ namespace Example
 
             try
             {
-                // TransferOwnershipEvents (historical) 🔥
+                // TransferOwnershipEvents (historical)
                 List<CurveTransferOwnershipEventDTO> result = apiInstance.CurveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4585,7 +4585,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // TransferOwnershipEvents (historical) 🔥
+    // TransferOwnershipEvents (historical)
     ApiResponse<List<CurveTransferOwnershipEventDTO>> response = apiInstance.CurveGetTransferOwnershipEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4635,7 +4635,7 @@ No authorization required
 # **CurveGetUnderlyingCoinsHistorical**
 > List&lt;CurveUnderlyingCoinDTO&gt; CurveGetUnderlyingCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-UnderlyingCoins (historical) 🔥
+UnderlyingCoins (historical)
 
 Gets underlyingCoins.
 
@@ -4665,7 +4665,7 @@ namespace Example
 
             try
             {
-                // UnderlyingCoins (historical) 🔥
+                // UnderlyingCoins (historical)
                 List<CurveUnderlyingCoinDTO> result = apiInstance.CurveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4686,7 +4686,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // UnderlyingCoins (historical) 🔥
+    // UnderlyingCoins (historical)
     ApiResponse<List<CurveUnderlyingCoinDTO>> response = apiInstance.CurveGetUnderlyingCoinsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4736,7 +4736,7 @@ No authorization required
 # **CurveGetVotingAppsHistorical**
 > List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
-VotingApps (historical) 🔥
+VotingApps (historical)
 
 Gets votingApps.
 
@@ -4766,7 +4766,7 @@ namespace Example
 
             try
             {
-                // VotingApps (historical) 🔥
+                // VotingApps (historical)
                 List<CurveVotingAppDTO> result = apiInstance.CurveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate, id, address);
                 Debug.WriteLine(result);
             }
@@ -4787,7 +4787,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // VotingApps (historical) 🔥
+    // VotingApps (historical)
     ApiResponse<List<CurveVotingAppDTO>> response = apiInstance.CurveGetVotingAppsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, address);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -4837,7 +4837,7 @@ No authorization required
 # **CurveGetWeeklyVolumesHistorical**
 > List&lt;CurveWeeklyVolumeDTO&gt; CurveGetWeeklyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-WeeklyVolumes (historical) 🔥
+WeeklyVolumes (historical)
 
 Gets weeklyVolumes.
 
@@ -4867,7 +4867,7 @@ namespace Example
 
             try
             {
-                // WeeklyVolumes (historical) 🔥
+                // WeeklyVolumes (historical)
                 List<CurveWeeklyVolumeDTO> result = apiInstance.CurveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
@@ -4888,7 +4888,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // WeeklyVolumes (historical) 🔥
+    // WeeklyVolumes (historical)
     ApiResponse<List<CurveWeeklyVolumeDTO>> response = apiInstance.CurveGetWeeklyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

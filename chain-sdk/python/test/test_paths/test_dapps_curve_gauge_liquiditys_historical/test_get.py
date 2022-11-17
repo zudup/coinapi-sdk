@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveGaugeLiquiditysHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveGaugeLiquiditysHistorical unit test stubs
-        GaugeLiquiditys (historical) 🔥  # noqa: E501
+        GaugeLiquiditys (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

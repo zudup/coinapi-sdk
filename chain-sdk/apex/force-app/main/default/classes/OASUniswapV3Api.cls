@@ -89,7 +89,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -123,7 +123,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -163,7 +163,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -197,7 +197,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -237,7 +237,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * PoolDayDatas (historical) 🔥
+     * PoolDayDatas (historical)
      * Gets poolDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -273,7 +273,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * PoolHourDatas (historical) 🔥
+     * PoolHourDatas (historical)
      * Gets poolHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -309,7 +309,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -347,7 +347,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * PositionSnapshots (historical) 🔥
+     * PositionSnapshots (historical)
      * Gets positionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -383,7 +383,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Positions (historical) 🔥
+     * Positions (historical)
      * Gets positions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -423,7 +423,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -463,7 +463,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * TickDayDatas (historical) 🔥
+     * TickDayDatas (historical)
      * Gets tickDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -499,7 +499,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Ticks (historical) 🔥
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -535,7 +535,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * TokenHourDatas (historical) 🔥
+     * TokenHourDatas (historical)
      * Gets tokenHourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -569,7 +569,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * TokenV3DayDatas (historical) 🔥
+     * TokenV3DayDatas (historical)
      * Gets tokenV3DayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -603,7 +603,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -641,7 +641,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -675,7 +675,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * UniswapDayDatas (historical) 🔥
+     * UniswapDayDatas (historical)
      * Gets uniswapDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveContractVersionsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveContractVersionsHistorical unit test stubs
-        ContractVersions (historical) 🔥  # noqa: E501
+        ContractVersions (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

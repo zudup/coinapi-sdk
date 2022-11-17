@@ -46,7 +46,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetBundlesHistorical } \emph{ Bundles (historical) 🔥 }
+#' \strong{ UniswapV2GetBundlesHistorical } \emph{ Bundles (historical) }
 #' Gets bundles.
 #'
 #' \itemize{
@@ -67,7 +67,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetBurnsHistorical } \emph{ Burns (historical) 🔥 }
+#' \strong{ UniswapV2GetBurnsHistorical } \emph{ Burns (historical) }
 #' Gets burns.
 #'
 #' \itemize{
@@ -89,7 +89,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetLiquidityPositionSnapshotsHistorical } \emph{ LiquidityPositionSnapshots (historical) 🔥 }
+#' \strong{ UniswapV2GetLiquidityPositionSnapshotsHistorical } \emph{ LiquidityPositionSnapshots (historical) }
 #' Gets liquidityPositionSnapshots.
 #'
 #' \itemize{
@@ -112,7 +112,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetLiquidityPositionsHistorical } \emph{ LiquidityPositions (historical) 🔥 }
+#' \strong{ UniswapV2GetLiquidityPositionsHistorical } \emph{ LiquidityPositions (historical) }
 #' Gets liquidityPositions.
 #'
 #' \itemize{
@@ -135,7 +135,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetMintsHistorical } \emph{ Mints (historical) 🔥 }
+#' \strong{ UniswapV2GetMintsHistorical } \emph{ Mints (historical) }
 #' Gets mints.
 #'
 #' \itemize{
@@ -157,7 +157,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPairDayDatasHistorical } \emph{ PairDayDatas (historical) 🔥 }
+#' \strong{ UniswapV2GetPairDayDatasHistorical } \emph{ PairDayDatas (historical) }
 #' Gets pairDayDatas.
 #'
 #' \itemize{
@@ -180,7 +180,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPairHourDatasHistorical } \emph{ PairHourDatas (historical) 🔥 }
+#' \strong{ UniswapV2GetPairHourDatasHistorical } \emph{ PairHourDatas (historical) }
 #' Gets pairHourDatas.
 #'
 #' \itemize{
@@ -202,7 +202,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPairsHistorical } \emph{ Pairs (historical) 🔥 }
+#' \strong{ UniswapV2GetPairsHistorical } \emph{ Pairs (historical) }
 #' Gets pairs.
 #'
 #' \itemize{
@@ -225,7 +225,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetSwapsHistorical } \emph{ Swaps (historical) 🔥 }
+#' \strong{ UniswapV2GetSwapsHistorical } \emph{ Swaps (historical) }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -247,7 +247,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokenDayDatasHistorical } \emph{ TokenDayDatas (historical) 🔥 }
+#' \strong{ UniswapV2GetTokenDayDatasHistorical } \emph{ TokenDayDatas (historical) }
 #' Gets tokenDayDatas.
 #'
 #' \itemize{
@@ -268,7 +268,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokensHistorical } \emph{ Tokens (historical) 🔥 }
+#' \strong{ UniswapV2GetTokensHistorical } \emph{ Tokens (historical) }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -291,7 +291,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTransactionsHistorical } \emph{ Transactions (historical) 🔥 }
+#' \strong{ UniswapV2GetTransactionsHistorical } \emph{ Transactions (historical) }
 #' Gets transactions.
 #'
 #' \itemize{
@@ -312,7 +312,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUniswapDayDatasHistorical } \emph{ UniswapDayDatas (historical) 🔥 }
+#' \strong{ UniswapV2GetUniswapDayDatasHistorical } \emph{ UniswapDayDatas (historical) }
 #' Gets uniswapDayDatas.
 #'
 #' \itemize{
@@ -333,7 +333,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUniswapFactorysHistorical } \emph{ UniswapFactorys (historical) 🔥 }
+#' \strong{ UniswapV2GetUniswapFactorysHistorical } \emph{ UniswapFactorys (historical) }
 #' Gets uniswapFactorys.
 #'
 #' \itemize{
@@ -354,7 +354,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUsersHistorical } \emph{ Users (historical) 🔥 }
+#' \strong{ UniswapV2GetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -625,7 +625,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Constant 1. (Optional)
 #'
-#' #Bundles (historical) 🔥
+#' #Bundles (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -644,7 +644,7 @@
 #' var_id <- "id_example" # character | Transaction hash plus index in the transaction burn array (Optional)
 #' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
-#' #Burns (historical) 🔥
+#' #Burns (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -664,7 +664,7 @@
 #' var_user <- "user_example" # character |  (Optional)
 #' var_pair <- "pair_example" # character |  (Optional)
 #'
-#' #LiquidityPositionSnapshots (historical) 🔥
+#' #LiquidityPositionSnapshots (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -684,7 +684,7 @@
 #' var_user <- "user_example" # character | Reference to user. (Optional)
 #' var_pair <- "pair_example" # character | Reference to the pair liquidity is being provided on. (Optional)
 #'
-#' #LiquidityPositions (historical) 🔥
+#' #LiquidityPositions (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -703,7 +703,7 @@
 #' var_id <- "id_example" # character | Transaction hash plus index in the transaction mint array. (Optional)
 #' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
-#' #Mints (historical) 🔥
+#' #Mints (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -723,7 +723,7 @@
 #' var_token_0 <- "token_0_example" # character | Reference to token0. (Optional)
 #' var_token_1 <- "token_1_example" # character | Reference to token1. (Optional)
 #'
-#' #PairDayDatas (historical) 🔥
+#' #PairDayDatas (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -742,7 +742,7 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pair <- "pair_example" # character | Address for pair contract. (Optional)
 #'
-#' #PairHourDatas (historical) 🔥
+#' #PairHourDatas (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -762,7 +762,7 @@
 #' var_token_0 <- "token_0_example" # character | Reference to token0 as stored in pair contract. (Optional)
 #' var_token_1 <- "token_1_example" # character | Reference to token1 as stored in pair contract. (Optional)
 #'
-#' #Pairs (historical) 🔥
+#' #Pairs (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -781,7 +781,7 @@
 #' var_id <- "id_example" # character | Transaction hash plus index in Transaction swap array. (Optional)
 #' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
-#' #Swaps (historical) 🔥
+#' #Swaps (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -799,7 +799,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (Optional)
 #'
-#' #TokenDayDatas (historical) 🔥
+#' #TokenDayDatas (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -819,7 +819,7 @@
 #' var_symbol <- "symbol_example" # character | Token symbol. (Optional)
 #' var_name <- "name_example" # character | Token name. (Optional)
 #'
-#' #Tokens (historical) 🔥
+#' #Tokens (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -837,7 +837,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Ethereum transaction hash. (Optional)
 #'
-#' #Transactions (historical) 🔥
+#' #Transactions (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -855,7 +855,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Unix timestamp for start of day / 86400 giving a unique day index. (Optional)
 #'
-#' #UniswapDayDatas (historical) 🔥
+#' #UniswapDayDatas (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -873,7 +873,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Factory address. (Optional)
 #'
-#' #UniswapFactorys (historical) 🔥
+#' #UniswapFactorys (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -891,7 +891,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | User address. (Optional)
 #'
-#' #Users (historical) 🔥
+#' #Users (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1265,10 +1265,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Bundles (historical) 🔥
+    #' Bundles (historical)
     #'
     #' @description
-    #' Bundles (historical) 🔥
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1291,10 +1291,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Bundles (historical) 🔥
+    #' Bundles (historical)
     #'
     #' @description
-    #' Bundles (historical) 🔥
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1376,10 +1376,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Burns (historical) 🔥
+    #' Burns (historical)
     #'
     #' @description
-    #' Burns (historical) 🔥
+    #' Burns (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1403,10 +1403,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Burns (historical) 🔥
+    #' Burns (historical)
     #'
     #' @description
-    #' Burns (historical) 🔥
+    #' Burns (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1492,10 +1492,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' LiquidityPositionSnapshots (historical) 🔥
+    #' LiquidityPositionSnapshots (historical)
     #'
     #' @description
-    #' LiquidityPositionSnapshots (historical) 🔥
+    #' LiquidityPositionSnapshots (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1520,10 +1520,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' LiquidityPositionSnapshots (historical) 🔥
+    #' LiquidityPositionSnapshots (historical)
     #'
     #' @description
-    #' LiquidityPositionSnapshots (historical) 🔥
+    #' LiquidityPositionSnapshots (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1613,10 +1613,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' LiquidityPositions (historical) 🔥
+    #' LiquidityPositions (historical)
     #'
     #' @description
-    #' LiquidityPositions (historical) 🔥
+    #' LiquidityPositions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1641,10 +1641,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' LiquidityPositions (historical) 🔥
+    #' LiquidityPositions (historical)
     #'
     #' @description
-    #' LiquidityPositions (historical) 🔥
+    #' LiquidityPositions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1734,10 +1734,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Mints (historical) 🔥
+    #' Mints (historical)
     #'
     #' @description
-    #' Mints (historical) 🔥
+    #' Mints (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1761,10 +1761,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Mints (historical) 🔥
+    #' Mints (historical)
     #'
     #' @description
-    #' Mints (historical) 🔥
+    #' Mints (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1850,10 +1850,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairDayDatas (historical) 🔥
+    #' PairDayDatas (historical)
     #'
     #' @description
-    #' PairDayDatas (historical) 🔥
+    #' PairDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1878,10 +1878,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairDayDatas (historical) 🔥
+    #' PairDayDatas (historical)
     #'
     #' @description
-    #' PairDayDatas (historical) 🔥
+    #' PairDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1971,10 +1971,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairHourDatas (historical) 🔥
+    #' PairHourDatas (historical)
     #'
     #' @description
-    #' PairHourDatas (historical) 🔥
+    #' PairHourDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1998,10 +1998,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairHourDatas (historical) 🔥
+    #' PairHourDatas (historical)
     #'
     #' @description
-    #' PairHourDatas (historical) 🔥
+    #' PairHourDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2087,10 +2087,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Pairs (historical) 🔥
+    #' Pairs (historical)
     #'
     #' @description
-    #' Pairs (historical) 🔥
+    #' Pairs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2115,10 +2115,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Pairs (historical) 🔥
+    #' Pairs (historical)
     #'
     #' @description
-    #' Pairs (historical) 🔥
+    #' Pairs (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2208,10 +2208,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Swaps (historical) 🔥
+    #' Swaps (historical)
     #'
     #' @description
-    #' Swaps (historical) 🔥
+    #' Swaps (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2235,10 +2235,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Swaps (historical) 🔥
+    #' Swaps (historical)
     #'
     #' @description
-    #' Swaps (historical) 🔥
+    #' Swaps (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2324,10 +2324,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' TokenDayDatas (historical) 🔥
+    #' TokenDayDatas (historical)
     #'
     #' @description
-    #' TokenDayDatas (historical) 🔥
+    #' TokenDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2350,10 +2350,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' TokenDayDatas (historical) 🔥
+    #' TokenDayDatas (historical)
     #'
     #' @description
-    #' TokenDayDatas (historical) 🔥
+    #' TokenDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2435,10 +2435,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2463,10 +2463,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @description
-    #' Tokens (historical) 🔥
+    #' Tokens (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2556,10 +2556,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Transactions (historical) 🔥
+    #' Transactions (historical)
     #'
     #' @description
-    #' Transactions (historical) 🔥
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2582,10 +2582,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Transactions (historical) 🔥
+    #' Transactions (historical)
     #'
     #' @description
-    #' Transactions (historical) 🔥
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2667,10 +2667,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapDayDatas (historical) 🔥
+    #' UniswapDayDatas (historical)
     #'
     #' @description
-    #' UniswapDayDatas (historical) 🔥
+    #' UniswapDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2693,10 +2693,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapDayDatas (historical) 🔥
+    #' UniswapDayDatas (historical)
     #'
     #' @description
-    #' UniswapDayDatas (historical) 🔥
+    #' UniswapDayDatas (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2778,10 +2778,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapFactorys (historical) 🔥
+    #' UniswapFactorys (historical)
     #'
     #' @description
-    #' UniswapFactorys (historical) 🔥
+    #' UniswapFactorys (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2804,10 +2804,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapFactorys (historical) 🔥
+    #' UniswapFactorys (historical)
     #'
     #' @description
-    #' UniswapFactorys (historical) 🔥
+    #' UniswapFactorys (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2889,10 +2889,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2915,10 +2915,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @description
-    #' Users (historical) 🔥
+    #' Users (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).

@@ -160,7 +160,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets batchs.
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      */
     dexGetBatchsHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetBatchsHistoricalRequest): Observable<Array<DexBatchDTO>>
     dexGetBatchsHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetBatchsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexBatchDTO>>>
@@ -183,7 +183,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets deposits.
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      */
     dexGetDepositsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetDepositsHistoricalRequest): Observable<Array<DexDepositDTO>>
     dexGetDepositsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetDepositsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexDepositDTO>>>
@@ -207,7 +207,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets orders.
-     * Orders (historical) 🔥
+     * Orders (historical)
      */
     dexGetOrdersHistorical({ startBlock, endBlock, startDate, endDate, id, buyToken, sellToken }: DexGetOrdersHistoricalRequest): Observable<Array<DexOrderDTO>>
     dexGetOrdersHistorical({ startBlock, endBlock, startDate, endDate, id, buyToken, sellToken }: DexGetOrdersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexOrderDTO>>>
@@ -232,7 +232,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets prices.
-     * Prices (historical) 🔥
+     * Prices (historical)
      */
     dexGetPricesHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetPricesHistoricalRequest): Observable<Array<DexPriceDTO>>
     dexGetPricesHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetPricesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexPriceDTO>>>
@@ -255,7 +255,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets solutions.
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      */
     dexGetSolutionsHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetSolutionsHistoricalRequest): Observable<Array<DexSolutionDTO>>
     dexGetSolutionsHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetSolutionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexSolutionDTO>>>
@@ -278,7 +278,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets statss.
-     * Statss (historical) 🔥
+     * Statss (historical)
      */
     dexGetStatssHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetStatssHistoricalRequest): Observable<Array<DexStatsDTO>>
     dexGetStatssHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetStatssHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexStatsDTO>>>
@@ -301,7 +301,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets tokens.
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      */
     dexGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, symbol, name }: DexGetTokensHistoricalRequest): Observable<Array<DexTokenDTO>>
     dexGetTokensHistorical({ startBlock, endBlock, startDate, endDate, id, address, symbol, name }: DexGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexTokenDTO>>>
@@ -327,7 +327,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets trades.
-     * Trades (historical) 🔥
+     * Trades (historical)
      */
     dexGetTradesHistorical({ startBlock, endBlock, startDate, endDate, id, buyToken, sellToken }: DexGetTradesHistoricalRequest): Observable<Array<DexTradeDTO>>
     dexGetTradesHistorical({ startBlock, endBlock, startDate, endDate, id, buyToken, sellToken }: DexGetTradesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexTradeDTO>>>
@@ -352,7 +352,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets users.
-     * Users (historical) 🔥
+     * Users (historical)
      */
     dexGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetUsersHistoricalRequest): Observable<Array<DexUserDTO>>
     dexGetUsersHistorical({ startBlock, endBlock, startDate, endDate, id }: DexGetUsersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexUserDTO>>>
@@ -375,7 +375,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets withdrawRequests.
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      */
     dexGetWithdrawRequestsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetWithdrawRequestsHistoricalRequest): Observable<Array<DexWithdrawRequestDTO>>
     dexGetWithdrawRequestsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetWithdrawRequestsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawRequestDTO>>>
@@ -399,7 +399,7 @@ export class DexApi extends BaseAPI {
 
     /**
      * Gets withdraws.
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      */
     dexGetWithdrawsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetWithdrawsHistoricalRequest): Observable<Array<DexWithdrawDTO>>
     dexGetWithdrawsHistorical({ startBlock, endBlock, startDate, endDate, id, user }: DexGetWithdrawsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawDTO>>>

@@ -247,7 +247,7 @@ sub sushiswap_factorys__current {
 #
 # sushiswap_get_bundles__historical
 #
-# Bundles (historical) 🔥
+# Bundles (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -283,7 +283,7 @@ sub sushiswap_factorys__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_bundles__historical' } = {
-        summary => 'Bundles (historical) 🔥',
+        summary => 'Bundles (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapBundleDTO]',
         };
@@ -351,7 +351,7 @@ sub sushiswap_get_bundles__historical {
 #
 # sushiswap_get_burns__historical
 #
-# Burns (historical) 🔥
+# Burns (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -393,7 +393,7 @@ sub sushiswap_get_bundles__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_burns__historical' } = {
-        summary => 'Burns (historical) 🔥',
+        summary => 'Burns (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapBurnDTO]',
         };
@@ -466,7 +466,7 @@ sub sushiswap_get_burns__historical {
 #
 # sushiswap_get_day_datas__historical
 #
-# DayDatas (historical) 🔥
+# DayDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -502,7 +502,7 @@ sub sushiswap_get_burns__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_day_datas__historical' } = {
-        summary => 'DayDatas (historical) 🔥',
+        summary => 'DayDatas (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapDayDataDTO]',
         };
@@ -570,7 +570,7 @@ sub sushiswap_get_day_datas__historical {
 #
 # sushiswap_get_factorys__historical
 #
-# Factorys (historical) 🔥
+# Factorys (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -606,7 +606,7 @@ sub sushiswap_get_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_factorys__historical' } = {
-        summary => 'Factorys (historical) 🔥',
+        summary => 'Factorys (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapFactoryDTO]',
         };
@@ -674,7 +674,7 @@ sub sushiswap_get_factorys__historical {
 #
 # sushiswap_get_hour_datas__historical
 #
-# HourDatas (historical) 🔥
+# HourDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -710,7 +710,7 @@ sub sushiswap_get_factorys__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_hour_datas__historical' } = {
-        summary => 'HourDatas (historical) 🔥',
+        summary => 'HourDatas (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapHourDataDTO]',
         };
@@ -778,7 +778,7 @@ sub sushiswap_get_hour_datas__historical {
 #
 # sushiswap_get_liquidity_position_snapshots__historical
 #
-# LiquidityPositionSnapshots (historical) 🔥
+# LiquidityPositionSnapshots (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -826,7 +826,7 @@ sub sushiswap_get_hour_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_position_snapshots__historical' } = {
-        summary => 'LiquidityPositionSnapshots (historical) 🔥',
+        summary => 'LiquidityPositionSnapshots (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapLiquidityPositionSnapshotDTO]',
         };
@@ -904,7 +904,7 @@ sub sushiswap_get_liquidity_position_snapshots__historical {
 #
 # sushiswap_get_liquidity_positions__historical
 #
-# LiquidityPositions (historical) 🔥
+# LiquidityPositions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -952,7 +952,7 @@ sub sushiswap_get_liquidity_position_snapshots__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_positions__historical' } = {
-        summary => 'LiquidityPositions (historical) 🔥',
+        summary => 'LiquidityPositions (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapLiquidityPositionDTO]',
         };
@@ -1030,7 +1030,7 @@ sub sushiswap_get_liquidity_positions__historical {
 #
 # sushiswap_get_mints__historical
 #
-# Mints (historical) 🔥
+# Mints (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1072,7 +1072,7 @@ sub sushiswap_get_liquidity_positions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_mints__historical' } = {
-        summary => 'Mints (historical) 🔥',
+        summary => 'Mints (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapMintDTO]',
         };
@@ -1145,7 +1145,7 @@ sub sushiswap_get_mints__historical {
 #
 # sushiswap_get_pair_day_datas__historical
 #
-# PairDayDatas (historical) 🔥
+# PairDayDatas (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1199,7 +1199,7 @@ sub sushiswap_get_mints__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_day_datas__historical' } = {
-        summary => 'PairDayDatas (historical) 🔥',
+        summary => 'PairDayDatas (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDayDataDTO]',
         };
@@ -1282,7 +1282,7 @@ sub sushiswap_get_pair_day_datas__historical {
 #
 # sushiswap_get_pair_hour_datas__historical
 #
-# PairHourDatas (historical) 🔥
+# PairHourDatas (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1324,7 +1324,7 @@ sub sushiswap_get_pair_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_hour_datas__historical' } = {
-        summary => 'PairHourDatas (historical) 🔥',
+        summary => 'PairHourDatas (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairHourDataDTO]',
         };
@@ -1397,7 +1397,7 @@ sub sushiswap_get_pair_hour_datas__historical {
 #
 # sushiswap_get_pairs__historical
 #
-# Pairs (historical) 🔥
+# Pairs (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1451,7 +1451,7 @@ sub sushiswap_get_pair_hour_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pairs__historical' } = {
-        summary => 'Pairs (historical) 🔥',
+        summary => 'Pairs (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -1534,7 +1534,7 @@ sub sushiswap_get_pairs__historical {
 #
 # sushiswap_get_swaps__historical
 #
-# Swaps (historical) 🔥
+# Swaps (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1576,7 +1576,7 @@ sub sushiswap_get_pairs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__historical' } = {
-        summary => 'Swaps (historical) 🔥',
+        summary => 'Swaps (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1649,7 +1649,7 @@ sub sushiswap_get_swaps__historical {
 #
 # sushiswap_get_token_day_datas__historical
 #
-# TokenDayDatas (historical) 🔥
+# TokenDayDatas (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1685,7 +1685,7 @@ sub sushiswap_get_swaps__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_token_day_datas__historical' } = {
-        summary => 'TokenDayDatas (historical) 🔥',
+        summary => 'TokenDayDatas (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDayDataDTO]',
         };
@@ -1753,7 +1753,7 @@ sub sushiswap_get_token_day_datas__historical {
 #
 # sushiswap_get_tokens__historical
 #
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1801,7 +1801,7 @@ sub sushiswap_get_token_day_datas__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__historical' } = {
-        summary => 'Tokens (historical) 🔥',
+        summary => 'Tokens (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };
@@ -1879,7 +1879,7 @@ sub sushiswap_get_tokens__historical {
 #
 # sushiswap_get_transactions__historical
 #
-# Transactions (historical) 🔥
+# Transactions (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1915,7 +1915,7 @@ sub sushiswap_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_transactions__historical' } = {
-        summary => 'Transactions (historical) 🔥',
+        summary => 'Transactions (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTransactionDTO]',
         };
@@ -1983,7 +1983,7 @@ sub sushiswap_get_transactions__historical {
 #
 # sushiswap_get_users__historical
 #
-# Users (historical) 🔥
+# Users (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2019,7 +2019,7 @@ sub sushiswap_get_transactions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_users__historical' } = {
-        summary => 'Users (historical) 🔥',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapUserDTO]',
         };

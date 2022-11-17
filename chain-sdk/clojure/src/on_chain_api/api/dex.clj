@@ -152,7 +152,7 @@
 
 
 (defn-spec dex-get-batchs-historical-with-http-info any?
-  "Batchs (historical) 🔥
+  "Batchs (historical)
   Gets batchs."
   ([] (dex-get-batchs-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -166,7 +166,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-batchs-historical (s/coll-of dex/batch-dto-spec)
-  "Batchs (historical) 🔥
+  "Batchs (historical)
   Gets batchs."
   ([] (dex-get-batchs-historical nil))
   ([optional-params any?]
@@ -177,7 +177,7 @@
 
 
 (defn-spec dex-get-deposits-historical-with-http-info any?
-  "Deposits (historical) 🔥
+  "Deposits (historical)
   Gets deposits."
   ([] (dex-get-deposits-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
@@ -191,7 +191,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-deposits-historical (s/coll-of dex/deposit-dto-spec)
-  "Deposits (historical) 🔥
+  "Deposits (historical)
   Gets deposits."
   ([] (dex-get-deposits-historical nil))
   ([optional-params any?]
@@ -202,7 +202,7 @@
 
 
 (defn-spec dex-get-orders-historical-with-http-info any?
-  "Orders (historical) 🔥
+  "Orders (historical)
   Gets orders."
   ([] (dex-get-orders-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id buy_token sell_token]} (s/map-of keyword? any?)]
@@ -216,7 +216,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-orders-historical (s/coll-of dex/order-dto-spec)
-  "Orders (historical) 🔥
+  "Orders (historical)
   Gets orders."
   ([] (dex-get-orders-historical nil))
   ([optional-params any?]
@@ -227,7 +227,7 @@
 
 
 (defn-spec dex-get-prices-historical-with-http-info any?
-  "Prices (historical) 🔥
+  "Prices (historical)
   Gets prices."
   ([] (dex-get-prices-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -241,7 +241,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-prices-historical (s/coll-of dex/price-dto-spec)
-  "Prices (historical) 🔥
+  "Prices (historical)
   Gets prices."
   ([] (dex-get-prices-historical nil))
   ([optional-params any?]
@@ -252,7 +252,7 @@
 
 
 (defn-spec dex-get-solutions-historical-with-http-info any?
-  "Solutions (historical) 🔥
+  "Solutions (historical)
   Gets solutions."
   ([] (dex-get-solutions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -266,7 +266,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-solutions-historical (s/coll-of dex/solution-dto-spec)
-  "Solutions (historical) 🔥
+  "Solutions (historical)
   Gets solutions."
   ([] (dex-get-solutions-historical nil))
   ([optional-params any?]
@@ -277,7 +277,7 @@
 
 
 (defn-spec dex-get-statss-historical-with-http-info any?
-  "Statss (historical) 🔥
+  "Statss (historical)
   Gets statss."
   ([] (dex-get-statss-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -291,7 +291,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-statss-historical (s/coll-of dex/stats-dto-spec)
-  "Statss (historical) 🔥
+  "Statss (historical)
   Gets statss."
   ([] (dex-get-statss-historical nil))
   ([optional-params any?]
@@ -302,7 +302,7 @@
 
 
 (defn-spec dex-get-tokens-historical-with-http-info any?
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (dex-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id address symbol name]} (s/map-of keyword? any?)]
@@ -316,7 +316,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-tokens-historical (s/coll-of dex/token-dto-spec)
-  "Tokens (historical) 🔥
+  "Tokens (historical)
   Gets tokens."
   ([] (dex-get-tokens-historical nil))
   ([optional-params any?]
@@ -327,7 +327,7 @@
 
 
 (defn-spec dex-get-trades-historical-with-http-info any?
-  "Trades (historical) 🔥
+  "Trades (historical)
   Gets trades."
   ([] (dex-get-trades-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id buy_token sell_token]} (s/map-of keyword? any?)]
@@ -341,7 +341,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-trades-historical (s/coll-of dex/trade-dto-spec)
-  "Trades (historical) 🔥
+  "Trades (historical)
   Gets trades."
   ([] (dex-get-trades-historical nil))
   ([optional-params any?]
@@ -352,7 +352,7 @@
 
 
 (defn-spec dex-get-users-historical-with-http-info any?
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (dex-get-users-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
@@ -366,7 +366,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-users-historical (s/coll-of dex/user-dto-spec)
-  "Users (historical) 🔥
+  "Users (historical)
   Gets users."
   ([] (dex-get-users-historical nil))
   ([optional-params any?]
@@ -377,7 +377,7 @@
 
 
 (defn-spec dex-get-withdraw-requests-historical-with-http-info any?
-  "WithdrawRequests (historical) 🔥
+  "WithdrawRequests (historical)
   Gets withdrawRequests."
   ([] (dex-get-withdraw-requests-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
@@ -391,7 +391,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-withdraw-requests-historical (s/coll-of dex/withdraw-request-dto-spec)
-  "WithdrawRequests (historical) 🔥
+  "WithdrawRequests (historical)
   Gets withdrawRequests."
   ([] (dex-get-withdraw-requests-historical nil))
   ([optional-params any?]
@@ -402,7 +402,7 @@
 
 
 (defn-spec dex-get-withdraws-historical-with-http-info any?
-  "Withdraws (historical) 🔥
+  "Withdraws (historical)
   Gets withdraws."
   ([] (dex-get-withdraws-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
@@ -416,7 +416,7 @@
               :auth-names    []})))
 
 (defn-spec dex-get-withdraws-historical (s/coll-of dex/withdraw-dto-spec)
-  "Withdraws (historical) 🔥
+  "Withdraws (historical)
   Gets withdraws."
   ([] (dex-get-withdraws-historical nil))
   ([optional-params any?]

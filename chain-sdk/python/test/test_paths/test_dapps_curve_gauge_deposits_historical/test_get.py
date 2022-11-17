@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveGaugeDepositsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveGaugeDepositsHistorical unit test stubs
-        GaugeDeposits (historical) 🔥  # noqa: E501
+        GaugeDeposits (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

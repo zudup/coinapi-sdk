@@ -14,7 +14,7 @@ feature -- Test routines
 
 
     test_cow_get_orders_historical
-            -- Orders (historical) 🔥
+            -- Orders (historical)
             --
             -- Gets orders.
         local
@@ -32,7 +32,7 @@ feature -- Test routines
         end
 
     test_cow_get_settlements_historical
-            -- Settlements (historical) 🔥
+            -- Settlements (historical)
             --
             -- Gets settlements.
         local
@@ -50,7 +50,7 @@ feature -- Test routines
         end
 
     test_cow_get_tokens_historical
-            -- Tokens (historical) 🔥
+            -- Tokens (historical)
             --
             -- Gets tokens.
         local
@@ -71,7 +71,7 @@ feature -- Test routines
         end
 
     test_cow_get_trades_historical
-            -- Trades (historical) 🔥
+            -- Trades (historical)
             --
             -- Gets trades.
         local
@@ -91,7 +91,7 @@ feature -- Test routines
         end
 
     test_cow_get_users_historical
-            -- Users (historical) 🔥
+            -- Users (historical)
             --
             -- Gets users.
         local

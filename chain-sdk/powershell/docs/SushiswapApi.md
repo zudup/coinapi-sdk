@@ -8,22 +8,22 @@ Method | HTTP request | Description
 [**Invoke-SushiswapBurnsCurrent**](SushiswapApi.md#Invoke-SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**Invoke-SushiswapDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
 [**Invoke-SushiswapFactorysCurrent**](SushiswapApi.md#Invoke-SushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
-[**Invoke-SushiswapGetBundlesHistorical**](SushiswapApi.md#Invoke-SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) 🔥
-[**Invoke-SushiswapGetBurnsHistorical**](SushiswapApi.md#Invoke-SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) 🔥
-[**Invoke-SushiswapGetDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) 🔥
-[**Invoke-SushiswapGetFactorysHistorical**](SushiswapApi.md#Invoke-SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) 🔥
-[**Invoke-SushiswapGetHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) 🔥
-[**Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) 🔥
-[**Invoke-SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) 🔥
-[**Invoke-SushiswapGetMintsHistorical**](SushiswapApi.md#Invoke-SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) 🔥
-[**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) 🔥
-[**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) 🔥
-[**Invoke-SushiswapGetPairsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) 🔥
-[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) 🔥
-[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-[**Invoke-SushiswapGetTransactionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) 🔥
-[**Invoke-SushiswapGetUsersHistorical**](SushiswapApi.md#Invoke-SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) 🔥
+[**Invoke-SushiswapGetBundlesHistorical**](SushiswapApi.md#Invoke-SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
+[**Invoke-SushiswapGetBurnsHistorical**](SushiswapApi.md#Invoke-SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
+[**Invoke-SushiswapGetDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
+[**Invoke-SushiswapGetFactorysHistorical**](SushiswapApi.md#Invoke-SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
+[**Invoke-SushiswapGetHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
+[**Invoke-SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
+[**Invoke-SushiswapGetMintsHistorical**](SushiswapApi.md#Invoke-SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
+[**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
+[**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**Invoke-SushiswapGetPairsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
+[**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
+[**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
+[**Invoke-SushiswapGetTransactionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
+[**Invoke-SushiswapGetUsersHistorical**](SushiswapApi.md#Invoke-SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
 [**Invoke-SushiswapHourDatasCurrent**](SushiswapApi.md#Invoke-SushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
 [**Invoke-SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**Invoke-SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
@@ -199,7 +199,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -211,7 +211,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Hardcoded to '1'. (optional)
 
-# Bundles (historical) 🔥
+# Bundles (historical)
 try {
     $Result = Invoke-SushiswapGetBundlesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -255,7 +255,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -268,7 +268,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# Burns (historical) 🔥
+# Burns (historical)
 try {
     $Result = Invoke-SushiswapGetBurnsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
@@ -312,7 +312,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-DayDatas (historical) 🔥
+DayDatas (historical)
 
 Gets dayDatas.
 
@@ -324,7 +324,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Unix timestamp for start of day / 86400 giving a unique day index. (optional)
 
-# DayDatas (historical) 🔥
+# DayDatas (historical)
 try {
     $Result = Invoke-SushiswapGetDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -367,7 +367,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -379,7 +379,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Factory address. (optional)
 
-# Factorys (historical) 🔥
+# Factorys (historical)
 try {
     $Result = Invoke-SushiswapGetFactorysHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -422,7 +422,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-HourDatas (historical) 🔥
+HourDatas (historical)
 
 Gets hourDatas.
 
@@ -434,7 +434,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Start of hour timestamp. (optional)
 
-# HourDatas (historical) 🔥
+# HourDatas (historical)
 try {
     $Result = Invoke-SushiswapGetHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -479,7 +479,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-User] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-LiquidityPositionSnapshots (historical) 🔥
+LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -493,7 +493,7 @@ $Id = "MyId" # String |  (optional)
 $User = "MyUser" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# LiquidityPositionSnapshots (historical) 🔥
+# LiquidityPositionSnapshots (historical)
 try {
     $Result = Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -User $User -Pair $Pair
 } catch {
@@ -540,7 +540,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-User] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-LiquidityPositions (historical) 🔥
+LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -554,7 +554,7 @@ $Id = "MyId" # String |  (optional)
 $User = "MyUser" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# LiquidityPositions (historical) 🔥
+# LiquidityPositions (historical)
 try {
     $Result = Invoke-SushiswapGetLiquidityPositionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -User $User -Pair $Pair
 } catch {
@@ -600,7 +600,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -613,7 +613,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# Mints (historical) 🔥
+# Mints (historical)
 try {
     $Result = Invoke-SushiswapGetMintsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
@@ -660,7 +660,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-PairDayDatas (historical) 🔥
+PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -675,7 +675,7 @@ $Pair = "MyPair" # String |  (optional)
 $Token0 = "MyToken0" # String |  (optional)
 $Token1 = "MyToken1" # String |  (optional)
 
-# PairDayDatas (historical) 🔥
+# PairDayDatas (historical)
 try {
     $Result = Invoke-SushiswapGetPairDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -722,7 +722,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-PairHourDatas (historical) 🔥
+PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -735,7 +735,7 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# PairHourDatas (historical) 🔥
+# PairHourDatas (historical)
 try {
     $Result = Invoke-SushiswapGetPairHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
@@ -782,7 +782,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-Pairs (historical) 🔥
+Pairs (historical)
 
 Gets pairs.
 
@@ -797,7 +797,7 @@ $Name = "MyName" # String |  (optional)
 $Token0 = "MyToken0" # String |  (optional)
 $Token1 = "MyToken1" # String |  (optional)
 
-# Pairs (historical) 🔥
+# Pairs (historical)
 try {
     $Result = Invoke-SushiswapGetPairsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Name $Name -Token0 $Token0 -Token1 $Token1
 } catch {
@@ -844,7 +844,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -857,7 +857,7 @@ $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Transaction hash plus index in Transaction swap array. (optional)
 $Pair = "MyPair" # String | Reference to pair. (optional)
 
-# Swaps (historical) 🔥
+# Swaps (historical)
 try {
     $Result = Invoke-SushiswapGetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
@@ -901,7 +901,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-TokenDayDatas (historical) 🔥
+TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -913,7 +913,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Identifier, day start timestamp in unix / 86400. (optional)
 
-# TokenDayDatas (historical) 🔥
+# TokenDayDatas (historical)
 try {
     $Result = Invoke-SushiswapGetTokenDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -958,7 +958,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -972,7 +972,7 @@ $Id = "MyId" # String | Token address. (optional)
 $Symbol = "MySymbol" # String | Token symbol. (optional)
 $Name = "MyName" # String | Token name. (optional)
 
-# Tokens (historical) 🔥
+# Tokens (historical)
 try {
     $Result = Invoke-SushiswapGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Symbol $Symbol -Name $Name
 } catch {
@@ -1017,7 +1017,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -1029,7 +1029,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Ethereum transaction hash. (optional)
 
-# Transactions (historical) 🔥
+# Transactions (historical)
 try {
     $Result = Invoke-SushiswapGetTransactionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
@@ -1072,7 +1072,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1084,7 +1084,7 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | User address. (optional)
 
-# Users (historical) 🔥
+# Users (historical)
 try {
     $Result = Invoke-SushiswapGetUsersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {

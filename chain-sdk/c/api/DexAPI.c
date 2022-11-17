@@ -162,7 +162,7 @@ end:
 
 }
 
-// Batchs (historical) 🔥
+// Batchs (historical)
 //
 // Gets batchs.
 //
@@ -341,7 +341,7 @@ end:
 
 }
 
-// Deposits (historical) 🔥
+// Deposits (historical)
 //
 // Gets deposits.
 //
@@ -544,7 +544,7 @@ end:
 
 }
 
-// Orders (historical) 🔥
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -771,7 +771,7 @@ end:
 
 }
 
-// Prices (historical) 🔥
+// Prices (historical)
 //
 // Gets prices.
 //
@@ -950,7 +950,7 @@ end:
 
 }
 
-// Solutions (historical) 🔥
+// Solutions (historical)
 //
 // Gets solutions.
 //
@@ -1129,7 +1129,7 @@ end:
 
 }
 
-// Statss (historical) 🔥
+// Statss (historical)
 //
 // Gets statss.
 //
@@ -1308,7 +1308,7 @@ end:
 
 }
 
-// Tokens (historical) 🔥
+// Tokens (historical)
 //
 // Gets tokens.
 //
@@ -1559,7 +1559,7 @@ end:
 
 }
 
-// Trades (historical) 🔥
+// Trades (historical)
 //
 // Gets trades.
 //
@@ -1786,7 +1786,7 @@ end:
 
 }
 
-// Users (historical) 🔥
+// Users (historical)
 //
 // Gets users.
 //
@@ -1965,7 +1965,7 @@ end:
 
 }
 
-// WithdrawRequests (historical) 🔥
+// WithdrawRequests (historical)
 //
 // Gets withdrawRequests.
 //
@@ -2168,7 +2168,7 @@ end:
 
 }
 
-// Withdraws (historical) 🔥
+// Withdraws (historical)
 //
 // Gets withdraws.
 //

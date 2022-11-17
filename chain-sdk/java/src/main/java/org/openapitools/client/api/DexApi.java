@@ -403,7 +403,7 @@ public class DexApi {
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -424,7 +424,7 @@ public class DexApi {
     }
 
     /**
-     * Batchs (historical) 🔥
+     * Batchs (historical)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -446,7 +446,7 @@ public class DexApi {
     }
 
     /**
-     * Batchs (historical) 🔥 (asynchronously)
+     * Batchs (historical) (asynchronously)
      * Gets batchs.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -563,7 +563,7 @@ public class DexApi {
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -585,7 +585,7 @@ public class DexApi {
     }
 
     /**
-     * Deposits (historical) 🔥
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -608,7 +608,7 @@ public class DexApi {
     }
 
     /**
-     * Deposits (historical) 🔥 (asynchronously)
+     * Deposits (historical) (asynchronously)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -731,7 +731,7 @@ public class DexApi {
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -754,7 +754,7 @@ public class DexApi {
     }
 
     /**
-     * Orders (historical) 🔥
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -778,7 +778,7 @@ public class DexApi {
     }
 
     /**
-     * Orders (historical) 🔥 (asynchronously)
+     * Orders (historical) (asynchronously)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -892,7 +892,7 @@ public class DexApi {
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -913,7 +913,7 @@ public class DexApi {
     }
 
     /**
-     * Prices (historical) 🔥
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -935,7 +935,7 @@ public class DexApi {
     }
 
     /**
-     * Prices (historical) 🔥 (asynchronously)
+     * Prices (historical) (asynchronously)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1047,7 +1047,7 @@ public class DexApi {
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1068,7 +1068,7 @@ public class DexApi {
     }
 
     /**
-     * Solutions (historical) 🔥
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1090,7 +1090,7 @@ public class DexApi {
     }
 
     /**
-     * Solutions (historical) 🔥 (asynchronously)
+     * Solutions (historical) (asynchronously)
      * Gets solutions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1202,7 +1202,7 @@ public class DexApi {
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1223,7 +1223,7 @@ public class DexApi {
     }
 
     /**
-     * Statss (historical) 🔥
+     * Statss (historical)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1245,7 +1245,7 @@ public class DexApi {
     }
 
     /**
-     * Statss (historical) 🔥 (asynchronously)
+     * Statss (historical) (asynchronously)
      * Gets statss.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1372,7 +1372,7 @@ public class DexApi {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1396,7 +1396,7 @@ public class DexApi {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1421,7 +1421,7 @@ public class DexApi {
     }
 
     /**
-     * Tokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) (asynchronously)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1546,7 +1546,7 @@ public class DexApi {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1569,7 +1569,7 @@ public class DexApi {
     }
 
     /**
-     * Trades (historical) 🔥
+     * Trades (historical)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1593,7 +1593,7 @@ public class DexApi {
     }
 
     /**
-     * Trades (historical) 🔥 (asynchronously)
+     * Trades (historical) (asynchronously)
      * Gets trades.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1707,7 +1707,7 @@ public class DexApi {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1728,7 +1728,7 @@ public class DexApi {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1750,7 +1750,7 @@ public class DexApi {
     }
 
     /**
-     * Users (historical) 🔥 (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1867,7 +1867,7 @@ public class DexApi {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1889,7 +1889,7 @@ public class DexApi {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥
+     * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1912,7 +1912,7 @@ public class DexApi {
     }
 
     /**
-     * WithdrawRequests (historical) 🔥 (asynchronously)
+     * WithdrawRequests (historical) (asynchronously)
      * Gets withdrawRequests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2030,7 +2030,7 @@ public class DexApi {
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2052,7 +2052,7 @@ public class DexApi {
     }
 
     /**
-     * Withdraws (historical) 🔥
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2075,7 +2075,7 @@ public class DexApi {
     }
 
     /**
-     * Withdraws (historical) 🔥 (asynchronously)
+     * Withdraws (historical) (asynchronously)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

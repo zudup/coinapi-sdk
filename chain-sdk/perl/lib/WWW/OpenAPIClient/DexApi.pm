@@ -149,7 +149,7 @@ sub dex_deposits__current {
 #
 # dex_get_batchs__historical
 #
-# Batchs (historical) 🔥
+# Batchs (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -185,7 +185,7 @@ sub dex_deposits__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_batchs__historical' } = {
-        summary => 'Batchs (historical) 🔥',
+        summary => 'Batchs (historical)',
         params => $params,
         returns => 'ARRAY[DexBatchDTO]',
         };
@@ -253,7 +253,7 @@ sub dex_get_batchs__historical {
 #
 # dex_get_deposits__historical
 #
-# Deposits (historical) 🔥
+# Deposits (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -295,7 +295,7 @@ sub dex_get_batchs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_deposits__historical' } = {
-        summary => 'Deposits (historical) 🔥',
+        summary => 'Deposits (historical)',
         params => $params,
         returns => 'ARRAY[DexDepositDTO]',
         };
@@ -368,7 +368,7 @@ sub dex_get_deposits__historical {
 #
 # dex_get_orders__historical
 #
-# Orders (historical) 🔥
+# Orders (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -416,7 +416,7 @@ sub dex_get_deposits__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_orders__historical' } = {
-        summary => 'Orders (historical) 🔥',
+        summary => 'Orders (historical)',
         params => $params,
         returns => 'ARRAY[DexOrderDTO]',
         };
@@ -494,7 +494,7 @@ sub dex_get_orders__historical {
 #
 # dex_get_prices__historical
 #
-# Prices (historical) 🔥
+# Prices (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -530,7 +530,7 @@ sub dex_get_orders__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_prices__historical' } = {
-        summary => 'Prices (historical) 🔥',
+        summary => 'Prices (historical)',
         params => $params,
         returns => 'ARRAY[DexPriceDTO]',
         };
@@ -598,7 +598,7 @@ sub dex_get_prices__historical {
 #
 # dex_get_solutions__historical
 #
-# Solutions (historical) 🔥
+# Solutions (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -634,7 +634,7 @@ sub dex_get_prices__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_solutions__historical' } = {
-        summary => 'Solutions (historical) 🔥',
+        summary => 'Solutions (historical)',
         params => $params,
         returns => 'ARRAY[DexSolutionDTO]',
         };
@@ -702,7 +702,7 @@ sub dex_get_solutions__historical {
 #
 # dex_get_statss__historical
 #
-# Statss (historical) 🔥
+# Statss (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -738,7 +738,7 @@ sub dex_get_solutions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_statss__historical' } = {
-        summary => 'Statss (historical) 🔥',
+        summary => 'Statss (historical)',
         params => $params,
         returns => 'ARRAY[DexStatsDTO]',
         };
@@ -806,7 +806,7 @@ sub dex_get_statss__historical {
 #
 # dex_get_tokens__historical
 #
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -860,7 +860,7 @@ sub dex_get_statss__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_tokens__historical' } = {
-        summary => 'Tokens (historical) 🔥',
+        summary => 'Tokens (historical)',
         params => $params,
         returns => 'ARRAY[DexTokenDTO]',
         };
@@ -943,7 +943,7 @@ sub dex_get_tokens__historical {
 #
 # dex_get_trades__historical
 #
-# Trades (historical) 🔥
+# Trades (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -991,7 +991,7 @@ sub dex_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_trades__historical' } = {
-        summary => 'Trades (historical) 🔥',
+        summary => 'Trades (historical)',
         params => $params,
         returns => 'ARRAY[DexTradeDTO]',
         };
@@ -1069,7 +1069,7 @@ sub dex_get_trades__historical {
 #
 # dex_get_users__historical
 #
-# Users (historical) 🔥
+# Users (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1105,7 +1105,7 @@ sub dex_get_trades__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_users__historical' } = {
-        summary => 'Users (historical) 🔥',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[DexUserDTO]',
         };
@@ -1173,7 +1173,7 @@ sub dex_get_users__historical {
 #
 # dex_get_withdraw_requests__historical
 #
-# WithdrawRequests (historical) 🔥
+# WithdrawRequests (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1215,7 +1215,7 @@ sub dex_get_users__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_withdraw_requests__historical' } = {
-        summary => 'WithdrawRequests (historical) 🔥',
+        summary => 'WithdrawRequests (historical)',
         params => $params,
         returns => 'ARRAY[DexWithdrawRequestDTO]',
         };
@@ -1288,7 +1288,7 @@ sub dex_get_withdraw_requests__historical {
 #
 # dex_get_withdraws__historical
 #
-# Withdraws (historical) 🔥
+# Withdraws (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1330,7 +1330,7 @@ sub dex_get_withdraw_requests__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_withdraws__historical' } = {
-        summary => 'Withdraws (historical) 🔥',
+        summary => 'Withdraws (historical)',
         params => $params,
         returns => 'ARRAY[DexWithdrawDTO]',
         };

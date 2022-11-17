@@ -99,7 +99,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetBatchsHistorical
      *
-     * Batchs (historical) 🔥.
+     * Batchs (historical).
      *
      */
     public function testDexGetBatchsHistorical()
@@ -111,7 +111,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetDepositsHistorical
      *
-     * Deposits (historical) 🔥.
+     * Deposits (historical).
      *
      */
     public function testDexGetDepositsHistorical()
@@ -123,7 +123,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetOrdersHistorical
      *
-     * Orders (historical) 🔥.
+     * Orders (historical).
      *
      */
     public function testDexGetOrdersHistorical()
@@ -135,7 +135,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetPricesHistorical
      *
-     * Prices (historical) 🔥.
+     * Prices (historical).
      *
      */
     public function testDexGetPricesHistorical()
@@ -147,7 +147,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetSolutionsHistorical
      *
-     * Solutions (historical) 🔥.
+     * Solutions (historical).
      *
      */
     public function testDexGetSolutionsHistorical()
@@ -159,7 +159,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetStatssHistorical
      *
-     * Statss (historical) 🔥.
+     * Statss (historical).
      *
      */
     public function testDexGetStatssHistorical()
@@ -171,7 +171,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetTokensHistorical
      *
-     * Tokens (historical) 🔥.
+     * Tokens (historical).
      *
      */
     public function testDexGetTokensHistorical()
@@ -183,7 +183,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetTradesHistorical
      *
-     * Trades (historical) 🔥.
+     * Trades (historical).
      *
      */
     public function testDexGetTradesHistorical()
@@ -195,7 +195,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetUsersHistorical
      *
-     * Users (historical) 🔥.
+     * Users (historical).
      *
      */
     public function testDexGetUsersHistorical()
@@ -207,7 +207,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetWithdrawRequestsHistorical
      *
-     * WithdrawRequests (historical) 🔥.
+     * WithdrawRequests (historical).
      *
      */
     public function testDexGetWithdrawRequestsHistorical()
@@ -219,7 +219,7 @@ class DexApiTest extends TestCase
     /**
      * Test case for dexGetWithdrawsHistorical
      *
-     * Withdraws (historical) 🔥.
+     * Withdraws (historical).
      *
      */
     public function testDexGetWithdrawsHistorical()

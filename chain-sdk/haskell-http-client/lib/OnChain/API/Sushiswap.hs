@@ -154,7 +154,7 @@ instance Produces SushiswapFactorysCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/bundles\/historical@
 -- 
--- Bundles (historical) 🔥
+-- Bundles (historical)
 -- 
 -- Gets bundles.
 -- 
@@ -202,7 +202,7 @@ instance Produces SushiswapGetBundlesHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/burns\/historical@
 -- 
--- Burns (historical) 🔥
+-- Burns (historical)
 -- 
 -- Gets burns.
 -- 
@@ -243,7 +243,7 @@ instance Produces SushiswapGetBurnsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/dayDatas\/historical@
 -- 
--- DayDatas (historical) 🔥
+-- DayDatas (historical)
 -- 
 -- Gets dayDatas.
 -- 
@@ -291,7 +291,7 @@ instance Produces SushiswapGetDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/factorys\/historical@
 -- 
--- Factorys (historical) 🔥
+-- Factorys (historical)
 -- 
 -- Gets factorys.
 -- 
@@ -339,7 +339,7 @@ instance Produces SushiswapGetFactorysHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/hourDatas\/historical@
 -- 
--- HourDatas (historical) 🔥
+-- HourDatas (historical)
 -- 
 -- Gets hourDatas.
 -- 
@@ -387,7 +387,7 @@ instance Produces SushiswapGetHourDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/liquidityPositionSnapshots\/historical@
 -- 
--- LiquidityPositionSnapshots (historical) 🔥
+-- LiquidityPositionSnapshots (historical)
 -- 
 -- Gets liquidityPositionSnapshots.
 -- 
@@ -431,7 +431,7 @@ instance Produces SushiswapGetLiquidityPositionSnapshotsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/liquidityPositions\/historical@
 -- 
--- LiquidityPositions (historical) 🔥
+-- LiquidityPositions (historical)
 -- 
 -- Gets liquidityPositions.
 -- 
@@ -475,7 +475,7 @@ instance Produces SushiswapGetLiquidityPositionsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/mints\/historical@
 -- 
--- Mints (historical) 🔥
+-- Mints (historical)
 -- 
 -- Gets mints.
 -- 
@@ -516,7 +516,7 @@ instance Produces SushiswapGetMintsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pairDayDatas\/historical@
 -- 
--- PairDayDatas (historical) 🔥
+-- PairDayDatas (historical)
 -- 
 -- Gets pairDayDatas.
 -- 
@@ -563,7 +563,7 @@ instance Produces SushiswapGetPairDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pairHourDatas\/historical@
 -- 
--- PairHourDatas (historical) 🔥
+-- PairHourDatas (historical)
 -- 
 -- Gets pairHourDatas.
 -- 
@@ -604,7 +604,7 @@ instance Produces SushiswapGetPairHourDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pairs\/historical@
 -- 
--- Pairs (historical) 🔥
+-- Pairs (historical)
 -- 
 -- Gets pairs.
 -- 
@@ -651,7 +651,7 @@ instance Produces SushiswapGetPairsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
--- Swaps (historical) 🔥
+-- Swaps (historical)
 -- 
 -- Gets swaps.
 -- 
@@ -704,7 +704,7 @@ instance Produces SushiswapGetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokenDayDatas\/historical@
 -- 
--- TokenDayDatas (historical) 🔥
+-- TokenDayDatas (historical)
 -- 
 -- Gets tokenDayDatas.
 -- 
@@ -752,7 +752,7 @@ instance Produces SushiswapGetTokenDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -810,7 +810,7 @@ instance Produces SushiswapGetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/transactions\/historical@
 -- 
--- Transactions (historical) 🔥
+-- Transactions (historical)
 -- 
 -- Gets transactions.
 -- 
@@ -858,7 +858,7 @@ instance Produces SushiswapGetTransactionsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/users\/historical@
 -- 
--- Users (historical) 🔥
+-- Users (historical)
 -- 
 -- Gets users.
 -- 

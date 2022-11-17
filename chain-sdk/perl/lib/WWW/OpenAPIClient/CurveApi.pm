@@ -993,7 +993,7 @@ sub curve_gauges__current {
 #
 # curve_get_accounts__historical
 #
-# Accounts (historical) 🔥
+# Accounts (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1035,7 +1035,7 @@ sub curve_gauges__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_accounts__historical' } = {
-        summary => 'Accounts (historical) 🔥',
+        summary => 'Accounts (historical)',
         params => $params,
         returns => 'ARRAY[CurveAccountDTO]',
         };
@@ -1108,7 +1108,7 @@ sub curve_get_accounts__historical {
 #
 # curve_get_add_liquidity_events__historical
 #
-# AddLiquidityEvents (historical) 🔥
+# AddLiquidityEvents (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1150,7 +1150,7 @@ sub curve_get_accounts__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_add_liquidity_events__historical' } = {
-        summary => 'AddLiquidityEvents (historical) 🔥',
+        summary => 'AddLiquidityEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveAddLiquidityEventDTO]',
         };
@@ -1223,7 +1223,7 @@ sub curve_get_add_liquidity_events__historical {
 #
 # curve_get_admin_fee_change_logs__historical
 #
-# AdminFeeChangeLogs (historical) 🔥
+# AdminFeeChangeLogs (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1265,7 +1265,7 @@ sub curve_get_add_liquidity_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_admin_fee_change_logs__historical' } = {
-        summary => 'AdminFeeChangeLogs (historical) 🔥',
+        summary => 'AdminFeeChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveAdminFeeChangeLogDTO]',
         };
@@ -1338,7 +1338,7 @@ sub curve_get_admin_fee_change_logs__historical {
 #
 # curve_get_amplification_coeff_change_logs__historical
 #
-# AmplificationCoeffChangeLogs (historical) 🔥
+# AmplificationCoeffChangeLogs (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1380,7 +1380,7 @@ sub curve_get_admin_fee_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_amplification_coeff_change_logs__historical' } = {
-        summary => 'AmplificationCoeffChangeLogs (historical) 🔥',
+        summary => 'AmplificationCoeffChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveAmplificationCoeffChangeLogDTO]',
         };
@@ -1453,7 +1453,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
 #
 # curve_get_coins__historical
 #
-# Coins (historical) 🔥
+# Coins (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1495,7 +1495,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_coins__historical' } = {
-        summary => 'Coins (historical) 🔥',
+        summary => 'Coins (historical)',
         params => $params,
         returns => 'ARRAY[CurveCoinDTO]',
         };
@@ -1568,7 +1568,7 @@ sub curve_get_coins__historical {
 #
 # curve_get_contract_versions__historical
 #
-# ContractVersions (historical) 🔥
+# ContractVersions (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1610,7 +1610,7 @@ sub curve_get_coins__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_contract_versions__historical' } = {
-        summary => 'ContractVersions (historical) 🔥',
+        summary => 'ContractVersions (historical)',
         params => $params,
         returns => 'ARRAY[CurveContractVersionDTO]',
         };
@@ -1683,7 +1683,7 @@ sub curve_get_contract_versions__historical {
 #
 # curve_get_contracts__historical
 #
-# Contracts (historical) 🔥
+# Contracts (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1719,7 +1719,7 @@ sub curve_get_contract_versions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_contracts__historical' } = {
-        summary => 'Contracts (historical) 🔥',
+        summary => 'Contracts (historical)',
         params => $params,
         returns => 'ARRAY[CurveContractDTO]',
         };
@@ -1787,7 +1787,7 @@ sub curve_get_contracts__historical {
 #
 # curve_get_daily_volumes__historical
 #
-# DailyVolumes (historical) 🔥
+# DailyVolumes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1829,7 +1829,7 @@ sub curve_get_contracts__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_daily_volumes__historical' } = {
-        summary => 'DailyVolumes (historical) 🔥',
+        summary => 'DailyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveDailyVolumeDTO]',
         };
@@ -1902,7 +1902,7 @@ sub curve_get_daily_volumes__historical {
 #
 # curve_get_exchanges__historical
 #
-# Exchanges (historical) 🔥
+# Exchanges (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1944,7 +1944,7 @@ sub curve_get_daily_volumes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_exchanges__historical' } = {
-        summary => 'Exchanges (historical) 🔥',
+        summary => 'Exchanges (historical)',
         params => $params,
         returns => 'ARRAY[CurveExchangeDTO]',
         };
@@ -2017,7 +2017,7 @@ sub curve_get_exchanges__historical {
 #
 # curve_get_fee_change_logs__historical
 #
-# FeeChangeLogs (historical) 🔥
+# FeeChangeLogs (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2059,7 +2059,7 @@ sub curve_get_exchanges__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_fee_change_logs__historical' } = {
-        summary => 'FeeChangeLogs (historical) 🔥',
+        summary => 'FeeChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveFeeChangeLogDTO]',
         };
@@ -2132,7 +2132,7 @@ sub curve_get_fee_change_logs__historical {
 #
 # curve_get_gauge_deposits__historical
 #
-# GaugeDeposits (historical) 🔥
+# GaugeDeposits (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2168,7 +2168,7 @@ sub curve_get_fee_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_deposits__historical' } = {
-        summary => 'GaugeDeposits (historical) 🔥',
+        summary => 'GaugeDeposits (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeDepositDTO]',
         };
@@ -2236,7 +2236,7 @@ sub curve_get_gauge_deposits__historical {
 #
 # curve_get_gauge_liquiditys__historical
 #
-# GaugeLiquiditys (historical) 🔥
+# GaugeLiquiditys (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2278,7 +2278,7 @@ sub curve_get_gauge_deposits__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_liquiditys__historical' } = {
-        summary => 'GaugeLiquiditys (historical) 🔥',
+        summary => 'GaugeLiquiditys (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeLiquidityDTO]',
         };
@@ -2351,7 +2351,7 @@ sub curve_get_gauge_liquiditys__historical {
 #
 # curve_get_gauge_total_weights__historical
 #
-# GaugeTotalWeights (historical) 🔥
+# GaugeTotalWeights (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2387,7 +2387,7 @@ sub curve_get_gauge_liquiditys__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_total_weights__historical' } = {
-        summary => 'GaugeTotalWeights (historical) 🔥',
+        summary => 'GaugeTotalWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTotalWeightDTO]',
         };
@@ -2455,7 +2455,7 @@ sub curve_get_gauge_total_weights__historical {
 #
 # curve_get_gauge_type_weights__historical
 #
-# GaugeTypeWeights (historical) 🔥
+# GaugeTypeWeights (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2491,7 +2491,7 @@ sub curve_get_gauge_total_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_type_weights__historical' } = {
-        summary => 'GaugeTypeWeights (historical) 🔥',
+        summary => 'GaugeTypeWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTypeWeightDTO]',
         };
@@ -2559,7 +2559,7 @@ sub curve_get_gauge_type_weights__historical {
 #
 # curve_get_gauge_types__historical
 #
-# GaugeTypes (historical) 🔥
+# GaugeTypes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2601,7 +2601,7 @@ sub curve_get_gauge_type_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_types__historical' } = {
-        summary => 'GaugeTypes (historical) 🔥',
+        summary => 'GaugeTypes (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTypeDTO]',
         };
@@ -2674,7 +2674,7 @@ sub curve_get_gauge_types__historical {
 #
 # curve_get_gauge_weight_votes__historical
 #
-# GaugeWeightVotes (historical) 🔥
+# GaugeWeightVotes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2716,7 +2716,7 @@ sub curve_get_gauge_types__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_weight_votes__historical' } = {
-        summary => 'GaugeWeightVotes (historical) 🔥',
+        summary => 'GaugeWeightVotes (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWeightVoteDTO]',
         };
@@ -2789,7 +2789,7 @@ sub curve_get_gauge_weight_votes__historical {
 #
 # curve_get_gauge_weights__historical
 #
-# GaugeWeights (historical) 🔥
+# GaugeWeights (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2825,7 +2825,7 @@ sub curve_get_gauge_weight_votes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_weights__historical' } = {
-        summary => 'GaugeWeights (historical) 🔥',
+        summary => 'GaugeWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWeightDTO]',
         };
@@ -2893,7 +2893,7 @@ sub curve_get_gauge_weights__historical {
 #
 # curve_get_gauge_withdraws__historical
 #
-# GaugeWithdraws (historical) 🔥
+# GaugeWithdraws (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2929,7 +2929,7 @@ sub curve_get_gauge_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauge_withdraws__historical' } = {
-        summary => 'GaugeWithdraws (historical) 🔥',
+        summary => 'GaugeWithdraws (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWithdrawDTO]',
         };
@@ -2997,7 +2997,7 @@ sub curve_get_gauge_withdraws__historical {
 #
 # curve_get_gauges__historical
 #
-# Gauges (historical) 🔥
+# Gauges (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3045,7 +3045,7 @@ sub curve_get_gauge_withdraws__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges__historical' } = {
-        summary => 'Gauges (historical) 🔥',
+        summary => 'Gauges (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeDTO]',
         };
@@ -3123,7 +3123,7 @@ sub curve_get_gauges__historical {
 #
 # curve_get_hourly_volumes__historical
 #
-# HourlyVolumes (historical) 🔥
+# HourlyVolumes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3165,7 +3165,7 @@ sub curve_get_gauges__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_hourly_volumes__historical' } = {
-        summary => 'HourlyVolumes (historical) 🔥',
+        summary => 'HourlyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveHourlyVolumeDTO]',
         };
@@ -3238,7 +3238,7 @@ sub curve_get_hourly_volumes__historical {
 #
 # curve_get_lp_tokens__historical
 #
-# LpTokens (historical) 🔥
+# LpTokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3298,7 +3298,7 @@ sub curve_get_hourly_volumes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_lp_tokens__historical' } = {
-        summary => 'LpTokens (historical) 🔥',
+        summary => 'LpTokens (historical)',
         params => $params,
         returns => 'ARRAY[CurveLpTokenDTO]',
         };
@@ -3386,7 +3386,7 @@ sub curve_get_lp_tokens__historical {
 #
 # curve_get_pools__historical
 #
-# Pools (historical) 🔥
+# Pools (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3428,7 +3428,7 @@ sub curve_get_lp_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_pools__historical' } = {
-        summary => 'Pools (historical) 🔥',
+        summary => 'Pools (historical)',
         params => $params,
         returns => 'ARRAY[CurvePoolDTO]',
         };
@@ -3501,7 +3501,7 @@ sub curve_get_pools__historical {
 #
 # curve_get_proposal_votes__historical
 #
-# ProposalVotes (historical) 🔥
+# ProposalVotes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3537,7 +3537,7 @@ sub curve_get_pools__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_proposal_votes__historical' } = {
-        summary => 'ProposalVotes (historical) 🔥',
+        summary => 'ProposalVotes (historical)',
         params => $params,
         returns => 'ARRAY[CurveProposalVoteDTO]',
         };
@@ -3605,7 +3605,7 @@ sub curve_get_proposal_votes__historical {
 #
 # curve_get_proposals__historical
 #
-# Proposals (historical) 🔥
+# Proposals (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3641,7 +3641,7 @@ sub curve_get_proposal_votes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_proposals__historical' } = {
-        summary => 'Proposals (historical) 🔥',
+        summary => 'Proposals (historical)',
         params => $params,
         returns => 'ARRAY[CurveProposalDTO]',
         };
@@ -3709,7 +3709,7 @@ sub curve_get_proposals__historical {
 #
 # curve_get_remove_liquidity_events__historical
 #
-# RemoveLiquidityEvents (historical) 🔥
+# RemoveLiquidityEvents (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3751,7 +3751,7 @@ sub curve_get_proposals__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_events__historical' } = {
-        summary => 'RemoveLiquidityEvents (historical) 🔥',
+        summary => 'RemoveLiquidityEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveRemoveLiquidityEventDTO]',
         };
@@ -3824,7 +3824,7 @@ sub curve_get_remove_liquidity_events__historical {
 #
 # curve_get_remove_liquidity_one_events__historical
 #
-# RemoveLiquidityOneEvents (historical) 🔥
+# RemoveLiquidityOneEvents (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3866,7 +3866,7 @@ sub curve_get_remove_liquidity_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_one_events__historical' } = {
-        summary => 'RemoveLiquidityOneEvents (historical) 🔥',
+        summary => 'RemoveLiquidityOneEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveRemoveLiquidityOneEventDTO]',
         };
@@ -3939,7 +3939,7 @@ sub curve_get_remove_liquidity_one_events__historical {
 #
 # curve_get_system_states__historical
 #
-# SystemStates (historical) 🔥
+# SystemStates (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3975,7 +3975,7 @@ sub curve_get_remove_liquidity_one_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_system_states__historical' } = {
-        summary => 'SystemStates (historical) 🔥',
+        summary => 'SystemStates (historical)',
         params => $params,
         returns => 'ARRAY[CurveSystemStateDTO]',
         };
@@ -4043,7 +4043,7 @@ sub curve_get_system_states__historical {
 #
 # curve_get_tokens__historical
 #
-# Tokens (historical) 🔥
+# Tokens (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4097,7 +4097,7 @@ sub curve_get_system_states__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_tokens__historical' } = {
-        summary => 'Tokens (historical) 🔥',
+        summary => 'Tokens (historical)',
         params => $params,
         returns => 'ARRAY[CurveTokenDTO]',
         };
@@ -4180,7 +4180,7 @@ sub curve_get_tokens__historical {
 #
 # curve_get_transfer_ownership_events__historical
 #
-# TransferOwnershipEvents (historical) 🔥
+# TransferOwnershipEvents (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4222,7 +4222,7 @@ sub curve_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_transfer_ownership_events__historical' } = {
-        summary => 'TransferOwnershipEvents (historical) 🔥',
+        summary => 'TransferOwnershipEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveTransferOwnershipEventDTO]',
         };
@@ -4295,7 +4295,7 @@ sub curve_get_transfer_ownership_events__historical {
 #
 # curve_get_underlying_coins__historical
 #
-# UnderlyingCoins (historical) 🔥
+# UnderlyingCoins (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -4337,7 +4337,7 @@ sub curve_get_transfer_ownership_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_underlying_coins__historical' } = {
-        summary => 'UnderlyingCoins (historical) 🔥',
+        summary => 'UnderlyingCoins (historical)',
         params => $params,
         returns => 'ARRAY[CurveUnderlyingCoinDTO]',
         };
@@ -4410,7 +4410,7 @@ sub curve_get_underlying_coins__historical {
 #
 # curve_get_voting_apps__historical
 #
-# VotingApps (historical) 🔥
+# VotingApps (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4452,7 +4452,7 @@ sub curve_get_underlying_coins__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_voting_apps__historical' } = {
-        summary => 'VotingApps (historical) 🔥',
+        summary => 'VotingApps (historical)',
         params => $params,
         returns => 'ARRAY[CurveVotingAppDTO]',
         };
@@ -4525,7 +4525,7 @@ sub curve_get_voting_apps__historical {
 #
 # curve_get_weekly_volumes__historical
 #
-# WeeklyVolumes (historical) 🔥
+# WeeklyVolumes (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4567,7 +4567,7 @@ sub curve_get_voting_apps__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_weekly_volumes__historical' } = {
-        summary => 'WeeklyVolumes (historical) 🔥',
+        summary => 'WeeklyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveWeeklyVolumeDTO]',
         };

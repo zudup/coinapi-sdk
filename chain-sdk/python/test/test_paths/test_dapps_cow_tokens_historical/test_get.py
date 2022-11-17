@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCowTokensHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCowTokensHistorical unit test stubs
-        Tokens (historical) 🔥  # noqa: E501
+        Tokens (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

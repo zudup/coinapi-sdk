@@ -30,7 +30,7 @@ test_that("UniswapV2BurnsCurrent", {
 test_that("UniswapV2GetBundlesHistorical", {
   # tests for UniswapV2GetBundlesHistorical
   # base path: https://onchain.coinapi.io
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   # Gets bundles.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -46,7 +46,7 @@ test_that("UniswapV2GetBundlesHistorical", {
 test_that("UniswapV2GetBurnsHistorical", {
   # tests for UniswapV2GetBurnsHistorical
   # base path: https://onchain.coinapi.io
-  # Burns (historical) 🔥
+  # Burns (historical)
   # Gets burns.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -63,7 +63,7 @@ test_that("UniswapV2GetBurnsHistorical", {
 test_that("UniswapV2GetLiquidityPositionSnapshotsHistorical", {
   # tests for UniswapV2GetLiquidityPositionSnapshotsHistorical
   # base path: https://onchain.coinapi.io
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   # Gets liquidityPositionSnapshots.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -81,7 +81,7 @@ test_that("UniswapV2GetLiquidityPositionSnapshotsHistorical", {
 test_that("UniswapV2GetLiquidityPositionsHistorical", {
   # tests for UniswapV2GetLiquidityPositionsHistorical
   # base path: https://onchain.coinapi.io
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   # Gets liquidityPositions.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -99,7 +99,7 @@ test_that("UniswapV2GetLiquidityPositionsHistorical", {
 test_that("UniswapV2GetMintsHistorical", {
   # tests for UniswapV2GetMintsHistorical
   # base path: https://onchain.coinapi.io
-  # Mints (historical) 🔥
+  # Mints (historical)
   # Gets mints.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -116,7 +116,7 @@ test_that("UniswapV2GetMintsHistorical", {
 test_that("UniswapV2GetPairDayDatasHistorical", {
   # tests for UniswapV2GetPairDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   # Gets pairDayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -134,7 +134,7 @@ test_that("UniswapV2GetPairDayDatasHistorical", {
 test_that("UniswapV2GetPairHourDatasHistorical", {
   # tests for UniswapV2GetPairHourDatasHistorical
   # base path: https://onchain.coinapi.io
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   # Gets pairHourDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -151,7 +151,7 @@ test_that("UniswapV2GetPairHourDatasHistorical", {
 test_that("UniswapV2GetPairsHistorical", {
   # tests for UniswapV2GetPairsHistorical
   # base path: https://onchain.coinapi.io
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   # Gets pairs.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -169,7 +169,7 @@ test_that("UniswapV2GetPairsHistorical", {
 test_that("UniswapV2GetSwapsHistorical", {
   # tests for UniswapV2GetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   # Gets swaps.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -186,7 +186,7 @@ test_that("UniswapV2GetSwapsHistorical", {
 test_that("UniswapV2GetTokenDayDatasHistorical", {
   # tests for UniswapV2GetTokenDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   # Gets tokenDayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -202,7 +202,7 @@ test_that("UniswapV2GetTokenDayDatasHistorical", {
 test_that("UniswapV2GetTokensHistorical", {
   # tests for UniswapV2GetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -220,7 +220,7 @@ test_that("UniswapV2GetTokensHistorical", {
 test_that("UniswapV2GetTransactionsHistorical", {
   # tests for UniswapV2GetTransactionsHistorical
   # base path: https://onchain.coinapi.io
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   # Gets transactions.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -236,7 +236,7 @@ test_that("UniswapV2GetTransactionsHistorical", {
 test_that("UniswapV2GetUniswapDayDatasHistorical", {
   # tests for UniswapV2GetUniswapDayDatasHistorical
   # base path: https://onchain.coinapi.io
-  # UniswapDayDatas (historical) 🔥
+  # UniswapDayDatas (historical)
   # Gets uniswapDayDatas.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -252,7 +252,7 @@ test_that("UniswapV2GetUniswapDayDatasHistorical", {
 test_that("UniswapV2GetUniswapFactorysHistorical", {
   # tests for UniswapV2GetUniswapFactorysHistorical
   # base path: https://onchain.coinapi.io
-  # UniswapFactorys (historical) 🔥
+  # UniswapFactorys (historical)
   # Gets uniswapFactorys.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -268,7 +268,7 @@ test_that("UniswapV2GetUniswapFactorysHistorical", {
 test_that("UniswapV2GetUsersHistorical", {
   # tests for UniswapV2GetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

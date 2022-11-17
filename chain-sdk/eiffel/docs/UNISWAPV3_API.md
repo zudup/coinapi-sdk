@@ -7,23 +7,23 @@ Feature | HTTP request | Description
 [**uniswap_v3_bundles_current**](UNISWAPV3_API.md#uniswap_v3_bundles_current) | **Get** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**uniswap_v3_burns_current**](UNISWAPV3_API.md#uniswap_v3_burns_current) | **Get** /dapps/uniswapv3/burns/current | Burns (current)
 [**uniswap_v3_factorys_current**](UNISWAPV3_API.md#uniswap_v3_factorys_current) | **Get** /dapps/uniswapv3/factorys/current | Factorys (current)
-[**uniswap_v3_get_bundles_historical**](UNISWAPV3_API.md#uniswap_v3_get_bundles_historical) | **Get** /dapps/uniswapv3/bundles/historical | Bundles (historical) 🔥
-[**uniswap_v3_get_burns_historical**](UNISWAPV3_API.md#uniswap_v3_get_burns_historical) | **Get** /dapps/uniswapv3/burns/historical | Burns (historical) 🔥
-[**uniswap_v3_get_factorys_historical**](UNISWAPV3_API.md#uniswap_v3_get_factorys_historical) | **Get** /dapps/uniswapv3/factorys/historical | Factorys (historical) 🔥
-[**uniswap_v3_get_mints_historical**](UNISWAPV3_API.md#uniswap_v3_get_mints_historical) | **Get** /dapps/uniswapv3/mints/historical | Mints (historical) 🔥
-[**uniswap_v3_get_pool_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_pool_day_datas_historical) | **Get** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) 🔥
-[**uniswap_v3_get_pool_hour_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_pool_hour_datas_historical) | **Get** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) 🔥
-[**uniswap_v3_get_pools_historical**](UNISWAPV3_API.md#uniswap_v3_get_pools_historical) | **Get** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
-[**uniswap_v3_get_position_snapshots_historical**](UNISWAPV3_API.md#uniswap_v3_get_position_snapshots_historical) | **Get** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) 🔥
-[**uniswap_v3_get_positions_historical**](UNISWAPV3_API.md#uniswap_v3_get_positions_historical) | **Get** /dapps/uniswapv3/positions/historical | Positions (historical) 🔥
-[**uniswap_v3_get_swaps_historical**](UNISWAPV3_API.md#uniswap_v3_get_swaps_historical) | **Get** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
-[**uniswap_v3_get_tick_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_tick_day_datas_historical) | **Get** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) 🔥
-[**uniswap_v3_get_ticks_historical**](UNISWAPV3_API.md#uniswap_v3_get_ticks_historical) | **Get** /dapps/uniswapv3/ticks/historical | Ticks (historical) 🔥
-[**uniswap_v3_get_token_hour_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_token_hour_datas_historical) | **Get** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) 🔥
-[**uniswap_v3_get_token_v3_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_token_v3_day_datas_historical) | **Get** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) 🔥
-[**uniswap_v3_get_tokens_historical**](UNISWAPV3_API.md#uniswap_v3_get_tokens_historical) | **Get** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
-[**uniswap_v3_get_transactions_historical**](UNISWAPV3_API.md#uniswap_v3_get_transactions_historical) | **Get** /dapps/uniswapv3/transactions/historical | Transactions (historical) 🔥
-[**uniswap_v3_get_uniswap_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_uniswap_day_datas_historical) | **Get** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) 🔥
+[**uniswap_v3_get_bundles_historical**](UNISWAPV3_API.md#uniswap_v3_get_bundles_historical) | **Get** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**uniswap_v3_get_burns_historical**](UNISWAPV3_API.md#uniswap_v3_get_burns_historical) | **Get** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**uniswap_v3_get_factorys_historical**](UNISWAPV3_API.md#uniswap_v3_get_factorys_historical) | **Get** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**uniswap_v3_get_mints_historical**](UNISWAPV3_API.md#uniswap_v3_get_mints_historical) | **Get** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**uniswap_v3_get_pool_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_pool_day_datas_historical) | **Get** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
+[**uniswap_v3_get_pool_hour_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_pool_hour_datas_historical) | **Get** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**uniswap_v3_get_pools_historical**](UNISWAPV3_API.md#uniswap_v3_get_pools_historical) | **Get** /dapps/uniswapv3/pools/historical | Pools (historical)
+[**uniswap_v3_get_position_snapshots_historical**](UNISWAPV3_API.md#uniswap_v3_get_position_snapshots_historical) | **Get** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
+[**uniswap_v3_get_positions_historical**](UNISWAPV3_API.md#uniswap_v3_get_positions_historical) | **Get** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**uniswap_v3_get_swaps_historical**](UNISWAPV3_API.md#uniswap_v3_get_swaps_historical) | **Get** /dapps/uniswapv3/swaps/historical | Swaps (historical)
+[**uniswap_v3_get_tick_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_tick_day_datas_historical) | **Get** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**uniswap_v3_get_ticks_historical**](UNISWAPV3_API.md#uniswap_v3_get_ticks_historical) | **Get** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**uniswap_v3_get_token_hour_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_token_hour_datas_historical) | **Get** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
+[**uniswap_v3_get_token_v3_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_token_v3_day_datas_historical) | **Get** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**uniswap_v3_get_tokens_historical**](UNISWAPV3_API.md#uniswap_v3_get_tokens_historical) | **Get** /dapps/uniswapv3/tokens/historical | Tokens (historical)
+[**uniswap_v3_get_transactions_historical**](UNISWAPV3_API.md#uniswap_v3_get_transactions_historical) | **Get** /dapps/uniswapv3/transactions/historical | Transactions (historical)
+[**uniswap_v3_get_uniswap_day_datas_historical**](UNISWAPV3_API.md#uniswap_v3_get_uniswap_day_datas_historical) | **Get** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
 [**uniswap_v3_mints_current**](UNISWAPV3_API.md#uniswap_v3_mints_current) | **Get** /dapps/uniswapv3/mints/current | Mints (current)
 [**uniswap_v3_pool_day_datas_current**](UNISWAPV3_API.md#uniswap_v3_pool_day_datas_current) | **Get** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
 [**uniswap_v3_pool_hour_datas_current**](UNISWAPV3_API.md#uniswap_v3_pool_hour_datas_current) | **Get** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
@@ -125,7 +125,7 @@ No authorization required
 > uniswap_v3_get_bundles_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_BUNDLE_DTO]
 
 
-Bundles (historical) 🔥
+Bundles (historical)
 
 Gets bundles.
 
@@ -159,7 +159,7 @@ No authorization required
 > uniswap_v3_get_burns_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_BURN_DTO]
 
 
-Burns (historical) 🔥
+Burns (historical)
 
 Gets burns.
 
@@ -196,7 +196,7 @@ No authorization required
 > uniswap_v3_get_factorys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_FACTORY_DTO]
 
 
-Factorys (historical) 🔥
+Factorys (historical)
 
 Gets factorys.
 
@@ -230,7 +230,7 @@ No authorization required
 > uniswap_v3_get_mints_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_MINT_DTO]
 
 
-Mints (historical) 🔥
+Mints (historical)
 
 Gets mints.
 
@@ -267,7 +267,7 @@ No authorization required
 > uniswap_v3_get_pool_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
 
 
-PoolDayDatas (historical) 🔥
+PoolDayDatas (historical)
 
 Gets poolDayDatas.
 
@@ -302,7 +302,7 @@ No authorization required
 > uniswap_v3_get_pool_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
 
 
-PoolHourDatas (historical) 🔥
+PoolHourDatas (historical)
 
 Gets poolHourDatas.
 
@@ -337,7 +337,7 @@ No authorization required
 > uniswap_v3_get_pools_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POOL_DTO]
 
 
-Pools (historical) 🔥
+Pools (historical)
 
 Gets pools.
 
@@ -373,7 +373,7 @@ No authorization required
 > uniswap_v3_get_position_snapshots_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_DTO]
 
 
-PositionSnapshots (historical) 🔥
+PositionSnapshots (historical)
 
 Gets positionSnapshots.
 
@@ -408,7 +408,7 @@ No authorization required
 > uniswap_v3_get_positions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_POSITION_DTO]
 
 
-Positions (historical) 🔥
+Positions (historical)
 
 Gets positions.
 
@@ -445,7 +445,7 @@ No authorization required
 > uniswap_v3_get_swaps_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_SWAP_DTO]
 
 
-Swaps (historical) 🔥
+Swaps (historical)
 
 Gets swaps.
 
@@ -482,7 +482,7 @@ No authorization required
 > uniswap_v3_get_tick_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
 
 
-TickDayDatas (historical) 🔥
+TickDayDatas (historical)
 
 Gets tickDayDatas.
 
@@ -517,7 +517,7 @@ No authorization required
 > uniswap_v3_get_ticks_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pool:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TICK_DTO]
 
 
-Ticks (historical) 🔥
+Ticks (historical)
 
 Gets ticks.
 
@@ -552,7 +552,7 @@ No authorization required
 > uniswap_v3_get_token_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
 
 
-TokenHourDatas (historical) 🔥
+TokenHourDatas (historical)
 
 Gets tokenHourDatas.
 
@@ -586,7 +586,7 @@ No authorization required
 > uniswap_v3_get_token_v3_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
 
 
-TokenV3DayDatas (historical) 🔥
+TokenV3DayDatas (historical)
 
 Gets tokenV3DayDatas.
 
@@ -620,7 +620,7 @@ No authorization required
 > uniswap_v3_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; symbol:  detachable STRING_32 ; name:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TOKEN_DTO]
 
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -656,7 +656,7 @@ No authorization required
 > uniswap_v3_get_transactions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_TRANSACTION_DTO]
 
 
-Transactions (historical) 🔥
+Transactions (historical)
 
 Gets transactions.
 
@@ -690,7 +690,7 @@ No authorization required
 > uniswap_v3_get_uniswap_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
 
 
-UniswapDayDatas (historical) 🔥
+UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 

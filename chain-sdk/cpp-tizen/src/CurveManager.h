@@ -532,7 +532,7 @@ bool curveGauges (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Accounts (historical) 🔥. *Synchronous*
+/*! \brief Accounts (historical). *Synchronous*
  *
  * Gets accounts.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -550,7 +550,7 @@ bool curveGetAccounts (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Accounts (historical) 🔥. *Asynchronous*
+/*! \brief Accounts (historical). *Asynchronous*
  *
  * Gets accounts.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -569,7 +569,7 @@ bool curveGetAccounts (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief AddLiquidityEvents (historical) 🔥. *Synchronous*
+/*! \brief AddLiquidityEvents (historical). *Synchronous*
  *
  * Gets addLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -587,7 +587,7 @@ bool curveGetAddLiquidityEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief AddLiquidityEvents (historical) 🔥. *Asynchronous*
+/*! \brief AddLiquidityEvents (historical). *Asynchronous*
  *
  * Gets addLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -606,7 +606,7 @@ bool curveGetAddLiquidityEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief AdminFeeChangeLogs (historical) 🔥. *Synchronous*
+/*! \brief AdminFeeChangeLogs (historical). *Synchronous*
  *
  * Gets adminFeeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -624,7 +624,7 @@ bool curveGetAdminFeeChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief AdminFeeChangeLogs (historical) 🔥. *Asynchronous*
+/*! \brief AdminFeeChangeLogs (historical). *Asynchronous*
  *
  * Gets adminFeeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -643,7 +643,7 @@ bool curveGetAdminFeeChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief AmplificationCoeffChangeLogs (historical) 🔥. *Synchronous*
+/*! \brief AmplificationCoeffChangeLogs (historical). *Synchronous*
  *
  * Gets amplificationCoeffChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -661,7 +661,7 @@ bool curveGetAmplificationCoeffChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief AmplificationCoeffChangeLogs (historical) 🔥. *Asynchronous*
+/*! \brief AmplificationCoeffChangeLogs (historical). *Asynchronous*
  *
  * Gets amplificationCoeffChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -680,7 +680,7 @@ bool curveGetAmplificationCoeffChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Coins (historical) 🔥. *Synchronous*
+/*! \brief Coins (historical). *Synchronous*
  *
  * Gets coins.
  * \param startBlock 
@@ -698,7 +698,7 @@ bool curveGetCoins (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Coins (historical) 🔥. *Asynchronous*
+/*! \brief Coins (historical). *Asynchronous*
  *
  * Gets coins.
  * \param startBlock 
@@ -717,7 +717,7 @@ bool curveGetCoins (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief ContractVersions (historical) 🔥. *Synchronous*
+/*! \brief ContractVersions (historical). *Synchronous*
  *
  * Gets contractVersions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -735,7 +735,7 @@ bool curveGetContractVersions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief ContractVersions (historical) 🔥. *Asynchronous*
+/*! \brief ContractVersions (historical). *Asynchronous*
  *
  * Gets contractVersions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -754,7 +754,7 @@ bool curveGetContractVersions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Contracts (historical) 🔥. *Synchronous*
+/*! \brief Contracts (historical). *Synchronous*
  *
  * Gets contracts.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -771,7 +771,7 @@ bool curveGetContracts (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Contracts (historical) 🔥. *Asynchronous*
+/*! \brief Contracts (historical). *Asynchronous*
  *
  * Gets contracts.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -789,7 +789,7 @@ bool curveGetContracts (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief DailyVolumes (historical) 🔥. *Synchronous*
+/*! \brief DailyVolumes (historical). *Synchronous*
  *
  * Gets dailyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -807,7 +807,7 @@ bool curveGetDailyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief DailyVolumes (historical) 🔥. *Asynchronous*
+/*! \brief DailyVolumes (historical). *Asynchronous*
  *
  * Gets dailyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -826,7 +826,7 @@ bool curveGetDailyVolumes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Exchanges (historical) 🔥. *Synchronous*
+/*! \brief Exchanges (historical). *Synchronous*
  *
  * Gets exchanges.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -844,7 +844,7 @@ bool curveGetExchanges (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Exchanges (historical) 🔥. *Asynchronous*
+/*! \brief Exchanges (historical). *Asynchronous*
  *
  * Gets exchanges.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -863,7 +863,7 @@ bool curveGetExchanges (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief FeeChangeLogs (historical) 🔥. *Synchronous*
+/*! \brief FeeChangeLogs (historical). *Synchronous*
  *
  * Gets feeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -881,7 +881,7 @@ bool curveGetFeeChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief FeeChangeLogs (historical) 🔥. *Asynchronous*
+/*! \brief FeeChangeLogs (historical). *Asynchronous*
  *
  * Gets feeChangeLogs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -900,7 +900,7 @@ bool curveGetFeeChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeDeposits (historical) 🔥. *Synchronous*
+/*! \brief GaugeDeposits (historical). *Synchronous*
  *
  * Gets gaugeDeposits.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -917,7 +917,7 @@ bool curveGetGaugeDeposits (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeDeposits (historical) 🔥. *Asynchronous*
+/*! \brief GaugeDeposits (historical). *Asynchronous*
  *
  * Gets gaugeDeposits.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -935,7 +935,7 @@ bool curveGetGaugeDeposits (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeLiquiditys (historical) 🔥. *Synchronous*
+/*! \brief GaugeLiquiditys (historical). *Synchronous*
  *
  * Gets gaugeLiquiditys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -953,7 +953,7 @@ bool curveGetGaugeLiquiditys (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeLiquiditys (historical) 🔥. *Asynchronous*
+/*! \brief GaugeLiquiditys (historical). *Asynchronous*
  *
  * Gets gaugeLiquiditys.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -972,7 +972,7 @@ bool curveGetGaugeLiquiditys (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeTotalWeights (historical) 🔥. *Synchronous*
+/*! \brief GaugeTotalWeights (historical). *Synchronous*
  *
  * Gets gaugeTotalWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -989,7 +989,7 @@ bool curveGetGaugeTotalWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeTotalWeights (historical) 🔥. *Asynchronous*
+/*! \brief GaugeTotalWeights (historical). *Asynchronous*
  *
  * Gets gaugeTotalWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1007,7 +1007,7 @@ bool curveGetGaugeTotalWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeTypeWeights (historical) 🔥. *Synchronous*
+/*! \brief GaugeTypeWeights (historical). *Synchronous*
  *
  * Gets gaugeTypeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1024,7 +1024,7 @@ bool curveGetGaugeTypeWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeTypeWeights (historical) 🔥. *Asynchronous*
+/*! \brief GaugeTypeWeights (historical). *Asynchronous*
  *
  * Gets gaugeTypeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1042,7 +1042,7 @@ bool curveGetGaugeTypeWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeTypes (historical) 🔥. *Synchronous*
+/*! \brief GaugeTypes (historical). *Synchronous*
  *
  * Gets gaugeTypes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1060,7 +1060,7 @@ bool curveGetGaugeTypes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeTypes (historical) 🔥. *Asynchronous*
+/*! \brief GaugeTypes (historical). *Asynchronous*
  *
  * Gets gaugeTypes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1079,7 +1079,7 @@ bool curveGetGaugeTypes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeWeightVotes (historical) 🔥. *Synchronous*
+/*! \brief GaugeWeightVotes (historical). *Synchronous*
  *
  * Gets gaugeWeightVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1097,7 +1097,7 @@ bool curveGetGaugeWeightVotes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeWeightVotes (historical) 🔥. *Asynchronous*
+/*! \brief GaugeWeightVotes (historical). *Asynchronous*
  *
  * Gets gaugeWeightVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1116,7 +1116,7 @@ bool curveGetGaugeWeightVotes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeWeights (historical) 🔥. *Synchronous*
+/*! \brief GaugeWeights (historical). *Synchronous*
  *
  * Gets gaugeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1133,7 +1133,7 @@ bool curveGetGaugeWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeWeights (historical) 🔥. *Asynchronous*
+/*! \brief GaugeWeights (historical). *Asynchronous*
  *
  * Gets gaugeWeights.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1151,7 +1151,7 @@ bool curveGetGaugeWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GaugeWithdraws (historical) 🔥. *Synchronous*
+/*! \brief GaugeWithdraws (historical). *Synchronous*
  *
  * Gets gaugeWithdraws.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1168,7 +1168,7 @@ bool curveGetGaugeWithdraws (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GaugeWithdraws (historical) 🔥. *Asynchronous*
+/*! \brief GaugeWithdraws (historical). *Asynchronous*
  *
  * Gets gaugeWithdraws.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1186,7 +1186,7 @@ bool curveGetGaugeWithdraws (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Gauges (historical) 🔥. *Synchronous*
+/*! \brief Gauges (historical). *Synchronous*
  *
  * Gets gauges.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1205,7 +1205,7 @@ bool curveGetGauges (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Gauges (historical) 🔥. *Asynchronous*
+/*! \brief Gauges (historical). *Asynchronous*
  *
  * Gets gauges.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1225,7 +1225,7 @@ bool curveGetGauges (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief HourlyVolumes (historical) 🔥. *Synchronous*
+/*! \brief HourlyVolumes (historical). *Synchronous*
  *
  * Gets hourlyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1243,7 +1243,7 @@ bool curveGetHourlyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief HourlyVolumes (historical) 🔥. *Asynchronous*
+/*! \brief HourlyVolumes (historical). *Asynchronous*
  *
  * Gets hourlyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1262,7 +1262,7 @@ bool curveGetHourlyVolumes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief LpTokens (historical) 🔥. *Synchronous*
+/*! \brief LpTokens (historical). *Synchronous*
  *
  * Gets lpTokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1283,7 +1283,7 @@ bool curveGetLpTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief LpTokens (historical) 🔥. *Asynchronous*
+/*! \brief LpTokens (historical). *Asynchronous*
  *
  * Gets lpTokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1305,7 +1305,7 @@ bool curveGetLpTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Pools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical). *Synchronous*
  *
  * Gets pools.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1323,7 +1323,7 @@ bool curveGetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Pools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical). *Asynchronous*
  *
  * Gets pools.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1342,7 +1342,7 @@ bool curveGetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief ProposalVotes (historical) 🔥. *Synchronous*
+/*! \brief ProposalVotes (historical). *Synchronous*
  *
  * Gets proposalVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1359,7 +1359,7 @@ bool curveGetProposalVotes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief ProposalVotes (historical) 🔥. *Asynchronous*
+/*! \brief ProposalVotes (historical). *Asynchronous*
  *
  * Gets proposalVotes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1377,7 +1377,7 @@ bool curveGetProposalVotes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Proposals (historical) 🔥. *Synchronous*
+/*! \brief Proposals (historical). *Synchronous*
  *
  * Gets proposals.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1394,7 +1394,7 @@ bool curveGetProposals (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Proposals (historical) 🔥. *Asynchronous*
+/*! \brief Proposals (historical). *Asynchronous*
  *
  * Gets proposals.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1412,7 +1412,7 @@ bool curveGetProposals (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief RemoveLiquidityEvents (historical) 🔥. *Synchronous*
+/*! \brief RemoveLiquidityEvents (historical). *Synchronous*
  *
  * Gets removeLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1430,7 +1430,7 @@ bool curveGetRemoveLiquidityEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief RemoveLiquidityEvents (historical) 🔥. *Asynchronous*
+/*! \brief RemoveLiquidityEvents (historical). *Asynchronous*
  *
  * Gets removeLiquidityEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1449,7 +1449,7 @@ bool curveGetRemoveLiquidityEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief RemoveLiquidityOneEvents (historical) 🔥. *Synchronous*
+/*! \brief RemoveLiquidityOneEvents (historical). *Synchronous*
  *
  * Gets removeLiquidityOneEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1467,7 +1467,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief RemoveLiquidityOneEvents (historical) 🔥. *Asynchronous*
+/*! \brief RemoveLiquidityOneEvents (historical). *Asynchronous*
  *
  * Gets removeLiquidityOneEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1486,7 +1486,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief SystemStates (historical) 🔥. *Synchronous*
+/*! \brief SystemStates (historical). *Synchronous*
  *
  * Gets systemStates.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1503,7 +1503,7 @@ bool curveGetSystemStates (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief SystemStates (historical) 🔥. *Asynchronous*
+/*! \brief SystemStates (historical). *Asynchronous*
  *
  * Gets systemStates.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1521,7 +1521,7 @@ bool curveGetSystemStates (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Tokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical). *Synchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1541,7 +1541,7 @@ bool curveGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Tokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical). *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1562,7 +1562,7 @@ bool curveGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TransferOwnershipEvents (historical) 🔥. *Synchronous*
+/*! \brief TransferOwnershipEvents (historical). *Synchronous*
  *
  * Gets transferOwnershipEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1580,7 +1580,7 @@ bool curveGetTransferOwnershipEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TransferOwnershipEvents (historical) 🔥. *Asynchronous*
+/*! \brief TransferOwnershipEvents (historical). *Asynchronous*
  *
  * Gets transferOwnershipEvents.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1599,7 +1599,7 @@ bool curveGetTransferOwnershipEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief UnderlyingCoins (historical) 🔥. *Synchronous*
+/*! \brief UnderlyingCoins (historical). *Synchronous*
  *
  * Gets underlyingCoins.
  * \param startBlock 
@@ -1617,7 +1617,7 @@ bool curveGetUnderlyingCoins (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief UnderlyingCoins (historical) 🔥. *Asynchronous*
+/*! \brief UnderlyingCoins (historical). *Asynchronous*
  *
  * Gets underlyingCoins.
  * \param startBlock 
@@ -1636,7 +1636,7 @@ bool curveGetUnderlyingCoins (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief VotingApps (historical) 🔥. *Synchronous*
+/*! \brief VotingApps (historical). *Synchronous*
  *
  * Gets votingApps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1654,7 +1654,7 @@ bool curveGetVotingApps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief VotingApps (historical) 🔥. *Asynchronous*
+/*! \brief VotingApps (historical). *Asynchronous*
  *
  * Gets votingApps.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1673,7 +1673,7 @@ bool curveGetVotingApps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief WeeklyVolumes (historical) 🔥. *Synchronous*
+/*! \brief WeeklyVolumes (historical). *Synchronous*
  *
  * Gets weeklyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1691,7 +1691,7 @@ bool curveGetWeeklyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief WeeklyVolumes (historical) 🔥. *Asynchronous*
+/*! \brief WeeklyVolumes (historical). *Asynchronous*
  *
  * Gets weeklyVolumes.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

@@ -6,17 +6,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 | ------ | ------------ | ----------- |
 | [**dex_batchs__current**](DexApi.md#dex_batchs__current) | **GET** /dapps/dex/batchs/current | Batchs (current) |
 | [**dex_deposits__current**](DexApi.md#dex_deposits__current) | **GET** /dapps/dex/deposits/current | Deposits (current) |
-| [**dex_get_batchs__historical**](DexApi.md#dex_get_batchs__historical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) 🔥 |
-| [**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) 🔥 |
-| [**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical) 🔥 |
-| [**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical) 🔥 |
-| [**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) 🔥 |
-| [**dex_get_statss__historical**](DexApi.md#dex_get_statss__historical) | **GET** /dapps/dex/statss/historical | Statss (historical) 🔥 |
-| [**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥 |
-| [**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥 |
-| [**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical) 🔥 |
-| [**dex_get_withdraw_requests__historical**](DexApi.md#dex_get_withdraw_requests__historical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥 |
-| [**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥 |
+| [**dex_get_batchs__historical**](DexApi.md#dex_get_batchs__historical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) |
+| [**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) |
+| [**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical) |
+| [**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical) |
+| [**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) |
+| [**dex_get_statss__historical**](DexApi.md#dex_get_statss__historical) | **GET** /dapps/dex/statss/historical | Statss (historical) |
+| [**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) |
+| [**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical) |
+| [**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical) |
+| [**dex_get_withdraw_requests__historical**](DexApi.md#dex_get_withdraw_requests__historical) | **GET** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) |
+| [**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) |
 | [**dex_orders__current**](DexApi.md#dex_orders__current) | **GET** /dapps/dex/orders/current | Orders (current) |
 | [**dex_prices__current**](DexApi.md#dex_prices__current) | **GET** /dapps/dex/prices/current | Prices (current) |
 | [**dex_solutions__current**](DexApi.md#dex_solutions__current) | **GET** /dapps/dex/solutions/current | Solutions (current) |
@@ -154,7 +154,7 @@ No authorization required
 
 > <Array<DexBatchDTO>> dex_get_batchs__historical(opts)
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 Gets batchs.
 
@@ -174,7 +174,7 @@ opts = {
 }
 
 begin
-  # Batchs (historical) 🔥
+  # Batchs (historical)
   result = api_instance.dex_get_batchs__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -190,7 +190,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Batchs (historical) 🔥
+  # Batchs (historical)
   data, status_code, headers = api_instance.dex_get_batchs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -228,7 +228,7 @@ No authorization required
 
 > <Array<DexDepositDTO>> dex_get_deposits__historical(opts)
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 Gets deposits.
 
@@ -249,7 +249,7 @@ opts = {
 }
 
 begin
-  # Deposits (historical) 🔥
+  # Deposits (historical)
   result = api_instance.dex_get_deposits__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -265,7 +265,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Deposits (historical) 🔥
+  # Deposits (historical)
   data, status_code, headers = api_instance.dex_get_deposits__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -304,7 +304,7 @@ No authorization required
 
 > <Array<DexOrderDTO>> dex_get_orders__historical(opts)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -326,7 +326,7 @@ opts = {
 }
 
 begin
-  # Orders (historical) 🔥
+  # Orders (historical)
   result = api_instance.dex_get_orders__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -342,7 +342,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Orders (historical) 🔥
+  # Orders (historical)
   data, status_code, headers = api_instance.dex_get_orders__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -382,7 +382,7 @@ No authorization required
 
 > <Array<DexPriceDTO>> dex_get_prices__historical(opts)
 
-Prices (historical) 🔥
+Prices (historical)
 
 Gets prices.
 
@@ -402,7 +402,7 @@ opts = {
 }
 
 begin
-  # Prices (historical) 🔥
+  # Prices (historical)
   result = api_instance.dex_get_prices__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -418,7 +418,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Prices (historical) 🔥
+  # Prices (historical)
   data, status_code, headers = api_instance.dex_get_prices__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -456,7 +456,7 @@ No authorization required
 
 > <Array<DexSolutionDTO>> dex_get_solutions__historical(opts)
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 Gets solutions.
 
@@ -476,7 +476,7 @@ opts = {
 }
 
 begin
-  # Solutions (historical) 🔥
+  # Solutions (historical)
   result = api_instance.dex_get_solutions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -492,7 +492,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Solutions (historical) 🔥
+  # Solutions (historical)
   data, status_code, headers = api_instance.dex_get_solutions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -530,7 +530,7 @@ No authorization required
 
 > <Array<DexStatsDTO>> dex_get_statss__historical(opts)
 
-Statss (historical) 🔥
+Statss (historical)
 
 Gets statss.
 
@@ -550,7 +550,7 @@ opts = {
 }
 
 begin
-  # Statss (historical) 🔥
+  # Statss (historical)
   result = api_instance.dex_get_statss__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -566,7 +566,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Statss (historical) 🔥
+  # Statss (historical)
   data, status_code, headers = api_instance.dex_get_statss__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -604,7 +604,7 @@ No authorization required
 
 > <Array<DexTokenDTO>> dex_get_tokens__historical(opts)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -627,7 +627,7 @@ opts = {
 }
 
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   result = api_instance.dex_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -643,7 +643,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   data, status_code, headers = api_instance.dex_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -684,7 +684,7 @@ No authorization required
 
 > <Array<DexTradeDTO>> dex_get_trades__historical(opts)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -706,7 +706,7 @@ opts = {
 }
 
 begin
-  # Trades (historical) 🔥
+  # Trades (historical)
   result = api_instance.dex_get_trades__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -722,7 +722,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Trades (historical) 🔥
+  # Trades (historical)
   data, status_code, headers = api_instance.dex_get_trades__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -762,7 +762,7 @@ No authorization required
 
 > <Array<DexUserDTO>> dex_get_users__historical(opts)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -782,7 +782,7 @@ opts = {
 }
 
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   result = api_instance.dex_get_users__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -798,7 +798,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Users (historical) 🔥
+  # Users (historical)
   data, status_code, headers = api_instance.dex_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -836,7 +836,7 @@ No authorization required
 
 > <Array<DexWithdrawRequestDTO>> dex_get_withdraw_requests__historical(opts)
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -857,7 +857,7 @@ opts = {
 }
 
 begin
-  # WithdrawRequests (historical) 🔥
+  # WithdrawRequests (historical)
   result = api_instance.dex_get_withdraw_requests__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -873,7 +873,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # WithdrawRequests (historical) 🔥
+  # WithdrawRequests (historical)
   data, status_code, headers = api_instance.dex_get_withdraw_requests__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -912,7 +912,7 @@ No authorization required
 
 > <Array<DexWithdrawDTO>> dex_get_withdraws__historical(opts)
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -933,7 +933,7 @@ opts = {
 }
 
 begin
-  # Withdraws (historical) 🔥
+  # Withdraws (historical)
   result = api_instance.dex_get_withdraws__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -949,7 +949,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # Withdraws (historical) 🔥
+  # Withdraws (historical)
   data, status_code, headers = api_instance.dex_get_withdraws__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

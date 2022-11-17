@@ -84,7 +84,7 @@ bool dexDeposits (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Batchs (historical) 🔥. *Synchronous*
+/*! \brief Batchs (historical). *Synchronous*
  *
  * Gets batchs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -101,7 +101,7 @@ bool dexGetBatchs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Batchs (historical) 🔥. *Asynchronous*
+/*! \brief Batchs (historical). *Asynchronous*
  *
  * Gets batchs.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -119,7 +119,7 @@ bool dexGetBatchs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Deposits (historical) 🔥. *Synchronous*
+/*! \brief Deposits (historical). *Synchronous*
  *
  * Gets deposits.
  * \param startBlock 
@@ -137,7 +137,7 @@ bool dexGetDeposits (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Deposits (historical) 🔥. *Asynchronous*
+/*! \brief Deposits (historical). *Asynchronous*
  *
  * Gets deposits.
  * \param startBlock 
@@ -156,7 +156,7 @@ bool dexGetDeposits (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Orders (historical) 🔥. *Synchronous*
+/*! \brief Orders (historical). *Synchronous*
  *
  * Gets orders.
  * \param startBlock 
@@ -175,7 +175,7 @@ bool dexGetOrders (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Orders (historical) 🔥. *Asynchronous*
+/*! \brief Orders (historical). *Asynchronous*
  *
  * Gets orders.
  * \param startBlock 
@@ -195,7 +195,7 @@ bool dexGetOrders (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Prices (historical) 🔥. *Synchronous*
+/*! \brief Prices (historical). *Synchronous*
  *
  * Gets prices.
  * \param startBlock 
@@ -212,7 +212,7 @@ bool dexGetPrices (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Prices (historical) 🔥. *Asynchronous*
+/*! \brief Prices (historical). *Asynchronous*
  *
  * Gets prices.
  * \param startBlock 
@@ -230,7 +230,7 @@ bool dexGetPrices (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Solutions (historical) 🔥. *Synchronous*
+/*! \brief Solutions (historical). *Synchronous*
  *
  * Gets solutions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -247,7 +247,7 @@ bool dexGetSolutions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Solutions (historical) 🔥. *Asynchronous*
+/*! \brief Solutions (historical). *Asynchronous*
  *
  * Gets solutions.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -265,7 +265,7 @@ bool dexGetSolutions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Statss (historical) 🔥. *Synchronous*
+/*! \brief Statss (historical). *Synchronous*
  *
  * Gets statss.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -282,7 +282,7 @@ bool dexGetStatss (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Statss (historical) 🔥. *Asynchronous*
+/*! \brief Statss (historical). *Asynchronous*
  *
  * Gets statss.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -300,7 +300,7 @@ bool dexGetStatss (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Tokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical). *Synchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -320,7 +320,7 @@ bool dexGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Tokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical). *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -341,7 +341,7 @@ bool dexGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Trades (historical) 🔥. *Synchronous*
+/*! \brief Trades (historical). *Synchronous*
  *
  * Gets trades.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -360,7 +360,7 @@ bool dexGetTrades (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Trades (historical) 🔥. *Asynchronous*
+/*! \brief Trades (historical). *Asynchronous*
  *
  * Gets trades.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -380,7 +380,7 @@ bool dexGetTrades (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Users (historical) 🔥. *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -397,7 +397,7 @@ bool dexGetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Users (historical) 🔥. *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -415,7 +415,7 @@ bool dexGetUsers (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief WithdrawRequests (historical) 🔥. *Synchronous*
+/*! \brief WithdrawRequests (historical). *Synchronous*
  *
  * Gets withdrawRequests.
  * \param startBlock 
@@ -433,7 +433,7 @@ bool dexGetWithdrawRequests (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief WithdrawRequests (historical) 🔥. *Asynchronous*
+/*! \brief WithdrawRequests (historical). *Asynchronous*
  *
  * Gets withdrawRequests.
  * \param startBlock 
@@ -452,7 +452,7 @@ bool dexGetWithdrawRequests (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Withdraws (historical) 🔥. *Synchronous*
+/*! \brief Withdraws (historical). *Synchronous*
  *
  * Gets withdraws.
  * \param startBlock 
@@ -470,7 +470,7 @@ bool dexGetWithdraws (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Withdraws (historical) 🔥. *Asynchronous*
+/*! \brief Withdraws (historical). *Asynchronous*
  *
  * Gets withdraws.
  * \param startBlock 

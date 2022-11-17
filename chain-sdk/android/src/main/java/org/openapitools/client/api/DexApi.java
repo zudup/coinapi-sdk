@@ -299,7 +299,7 @@ public class DexApi {
     }
   }
   /**
-  * Batchs (historical) 🔥
+  * Batchs (historical)
   * Gets batchs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -365,7 +365,7 @@ public class DexApi {
   }
 
       /**
-   * Batchs (historical) 🔥
+   * Batchs (historical)
    * Gets batchs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier.
   */
@@ -430,7 +430,7 @@ public class DexApi {
     }
   }
   /**
-  * Deposits (historical) 🔥
+  * Deposits (historical)
   * Gets deposits.
    * @param startBlock 
    * @param endBlock 
@@ -498,7 +498,7 @@ public class DexApi {
   }
 
       /**
-   * Deposits (historical) 🔥
+   * Deposits (historical)
    * Gets deposits.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
   */
@@ -564,7 +564,7 @@ public class DexApi {
     }
   }
   /**
-  * Orders (historical) 🔥
+  * Orders (historical)
   * Gets orders.
    * @param startBlock 
    * @param endBlock 
@@ -634,7 +634,7 @@ public class DexApi {
   }
 
       /**
-   * Orders (historical) 🔥
+   * Orders (historical)
    * Gets orders.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param buyToken    * @param sellToken 
   */
@@ -701,7 +701,7 @@ public class DexApi {
     }
   }
   /**
-  * Prices (historical) 🔥
+  * Prices (historical)
   * Gets prices.
    * @param startBlock 
    * @param endBlock 
@@ -767,7 +767,7 @@ public class DexApi {
   }
 
       /**
-   * Prices (historical) 🔥
+   * Prices (historical)
    * Gets prices.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id 
   */
@@ -832,7 +832,7 @@ public class DexApi {
     }
   }
   /**
-  * Solutions (historical) 🔥
+  * Solutions (historical)
   * Gets solutions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -898,7 +898,7 @@ public class DexApi {
   }
 
       /**
-   * Solutions (historical) 🔥
+   * Solutions (historical)
    * Gets solutions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -963,7 +963,7 @@ public class DexApi {
     }
   }
   /**
-  * Statss (historical) 🔥
+  * Statss (historical)
   * Gets statss.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1029,7 +1029,7 @@ public class DexApi {
   }
 
       /**
-   * Statss (historical) 🔥
+   * Statss (historical)
    * Gets statss.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -1094,7 +1094,7 @@ public class DexApi {
     }
   }
   /**
-  * Tokens (historical) 🔥
+  * Tokens (historical)
   * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1166,7 +1166,7 @@ public class DexApi {
   }
 
       /**
-   * Tokens (historical) 🔥
+   * Tokens (historical)
    * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address    * @param symbol    * @param name 
   */
@@ -1234,7 +1234,7 @@ public class DexApi {
     }
   }
   /**
-  * Trades (historical) 🔥
+  * Trades (historical)
   * Gets trades.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1304,7 +1304,7 @@ public class DexApi {
   }
 
       /**
-   * Trades (historical) 🔥
+   * Trades (historical)
    * Gets trades.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param buyToken    * @param sellToken 
   */
@@ -1371,7 +1371,7 @@ public class DexApi {
     }
   }
   /**
-  * Users (historical) 🔥
+  * Users (historical)
   * Gets users.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1437,7 +1437,7 @@ public class DexApi {
   }
 
       /**
-   * Users (historical) 🔥
+   * Users (historical)
    * Gets users.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -1502,7 +1502,7 @@ public class DexApi {
     }
   }
   /**
-  * WithdrawRequests (historical) 🔥
+  * WithdrawRequests (historical)
   * Gets withdrawRequests.
    * @param startBlock 
    * @param endBlock 
@@ -1570,7 +1570,7 @@ public class DexApi {
   }
 
       /**
-   * WithdrawRequests (historical) 🔥
+   * WithdrawRequests (historical)
    * Gets withdrawRequests.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
   */
@@ -1636,7 +1636,7 @@ public class DexApi {
     }
   }
   /**
-  * Withdraws (historical) 🔥
+  * Withdraws (historical)
   * Gets withdraws.
    * @param startBlock 
    * @param endBlock 
@@ -1704,7 +1704,7 @@ public class DexApi {
   }
 
       /**
-   * Withdraws (historical) 🔥
+   * Withdraws (historical)
    * Gets withdraws.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
   */

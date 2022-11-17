@@ -465,7 +465,7 @@ func (r ApiSushiswapGetBundlesHistoricalRequest) Execute() ([]SushiswapBundleDTO
 }
 
 /*
-SushiswapGetBundlesHistorical Bundles (historical) 🔥
+SushiswapGetBundlesHistorical Bundles (historical)
 
 Gets bundles.
 
@@ -615,7 +615,7 @@ func (r ApiSushiswapGetBurnsHistoricalRequest) Execute() ([]SushiswapBurnDTO, *h
 }
 
 /*
-SushiswapGetBurnsHistorical Burns (historical) 🔥
+SushiswapGetBurnsHistorical Burns (historical)
 
 Gets burns.
 
@@ -767,7 +767,7 @@ func (r ApiSushiswapGetDayDatasHistoricalRequest) Execute() ([]SushiswapDayDataD
 }
 
 /*
-SushiswapGetDayDatasHistorical DayDatas (historical) 🔥
+SushiswapGetDayDatasHistorical DayDatas (historical)
 
 Gets dayDatas.
 
@@ -916,7 +916,7 @@ func (r ApiSushiswapGetFactorysHistoricalRequest) Execute() ([]SushiswapFactoryD
 }
 
 /*
-SushiswapGetFactorysHistorical Factorys (historical) 🔥
+SushiswapGetFactorysHistorical Factorys (historical)
 
 Gets factorys.
 
@@ -1065,7 +1065,7 @@ func (r ApiSushiswapGetHourDatasHistoricalRequest) Execute() ([]SushiswapHourDat
 }
 
 /*
-SushiswapGetHourDatasHistorical HourDatas (historical) 🔥
+SushiswapGetHourDatasHistorical HourDatas (historical)
 
 Gets hourDatas.
 
@@ -1221,7 +1221,7 @@ func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) Execute() ([
 }
 
 /*
-SushiswapGetLiquidityPositionSnapshotsHistorical LiquidityPositionSnapshots (historical) 🔥
+SushiswapGetLiquidityPositionSnapshotsHistorical LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -1383,7 +1383,7 @@ func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) Execute() ([]Sushisw
 }
 
 /*
-SushiswapGetLiquidityPositionsHistorical LiquidityPositions (historical) 🔥
+SushiswapGetLiquidityPositionsHistorical LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -1539,7 +1539,7 @@ func (r ApiSushiswapGetMintsHistoricalRequest) Execute() ([]SushiswapMintDTO, *h
 }
 
 /*
-SushiswapGetMintsHistorical Mints (historical) 🔥
+SushiswapGetMintsHistorical Mints (historical)
 
 Gets mints.
 
@@ -1704,7 +1704,7 @@ func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Execute() ([]SushiswapPair
 }
 
 /*
-SushiswapGetPairDayDatasHistorical PairDayDatas (historical) 🔥
+SushiswapGetPairDayDatasHistorical PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -1863,7 +1863,7 @@ func (r ApiSushiswapGetPairHourDatasHistoricalRequest) Execute() ([]SushiswapPai
 }
 
 /*
-SushiswapGetPairHourDatasHistorical PairHourDatas (historical) 🔥
+SushiswapGetPairHourDatasHistorical PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -2028,7 +2028,7 @@ func (r ApiSushiswapGetPairsHistoricalRequest) Execute() ([]SushiswapPairDTO, *h
 }
 
 /*
-SushiswapGetPairsHistorical Pairs (historical) 🔥
+SushiswapGetPairsHistorical Pairs (historical)
 
 Gets pairs.
 
@@ -2193,7 +2193,7 @@ func (r ApiSushiswapGetSwapsHistoricalRequest) Execute() ([]SushiswapSwapDTO, *h
 }
 
 /*
-SushiswapGetSwapsHistorical Swaps (historical) 🔥
+SushiswapGetSwapsHistorical Swaps (historical)
 
 Gets swaps.
 
@@ -2345,7 +2345,7 @@ func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) Execute() ([]SushiswapTok
 }
 
 /*
-SushiswapGetTokenDayDatasHistorical TokenDayDatas (historical) 🔥
+SushiswapGetTokenDayDatasHistorical TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -2508,7 +2508,7 @@ func (r ApiSushiswapGetTokensHistoricalRequest) Execute() ([]SushiswapTokenDTO, 
 }
 
 /*
-SushiswapGetTokensHistorical Tokens (historical) 🔥
+SushiswapGetTokensHistorical Tokens (historical)
 
 Gets tokens.
 
@@ -2663,7 +2663,7 @@ func (r ApiSushiswapGetTransactionsHistoricalRequest) Execute() ([]SushiswapTran
 }
 
 /*
-SushiswapGetTransactionsHistorical Transactions (historical) 🔥
+SushiswapGetTransactionsHistorical Transactions (historical)
 
 Gets transactions.
 
@@ -2812,7 +2812,7 @@ func (r ApiSushiswapGetUsersHistoricalRequest) Execute() ([]SushiswapUserDTO, *h
 }
 
 /*
-SushiswapGetUsersHistorical Users (historical) 🔥
+SushiswapGetUsersHistorical Users (historical)
 
 Gets users.
 

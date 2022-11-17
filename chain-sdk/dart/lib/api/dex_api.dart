@@ -118,7 +118,7 @@ class DexApi {
     return null;
   }
 
-  /// Batchs (historical) 🔥
+  /// Batchs (historical)
   ///
   /// Gets batchs.
   ///
@@ -181,7 +181,7 @@ class DexApi {
     );
   }
 
-  /// Batchs (historical) 🔥
+  /// Batchs (historical)
   ///
   /// Gets batchs.
   ///
@@ -219,7 +219,7 @@ class DexApi {
     return null;
   }
 
-  /// Deposits (historical) 🔥
+  /// Deposits (historical)
   ///
   /// Gets deposits.
   ///
@@ -282,7 +282,7 @@ class DexApi {
     );
   }
 
-  /// Deposits (historical) 🔥
+  /// Deposits (historical)
   ///
   /// Gets deposits.
   ///
@@ -317,7 +317,7 @@ class DexApi {
     return null;
   }
 
-  /// Orders (historical) 🔥
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -385,7 +385,7 @@ class DexApi {
     );
   }
 
-  /// Orders (historical) 🔥
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -422,7 +422,7 @@ class DexApi {
     return null;
   }
 
-  /// Prices (historical) 🔥
+  /// Prices (historical)
   ///
   /// Gets prices.
   ///
@@ -480,7 +480,7 @@ class DexApi {
     );
   }
 
-  /// Prices (historical) 🔥
+  /// Prices (historical)
   ///
   /// Gets prices.
   ///
@@ -513,7 +513,7 @@ class DexApi {
     return null;
   }
 
-  /// Solutions (historical) 🔥
+  /// Solutions (historical)
   ///
   /// Gets solutions.
   ///
@@ -576,7 +576,7 @@ class DexApi {
     );
   }
 
-  /// Solutions (historical) 🔥
+  /// Solutions (historical)
   ///
   /// Gets solutions.
   ///
@@ -614,7 +614,7 @@ class DexApi {
     return null;
   }
 
-  /// Statss (historical) 🔥
+  /// Statss (historical)
   ///
   /// Gets statss.
   ///
@@ -677,7 +677,7 @@ class DexApi {
     );
   }
 
-  /// Statss (historical) 🔥
+  /// Statss (historical)
   ///
   /// Gets statss.
   ///
@@ -715,7 +715,7 @@ class DexApi {
     return null;
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   ///
   /// Gets tokens.
   ///
@@ -796,7 +796,7 @@ class DexApi {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   ///
   /// Gets tokens.
   ///
@@ -843,7 +843,7 @@ class DexApi {
     return null;
   }
 
-  /// Trades (historical) 🔥
+  /// Trades (historical)
   ///
   /// Gets trades.
   ///
@@ -918,7 +918,7 @@ class DexApi {
     );
   }
 
-  /// Trades (historical) 🔥
+  /// Trades (historical)
   ///
   /// Gets trades.
   ///
@@ -962,7 +962,7 @@ class DexApi {
     return null;
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -1025,7 +1025,7 @@ class DexApi {
     );
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -1063,7 +1063,7 @@ class DexApi {
     return null;
   }
 
-  /// WithdrawRequests (historical) 🔥
+  /// WithdrawRequests (historical)
   ///
   /// Gets withdrawRequests.
   ///
@@ -1126,7 +1126,7 @@ class DexApi {
     );
   }
 
-  /// WithdrawRequests (historical) 🔥
+  /// WithdrawRequests (historical)
   ///
   /// Gets withdrawRequests.
   ///
@@ -1161,7 +1161,7 @@ class DexApi {
     return null;
   }
 
-  /// Withdraws (historical) 🔥
+  /// Withdraws (historical)
   ///
   /// Gets withdraws.
   ///
@@ -1224,7 +1224,7 @@ class DexApi {
     );
   }
 
-  /// Withdraws (historical) 🔥
+  /// Withdraws (historical)
   ///
   /// Gets withdraws.
   ///

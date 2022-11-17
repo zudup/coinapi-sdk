@@ -85,7 +85,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV3_FactoryDTO>>> uniswapV3_Factorys__current(
     ) const;
     /// <summary>
-    /// Bundles (historical) 🔥
+    /// Bundles (historical)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -103,7 +103,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Burns (historical) 🔥
+    /// Burns (historical)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -127,7 +127,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// Factorys (historical) 🔥
+    /// Factorys (historical)
     /// </summary>
     /// <remarks>
     /// Gets factorys.
@@ -145,7 +145,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Mints (historical) 🔥
+    /// Mints (historical)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -169,7 +169,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// PoolDayDatas (historical) 🔥
+    /// PoolDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets poolDayDatas.
@@ -189,7 +189,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// PoolHourDatas (historical) 🔥
+    /// PoolHourDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets poolHourDatas.
@@ -209,7 +209,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Pools (historical) 🔥
+    /// Pools (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -231,7 +231,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// PositionSnapshots (historical) 🔥
+    /// PositionSnapshots (historical)
     /// </summary>
     /// <remarks>
     /// Gets positionSnapshots.
@@ -251,7 +251,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Positions (historical) 🔥
+    /// Positions (historical)
     /// </summary>
     /// <remarks>
     /// Gets positions.
@@ -275,7 +275,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// Swaps (historical) 🔥
+    /// Swaps (historical)
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -299,7 +299,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// TickDayDatas (historical) 🔥
+    /// TickDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets tickDayDatas.
@@ -319,7 +319,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// Ticks (historical) 🔥
+    /// Ticks (historical)
     /// </summary>
     /// <remarks>
     /// Gets ticks.
@@ -339,7 +339,7 @@ public:
         boost::optional<utility::string_t> pool
     ) const;
     /// <summary>
-    /// TokenHourDatas (historical) 🔥
+    /// TokenHourDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokenHourDatas.
@@ -357,7 +357,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// TokenV3DayDatas (historical) 🔥
+    /// TokenV3DayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokenV3DayDatas.
@@ -375,7 +375,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Tokens (historical) 🔥
+    /// Tokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -397,7 +397,7 @@ public:
         boost::optional<utility::string_t> name
     ) const;
     /// <summary>
-    /// Transactions (historical) 🔥
+    /// Transactions (historical)
     /// </summary>
     /// <remarks>
     /// Gets transactions.
@@ -415,7 +415,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// UniswapDayDatas (historical) 🔥
+    /// UniswapDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets uniswapDayDatas.

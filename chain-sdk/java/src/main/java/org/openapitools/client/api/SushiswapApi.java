@@ -638,7 +638,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -659,7 +659,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Bundles (historical) 🔥
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -681,7 +681,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Bundles (historical) 🔥 (asynchronously)
+     * Bundles (historical) (asynchronously)
      * Gets bundles.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -798,7 +798,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -820,7 +820,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Burns (historical) 🔥
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -843,7 +843,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Burns (historical) 🔥 (asynchronously)
+     * Burns (historical) (asynchronously)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -956,7 +956,7 @@ public class SushiswapApi {
     }
 
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -977,7 +977,7 @@ public class SushiswapApi {
     }
 
     /**
-     * DayDatas (historical) 🔥
+     * DayDatas (historical)
      * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -999,7 +999,7 @@ public class SushiswapApi {
     }
 
     /**
-     * DayDatas (historical) 🔥 (asynchronously)
+     * DayDatas (historical) (asynchronously)
      * Gets dayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1111,7 +1111,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1132,7 +1132,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Factorys (historical) 🔥
+     * Factorys (historical)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1154,7 +1154,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Factorys (historical) 🔥 (asynchronously)
+     * Factorys (historical) (asynchronously)
      * Gets factorys.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1266,7 +1266,7 @@ public class SushiswapApi {
     }
 
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1287,7 +1287,7 @@ public class SushiswapApi {
     }
 
     /**
-     * HourDatas (historical) 🔥
+     * HourDatas (historical)
      * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1309,7 +1309,7 @@ public class SushiswapApi {
     }
 
     /**
-     * HourDatas (historical) 🔥 (asynchronously)
+     * HourDatas (historical) (asynchronously)
      * Gets hourDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1431,7 +1431,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1454,7 +1454,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥
+     * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1478,7 +1478,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositionSnapshots (historical) 🔥 (asynchronously)
+     * LiquidityPositionSnapshots (historical) (asynchronously)
      * Gets liquidityPositionSnapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1602,7 +1602,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1625,7 +1625,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositions (historical) 🔥
+     * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1649,7 +1649,7 @@ public class SushiswapApi {
     }
 
     /**
-     * LiquidityPositions (historical) 🔥 (asynchronously)
+     * LiquidityPositions (historical) (asynchronously)
      * Gets liquidityPositions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1768,7 +1768,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1790,7 +1790,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Mints (historical) 🔥
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1813,7 +1813,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Mints (historical) 🔥 (asynchronously)
+     * Mints (historical) (asynchronously)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1941,7 +1941,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1965,7 +1965,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairDayDatas (historical) 🔥
+     * PairDayDatas (historical)
      * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1990,7 +1990,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairDayDatas (historical) 🔥 (asynchronously)
+     * PairDayDatas (historical) (asynchronously)
      * Gets pairDayDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2110,7 +2110,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2132,7 +2132,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairHourDatas (historical) 🔥
+     * PairHourDatas (historical)
      * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2155,7 +2155,7 @@ public class SushiswapApi {
     }
 
     /**
-     * PairHourDatas (historical) 🔥 (asynchronously)
+     * PairHourDatas (historical) (asynchronously)
      * Gets pairHourDatas.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2283,7 +2283,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2307,7 +2307,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Pairs (historical) 🔥
+     * Pairs (historical)
      * Gets pairs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2332,7 +2332,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Pairs (historical) 🔥 (asynchronously)
+     * Pairs (historical) (asynchronously)
      * Gets pairs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2452,7 +2452,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2474,7 +2474,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Swaps (historical) 🔥
+     * Swaps (historical)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2497,7 +2497,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Swaps (historical) 🔥 (asynchronously)
+     * Swaps (historical) (asynchronously)
      * Gets swaps.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2610,7 +2610,7 @@ public class SushiswapApi {
     }
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2631,7 +2631,7 @@ public class SushiswapApi {
     }
 
     /**
-     * TokenDayDatas (historical) 🔥
+     * TokenDayDatas (historical)
      * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2653,7 +2653,7 @@ public class SushiswapApi {
     }
 
     /**
-     * TokenDayDatas (historical) 🔥 (asynchronously)
+     * TokenDayDatas (historical) (asynchronously)
      * Gets tokenDayDatas.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2775,7 +2775,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2798,7 +2798,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2822,7 +2822,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Tokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) (asynchronously)
      * Gets tokens.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2936,7 +2936,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2957,7 +2957,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Transactions (historical) 🔥
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2979,7 +2979,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Transactions (historical) 🔥 (asynchronously)
+     * Transactions (historical) (asynchronously)
      * Gets transactions.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3091,7 +3091,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3112,7 +3112,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Users (historical) 🔥
+     * Users (historical)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3134,7 +3134,7 @@ public class SushiswapApi {
     }
 
     /**
-     * Users (historical) 🔥 (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)

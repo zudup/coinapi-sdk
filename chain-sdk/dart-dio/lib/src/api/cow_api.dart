@@ -23,7 +23,7 @@ class CowApi {
 
   const CowApi(this._dio, this._serializers);
 
-  /// Orders (historical) 🔥
+  /// Orders (historical)
   /// Gets orders.
   ///
   /// Parameters:
@@ -114,7 +114,7 @@ class CowApi {
     );
   }
 
-  /// Settlements (historical) 🔥
+  /// Settlements (historical)
   /// Gets settlements.
   ///
   /// Parameters:
@@ -205,7 +205,7 @@ class CowApi {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   /// Gets tokens.
   ///
   /// Parameters:
@@ -305,7 +305,7 @@ class CowApi {
     );
   }
 
-  /// Trades (historical) 🔥
+  /// Trades (historical)
   /// Gets trades.
   ///
   /// Parameters:
@@ -402,7 +402,7 @@ class CowApi {
     );
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   /// Gets users.
   ///
   /// Parameters:

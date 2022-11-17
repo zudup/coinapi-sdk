@@ -222,7 +222,7 @@ export class UniswapV3Api {
 
     /**
      * Gets bundles.
-     * @summary Bundles (historical) 🔥
+     * @summary Bundles (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -300,7 +300,7 @@ export class UniswapV3Api {
 
     /**
      * Gets burns.
-     * @summary Burns (historical) 🔥
+     * @summary Burns (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -390,7 +390,7 @@ export class UniswapV3Api {
 
     /**
      * Gets factorys.
-     * @summary Factorys (historical) 🔥
+     * @summary Factorys (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -468,7 +468,7 @@ export class UniswapV3Api {
 
     /**
      * Gets mints.
-     * @summary Mints (historical) 🔥
+     * @summary Mints (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -558,7 +558,7 @@ export class UniswapV3Api {
 
     /**
      * Gets poolDayDatas.
-     * @summary PoolDayDatas (historical) 🔥
+     * @summary PoolDayDatas (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -640,7 +640,7 @@ export class UniswapV3Api {
 
     /**
      * Gets poolHourDatas.
-     * @summary PoolHourDatas (historical) 🔥
+     * @summary PoolHourDatas (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -722,7 +722,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools.
-     * @summary Pools (historical) 🔥
+     * @summary Pools (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -808,7 +808,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positionSnapshots.
-     * @summary PositionSnapshots (historical) 🔥
+     * @summary PositionSnapshots (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -890,7 +890,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positions.
-     * @summary Positions (historical) 🔥
+     * @summary Positions (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -980,7 +980,7 @@ export class UniswapV3Api {
 
     /**
      * Gets swaps.
-     * @summary Swaps (historical) 🔥
+     * @summary Swaps (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1070,7 +1070,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tickDayDatas.
-     * @summary TickDayDatas (historical) 🔥
+     * @summary TickDayDatas (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1152,7 +1152,7 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks.
-     * @summary Ticks (historical) 🔥
+     * @summary Ticks (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1234,7 +1234,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokenHourDatas.
-     * @summary TokenHourDatas (historical) 🔥
+     * @summary TokenHourDatas (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1312,7 +1312,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokenV3DayDatas.
-     * @summary TokenV3DayDatas (historical) 🔥
+     * @summary TokenV3DayDatas (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1390,7 +1390,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens.
-     * @summary Tokens (historical) 🔥
+     * @summary Tokens (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1476,7 +1476,7 @@ export class UniswapV3Api {
 
     /**
      * Gets transactions.
-     * @summary Transactions (historical) 🔥
+     * @summary Transactions (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1554,7 +1554,7 @@ export class UniswapV3Api {
 
     /**
      * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (historical) 🔥
+     * @summary UniswapDayDatas (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.

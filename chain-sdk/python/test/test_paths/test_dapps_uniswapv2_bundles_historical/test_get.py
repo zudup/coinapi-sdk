@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2BundlesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2BundlesHistorical unit test stubs
-        Bundles (historical) 🔥  # noqa: E501
+        Bundles (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -220,7 +220,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Bundles (historical) 🔥
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -283,7 +283,7 @@ class SushiswapApi {
     );
   }
 
-  /// Bundles (historical) 🔥
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -321,7 +321,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Burns (historical) 🔥
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -384,7 +384,7 @@ class SushiswapApi {
     );
   }
 
-  /// Burns (historical) 🔥
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -419,7 +419,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// DayDatas (historical) 🔥
+  /// DayDatas (historical)
   ///
   /// Gets dayDatas.
   ///
@@ -482,7 +482,7 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (historical) 🔥
+  /// DayDatas (historical)
   ///
   /// Gets dayDatas.
   ///
@@ -520,7 +520,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Factorys (historical) 🔥
+  /// Factorys (historical)
   ///
   /// Gets factorys.
   ///
@@ -583,7 +583,7 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (historical) 🔥
+  /// Factorys (historical)
   ///
   /// Gets factorys.
   ///
@@ -621,7 +621,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// HourDatas (historical) 🔥
+  /// HourDatas (historical)
   ///
   /// Gets hourDatas.
   ///
@@ -684,7 +684,7 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (historical) 🔥
+  /// HourDatas (historical)
   ///
   /// Gets hourDatas.
   ///
@@ -722,7 +722,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// LiquidityPositionSnapshots (historical) 🔥
+  /// LiquidityPositionSnapshots (historical)
   ///
   /// Gets liquidityPositionSnapshots.
   ///
@@ -790,7 +790,7 @@ class SushiswapApi {
     );
   }
 
-  /// LiquidityPositionSnapshots (historical) 🔥
+  /// LiquidityPositionSnapshots (historical)
   ///
   /// Gets liquidityPositionSnapshots.
   ///
@@ -827,7 +827,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// LiquidityPositions (historical) 🔥
+  /// LiquidityPositions (historical)
   ///
   /// Gets liquidityPositions.
   ///
@@ -895,7 +895,7 @@ class SushiswapApi {
     );
   }
 
-  /// LiquidityPositions (historical) 🔥
+  /// LiquidityPositions (historical)
   ///
   /// Gets liquidityPositions.
   ///
@@ -932,7 +932,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Mints (historical) 🔥
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -995,7 +995,7 @@ class SushiswapApi {
     );
   }
 
-  /// Mints (historical) 🔥
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -1030,7 +1030,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairDayDatas (historical) 🔥
+  /// PairDayDatas (historical)
   ///
   /// Gets pairDayDatas.
   ///
@@ -1103,7 +1103,7 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (historical) 🔥
+  /// PairDayDatas (historical)
   ///
   /// Gets pairDayDatas.
   ///
@@ -1142,7 +1142,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairHourDatas (historical) 🔥
+  /// PairHourDatas (historical)
   ///
   /// Gets pairHourDatas.
   ///
@@ -1205,7 +1205,7 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (historical) 🔥
+  /// PairHourDatas (historical)
   ///
   /// Gets pairHourDatas.
   ///
@@ -1240,7 +1240,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Pairs (historical) 🔥
+  /// Pairs (historical)
   ///
   /// Gets pairs.
   ///
@@ -1313,7 +1313,7 @@ class SushiswapApi {
     );
   }
 
-  /// Pairs (historical) 🔥
+  /// Pairs (historical)
   ///
   /// Gets pairs.
   ///
@@ -1352,7 +1352,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Swaps (historical) 🔥
+  /// Swaps (historical)
   ///
   /// Gets swaps.
   ///
@@ -1421,7 +1421,7 @@ class SushiswapApi {
     );
   }
 
-  /// Swaps (historical) 🔥
+  /// Swaps (historical)
   ///
   /// Gets swaps.
   ///
@@ -1462,7 +1462,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// TokenDayDatas (historical) 🔥
+  /// TokenDayDatas (historical)
   ///
   /// Gets tokenDayDatas.
   ///
@@ -1525,7 +1525,7 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (historical) 🔥
+  /// TokenDayDatas (historical)
   ///
   /// Gets tokenDayDatas.
   ///
@@ -1563,7 +1563,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   ///
   /// Gets tokens.
   ///
@@ -1638,7 +1638,7 @@ class SushiswapApi {
     );
   }
 
-  /// Tokens (historical) 🔥
+  /// Tokens (historical)
   ///
   /// Gets tokens.
   ///
@@ -1682,7 +1682,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Transactions (historical) 🔥
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1745,7 +1745,7 @@ class SushiswapApi {
     );
   }
 
-  /// Transactions (historical) 🔥
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1783,7 +1783,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -1846,7 +1846,7 @@ class SushiswapApi {
     );
   }
 
-  /// Users (historical) 🔥
+  /// Users (historical)
   ///
   /// Gets users.
   ///

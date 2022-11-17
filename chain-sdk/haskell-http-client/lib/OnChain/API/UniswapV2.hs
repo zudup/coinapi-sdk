@@ -108,7 +108,7 @@ instance Produces UniswapV2BurnsCurrent MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/bundles\/historical@
 -- 
--- Bundles (historical) 🔥
+-- Bundles (historical)
 -- 
 -- Gets bundles.
 -- 
@@ -156,7 +156,7 @@ instance Produces UniswapV2GetBundlesHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/burns\/historical@
 -- 
--- Burns (historical) 🔥
+-- Burns (historical)
 -- 
 -- Gets burns.
 -- 
@@ -209,7 +209,7 @@ instance Produces UniswapV2GetBurnsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/liquidityPositionSnapshots\/historical@
 -- 
--- LiquidityPositionSnapshots (historical) 🔥
+-- LiquidityPositionSnapshots (historical)
 -- 
 -- Gets liquidityPositionSnapshots.
 -- 
@@ -253,7 +253,7 @@ instance Produces UniswapV2GetLiquidityPositionSnapshotsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/liquidityPositions\/historical@
 -- 
--- LiquidityPositions (historical) 🔥
+-- LiquidityPositions (historical)
 -- 
 -- Gets liquidityPositions.
 -- 
@@ -311,7 +311,7 @@ instance Produces UniswapV2GetLiquidityPositionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/mints\/historical@
 -- 
--- Mints (historical) 🔥
+-- Mints (historical)
 -- 
 -- Gets mints.
 -- 
@@ -364,7 +364,7 @@ instance Produces UniswapV2GetMintsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/pairDayDatas\/historical@
 -- 
--- PairDayDatas (historical) 🔥
+-- PairDayDatas (historical)
 -- 
 -- Gets pairDayDatas.
 -- 
@@ -422,7 +422,7 @@ instance Produces UniswapV2GetPairDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/pairHourDatas\/historical@
 -- 
--- PairHourDatas (historical) 🔥
+-- PairHourDatas (historical)
 -- 
 -- Gets pairHourDatas.
 -- 
@@ -475,7 +475,7 @@ instance Produces UniswapV2GetPairHourDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/pairs\/historical@
 -- 
--- Pairs (historical) 🔥
+-- Pairs (historical)
 -- 
 -- Gets pairs.
 -- 
@@ -533,7 +533,7 @@ instance Produces UniswapV2GetPairsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/swaps\/historical@
 -- 
--- Swaps (historical) 🔥
+-- Swaps (historical)
 -- 
 -- Gets swaps.
 -- 
@@ -586,7 +586,7 @@ instance Produces UniswapV2GetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/tokenDayDatas\/historical@
 -- 
--- TokenDayDatas (historical) 🔥
+-- TokenDayDatas (historical)
 -- 
 -- Gets tokenDayDatas.
 -- 
@@ -634,7 +634,7 @@ instance Produces UniswapV2GetTokenDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -692,7 +692,7 @@ instance Produces UniswapV2GetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/transactions\/historical@
 -- 
--- Transactions (historical) 🔥
+-- Transactions (historical)
 -- 
 -- Gets transactions.
 -- 
@@ -740,7 +740,7 @@ instance Produces UniswapV2GetTransactionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/uniswapDayDatas\/historical@
 -- 
--- UniswapDayDatas (historical) 🔥
+-- UniswapDayDatas (historical)
 -- 
 -- Gets uniswapDayDatas.
 -- 
@@ -788,7 +788,7 @@ instance Produces UniswapV2GetUniswapDayDatasHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/uniswapFactorys\/historical@
 -- 
--- UniswapFactorys (historical) 🔥
+-- UniswapFactorys (historical)
 -- 
 -- Gets uniswapFactorys.
 -- 
@@ -836,7 +836,7 @@ instance Produces UniswapV2GetUniswapFactorysHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/users\/historical@
 -- 
--- Users (historical) 🔥
+-- Users (historical)
 -- 
 -- Gets users.
 -- 

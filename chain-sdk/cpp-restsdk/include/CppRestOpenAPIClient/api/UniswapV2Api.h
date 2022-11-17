@@ -75,7 +75,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV2_BurnDTO>>> uniswapV2_Burns__current(
     ) const;
     /// <summary>
-    /// Bundles (historical) 🔥
+    /// Bundles (historical)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -93,7 +93,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Burns (historical) 🔥
+    /// Burns (historical)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -113,7 +113,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// LiquidityPositionSnapshots (historical) 🔥
+    /// LiquidityPositionSnapshots (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidityPositionSnapshots.
@@ -135,7 +135,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// LiquidityPositions (historical) 🔥
+    /// LiquidityPositions (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidityPositions.
@@ -157,7 +157,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// Mints (historical) 🔥
+    /// Mints (historical)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -177,7 +177,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// PairDayDatas (historical) 🔥
+    /// PairDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets pairDayDatas.
@@ -199,7 +199,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// PairHourDatas (historical) 🔥
+    /// PairHourDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets pairHourDatas.
@@ -219,7 +219,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// Pairs (historical) 🔥
+    /// Pairs (historical)
     /// </summary>
     /// <remarks>
     /// Gets pairs.
@@ -241,7 +241,7 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// Swaps (historical) 🔥
+    /// Swaps (historical)
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -261,7 +261,7 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// TokenDayDatas (historical) 🔥
+    /// TokenDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokenDayDatas.
@@ -279,7 +279,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Tokens (historical) 🔥
+    /// Tokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -301,7 +301,7 @@ public:
         boost::optional<utility::string_t> name
     ) const;
     /// <summary>
-    /// Transactions (historical) 🔥
+    /// Transactions (historical)
     /// </summary>
     /// <remarks>
     /// Gets transactions.
@@ -319,7 +319,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// UniswapDayDatas (historical) 🔥
+    /// UniswapDayDatas (historical)
     /// </summary>
     /// <remarks>
     /// Gets uniswapDayDatas.
@@ -337,7 +337,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// UniswapFactorys (historical) 🔥
+    /// UniswapFactorys (historical)
     /// </summary>
     /// <remarks>
     /// Gets uniswapFactorys.
@@ -355,7 +355,7 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Users (historical) 🔥
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.

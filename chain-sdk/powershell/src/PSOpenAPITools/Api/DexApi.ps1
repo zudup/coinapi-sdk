@@ -159,7 +159,7 @@ function Invoke-DexDepositsCurrent {
 <#
 .SYNOPSIS
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 .DESCRIPTION
 
@@ -284,7 +284,7 @@ function Invoke-DexGetBatchsHistorical {
 <#
 .SYNOPSIS
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 .DESCRIPTION
 
@@ -419,7 +419,7 @@ function Invoke-DexGetDepositsHistorical {
 <#
 .SYNOPSIS
 
-Orders (historical) 🔥
+Orders (historical)
 
 .DESCRIPTION
 
@@ -564,7 +564,7 @@ function Invoke-DexGetOrdersHistorical {
 <#
 .SYNOPSIS
 
-Prices (historical) 🔥
+Prices (historical)
 
 .DESCRIPTION
 
@@ -689,7 +689,7 @@ function Invoke-DexGetPricesHistorical {
 <#
 .SYNOPSIS
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 .DESCRIPTION
 
@@ -814,7 +814,7 @@ function Invoke-DexGetSolutionsHistorical {
 <#
 .SYNOPSIS
 
-Statss (historical) 🔥
+Statss (historical)
 
 .DESCRIPTION
 
@@ -939,7 +939,7 @@ function Invoke-DexGetStatssHistorical {
 <#
 .SYNOPSIS
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 .DESCRIPTION
 
@@ -1094,7 +1094,7 @@ function Invoke-DexGetTokensHistorical {
 <#
 .SYNOPSIS
 
-Trades (historical) 🔥
+Trades (historical)
 
 .DESCRIPTION
 
@@ -1239,7 +1239,7 @@ function Invoke-DexGetTradesHistorical {
 <#
 .SYNOPSIS
 
-Users (historical) 🔥
+Users (historical)
 
 .DESCRIPTION
 
@@ -1364,7 +1364,7 @@ function Invoke-DexGetUsersHistorical {
 <#
 .SYNOPSIS
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 .DESCRIPTION
 
@@ -1499,7 +1499,7 @@ function Invoke-DexGetWithdrawRequestsHistorical {
 <#
 .SYNOPSIS
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 .DESCRIPTION
 

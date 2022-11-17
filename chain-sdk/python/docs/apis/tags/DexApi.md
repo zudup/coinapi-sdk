@@ -7,17 +7,17 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dex_batchs__current**](#dex_batchs__current) | **get** /dapps/dex/batchs/current | Batchs (current)
 [**dex_deposits__current**](#dex_deposits__current) | **get** /dapps/dex/deposits/current | Deposits (current)
-[**dex_get_batchs__historical**](#dex_get_batchs__historical) | **get** /dapps/dex/batchs/historical | Batchs (historical) 🔥
-[**dex_get_deposits__historical**](#dex_get_deposits__historical) | **get** /dapps/dex/deposits/historical | Deposits (historical) 🔥
-[**dex_get_orders__historical**](#dex_get_orders__historical) | **get** /dapps/dex/orders/historical | Orders (historical) 🔥
-[**dex_get_prices__historical**](#dex_get_prices__historical) | **get** /dapps/dex/prices/historical | Prices (historical) 🔥
-[**dex_get_solutions__historical**](#dex_get_solutions__historical) | **get** /dapps/dex/solutions/historical | Solutions (historical) 🔥
-[**dex_get_statss__historical**](#dex_get_statss__historical) | **get** /dapps/dex/statss/historical | Statss (historical) 🔥
-[**dex_get_tokens__historical**](#dex_get_tokens__historical) | **get** /dapps/dex/tokens/historical | Tokens (historical) 🔥
-[**dex_get_trades__historical**](#dex_get_trades__historical) | **get** /dapps/dex/trades/historical | Trades (historical) 🔥
-[**dex_get_users__historical**](#dex_get_users__historical) | **get** /dapps/dex/users/historical | Users (historical) 🔥
-[**dex_get_withdraw_requests__historical**](#dex_get_withdraw_requests__historical) | **get** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical) 🔥
-[**dex_get_withdraws__historical**](#dex_get_withdraws__historical) | **get** /dapps/dex/withdraws/historical | Withdraws (historical) 🔥
+[**dex_get_batchs__historical**](#dex_get_batchs__historical) | **get** /dapps/dex/batchs/historical | Batchs (historical)
+[**dex_get_deposits__historical**](#dex_get_deposits__historical) | **get** /dapps/dex/deposits/historical | Deposits (historical)
+[**dex_get_orders__historical**](#dex_get_orders__historical) | **get** /dapps/dex/orders/historical | Orders (historical)
+[**dex_get_prices__historical**](#dex_get_prices__historical) | **get** /dapps/dex/prices/historical | Prices (historical)
+[**dex_get_solutions__historical**](#dex_get_solutions__historical) | **get** /dapps/dex/solutions/historical | Solutions (historical)
+[**dex_get_statss__historical**](#dex_get_statss__historical) | **get** /dapps/dex/statss/historical | Statss (historical)
+[**dex_get_tokens__historical**](#dex_get_tokens__historical) | **get** /dapps/dex/tokens/historical | Tokens (historical)
+[**dex_get_trades__historical**](#dex_get_trades__historical) | **get** /dapps/dex/trades/historical | Trades (historical)
+[**dex_get_users__historical**](#dex_get_users__historical) | **get** /dapps/dex/users/historical | Users (historical)
+[**dex_get_withdraw_requests__historical**](#dex_get_withdraw_requests__historical) | **get** /dapps/dex/withdrawRequests/historical | WithdrawRequests (historical)
+[**dex_get_withdraws__historical**](#dex_get_withdraws__historical) | **get** /dapps/dex/withdraws/historical | Withdraws (historical)
 [**dex_orders__current**](#dex_orders__current) | **get** /dapps/dex/orders/current | Orders (current)
 [**dex_prices__current**](#dex_prices__current) | **get** /dapps/dex/prices/current | Prices (current)
 [**dex_solutions__current**](#dex_solutions__current) | **get** /dapps/dex/solutions/current | Solutions (current)
@@ -218,7 +218,7 @@ No authorization required
 <a name="dex_get_batchs__historical"></a>
 > [DexBatchDTO] dex_get_batchs__historical()
 
-Batchs (historical) 🔥
+Batchs (historical)
 
 Gets batchs.
 
@@ -249,7 +249,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Batchs (historical) 🔥
+        # Batchs (historical)
         api_response = api_instance.dex_get_batchs__historical(
             query_params=query_params,
         )
@@ -374,7 +374,7 @@ No authorization required
 <a name="dex_get_deposits__historical"></a>
 > [DexDepositDTO] dex_get_deposits__historical()
 
-Deposits (historical) 🔥
+Deposits (historical)
 
 Gets deposits.
 
@@ -406,7 +406,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'user': "user_example",
     }
     try:
-        # Deposits (historical) 🔥
+        # Deposits (historical)
         api_response = api_instance.dex_get_deposits__historical(
             query_params=query_params,
         )
@@ -539,7 +539,7 @@ No authorization required
 <a name="dex_get_orders__historical"></a>
 > [DexOrderDTO] dex_get_orders__historical()
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -572,7 +572,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'sell_token': "sell_token_example",
     }
     try:
-        # Orders (historical) 🔥
+        # Orders (historical)
         api_response = api_instance.dex_get_orders__historical(
             query_params=query_params,
         )
@@ -713,7 +713,7 @@ No authorization required
 <a name="dex_get_prices__historical"></a>
 > [DexPriceDTO] dex_get_prices__historical()
 
-Prices (historical) 🔥
+Prices (historical)
 
 Gets prices.
 
@@ -744,7 +744,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Prices (historical) 🔥
+        # Prices (historical)
         api_response = api_instance.dex_get_prices__historical(
             query_params=query_params,
         )
@@ -869,7 +869,7 @@ No authorization required
 <a name="dex_get_solutions__historical"></a>
 > [DexSolutionDTO] dex_get_solutions__historical()
 
-Solutions (historical) 🔥
+Solutions (historical)
 
 Gets solutions.
 
@@ -900,7 +900,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Solutions (historical) 🔥
+        # Solutions (historical)
         api_response = api_instance.dex_get_solutions__historical(
             query_params=query_params,
         )
@@ -1025,7 +1025,7 @@ No authorization required
 <a name="dex_get_statss__historical"></a>
 > [DexStatsDTO] dex_get_statss__historical()
 
-Statss (historical) 🔥
+Statss (historical)
 
 Gets statss.
 
@@ -1056,7 +1056,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Statss (historical) 🔥
+        # Statss (historical)
         api_response = api_instance.dex_get_statss__historical(
             query_params=query_params,
         )
@@ -1181,7 +1181,7 @@ No authorization required
 <a name="dex_get_tokens__historical"></a>
 > [DexTokenDTO] dex_get_tokens__historical()
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -1215,7 +1215,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'name': "name_example",
     }
     try:
-        # Tokens (historical) 🔥
+        # Tokens (historical)
         api_response = api_instance.dex_get_tokens__historical(
             query_params=query_params,
         )
@@ -1364,7 +1364,7 @@ No authorization required
 <a name="dex_get_trades__historical"></a>
 > [DexTradeDTO] dex_get_trades__historical()
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -1397,7 +1397,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'sell_token': "sell_token_example",
     }
     try:
-        # Trades (historical) 🔥
+        # Trades (historical)
         api_response = api_instance.dex_get_trades__historical(
             query_params=query_params,
         )
@@ -1538,7 +1538,7 @@ No authorization required
 <a name="dex_get_users__historical"></a>
 > [DexUserDTO] dex_get_users__historical()
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -1569,7 +1569,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Users (historical) 🔥
+        # Users (historical)
         api_response = api_instance.dex_get_users__historical(
             query_params=query_params,
         )
@@ -1694,7 +1694,7 @@ No authorization required
 <a name="dex_get_withdraw_requests__historical"></a>
 > [DexWithdrawRequestDTO] dex_get_withdraw_requests__historical()
 
-WithdrawRequests (historical) 🔥
+WithdrawRequests (historical)
 
 Gets withdrawRequests.
 
@@ -1726,7 +1726,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'user': "user_example",
     }
     try:
-        # WithdrawRequests (historical) 🔥
+        # WithdrawRequests (historical)
         api_response = api_instance.dex_get_withdraw_requests__historical(
             query_params=query_params,
         )
@@ -1859,7 +1859,7 @@ No authorization required
 <a name="dex_get_withdraws__historical"></a>
 > [DexWithdrawDTO] dex_get_withdraws__historical()
 
-Withdraws (historical) 🔥
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -1891,7 +1891,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'user': "user_example",
     }
     try:
-        # Withdraws (historical) 🔥
+        # Withdraws (historical)
         api_response = api_instance.dex_get_withdraws__historical(
             query_params=query_params,
         )

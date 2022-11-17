@@ -1461,7 +1461,7 @@ end:
 
 }
 
-// Accounts (historical) 🔥
+// Accounts (historical)
 //
 // Gets accounts.
 //
@@ -1664,7 +1664,7 @@ end:
 
 }
 
-// AddLiquidityEvents (historical) 🔥
+// AddLiquidityEvents (historical)
 //
 // Gets addLiquidityEvents.
 //
@@ -1867,7 +1867,7 @@ end:
 
 }
 
-// AdminFeeChangeLogs (historical) 🔥
+// AdminFeeChangeLogs (historical)
 //
 // Gets adminFeeChangeLogs.
 //
@@ -2070,7 +2070,7 @@ end:
 
 }
 
-// AmplificationCoeffChangeLogs (historical) 🔥
+// AmplificationCoeffChangeLogs (historical)
 //
 // Gets amplificationCoeffChangeLogs.
 //
@@ -2273,7 +2273,7 @@ end:
 
 }
 
-// Coins (historical) 🔥
+// Coins (historical)
 //
 // Gets coins.
 //
@@ -2476,7 +2476,7 @@ end:
 
 }
 
-// ContractVersions (historical) 🔥
+// ContractVersions (historical)
 //
 // Gets contractVersions.
 //
@@ -2679,7 +2679,7 @@ end:
 
 }
 
-// Contracts (historical) 🔥
+// Contracts (historical)
 //
 // Gets contracts.
 //
@@ -2858,7 +2858,7 @@ end:
 
 }
 
-// DailyVolumes (historical) 🔥
+// DailyVolumes (historical)
 //
 // Gets dailyVolumes.
 //
@@ -3061,7 +3061,7 @@ end:
 
 }
 
-// Exchanges (historical) 🔥
+// Exchanges (historical)
 //
 // Gets exchanges.
 //
@@ -3264,7 +3264,7 @@ end:
 
 }
 
-// FeeChangeLogs (historical) 🔥
+// FeeChangeLogs (historical)
 //
 // Gets feeChangeLogs.
 //
@@ -3467,7 +3467,7 @@ end:
 
 }
 
-// GaugeDeposits (historical) 🔥
+// GaugeDeposits (historical)
 //
 // Gets gaugeDeposits.
 //
@@ -3646,7 +3646,7 @@ end:
 
 }
 
-// GaugeLiquiditys (historical) 🔥
+// GaugeLiquiditys (historical)
 //
 // Gets gaugeLiquiditys.
 //
@@ -3849,7 +3849,7 @@ end:
 
 }
 
-// GaugeTotalWeights (historical) 🔥
+// GaugeTotalWeights (historical)
 //
 // Gets gaugeTotalWeights.
 //
@@ -4028,7 +4028,7 @@ end:
 
 }
 
-// GaugeTypeWeights (historical) 🔥
+// GaugeTypeWeights (historical)
 //
 // Gets gaugeTypeWeights.
 //
@@ -4207,7 +4207,7 @@ end:
 
 }
 
-// GaugeTypes (historical) 🔥
+// GaugeTypes (historical)
 //
 // Gets gaugeTypes.
 //
@@ -4410,7 +4410,7 @@ end:
 
 }
 
-// GaugeWeightVotes (historical) 🔥
+// GaugeWeightVotes (historical)
 //
 // Gets gaugeWeightVotes.
 //
@@ -4613,7 +4613,7 @@ end:
 
 }
 
-// GaugeWeights (historical) 🔥
+// GaugeWeights (historical)
 //
 // Gets gaugeWeights.
 //
@@ -4792,7 +4792,7 @@ end:
 
 }
 
-// GaugeWithdraws (historical) 🔥
+// GaugeWithdraws (historical)
 //
 // Gets gaugeWithdraws.
 //
@@ -4971,7 +4971,7 @@ end:
 
 }
 
-// Gauges (historical) 🔥
+// Gauges (historical)
 //
 // Gets gauges.
 //
@@ -5198,7 +5198,7 @@ end:
 
 }
 
-// HourlyVolumes (historical) 🔥
+// HourlyVolumes (historical)
 //
 // Gets hourlyVolumes.
 //
@@ -5401,7 +5401,7 @@ end:
 
 }
 
-// LpTokens (historical) 🔥
+// LpTokens (historical)
 //
 // Gets lpTokens.
 //
@@ -5676,7 +5676,7 @@ end:
 
 }
 
-// Pools (historical) 🔥
+// Pools (historical)
 //
 // Gets pools.
 //
@@ -5879,7 +5879,7 @@ end:
 
 }
 
-// ProposalVotes (historical) 🔥
+// ProposalVotes (historical)
 //
 // Gets proposalVotes.
 //
@@ -6058,7 +6058,7 @@ end:
 
 }
 
-// Proposals (historical) 🔥
+// Proposals (historical)
 //
 // Gets proposals.
 //
@@ -6237,7 +6237,7 @@ end:
 
 }
 
-// RemoveLiquidityEvents (historical) 🔥
+// RemoveLiquidityEvents (historical)
 //
 // Gets removeLiquidityEvents.
 //
@@ -6440,7 +6440,7 @@ end:
 
 }
 
-// RemoveLiquidityOneEvents (historical) 🔥
+// RemoveLiquidityOneEvents (historical)
 //
 // Gets removeLiquidityOneEvents.
 //
@@ -6643,7 +6643,7 @@ end:
 
 }
 
-// SystemStates (historical) 🔥
+// SystemStates (historical)
 //
 // Gets systemStates.
 //
@@ -6822,7 +6822,7 @@ end:
 
 }
 
-// Tokens (historical) 🔥
+// Tokens (historical)
 //
 // Gets tokens.
 //
@@ -7073,7 +7073,7 @@ end:
 
 }
 
-// TransferOwnershipEvents (historical) 🔥
+// TransferOwnershipEvents (historical)
 //
 // Gets transferOwnershipEvents.
 //
@@ -7276,7 +7276,7 @@ end:
 
 }
 
-// UnderlyingCoins (historical) 🔥
+// UnderlyingCoins (historical)
 //
 // Gets underlyingCoins.
 //
@@ -7479,7 +7479,7 @@ end:
 
 }
 
-// VotingApps (historical) 🔥
+// VotingApps (historical)
 //
 // Gets votingApps.
 //
@@ -7682,7 +7682,7 @@ end:
 
 }
 
-// WeeklyVolumes (historical) 🔥
+// WeeklyVolumes (historical)
 //
 // Gets weeklyVolumes.
 //

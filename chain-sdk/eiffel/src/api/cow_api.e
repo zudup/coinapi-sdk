@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	cow_get_orders_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [COW_ORDER_DTO]
-			-- Orders (historical) 🔥
+			-- Orders (historical)
 			-- Gets orders.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -73,7 +73,7 @@ feature -- API Access
 		end
 
 	cow_get_settlements_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [COW_SETTLEMENT_DTO]
-			-- Settlements (historical) 🔥
+			-- Settlements (historical)
 			-- Gets settlements.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -121,7 +121,7 @@ feature -- API Access
 		end
 
 	cow_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32; name: STRING_32; symbol: STRING_32): detachable LIST [COW_TOKEN_DTO]
-			-- Tokens (historical) 🔥
+			-- Tokens (historical)
 			-- Gets tokens.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -178,7 +178,7 @@ feature -- API Access
 		end
 
 	cow_get_trades_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; sell_token: STRING_32; buy_token: STRING_32): detachable LIST [COW_TRADE_DTO]
-			-- Trades (historical) 🔥
+			-- Trades (historical)
 			-- Gets trades.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -232,7 +232,7 @@ feature -- API Access
 		end
 
 	cow_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; address: STRING_32): detachable LIST [COW_USER_DTO]
-			-- Users (historical) 🔥
+			-- Users (historical)
 			-- Gets users.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)

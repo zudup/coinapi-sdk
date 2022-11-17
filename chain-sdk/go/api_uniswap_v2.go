@@ -267,7 +267,7 @@ func (r ApiUniswapV2GetBundlesHistoricalRequest) Execute() ([]UniswapV2BundleDTO
 }
 
 /*
-UniswapV2GetBundlesHistorical Bundles (historical) 🔥
+UniswapV2GetBundlesHistorical Bundles (historical)
 
 Gets bundles.
 
@@ -423,7 +423,7 @@ func (r ApiUniswapV2GetBurnsHistoricalRequest) Execute() ([]UniswapV2BurnDTO, *h
 }
 
 /*
-UniswapV2GetBurnsHistorical Burns (historical) 🔥
+UniswapV2GetBurnsHistorical Burns (historical)
 
 Gets burns.
 
@@ -582,7 +582,7 @@ func (r ApiUniswapV2GetLiquidityPositionSnapshotsHistoricalRequest) Execute() ([
 }
 
 /*
-UniswapV2GetLiquidityPositionSnapshotsHistorical LiquidityPositionSnapshots (historical) 🔥
+UniswapV2GetLiquidityPositionSnapshotsHistorical LiquidityPositionSnapshots (historical)
 
 Gets liquidityPositionSnapshots.
 
@@ -751,7 +751,7 @@ func (r ApiUniswapV2GetLiquidityPositionsHistoricalRequest) Execute() ([]Uniswap
 }
 
 /*
-UniswapV2GetLiquidityPositionsHistorical LiquidityPositions (historical) 🔥
+UniswapV2GetLiquidityPositionsHistorical LiquidityPositions (historical)
 
 Gets liquidityPositions.
 
@@ -913,7 +913,7 @@ func (r ApiUniswapV2GetMintsHistoricalRequest) Execute() ([]UniswapV2MintDTO, *h
 }
 
 /*
-UniswapV2GetMintsHistorical Mints (historical) 🔥
+UniswapV2GetMintsHistorical Mints (historical)
 
 Gets mints.
 
@@ -1079,7 +1079,7 @@ func (r ApiUniswapV2GetPairDayDatasHistoricalRequest) Execute() ([]UniswapV2Pair
 }
 
 /*
-UniswapV2GetPairDayDatasHistorical PairDayDatas (historical) 🔥
+UniswapV2GetPairDayDatasHistorical PairDayDatas (historical)
 
 Gets pairDayDatas.
 
@@ -1241,7 +1241,7 @@ func (r ApiUniswapV2GetPairHourDatasHistoricalRequest) Execute() ([]UniswapV2Pai
 }
 
 /*
-UniswapV2GetPairHourDatasHistorical PairHourDatas (historical) 🔥
+UniswapV2GetPairHourDatasHistorical PairHourDatas (historical)
 
 Gets pairHourDatas.
 
@@ -1407,7 +1407,7 @@ func (r ApiUniswapV2GetPairsHistoricalRequest) Execute() ([]UniswapV2PairDTO, *h
 }
 
 /*
-UniswapV2GetPairsHistorical Pairs (historical) 🔥
+UniswapV2GetPairsHistorical Pairs (historical)
 
 Gets pairs.
 
@@ -1569,7 +1569,7 @@ func (r ApiUniswapV2GetSwapsHistoricalRequest) Execute() ([]UniswapV2SwapDTO, *h
 }
 
 /*
-UniswapV2GetSwapsHistorical Swaps (historical) 🔥
+UniswapV2GetSwapsHistorical Swaps (historical)
 
 Gets swaps.
 
@@ -1721,7 +1721,7 @@ func (r ApiUniswapV2GetTokenDayDatasHistoricalRequest) Execute() ([]UniswapV2Tok
 }
 
 /*
-UniswapV2GetTokenDayDatasHistorical TokenDayDatas (historical) 🔥
+UniswapV2GetTokenDayDatasHistorical TokenDayDatas (historical)
 
 Gets tokenDayDatas.
 
@@ -1884,7 +1884,7 @@ func (r ApiUniswapV2GetTokensHistoricalRequest) Execute() ([]UniswapV2TokenDTO, 
 }
 
 /*
-UniswapV2GetTokensHistorical Tokens (historical) 🔥
+UniswapV2GetTokensHistorical Tokens (historical)
 
 Gets tokens.
 
@@ -2039,7 +2039,7 @@ func (r ApiUniswapV2GetTransactionsHistoricalRequest) Execute() ([]UniswapV2Tran
 }
 
 /*
-UniswapV2GetTransactionsHistorical Transactions (historical) 🔥
+UniswapV2GetTransactionsHistorical Transactions (historical)
 
 Gets transactions.
 
@@ -2188,7 +2188,7 @@ func (r ApiUniswapV2GetUniswapDayDatasHistoricalRequest) Execute() ([]UniswapV2U
 }
 
 /*
-UniswapV2GetUniswapDayDatasHistorical UniswapDayDatas (historical) 🔥
+UniswapV2GetUniswapDayDatasHistorical UniswapDayDatas (historical)
 
 Gets uniswapDayDatas.
 
@@ -2337,7 +2337,7 @@ func (r ApiUniswapV2GetUniswapFactorysHistoricalRequest) Execute() ([]UniswapV2U
 }
 
 /*
-UniswapV2GetUniswapFactorysHistorical UniswapFactorys (historical) 🔥
+UniswapV2GetUniswapFactorysHistorical UniswapFactorys (historical)
 
 Gets uniswapFactorys.
 
@@ -2486,7 +2486,7 @@ func (r ApiUniswapV2GetUsersHistoricalRequest) Execute() ([]UniswapV2UserDTO, *h
 }
 
 /*
-UniswapV2GetUsersHistorical Users (historical) 🔥
+UniswapV2GetUsersHistorical Users (historical)
 
 Gets users.
 

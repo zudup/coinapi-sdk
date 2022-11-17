@@ -781,7 +781,7 @@ export default class CurveApi {
      */
 
     /**
-     * Accounts (historical) 🔥
+     * Accounts (historical)
      * Gets accounts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -832,7 +832,7 @@ export default class CurveApi {
      */
 
     /**
-     * AddLiquidityEvents (historical) 🔥
+     * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -883,7 +883,7 @@ export default class CurveApi {
      */
 
     /**
-     * AdminFeeChangeLogs (historical) 🔥
+     * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -934,7 +934,7 @@ export default class CurveApi {
      */
 
     /**
-     * AmplificationCoeffChangeLogs (historical) 🔥
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -985,7 +985,7 @@ export default class CurveApi {
      */
 
     /**
-     * Coins (historical) 🔥
+     * Coins (historical)
      * Gets coins.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1036,7 +1036,7 @@ export default class CurveApi {
      */
 
     /**
-     * ContractVersions (historical) 🔥
+     * ContractVersions (historical)
      * Gets contractVersions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1087,7 +1087,7 @@ export default class CurveApi {
      */
 
     /**
-     * Contracts (historical) 🔥
+     * Contracts (historical)
      * Gets contracts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1136,7 +1136,7 @@ export default class CurveApi {
      */
 
     /**
-     * DailyVolumes (historical) 🔥
+     * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1187,7 +1187,7 @@ export default class CurveApi {
      */
 
     /**
-     * Exchanges (historical) 🔥
+     * Exchanges (historical)
      * Gets exchanges.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1238,7 +1238,7 @@ export default class CurveApi {
      */
 
     /**
-     * FeeChangeLogs (historical) 🔥
+     * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1289,7 +1289,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeDeposits (historical) 🔥
+     * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1338,7 +1338,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeLiquiditys (historical) 🔥
+     * GaugeLiquiditys (historical)
      * Gets gaugeLiquiditys.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1389,7 +1389,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeTotalWeights (historical) 🔥
+     * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1438,7 +1438,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeTypeWeights (historical) 🔥
+     * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1487,7 +1487,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeTypes (historical) 🔥
+     * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1538,7 +1538,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeWeightVotes (historical) 🔥
+     * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1589,7 +1589,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeWeights (historical) 🔥
+     * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1638,7 +1638,7 @@ export default class CurveApi {
      */
 
     /**
-     * GaugeWithdraws (historical) 🔥
+     * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1687,7 +1687,7 @@ export default class CurveApi {
      */
 
     /**
-     * Gauges (historical) 🔥
+     * Gauges (historical)
      * Gets gauges.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1740,7 +1740,7 @@ export default class CurveApi {
      */
 
     /**
-     * HourlyVolumes (historical) 🔥
+     * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1791,7 +1791,7 @@ export default class CurveApi {
      */
 
     /**
-     * LpTokens (historical) 🔥
+     * LpTokens (historical)
      * Gets lpTokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1848,7 +1848,7 @@ export default class CurveApi {
      */
 
     /**
-     * Pools (historical) 🔥
+     * Pools (historical)
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1899,7 +1899,7 @@ export default class CurveApi {
      */
 
     /**
-     * ProposalVotes (historical) 🔥
+     * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1948,7 +1948,7 @@ export default class CurveApi {
      */
 
     /**
-     * Proposals (historical) 🔥
+     * Proposals (historical)
      * Gets proposals.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1997,7 +1997,7 @@ export default class CurveApi {
      */
 
     /**
-     * RemoveLiquidityEvents (historical) 🔥
+     * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2048,7 +2048,7 @@ export default class CurveApi {
      */
 
     /**
-     * RemoveLiquidityOneEvents (historical) 🔥
+     * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2099,7 +2099,7 @@ export default class CurveApi {
      */
 
     /**
-     * SystemStates (historical) 🔥
+     * SystemStates (historical)
      * Gets systemStates.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2148,7 +2148,7 @@ export default class CurveApi {
      */
 
     /**
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2203,7 +2203,7 @@ export default class CurveApi {
      */
 
     /**
-     * TransferOwnershipEvents (historical) 🔥
+     * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2254,7 +2254,7 @@ export default class CurveApi {
      */
 
     /**
-     * UnderlyingCoins (historical) 🔥
+     * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -2305,7 +2305,7 @@ export default class CurveApi {
      */
 
     /**
-     * VotingApps (historical) 🔥
+     * VotingApps (historical)
      * Gets votingApps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2356,7 +2356,7 @@ export default class CurveApi {
      */
 
     /**
-     * WeeklyVolumes (historical) 🔥
+     * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

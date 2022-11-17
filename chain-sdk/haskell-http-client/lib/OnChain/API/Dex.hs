@@ -108,7 +108,7 @@ instance Produces DexDepositsCurrent MimePlainText
 
 -- | @GET \/dapps\/dex\/batchs\/historical@
 -- 
--- Batchs (historical) 🔥
+-- Batchs (historical)
 -- 
 -- Gets batchs.
 -- 
@@ -156,7 +156,7 @@ instance Produces DexGetBatchsHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/deposits\/historical@
 -- 
--- Deposits (historical) 🔥
+-- Deposits (historical)
 -- 
 -- Gets deposits.
 -- 
@@ -197,7 +197,7 @@ instance Produces DexGetDepositsHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/orders\/historical@
 -- 
--- Orders (historical) 🔥
+-- Orders (historical)
 -- 
 -- Gets orders.
 -- 
@@ -241,7 +241,7 @@ instance Produces DexGetOrdersHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/prices\/historical@
 -- 
--- Prices (historical) 🔥
+-- Prices (historical)
 -- 
 -- Gets prices.
 -- 
@@ -279,7 +279,7 @@ instance Produces DexGetPricesHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/solutions\/historical@
 -- 
--- Solutions (historical) 🔥
+-- Solutions (historical)
 -- 
 -- Gets solutions.
 -- 
@@ -327,7 +327,7 @@ instance Produces DexGetSolutionsHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/statss\/historical@
 -- 
--- Statss (historical) 🔥
+-- Statss (historical)
 -- 
 -- Gets statss.
 -- 
@@ -375,7 +375,7 @@ instance Produces DexGetStatssHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -438,7 +438,7 @@ instance Produces DexGetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/trades\/historical@
 -- 
--- Trades (historical) 🔥
+-- Trades (historical)
 -- 
 -- Gets trades.
 -- 
@@ -496,7 +496,7 @@ instance Produces DexGetTradesHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/users\/historical@
 -- 
--- Users (historical) 🔥
+-- Users (historical)
 -- 
 -- Gets users.
 -- 
@@ -544,7 +544,7 @@ instance Produces DexGetUsersHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/withdrawRequests\/historical@
 -- 
--- WithdrawRequests (historical) 🔥
+-- WithdrawRequests (historical)
 -- 
 -- Gets withdrawRequests.
 -- 
@@ -585,7 +585,7 @@ instance Produces DexGetWithdrawRequestsHistorical MimePlainText
 
 -- | @GET \/dapps\/dex\/withdraws\/historical@
 -- 
--- Withdraws (historical) 🔥
+-- Withdraws (historical)
 -- 
 -- Gets withdraws.
 -- 

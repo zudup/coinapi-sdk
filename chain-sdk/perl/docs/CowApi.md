@@ -9,11 +9,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical) 🔥
-[**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) 🔥
-[**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-[**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
-[**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical) 🔥
+[**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
+[**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical)
+[**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical)
 [**cow_orders__current**](CowApi.md#cow_orders__current) | **GET** /dapps/cow/orders/current | Orders (current)
 [**cow_settlements__current**](CowApi.md#cow_settlements__current) | **GET** /dapps/cow/settlements/current | Settlements (current)
 [**cow_tokens__current**](CowApi.md#cow_tokens__current) | **GET** /dapps/cow/tokens/current | Tokens (current)
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 # **cow_get_orders__historical**
 > ARRAY[CowOrderDTO] cow_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -78,7 +78,7 @@ No authorization required
 # **cow_get_settlements__historical**
 > ARRAY[CowSettlementDTO] cow_get_settlements__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Settlements (historical) 🔥
+Settlements (historical)
 
 Gets settlements.
 
@@ -132,7 +132,7 @@ No authorization required
 # **cow_get_tokens__historical**
 > ARRAY[CowTokenDTO] cow_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, address => $address, name => $name, symbol => $symbol)
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -192,7 +192,7 @@ No authorization required
 # **cow_get_trades__historical**
 > ARRAY[CowTradeDTO] cow_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, sell_token => $sell_token, buy_token => $buy_token)
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -250,7 +250,7 @@ No authorization required
 # **cow_get_users__historical**
 > ARRAY[CowUserDTO] cow_get_users__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, address => $address)
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 

@@ -5,11 +5,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cow_get_orders__historical**](#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | Orders (historical) 🔥
-[**cow_get_settlements__historical**](#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | Settlements (historical) 🔥
-[**cow_get_tokens__historical**](#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-[**cow_get_trades__historical**](#cow_get_trades__historical) | **get** /dapps/cow/trades/historical | Trades (historical) 🔥
-[**cow_get_users__historical**](#cow_get_users__historical) | **get** /dapps/cow/users/historical | Users (historical) 🔥
+[**cow_get_orders__historical**](#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | Orders (historical)
+[**cow_get_settlements__historical**](#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | Settlements (historical)
+[**cow_get_tokens__historical**](#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | Tokens (historical)
+[**cow_get_trades__historical**](#cow_get_trades__historical) | **get** /dapps/cow/trades/historical | Trades (historical)
+[**cow_get_users__historical**](#cow_get_users__historical) | **get** /dapps/cow/users/historical | Users (historical)
 [**cow_orders__current**](#cow_orders__current) | **get** /dapps/cow/orders/current | Orders (current)
 [**cow_settlements__current**](#cow_settlements__current) | **get** /dapps/cow/settlements/current | Settlements (current)
 [**cow_tokens__current**](#cow_tokens__current) | **get** /dapps/cow/tokens/current | Tokens (current)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 <a name="cow_get_orders__historical"></a>
 > [CowOrderDTO] cow_get_orders__historical()
 
-Orders (historical) 🔥
+Orders (historical)
 
 Gets orders.
 
@@ -51,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Orders (historical) 🔥
+        # Orders (historical)
         api_response = api_instance.cow_get_orders__historical(
             query_params=query_params,
         )
@@ -176,7 +176,7 @@ No authorization required
 <a name="cow_get_settlements__historical"></a>
 > [CowSettlementDTO] cow_get_settlements__historical()
 
-Settlements (historical) 🔥
+Settlements (historical)
 
 Gets settlements.
 
@@ -207,7 +207,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Settlements (historical) 🔥
+        # Settlements (historical)
         api_response = api_instance.cow_get_settlements__historical(
             query_params=query_params,
         )
@@ -332,7 +332,7 @@ No authorization required
 <a name="cow_get_tokens__historical"></a>
 > [CowTokenDTO] cow_get_tokens__historical()
 
-Tokens (historical) 🔥
+Tokens (historical)
 
 Gets tokens.
 
@@ -366,7 +366,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'symbol': "symbol_example",
     }
     try:
-        # Tokens (historical) 🔥
+        # Tokens (historical)
         api_response = api_instance.cow_get_tokens__historical(
             query_params=query_params,
         )
@@ -515,7 +515,7 @@ No authorization required
 <a name="cow_get_trades__historical"></a>
 > [CowTradeDTO] cow_get_trades__historical()
 
-Trades (historical) 🔥
+Trades (historical)
 
 Gets trades.
 
@@ -548,7 +548,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'buy_token': "buy_token_example",
     }
     try:
-        # Trades (historical) 🔥
+        # Trades (historical)
         api_response = api_instance.cow_get_trades__historical(
             query_params=query_params,
         )
@@ -689,7 +689,7 @@ No authorization required
 <a name="cow_get_users__historical"></a>
 > [CowUserDTO] cow_get_users__historical()
 
-Users (historical) 🔥
+Users (historical)
 
 Gets users.
 
@@ -721,7 +721,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'address': "address_example",
     }
     try:
-        # Users (historical) 🔥
+        # Users (historical)
         api_response = api_instance.cow_get_users__historical(
             query_params=query_params,
         )

@@ -2295,7 +2295,7 @@ public class CurveApi {
     }
   }
   /**
-  * Accounts (historical) 🔥
+  * Accounts (historical)
   * Gets accounts.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2363,7 +2363,7 @@ public class CurveApi {
   }
 
       /**
-   * Accounts (historical) 🔥
+   * Accounts (historical)
    * Gets accounts.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address 
   */
@@ -2429,7 +2429,7 @@ public class CurveApi {
     }
   }
   /**
-  * AddLiquidityEvents (historical) 🔥
+  * AddLiquidityEvents (historical)
   * Gets addLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2497,7 +2497,7 @@ public class CurveApi {
   }
 
       /**
-   * AddLiquidityEvents (historical) 🔥
+   * AddLiquidityEvents (historical)
    * Gets addLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -2563,7 +2563,7 @@ public class CurveApi {
     }
   }
   /**
-  * AdminFeeChangeLogs (historical) 🔥
+  * AdminFeeChangeLogs (historical)
   * Gets adminFeeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2631,7 +2631,7 @@ public class CurveApi {
   }
 
       /**
-   * AdminFeeChangeLogs (historical) 🔥
+   * AdminFeeChangeLogs (historical)
    * Gets adminFeeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -2697,7 +2697,7 @@ public class CurveApi {
     }
   }
   /**
-  * AmplificationCoeffChangeLogs (historical) 🔥
+  * AmplificationCoeffChangeLogs (historical)
   * Gets amplificationCoeffChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2765,7 +2765,7 @@ public class CurveApi {
   }
 
       /**
-   * AmplificationCoeffChangeLogs (historical) 🔥
+   * AmplificationCoeffChangeLogs (historical)
    * Gets amplificationCoeffChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -2831,7 +2831,7 @@ public class CurveApi {
     }
   }
   /**
-  * Coins (historical) 🔥
+  * Coins (historical)
   * Gets coins.
    * @param startBlock 
    * @param endBlock 
@@ -2899,7 +2899,7 @@ public class CurveApi {
   }
 
       /**
-   * Coins (historical) 🔥
+   * Coins (historical)
    * Gets coins.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -2965,7 +2965,7 @@ public class CurveApi {
     }
   }
   /**
-  * ContractVersions (historical) 🔥
+  * ContractVersions (historical)
   * Gets contractVersions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3033,7 +3033,7 @@ public class CurveApi {
   }
 
       /**
-   * ContractVersions (historical) 🔥
+   * ContractVersions (historical)
    * Gets contractVersions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address 
   */
@@ -3099,7 +3099,7 @@ public class CurveApi {
     }
   }
   /**
-  * Contracts (historical) 🔥
+  * Contracts (historical)
   * Gets contracts.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3165,7 +3165,7 @@ public class CurveApi {
   }
 
       /**
-   * Contracts (historical) 🔥
+   * Contracts (historical)
    * Gets contracts.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -3230,7 +3230,7 @@ public class CurveApi {
     }
   }
   /**
-  * DailyVolumes (historical) 🔥
+  * DailyVolumes (historical)
   * Gets dailyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3298,7 +3298,7 @@ public class CurveApi {
   }
 
       /**
-   * DailyVolumes (historical) 🔥
+   * DailyVolumes (historical)
    * Gets dailyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -3364,7 +3364,7 @@ public class CurveApi {
     }
   }
   /**
-  * Exchanges (historical) 🔥
+  * Exchanges (historical)
   * Gets exchanges.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3432,7 +3432,7 @@ public class CurveApi {
   }
 
       /**
-   * Exchanges (historical) 🔥
+   * Exchanges (historical)
    * Gets exchanges.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -3498,7 +3498,7 @@ public class CurveApi {
     }
   }
   /**
-  * FeeChangeLogs (historical) 🔥
+  * FeeChangeLogs (historical)
   * Gets feeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3566,7 +3566,7 @@ public class CurveApi {
   }
 
       /**
-   * FeeChangeLogs (historical) 🔥
+   * FeeChangeLogs (historical)
    * Gets feeChangeLogs.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -3632,7 +3632,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeDeposits (historical) 🔥
+  * GaugeDeposits (historical)
   * Gets gaugeDeposits.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3698,7 +3698,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeDeposits (historical) 🔥
+   * GaugeDeposits (historical)
    * Gets gaugeDeposits.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -3763,7 +3763,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeLiquiditys (historical) 🔥
+  * GaugeLiquiditys (historical)
   * Gets gaugeLiquiditys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3831,7 +3831,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeLiquiditys (historical) 🔥
+   * GaugeLiquiditys (historical)
    * Gets gaugeLiquiditys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param user 
   */
@@ -3897,7 +3897,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeTotalWeights (historical) 🔥
+  * GaugeTotalWeights (historical)
   * Gets gaugeTotalWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -3963,7 +3963,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeTotalWeights (historical) 🔥
+   * GaugeTotalWeights (historical)
    * Gets gaugeTotalWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -4028,7 +4028,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeTypeWeights (historical) 🔥
+  * GaugeTypeWeights (historical)
   * Gets gaugeTypeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4094,7 +4094,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeTypeWeights (historical) 🔥
+   * GaugeTypeWeights (historical)
    * Gets gaugeTypeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -4159,7 +4159,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeTypes (historical) 🔥
+  * GaugeTypes (historical)
   * Gets gaugeTypes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4227,7 +4227,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeTypes (historical) 🔥
+   * GaugeTypes (historical)
    * Gets gaugeTypes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param name 
   */
@@ -4293,7 +4293,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeWeightVotes (historical) 🔥
+  * GaugeWeightVotes (historical)
   * Gets gaugeWeightVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4361,7 +4361,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeWeightVotes (historical) 🔥
+   * GaugeWeightVotes (historical)
    * Gets gaugeWeightVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param user 
   */
@@ -4427,7 +4427,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeWeights (historical) 🔥
+  * GaugeWeights (historical)
   * Gets gaugeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4493,7 +4493,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeWeights (historical) 🔥
+   * GaugeWeights (historical)
    * Gets gaugeWeights.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -4558,7 +4558,7 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeWithdraws (historical) 🔥
+  * GaugeWithdraws (historical)
   * Gets gaugeWithdraws.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4624,7 +4624,7 @@ public class CurveApi {
   }
 
       /**
-   * GaugeWithdraws (historical) 🔥
+   * GaugeWithdraws (historical)
    * Gets gaugeWithdraws.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -4689,7 +4689,7 @@ public class CurveApi {
     }
   }
   /**
-  * Gauges (historical) 🔥
+  * Gauges (historical)
   * Gets gauges.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4759,7 +4759,7 @@ public class CurveApi {
   }
 
       /**
-   * Gauges (historical) 🔥
+   * Gauges (historical)
    * Gets gauges.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address    * @param pool 
   */
@@ -4826,7 +4826,7 @@ public class CurveApi {
     }
   }
   /**
-  * HourlyVolumes (historical) 🔥
+  * HourlyVolumes (historical)
   * Gets hourlyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -4894,7 +4894,7 @@ public class CurveApi {
   }
 
       /**
-   * HourlyVolumes (historical) 🔥
+   * HourlyVolumes (historical)
    * Gets hourlyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -4960,7 +4960,7 @@ public class CurveApi {
     }
   }
   /**
-  * LpTokens (historical) 🔥
+  * LpTokens (historical)
   * Gets lpTokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5034,7 +5034,7 @@ public class CurveApi {
   }
 
       /**
-   * LpTokens (historical) 🔥
+   * LpTokens (historical)
    * Gets lpTokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address    * @param name    * @param symbol    * @param pool 
   */
@@ -5103,7 +5103,7 @@ public class CurveApi {
     }
   }
   /**
-  * Pools (historical) 🔥
+  * Pools (historical)
   * Gets pools.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5171,7 +5171,7 @@ public class CurveApi {
   }
 
       /**
-   * Pools (historical) 🔥
+   * Pools (historical)
    * Gets pools.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Pool address.   * @param name Pool&#39;s human-readable name.
   */
@@ -5237,7 +5237,7 @@ public class CurveApi {
     }
   }
   /**
-  * ProposalVotes (historical) 🔥
+  * ProposalVotes (historical)
   * Gets proposalVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5303,7 +5303,7 @@ public class CurveApi {
   }
 
       /**
-   * ProposalVotes (historical) 🔥
+   * ProposalVotes (historical)
    * Gets proposalVotes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -5368,7 +5368,7 @@ public class CurveApi {
     }
   }
   /**
-  * Proposals (historical) 🔥
+  * Proposals (historical)
   * Gets proposals.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5434,7 +5434,7 @@ public class CurveApi {
   }
 
       /**
-   * Proposals (historical) 🔥
+   * Proposals (historical)
    * Gets proposals.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -5499,7 +5499,7 @@ public class CurveApi {
     }
   }
   /**
-  * RemoveLiquidityEvents (historical) 🔥
+  * RemoveLiquidityEvents (historical)
   * Gets removeLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5567,7 +5567,7 @@ public class CurveApi {
   }
 
       /**
-   * RemoveLiquidityEvents (historical) 🔥
+   * RemoveLiquidityEvents (historical)
    * Gets removeLiquidityEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -5633,7 +5633,7 @@ public class CurveApi {
     }
   }
   /**
-  * RemoveLiquidityOneEvents (historical) 🔥
+  * RemoveLiquidityOneEvents (historical)
   * Gets removeLiquidityOneEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5701,7 +5701,7 @@ public class CurveApi {
   }
 
       /**
-   * RemoveLiquidityOneEvents (historical) 🔥
+   * RemoveLiquidityOneEvents (historical)
    * Gets removeLiquidityOneEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -5767,7 +5767,7 @@ public class CurveApi {
     }
   }
   /**
-  * SystemStates (historical) 🔥
+  * SystemStates (historical)
   * Gets systemStates.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5833,7 +5833,7 @@ public class CurveApi {
   }
 
       /**
-   * SystemStates (historical) 🔥
+   * SystemStates (historical)
    * Gets systemStates.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Singleton ID, equals to &#39;current&#39;.
   */
@@ -5898,7 +5898,7 @@ public class CurveApi {
     }
   }
   /**
-  * Tokens (historical) 🔥
+  * Tokens (historical)
   * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5970,7 +5970,7 @@ public class CurveApi {
   }
 
       /**
-   * Tokens (historical) 🔥
+   * Tokens (historical)
    * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param address    * @param name    * @param symbol 
   */
@@ -6038,7 +6038,7 @@ public class CurveApi {
     }
   }
   /**
-  * TransferOwnershipEvents (historical) 🔥
+  * TransferOwnershipEvents (historical)
   * Gets transferOwnershipEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6106,7 +6106,7 @@ public class CurveApi {
   }
 
       /**
-   * TransferOwnershipEvents (historical) 🔥
+   * TransferOwnershipEvents (historical)
    * Gets transferOwnershipEvents.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */
@@ -6172,7 +6172,7 @@ public class CurveApi {
     }
   }
   /**
-  * UnderlyingCoins (historical) 🔥
+  * UnderlyingCoins (historical)
   * Gets underlyingCoins.
    * @param startBlock 
    * @param endBlock 
@@ -6240,7 +6240,7 @@ public class CurveApi {
   }
 
       /**
-   * UnderlyingCoins (historical) 🔥
+   * UnderlyingCoins (historical)
    * Gets underlyingCoins.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -6306,7 +6306,7 @@ public class CurveApi {
     }
   }
   /**
-  * VotingApps (historical) 🔥
+  * VotingApps (historical)
   * Gets votingApps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6374,7 +6374,7 @@ public class CurveApi {
   }
 
       /**
-   * VotingApps (historical) 🔥
+   * VotingApps (historical)
    * Gets votingApps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id App address.   * @param address 
   */
@@ -6440,7 +6440,7 @@ public class CurveApi {
     }
   }
   /**
-  * WeeklyVolumes (historical) 🔥
+  * WeeklyVolumes (historical)
   * Gets weeklyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -6508,7 +6508,7 @@ public class CurveApi {
   }
 
       /**
-   * WeeklyVolumes (historical) 🔥
+   * WeeklyVolumes (historical)
    * Gets weeklyVolumes.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pool 
   */

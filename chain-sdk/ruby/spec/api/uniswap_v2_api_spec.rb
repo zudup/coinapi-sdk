@@ -55,7 +55,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_bundles__historical
-  # Bundles (historical) 🔥
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -71,7 +71,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_burns__historical
-  # Burns (historical) 🔥
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -88,7 +88,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_liquidity_position_snapshots__historical
-  # LiquidityPositionSnapshots (historical) 🔥
+  # LiquidityPositionSnapshots (historical)
   # Gets liquidityPositionSnapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -106,7 +106,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_liquidity_positions__historical
-  # LiquidityPositions (historical) 🔥
+  # LiquidityPositions (historical)
   # Gets liquidityPositions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -124,7 +124,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_mints__historical
-  # Mints (historical) 🔥
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -141,7 +141,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pair_day_datas__historical
-  # PairDayDatas (historical) 🔥
+  # PairDayDatas (historical)
   # Gets pairDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -159,7 +159,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pair_hour_datas__historical
-  # PairHourDatas (historical) 🔥
+  # PairHourDatas (historical)
   # Gets pairHourDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -176,7 +176,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pairs__historical
-  # Pairs (historical) 🔥
+  # Pairs (historical)
   # Gets pairs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -194,7 +194,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_swaps__historical
-  # Swaps (historical) 🔥
+  # Swaps (historical)
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -211,7 +211,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_token_day_datas__historical
-  # TokenDayDatas (historical) 🔥
+  # TokenDayDatas (historical)
   # Gets tokenDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -227,7 +227,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_tokens__historical
-  # Tokens (historical) 🔥
+  # Tokens (historical)
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -245,7 +245,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_transactions__historical
-  # Transactions (historical) 🔥
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -261,7 +261,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_uniswap_day_datas__historical
-  # UniswapDayDatas (historical) 🔥
+  # UniswapDayDatas (historical)
   # Gets uniswapDayDatas.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -277,7 +277,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_uniswap_factorys__historical
-  # UniswapFactorys (historical) 🔥
+  # UniswapFactorys (historical)
   # Gets uniswapFactorys.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -293,7 +293,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_users__historical
-  # Users (historical) 🔥
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.

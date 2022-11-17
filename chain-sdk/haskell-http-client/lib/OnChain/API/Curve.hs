@@ -504,7 +504,7 @@ instance Produces CurveGaugesCurrent MimePlainText
 
 -- | @GET \/dapps\/curve\/accounts\/historical@
 -- 
--- Accounts (historical) 🔥
+-- Accounts (historical)
 -- 
 -- Gets accounts.
 -- 
@@ -557,7 +557,7 @@ instance Produces CurveGetAccountsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/addLiquidityEvents\/historical@
 -- 
--- AddLiquidityEvents (historical) 🔥
+-- AddLiquidityEvents (historical)
 -- 
 -- Gets addLiquidityEvents.
 -- 
@@ -610,7 +610,7 @@ instance Produces CurveGetAddLiquidityEventsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/adminFeeChangeLogs\/historical@
 -- 
--- AdminFeeChangeLogs (historical) 🔥
+-- AdminFeeChangeLogs (historical)
 -- 
 -- Gets adminFeeChangeLogs.
 -- 
@@ -663,7 +663,7 @@ instance Produces CurveGetAdminFeeChangeLogsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/amplificationCoeffChangeLogs\/historical@
 -- 
--- AmplificationCoeffChangeLogs (historical) 🔥
+-- AmplificationCoeffChangeLogs (historical)
 -- 
 -- Gets amplificationCoeffChangeLogs.
 -- 
@@ -716,7 +716,7 @@ instance Produces CurveGetAmplificationCoeffChangeLogsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/coins\/historical@
 -- 
--- Coins (historical) 🔥
+-- Coins (historical)
 -- 
 -- Gets coins.
 -- 
@@ -757,7 +757,7 @@ instance Produces CurveGetCoinsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/contractVersions\/historical@
 -- 
--- ContractVersions (historical) 🔥
+-- ContractVersions (historical)
 -- 
 -- Gets contractVersions.
 -- 
@@ -810,7 +810,7 @@ instance Produces CurveGetContractVersionsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/contracts\/historical@
 -- 
--- Contracts (historical) 🔥
+-- Contracts (historical)
 -- 
 -- Gets contracts.
 -- 
@@ -858,7 +858,7 @@ instance Produces CurveGetContractsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/dailyVolumes\/historical@
 -- 
--- DailyVolumes (historical) 🔥
+-- DailyVolumes (historical)
 -- 
 -- Gets dailyVolumes.
 -- 
@@ -911,7 +911,7 @@ instance Produces CurveGetDailyVolumesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/exchanges\/historical@
 -- 
--- Exchanges (historical) 🔥
+-- Exchanges (historical)
 -- 
 -- Gets exchanges.
 -- 
@@ -964,7 +964,7 @@ instance Produces CurveGetExchangesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/feeChangeLogs\/historical@
 -- 
--- FeeChangeLogs (historical) 🔥
+-- FeeChangeLogs (historical)
 -- 
 -- Gets feeChangeLogs.
 -- 
@@ -1017,7 +1017,7 @@ instance Produces CurveGetFeeChangeLogsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeDeposits\/historical@
 -- 
--- GaugeDeposits (historical) 🔥
+-- GaugeDeposits (historical)
 -- 
 -- Gets gaugeDeposits.
 -- 
@@ -1065,7 +1065,7 @@ instance Produces CurveGetGaugeDepositsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeLiquiditys\/historical@
 -- 
--- GaugeLiquiditys (historical) 🔥
+-- GaugeLiquiditys (historical)
 -- 
 -- Gets gaugeLiquiditys.
 -- 
@@ -1118,7 +1118,7 @@ instance Produces CurveGetGaugeLiquiditysHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeTotalWeights\/historical@
 -- 
--- GaugeTotalWeights (historical) 🔥
+-- GaugeTotalWeights (historical)
 -- 
 -- Gets gaugeTotalWeights.
 -- 
@@ -1166,7 +1166,7 @@ instance Produces CurveGetGaugeTotalWeightsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeTypeWeights\/historical@
 -- 
--- GaugeTypeWeights (historical) 🔥
+-- GaugeTypeWeights (historical)
 -- 
 -- Gets gaugeTypeWeights.
 -- 
@@ -1214,7 +1214,7 @@ instance Produces CurveGetGaugeTypeWeightsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeTypes\/historical@
 -- 
--- GaugeTypes (historical) 🔥
+-- GaugeTypes (historical)
 -- 
 -- Gets gaugeTypes.
 -- 
@@ -1267,7 +1267,7 @@ instance Produces CurveGetGaugeTypesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeWeightVotes\/historical@
 -- 
--- GaugeWeightVotes (historical) 🔥
+-- GaugeWeightVotes (historical)
 -- 
 -- Gets gaugeWeightVotes.
 -- 
@@ -1320,7 +1320,7 @@ instance Produces CurveGetGaugeWeightVotesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeWeights\/historical@
 -- 
--- GaugeWeights (historical) 🔥
+-- GaugeWeights (historical)
 -- 
 -- Gets gaugeWeights.
 -- 
@@ -1368,7 +1368,7 @@ instance Produces CurveGetGaugeWeightsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gaugeWithdraws\/historical@
 -- 
--- GaugeWithdraws (historical) 🔥
+-- GaugeWithdraws (historical)
 -- 
 -- Gets gaugeWithdraws.
 -- 
@@ -1416,7 +1416,7 @@ instance Produces CurveGetGaugeWithdrawsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/gauges\/historical@
 -- 
--- Gauges (historical) 🔥
+-- Gauges (historical)
 -- 
 -- Gets gauges.
 -- 
@@ -1474,7 +1474,7 @@ instance Produces CurveGetGaugesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/hourlyVolumes\/historical@
 -- 
--- HourlyVolumes (historical) 🔥
+-- HourlyVolumes (historical)
 -- 
 -- Gets hourlyVolumes.
 -- 
@@ -1527,7 +1527,7 @@ instance Produces CurveGetHourlyVolumesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/lpTokens\/historical@
 -- 
--- LpTokens (historical) 🔥
+-- LpTokens (historical)
 -- 
 -- Gets lpTokens.
 -- 
@@ -1595,7 +1595,7 @@ instance Produces CurveGetLpTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/pools\/historical@
 -- 
--- Pools (historical) 🔥
+-- Pools (historical)
 -- 
 -- Gets pools.
 -- 
@@ -1648,7 +1648,7 @@ instance Produces CurveGetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/proposalVotes\/historical@
 -- 
--- ProposalVotes (historical) 🔥
+-- ProposalVotes (historical)
 -- 
 -- Gets proposalVotes.
 -- 
@@ -1696,7 +1696,7 @@ instance Produces CurveGetProposalVotesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/proposals\/historical@
 -- 
--- Proposals (historical) 🔥
+-- Proposals (historical)
 -- 
 -- Gets proposals.
 -- 
@@ -1744,7 +1744,7 @@ instance Produces CurveGetProposalsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/removeLiquidityEvents\/historical@
 -- 
--- RemoveLiquidityEvents (historical) 🔥
+-- RemoveLiquidityEvents (historical)
 -- 
 -- Gets removeLiquidityEvents.
 -- 
@@ -1797,7 +1797,7 @@ instance Produces CurveGetRemoveLiquidityEventsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/removeLiquidityOneEvents\/historical@
 -- 
--- RemoveLiquidityOneEvents (historical) 🔥
+-- RemoveLiquidityOneEvents (historical)
 -- 
 -- Gets removeLiquidityOneEvents.
 -- 
@@ -1850,7 +1850,7 @@ instance Produces CurveGetRemoveLiquidityOneEventsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/systemStates\/historical@
 -- 
--- SystemStates (historical) 🔥
+-- SystemStates (historical)
 -- 
 -- Gets systemStates.
 -- 
@@ -1898,7 +1898,7 @@ instance Produces CurveGetSystemStatesHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/tokens\/historical@
 -- 
--- Tokens (historical) 🔥
+-- Tokens (historical)
 -- 
 -- Gets tokens.
 -- 
@@ -1961,7 +1961,7 @@ instance Produces CurveGetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/transferOwnershipEvents\/historical@
 -- 
--- TransferOwnershipEvents (historical) 🔥
+-- TransferOwnershipEvents (historical)
 -- 
 -- Gets transferOwnershipEvents.
 -- 
@@ -2014,7 +2014,7 @@ instance Produces CurveGetTransferOwnershipEventsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/underlyingCoins\/historical@
 -- 
--- UnderlyingCoins (historical) 🔥
+-- UnderlyingCoins (historical)
 -- 
 -- Gets underlyingCoins.
 -- 
@@ -2055,7 +2055,7 @@ instance Produces CurveGetUnderlyingCoinsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/votingApps\/historical@
 -- 
--- VotingApps (historical) 🔥
+-- VotingApps (historical)
 -- 
 -- Gets votingApps.
 -- 
@@ -2108,7 +2108,7 @@ instance Produces CurveGetVotingAppsHistorical MimePlainText
 
 -- | @GET \/dapps\/curve\/weeklyVolumes\/historical@
 -- 
--- WeeklyVolumes (historical) 🔥
+-- WeeklyVolumes (historical)
 -- 
 -- Gets weeklyVolumes.
 -- 

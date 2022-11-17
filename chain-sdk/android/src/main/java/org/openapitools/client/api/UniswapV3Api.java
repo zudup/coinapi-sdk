@@ -421,7 +421,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Bundles (historical) 🔥
+  * Bundles (historical)
   * Gets bundles.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -487,7 +487,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Bundles (historical) 🔥
+   * Bundles (historical)
    * Gets bundles.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
@@ -552,7 +552,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Burns (historical) 🔥
+  * Burns (historical)
   * Gets burns.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -624,7 +624,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Burns (historical) 🔥
+   * Burns (historical)
    * Gets burns.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Transaction hash + &#39;#&#39; + index in mints Transaction array.   * @param pool Pool position is within.   * @param token0 Reference to token0 as stored in pool contract.   * @param token1 Reference to token1 as stored in pool contract.
   */
@@ -692,7 +692,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Factorys (historical) 🔥
+  * Factorys (historical)
   * Gets factorys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -758,7 +758,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Factorys (historical) 🔥
+   * Factorys (historical)
    * Gets factorys.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Factory address.
   */
@@ -823,7 +823,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Mints (historical) 🔥
+  * Mints (historical)
   * Gets mints.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -895,7 +895,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Mints (historical) 🔥
+   * Mints (historical)
    * Gets mints.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Transaction hash + &#39;#&#39; + index in mints Transaction array.   * @param pool Pool address.   * @param token0 Reference to token0 as stored in pool contract.   * @param token1 Reference to token1 as stored in pool contract.
   */
@@ -963,7 +963,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolDayDatas (historical) 🔥
+  * PoolDayDatas (historical)
   * Gets poolDayDatas.
    * @param startBlock 
    * @param endBlock 
@@ -1031,7 +1031,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolDayDatas (historical) 🔥
+   * PoolDayDatas (historical)
    * Gets poolDayDatas.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -1097,7 +1097,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolHourDatas (historical) 🔥
+  * PoolHourDatas (historical)
   * Gets poolHourDatas.
    * @param startBlock 
    * @param endBlock 
@@ -1165,7 +1165,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolHourDatas (historical) 🔥
+   * PoolHourDatas (historical)
    * Gets poolHourDatas.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -1231,7 +1231,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Pools (historical) 🔥
+  * Pools (historical)
   * Gets pools.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1301,7 +1301,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Pools (historical) 🔥
+   * Pools (historical)
    * Gets pools.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Pool address.   * @param token0 Reference to token0 as stored in pool contract.   * @param token1 Reference to token1 as stored in pool contract.
   */
@@ -1368,7 +1368,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PositionSnapshots (historical) 🔥
+  * PositionSnapshots (historical)
   * Gets positionSnapshots.
    * @param startBlock 
    * @param endBlock 
@@ -1436,7 +1436,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * PositionSnapshots (historical) 🔥
+   * PositionSnapshots (historical)
    * Gets positionSnapshots.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -1502,7 +1502,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Positions (historical) 🔥
+  * Positions (historical)
   * Gets positions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1574,7 +1574,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Positions (historical) 🔥
+   * Positions (historical)
    * Gets positions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id NFT token identifier.   * @param pool Pool position is within.   * @param token0 Reference to token0 as stored in pair contract.   * @param token1 Reference to token1 as stored in pair contract.
   */
@@ -1642,7 +1642,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Swaps (historical) 🔥
+  * Swaps (historical)
   * Gets swaps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1714,7 +1714,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Swaps (historical) 🔥
+   * Swaps (historical)
    * Gets swaps.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.   * @param pool Pool swap occured within.   * @param token0 Reference to token0 as stored in pair contract.   * @param token1 Reference to token1 as stored in pair contract.
   */
@@ -1782,7 +1782,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TickDayDatas (historical) 🔥
+  * TickDayDatas (historical)
   * Gets tickDayDatas.
    * @param startBlock 
    * @param endBlock 
@@ -1850,7 +1850,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * TickDayDatas (historical) 🔥
+   * TickDayDatas (historical)
    * Gets tickDayDatas.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -1916,7 +1916,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Ticks (historical) 🔥
+  * Ticks (historical)
   * Gets ticks.
    * @param startBlock 
    * @param endBlock 
@@ -1984,7 +1984,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Ticks (historical) 🔥
+   * Ticks (historical)
    * Gets ticks.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
@@ -2050,7 +2050,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenHourDatas (historical) 🔥
+  * TokenHourDatas (historical)
   * Gets tokenHourDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2116,7 +2116,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenHourDatas (historical) 🔥
+   * TokenHourDatas (historical)
    * Gets tokenHourDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address concatendated with date.
   */
@@ -2181,7 +2181,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenV3DayDatas (historical) 🔥
+  * TokenV3DayDatas (historical)
   * Gets tokenV3DayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2247,7 +2247,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenV3DayDatas (historical) 🔥
+   * TokenV3DayDatas (historical)
    * Gets tokenV3DayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address concatendated with date.
   */
@@ -2312,7 +2312,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Tokens (historical) 🔥
+  * Tokens (historical)
   * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2382,7 +2382,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Tokens (historical) 🔥
+   * Tokens (historical)
    * Gets tokens.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address.   * @param symbol Token symbol.   * @param name Token name.
   */
@@ -2449,7 +2449,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Transactions (historical) 🔥
+  * Transactions (historical)
   * Gets transactions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2515,7 +2515,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * Transactions (historical) 🔥
+   * Transactions (historical)
    * Gets transactions.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Transaction hash.
   */
@@ -2580,7 +2580,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * UniswapDayDatas (historical) 🔥
+  * UniswapDayDatas (historical)
   * Gets uniswapDayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2646,7 +2646,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * UniswapDayDatas (historical) 🔥
+   * UniswapDayDatas (historical)
    * Gets uniswapDayDatas.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Timestamp rounded to current day by dividing by 86400.
   */

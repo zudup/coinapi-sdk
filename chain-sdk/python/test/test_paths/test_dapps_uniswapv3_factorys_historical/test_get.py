@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3FactorysHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3FactorysHistorical unit test stubs
-        Factorys (historical) 🔥  # noqa: E501
+        Factorys (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

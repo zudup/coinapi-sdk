@@ -153,7 +153,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistorical
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -175,7 +175,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalWithHttpInfo
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -279,7 +279,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalAsync
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -304,7 +304,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalAsyncWithHttpInfo
      *
-     * Orders (historical) 🔥
+     * Orders (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -491,7 +491,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistorical
      *
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -513,7 +513,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalWithHttpInfo
      *
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -617,7 +617,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalAsync
      *
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -642,7 +642,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalAsyncWithHttpInfo
      *
-     * Settlements (historical) 🔥
+     * Settlements (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -829,7 +829,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistorical
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -854,7 +854,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -961,7 +961,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalAsync
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -989,7 +989,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalAsyncWithHttpInfo
      *
-     * Tokens (historical) 🔥
+     * Tokens (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1212,7 +1212,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistorical
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -1236,7 +1236,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalWithHttpInfo
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1342,7 +1342,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalAsync
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1369,7 +1369,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalAsyncWithHttpInfo
      *
-     * Trades (historical) 🔥
+     * Trades (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -1580,7 +1580,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistorical
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1603,7 +1603,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalWithHttpInfo
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1708,7 +1708,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalAsync
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1734,7 +1734,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalAsyncWithHttpInfo
      *
-     * Users (historical) 🔥
+     * Users (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
