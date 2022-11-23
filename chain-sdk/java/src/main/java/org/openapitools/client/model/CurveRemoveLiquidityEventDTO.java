@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveRemoveLiquidityEventDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T21:33:18.995547Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T22:14:16.118357Z[Etc/UTC]")
 public class CurveRemoveLiquidityEventDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
