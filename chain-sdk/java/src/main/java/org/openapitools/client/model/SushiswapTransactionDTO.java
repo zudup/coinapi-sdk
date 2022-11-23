@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
  * Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
  */
 @ApiModel(description = "Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-22T20:52:21.475893Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T06:29:03.024322Z[Etc/UTC]")
 public class SushiswapTransactionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
