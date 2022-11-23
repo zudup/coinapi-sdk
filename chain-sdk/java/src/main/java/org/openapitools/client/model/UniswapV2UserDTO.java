@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * A user entity is created for any address that provides liquidity to a pool on Uniswap. This entity can be used to track open positions for users.
  */
 @ApiModel(description = "A user entity is created for any address that provides liquidity to a pool on Uniswap. This entity can be used to track open positions for users.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T13:19:58.789817Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T14:19:11.811721Z[Etc/UTC]")
 public class UniswapV2UserDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
