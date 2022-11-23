@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  */
 @ApiModel(description = "The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T13:25:16.916230Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T13:19:58.789817Z[Etc/UTC]")
 public class UniswapV3BundleDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
