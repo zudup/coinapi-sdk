@@ -1,5 +1,5 @@
 #
-# OnChain API
+# On Chain - REST API
 #  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
 # Version: v1
 # Contact: support@coinapi.io
@@ -53,12 +53,12 @@ $Manifest = @{
 
     Author = 'OpenAPI Generator Team'
     CompanyName = 'openapitools.org'
-    Description = 'PSOpenAPITools - the PowerShell module for OnChain API'
+    Description = 'PSOpenAPITools - the PowerShell module for On Chain - REST API'
 
     ModuleVersion = '0.1.2'
 
     RootModule = 'PSOpenAPITools.psm1'
-    Guid = '{5A472384-B212-4A1B-A41C-AEEA27ADFBAF}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{8ABBF209-3F0C-4DE5-A24F-B9C78E86146E}' # Has to be static, otherwise each new build will be considered different module
 
     PowerShellVersion = '6.2'
 

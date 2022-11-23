@@ -1,5 +1,5 @@
 Package: openapi
-Title: R Package Client for OnChain API
+Title: R Package Client for On Chain - REST API
 Version: 1.0.0
 Author: person("COINAPI LTD", email = "support@coinapi.io", role = c("aut", "cre"))
 Maintainer: COINAPI LTD <support@coinapi.io>

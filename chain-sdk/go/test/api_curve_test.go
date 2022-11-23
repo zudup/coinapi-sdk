@@ -1,5 +1,5 @@
 /*
-OnChain API
+On Chain - REST API
 
 Testing CurveApiService
 

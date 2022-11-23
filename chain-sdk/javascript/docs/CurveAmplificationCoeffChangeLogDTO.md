@@ -1,4 +1,4 @@
-# OnChainApi.CurveAmplificationCoeffChangeLogDTO
+# OnChainRestApi.CurveAmplificationCoeffChangeLogDTO
 
 ## Properties
 

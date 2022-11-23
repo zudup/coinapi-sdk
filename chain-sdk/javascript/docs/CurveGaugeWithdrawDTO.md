@@ -1,4 +1,4 @@
-# OnChainApi.CurveGaugeWithdrawDTO
+# OnChainRestApi.CurveGaugeWithdrawDTO
 
 ## Properties
 

@@ -1,6 +1,6 @@
 =begin comment
 
-OnChain API
+On Chain - REST API
 
  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
 
@@ -54,7 +54,7 @@ has _cfg => ( is => 'ro',
 has version_info => ( is => 'ro',
                       isa => 'HashRef',
                       default => sub { {
-                          app_name => 'OnChain API',
+                          app_name => 'On Chain - REST API',
                           app_version => 'v1',
                           generator_class => 'org.openapitools.codegen.languages.PerlClientCodegen',
                       } },
@@ -111,9 +111,9 @@ sub _build_af {
 
 =head1 NAME
 
-WWW::OpenAPIClient::Role - a Moose role for the OnChain API
+WWW::OpenAPIClient::Role - a Moose role for the On Chain - REST API
 
-=head2 OnChain API version: v1
+=head2 On Chain - REST API version: v1
 
 =head1 VERSION
 

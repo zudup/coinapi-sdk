@@ -1,4 +1,4 @@
-# OnChainApi.CowSettlementDTO
+# OnChainRestApi.CowSettlementDTO
 
 ## Properties
 

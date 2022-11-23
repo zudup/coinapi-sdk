@@ -4,12 +4,12 @@
 #include "uniswap_v3_swap_dto.h"
 
 
-char* evaluated_aggressoruniswap_v3_swap_dto_ToString(onchain_api_uniswap_v3_swap_dto__e evaluated_aggressor) {
+char* evaluated_aggressoruniswap_v3_swap_dto_ToString(on_chain___rest_api_uniswap_v3_swap_dto__e evaluated_aggressor) {
     char* evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
 	return evaluated_aggressorArray[evaluated_aggressor];
 }
 
-onchain_api_uniswap_v3_swap_dto__e evaluated_aggressoruniswap_v3_swap_dto_FromString(char* evaluated_aggressor){
+on_chain___rest_api_uniswap_v3_swap_dto__e evaluated_aggressoruniswap_v3_swap_dto_FromString(char* evaluated_aggressor){
     int stringToReturn = 0;
     char *evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     size_t sizeofArray = sizeof(evaluated_aggressorArray) / sizeof(evaluated_aggressorArray[0]);
@@ -356,7 +356,7 @@ cJSON *uniswap_v3_swap_dto_convertToJSON(uniswap_v3_swap_dto_t *uniswap_v3_swap_
 
 
     // uniswap_v3_swap_dto->evaluated_aggressor
-    if(uniswap_v3_swap_dto->evaluated_aggressor != onchain_api_uniswap_v3_swap_dto__NULL) {
+    if(uniswap_v3_swap_dto->evaluated_aggressor != on_chain___rest_api_uniswap_v3_swap_dto__NULL) {
     cJSON *evaluated_aggressor_local_JSON = transactions_e_trade_aggressive_side_convertToJSON(uniswap_v3_swap_dto->evaluated_aggressor);
     if(evaluated_aggressor_local_JSON == NULL) {
         goto fail; // custom

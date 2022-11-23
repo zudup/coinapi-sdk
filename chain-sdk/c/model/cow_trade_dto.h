@@ -19,11 +19,11 @@ typedef struct cow_trade_dto_t cow_trade_dto_t;
 
 // Enum  for cow_trade_dto
 
-typedef enum  { onchain_api_cow_trade_dto__NULL = 0, onchain_api_cow_trade_dto__Buy, onchain_api_cow_trade_dto__Sell, onchain_api_cow_trade_dto__EstimatedBuy, onchain_api_cow_trade_dto__EstimatedSell, onchain_api_cow_trade_dto__Unknown } onchain_api_cow_trade_dto__e;
+typedef enum  { on_chain___rest_api_cow_trade_dto__NULL = 0, on_chain___rest_api_cow_trade_dto__Buy, on_chain___rest_api_cow_trade_dto__Sell, on_chain___rest_api_cow_trade_dto__EstimatedBuy, on_chain___rest_api_cow_trade_dto__EstimatedSell, on_chain___rest_api_cow_trade_dto__Unknown } on_chain___rest_api_cow_trade_dto__e;
 
-char* cow_trade_dto_evaluated_aggressor_ToString(onchain_api_cow_trade_dto__e evaluated_aggressor);
+char* cow_trade_dto_evaluated_aggressor_ToString(on_chain___rest_api_cow_trade_dto__e evaluated_aggressor);
 
-onchain_api_cow_trade_dto__e cow_trade_dto_evaluated_aggressor_FromString(char* evaluated_aggressor);
+on_chain___rest_api_cow_trade_dto__e cow_trade_dto_evaluated_aggressor_FromString(char* evaluated_aggressor);
 
 
 

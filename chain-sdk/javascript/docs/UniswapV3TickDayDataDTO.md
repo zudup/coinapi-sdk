@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV3TickDayDataDTO
+# OnChainRestApi.UniswapV3TickDayDataDTO
 
 ## Properties
 

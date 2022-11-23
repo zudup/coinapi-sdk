@@ -1,4 +1,4 @@
-# OnChainApi.CurveAccountDTO
+# OnChainRestApi.CurveAccountDTO
 
 ## Properties
 

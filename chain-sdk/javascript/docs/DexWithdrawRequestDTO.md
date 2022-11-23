@@ -1,4 +1,4 @@
-# OnChainApi.DexWithdrawRequestDTO
+# OnChainRestApi.DexWithdrawRequestDTO
 
 ## Properties
 

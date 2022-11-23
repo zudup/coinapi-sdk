@@ -1,4 +1,4 @@
-# OnChainApi.CowApi
+# OnChainRestApi.CowApi
 
 All URIs are relative to *https://onchain.coinapi.io*
 
@@ -28,9 +28,9 @@ Gets orders.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -83,9 +83,9 @@ Gets settlements.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -138,9 +138,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -199,9 +199,9 @@ Gets trades.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -258,9 +258,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -315,9 +315,9 @@ Gets orders.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 apiInstance.cowOrdersCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -356,9 +356,9 @@ Gets settlements.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 apiInstance.cowSettlementsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -397,9 +397,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 apiInstance.cowTokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -438,9 +438,9 @@ Gets trades.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 apiInstance.cowTradesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -479,9 +479,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CowApi();
+let apiInstance = new OnChainRestApi.CowApi();
 apiInstance.cowUsersCurrent((error, data, response) => {
   if (error) {
     console.error(error);

@@ -1,8 +1,8 @@
 # openapi-java-client
 
-OnChain API
+On Chain - REST API
 - API version: v1
-  - Build date: 2022-11-23T15:45:18.112407Z[Etc/UTC]
+  - Build date: 2022-11-23T20:54:14.688927Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

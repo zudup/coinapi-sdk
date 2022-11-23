@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV3TokenHourDataDTO
+# OnChainRestApi.UniswapV3TokenHourDataDTO
 
 ## Properties
 

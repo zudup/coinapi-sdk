@@ -1,6 +1,6 @@
 # openapi-client
 
-OnChain API
+On Chain - REST API
 - API version: v1
 
 

@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapFactoryDTO
+# OnChainRestApi.SushiswapFactoryDTO
 
 ## Properties
 

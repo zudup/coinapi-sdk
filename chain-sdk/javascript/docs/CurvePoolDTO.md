@@ -1,4 +1,4 @@
-# OnChainApi.CurvePoolDTO
+# OnChainRestApi.CurvePoolDTO
 
 ## Properties
 

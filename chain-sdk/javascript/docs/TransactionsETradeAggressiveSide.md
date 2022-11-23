@@ -1,4 +1,4 @@
-# OnChainApi.TransactionsETradeAggressiveSide
+# OnChainRestApi.TransactionsETradeAggressiveSide
 
 ## Enum
 

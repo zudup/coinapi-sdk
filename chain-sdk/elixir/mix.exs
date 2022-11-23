@@ -1,9 +1,9 @@
-defmodule OnChainAPI.Mixfile do
+defmodule OnChain-RESTAPI.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :on_chain_api,
+      app: :on_chain_restapi,
       version: "v1",
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
@@ -41,7 +41,7 @@ defmodule OnChainAPI.Mixfile do
 
    defp package do
       [
-        name: "on_chain_api",
+        name: "on_chain_restapi",
         files: ~w(.formatter.exs config lib mix.exs README* LICENSE*),
       ]
   end

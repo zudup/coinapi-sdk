@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 =begin
-#OnChain API
+#On Chain - REST API
 
 # This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
 
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.authors     = ["OpenAPI-Generator"]
   s.email       = ["support@coinapi.io"]
   s.homepage    = "https://openapi-generator.tech"
-  s.summary     = "OnChain API Ruby Gem"
+  s.summary     = "On Chain - REST API Ruby Gem"
   s.description = " This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             "
   s.license     = "Unlicense"
   s.required_ruby_version = ">= 2.4"

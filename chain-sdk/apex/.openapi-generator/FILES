@@ -425,5 +425,5 @@ force-app/main/default/classes/OASUniswapV3UniswapDayDataDTO.cls
 force-app/main/default/classes/OASUniswapV3UniswapDayDataDTO.cls-meta.xml
 force-app/main/default/classes/OASUniswapV3UniswapDayDataDTOTest.cls
 force-app/main/default/classes/OASUniswapV3UniswapDayDataDTOTest.cls-meta.xml
-force-app/main/default/namedCredentials/OnChain_API.namedCredential-meta.xml
+force-app/main/default/namedCredentials/On_Chain__REST_API.namedCredential-meta.xml
 sfdx-project.json

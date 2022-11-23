@@ -1,5 +1,5 @@
 /*
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 @ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T15:45:18.112407Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T20:54:14.688927Z[Etc/UTC]")
 public class UniswapV3TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

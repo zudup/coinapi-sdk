@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2PairHourDataDTO
+# OnChainRestApi.UniswapV2PairHourDataDTO
 
 ## Properties
 

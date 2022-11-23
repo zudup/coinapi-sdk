@@ -1,5 +1,5 @@
 /**
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.OnChainApi);
+    factory(root.expect, root.OnChainRestApi);
   }
-}(this, function(expect, OnChainApi) {
+}(this, function(expect, OnChainRestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+    instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,115 +50,115 @@
   describe('UniswapV3TokenHourDataDTO', function() {
     it('should create an instance of UniswapV3TokenHourDataDTO', function() {
       // uncomment below and update the code to test UniswapV3TokenHourDataDTO
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
-      //expect(instance).to.be.a(OnChainApi.UniswapV3TokenHourDataDTO);
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
+      //expect(instance).to.be.a(OnChainRestApi.UniswapV3TokenHourDataDTO);
     });
 
     it('should have the property entryTime (base name: "entry_time")', function() {
       // uncomment below and update the code to test the property entryTime
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property recvTime (base name: "recv_time")', function() {
       // uncomment below and update the code to test the property recvTime
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property blockNumber (base name: "block_number")', function() {
       // uncomment below and update the code to test the property blockNumber
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property periodStartUnix (base name: "period_start_unix")', function() {
       // uncomment below and update the code to test the property periodStartUnix
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volume (base name: "volume")', function() {
       // uncomment below and update the code to test the property volume
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volumeUsd (base name: "volume_usd")', function() {
       // uncomment below and update the code to test the property volumeUsd
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property untrackedVolumeUsd (base name: "untracked_volume_usd")', function() {
       // uncomment below and update the code to test the property untrackedVolumeUsd
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property totalValueLocked (base name: "total_value_locked")', function() {
       // uncomment below and update the code to test the property totalValueLocked
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property totalValueLockedUsd (base name: "total_value_locked_usd")', function() {
       // uncomment below and update the code to test the property totalValueLockedUsd
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property priceUsd (base name: "price_usd")', function() {
       // uncomment below and update the code to test the property priceUsd
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property feesUsd (base name: "fees_usd")', function() {
       // uncomment below and update the code to test the property feesUsd
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property open (base name: "open")', function() {
       // uncomment below and update the code to test the property open
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property high (base name: "high")', function() {
       // uncomment below and update the code to test the property high
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property low (base name: "low")', function() {
       // uncomment below and update the code to test the property low
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property close (base name: "close")', function() {
       // uncomment below and update the code to test the property close
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property vid (base name: "vid")', function() {
       // uncomment below and update the code to test the property vid
-      //var instance = new OnChainApi.UniswapV3TokenHourDataDTO();
+      //var instance = new OnChainRestApi.UniswapV3TokenHourDataDTO();
       //expect(instance).to.be();
     });
 

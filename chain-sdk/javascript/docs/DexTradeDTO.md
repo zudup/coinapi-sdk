@@ -1,4 +1,4 @@
-# OnChainApi.DexTradeDTO
+# OnChainRestApi.DexTradeDTO
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV3PositionDTO
+# OnChainRestApi.UniswapV3PositionDTO
 
 ## Properties
 

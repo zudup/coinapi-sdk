@@ -1,4 +1,4 @@
-# OnChainApi.DexDepositDTO
+# OnChainRestApi.DexDepositDTO
 
 ## Properties
 

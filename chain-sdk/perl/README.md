@@ -1,6 +1,6 @@
 # NAME
 
-WWW::OpenAPIClient::Role - a Moose role for the OnChain API
+WWW::OpenAPIClient::Role - a Moose role for the On Chain - REST API
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

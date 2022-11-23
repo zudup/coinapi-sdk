@@ -1,6 +1,6 @@
 # openapi_client
 
-OpenapiClient - the Ruby gem for the OnChain API
+OpenapiClient - the Ruby gem for the On Chain - REST API
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

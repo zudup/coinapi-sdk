@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2UniswapFactoryDTO
+# OnChainRestApi.UniswapV2UniswapFactoryDTO
 
 ## Properties
 

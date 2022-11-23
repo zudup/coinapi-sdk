@@ -7,6 +7,6 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 
-if base_url = System.get_env("ON_CHAIN_API_BASE_URI") do
-  config :on_chain_api, base_url: base_url
+if base_url = System.get_env("ON_CHAIN_RESTAPI_BASE_URI") do
+  config :on_chain_restapi, base_url: base_url
 end

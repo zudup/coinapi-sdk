@@ -1,4 +1,4 @@
-# OnChainApi.CurveApi
+# OnChainRestApi.CurveApi
 
 All URIs are relative to *https://onchain.coinapi.io*
 
@@ -82,9 +82,9 @@ Gets accounts.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveAccountsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -123,9 +123,9 @@ Gets addLiquidityEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveAddLiquidityEventsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -164,9 +164,9 @@ Gets adminFeeChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveAdminFeeChangeLogsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -205,9 +205,9 @@ Gets amplificationCoeffChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveAmplificationCoeffChangeLogsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -246,9 +246,9 @@ Gets coins.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveCoinsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -287,9 +287,9 @@ Gets contractVersions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveContractVersionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -328,9 +328,9 @@ Gets contracts.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveContractsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -369,9 +369,9 @@ Gets dailyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveDailyVolumesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -410,9 +410,9 @@ Gets exchanges.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'pool': "pool_example" // String | 
 };
@@ -457,9 +457,9 @@ Gets feeChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveFeeChangeLogsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -498,9 +498,9 @@ Gets gaugeDeposits.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeDepositsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -539,9 +539,9 @@ Gets gaugeLiquidities.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeLiquiditiesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -580,9 +580,9 @@ Gets gaugeTotalWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeTotalWeightsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -621,9 +621,9 @@ Gets gaugeTypeWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeTypeWeightsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -662,9 +662,9 @@ Gets gaugeTypes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeTypesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -703,9 +703,9 @@ Gets gaugeWeightVotes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeWeightVotesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -744,9 +744,9 @@ Gets gaugeWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeWeightsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -785,9 +785,9 @@ Gets gaugeWithdraws.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugeWithdrawsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -826,9 +826,9 @@ Gets gauges.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveGaugesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -867,9 +867,9 @@ Gets accounts.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -924,9 +924,9 @@ Gets addLiquidityEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -981,9 +981,9 @@ Gets adminFeeChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1038,9 +1038,9 @@ Gets amplificationCoeffChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1095,9 +1095,9 @@ Gets coins.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -1152,9 +1152,9 @@ Gets contractVersions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1209,9 +1209,9 @@ Gets contracts.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1264,9 +1264,9 @@ Gets dailyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1321,9 +1321,9 @@ Gets exchanges.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1378,9 +1378,9 @@ Gets feeChangeLogs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1435,9 +1435,9 @@ Gets gaugeDeposits.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1490,9 +1490,9 @@ Gets gaugeLiquidities.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1547,9 +1547,9 @@ Gets gaugeTotalWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1602,9 +1602,9 @@ Gets gaugeTypeWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1657,9 +1657,9 @@ Gets gaugeTypes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1714,9 +1714,9 @@ Gets gaugeWeightVotes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1771,9 +1771,9 @@ Gets gaugeWeights.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1826,9 +1826,9 @@ Gets gaugeWithdraws.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1881,9 +1881,9 @@ Gets gauges.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1940,9 +1940,9 @@ Gets hourlyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1997,9 +1997,9 @@ Gets lpTokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2060,9 +2060,9 @@ Gets pools.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2117,9 +2117,9 @@ Gets proposalVotes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2172,9 +2172,9 @@ Gets proposals.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2227,9 +2227,9 @@ Gets removeLiquidityEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2284,9 +2284,9 @@ Gets removeLiquidityOneEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2341,9 +2341,9 @@ Gets systemStates.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2396,9 +2396,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2457,9 +2457,9 @@ Gets transferOwnershipEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2514,9 +2514,9 @@ Gets underlyingCoins.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -2571,9 +2571,9 @@ Gets votingApps.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2628,9 +2628,9 @@ Gets weeklyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2685,9 +2685,9 @@ Gets hourlyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveHourlyVolumesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2726,9 +2726,9 @@ Gets lpTokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveLpTokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2767,9 +2767,9 @@ Gets pools.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 let opts = {
   'id': "id_example" // String | Pool address.
 };
@@ -2814,9 +2814,9 @@ Gets proposalVotes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveProposalVotesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2855,9 +2855,9 @@ Gets proposals.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveProposalsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2896,9 +2896,9 @@ Gets removeLiquidityEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveRemoveLiquidityEventsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2937,9 +2937,9 @@ Gets removeLiquidityOneEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveRemoveLiquidityOneEventsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -2978,9 +2978,9 @@ Gets systemStates.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveSystemStatesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -3019,9 +3019,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveTokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -3060,9 +3060,9 @@ Gets transferOwnershipEvents.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveTransferOwnershipEventsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -3101,9 +3101,9 @@ Gets underlyingCoins.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveUnderlyingCoinsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -3142,9 +3142,9 @@ Gets votingApps.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveVotingAppsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -3183,9 +3183,9 @@ Gets weeklyVolumes.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.CurveApi();
+let apiInstance = new OnChainRestApi.CurveApi();
 apiInstance.curveWeeklyVolumesCurrent((error, data, response) => {
   if (error) {
     console.error(error);

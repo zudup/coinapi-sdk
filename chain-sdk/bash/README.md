@@ -1,8 +1,8 @@
-# OnChain API Bash client
+# On Chain - REST API Bash client
 
 ## Overview
 
-This is a Bash client script for accessing OnChain API service.
+This is a Bash client script for accessing On Chain - REST API service.
 
 The script uses cURL underneath for making all REST calls.
 

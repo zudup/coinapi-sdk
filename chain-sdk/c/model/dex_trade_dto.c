@@ -4,12 +4,12 @@
 #include "dex_trade_dto.h"
 
 
-char* evaluated_aggressordex_trade_dto_ToString(onchain_api_dex_trade_dto__e evaluated_aggressor) {
+char* evaluated_aggressordex_trade_dto_ToString(on_chain___rest_api_dex_trade_dto__e evaluated_aggressor) {
     char* evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
 	return evaluated_aggressorArray[evaluated_aggressor];
 }
 
-onchain_api_dex_trade_dto__e evaluated_aggressordex_trade_dto_FromString(char* evaluated_aggressor){
+on_chain___rest_api_dex_trade_dto__e evaluated_aggressordex_trade_dto_FromString(char* evaluated_aggressor){
     int stringToReturn = 0;
     char *evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     size_t sizeofArray = sizeof(evaluated_aggressorArray) / sizeof(evaluated_aggressorArray[0]);
@@ -329,7 +329,7 @@ cJSON *dex_trade_dto_convertToJSON(dex_trade_dto_t *dex_trade_dto) {
 
 
     // dex_trade_dto->evaluated_aggressor
-    if(dex_trade_dto->evaluated_aggressor != onchain_api_dex_trade_dto__NULL) {
+    if(dex_trade_dto->evaluated_aggressor != on_chain___rest_api_dex_trade_dto__NULL) {
     cJSON *evaluated_aggressor_local_JSON = transactions_e_trade_aggressive_side_convertToJSON(dex_trade_dto->evaluated_aggressor);
     if(evaluated_aggressor_local_JSON == NULL) {
         goto fail; // custom

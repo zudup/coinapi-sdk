@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapDayDataDTO
+# OnChainRestApi.SushiswapDayDataDTO
 
 ## Properties
 

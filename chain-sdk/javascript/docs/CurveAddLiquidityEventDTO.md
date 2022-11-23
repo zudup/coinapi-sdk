@@ -1,4 +1,4 @@
-# OnChainApi.CurveAddLiquidityEventDTO
+# OnChainRestApi.CurveAddLiquidityEventDTO
 
 ## Properties
 

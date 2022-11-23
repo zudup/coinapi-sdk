@@ -1,4 +1,4 @@
-# OnChainApi.CurveProposalVoteDTO
+# OnChainRestApi.CurveProposalVoteDTO
 
 ## Properties
 

@@ -1,5 +1,5 @@
 /**
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -125,9 +125,9 @@ import UniswapV3Api from './api/UniswapV3Api';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var OnChainApi = require('index'); // See note below*.
-* var xxxSvc = new OnChainApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new OnChainApi.Yyy(); // Construct a model instance.
+* var OnChainRestApi = require('index'); // See note below*.
+* var xxxSvc = new OnChainRestApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new OnChainRestApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -139,8 +139,8 @@ import UniswapV3Api from './api/UniswapV3Api';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new OnChainApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new OnChainApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new OnChainRestApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new OnChainRestApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

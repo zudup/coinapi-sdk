@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2Api
+# OnChainRestApi.UniswapV2Api
 
 All URIs are relative to *https://onchain.coinapi.io*
 
@@ -48,9 +48,9 @@ Gets bundles.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2BundlesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -89,9 +89,9 @@ Gets burns.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2BurnsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -130,9 +130,9 @@ Gets bundles.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -185,9 +185,9 @@ Gets burns.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -242,9 +242,9 @@ Gets liquidityPositionSnapshots.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -301,9 +301,9 @@ Gets liquidityPositions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -360,9 +360,9 @@ Gets mints.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -417,9 +417,9 @@ Gets pairDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -476,9 +476,9 @@ Gets pairHourData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -533,9 +533,9 @@ Gets pairs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -592,9 +592,9 @@ Gets swaps.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -649,9 +649,9 @@ Gets tokenDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -704,9 +704,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -763,9 +763,9 @@ Gets transactions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -818,9 +818,9 @@ Gets uniswapDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -873,9 +873,9 @@ Gets uniswapFactories.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -928,9 +928,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -983,9 +983,9 @@ Gets liquidityPositionSnapshots.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2LiquidityPositionSnapshotsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1024,9 +1024,9 @@ Gets liquidityPositions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2LiquidityPositionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1065,9 +1065,9 @@ Gets mints.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2MintsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1106,9 +1106,9 @@ Gets pairDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2PairDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1147,9 +1147,9 @@ Gets pairHourData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2PairHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1188,9 +1188,9 @@ Gets pairs.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'id': "id_example" // String | Pair contract address.
 };
@@ -1235,9 +1235,9 @@ Gets swaps.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 let opts = {
   'pair': "pair_example" // String | Reference to pair.
 };
@@ -1282,9 +1282,9 @@ Gets tokenDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2TokenDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1323,9 +1323,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2TokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1364,9 +1364,9 @@ Gets transactions.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2TransactionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1405,9 +1405,9 @@ Gets uniswapDayData.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2UniswapDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1446,9 +1446,9 @@ Gets uniswapFactories.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2UniswapFactoriesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1487,9 +1487,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainApi from 'on_chain_api';
+import OnChainRestApi from 'on_chain_rest_api';
 
-let apiInstance = new OnChainApi.UniswapV2Api();
+let apiInstance = new OnChainRestApi.UniswapV2Api();
 apiInstance.uniswapV2UsersCurrent((error, data, response) => {
   if (error) {
     console.error(error);

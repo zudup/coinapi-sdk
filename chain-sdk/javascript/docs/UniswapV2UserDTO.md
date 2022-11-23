@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2UserDTO
+# OnChainRestApi.UniswapV2UserDTO
 
 ## Properties
 

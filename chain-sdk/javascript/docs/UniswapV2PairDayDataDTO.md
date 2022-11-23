@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2PairDayDataDTO
+# OnChainRestApi.UniswapV2PairDayDataDTO
 
 ## Properties
 

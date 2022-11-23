@@ -1,4 +1,4 @@
-# PSOpenAPITools - the PowerShell module for the OnChain API
+# PSOpenAPITools - the PowerShell module for the On Chain - REST API
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

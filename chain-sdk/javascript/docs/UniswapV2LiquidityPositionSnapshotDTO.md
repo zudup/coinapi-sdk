@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2LiquidityPositionSnapshotDTO
+# OnChainRestApi.UniswapV2LiquidityPositionSnapshotDTO
 
 ## Properties
 

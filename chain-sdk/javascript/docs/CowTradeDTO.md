@@ -1,4 +1,4 @@
-# OnChainApi.CowTradeDTO
+# OnChainRestApi.CowTradeDTO
 
 ## Properties
 

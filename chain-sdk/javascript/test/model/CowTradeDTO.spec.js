@@ -1,5 +1,5 @@
 /**
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.OnChainApi);
+    factory(root.expect, root.OnChainRestApi);
   }
-}(this, function(expect, OnChainApi) {
+}(this, function(expect, OnChainRestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new OnChainApi.CowTradeDTO();
+    instance = new OnChainRestApi.CowTradeDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,133 +50,133 @@
   describe('CowTradeDTO', function() {
     it('should create an instance of CowTradeDTO', function() {
       // uncomment below and update the code to test CowTradeDTO
-      //var instance = new OnChainApi.CowTradeDTO();
-      //expect(instance).to.be.a(OnChainApi.CowTradeDTO);
+      //var instance = new OnChainRestApi.CowTradeDTO();
+      //expect(instance).to.be.a(OnChainRestApi.CowTradeDTO);
     });
 
     it('should have the property entryTime (base name: "entry_time")', function() {
       // uncomment below and update the code to test the property entryTime
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property recvTime (base name: "recv_time")', function() {
       // uncomment below and update the code to test the property recvTime
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property blockNumber (base name: "block_number")', function() {
       // uncomment below and update the code to test the property blockNumber
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property timestamp (base name: "timestamp")', function() {
       // uncomment below and update the code to test the property timestamp
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property gasPrice (base name: "gas_price")', function() {
       // uncomment below and update the code to test the property gasPrice
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property gasLimit (base name: "gas_limit")', function() {
       // uncomment below and update the code to test the property gasLimit
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property feeAmount (base name: "fee_amount")', function() {
       // uncomment below and update the code to test the property feeAmount
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property txHash (base name: "tx_hash")', function() {
       // uncomment below and update the code to test the property txHash
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property settlement (base name: "settlement")', function() {
       // uncomment below and update the code to test the property settlement
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property buyAmount (base name: "buy_amount")', function() {
       // uncomment below and update the code to test the property buyAmount
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property sellAmount (base name: "sell_amount")', function() {
       // uncomment below and update the code to test the property sellAmount
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property sellToken (base name: "sell_token")', function() {
       // uncomment below and update the code to test the property sellToken
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property buyToken (base name: "buy_token")', function() {
       // uncomment below and update the code to test the property buyToken
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property order (base name: "order")', function() {
       // uncomment below and update the code to test the property order
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property vid (base name: "vid")', function() {
       // uncomment below and update the code to test the property vid
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property poolId (base name: "pool_id")', function() {
       // uncomment below and update the code to test the property poolId
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionId (base name: "transaction_id")', function() {
       // uncomment below and update the code to test the property transactionId
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property evaluatedPrice (base name: "evaluated_price")', function() {
       // uncomment below and update the code to test the property evaluatedPrice
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property evaluatedAmount (base name: "evaluated_amount")', function() {
       // uncomment below and update the code to test the property evaluatedAmount
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property evaluatedAggressor (base name: "evaluated_aggressor")', function() {
       // uncomment below and update the code to test the property evaluatedAggressor
-      //var instance = new OnChainApi.CowTradeDTO();
+      //var instance = new OnChainRestApi.CowTradeDTO();
       //expect(instance).to.be();
     });
 

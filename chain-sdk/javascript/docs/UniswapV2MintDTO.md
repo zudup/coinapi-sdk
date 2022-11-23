@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV2MintDTO
+# OnChainRestApi.UniswapV2MintDTO
 
 ## Properties
 

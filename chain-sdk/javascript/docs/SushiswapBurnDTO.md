@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapBurnDTO
+# OnChainRestApi.SushiswapBurnDTO
 
 ## Properties
 

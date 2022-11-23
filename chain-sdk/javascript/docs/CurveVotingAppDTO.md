@@ -1,4 +1,4 @@
-# OnChainApi.CurveVotingAppDTO
+# OnChainRestApi.CurveVotingAppDTO
 
 ## Properties
 

@@ -7,7 +7,7 @@
 # General application configuration
 import Config
 
-config :on_chain_api, base_url: "https://onchain.coinapi.io"
+config :on_chain_restapi, base_url: "https://onchain.coinapi.io"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

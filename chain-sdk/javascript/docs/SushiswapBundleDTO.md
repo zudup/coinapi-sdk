@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapBundleDTO
+# OnChainRestApi.SushiswapBundleDTO
 
 ## Properties
 

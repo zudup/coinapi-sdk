@@ -1,5 +1,5 @@
 /**
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.OnChainApi);
+    factory(root.expect, root.OnChainRestApi);
   }
-}(this, function(expect, OnChainApi) {
+}(this, function(expect, OnChainRestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new OnChainApi.SushiswapFactoryDTO();
+    instance = new OnChainRestApi.SushiswapFactoryDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,91 +50,91 @@
   describe('SushiswapFactoryDTO', function() {
     it('should create an instance of SushiswapFactoryDTO', function() {
       // uncomment below and update the code to test SushiswapFactoryDTO
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
-      //expect(instance).to.be.a(OnChainApi.SushiswapFactoryDTO);
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
+      //expect(instance).to.be.a(OnChainRestApi.SushiswapFactoryDTO);
     });
 
     it('should have the property entryTime (base name: "entry_time")', function() {
       // uncomment below and update the code to test the property entryTime
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property recvTime (base name: "recv_time")', function() {
       // uncomment below and update the code to test the property recvTime
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property blockNumber (base name: "block_number")', function() {
       // uncomment below and update the code to test the property blockNumber
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property pairCount (base name: "pair_count")', function() {
       // uncomment below and update the code to test the property pairCount
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volumeUsd (base name: "volume_usd")', function() {
       // uncomment below and update the code to test the property volumeUsd
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volumeEth (base name: "volume_eth")', function() {
       // uncomment below and update the code to test the property volumeEth
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property untrackedVolumeUsd (base name: "untracked_volume_usd")', function() {
       // uncomment below and update the code to test the property untrackedVolumeUsd
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property liquidityUsd (base name: "liquidity_usd")', function() {
       // uncomment below and update the code to test the property liquidityUsd
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property liquidityEth (base name: "liquidity_eth")', function() {
       // uncomment below and update the code to test the property liquidityEth
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property txCount (base name: "tx_count")', function() {
       // uncomment below and update the code to test the property txCount
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property tokenCount (base name: "token_count")', function() {
       // uncomment below and update the code to test the property tokenCount
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property userCount (base name: "user_count")', function() {
       // uncomment below and update the code to test the property userCount
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property vid (base name: "vid")', function() {
       // uncomment below and update the code to test the property vid
-      //var instance = new OnChainApi.SushiswapFactoryDTO();
+      //var instance = new OnChainRestApi.SushiswapFactoryDTO();
       //expect(instance).to.be();
     });
 

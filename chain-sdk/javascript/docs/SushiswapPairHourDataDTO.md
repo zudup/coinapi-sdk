@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapPairHourDataDTO
+# OnChainRestApi.SushiswapPairHourDataDTO
 
 ## Properties
 

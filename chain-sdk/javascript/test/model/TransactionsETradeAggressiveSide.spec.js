@@ -1,5 +1,5 @@
 /**
- * OnChain API
+ * On Chain - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.OnChainApi);
+    factory(root.expect, root.OnChainRestApi);
   }
-}(this, function(expect, OnChainApi) {
+}(this, function(expect, OnChainRestApi) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('TransactionsETradeAggressiveSide', function() {
     it('should create an instance of TransactionsETradeAggressiveSide', function() {
       // uncomment below and update the code to test TransactionsETradeAggressiveSide
-      //var instance = new OnChainApi.TransactionsETradeAggressiveSide();
-      //expect(instance).to.be.a(OnChainApi.TransactionsETradeAggressiveSide);
+      //var instance = new OnChainRestApi.TransactionsETradeAggressiveSide();
+      //expect(instance).to.be.a(OnChainRestApi.TransactionsETradeAggressiveSide);
     });
 
   });

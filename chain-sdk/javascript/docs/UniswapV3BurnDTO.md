@@ -1,4 +1,4 @@
-# OnChainApi.UniswapV3BurnDTO
+# OnChainRestApi.UniswapV3BurnDTO
 
 ## Properties
 

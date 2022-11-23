@@ -1,4 +1,4 @@
-# OnChainApi.CowOrderDTO
+# OnChainRestApi.CowOrderDTO
 
 ## Properties
 

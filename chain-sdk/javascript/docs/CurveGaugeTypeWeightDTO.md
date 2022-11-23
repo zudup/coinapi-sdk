@@ -1,4 +1,4 @@
-# OnChainApi.CurveGaugeTypeWeightDTO
+# OnChainRestApi.CurveGaugeTypeWeightDTO
 
 ## Properties
 

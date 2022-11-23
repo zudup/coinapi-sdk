@@ -4,12 +4,12 @@
 #include "curve_exchange_dto.h"
 
 
-char* evaluated_aggressorcurve_exchange_dto_ToString(onchain_api_curve_exchange_dto__e evaluated_aggressor) {
+char* evaluated_aggressorcurve_exchange_dto_ToString(on_chain___rest_api_curve_exchange_dto__e evaluated_aggressor) {
     char* evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
 	return evaluated_aggressorArray[evaluated_aggressor];
 }
 
-onchain_api_curve_exchange_dto__e evaluated_aggressorcurve_exchange_dto_FromString(char* evaluated_aggressor){
+on_chain___rest_api_curve_exchange_dto__e evaluated_aggressorcurve_exchange_dto_FromString(char* evaluated_aggressor){
     int stringToReturn = 0;
     char *evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     size_t sizeofArray = sizeof(evaluated_aggressorArray) / sizeof(evaluated_aggressorArray[0]);
@@ -285,7 +285,7 @@ cJSON *curve_exchange_dto_convertToJSON(curve_exchange_dto_t *curve_exchange_dto
 
 
     // curve_exchange_dto->evaluated_aggressor
-    if(curve_exchange_dto->evaluated_aggressor != onchain_api_curve_exchange_dto__NULL) {
+    if(curve_exchange_dto->evaluated_aggressor != on_chain___rest_api_curve_exchange_dto__NULL) {
     cJSON *evaluated_aggressor_local_JSON = transactions_e_trade_aggressive_side_convertToJSON(curve_exchange_dto->evaluated_aggressor);
     if(evaluated_aggressor_local_JSON == NULL) {
         goto fail; // custom

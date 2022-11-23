@@ -1,4 +1,4 @@
-# OnChainApi.SushiswapUserDTO
+# OnChainRestApi.SushiswapUserDTO
 
 ## Properties
 

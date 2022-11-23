@@ -42,7 +42,7 @@ sushiswap_swap_dto_t* instantiate_sushiswap_swap_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      onchain_api_sushiswap_swap_dto__Buy
+      on_chain___rest_api_sushiswap_swap_dto__Buy
     );
   } else {
     sushiswap_swap_dto = sushiswap_swap_dto_create(
@@ -66,7 +66,7 @@ sushiswap_swap_dto_t* instantiate_sushiswap_swap_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      onchain_api_sushiswap_swap_dto__Buy
+      on_chain___rest_api_sushiswap_swap_dto__Buy
     );
   }
 
