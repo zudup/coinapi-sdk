@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Tracks data across all pairs aggregated into a daily bucket.
  */
 @ApiModel(description = "Tracks data across all pairs aggregated into a daily bucket.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-24T08:11:01.866885Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-24T08:57:11.990286Z[Etc/UTC]")
 public class UniswapV2UniswapDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
