@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * MessageError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-24T13:16:54.372026Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-24T13:52:56.503018Z[Etc/UTC]")
 public class MessageError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
