@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * A settlement comprises a list of traded tokens with their corresponding price in the batch.
  */
 @ApiModel(description = "A settlement comprises a list of traded tokens with their corresponding price in the batch.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T15:27:26.771776Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T15:55:48.653368Z[Etc/UTC]")
 public class CowSettlementDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
