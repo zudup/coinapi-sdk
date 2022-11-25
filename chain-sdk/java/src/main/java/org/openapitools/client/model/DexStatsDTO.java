@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * A type collecting global stats about this instance of Gnosis Protocol.
  */
 @ApiModel(description = "A type collecting global stats about this instance of Gnosis Protocol.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T11:34:17.537797Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T11:43:57.465917Z[Etc/UTC]")
 public class DexStatsDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
