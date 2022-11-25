@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveWeeklyVolumeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T11:01:24.883809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T11:21:02.813807Z[Etc/UTC]")
 public class CurveWeeklyVolumeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
