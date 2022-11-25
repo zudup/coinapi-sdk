@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * BalanceDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T13:11:47.566666Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T14:29:04.724984Z[Etc/UTC]")
 public class BalanceDataInner {
   public static final String SERIALIZED_NAME_ASSET_ID_EXCHANGE = "asset_id_exchange";
   @SerializedName(SERIALIZED_NAME_ASSET_ID_EXCHANGE)
