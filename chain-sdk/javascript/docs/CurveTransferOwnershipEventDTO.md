@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveTransferOwnershipEventDTO
+# OnChainDappsRestApi.CurveTransferOwnershipEventDTO
 
 ## Properties
 

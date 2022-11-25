@@ -3,8 +3,8 @@
 
 module Instances where
 
-import OnChain-REST.Model
-import OnChain-REST.Core
+import OnChainDapps-REST.Model
+import OnChainDapps-REST.Core
 
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as BL

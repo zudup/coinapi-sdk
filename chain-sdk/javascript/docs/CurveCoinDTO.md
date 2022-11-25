@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveCoinDTO
+# OnChainDappsRestApi.CurveCoinDTO
 
 ## Properties
 

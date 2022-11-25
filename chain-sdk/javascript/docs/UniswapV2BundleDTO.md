@@ -1,4 +1,4 @@
-# OnChainRestApi.UniswapV2BundleDTO
+# OnChainDappsRestApi.UniswapV2BundleDTO
 
 ## Properties
 

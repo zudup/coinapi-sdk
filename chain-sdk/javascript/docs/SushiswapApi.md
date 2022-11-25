@@ -1,4 +1,4 @@
-# OnChainRestApi.SushiswapApi
+# OnChainDappsRestApi.SushiswapApi
 
 All URIs are relative to *https://onchain.coinapi.io*
 
@@ -50,9 +50,9 @@ Gets bundles.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapBundlesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -91,9 +91,9 @@ Gets burns.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapBurnsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -132,9 +132,9 @@ Gets dayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -173,9 +173,9 @@ Gets factories.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapFactoriesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -214,9 +214,9 @@ Gets bundles.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -269,9 +269,9 @@ Gets burns.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -326,9 +326,9 @@ Gets dayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -381,9 +381,9 @@ Gets factories.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -436,9 +436,9 @@ Gets hourData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -491,9 +491,9 @@ Gets liquidityPositionSnapshots.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -550,9 +550,9 @@ Gets liquidityPositions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -609,9 +609,9 @@ Gets mints.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -666,9 +666,9 @@ Gets pairDayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -727,9 +727,9 @@ Gets pairHourData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -784,9 +784,9 @@ Gets pairs.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -845,9 +845,9 @@ Gets swaps.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -902,9 +902,9 @@ Gets tokenDayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -957,9 +957,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1016,9 +1016,9 @@ Gets transactions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1071,9 +1071,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1126,9 +1126,9 @@ Gets hourData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1167,9 +1167,9 @@ Gets liquidityPositionSnapshots.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapLiquidityPositionSnapshotsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1208,9 +1208,9 @@ Gets liquidityPositions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapLiquidityPositionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1249,9 +1249,9 @@ Gets mints.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapMintsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1290,9 +1290,9 @@ Gets pairDayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapPairDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1331,9 +1331,9 @@ Gets pairHourData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapPairHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1372,9 +1372,9 @@ Gets pairs.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'id': "id_example" // String | Pair contract address.
 };
@@ -1419,9 +1419,9 @@ Gets swaps.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
   'pair': "pair_example" // String | Reference to pair.
 };
@@ -1466,9 +1466,9 @@ Gets tokenDayData.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapTokenDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1507,9 +1507,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapTokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1548,9 +1548,9 @@ Gets transactions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapTransactionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1589,9 +1589,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.SushiswapApi();
+let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 apiInstance.sushiswapUsersCurrent((error, data, response) => {
   if (error) {
     console.error(error);

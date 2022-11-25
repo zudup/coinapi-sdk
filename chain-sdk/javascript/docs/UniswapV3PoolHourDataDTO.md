@@ -1,4 +1,4 @@
-# OnChainRestApi.UniswapV3PoolHourDataDTO
+# OnChainDappsRestApi.UniswapV3PoolHourDataDTO
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveSystemStateDTO
+# OnChainDappsRestApi.CurveSystemStateDTO
 
 ## Properties
 

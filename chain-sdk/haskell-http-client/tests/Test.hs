@@ -12,8 +12,8 @@ import Test.Hspec.QuickCheck
 import PropMime
 import Instances ()
 
-import OnChain-REST.Model
-import OnChain-REST.MimeTypes
+import OnChainDapps-REST.Model
+import OnChainDapps-REST.MimeTypes
 
 main :: IO ()
 main =

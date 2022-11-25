@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveWeeklyVolumeDTO
+# OnChainDappsRestApi.CurveWeeklyVolumeDTO
 
 ## Properties
 

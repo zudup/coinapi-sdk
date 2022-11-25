@@ -43,7 +43,7 @@ dex_trade_dto_t* instantiate_dex_trade_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_dex_trade_dto__Buy
+      on_chain_dapps___rest_api_dex_trade_dto__Buy
     );
   } else {
     dex_trade_dto = dex_trade_dto_create(
@@ -68,7 +68,7 @@ dex_trade_dto_t* instantiate_dex_trade_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_dex_trade_dto__Buy
+      on_chain_dapps___rest_api_dex_trade_dto__Buy
     );
   }
 

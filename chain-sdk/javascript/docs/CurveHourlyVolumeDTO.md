@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveHourlyVolumeDTO
+# OnChainDappsRestApi.CurveHourlyVolumeDTO
 
 ## Properties
 

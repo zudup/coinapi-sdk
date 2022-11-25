@@ -12,7 +12,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #
-# This is a Bash client for On Chain - REST API.
+# This is a Bash client for On Chain Dapps - REST API.
 #
 # LICENSE:
 # https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
@@ -2213,7 +2213,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}On Chain - REST API command line client (API version v1)${OFF}
+${BOLD}${WHITE}On Chain Dapps - REST API command line client (API version v1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2490,7 +2490,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://onchain.coinapi.io')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}On Chain - REST API command line client (API version v1)${OFF}"
+    echo -e "${BOLD}${WHITE}On Chain Dapps - REST API command line client (API version v1)${OFF}"
     echo ""
     echo -e "License: MIT License"
     echo -e "Contact: support@coinapi.io"
@@ -2512,7 +2512,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}On Chain - REST API command line client (API version v1)${OFF}"
+    echo -e "${BOLD}On Chain Dapps - REST API command line client (API version v1)${OFF}"
     echo ""
 }
 

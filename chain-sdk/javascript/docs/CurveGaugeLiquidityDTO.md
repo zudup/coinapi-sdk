@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveGaugeLiquidityDTO
+# OnChainDappsRestApi.CurveGaugeLiquidityDTO
 
 ## Properties
 

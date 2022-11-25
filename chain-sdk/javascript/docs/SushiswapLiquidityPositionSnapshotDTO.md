@@ -1,4 +1,4 @@
-# OnChainRestApi.SushiswapLiquidityPositionSnapshotDTO
+# OnChainDappsRestApi.SushiswapLiquidityPositionSnapshotDTO
 
 ## Properties
 

@@ -1,5 +1,5 @@
 /**
- * On Chain - REST API
+ * On Chain Dapps - REST API
  *  This section will provide necessary information about the `OnChain API` protocol.  <br/><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                             
  *
  * The version of the OpenAPI document: v1
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.OnChainRestApi);
+    factory(root.expect, root.OnChainDappsRestApi);
   }
-}(this, function(expect, OnChainRestApi) {
+}(this, function(expect, OnChainDappsRestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new OnChainRestApi.SushiswapTokenDTO();
+    instance = new OnChainDappsRestApi.SushiswapTokenDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,115 +50,115 @@
   describe('SushiswapTokenDTO', function() {
     it('should create an instance of SushiswapTokenDTO', function() {
       // uncomment below and update the code to test SushiswapTokenDTO
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
-      //expect(instance).to.be.a(OnChainRestApi.SushiswapTokenDTO);
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
+      //expect(instance).to.be.a(OnChainDappsRestApi.SushiswapTokenDTO);
     });
 
     it('should have the property entryTime (base name: "entry_time")', function() {
       // uncomment below and update the code to test the property entryTime
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property recvTime (base name: "recv_time")', function() {
       // uncomment below and update the code to test the property recvTime
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property blockNumber (base name: "block_number")', function() {
       // uncomment below and update the code to test the property blockNumber
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property factory (base name: "factory")', function() {
       // uncomment below and update the code to test the property factory
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property symbol (base name: "symbol")', function() {
       // uncomment below and update the code to test the property symbol
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property decimals (base name: "decimals")', function() {
       // uncomment below and update the code to test the property decimals
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property totalSupply (base name: "total_supply")', function() {
       // uncomment below and update the code to test the property totalSupply
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volume (base name: "volume")', function() {
       // uncomment below and update the code to test the property volume
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property volumeUsd (base name: "volume_usd")', function() {
       // uncomment below and update the code to test the property volumeUsd
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property untrackedVolumeUsd (base name: "untracked_volume_usd")', function() {
       // uncomment below and update the code to test the property untrackedVolumeUsd
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property txCount (base name: "tx_count")', function() {
       // uncomment below and update the code to test the property txCount
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property liquidity (base name: "liquidity")', function() {
       // uncomment below and update the code to test the property liquidity
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property derivedEth (base name: "derived_eth")', function() {
       // uncomment below and update the code to test the property derivedEth
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property whitelistPairs (base name: "whitelist_pairs")', function() {
       // uncomment below and update the code to test the property whitelistPairs
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property vid (base name: "vid")', function() {
       // uncomment below and update the code to test the property vid
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property tokenSymbol (base name: "token_symbol")', function() {
       // uncomment below and update the code to test the property tokenSymbol
-      //var instance = new OnChainRestApi.SushiswapTokenDTO();
+      //var instance = new OnChainDappsRestApi.SushiswapTokenDTO();
       //expect(instance).to.be();
     });
 

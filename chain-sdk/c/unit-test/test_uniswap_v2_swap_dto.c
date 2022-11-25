@@ -43,7 +43,7 @@ uniswap_v2_swap_dto_t* instantiate_uniswap_v2_swap_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_uniswap_v2_swap_dto__Buy,
+      on_chain_dapps___rest_api_uniswap_v2_swap_dto__Buy,
       "0",
       "0"
     );
@@ -68,7 +68,7 @@ uniswap_v2_swap_dto_t* instantiate_uniswap_v2_swap_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_uniswap_v2_swap_dto__Buy,
+      on_chain_dapps___rest_api_uniswap_v2_swap_dto__Buy,
       "0",
       "0"
     );

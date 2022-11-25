@@ -1,4 +1,4 @@
-# OnChainRestApi.UniswapV3TokenDTO
+# OnChainDappsRestApi.UniswapV3TokenDTO
 
 ## Properties
 

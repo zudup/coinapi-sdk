@@ -1,5 +1,5 @@
 /*
-On Chain - REST API
+On Chain Dapps - REST API
 
 Testing CowApiService
 

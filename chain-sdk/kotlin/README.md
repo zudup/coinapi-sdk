@@ -1,4 +1,4 @@
-# org.openapitools.client - Kotlin client library for On Chain - REST API
+# org.openapitools.client - Kotlin client library for On Chain Dapps - REST API
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

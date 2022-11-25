@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveGaugeWeightVoteDTO
+# OnChainDappsRestApi.CurveGaugeWeightVoteDTO
 
 ## Properties
 

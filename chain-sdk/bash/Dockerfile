@@ -23,8 +23,8 @@ source /etc/bash-completion.d/client.sh\n\
 #
 # Setup prompt
 #
-RUN echo 'export PS1="[On Chain - REST API] \$ "' >> ~/.bashrc
-RUN echo 'export PROMPT="[On Chain - REST API] \$ "' >> ~/.zshrc
+RUN echo 'export PS1="[On Chain Dapps - REST API] \$ "' >> ~/.bashrc
+RUN echo 'export PROMPT="[On Chain Dapps - REST API] \$ "' >> ~/.zshrc
 
 #
 # Setup a welcome message with basic instruction
@@ -32,7 +32,7 @@ RUN echo 'export PROMPT="[On Chain - REST API] \$ "' >> ~/.zshrc
 RUN echo -e 'echo "\
 \n\
 This Docker provides preconfigured environment for running the command\n\
-line REST client for $(tput setaf 6)On Chain - REST API$(tput sgr0).\n\
+line REST client for $(tput setaf 6)On Chain Dapps - REST API$(tput sgr0).\n\
 \n\
 For convenience, you can export the following environment variables:\n\
 \n\

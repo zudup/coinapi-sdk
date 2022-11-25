@@ -1,4 +1,4 @@
-# OnChainRestApi.NumericsBigInteger
+# OnChainDappsRestApi.NumericsBigInteger
 
 ## Properties
 

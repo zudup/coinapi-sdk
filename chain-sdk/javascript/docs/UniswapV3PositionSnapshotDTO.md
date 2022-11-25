@@ -1,4 +1,4 @@
-# OnChainRestApi.UniswapV3PositionSnapshotDTO
+# OnChainDappsRestApi.UniswapV3PositionSnapshotDTO
 
 ## Properties
 

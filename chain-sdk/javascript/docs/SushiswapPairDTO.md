@@ -1,4 +1,4 @@
-# OnChainRestApi.SushiswapPairDTO
+# OnChainDappsRestApi.SushiswapPairDTO
 
 ## Properties
 

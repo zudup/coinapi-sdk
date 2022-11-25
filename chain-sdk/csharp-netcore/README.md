@@ -1,4 +1,4 @@
-# CoinAPI.EMS.REST.V1 - the C# library for the On Chain - REST API
+# CoinAPI.EMS.REST.V1 - the C# library for the On Chain Dapps - REST API
 
 
 This section will provide necessary information about the `OnChain API` protocol. 

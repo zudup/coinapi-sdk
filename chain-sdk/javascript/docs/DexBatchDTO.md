@@ -1,4 +1,4 @@
-# OnChainRestApi.DexBatchDTO
+# OnChainDappsRestApi.DexBatchDTO
 
 ## Properties
 

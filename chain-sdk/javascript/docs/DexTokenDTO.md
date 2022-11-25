@@ -1,4 +1,4 @@
-# OnChainRestApi.DexTokenDTO
+# OnChainDappsRestApi.DexTokenDTO
 
 ## Properties
 

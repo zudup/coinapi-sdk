@@ -1,4 +1,4 @@
-# OnChainRestApi.UniswapV3PoolDTO
+# OnChainDappsRestApi.UniswapV3PoolDTO
 
 ## Properties
 

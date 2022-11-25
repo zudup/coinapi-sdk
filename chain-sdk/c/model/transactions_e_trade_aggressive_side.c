@@ -4,12 +4,12 @@
 #include "transactions_e_trade_aggressive_side.h"
 
 
-char* transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_ToString(on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side) {
+char* transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_ToString(on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side) {
     char *transactions_e_trade_aggressive_sideArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     return transactions_e_trade_aggressive_sideArray[transactions_e_trade_aggressive_side];
 }
 
-on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_FromString(char* transactions_e_trade_aggressive_side) {
+on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_FromString(char* transactions_e_trade_aggressive_side) {
     int stringToReturn = 0;
     char *transactions_e_trade_aggressive_sideArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     size_t sizeofArray = sizeof(transactions_e_trade_aggressive_sideArray) / sizeof(transactions_e_trade_aggressive_sideArray[0]);
@@ -22,7 +22,7 @@ on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade
     return 0;
 }
 
-cJSON *transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_convertToJSON(on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side) {
+cJSON *transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_convertToJSON(on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side) {
     cJSON *item = cJSON_CreateObject();
     if(cJSON_AddStringToObject(item, "transactions_e_trade_aggressive_side", transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_ToString(transactions_e_trade_aggressive_side)) == NULL) {
         goto fail;
@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_parseFromJSON(cJSON *transactions_e_trade_aggressive_sideJSON) {
-    on_chain___rest_api_transactions_e_trade_aggressive_side__e *transactions_e_trade_aggressive_side = NULL;
-    on_chain___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_sideVariable;
+on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_side_transactions_e_trade_aggressive_side_parseFromJSON(cJSON *transactions_e_trade_aggressive_sideJSON) {
+    on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e *transactions_e_trade_aggressive_side = NULL;
+    on_chain_dapps___rest_api_transactions_e_trade_aggressive_side__e transactions_e_trade_aggressive_sideVariable;
     cJSON *transactions_e_trade_aggressive_sideVar = cJSON_GetObjectItemCaseSensitive(transactions_e_trade_aggressive_sideJSON, "transactions_e_trade_aggressive_side");
     if(!cJSON_IsString(transactions_e_trade_aggressive_sideVar) || (transactions_e_trade_aggressive_sideVar->valuestring == NULL)){
         goto end;

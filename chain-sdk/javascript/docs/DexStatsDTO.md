@@ -1,4 +1,4 @@
-# OnChainRestApi.DexStatsDTO
+# OnChainDappsRestApi.DexStatsDTO
 
 ## Properties
 

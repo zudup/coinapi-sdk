@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveProposalDTO
+# OnChainDappsRestApi.CurveProposalDTO
 
 ## Properties
 

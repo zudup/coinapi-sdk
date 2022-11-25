@@ -17,7 +17,7 @@ info:
   license:
     name: MIT License
     url: https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
-  title: On Chain - REST API
+  title: On Chain Dapps - REST API
   version: v1
 servers:
 - url: https://onchain.coinapi.io

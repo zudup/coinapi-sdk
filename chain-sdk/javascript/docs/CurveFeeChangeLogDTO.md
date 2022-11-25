@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveFeeChangeLogDTO
+# OnChainDappsRestApi.CurveFeeChangeLogDTO
 
 ## Properties
 

@@ -39,7 +39,7 @@ curve_exchange_dto_t* instantiate_curve_exchange_dto(int include_optional) {
       56,
       1.337,
       1.337,
-      on_chain___rest_api_curve_exchange_dto__Buy,
+      on_chain_dapps___rest_api_curve_exchange_dto__Buy,
       "0",
       "0"
     );
@@ -62,7 +62,7 @@ curve_exchange_dto_t* instantiate_curve_exchange_dto(int include_optional) {
       56,
       1.337,
       1.337,
-      on_chain___rest_api_curve_exchange_dto__Buy,
+      on_chain_dapps___rest_api_curve_exchange_dto__Buy,
       "0",
       "0"
     );

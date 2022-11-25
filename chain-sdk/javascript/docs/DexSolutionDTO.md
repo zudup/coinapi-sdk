@@ -1,4 +1,4 @@
-# OnChainRestApi.DexSolutionDTO
+# OnChainDappsRestApi.DexSolutionDTO
 
 ## Properties
 

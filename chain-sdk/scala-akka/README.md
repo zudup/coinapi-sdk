@@ -1,6 +1,6 @@
 # openapi-client
 
-On Chain - REST API
+On Chain Dapps - REST API
 - API version: v1
 
 

@@ -1,4 +1,4 @@
-# OnChainRestApi.DexApi
+# OnChainDappsRestApi.DexApi
 
 All URIs are relative to *https://onchain.coinapi.io*
 
@@ -40,9 +40,9 @@ Gets batches.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexBatchesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -81,9 +81,9 @@ Gets deposits.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexDepositsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -122,9 +122,9 @@ Gets batches.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -177,9 +177,9 @@ Gets deposits.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -234,9 +234,9 @@ Gets orders.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -293,9 +293,9 @@ Gets prices.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -348,9 +348,9 @@ Gets solutions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -403,9 +403,9 @@ Gets stats.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -458,9 +458,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -519,9 +519,9 @@ Gets trades.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -578,9 +578,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -633,9 +633,9 @@ Gets withdrawRequests.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -690,9 +690,9 @@ Gets withdraws.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 let opts = {
   'startBlock': 789, // Number | 
   'endBlock': 789, // Number | 
@@ -747,9 +747,9 @@ Gets orders.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexOrdersCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -788,9 +788,9 @@ Gets prices.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexPricesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -829,9 +829,9 @@ Gets solutions.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexSolutionsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -870,9 +870,9 @@ Gets stats.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexStatsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -911,9 +911,9 @@ Gets tokens.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexTokensCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -952,9 +952,9 @@ Gets trades.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexTradesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -993,9 +993,9 @@ Gets users.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexUsersCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1034,9 +1034,9 @@ Gets withdrawRequests.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexWithdrawRequestsCurrent((error, data, response) => {
   if (error) {
     console.error(error);
@@ -1075,9 +1075,9 @@ Gets withdraws.
 ### Example
 
 ```javascript
-import OnChainRestApi from 'on_chain_rest_api';
+import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
-let apiInstance = new OnChainRestApi.DexApi();
+let apiInstance = new OnChainDappsRestApi.DexApi();
 apiInstance.dexWithdrawsCurrent((error, data, response) => {
   if (error) {
     console.error(error);

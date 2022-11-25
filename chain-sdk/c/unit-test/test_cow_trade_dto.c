@@ -42,7 +42,7 @@ cow_trade_dto_t* instantiate_cow_trade_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_cow_trade_dto__Buy
+      on_chain_dapps___rest_api_cow_trade_dto__Buy
     );
   } else {
     cow_trade_dto = cow_trade_dto_create(
@@ -66,7 +66,7 @@ cow_trade_dto_t* instantiate_cow_trade_dto(int include_optional) {
       "0",
       1.337,
       1.337,
-      on_chain___rest_api_cow_trade_dto__Buy
+      on_chain_dapps___rest_api_cow_trade_dto__Buy
     );
   }
 

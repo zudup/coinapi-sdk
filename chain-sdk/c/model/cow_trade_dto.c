@@ -4,12 +4,12 @@
 #include "cow_trade_dto.h"
 
 
-char* evaluated_aggressorcow_trade_dto_ToString(on_chain___rest_api_cow_trade_dto__e evaluated_aggressor) {
+char* evaluated_aggressorcow_trade_dto_ToString(on_chain_dapps___rest_api_cow_trade_dto__e evaluated_aggressor) {
     char* evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
 	return evaluated_aggressorArray[evaluated_aggressor];
 }
 
-on_chain___rest_api_cow_trade_dto__e evaluated_aggressorcow_trade_dto_FromString(char* evaluated_aggressor){
+on_chain_dapps___rest_api_cow_trade_dto__e evaluated_aggressorcow_trade_dto_FromString(char* evaluated_aggressor){
     int stringToReturn = 0;
     char *evaluated_aggressorArray[] =  { "NULL", "Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown" };
     size_t sizeofArray = sizeof(evaluated_aggressorArray) / sizeof(evaluated_aggressorArray[0]);
@@ -315,7 +315,7 @@ cJSON *cow_trade_dto_convertToJSON(cow_trade_dto_t *cow_trade_dto) {
 
 
     // cow_trade_dto->evaluated_aggressor
-    if(cow_trade_dto->evaluated_aggressor != on_chain___rest_api_cow_trade_dto__NULL) {
+    if(cow_trade_dto->evaluated_aggressor != on_chain_dapps___rest_api_cow_trade_dto__NULL) {
     cJSON *evaluated_aggressor_local_JSON = transactions_e_trade_aggressive_side_convertToJSON(cow_trade_dto->evaluated_aggressor);
     if(evaluated_aggressor_local_JSON == NULL) {
         goto fail; // custom

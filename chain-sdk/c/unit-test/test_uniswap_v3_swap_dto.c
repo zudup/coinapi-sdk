@@ -49,7 +49,7 @@ uniswap_v3_swap_dto_t* instantiate_uniswap_v3_swap_dto(int include_optional) {
       instantiate_numerics_big_integer(0),
       1.337,
       1.337,
-      on_chain___rest_api_uniswap_v3_swap_dto__Buy,
+      on_chain_dapps___rest_api_uniswap_v3_swap_dto__Buy,
       "0",
       "0"
     );
@@ -76,7 +76,7 @@ uniswap_v3_swap_dto_t* instantiate_uniswap_v3_swap_dto(int include_optional) {
       NULL,
       1.337,
       1.337,
-      on_chain___rest_api_uniswap_v3_swap_dto__Buy,
+      on_chain_dapps___rest_api_uniswap_v3_swap_dto__Buy,
       "0",
       "0"
     );

@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveGaugeDTO
+# OnChainDappsRestApi.CurveGaugeDTO
 
 ## Properties
 

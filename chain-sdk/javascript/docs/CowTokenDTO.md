@@ -1,4 +1,4 @@
-# OnChainRestApi.CowTokenDTO
+# OnChainDappsRestApi.CowTokenDTO
 
 ## Properties
 

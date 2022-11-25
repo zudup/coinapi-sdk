@@ -1,4 +1,4 @@
-# OnChainRestApi.CurveUnderlyingCoinDTO
+# OnChainDappsRestApi.CurveUnderlyingCoinDTO
 
 ## Properties
 

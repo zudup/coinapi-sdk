@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Build On Chain - REST API
+    name: Build On Chain Dapps - REST API
     runs-on: ubuntu-latest
     strategy:
       matrix:
