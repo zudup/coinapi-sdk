@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveAmplificationCoeffChangeLogDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T13:04:46.815607Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T13:11:49.773714Z[Etc/UTC]")
 public class CurveAmplificationCoeffChangeLogDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
