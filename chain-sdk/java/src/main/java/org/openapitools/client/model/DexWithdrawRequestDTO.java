@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Withdraw request of an user
  */
 @ApiModel(description = "Withdraw request of an user")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T12:17:27.800738Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T12:25:44.480670Z[Etc/UTC]")
 public class DexWithdrawRequestDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
