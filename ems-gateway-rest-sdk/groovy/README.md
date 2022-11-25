@@ -70,7 +70,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-11-25T14:29:04.629311Z[Etc/UTC]
+- Build date: 2022-11-25T15:27:31.345292Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 

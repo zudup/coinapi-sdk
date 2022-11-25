@@ -22,7 +22,7 @@ import javax.ws.rs.core.GenericType;
  * <p>ApiException class.</p>
  */
 @SuppressWarnings("serial")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T14:29:04.724984Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T15:27:31.396208Z[Etc/UTC]")
 public class ApiException extends Exception {
     private int code = 0;
     private Map<String, List<String>> responseHeaders = null;
