@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Ticks are the boundaries between discrete areas in price space.
  */
 @ApiModel(description = "Ticks are the boundaries between discrete areas in price space.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-28T09:22:40.607600Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-28T09:37:25.536020Z[Etc/UTC]")
 public class UniswapV3TickDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
