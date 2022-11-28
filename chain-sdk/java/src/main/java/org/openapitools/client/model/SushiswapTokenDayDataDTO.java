@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Token data aggregated across all pairs that include token.
  */
 @ApiModel(description = "Token data aggregated across all pairs that include token.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T15:55:48.653368Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-28T09:22:40.607600Z[Etc/UTC]")
 public class SushiswapTokenDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

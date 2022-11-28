@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Data accumulated and condensed into day stats for all of Uniswap.
  */
 @ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-25T15:55:48.653368Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-28T09:22:40.607600Z[Etc/UTC]")
 public class UniswapV3UniswapDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
