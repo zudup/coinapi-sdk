@@ -1,7 +1,7 @@
 // this is to support both browser and node
 var SDK = typeof window !== 'undefined' ? window.COIN_API_SDK : require("./coinapi_v1")["default"]
 
-var sdk = new SDK("YOUR_API_KEY_HERE")
+var sdk = new SDK("c56eba61-154f-4c83-89af-47d98a9e80e5")
 
 function run() {
   var t = new Date(Date.parse("2016-11-01T22:08:41+00:00"))
